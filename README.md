@@ -5,23 +5,49 @@ This repository is a database of Old School Runescape (OSRS) items in JSON forma
 
 ## osrsbox-db: JSON structured data
 
-The osrsbox-db stores information about OSRS items in separate JSON files. For example, [this link](https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json "osrsbox.github.io/osrsbox-db/items-json/1/12453.json") provides direct access to the 12453.json file, which holds metadata about the Black wizard hat (g) item. In OSRS item id number 12453 is unique to the Black wizard hat (g) item, this is why the item id is utilised in the database. The JSON file for each OSRS item can be directly accessed using unqiue URLs provide through the osrsbox.github.io website. 
+The osrsbox-db stores information about OSRS items in separate JSON files. For example, [this link](https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json "osrsbox.github.io/osrsbox-db/items-json/1/12453.json") provides direct access to the 12453.json file, which holds metadata about the Black wizard hat (g) item. In OSRS the id number 12453 is unique to the Black wizard hat (g) item. This is why the item id is utilised in the catalogue for fetching all item information. 
 
-### Accessing structure JSON data about OSRS items
+### Structure JSON data about OSRS items
 
-Intro
+But what is actually contained in these JSON files? Well, it is a collection of metadata (information) about the specific item. There are two main categories of metadata about an item: 1) item properties; and 2) item stats. All items have properties; for example, the item's weight and the items high alchemy value. All item properties are listed below for reference, including the data type (e.g., string, integer, float) for each property.
 
-List of URL examples
+| Property        | Data type       | Description                                  |
+|-----------------|-----------------|----------------------------------------------|
+| url             | string          | Wikia URL link                               |
+| id              | integer         | Unqiue OSRS item ID number                   |
+| caption         | string          | Name of the item                             |
+| release_date    | string          | Date the item was released                   |
+| members_only    | boolean integer | If the item is a members only item or not    |
+| quest_item      | boolean integer | If the item is a quest item or not           |
+| tradeable       | boolean integer | If the item is tradeable or not              |
+| equipable       | boolean integer | If the item is equipable or not              |
+| stackable       | boolean integer | If the item is stackable or not              |
+| high_alch       | integer         | The high alchemy value of the item           |
+| low_alch        | integer         | The low alchemy value of the item            |
+| destroy         | string          | How to destroy the item                      |
+| store_price     | integer         | The store price of the item                  |
+| weight          | float           | The weight (in kilograms) of the item        |
+| examine         | string          | The examine text of the item                 |
+| edible          | boolean integer | If the item is edible or not                 |
+| ge_price        | integer         | The current Grand Exchange price of the item |
+| buy_limit       | integer         | The Grand Exchange buy limit of the item     |
+| attack_stab     | string          | The stab attack bonus of the item            |
+| attack_slash    | string          | The slash attack bonus of the item           |
+| attack_crush    | string          | The crush attack bonus of the item           |
+| attack_magic    | string          | The magic attack bonus of the item           |
+| attack_ranged   | string          | The ranged attack bonus of the item          |
+| defence_stab    | string          | The stab defence bonus of the item           |
+| defence_slash   | string          | The slash defence bonus of the item          |
+| defence_crush   | string          | The crush defence bonus of the item          |
+| defence_magic   | string          | The magic defence bonus of the item          |
+| defence_ranged  | string          | The ranged defence bonus of the item         |
+| melee_strength  | string          | The melee strength bonus of the item         |
+| ranged_strength | string          | The ranged strength bonus of the item        |
+| magic_damage    | string          | The magic damage bonus of the item           |
+| prayer          | string          | The prayer bonus of the item                 |
 
-osrsbox-db/items-json/1/12453.json
-                      1/10.json
-osrsbox-db/items-json/2/2010.json
-osrsbox-db/items-json/3/3199.json
-                      3/3999.json
+Introduction to item stats, only if item is equipable!
 
-Examples of URLS
-
-<https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json>
 
 Below is an example os a complete JSON object for the Black wizard hat (g)
 
@@ -61,6 +87,34 @@ Below is an example os a complete JSON object for the Black wizard hat (g)
     "prayer":"+0"
 }
 ```
+
+### Accessing JSON data about OSRS items
+
+The JSON file for each OSRS item can be directly accessed using unqiue URLs provide through the osrsbox.github.io website. Technically, this provide the functionality of a RESTful API, but only supports GET requests. That is, you can fetch the JSON files using a unique URL but cannot modify any JSON content. 
+
+Below is a list of URL examples for items in the osrsbox-db:
+
++ <https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json>
++ <https://osrsbox.github.io/osrsbox-db/items-json/1/10.json>
++ <https://osrsbox.github.io/osrsbox-db/items-json/2/2010.json>
++ <https://osrsbox.github.io/osrsbox-db/items-json/3/3199.json>
++ <https://osrsbox.github.io/osrsbox-db/items-json/3/3999.json>
+
+Each of the links above provides direct access to the OSRS item's JSON file.
+
+wget example
+
+Java script example
+
+### Using JSON data about OSRS items
+
+Here
+
+Treasure trails example from web page
+
+Tooltips page using the JSON api
+
+Python example
 
 ## osrsbox-db: Icon images in PNG format
 
