@@ -127,7 +127,7 @@ json_obj = json.loads(data)
 print(data)
 ```
 
-Finally, let's have a look at Javascript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a webpage. The example below is a very simple method to download the JSON file using the jQuery getJSON function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., "name" and "Black wizard hat (g)") on it's own line in a div element. If you want to experiment with the code, the code is available in a W3Schools TryIt Editor at (https://www.w3schools.com/code/tryit.asp?filename=FDYXVMBAV85L "Working Javascript / jQuery example of osrsbox-db").
+Finally, let's have a look at Javascript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a webpage. The example below is a very simple method to download the JSON file using the jQuery getJSON function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., "name" and "Black wizard hat (g)") on it's own line in a div element. If you want to experiment with the code, the code is available in a W3Schools TryIt Editor at [this link](https://www.w3schools.com/code/tryit.asp?filename=FDYXVMBAV85L "Working Javascript / jQuery example of osrsbox-db").
 
 ```html
 <!DOCTYPE html>
