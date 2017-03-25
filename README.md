@@ -110,13 +110,50 @@ So how can you get these JSON files about OSRS items? It is pretty easy, but rea
 wget https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json
 ```
 
-Java script example
-
-Python example
+Maybe you are interested in downloading a single (or potentially multiple) JSON files about OSRS items and processing the information in a Python program. The short script below downloads the 12453.json file using Python's urllib library, loads the data as a JSON object and prints the contents to the console. The code is a little messy, primarily due to supporting both Python 2 and 3 (as you can see from the "try" and "except" importing method implemented).
 
 ```python
 import json
-import urllib
+
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
+
+url = ("https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json")
+response = urlopen(url)
+data = response.read().decode("utf-8")
+json_obj = json.loads(data)
+print(data)
+```
+
+Finally, let's have a look at Javascript (specifically jQuery) example to fetch a JSON file and build an HTML element to display on a webpage.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json", function(result){
+            $.each(result, function(i, field){
+                $("div").append(i + " " + field + "<br>");
+            });
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
+
+</body>
+</html>
 ```
 
 ### Using JSON data about OSRS items
