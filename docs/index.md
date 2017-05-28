@@ -60,6 +60,7 @@ If an item is equipable it will have additional metadata about the combat bonuse
 
 So what does this JSON object actually look like? Well, listed below is an example of a complete JSON object for the Black wizard hat (g). Or you could just click on [this link](https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json "Black wizard hat (g) in JSON format!") to view the raw JSON using the osrsbox-db API.
 
+{: .code-box}
 ```json
 {
    "id":12453,
@@ -94,7 +95,6 @@ So what does this JSON object actually look like? Well, listed below is an examp
    "magic_damage":0,
    "prayer":0
 }
-
 ```
 
 ### Accessing JSON data about OSRS items
@@ -111,12 +111,14 @@ As displayed by the links above, each item ID is stored in the "osrsbox-db" repo
 
 So how can you get these JSON files about OSRS items? It is pretty easy, but really depends on what you are trying to accomplish and what programming language you are using. Take a simple example of downloading a single JSON file. In a Linux system, we could simply use the wget command to download a single JSON file, as illustrated in the example code below:
 
+{: .code-box}
 ```bash
 wget https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json
 ```
 
 Maybe you are interested in downloading a single (or potentially multiple) JSON files about OSRS items and processing the information in a Python program. The short script below downloads the 12453.json file using Python's urllib library, loads the data as a JSON object and prints the contents to the console. The code is a little messy, primarily due to supporting both Python 2 and 3 (as you can see from the "try" and "except" importing method implemented).
 
+{: .code-box}
 ```python
 import json
 
@@ -134,6 +136,7 @@ print(data)
 
 Finally, let's have a look at Javascript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a webpage. The example below is a very simple method to download the JSON file using the jQuery getJSON function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., "name" and "Black wizard hat (g)") on it's own line in a div element. If you want to experiment with the code, the code is available in a W3Schools TryIt Editor at [this link](https://www.w3schools.com/code/tryit.asp?filename=FDYXVMBAV85L "Working Javascript / jQuery example of osrsbox-db").
 
+{: .code-box}
 ```html
 <!DOCTYPE html>
 <html>
