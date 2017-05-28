@@ -16,6 +16,7 @@ The osrsbox-db stores information about OSRS items in separate JSON files. For e
 
 But what is actually contained in these JSON files? Well, it is a collection of metadata (information) about the specific item. There are two main categories of metadata about an item: 1) item properties; and 2) item stats. All items have properties; for example, the item's weight and the items high alchemy value. All item properties are listed below for reference, including the data type (e.g., string, integer, float) for each property and a description of the property.
 
+{: .content}
 | Property        | Data type       | Description                                  |
 |-----------------|-----------------|----------------------------------------------|
 | id              | integer         | Unqiue OSRS item ID number                   |
@@ -40,6 +41,7 @@ But what is actually contained in these JSON files? Well, it is a collection of 
 
 If an item is equipable it will have additional metadata about the combat bonuses that it provides; for example, the melee strength bonus the Dragon dagger item provides. The following table specifies the 14 different stats an item may provide. Please note that all item stats are stored as an interger data type.
 
+{: .content}
 | Property        | Data type       | Description                                  |
 |-----------------|-----------------|----------------------------------------------|
 | attack_stab     | int             | The stab attack bonus of the item            |
