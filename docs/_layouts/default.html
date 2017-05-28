@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <!-- link to main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/main.css">
+        <!-- External links to osrsbox-tooltip library (JS and CSS) -->
+    </head>
+    <body>
+
+        {% include header.html %}
+        
+        <div class="container">
+        
+        {{ content }}
+        
+        </div><!-- /.container -->
+        
+        {% include footer.html %}
+        
+    </body>
+</html>

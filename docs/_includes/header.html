@@ -1,0 +1,19 @@
+<div class="nav">
+    <ul>
+        <li {% if page.url == '{{ site.url }}/' %} class="active"{% endif %}>
+            <a href="{{ site.url }}/">Home</a></li>
+        <li class="dropdown" {% if page.url == '/fc/fc.html' %} class="active"{% endif %}>
+            <a href="#" class="dropbtn">Maps</a>
+            <div class="dropdown-content">
+            <a href="{{ site.url }}/fc/fc.html">Fight Caves</a>
+            </div>
+        </li>
+        <li class="dropdown" {% if page.url == '{{ site.url }}/' %} class="active"{% endif %}>
+            <a href="#" class="dropbtn">Projects</a>
+            <div class="dropdown-content">
+            <a href="{{ site.url }}/osrsbox-tooltips">OSRS Tooltips</a>
+            <a href="{{ site.url }}/osrsbox-db">OSRS Database</a>
+            </div>
+        </li>
+    </ul>
+</div><!-- /.nav -->
