@@ -163,7 +163,7 @@ Finally, let's have a look at Javascript (specifically jQuery) example to fetch 
 </html>
 ```
 
-So, if you have read this far, we can fetch OSRS item information using a public API provided by osrsbox-db... But what can we do with this data? The primary reason the osrsbox-db was written was to enable osrsbox-tooltips! Please see my other project page for information about that project.
+So, if you have read this far, we can fetch OSRS item information using a public API provided by osrsbox-db... But what can we do with this data? The primary reason the osrsbox-db was written was to enable osrsbox-tooltips! Support for elusive items such as the <span class="tooltip osrs-tooltip" id='11806' title='Please wait ...'>[Saradomin godsword]</span>. Please see the [osrsbox-tooltips](https://github.com/osrsbox/osrsbox-tooltips) page for information about the project.
 
 ## osrsbox-db: Icon images in PNG format
 
@@ -174,7 +174,7 @@ Look, it's a ... Black wizard hat (g) ![alt text](https://osrsbox.github.io/osrs
 ## Documentation to finish
 
 + Cover more examples:
-    + Enumerate every otem in the osrsbos-db
+    + Enumerate every item in the osrsbos-db
     + Fetch alchemy prices
 + Link to projects using osrsbox-db (especially tooltips)
 + Summary of license information and reuse
