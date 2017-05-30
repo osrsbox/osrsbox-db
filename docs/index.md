@@ -17,47 +17,47 @@ The osrsbox-db stores information about OSRS items in separate JSON files. For e
 But what is actually contained in these JSON files? Well, it is a collection of metadata (information) about the specific item. There are two main categories of metadata about an item: 1) item properties; and 2) item stats. All items have properties; for example, the item's weight and the items high alchemy value. All item properties are listed below for reference, including the data type (e.g., string, integer, float) for each property and a description of the property.
 
 {: .content}
-| Property        | Data type       | Description                                  |
-|-----------------|-----------------|----------------------------------------------|
-| id              | integer         | Unqiue OSRS item ID number                   |
-| name            | string          | Name of the item                             |
-| release_date    | string          | Date the item was released                   |
-| members_only    | boolean integer | If the item is a members only item or not    |
-| quest_item      | boolean integer | If the item is a quest item or not           |
-| tradeable       | boolean integer | If the item is tradeable or not              |
-| equipable       | boolean integer | If the item is equipable or not              |
-| stackable       | boolean integer | If the item is stackable or not              |
-| edible          | boolean integer | If the item is edible or not                 |
-| store_price     | integer         | The store price of the item                  |
-| high_alch       | integer         | The high alchemy value of the item           |
-| low_alch        | integer         | The low alchemy value of the item            |
-| buy_limit       | integer         | The Grand Exchange buy limit of the item     |
-| weight          | float           | The weight (in kilograms) of the item        |
-| destroy         | string          | How to destroy the item                      |
-| examine         | string          | The examine text of the item                 |
-| url             | string          | Wikia URL link                               |
+| Property     | Data type       | Description                              |
+| ------------ | --------------- | ---------------------------------------- |
+| id           | integer         | Unqiue OSRS item ID number               |
+| name         | string          | Name of the item                         |
+| release_date | string          | Date the item was released               |
+| members_only | boolean integer | If the item is a members only item or not |
+| quest_item   | boolean integer | If the item is a quest item or not       |
+| tradeable    | boolean integer | If the item is tradeable or not          |
+| equipable    | boolean integer | If the item is equipable or not          |
+| stackable    | boolean integer | If the item is stackable or not          |
+| edible       | boolean integer | If the item is edible or not             |
+| store_price  | integer         | The store price of the item              |
+| high_alch    | integer         | The high alchemy value of the item       |
+| low_alch     | integer         | The low alchemy value of the item        |
+| buy_limit    | integer         | The Grand Exchange buy limit of the item |
+| weight       | float           | The weight (in kilograms) of the item    |
+| destroy      | string          | How to destroy the item                  |
+| examine      | string          | The examine text of the item             |
+| url          | string          | Wikia URL link                           |
 
 
 
 If an item is equipable it will have additional metadata about the combat bonuses that it provides; for example, the melee strength bonus the Dragon dagger item provides. The following table specifies the 14 different stats an item may provide. Please note that all item stats are stored as an interger data type.
 
 {: .content}
-| Property        | Data type       | Description                                  |
-|-----------------|-----------------|----------------------------------------------|
-| attack_stab     | int             | The stab attack bonus of the item            |
-| attack_slash    | int             | The slash attack bonus of the item           |
-| attack_crush    | int             | The crush attack bonus of the item           |
-| attack_magic    | int             | The magic attack bonus of the item           |
-| attack_ranged   | int             | The ranged attack bonus of the item          |
-| defence_stab    | int             | The stab defence bonus of the item           |
-| defence_slash   | int             | The slash defence bonus of the item          |
-| defence_crush   | int             | The crush defence bonus of the item          |
-| defence_magic   | int             | The magic defence bonus of the item          |
-| defence_ranged  | int             | The ranged defence bonus of the item         |
-| melee_strength  | int             | The melee strength bonus of the item         |
-| ranged_strength | int             | The ranged strength bonus of the item        |
-| magic_damage    | int             | The magic damage bonus of the item           |
-| prayer          | int             | The prayer bonus of the item                 |
+| Property        | Data type | Description                           |
+| --------------- | --------- | ------------------------------------- |
+| attack_stab     | int       | The stab attack bonus of the item     |
+| attack_slash    | int       | The slash attack bonus of the item    |
+| attack_crush    | int       | The crush attack bonus of the item    |
+| attack_magic    | int       | The magic attack bonus of the item    |
+| attack_ranged   | int       | The ranged attack bonus of the item   |
+| defence_stab    | int       | The stab defence bonus of the item    |
+| defence_slash   | int       | The slash defence bonus of the item   |
+| defence_crush   | int       | The crush defence bonus of the item   |
+| defence_magic   | int       | The magic defence bonus of the item   |
+| defence_ranged  | int       | The ranged defence bonus of the item  |
+| melee_strength  | int       | The melee strength bonus of the item  |
+| ranged_strength | int       | The ranged strength bonus of the item |
+| magic_damage    | int       | The magic damage bonus of the item    |
+| prayer          | int       | The prayer bonus of the item          |
 
 
 So what does this JSON object actually look like? Well, listed below is an example of a complete JSON object for the Black wizard hat (g). Or you could just click on [this link](https://osrsbox.github.io/osrsbox-db/items-json/1/12453.json "Black wizard hat (g) in JSON format!") to view the raw JSON using the osrsbox-db API.
@@ -163,19 +163,31 @@ Finally, let's have a look at Javascript (specifically jQuery) example to fetch 
 </html>
 ```
 
-### Using JSON data about OSRS items
-
-So, if you have read this far, we can fetch OSRS item information using a public API provided by osrsbox-db... But what can we do with this data? This section covers some examples of usage to display how the information in each JSON file can be useful. However, the primary reason the osrsbox-db was written was to enable osrsbox-tooltips!
-
-Treasure trails example from web page
-
-Tooltips page using the JSON api
-
-Python example
+So, if you have read this far, we can fetch OSRS item information using a public API provided by osrsbox-db... But what can we do with this data? The primary reason the osrsbox-db was written was to enable osrsbox-tooltips! Please see my other project page for information about that project.
 
 ## osrsbox-db: Icon images in PNG format
 
-![alt text](https://osrsbox.github.io/osrsbox-db/items-icons/1/12453.png "Black wizard hat (g)")
+In addition to providing an API to JSON data. This project also provides thumbnail image for a large number of OSRS items in PNG format.
+
+Look, it's a ... Black wizard hat (g) ![alt text](https://osrsbox.github.io/osrsbox-db/items-icons/1/12453.png "Black wizard hat (g)")
+
+## Documentation to finish
+
++ Cover more examples:
+    + Enumerate every otem in the osrsbos-db
+    + Fetch alchemy prices
++ Link to projects using osrsbox-db (especially tooltips)
++ Summary of license information and reuse
+
+## Project feedback and contribution
+
+This is an independant project (thus far). However, I would thoroughly appreciate any feedback regarding the project. The best method is to post an appropriate Github issue with a feature request or bug. 
+
+## Project goal list
+
++ Extend metadata coverage
++ Extend and check item coverage
++ Check list of current issues that includes various enhancments
 
 <span id="forkongithub"><a href="https://github.com/osrsbox/osrsbox-db">Fork me on GitHub</a></span>
 
