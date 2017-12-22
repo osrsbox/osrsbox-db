@@ -1,19 +1,41 @@
-<div class="nav">
-    <ul>
-        <li {% if page.url == '{{ site.url }}/' %} class="active"{% endif %}>
-            <a href="{{ site.url }}/">Home</a></li>
-        <li class="dropdown" {% if page.url == '/fc/fc.html' %} class="active"{% endif %}>
-            <a href="#" class="dropbtn">Maps</a>
-            <div class="dropdown-content">
-            <a href="{{ site.url }}/fc/fc.html">Fight Caves</a>
-            </div>
-        </li>
-        <li class="dropdown" {% if page.url == '{{ site.url }}/' %} class="active"{% endif %}>
-            <a href="#" class="dropbtn">Projects</a>
-            <div class="dropdown-content">
-            <a href="{{ site.url }}/osrsbox-tooltips">OSRS Tooltips</a>
-            <a href="{{ site.url }}/osrsbox-db">OSRS Database</a>
-            </div>
-        </li>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ site.url }}">OSRSBox</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown" {% if page.url=='{{ site.url }}/' %} class="active" {% endif %}>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tools
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ site.url }}/items/items.html">OSRS Item ID Lookup</a>
+          </li>
+          <li><a href="{{ site.url }}/fc/fc.html">Fight Caves Spawn Prediction</a>
+          </li>
+          <li><a href="{{ site.url }}/tt/tt.html">Tresure Trails Tracker</a>
+          </li>
+          <li><a href="{{ site.url }}/barrows/barrows.html">Barrows Drop Tracker</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" {% if page.url=='{{ site.url }}/' %} class="active" {% endif %}>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ site.url }}/osrsbox-tooltips">OSRS Tooltips</a>
+          </li>
+          <li><a href="{{ site.url }}/osrsbox-db">OSRS Database</a>
+          </li>
+          <li><a href="{{ site.url }}/osrs-cache">OSRS Cache Documentation</a>
+          </li>
+        </ul>
+      </li>
     </ul>
-</div><!-- /.nav -->
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> GitHub</a>
+      </li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> PayPal</a>
+      </li>
+    </ul>
+  </div>
+</nav>
