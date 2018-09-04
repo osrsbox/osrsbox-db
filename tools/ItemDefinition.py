@@ -44,6 +44,7 @@ import dateparser
 
 sys.path.append(os.getcwd())
 import WikiaExtractor
+import ItemBonuses
 
 ###############################################################################
 # Helper methods
@@ -152,7 +153,7 @@ class ItemDefinition(object):
             "url" : None}
 
         # Item Bonuses (if equipable)   
-        self.bonuses = None
+        self.itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
 
         # Setup logging
         logging.basicConfig(filename="ItemDefinition.log",
@@ -275,7 +276,7 @@ class ItemDefinition(object):
     def __getattr__(self, attr):
         return self[attr]
 
-    def populate_from_allitems(self):
+    def populate(self):
         # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
         print(">>>>>>>>>>>> Processing: %s" % self.itemID)
 
@@ -317,6 +318,23 @@ class ItemDefinition(object):
         self.logger.debug("Starting: determine_wiki_page")
         success = self.determine_wiki_page()
         # success indicates if OSRS Wikia page was found
+        # TODO: Need to do something with this success value
+
+        if success:
+            # This item has an OSRS Wikia page
+            # Try to extract the InfoboxItem template
+            self.logger.debug("Starting: extract_InfoboxItem")
+            success2 = self.extract_InfoboxItem()
+
+        # Continue processing, if equipable
+        if self.equipable:
+            self.logger.debug("Item is equipable... Trying to fetch bonuses...")
+            if success:
+                self.logger.debug("Starting: extract_InfoBoxBonuses")
+                self.extract_InfoBoxBonuses()
+            else:
+                pass
+
 
         # Log the second JSON input
         self.logger.debug("Dumping second input...")
@@ -331,20 +349,18 @@ class ItemDefinition(object):
         self.logger.debug("Searching for item in OSRS Wikia by name...")
         
         # Check if the item name is in the Wikia API Dump
+        # Return True if found by self.name
+        # Return False if not found
         if self.name in self.wikia_item_page_ids:
             self.logger.debug(">>> ITEM FOUND:")
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
             self.logger.debug("  > wikia pageid: %s" % self.wikia_item_page_ids[self.name])
-            # Log 
-            self.logger.debug("Starting: extract_InfoboxItem")
-            success = self.extract_InfoboxItem()
-            return success
+            return True
         else:
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.name)
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.id)
             return False
-
 
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
@@ -378,18 +394,21 @@ class ItemDefinition(object):
         self.logger.debug("Extracting Wikia InfoBox templates...")
         self.logger.debug(templates)
         for template in templates:
+            self.logger.debug(template)
             template_name = template.name.strip()
             template_name = template_name.lower()
             if "infobox item" in template_name:
                 self.logger.debug("InfoBox Name: %s" % template_name)
                 self.logger.debug("InfoBox FOUND... Continuing...")
                 self.logger.debug("Starting: parse_InfoboxItem")
+                # If the InfoboxItem template is found...
+                # Parse it!
                 self.parse_InfoboxItem(template)
-                return
+                return True
             else:
                 self.logger.debug("InfoBox Name: %s" % template_name)
                 self.logger.debug("InfoBox NOT FOUND... Returning...")
-                pass                   
+        return False                   
 
     def parse_InfoboxItem(self, template):
         self.logger.debug("Processing InfoBox template...")
@@ -410,9 +429,64 @@ class ItemDefinition(object):
         # store price
         # seller
 
-    def extract_item_bonuses(self, url):
-        pass         
+    def extract_InfoBoxBonuses(self):
+        # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
+        self.logger.debug("  > Extracting infobox for bonuses...")
+        url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + self.name
+        result = requests.get(url)
+        # Force fetched page to JSON
+        data = result.json()
+        # Extract the actual content
+        input = data["parse"]["wikitext"]["*"]
+        # Parse actual content using mwparser
+        wikicode = mwparserfromhell.parse(input)
+        # Extract templates in the page
+        templates = wikicode.filter_templates()
+        self.logger.debug("Extracting Wikia InfoBox BONUSES template...")
+        self.logger.debug(templates)
+        for template in templates:
+            template_name = template.name.strip()
+            template_name = template_name.lower()
+            if "bonuses" in template_name:
+                self.logger.debug("InfoBox Name: %s" % template_name)
+                self.logger.debug("InfoBox FOUND... Continuing...")
+                self.logger.debug("Starting: parse_InfoboxBonuses")
+                # If the InfoboxItem template is found...
+                # Parse it!
+                self.parse_InfoboxBonuses(template)
+                return True
+            else:
+                self.logger.debug("InfoBox Name: %s" % template_name)
+                self.logger.debug("InfoBox NOT FOUND... Returning...")
+        return False           
 		
+    def parse_InfoboxBonuses(self, template):
+        self.logger.debug("Processing InfoBox template...")
+        self.logger.debug(template)
+        itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
+        itemBonuses.attack_stab = self.strip_infobox(template.get("astab").value)
+        itemBonuses.attack_slash = self.strip_infobox(template.get("aslash").value)
+        itemBonuses.attack_crush = self.strip_infobox(template.get("acrush").value)
+        itemBonuses.attack_magic = self.strip_infobox(template.get("amagic").value)
+        itemBonuses.attack_ranged = self.strip_infobox(template.get("arange").value)
+        itemBonuses.defence_stab = self.strip_infobox(template.get("dstab").value)
+        itemBonuses.defence_slash = self.strip_infobox(template.get("dslash").value)
+        itemBonuses.defence_crush  = self.strip_infobox(template.get("dcrush").value)
+        itemBonuses.defence_magic = self.strip_infobox(template.get("dmagic").value)
+        itemBonuses.defence_ranged = self.strip_infobox(template.get("astab").value)
+        itemBonuses.melee_strength = self.strip_infobox(template.get("drange").value)
+        itemBonuses.ranged_strength = self.strip_infobox(template.get("rstr").value)
+        itemBonuses.magic_damage = self.strip_infobox(template.get("mdmg").value)
+        itemBonuses.prayer = self.strip_infobox(template.get("prayer").value)
+        itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value)
+        itemBonuses.slot  = self.strip_infobox(template.get("slot").value)
+        self.itemBonuses = itemBonuses
+        # for prop in self.itemBonuses.wikia_properties:
+        #     current = self.strip_infobox(template.get(prop).value)
+        #     itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
+        #     itemBonuses.prop = current
+            #self.bonuses[prop] = current
+
           
     ###########################################################################
     # Handle item to JSON
@@ -434,13 +508,13 @@ class ItemDefinition(object):
         self.json_out["highalch"] = self.highalch
         self.json_out["examine"] = self.examine
         self.json_out["url"] = self.url
+        if self.equipable:
+            bonuses_in_json = self.itemBonuses.construct_json()
+            self.json_out["bonuses"] = bonuses_in_json
+            #self.json_out["item_slot"] = self.item_slot
+            #if self.item_slot == "weapon" or self.item_slot == "two-handed":
+            #    self.json_out["weapon_speed"] = self.weapon_speed
         self.logger.debug(json.dumps(self.json_out, indent=4, sort_keys=True))
-        return
-        # if self.equipable:
-        #     self.json_out["bonuses"] = self.bonuses
-        #     self.json_out["item_slot"] = self.item_slot
-        #     if self.item_slot == "weapon" or self.item_slot == "two-handed":
-        #         self.json_out["weapon_speed"] = self.weapon_speed
     
     def edit_json(self):
         """ Construct JSON, print JSON, manually check and edit the contents. """

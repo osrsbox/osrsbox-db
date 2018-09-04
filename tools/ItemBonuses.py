@@ -51,6 +51,9 @@ def _intcast(val):
         if val[0] == "-":
             if val[1:].isdigit():
                 return int(val)
+        if val[0] == "+":
+            if val[1:].isdigit():
+                return int(val)                
         else:
             if val.isdigit():
                 return int(val)
@@ -58,25 +61,44 @@ def _intcast(val):
 ###############################################################################
 # ItemBonuses object
 class ItemBonuses(object):
-    def __init__(self, itemID, itemJSON):
+    def __init__(self, itemID):
         self.itemID = itemID
-        self.itemJSON = itemJSON
-        self.object = None
-        self.properties = {
-            "attack_stab" : None,
-            "attack_slash" : None,
-            "attack_crush" : None,
-            "attack_magic" : None,
-            "attack_ranged" : None,
-            "defence_stab" : None,
-            "defence_slash" : None,
-            "defence_crush" : None,
-            "defence_magic" : None,
-            "defence_ranged" : None,
-            "melee_strength" : None,
-            "ranged_strength" : None,
-            "magic_damage" : None,
-            "prayer" : None}            
+        self.properties = [
+            "attack_stab",
+            "attack_slash",
+            "attack_crush",
+            "attack_magic",
+            "attack_ranged",
+            "defence_stab",
+            "defence_slash",
+            "defence_crush",
+            "defence_magic",
+            "defence_ranged",
+            "melee_strength",
+            "ranged_strength",
+            "magic_damage",
+            "prayer",
+            "attack_speed",
+            "slot"]   
+        self.wikia_properties = [
+            "astab",
+            "aslash",
+            "acrush",
+            "amagic",
+            "arange",
+            "dstab",
+            "dslash",
+            "dcrush",
+            "dmagic",
+            "drange",
+            "str",
+            "rstr",
+            "mdmg",
+            "prayer",
+            "aspeed",
+            "slot"] 
+        for prop in self.properties:
+            setattr(self, prop, 0)
     
     # Attacking Stats
     @property
@@ -178,6 +200,42 @@ class ItemBonuses(object):
     @prayer.setter
     def prayer(self, value):
         self._prayer = _intcast(value)
+
+    # Other
+    @property
+    def attack_speed(self):
+        return self._attack_speed
+    @attack_speed.setter
+    def attack_speed(self, value):
+        self._attack_speed = _intcast(value)
+
+    @property
+    def slot(self):
+        return self._slot
+    @slot.setter
+    def slot(self, value):
+        self._slot = _intcast(value)
+
+###########################################################################
+    # Handle item to JSON
+    def construct_json(self):
+        self.json_out = collections.OrderedDict()
+        self.json_out["attack_stab"] = self.attack_stab
+        self.json_out["attack_slash"] = self.attack_slash
+        self.json_out["attack_crush"] = self.attack_crush
+        self.json_out["attack_magic"] = self.attack_magic
+        self.json_out["attack_ranged"] = self.attack_ranged
+        self.json_out["defence_stab"] = self.defence_stab
+        self.json_out["defence_slash"] = self.defence_slash
+        self.json_out["defence_crush"] = self.defence_crush
+        self.json_out["defence_magic"] = self.defence_magic
+        self.json_out["defence_ranged"] = self.defence_ranged
+        self.json_out["melee_strength"] = self.melee_strength
+        self.json_out["ranged_strength"] = self.ranged_strength
+        self.json_out["magic_damage"] = self.magic_damage
+        self.json_out["prayer"] = self.prayer
+        return self.json_out
+
 
     # def determine_item_bonuses(self):
     #     scfm = ScrapeItemFromWikia.ScrapeItemFromWikia(self.name, True)

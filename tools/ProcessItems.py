@@ -88,7 +88,7 @@ class ProcessItems(object):
 
     def construct_ItemDefinition(self, itemID, itemJSON):
         itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.wikia_item_page_ids, self.wikia_buy_limits) 
-        item = itemdef.populate_from_allitems()
+        item = itemdef.populate()
         self.allitemdefs[itemID] = item
 
     def extract_ItemDefinition(self):
