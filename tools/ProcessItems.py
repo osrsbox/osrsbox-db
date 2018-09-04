@@ -68,9 +68,10 @@ import wikitextparser
 ###############################################################################
 # ProcessItems object
 class ProcessItems(object):
-    def __init__(self, json_file, wikia_item_page_ids):
+    def __init__(self, json_file, wikia_item_page_ids, wikia_buy_limits):
         self.json_file = json_file
         self.wikia_item_page_ids = wikia_item_page_ids
+        self.wikia_buy_limits = wikia_buy_limits
         self.allitems = dict()
         self.allitemdefs = dict()
 
@@ -86,7 +87,7 @@ class ProcessItems(object):
             self.construct_ItemDefinition(k, v)
 
     def construct_ItemDefinition(self, itemID, itemJSON):
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.wikia_item_page_ids) 
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.wikia_item_page_ids, self.wikia_buy_limits) 
         item = itemdef.populate_from_allitems()
         self.allitemdefs[itemID] = item
 
@@ -113,13 +114,12 @@ if __name__=="__main__":
     print(">>> Extracting all item buy_limit data from OSRS Wikia...")
     we.parse_buy_limits()
 
-    print(we.wikia_buy_limits)
-    quit()
     # Print item pages extracted from OSRS Wikia
     # for page_title, page_id in we.wikia_item_page_ids.items():
     #     print(page_title, page_id)
 
     # Next, process ItemScraper RuneLite plugin output file
     pi = ProcessItems(args["file"],
-                      we.wikia_item_page_ids)
+                      we.wikia_item_page_ids,
+                      we.wikia_buy_limits)
     pi.process_allitems()

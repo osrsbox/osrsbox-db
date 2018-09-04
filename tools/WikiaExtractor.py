@@ -112,6 +112,8 @@ class WikiaExtractor(object):
         #print(row_count)
         for i, cell in enumerate(all_cells):
             item_name = str(all_cells[i][0]) # item_name is in column 1
+            if "!Item Name" in item_name:
+                continue
             item_name = self.clean_buy_limits(item_name)
             item_buy_limit = str(all_cells[i][1]) # buy_limit is in column 2
             item_buy_limit = self.clean_buy_limits(item_buy_limit)

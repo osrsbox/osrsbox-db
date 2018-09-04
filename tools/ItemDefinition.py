@@ -118,14 +118,16 @@ def _questcast(val):
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, wikia_item_page_ids):
+    def __init__(self, itemID, itemJSON, wikia_item_page_ids, wiki_buy_limits):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
         self.itemJSON = itemJSON
 
-        # Bulk list of all OSRS Wikia Item pages
+        # Bulk dict of all OSRS Wikia Item pages
         self.wikia_item_page_ids = wikia_item_page_ids
+        # Bulk dict of all OSRS Wikia Item buy_limits
+        self.wiki_buy_limits = wiki_buy_limits
 
         # TODO: Not sure what this is used for now
         self.object = None
