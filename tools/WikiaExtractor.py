@@ -46,12 +46,14 @@ __version__ = "0.1.0"
 
 import requests
 import json
+import wikitextparser
 
 ###############################################################################
 # WikiaExtractor object
 class WikiaExtractor(object):
     def __init__(self):
         self.wikia_item_page_ids = dict()
+        self.wikia_buy_limits = dict()
 
     def query_category_items(self):
         for result in self.query_category_items_callback({'generator': 'categorymembers'}):
@@ -91,4 +93,37 @@ class WikiaExtractor(object):
             if 'categorymembers' not in result['query-continue']:
                 break
             lastContinue = result['query-continue']['categorymembers']
- 
+
+    def parse_buy_limits(self):
+        url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=Grand_Exchange/Buying_limits"
+        result = requests.get(url)
+        # Force fetched page to JSON
+        data = result.json()
+        # Get the actual content (table)
+        input = data["parse"]["wikitext"]["*"]
+        # Parse the extracted table to WikiText
+        p = wikitextparser.parse(input)
+        # Grab the first table, there is only one
+        t = p.tables[0]
+        # Get all the cells as a list
+        all_cells = t.cells()
+        # Determine number of rows in table
+        row_count = len(all_cells)
+        #print(row_count)
+        for i, cell in enumerate(all_cells):
+            item_name = str(all_cells[i][0]) # item_name is in column 1
+            item_name = self.clean_buy_limits(item_name)
+            item_buy_limit = str(all_cells[i][1]) # buy_limit is in column 2
+            item_buy_limit = self.clean_buy_limits(item_buy_limit)
+            self.wikia_buy_limits[item_name] = item_buy_limit
+
+    def clean_buy_limits(self, input):
+        # Clean a passed but_limits string
+        # For example:
+        # item: |[[Zamorak monk top]]
+        # buy_limit: |15
+        input = input.strip()
+        input = input.replace("[", "")
+        input = input.replace("]", "")
+        input = input.replace("|", "")
+        return input  

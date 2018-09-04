@@ -27,6 +27,8 @@ pip install requests
 pip install mvparserfromhell
 pip install dateparser
 
+pip install wikitextparser
+
 Copyright (c) 2018, PH01L
 
 ###############################################################################
@@ -54,10 +56,14 @@ import json
 import datetime
 import collections
 import logging
+import requests
 
 sys.path.append(os.getcwd())
 import ItemDefinition
 import WikiaExtractor
+
+import mwparserfromhell
+import wikitextparser
 
 ###############################################################################
 # ProcessItems object
@@ -98,12 +104,17 @@ if __name__=="__main__":
     args = vars(ap.parse_args())
     
     # Start processing    
-    print("Starting processing...")
+    print(">>> Starting processing...")
 
     # Start by extracting all Category:Items pages from OSRS Wikia
     we = WikiaExtractor.WikiaExtractor()
+    print(">>> Extracting all item pages from OSRS Wikia...")
     we.query_category_items()
+    print(">>> Extracting all item buy_limit data from OSRS Wikia...")
+    we.parse_buy_limits()
 
+    print(we.wikia_buy_limits)
+    quit()
     # Print item pages extracted from OSRS Wikia
     # for page_title, page_id in we.wikia_item_page_ids.items():
     #     print(page_title, page_id)
