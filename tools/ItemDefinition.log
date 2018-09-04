@@ -1,0 +1,593 @@
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 0
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 1,
+    "equipable": false,
+    "examine": "",
+    "highalch": 1,
+    "id": 0,
+    "lowalch": 0,
+    "members": true,
+    "name": "Dwarf remains",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": false,
+    "tradeable": false,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Dwarf remains
+DEBUG:ItemDefinition:  > id: 0
+DEBUG:ItemDefinition:  > wikia pageid: 11337
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Dwarf%20remains HTTP/1.1" 200 469
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc=Dwarf remains}}', '{{Infobox Item\n|name = Dwarf remains\n|image = [[File:Dwarf remains.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = [[Dwarf Cannon]]\n|tradeable = No\n|equipable = No\n|stackable = No\n|high = No\n|low = No\n|value = 1\n|destroy = These are the remains of the dwarf who was stationed in the Guard Tower.\n|store = No\n|examine = The body of a Dwarf savaged by Goblins.\n|weight = 0\n}}', '{{Dwarf Cannon}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox Item
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox Item
+|name = Dwarf remains
+|image = [[File:Dwarf remains.png]]
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+|quest = [[Dwarf Cannon]]
+|tradeable = No
+|equipable = No
+|stackable = No
+|high = No
+|low = No
+|value = 1
+|destroy = These are the remains of the dwarf who was stationed in the Guard Tower.
+|store = No
+|examine = The body of a Dwarf savaged by Goblins.
+|weight = 0
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": -1,
+    "cost": 1,
+    "equipable": false,
+    "examine": "The body of a Dwarf savaged by Goblins.",
+    "highalch": 1,
+    "id": 0,
+    "lowalch": 0,
+    "members": true,
+    "name": "Dwarf remains",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": false,
+    "tradeable": false,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Dwarf_remains",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 1
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 1,
+    "equipable": false,
+    "examine": "",
+    "highalch": 1,
+    "id": 1,
+    "lowalch": 0,
+    "members": true,
+    "name": "Toolkit",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": false,
+    "tradeable": false,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Toolkit
+DEBUG:ItemDefinition:  > id: 1
+DEBUG:ItemDefinition:  > wikia pageid: 14713
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Toolkit HTTP/1.1" 200 536
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc=Tool kit}}', '{{otheruses|the toolkit used during the [[Dwarf Cannon]] quest|the toolkit used during the [[Castle Wars]] minigame|Toolkit (Castle Wars)}}', '{{Infobox Item\n|name = Toolkit\n|image = [[File:Toolkit.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = [[Dwarf Cannon]]\n|tradeable = No\n|equipable = No\n|stackable = No\n|high = No\n|low = No\n|destroy = I got this from Captain Lawgof.\n|store = No\n|examine = Good for repairing a broken cannon.\n|weight = 0\n}}', '{{Dwarf Cannon}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: otheruses
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox Item
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox Item
+|name = Toolkit
+|image = [[File:Toolkit.png]]
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+|quest = [[Dwarf Cannon]]
+|tradeable = No
+|equipable = No
+|stackable = No
+|high = No
+|low = No
+|destroy = I got this from Captain Lawgof.
+|store = No
+|examine = Good for repairing a broken cannon.
+|weight = 0
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": -1,
+    "cost": 1,
+    "equipable": false,
+    "examine": "Good for repairing a broken cannon.",
+    "highalch": 1,
+    "id": 1,
+    "lowalch": 0,
+    "members": true,
+    "name": "Toolkit",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": false,
+    "tradeable": false,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Toolkit",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 2
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 5,
+    "equipable": false,
+    "examine": "",
+    "highalch": 3,
+    "id": 2,
+    "lowalch": 2,
+    "members": true,
+    "name": "Cannonball",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": true,
+    "tradeable": true,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Cannonball
+DEBUG:ItemDefinition:  > id: 2
+DEBUG:ItemDefinition:  > wikia pageid: 12581
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Cannonball HTTP/1.1" 200 2189
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc=Multi_cannon_ball}}', '{{otheruses|the ammunition for the dwarf multicannon|the quest item used in [[Cabin Fever]]|Cannon ball}}', '{{HasMMG|Smithing cannonballs}}', "{{Switch infobox\n|item1= \n{{Infobox Item\n|name = Cannonball\n|image = [[File:Cannonball.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = No\n|equipable = No\n|tradeable = Yes\n|stackable = Yes\n|high = 3\n|low = 2\n|destroy = Drop\n|store = No\n|exchange = gemw\n|examine = Ammo for the Dwarf Cannon.\n|weight = 0\n}}\n[[File:Cannonball detail.png|left|150px]]\n|text1=Normal\n|item2= \n{{Infobox Item\n|name = Cannonball\n|image = [[File:Cannonball (Christmas).png]]\n|release = 11 December [[2017]]\n|update = It's Christmas Time\n|members = Yes\n|quest = No\n|equipable = No\n|tradeable = Yes\n|stackable = Yes\n|high = 3\n|low = 2\n|destroy = Drop\n|store = No\n|exchange = gemw\n|examine = Ammo for the Dwarf Cannon.\n|weight = 0\n}}\n[[File:Cannonball (Christmas) detail.png|left|150px]]\n|text2=Christmas}}", '{{Infobox Item\n|name = Cannonball\n|image = [[File:Cannonball.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = No\n|equipable = No\n|tradeable = Yes\n|stackable = Yes\n|high = 3\n|low = 2\n|destroy = Drop\n|store = No\n|exchange = gemw\n|examine = Ammo for the Dwarf Cannon.\n|weight = 0\n}}', "{{Infobox Item\n|name = Cannonball\n|image = [[File:Cannonball (Christmas).png]]\n|release = 11 December [[2017]]\n|update = It's Christmas Time\n|members = Yes\n|quest = No\n|equipable = No\n|tradeable = Yes\n|stackable = Yes\n|high = 3\n|low = 2\n|destroy = Drop\n|store = No\n|exchange = gemw\n|examine = Ammo for the Dwarf Cannon.\n|weight = 0\n}}", '{{ItemDropsTableHead}}', '{{ItemDropsLine|Monster=Corporeal Beast|Combat=785|Quantity=2000|Rarity=Common}}', '{{ItemDropsLine|Monster=Cerberus|Combat=318|Quantity=50|Rarity=Uncommon}}', '{{ItemDropsLine|Monster=Crazy archaeologist|Combat=204|Quantity=150|Rarity=Uncommon}}', '{{ItemDropsLine|Combat = 350|Monster = Abyssal Sire|Quantity = 300|Rarity = Uncommon}}', '{{ItemDropsLine|Monster=Venenatis|Combat=464|Quantity=250|Rarity=Uncommon}}', '{{ItemDropsLine|Monster=Callisto|Combat=470|Quantity=250|Rarity=Uncommon}}', '{{ItemDropsLine|Monster=Killerwatt|Combat=55|Quantity=3|Rarity=Uncommon}}', "{{ItemDropsLine|Monster=Vet'ion|Combat=454|Quantity=250|Rarity=Rare}}", '{{Ranged weapons}}', '{{Dwarf Cannon}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: otheruses
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: HasMMG
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Switch infobox
+
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox Item
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox Item
+|name = Cannonball
+|image = [[File:Cannonball.png]]
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+|quest = No
+|equipable = No
+|tradeable = Yes
+|stackable = Yes
+|high = 3
+|low = 2
+|destroy = Drop
+|store = No
+|exchange = gemw
+|examine = Ammo for the Dwarf Cannon.
+|weight = 0
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 5,
+    "equipable": false,
+    "examine": "Ammo for the Dwarf Cannon.",
+    "highalch": 3,
+    "id": 2,
+    "lowalch": 2,
+    "members": true,
+    "name": "Cannonball",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": true,
+    "tradeable": true,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Cannonball",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 3
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 1,
+    "equipable": false,
+    "examine": "",
+    "highalch": 1,
+    "id": 3,
+    "lowalch": 0,
+    "members": true,
+    "name": "Nulodion's notes",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": false,
+    "tradeable": false,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Nulodion's notes
+DEBUG:ItemDefinition:  > id: 3
+DEBUG:ItemDefinition:  > wikia pageid: 19284
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Nulodion's%20notes HTTP/1.1" 200 517
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc}}', "{{Infobox Item\n|name = Nulodion's notes\n|image = [[File:Nulodion's notes.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = [[Dwarf cannon]]\n|tradeable = No\n|equipable = No\n|stackable = No\n|high = No\n|low = No\n|destroy = Drop\n|store = No\n|examine = Construction notes for Dwarf cannon ammo.\n|weight = 0\n}}", '{{FromGame}}', '{{Dwarf Cannon}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox Item
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox Item
+|name = Nulodion's notes
+|image = [[File:Nulodion's notes.png]]
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+|quest = [[Dwarf cannon]]
+|tradeable = No
+|equipable = No
+|stackable = No
+|high = No
+|low = No
+|destroy = Drop
+|store = No
+|examine = Construction notes for Dwarf cannon ammo.
+|weight = 0
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": -1,
+    "cost": 1,
+    "equipable": false,
+    "examine": "Construction notes for Dwarf cannon ammo.",
+    "highalch": 1,
+    "id": 3,
+    "lowalch": 0,
+    "members": true,
+    "name": "Nulodion's notes",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": false,
+    "tradeable": false,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Nulodion's_notes",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 4
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 5,
+    "equipable": false,
+    "examine": "",
+    "highalch": 3,
+    "id": 4,
+    "lowalch": 2,
+    "members": true,
+    "name": "Ammo mould",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": false,
+    "tradeable": false,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Ammo mould
+DEBUG:ItemDefinition:  > id: 4
+DEBUG:ItemDefinition:  > wikia pageid: 10178
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Ammo%20mould HTTP/1.1" 200 546
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc=Cannon ammo mould}}', '{{Infobox Item\n|name = Ammo mould\n|image = [[File:Ammo mould.png]]\n|AKA = Cannonball mould\n|quest = [[Dwarf Cannon]]\n|tradeable = No\n|equipable = No\n|stackable = No\n|high = 3\n|low = 2\n|destroy = Drop\n|store = 5\n|seller = Nulodion\n|examine = Used to make cannon ammunition.\n|weight = 4\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n}}', '{{Dwarf Cannon}}', '{{Mould}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox Item
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox Item
+|name = Ammo mould
+|image = [[File:Ammo mould.png]]
+|AKA = Cannonball mould
+|quest = [[Dwarf Cannon]]
+|tradeable = No
+|equipable = No
+|stackable = No
+|high = 3
+|low = 2
+|destroy = Drop
+|store = 5
+|seller = Nulodion
+|examine = Used to make cannon ammunition.
+|weight = 4
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": -1,
+    "cost": 5,
+    "equipable": false,
+    "examine": "Used to make cannon ammunition.",
+    "highalch": 3,
+    "id": 4,
+    "lowalch": 2,
+    "members": true,
+    "name": "Ammo mould",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": false,
+    "tradeable": false,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Ammo_mould",
+    "weight": 4.0
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 5
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 10,
+    "equipable": false,
+    "examine": "",
+    "highalch": 6,
+    "id": 5,
+    "lowalch": 4,
+    "members": true,
+    "name": "Instruction manual",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": false,
+    "tradeable": false,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Instruction manual
+DEBUG:ItemDefinition:  > id: 5
+DEBUG:ItemDefinition:  > wikia pageid: 19353
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Instruction%20manual HTTP/1.1" 200 1064
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc}}', '{{Infobox Item \n|name=Instruction manual\n|image = [[File:Instruction manual.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = No\n|tradeable = No\n|equipable = No\n|stackable = No\n|high = 6\n|low = 4\n|store = 20\n|destroy = Drop\n|seller = Rasolo\n|examine= An old note book.\n|weight = 0.51\n}}', '{{FromGame}}', '{{Dwarf Cannon}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox Item 
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox Item 
+|name=Instruction manual
+|image = [[File:Instruction manual.png]]
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+|quest = No
+|tradeable = No
+|equipable = No
+|stackable = No
+|high = 6
+|low = 4
+|store = 20
+|destroy = Drop
+|seller = Rasolo
+|examine= An old note book.
+|weight = 0.51
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": -1,
+    "cost": 10,
+    "equipable": false,
+    "examine": "An old note book.",
+    "highalch": 6,
+    "id": 5,
+    "lowalch": 4,
+    "members": true,
+    "name": "Instruction manual",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": false,
+    "tradeable": false,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Instruction_manual",
+    "weight": 0.51
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 6
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 187500,
+    "equipable": false,
+    "examine": "",
+    "highalch": 112500,
+    "id": 6,
+    "lowalch": 75000,
+    "members": true,
+    "name": "Cannon base",
+    "noteable": false,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": false,
+    "tradeable": true,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Cannon base
+DEBUG:ItemDefinition:  > id: 6
+DEBUG:ItemDefinition:  > wikia pageid: 19175
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
+DEBUG:urllib3.connectionpool:http://oldschoolrunescape.wikia.com:80 "GET /api.php?action=parse&prop=wikitext&format=json&page=Cannon%20base HTTP/1.1" 200 532
+DEBUG:ItemDefinition:Extracting Wikia InfoBox templates...
+DEBUG:ItemDefinition:['{{External|rs|rsc=Dwarf cannon base}}', '{{Infobox item\n|exchange = gemw\n|name = Cannon base\n|image = [[File:Cannon base.png]]\n|release = 27 May [[2003]]\n|update = New Dwarf Cannon Quest\n|members = Yes\n|quest = [[Dwarf Cannon]]\n|tradeable = Yes\n|equipable = No\n|stackable = No\n|high = 112500\n|low = 75000\n|destroy = Drop\n|store = 200625\n|seller = Nulodion\n|examine = The cannon is built on this.\n|weight = 10\n}}', '{{Cannon}}', '{{Dwarf Cannon}}']
+DEBUG:ItemDefinition:InfoBox Name: External
+DEBUG:ItemDefinition:InfoBox NOT FOUND... Returning...
+DEBUG:ItemDefinition:InfoBox Name: Infobox item
+
+DEBUG:ItemDefinition:InfoBox FOUND... Continuing...
+DEBUG:ItemDefinition:Starting: parse_InfoboxItem
+DEBUG:ItemDefinition:Processing InfoBox template...
+DEBUG:ItemDefinition:{{Infobox item
+|exchange = gemw
+|name = Cannon base
+|image = [[File:Cannon base.png]]
+|release = 27 May [[2003]]
+|update = New Dwarf Cannon Quest
+|members = Yes
+|quest = [[Dwarf Cannon]]
+|tradeable = Yes
+|equipable = No
+|stackable = No
+|high = 112500
+|low = 75000
+|destroy = Drop
+|store = 200625
+|seller = Nulodion
+|examine = The cannon is built on this.
+|weight = 10
+}}
+DEBUG:ItemDefinition:Dumping second input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 187500,
+    "equipable": false,
+    "examine": "The cannon is built on this.",
+    "highalch": 112500,
+    "id": 6,
+    "lowalch": 75000,
+    "members": true,
+    "name": "Cannon base",
+    "noteable": false,
+    "quest_item": true,
+    "release_date": "27 May 2003",
+    "stackable": false,
+    "tradeable": true,
+    "url": "http://oldschoolrunescape.wikia.com/wiki/Cannon_base",
+    "weight": 10.0
+}
+DEBUG:ItemDefinition:============================================
+DEBUG:ItemDefinition:ItemID: 7
+DEBUG:ItemDefinition:Dumping first input...
+DEBUG:ItemDefinition:Starting: construct_json
+DEBUG:ItemDefinition:{
+    "buy_limit": 0,
+    "cost": 187500,
+    "equipable": false,
+    "examine": "",
+    "highalch": 112500,
+    "id": 7,
+    "lowalch": 75000,
+    "members": true,
+    "name": "Cannon base",
+    "noteable": true,
+    "quest_item": false,
+    "release_date": null,
+    "stackable": true,
+    "tradeable": false,
+    "url": "",
+    "weight": 0.0
+}
+DEBUG:ItemDefinition:Starting: determine_wiki_page
+DEBUG:ItemDefinition:Searching for item in OSRS Wikia by name...
+DEBUG:ItemDefinition:>>> ITEM FOUND:
+DEBUG:ItemDefinition:  > name: Cannon base
+DEBUG:ItemDefinition:  > id: 7
+DEBUG:ItemDefinition:  > wikia pageid: 19175
+DEBUG:ItemDefinition:Starting: extract_InfoboxItem
+DEBUG:ItemDefinition:  > Extracting infobox for item...
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): oldschoolrunescape.wikia.com
