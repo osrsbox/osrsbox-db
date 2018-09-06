@@ -260,6 +260,20 @@ class ItemDefinition(object):
         self._highalch = _intcast(value)	        	
 
     @property
+    def store_price(self):
+        return self._store_price
+    @store_price.setter
+    def store_price(self, value):
+        self._store_price = _intcast(value)
+
+    @property
+    def seller(self):
+        return self._seller
+    @seller.setter
+    def seller(self, value):
+        self._seller = _strcast(value)
+
+    @property
     def examine(self):
         return self._examine
     @examine.setter
@@ -281,9 +295,9 @@ class ItemDefinition(object):
         print(">>>>>>>>>>>> Processing: %s" % self.itemID)
 
         # Start section in logger
-        self.logger.debug("============================================")
+        self.logger.debug("============================================ START")
         self.logger.debug("ItemID: %s" % self.itemID)
-        self.logger.debug("ItemName: %s" % self.name)
+        # self.logger.debug("ItemName: %s" % self.name)
 
         # Set all values from JSON input file into ItemDefinition object
         self.id = self.itemJSON["id"]
@@ -305,8 +319,8 @@ class ItemDefinition(object):
 
         # Log the initial JSON input
         self.logger.debug("Dumping first input...")
-        self.logger.debug("Starting: construct_json")
-        self.construct_json()
+        self.logger.debug("Starting: print_pretty_debug_json")
+        self.print_pretty_debug_json()
 
         # Set all values from ItemDefinition object to properties dict
         for prop in self.properties:
@@ -351,8 +365,10 @@ class ItemDefinition(object):
 
         # Log the second JSON input
         self.logger.debug("Dumping second input...")
-        self.logger.debug("Starting: construct_json")
-        self.construct_json()
+        self.logger.debug("Starting: print_pretty_debug_json")
+        self.print_pretty_debug_json()
+
+        self.logger.debug("============================================ END")
 
         # Finished. Return the entire ItemDefinition object
         return self
@@ -380,6 +396,12 @@ class ItemDefinition(object):
         input = input.strip()
         input = input.replace("[", "")
         input = input.replace("]", "")
+        # input = input.replace("{", "")
+        # input = input.replace("}", "")
+        # input = input.replace("<br>", "")
+        # What to do with this:
+        # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
+        
         # Fix for weight ending in kg, or space kg
         if input.endswith(" kg"):
             input = input.replace(" kg", "")
@@ -420,7 +442,7 @@ class ItemDefinition(object):
                 return True
             else:
                 self.logger.debug("InfoBox Name: %s" % template_name)
-                self.logger.debug("InfoBox NOT FOUND... Returning...")
+                self.logger.debug("InfoBox NOT FOUND... Trying next entry...")
         return False                   
 
     def parse_InfoboxItem(self, template):
@@ -439,8 +461,18 @@ class ItemDefinition(object):
             self.buy_limit = -1
         else:
             self.buy_limit = 0
-        # store price
-        # seller
+        try:
+            store_price = self.strip_infobox(template.get("store").value)
+            self.store_price = store_price      
+        except ValueError:
+            self.store_price = -1
+        try:
+            seller = self.strip_infobox(template.get("seller").value)
+            self.seller = seller   
+        except ValueError:
+            self.seller = ""
+        
+
 
     def extract_InfoBoxBonuses(self):
         # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
@@ -491,8 +523,16 @@ class ItemDefinition(object):
         itemBonuses.ranged_strength = self.strip_infobox(template.get("rstr").value)
         itemBonuses.magic_damage = self.strip_infobox(template.get("mdmg").value)
         itemBonuses.prayer = self.strip_infobox(template.get("prayer").value)
-        itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value)
-        itemBonuses.slot  = self.strip_infobox(template.get("slot").value)
+        try:
+            itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value) 
+        except ValueError:
+            itemBonuses.attack_speed = -1       
+        try:
+            itemBonuses.slot  = self.strip_infobox(template.get("slot").value)
+        except ValueError:
+            itemBonuses.slot = ""
+            self.logger.critical("Could not determine equipable item slot")        
+        
         self.itemBonuses = itemBonuses
           
     ###########################################################################
@@ -551,6 +591,8 @@ class ItemDefinition(object):
         self.json_out["cost"] = self.cost
         self.json_out["lowalch"] = self.lowalch
         self.json_out["highalch"] = self.highalch
+        self.json_out["store_price"] = self.highalch
+        self.json_out["seller"] = self.highalch
         self.json_out["examine"] = self.examine
         self.json_out["url"] = self.url
         if self.equipable:
