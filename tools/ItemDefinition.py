@@ -78,7 +78,7 @@ def _floatcast(val):
         return val
     if isinstance(val, str):
         if val == "":
-            return 0.0
+            return float(0.0)
         else:
             return float(val)                
                 
@@ -283,6 +283,7 @@ class ItemDefinition(object):
         # Start section in logger
         self.logger.debug("============================================")
         self.logger.debug("ItemID: %s" % self.itemID)
+        self.logger.debug("ItemName: %s" % self.name)
 
         # Set all values from JSON input file into ItemDefinition object
         self.id = self.itemJSON["id"]
@@ -314,32 +315,44 @@ class ItemDefinition(object):
         # All properties from ItemScraper RuneLite plugin are now loaded
         # Time to fetch other information of OSRS Wikia
 
-        # Log 
+        # Try to find a OSRS Wikia page for this item 
         self.logger.debug("Starting: determine_wiki_page")
-        success = self.determine_wiki_page()
-        # success indicates if OSRS Wikia page was found
-        # TODO: Need to do something with this success value
+        has_wikia_page = self.determine_wiki_page()
+        
+        # has_wikia_page indicates if OSRS Wikia page was found
 
-        if success:
+        if has_wikia_page:
             # This item has an OSRS Wikia page
             # Try to extract the InfoboxItem template
             self.logger.debug("Starting: extract_InfoboxItem")
-            success2 = self.extract_InfoboxItem()
+            has_infobox_item = self.extract_InfoboxItem()
+            if has_infobox_item:
+                self.logger.debug("Item InfoBox extracted successfully")
+            else:
+                self.logger.critical("Item InfoBox extraction error.")
+        else:
+            self.logger.warning("Item has no OSRS Wikia page. Setting default values.")
+            # TODO: Need to do something with items that have no OSRS Wikia page
+            # Might not need to implement, as defaults should already be set on JSON import
 
-        # Continue processing, if equipable
+        # Continue processing... but only if equipable
         if self.equipable:
             self.logger.debug("Item is equipable... Trying to fetch bonuses...")
-            if success:
+            if has_wikia_page:
                 self.logger.debug("Starting: extract_InfoBoxBonuses")
-                self.extract_InfoBoxBonuses()
+                has_infobox_bonuses = self.extract_InfoBoxBonuses()
+                if has_infobox_bonuses:
+                    self.logger.debug("Item InfoBox Bonuses extracted successfully")
+                else:
+                    self.logger.critical("Item InfoBox Bonuses extraction error.")
             else:
-                pass
+                self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
 
 
         # Log the second JSON input
         self.logger.debug("Dumping second input...")
         self.logger.debug("Starting: construct_json")
-        self.construct_json()        
+        self.construct_json()
 
         # Finished. Return the entire ItemDefinition object
         return self
@@ -481,15 +494,47 @@ class ItemDefinition(object):
         itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value)
         itemBonuses.slot  = self.strip_infobox(template.get("slot").value)
         self.itemBonuses = itemBonuses
-        # for prop in self.itemBonuses.wikia_properties:
-        #     current = self.strip_infobox(template.get(prop).value)
-        #     itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
-        #     itemBonuses.prop = current
-            #self.bonuses[prop] = current
-
           
     ###########################################################################
     # Handle item to JSON
+    def print_json(self):
+        # Print JSON to console
+        self.construct_json()
+        json_obj = json.dumps(self.json_out)
+        print(json_obj)
+
+    def print_pretty_json(self):
+        # Pretty print JSON to console
+        self.construct_json()
+        json_obj = json.dumps(self.json_out, indent=4)
+        print(json_obj)
+
+    def print_debug_json(self):
+        # Print JSON to log file
+        self.construct_json()
+        json_obj = json.dumps(self.json_out)
+        self.logger.debug(json_obj)
+
+    def print_pretty_debug_json(self):
+        # Pretty print JSON to log file
+        self.construct_json()
+        json_obj = json.dumps(self.json_out, indent=4)
+        self.logger.debug(json_obj)
+            
+    def export_json(self):
+        # Export JSON to individual file
+        self.construct_json()
+        out_fi = "item-json" + os.sep + str(self.id) + ".json"
+        with open(out_fi, "w") as f:
+            json.dump(self.json_out, f)
+
+    def export_pretty_json(self):
+        # Export pretty JSON to individual file
+        self.construct_json()
+        out_fi = "item-json" + os.sep + str(self.id) + ".json"
+        with open(out_fi, "w") as f:
+            json.dump(self.json_out, f, indent=4)
+
     def construct_json(self):
         self.json_out = collections.OrderedDict()
         self.json_out["id"] = self.id
@@ -511,16 +556,14 @@ class ItemDefinition(object):
         if self.equipable:
             bonuses_in_json = self.itemBonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
+            # Old code has item slot + weapon speed in main JSON body
             #self.json_out["item_slot"] = self.item_slot
             #if self.item_slot == "weapon" or self.item_slot == "two-handed":
             #    self.json_out["weapon_speed"] = self.weapon_speed
-        self.logger.debug(json.dumps(self.json_out, indent=4, sort_keys=True))
     
     def edit_json(self):
         """ Construct JSON, print JSON, manually check and edit the contents. """
-        self.construct_json()
-        json_obj = json.dumps(self.json_out, indent=2)
-        print(json_obj)
+        self.print_pretty_json()
         answer = input("Would you like to change a field? [y, N]: ")
         if answer.lower() == "y":
             field = input("Name of field to change: ")
@@ -536,7 +579,6 @@ class ItemDefinition(object):
 
     def check_json(self):
         """ Construct JSON, and auto check fields. """
-        self.construct_json()
         required_fields = ["id",
                            "name",
                            "tradeable",
@@ -551,24 +593,15 @@ class ItemDefinition(object):
                            "cost",
                            "lowalch",
                            "highalch"]
+                           # TODO: Update this list
         for field in required_fields:
             if not hasattr(self, field):
                 print("ERROR: Missing object attribute for: %s" % field)
-        if self.equipable:
-            if not self.bonuses:
-                print("ERROR: Equipable object has no item bonuses")
-                quit()
-        
-    def print_json(self):
-        self.construct_json()
-        json_obj = json.dumps(self.json_out, indent=2)
-        print(json_obj)   
-            
-    def export_json(self):
-        self.construct_json()
-        out_fi = "output" + os.sep + str(self.id) + ".json"
-        with open(out_fi, "w") as f:
-            json.dump(self.json_out, f, indent=2)
+        # TODO: This code needs to be more thorough and in ItemBonuses class
+        # if self.equipable:
+        #     if not self.bonuses:
+        #         print("ERROR: Equipable object has no item bonuses")
+        #         quit()
 
 ################################################################################
 if __name__=="__main__":

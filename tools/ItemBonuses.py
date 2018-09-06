@@ -58,6 +58,12 @@ def _intcast(val):
             if val.isdigit():
                 return int(val)
 
+def _strcast(val):
+    """ Convert value to string. """
+    if val is None:
+        return None
+    return str(val)
+
 ###############################################################################
 # ItemBonuses object
 class ItemBonuses(object):
@@ -214,9 +220,13 @@ class ItemBonuses(object):
         return self._slot
     @slot.setter
     def slot(self, value):
-        self._slot = _intcast(value)
+        self._slot = _strcast(value)
 
-###########################################################################
+    def validate_ItemBonuses(self):
+        pass
+        # This method should check the ItemBonuses are valid
+
+    ###########################################################################
     # Handle item to JSON
     def construct_json(self):
         self.json_out = collections.OrderedDict()
@@ -234,38 +244,7 @@ class ItemBonuses(object):
         self.json_out["ranged_strength"] = self.ranged_strength
         self.json_out["magic_damage"] = self.magic_damage
         self.json_out["prayer"] = self.prayer
-        return self.json_out
-
-
-    # def determine_item_bonuses(self):
-    #     scfm = ScrapeItemFromWikia.ScrapeItemFromWikia(self.name, True)
-    #     scfm.read_all_item_urls()
-    #     if scfm.determine_item_url():
-    #         self.bonuses, self.item_slot, self.weapon_speed = scfm.get_item_bonuses()
-    #     else:
-    #         answer = input("  > Would you like to set a ZERO table? [y, N]: ")
-    #         if answer.lower() == "y":
-    #             self.bonuses = {"attack_stab" : None,
-    #                             "attack_slash" : None,
-    #                             "attack_crush" : None,
-    #                             "attack_magic" : None,
-    #                             "attack_ranged" : None,
-    #                             "defence_stab" : None,
-    #                             "defence_slash" : None,
-    #                             "defence_crush" : None,
-    #                             "defence_magic" : None,
-    #                             "defence_ranged" : None,
-    #                             "melee_strength" : None,
-    #                             "ranged_strength" : None,
-    #                             "magic_damage" : None,
-    #                             "prayer" : None}
-    #             for key, value in self.bonuses.items():
-    #                 self.bonuses[key] = 0
-    #             self.item_slot = input("  > What slot is this item: ")
-    #             self.weapon_speed = input("  > What speed is this item: ")            
-    #     if self.bonuses == None:
-    #         print(">>> ERROR: Could not fetch item stats")
-    #         quit()              
+        return self.json_out     
 
 ################################################################################
 if __name__=="__main__":
