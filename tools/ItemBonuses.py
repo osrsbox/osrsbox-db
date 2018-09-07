@@ -104,7 +104,10 @@ class ItemBonuses(object):
             "aspeed",
             "slot"] 
         for prop in self.properties:
-            setattr(self, prop, 0)
+            if prop == "aspeed" or prop == "slot":
+                setattr(self, prop, "")
+            else:
+                setattr(self, prop, 0)
     
     # Attacking Stats
     @property
@@ -209,18 +212,18 @@ class ItemBonuses(object):
 
     # Other
     @property
-    def attack_speed(self):
-        return self._attack_speed
-    @attack_speed.setter
-    def attack_speed(self, value):
-        self._attack_speed = _intcast(value)
-
-    @property
     def slot(self):
         return self._slot
     @slot.setter
     def slot(self, value):
         self._slot = _strcast(value)
+
+    @property
+    def attack_speed(self):
+        return self._attack_speed
+    @attack_speed.setter
+    def attack_speed(self, value):
+        self._attack_speed = _intcast(value)
 
     def validate_ItemBonuses(self):
         pass
@@ -244,6 +247,8 @@ class ItemBonuses(object):
         self.json_out["ranged_strength"] = self.ranged_strength
         self.json_out["magic_damage"] = self.magic_damage
         self.json_out["prayer"] = self.prayer
+        self.json_out["slot"] = self.slot
+        self.json_out["attack_speed"] = self.attack_speed
         return self.json_out     
 
 ################################################################################
@@ -252,5 +257,6 @@ if __name__=="__main__":
     assert _intcast(-1) == -1
     assert _intcast("-1") == -1
     assert _intcast("1") == 1
+    assert _intcast("+1") == 1
    
     print("Module tests passed.")

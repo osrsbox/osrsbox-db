@@ -218,6 +218,13 @@ class ItemDefinition(object):
         self._weight = _floatcast(value)
 
     @property
+    def weight_equipped(self):
+        return self._weight_equipped
+    @weight_equipped.setter
+    def weight_equipped(self, value):
+        self._weight_equipped = _floatcast(value)
+
+    @property
     def buy_limit(self):
         return self._buy_limit
     @buy_limit.setter
@@ -287,8 +294,8 @@ class ItemDefinition(object):
     def url(self, value):
         self._url = _strcast(value)
 
-    def __getattr__(self, attr):
-        return self[attr]
+    # def __getattr__(self, attr):
+    #     return self[attr]
 
     def populate(self):
         # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
@@ -317,6 +324,12 @@ class ItemDefinition(object):
         self.examine = self.itemJSON["examine"]
         self.url = self.itemJSON["url"]
 
+        # Extras
+        self.weight_equipped = 0.0
+        self.store_price = 0
+        self.seller = ""
+
+
         # Log the initial JSON input
         self.logger.debug("Dumping first input...")
         self.logger.debug("Starting: print_pretty_debug_json")
@@ -344,8 +357,10 @@ class ItemDefinition(object):
                 self.logger.debug("Item InfoBox extracted successfully")
             else:
                 self.logger.critical("Item InfoBox extraction error.")
+                print(">>>>>>>>>>>> CRITICAL: Item InfoBox extraction error")
         else:
             self.logger.warning("Item has no OSRS Wikia page. Setting default values.")
+            print(">>>>>>>>>>>> WARNING: No OSRS Wiki Page: %s" % self.name)
             # TODO: Need to do something with items that have no OSRS Wikia page
             # Might not need to implement, as defaults should already be set on JSON import
 
@@ -359,8 +374,10 @@ class ItemDefinition(object):
                     self.logger.debug("Item InfoBox Bonuses extracted successfully")
                 else:
                     self.logger.critical("Item InfoBox Bonuses extraction error.")
+                    print(">>>>>>>>>>>> CRITICAL: Item InfoBox Bonuses extraction error")
             else:
                 self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
+                print(">>>>>>>>>>>> CRITICAL: Equipable item has no bonuses")
 
 
         # Log the second JSON input
@@ -396,17 +413,7 @@ class ItemDefinition(object):
         input = input.strip()
         input = input.replace("[", "")
         input = input.replace("]", "")
-        # input = input.replace("{", "")
-        # input = input.replace("}", "")
-        # input = input.replace("<br>", "")
-        # What to do with this:
-        # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
-        
-        # Fix for weight ending in kg, or space kg
-        if input.endswith(" kg"):
-            input = input.replace(" kg", "")
-        if input.endswith("kg"):
-            input = input.replace("kg", "")
+
         return input        
 
     def extract_InfoboxItem(self):
@@ -429,7 +436,7 @@ class ItemDefinition(object):
         self.logger.debug("Extracting Wikia InfoBox templates...")
         self.logger.debug(templates)
         for template in templates:
-            self.logger.debug(template)
+            # self.logger.debug(template)
             template_name = template.name.strip()
             template_name = template_name.lower()
             if "infobox item" in template_name:
@@ -445,13 +452,45 @@ class ItemDefinition(object):
                 self.logger.debug("InfoBox NOT FOUND... Trying next entry...")
         return False                   
 
+    def clean_weight(self, input):
+        i_weight = None # Inventory weight
+        e_weight = None # Equipped weight
+        input = str(input)
+        input = input.strip()
+        # Fix for weight ending in kg, or space kg
+        if input.endswith(" kg"):
+            input = input.replace(" kg", "")
+        if input.endswith("kg"):
+            input = input.replace("kg", "")
+        if "kg" in input:
+            input = input.replace("kg", "")
+        # Some items have Inventory/Equipped weights:
+        # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
+        if "Inventory" in input:
+            input = input.replace("'''", "")
+            input = input.replace("{", "")
+            input = input.replace("}", "")
+            weight_list = input.split("<br>")
+            i_weight = weight_list[0]
+            i_weight = i_weight.replace("Inventory:", "")
+            i_weight = i_weight.strip()
+            e_weight = weight_list[1]
+            e_weight = e_weight.replace("Equipped:", "")
+            e_weight = e_weight.strip()
+        else:
+            i_weight = input
+            e_weight = input
+
+        return i_weight, e_weight
+
     def parse_InfoboxItem(self, template):
         self.logger.debug("Processing InfoBox template...")
         self.logger.debug(template)
         quest = self.strip_infobox(template.get("quest").value)
         self.quest_item = quest
-        weight = self.strip_infobox(template.get("weight").value)
-        self.weight = weight
+        i_weight, e_weight = self.clean_weight(template.get("weight").value)
+        self.weight = i_weight
+        self.weight_equipped = e_weight
         release = self.strip_infobox(template.get("release").value)
         release = dateparser.parse(release)
         self.release_date = release
@@ -471,8 +510,6 @@ class ItemDefinition(object):
             self.seller = seller   
         except ValueError:
             self.seller = ""
-        
-
 
     def extract_InfoBoxBonuses(self):
         # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
@@ -532,7 +569,6 @@ class ItemDefinition(object):
         except ValueError:
             itemBonuses.slot = ""
             self.logger.critical("Could not determine equipable item slot")        
-        
         self.itemBonuses = itemBonuses
           
     ###########################################################################
@@ -591,11 +627,12 @@ class ItemDefinition(object):
         self.json_out["cost"] = self.cost
         self.json_out["lowalch"] = self.lowalch
         self.json_out["highalch"] = self.highalch
-        self.json_out["store_price"] = self.highalch
-        self.json_out["seller"] = self.highalch
+        self.json_out["store_price"] = self.store_price
+        self.json_out["seller"] = self.seller
         self.json_out["examine"] = self.examine
         self.json_out["url"] = self.url
         if self.equipable:
+            self.json_out["weight_equipped"] = self.weight_equipped
             bonuses_in_json = self.itemBonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
             # Old code has item slot + weapon speed in main JSON body
