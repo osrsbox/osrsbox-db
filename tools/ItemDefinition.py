@@ -161,6 +161,9 @@ class ItemDefinition(object):
                                  level=logging.DEBUG)
         self.logger = logging.getLogger(__name__)
 
+        # The name of the item on OSRS Wiki (can vary from actual name)
+        self.wiki_name = None
+
     @property
     def id(self):
         return self._id
@@ -349,6 +352,15 @@ class ItemDefinition(object):
         # has_wikia_page indicates if OSRS Wikia page was found
 
         if has_wikia_page:
+            self.wiki_name = self.name
+        else:
+            print(">>>", self.name)
+            answer = input(">>> Enter item name for OSRS Wikia? [y, N]: ")
+            if answer.lower() == "y":
+                self.wiki_name = input(">>> OSRS Wikia Name: ")
+                has_wikia_page = True
+
+        if has_wikia_page:
             # This item has an OSRS Wikia page
             # Try to extract the InfoboxItem template
             self.logger.debug("Starting: extract_InfoboxItem")
@@ -419,7 +431,7 @@ class ItemDefinition(object):
     def extract_InfoboxItem(self):
         # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
         self.logger.debug("  > Extracting infobox for item...")
-        url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + self.name
+        url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + self.wiki_name
         result = requests.get(url)
         # If the url was found, set to object
         if result:
@@ -428,7 +440,7 @@ class ItemDefinition(object):
         # Force fetched page to JSON
         data = result.json()
         # Extract the actual content
-        input = data["parse"]["wikitext"]["*"]
+        input = data["parse"]["wikitext"]["*"].encode("utf-8")
         # Parse actual content using mwparser
         wikicode = mwparserfromhell.parse(input)
         # Extract templates in the page
