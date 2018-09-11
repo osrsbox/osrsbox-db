@@ -79,7 +79,7 @@ if __name__=="__main__":
     ap.add_argument("-d", 
                     "--db", 
                     required=True,
-                    help="allitems-db.json")
+                    help="allitems_db.json")
     args = vars(ap.parse_args())
     
     # Start processing    

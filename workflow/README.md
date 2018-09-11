@@ -22,12 +22,26 @@
 - `python3.6 JoinSingleJSONFiles.py -d ../docs/items-json`
 - `python.exe JoinSingleJSONFiles.py -d ..\docs\items-json`
 
-## CheckMissingItems
+## CheckMissingItems.py
 
 - Comparing existing osrsbox-db contents to new allitems.json
+- Command input:
+    - allitems.json file
+    - allitems_db.json file (output of JoinSingleJSONFiles.py)
 - A simple list is returned with new items
 - Only item name + item id is returned
 - Good to determine items missing from osrsbox-db
 - Command to run:
-- `python3.6 CheckMissingItems.py -f ../docs/allitems.json -d ../docs/items-json/`
-- `python.exe .\CheckMissingItems.py -f ..\docs\allitems.json -d ..\docs\items-json\`
+- `python3.6 CheckMissingItems.py -f ../docs/allitems.json -d allitems_db.json`
+- `python.exe .\CheckMissingItems.py -f ..\docs\allitems.json -d allitems_db.json`
+
+## allitems_db.json
+
+- osrsbox-db contents (items-json) amalgamated into one JSON file
+- Created using JoinSingleJSONFiles.py
+
+## osrsbox-db-missing-items.txt
+
+- List of items currently missing from osrsbox-db
+- Created using CheckMissingItems.py
+- Contains: item-id,item-name
