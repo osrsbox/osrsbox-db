@@ -7,8 +7,8 @@ Website: osrsbox.com
 Date:    2018/09/08
 
 Description:
-Compare newly extracted allitems.json, to existing allitems.json in
-the osrsbox-db.
+Check the osrsbox-db contents (the actual single JSON files) to the
+newly extracted allitem.json file to determine missing items.
 
 Copyright (c) 2018, PH01L
 
@@ -31,64 +31,65 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "0.1.0"
 
+import os
 import json
+import glob
 
 ###############################################################################
 # CompareAllitemsFiles object
 class CompareAllitemsFiles(object):
-    def __init__(self, new_json, old_json):
-        self.old_json = old_json
-        self.new_json = new_json
-        self.allitems_old = dict()
-        self.allitems_new = dict()
+    def __init__(self, allitems, allitems_db):
+        self.allitems = allitems
+        self.allitems_db = allitems_db
+        self.allitems_dict = dict()
+        self.allitems_db_dict = dict()
 
     def process_allitems(self):
-        print(">>> Processing old_json: %s" % self.old_json)
-        with open(self.old_json) as f:
-            self.allitems_old = json.load(f)
-        # Print length of allitems dict
-        print("  > Old item count: %d" % len(self.allitems_old))
+        print(">>> Processing allitems.json: %s" % self.allitems)
+        with open(self.allitems) as f:
+            self.allitems_dict = json.load(f)
+        print("  > allitems.json count: %d" % len(self.allitems_dict))
 
-        print(">>> Processing new_json: %s" % self.new_json)
-        with open(self.new_json) as f:
-            self.allitems_new = json.load(f)
-        # Print length of allitems dict
-        print("  > New item count: %d" % len(self.allitems_new))
+        print(">>> Processing allitems_db.json: %s" % self.allitems_db)
+        with open(self.allitems_db) as f:
+            self.allitems_db_dict = json.load(f)
+        print("  > allitems_db.json count: %d" % len(self.allitems_db_dict))
         self.dict_compare()
 
-
     def dict_compare(self):
-        d1_keys = set(self.allitems_old.keys())
-        d2_keys = set(self.allitems_new.keys())
-        added = d2_keys - d1_keys
+        d1_keys = set(self.allitems_dict.keys())
+        d2_keys = set(self.allitems_db_dict.keys())
+        added = d1_keys - d2_keys
         print("  > Number of new items: %d" % len(added))
         print(">>> The following items have been added...")
+        added = list(added)
+        added.sort(key=int)
         for id in added:
-            print("%s,%s" % (self.allitems_new[id]["id"], self.allitems_new[id]["name"]))
+            print("%s,%s" % (self.allitems_dict[id]["id"], self.allitems_dict[id]["name"]))
         # TODO: Should probably add a check for removed items as well
 
 ################################################################################
 if __name__=="__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-n", 
-                    "--newfile", 
+    ap.add_argument("-f", 
+                    "--file", 
                     required=True,
-                    help="NEW JSON file from ItemScraper RuneLite plugin")
-    ap.add_argument("-o", 
-                    "--oldfile", 
+                    help="allitems.json")
+    ap.add_argument("-d", 
+                    "--db", 
                     required=True,
-                    help="NEW JSON file from ItemScraper RuneLite plugin")
+                    help="allitems-db.json")
     args = vars(ap.parse_args())
     
     # Start processing    
     print(">>> Starting processing...")
-    print("  > Comparing old allitems.json to new allitems.json")
+    print("  > Comparing existing osrsbox-db contents to new allitems.json")
     
-    c = CompareAllitemsFiles(args["newfile"],
-                             args["oldfile"])
+    c = CompareAllitemsFiles(args["file"],
+                             args["db"])
     c.process_allitems()
 
 # Command to run:
-#python3.6 DetermineNewItems.py -n ../../runelite/allitems.json -o ../docs/allitems.json
-#python.exe .\DetermineNewItems.py -n ..\..\runelite\allitems.json -o ..\docs\allitems.json
+#python3.6 CheckMissingItems.py -f ../docs/allitems.json -d ../docs/items-json/
+#python.exe .\CheckMissingItems.py -f ..\docs\allitems.json -d ..\docs\items-json\
