@@ -89,7 +89,3 @@ if __name__=="__main__":
     c = CompareAllitemsFiles(args["file"],
                              args["db"])
     c.process_allitems()
-
-# Command to run:
-#python3.6 CheckMissingItems.py -f ../docs/allitems.json -d ../docs/items-json/
-#python.exe .\CheckMissingItems.py -f ..\docs\allitems.json -d ..\docs\items-json\

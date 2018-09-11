@@ -34,8 +34,8 @@ __version__ = "0.1.0"
 import json
 
 ###############################################################################
-# CompareAllitemsFiles object
-class CompareAllitemsFiles(object):
+# DetermineNewItems object
+class DetermineNewItems(object):
     def __init__(self, new_json, old_json):
         self.old_json = old_json
         self.new_json = new_json
@@ -78,17 +78,13 @@ if __name__=="__main__":
     ap.add_argument("-o", 
                     "--oldfile", 
                     required=True,
-                    help="NEW JSON file from ItemScraper RuneLite plugin")
+                    help="Old JSON file from ItemScraper RuneLite plugin")
     args = vars(ap.parse_args())
     
     # Start processing    
     print(">>> Starting processing...")
     print("  > Comparing old allitems.json to new allitems.json")
     
-    c = CompareAllitemsFiles(args["newfile"],
-                             args["oldfile"])
+    c = DetermineNewItems(args["newfile"],
+                          args["oldfile"])
     c.process_allitems()
-
-# Command to run:
-#python3.6 DetermineNewItems.py -n ../../runelite/allitems.json -o ../docs/allitems.json
-#python.exe .\DetermineNewItems.py -n ..\..\runelite\allitems.json -o ..\docs\allitems.json
