@@ -53,18 +53,10 @@ __version__ = "0.1.0"
 import os
 import sys
 import json
-import datetime
-import collections
-import logging
-import requests
 import glob
 
 sys.path.append(os.getcwd())
 import ItemDefinition
-import WikiaExtractor
-
-import mwparserfromhell
-import wikitextparser
 
 ###############################################################################
 # ProcessItems object
@@ -104,10 +96,6 @@ class ProcessItems(object):
         item = itemdef.populate()
         if item:
             self.allitemdefs[itemID] = item
-           
-
-    def extract_ItemDefinition(self):
-        pass
 
 ################################################################################
 if __name__=="__main__":
@@ -122,20 +110,15 @@ if __name__=="__main__":
     # Start processing    
     print(">>> Starting processing...")
 
-    # Start by extracting all Category:Items pages from OSRS Wikia
-    we = WikiaExtractor.WikiaExtractor()
-    print(">>> Extracting all item pages from OSRS Wikia...")
-    we.query_category_items()
-    print(">>> Extracting all item buy_limit data from OSRS Wikia...")
-    we.parse_buy_limits()
+    with open("extract_infoboxes_items.txt") as f:
+        all_wikia_items = json.load(f)
 
-    # Print item pages extracted from OSRS Wikia
-    # for page_title, page_id in we.wikia_item_page_ids.items():
-    #     print(page_title, page_id)
+    with open("extract_infoboxes_bonuses.txt") as f:
+        all_wikia_items_bonuses = json.load(f)    
 
     # Next, process ItemScraper RuneLite plugin output file
     pi = ProcessItems(args["file"],
-                      we.wikia_item_page_ids,
-                      we.wikia_buy_limits)
+                      all_wikia_items,
+                      all_wikia_items_bonuses)
     pi.determine_already_processed()
     pi.process_allitems()

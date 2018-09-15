@@ -25,10 +25,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
 >>> CHANGELOG:
-    0.1.0       Base functionality
+    1.0.0       Base functionality
 """
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 import os
 import sys
@@ -43,7 +43,6 @@ import mwparserfromhell
 import dateparser
 
 sys.path.append(os.getcwd())
-import WikiaExtractor
 import ItemBonuses
 
 ###############################################################################
@@ -90,8 +89,6 @@ def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
     if val is None:
         return None
-    elif val is "":
-        return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
     try:
@@ -105,19 +102,16 @@ def _datecast(val):
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, wikia_item_page_ids, wiki_buy_limits):
+    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
         self.itemJSON = itemJSON
 
         # Bulk dict of all OSRS Wikia Item pages
-        self.wikia_item_page_ids = wikia_item_page_ids
+        self.all_wikia_items = all_wikia_items
         # Bulk dict of all OSRS Wikia Item buy_limits
-        self.wiki_buy_limits = wiki_buy_limits
-
-        # TODO: Not sure what this is used for now
-        self.object = None
+        self.all_wikia_items_bonuses = all_wikia_items_bonuses
         
         # Dict of all ItemDefinition properties
         self.properties = {
@@ -309,11 +303,6 @@ class ItemDefinition(object):
         self.logger.debug("Starting: print_pretty_debug_json")
         self.print_pretty_debug_json()
 
-        # Set all values from ItemDefinition object to properties dict
-        # TODO: This is not used at the moment
-        for prop in self.properties:
-            self.properties[prop] = getattr(self, prop)
-
         # All properties from ItemScraper RuneLite plugin are now loaded
         # Time to fetch other information of OSRS Wikia
 
@@ -322,18 +311,8 @@ class ItemDefinition(object):
         has_wikia_page = self.determine_wiki_page()
         
         # has_wikia_page indicates if OSRS Wikia page was found
-
         if has_wikia_page:
             self.wiki_name = self.name
-        # Removed, this is too interactive
-        # else:
-        #     print(">>>", self.name)
-        #     answer = input(">>> Enter item name for OSRS Wikia? [y, N]: ")
-        #     if answer.lower() == "y":
-        #         self.wiki_name = input(">>> OSRS Wikia Name: ")
-        #         has_wikia_page = True
-
-        if has_wikia_page:
             # This item has an OSRS Wikia page
             # Try to extract the InfoboxItem template
             self.logger.debug("Starting: extract_InfoboxItem")
@@ -347,8 +326,6 @@ class ItemDefinition(object):
         else:
             self.logger.warning("Item has no OSRS Wikia page. Setting default values.")
             print(">>>>>>>>>>>> WARNING: No OSRS Wiki Page: %s" % self.name)
-            # TODO: Need to do something with items that have no OSRS Wikia page
-            # Might not need to implement, as defaults should already be set on JSON import
             return # Could not finish, just exit
 
         # Continue processing... but only if equipable
@@ -392,150 +369,117 @@ class ItemDefinition(object):
         # Check if the item name is in the Wikia API Dump
         # Return True if found by self.name
         # Return False if not found
-        if self.name in self.wikia_item_page_ids:
+        if self.name in self.all_wikia_items:
             self.logger.debug(">>> ITEM FOUND:")
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
-            self.logger.debug("  > wikia pageid: %s" % self.wikia_item_page_ids[self.name])
+            self.url = "http://oldschoolrunescape.wikia.com/wiki/" + self.name
             return True
         else:
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.name)
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.id)
             return False
 
+    def extract_InfoboxItem(self):
+        wikicode = mwparserfromhell.parse(self.all_wikia_items[self.name])
+        templates = wikicode.filter_templates()
+        for template in templates:
+            extracted_infobox = self.parse_InfoboxItem(template)
+            if extracted_infobox:
+                return True
+            else:
+                return False 
+        return False
+
+        # TODO: Add wikia URL               
+
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
         input = str(input)
-        input = input.strip()
-        input = input.replace("[", "")
-        input = input.replace("]", "")
+        # input = input.strip()
+        # input = input.replace("[", "")
+        # input = input.replace("]", "")
         return input
-
-    def extract_InfoboxItem(self):
-        # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
-        self.logger.debug("  > Extracting infobox for item...")
-        url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + self.wiki_name
-        result = requests.get(url)
-        # If the url was found, set to object
-        if result:
-            url_name = self.name.replace(" ", "_")
-            self.url = "http://oldschoolrunescape.wikia.com/wiki/" + url_name
-        # TODO: Fix bad respone error:
-        # http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=Premade%20c+t%20batta
-        # Force fetched page to JSON
-        data = result.json()
-        try:
-            # Extract the actual content
-            input = data["parse"]["wikitext"]["*"].encode("utf-8")
-        except KeyError:
-            self.logger.critical("Could not extract infobox from page")
-            return False
-        # Parse actual content using mwparser
-        wikicode = mwparserfromhell.parse(input)
-        # Extract templates in the page
-        templates = wikicode.filter_templates()
-        self.logger.debug("Extracting Wikia InfoBox templates...")
-        self.logger.debug(templates)
-        for template in templates:
-            # self.logger.debug(template)
-            template_name = template.name.strip()
-            template_name = template_name.lower()
-            if "infobox item" in template_name:
-                self.logger.debug("InfoBox Name: %s" % template_name)
-                self.logger.debug("InfoBox FOUND... Continuing...")
-                self.logger.debug("Starting: parse_InfoboxItem")
-                # If the InfoboxItem template is found...
-                # Parse it!
-                extracted_infobox = self.parse_InfoboxItem(template)
-                if extracted_infobox:
-                    return True
-                else:
-                    return False
-            else:
-                self.logger.debug("InfoBox Name: %s" % template_name)
-                self.logger.debug("InfoBox NOT FOUND... Trying next entry...")
-                
-        return False                   
 
     def clean_weight(self, input):
         weight = None # Inventory weight
         input = str(input)
-        input = input.strip()
-        # Fix for weight ending in kg, or space kg
-        if input.endswith(" kg"):
-            input = input.replace(" kg", "")
-        if input.endswith("kg"):
-            input = input.replace("kg", "")
-        if "kg" in input:
-            input = input.replace("kg", "")
-        # Some items have Inventory/Equipped weights:
-        # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
-        if "Inventory" in input:
-            input = input.replace("'''", "")
-            input = input.replace("{", "")
-            input = input.replace("}", "")
-            weight_list = input.split("<br>")
-            weight = weight_list[0]
-            weight = weight.replace("Inventory:", "")
-            weight = weight.strip()
-        else:
-            weight = input
+        # input = input.strip()
+        # # Fix for weight ending in kg, or space kg
+        # if input.endswith(" kg"):
+        #     input = input.replace(" kg", "")
+        # if input.endswith("kg"):
+        #     input = input.replace("kg", "")
+        # if "kg" in input:
+        #     input = input.replace("kg", "")
+        # # Some items have Inventory/Equipped weights:
+        # # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
+        # if "Inventory" in input:
+        #     input = input.replace("'''", "")
+        #     input = input.replace("{", "")
+        #     input = input.replace("}", "")
+        #     weight_list = input.split("<br>")
+        #     weight = weight_list[0]
+        #     weight = weight.replace("Inventory:", "")
+        #     weight = weight.strip()
+        # else:
+        #     weight = input
 
         return weight
 
     def clean_quest(self, input):
         quest = None
         quest = input
-        quest = quest.replace("'''", "")
-        quest = quest.replace("{", "")
-        quest = quest.replace("}", "")
-        quest = quest.replace("*", "")
-        if "&" in quest:
-            quest = quest.replace("&", ",")
-        if "<br>" in quest:
-            quest = quest.replace("<br> ", ",")
-            quest = quest.replace("<br>", ",")
-        if "<br/>" in quest:
-            quest = quest.replace("<br/> ", ",")
-            quest = quest.replace("<br/>", ",")
-        if "II|II" in quest:
-            quest = quest.replace("II|II", "II")
+        # quest = quest.replace("'''", "")
+        # quest = quest.replace("{", "")
+        # quest = quest.replace("}", "")
+        # quest = quest.replace("*", "")
+        # if "&" in quest:
+        #     quest = quest.replace("&", ",")
+        # if "<br>" in quest:
+        #     quest = quest.replace("<br> ", ",")
+        #     quest = quest.replace("<br>", ",")
+        # if "<br/>" in quest:
+        #     quest = quest.replace("<br/> ", ",")
+        #     quest = quest.replace("<br/>", ",")
+        # if "II|II" in quest:
+        #     quest = quest.replace("II|II", "II")
 
-        if quest.lower() == "no":
-            return None
-        quest = quest.strip()
-        # Clean some spacing problems
-        quest = quest.replace(",,", ",")
-        quest = quest.replace(", ,", ",")
-        quest = quest.replace(" ,", ",")
-        quest = quest.replace(", ", ",")
+        # if quest.lower() == "no":
+        #     return None
+        # quest = quest.strip()
+        # # Clean some spacing problems
+        # quest = quest.replace(",,", ",")
+        # quest = quest.replace(", ,", ",")
+        # quest = quest.replace(" ,", ",")
+        # quest = quest.replace(", ", ",")
         return quest
 
     def clean_release_date(self, input):
         release_date = None
         release_date = input
-        release_date = release_date.replace(" Update", "")
-        if release_date == "":
-            return None
-        release_date = dateparser.parse(release_date)
-        # TODO: Should have a check here
+        # release_date = release_date.replace(" Update", "")
+        # if release_date == "":
+        #     return None
+        # release_date = dateparser.parse(release_date)
+        # # TODO: Should have a check here
         return release_date
 
     def clean_examine(self, input):
         examine_text = None
         examine_text = input
-        examine_text = examine_text.replace("'''", "")
-        examine_text = examine_text.replace("''", "")
-        examine_text = examine_text.replace("{", "")
-        examine_text = examine_text.replace("}", "")
-        examine_text = examine_text.replace("*", "")
-        examine_text = examine_text.replace("\n", ",")
-        if "<br>" in examine_text:
-            examine_text = examine_text.replace("<br>", ",")        
-        if examine_text == "":
-            return None
-        # TODO: Should handle a list, like weight
-        examine_text = examine_text.strip()
+        # examine_text = examine_text.replace("'''", "")
+        # examine_text = examine_text.replace("''", "")
+        # examine_text = examine_text.replace("{", "")
+        # examine_text = examine_text.replace("}", "")
+        # examine_text = examine_text.replace("*", "")
+        # examine_text = examine_text.replace("\n", ",")
+        # if "<br>" in examine_text:
+        #     examine_text = examine_text.replace("<br>", ",")        
+        # if examine_text == "":
+        #     return None
+        # # TODO: Should handle a list, like weight
+        # examine_text = examine_text.strip()
         return examine_text        
 
     def parse_InfoboxItem(self, template):
@@ -591,40 +535,19 @@ class ItemDefinition(object):
         #     self.seller = ""
 
     def extract_InfoBoxBonuses(self):
-        # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
-        self.logger.debug("  > Extracting infobox for bonuses...")
-        url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + self.name
-        result = requests.get(url)
-        # Force fetched page to JSON
-        data = result.json()
-        # Extract the actual content
-        input = data["parse"]["wikitext"]["*"]
-        # Parse actual content using mwparser
-        wikicode = mwparserfromhell.parse(input)
-        # Extract templates in the page
+        try:
+            wikicode = mwparserfromhell.parse(self.all_wikia_items_bonuses[self.name])
+        except KeyError:
+            return False
         templates = wikicode.filter_templates()
-        self.logger.debug("Extracting Wikia InfoBox BONUSES template...")
-        self.logger.debug(templates)
         for template in templates:
-            template_name = template.name.strip()
-            template_name = template_name.lower()
-            if "bonuses" in template_name:
-                self.logger.debug("InfoBox Name: %s" % template_name)
-                self.logger.debug("InfoBox FOUND... Continuing...")
-                self.logger.debug("Starting: parse_InfoboxBonuses")
-                # If the InfoboxItem template is found...
-                # Parse it!
-                extracted_infobox = self.parse_InfoboxBonuses(template)
-                if extracted_infobox:
-                    return True
-                else:
-                    return False
+            extracted_infobox = self.parse_InfoboxBonuses(template)
+            if extracted_infobox:
+                return True
             else:
-                self.logger.debug("InfoBox Name: %s" % template_name)
-                self.logger.debug("InfoBox NOT FOUND... Returning...")
-        
-        return False           
-		
+                return False   
+        return False
+              
     def parse_InfoboxBonuses(self, template):
         self.logger.debug("Processing InfoBox template...")
         self.logger.debug(template)
@@ -660,7 +583,6 @@ class ItemDefinition(object):
                 itemBonuses.attack_speed = -1
                 return False  
 
-        
         # Assign the correctly extracted item bonuses to the object
         self.itemBonuses = itemBonuses
 
@@ -766,11 +688,11 @@ class ItemDefinition(object):
     #                        "cost",
     #                        "lowalch",
     #                        "highalch"]
-    #                        # TODO: Update this list
+    #                        #  Update this list
     #     for field in required_fields:
     #         if not hasattr(self, field):
     #             print("ERROR: Missing object attribute for: %s" % field)
-    #     # TODO: This code needs to be more thorough and in ItemBonuses class
+    #     # This code needs to be more thorough and in ItemBonuses class
     #     # if self.equipable:
     #     #     if not self.bonuses:
     #     #         print("ERROR: Equipable object has no item bonuses")

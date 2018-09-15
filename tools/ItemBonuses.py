@@ -26,16 +26,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
 >>> CHANGELOG:
-    0.1.0       Base functionality
+    1.0.0       Base functionality
 """
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
-import os
-import sys
 import json
-import datetime
-import collections
 
 ###############################################################################
 # Helper methods
