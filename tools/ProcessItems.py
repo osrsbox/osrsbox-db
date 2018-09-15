@@ -57,6 +57,7 @@ import datetime
 import collections
 import logging
 import requests
+import glob
 
 sys.path.append(os.getcwd())
 import ItemDefinition
@@ -75,6 +76,16 @@ class ProcessItems(object):
         self.allitems = dict()
         self.allitemdefs = dict()
 
+        self.already_processed = list()
+
+    def determine_already_processed(self):
+        fis = glob.glob("items-json" + os.sep + "*")
+        for fi in fis:
+            fi = fi.replace(".json", "")
+            fi = fi.replace("items-json", "")
+            fi = fi.replace("\\", "")
+            self.already_processed.append(fi)
+
     def process_allitems(self):
         print(">>> Processing file: %s" % self.json_file)
         # Load JSON file to allitems dict
@@ -87,9 +98,13 @@ class ProcessItems(object):
             self.construct_ItemDefinition(k, v)
 
     def construct_ItemDefinition(self, itemID, itemJSON):
+        if itemID in self.already_processed:
+            return
         itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.wikia_item_page_ids, self.wikia_buy_limits) 
         item = itemdef.populate()
-        self.allitemdefs[itemID] = item
+        if item:
+            self.allitemdefs[itemID] = item
+           
 
     def extract_ItemDefinition(self):
         pass
@@ -122,4 +137,5 @@ if __name__=="__main__":
     pi = ProcessItems(args["file"],
                       we.wikia_item_page_ids,
                       we.wikia_buy_limits)
+    pi.determine_already_processed()
     pi.process_allitems()
