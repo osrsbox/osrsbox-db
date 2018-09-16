@@ -91,27 +91,31 @@ def _datecast(val):
         return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
-    try:
-        date = datetime.datetime.strptime(val, "%d %B %Y")   
-        return date.strftime("%d %B %Y")
-    except:
-        print("  > %s" % val)
-        val = input("  > Enter a correct date: ")
-        return _datecast(val)
+    date = datetime.datetime.strptime(val, "%d %B %Y")   
+    return date.strftime("%d %B %Y")        
+    # try:
+    #     date = datetime.datetime.strptime(val, "%d %B %Y")   
+    #     return date.strftime("%d %B %Y")
+    # except:
+    #     #print("  > %s" % val)
+    #     val = input("  > Enter a correct date: ")
+    #     return _datecast(val)
 
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses):
+    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_quests):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
         self.itemJSON = itemJSON
 
-        # Bulk dict of all OSRS Wikia Item pages
+        # Bulk dict of all OSRS Wikia Item infoboxes
         self.all_wikia_items = all_wikia_items
-        # Bulk dict of all OSRS Wikia Item buy_limits
+        # Bulk dict of all OSRS Wikia Item bonuses
         self.all_wikia_items_bonuses = all_wikia_items_bonuses
+        # Bulk dict of all OSRS Wikia quests
+        self.all_wikia_quests = all_wikia_quests
         
         # Dict of all ItemDefinition properties
         self.properties = {
@@ -141,6 +145,12 @@ class ItemDefinition(object):
                             filemode='a',
                             level=logging.DEBUG)
         self.logger = logging.getLogger(__name__)
+
+        # # Setup specific logging
+        # logging.basicConfig(filename="ItemDefinition_SPEC.log",
+        #                     filemode='a',
+        #                     level=logging.DEBUG)
+        # self.logger_SPEC = logging.getLogger("SPEC")        
 
         # The name of the item on OSRS Wiki (can vary from actual name)
         self.wiki_name = None
@@ -273,7 +283,7 @@ class ItemDefinition(object):
 
     def populate(self):
         # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
-        print(">>>>>>>>>>>> Processing: %s" % self.itemID)
+        ##print(">>>>>>>>>>>> Processing: %s" % self.itemID)
 
         # Start section in logger
         self.logger.debug("============================================ START")
@@ -321,11 +331,11 @@ class ItemDefinition(object):
                 self.logger.debug("Item InfoBox extracted successfully")
             else:
                 self.logger.critical("Item InfoBox extraction error.")
-                print(">>>>>>>>>>>> CRITICAL: Item InfoBox extraction error")
+                #print(">>>>>>>>>>>> CRITICAL: Item InfoBox extraction error")
                 return # Could not finish, just exit
         else:
             self.logger.warning("Item has no OSRS Wikia page. Setting default values.")
-            print(">>>>>>>>>>>> WARNING: No OSRS Wiki Page: %s" % self.name)
+            #print(">>>>>>>>>>>> WARNING: No OSRS Wiki Page: %s" % self.name)
             return # Could not finish, just exit
 
         # Continue processing... but only if equipable
@@ -338,11 +348,11 @@ class ItemDefinition(object):
                     self.logger.debug("Item InfoBox Bonuses extracted successfully")
                 else:
                     self.logger.critical("Item InfoBox Bonuses extraction error.")
-                    print(">>>>>>>>>>>> CRITICAL: Item InfoBox Bonuses extraction error")
+                    #print(">>>>>>>>>>>> CRITICAL: Item InfoBox Bonuses extraction error")
                     return # Could not finish, just exit 
             else:
                 self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
-                print(">>>>>>>>>>>> CRITICAL: Equipable item has no bonuses")
+                #print(">>>>>>>>>>>> CRITICAL: Equipable item has no bonuses")
                 return # Could not finish, just exit
 
         # Log the second JSON input
@@ -357,7 +367,7 @@ class ItemDefinition(object):
         if not os.path.exists(directory):
             os.makedirs(directory)
 
-        self.export_pretty_json()
+        # self.export_pretty_json()
 
         # Finished. Return the entire ItemDefinition object
         return self
@@ -395,79 +405,118 @@ class ItemDefinition(object):
 
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
-        input = str(input)
-        # input = input.strip()
-        # input = input.replace("[", "")
-        # input = input.replace("]", "")
-        return input
-
-    def clean_weight(self, input):
-        weight = None # Inventory weight
-        input = str(input)
-        # input = input.strip()
-        # # Fix for weight ending in kg, or space kg
-        # if input.endswith(" kg"):
-        #     input = input.replace(" kg", "")
-        # if input.endswith("kg"):
-        #     input = input.replace("kg", "")
-        # if "kg" in input:
-        #     input = input.replace("kg", "")
-        # # Some items have Inventory/Equipped weights:
-        # # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
-        # if "Inventory" in input:
-        #     input = input.replace("'''", "")
-        #     input = input.replace("{", "")
-        #     input = input.replace("}", "")
-        #     weight_list = input.split("<br>")
-        #     weight = weight_list[0]
-        #     weight = weight.replace("Inventory:", "")
-        #     weight = weight.strip()
-        # else:
-        #     weight = input
-
-        return weight
+        clean_input = str(input)
+        clean_input = clean_input.strip()
+        clean_input = clean_input.replace("[", "")
+        clean_input = clean_input.replace("]", "")
+        return clean_input
 
     def clean_quest(self, input):
         quest = None
         quest = input
-        # quest = quest.replace("'''", "")
-        # quest = quest.replace("{", "")
-        # quest = quest.replace("}", "")
-        # quest = quest.replace("*", "")
-        # if "&" in quest:
-        #     quest = quest.replace("&", ",")
-        # if "<br>" in quest:
-        #     quest = quest.replace("<br> ", ",")
-        #     quest = quest.replace("<br>", ",")
-        # if "<br/>" in quest:
-        #     quest = quest.replace("<br/> ", ",")
-        #     quest = quest.replace("<br/>", ",")
-        # if "II|II" in quest:
-        #     quest = quest.replace("II|II", "II")
+        quest = quest.strip()
 
-        # if quest.lower() == "no":
-        #     return None
-        # quest = quest.strip()
-        # # Clean some spacing problems
-        # quest = quest.replace(",,", ",")
-        # quest = quest.replace(", ,", ",")
-        # quest = quest.replace(" ,", ",")
-        # quest = quest.replace(", ", ",")
-        return quest
+        quest = quest.replace("Growing Pains]] [[Fairy Tale II", "Growing Pains]] <br> [[Fairy Tale II")
+
+        quest = quest.replace("[", "")
+        quest = quest.replace("]", "")
+        quest = quest.replace("{", "")
+        quest = quest.replace("}", "")
+        quest = quest.replace("*", "")
+
+        quest = quest.replace("II|II", "II")
+        quest = quest.replace("Tears of Guthix (quest)|", "")
+        quest = quest.replace("(quest)", "")
+
+        quest = quest.replace("(miniquest)", "")
+        quest = quest.replace("miniquest", "")
+        quest = quest.replace("Miniquest", "")
+
+        quest = quest.replace("various", "Various")
+
+        # Generic test for not a quest item
+        if quest.lower() == "no":
+            return None
+        if quest.lower() == "yes":
+            return None            
+
+        quest_list = list()
+        # Start trying to split quests
+        if ", <br>" in quest:
+            quest_list = quest.split(", <br>")            
+        elif ",<br>" in quest:
+            quest_list = quest.split(",<br>")
+        elif ",<br/>" in quest:
+            quest_list = quest.split(",<br/>") 
+        elif ", <br/>" in quest:
+            quest_list = quest.split(", <br/>")             
+        elif ",<br />" in quest:
+            quest_list = quest.split(",<br />")    
+        elif ", <br />" in quest:
+            quest_list = quest.split(", <br />")       
+        elif "<br>" in quest:
+            quest_list = quest.split("<br>")
+        elif "<br >" in quest:
+            quest_list = quest.split("<br >")
+        elif "<br/>" in quest:
+            quest_list = quest.split("<br/>")
+        elif "<br />" in quest:
+            quest_list = quest.split("<br />")
+        elif "&" in quest:
+            quest_list = quest.split("&")            
+        elif "\n" in quest:
+            quest_list = quest.split("\n")
+        if "," in quest:
+            quest_list = quest.split(",")
+        
+        quest_list_fin = list()
+        if quest_list:
+            for quest_name in quest_list:
+                quest_name = quest_name.strip()
+                quest_name = quest_name.replace("<br>", "")
+                quest_name = quest_name.replace("<br/>", "")
+                quest_list_fin.append(quest_name)
+        else:
+            quest_list_fin.append(quest)
+
+        return quest_list_fin
+
+    def clean_weight(self, input):
+        weight = None # Inventory weight
+        weight = str(input)
+        weight = weight.strip()
+        # Fix for weight ending in kg, or space kg
+        if weight.endswith(" kg"):
+            weight = weight.replace(" kg", "")
+        if weight.endswith("kg"):
+            weight = weight.replace("kg", "")
+        if "kg" in weight:
+            weight = weight.replace("kg", "")
+        # Some items have Inventory/Equipped weights:
+        # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
+        if "Inventory" in weight:
+            weight = weight.replace("'''", "")
+            weight = weight.replace("{", "")
+            weight = weight.replace("}", "")
+            weight_list = weight.split("<br>")
+            weight = weight_list[0]
+            weight = weight.replace("Inventory:", "")
+            weight = weight.strip()
+
+        return weight
 
     def clean_release_date(self, input):
         release_date = None
         release_date = input
-        # release_date = release_date.replace(" Update", "")
-        # if release_date == "":
-        #     return None
-        # release_date = dateparser.parse(release_date)
-        # # TODO: Should have a check here
+        release_date = release_date.strip()
+        release_date = release_date.replace("[", "")
+        release_date = release_date.replace("]", "")        
         return release_date
 
     def clean_examine(self, input):
-        examine_text = None
-        examine_text = input
+        examine = None
+        examine = input
+        examine = examine.strip()
         # examine_text = examine_text.replace("'''", "")
         # examine_text = examine_text.replace("''", "")
         # examine_text = examine_text.replace("{", "")
@@ -480,37 +529,52 @@ class ItemDefinition(object):
         #     return None
         # # TODO: Should handle a list, like weight
         # examine_text = examine_text.strip()
-        return examine_text        
+        return examine        
 
     def parse_InfoboxItem(self, template):
         self.logger.debug("Processing InfoBox template...")
         self.logger.debug(template)
 
-        # Determine if item is associated with a quest
+        # Determine if item is associated with a quest (TESTED)
         try:
-            quest = self.strip_infobox(template.get("quest").value)
+            quest = template.get("quest").value
             self.quest_item = self.clean_quest(quest)
+            # if self.quest_item is not None:
+            #     print(self.id, self.name)
+            #     print(quest)
+            #     print(self.quest_item)
+            #     print("==================================")
         except ValueError:
             self.quest_item = None
 
-        # Determine the weight of an item
+        # Determine the weight of an item (TESTED)
         try:
             weight = self.strip_infobox(template.get("weight").value)
             self.weight = self.clean_weight(weight)
+            # if self.weight is not None:
+            #     print(self.id, self.name)
+            #     print(weight)
+            #     print(self.weight)
+            #     print("==================================")            
         except ValueError:
             self.weight = -1
 
-        # Determine the release date of an item
+        # Determine the release date of an item (TESTED)
         try:
-            release_date = self.strip_infobox(template.get("release").value)
-            self.release_date = self.clean_release_date(release_date)
+            release_date = template.get("release").value
+            self.release = self.clean_release_date(release_date)
         except ValueError:
             self.release_date = None
 
-        # Determine the release date of an item
+        # Determine the examine text of an item (TODO)
         try:
-            examine = self.strip_infobox(template.get("examine").value)
+            examine = template.get("examine").value
             self.examine = self.clean_examine(examine)
+            if self.examine is not None:
+                print(self.id, self.name)
+                print(examine)
+                print(self.examine)
+                print("==================================")               
         except ValueError:
             self.examine = None
 
@@ -594,13 +658,13 @@ class ItemDefinition(object):
         # Print JSON to console
         self.construct_json()
         json_obj = json.dumps(self.json_out)
-        print(json_obj)
+        #print(json_obj)
 
     def print_pretty_json(self):
         # Pretty print JSON to console
         self.construct_json()
         json_obj = json.dumps(self.json_out, indent=4)
-        print(json_obj)
+        #print(json_obj)
 
     def print_debug_json(self):
         # Print JSON to log file
@@ -691,11 +755,11 @@ class ItemDefinition(object):
     #                        #  Update this list
     #     for field in required_fields:
     #         if not hasattr(self, field):
-    #             print("ERROR: Missing object attribute for: %s" % field)
+    #             #print("ERROR: Missing object attribute for: %s" % field)
     #     # This code needs to be more thorough and in ItemBonuses class
     #     # if self.equipable:
     #     #     if not self.bonuses:
-    #     #         print("ERROR: Equipable object has no item bonuses")
+    #     #         #print("ERROR: Equipable object has no item bonuses")
     #     #         quit()
 
 ################################################################################
@@ -713,4 +777,4 @@ if __name__=="__main__":
     assert _strcast(1)
     assert _strcast("OSRS Rocks!")
     
-    print("Module tests passed.")
+    #print("Module tests passed.")

@@ -61,10 +61,11 @@ import ItemDefinition
 ###############################################################################
 # ProcessItems object
 class ProcessItems(object):
-    def __init__(self, json_file, wikia_item_page_ids, wikia_buy_limits):
+    def __init__(self, json_file, all_wikia_items, all_wikia_items_bonuses, all_wikia_quests):
         self.json_file = json_file
-        self.wikia_item_page_ids = wikia_item_page_ids
-        self.wikia_buy_limits = wikia_buy_limits
+        self.all_wikia_items = all_wikia_items
+        self.all_wikia_items_bonuses = all_wikia_items_bonuses
+        self.all_wikia_quests = all_wikia_quests
         self.allitems = dict()
         self.allitemdefs = dict()
 
@@ -92,10 +93,10 @@ class ProcessItems(object):
     def construct_ItemDefinition(self, itemID, itemJSON):
         if itemID in self.already_processed:
             return
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.wikia_item_page_ids, self.wikia_buy_limits) 
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_quests) 
         item = itemdef.populate()
         if item:
-            self.allitemdefs[itemID] = item
+            self.allitemdefs[itemID] = item 
 
 ################################################################################
 if __name__=="__main__":
@@ -114,11 +115,18 @@ if __name__=="__main__":
         all_wikia_items = json.load(f)
 
     with open("extract_infoboxes_bonuses.txt") as f:
-        all_wikia_items_bonuses = json.load(f)    
+        all_wikia_items_bonuses = json.load(f)
+    
+    all_wikia_quests = list()
+    with open("extract_all_quests.txt") as f:
+        for l in f:
+            l = l.strip()
+            all_wikia_quests.append(l)
 
     # Next, process ItemScraper RuneLite plugin output file
     pi = ProcessItems(args["file"],
                       all_wikia_items,
-                      all_wikia_items_bonuses)
+                      all_wikia_items_bonuses,
+                      all_wikia_quests)
     pi.determine_already_processed()
     pi.process_allitems()
