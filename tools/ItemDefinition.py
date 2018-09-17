@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/01
+Date:    2018/09/17
 
 Description:
 ItemDefinition is a class to process the raw ItemDefinition data 
@@ -259,6 +259,13 @@ class ItemDefinition(object):
     @release_date.setter
     def release_date(self, value):
         self._release_date = _datecast(value)	
+
+    @property
+    def seller(self):
+        return self._seller
+    @seller.setter
+    def seller(self, value):
+        self._seller = _strcast(value)
 
     @property
     def store_price(self):
@@ -517,23 +524,109 @@ class ItemDefinition(object):
         examine = None
         examine = input
         examine = examine.strip()
-        # examine_text = examine_text.replace("'''", "")
-        # examine_text = examine_text.replace("''", "")
-        # examine_text = examine_text.replace("{", "")
-        # examine_text = examine_text.replace("}", "")
-        # examine_text = examine_text.replace("*", "")
-        # examine_text = examine_text.replace("\n", ",")
-        # if "<br>" in examine_text:
-        #     examine_text = examine_text.replace("<br>", ",")        
-        # if examine_text == "":
-        #     return None
-        # # TODO: Should handle a list, like weight
-        # examine_text = examine_text.strip()
-        return examine        
+        examine = examine.replace("'''", "")
+        examine = examine.replace("''", "")
+        examine = examine.replace("{", "")
+        examine = examine.replace("}", "")
+
+# 1491 Witch's cat
+#  '''On the ground:''' Curiosity has yet to kill this one...<br>
+# '''In inventory:''' A cat.
+
+# ['On the ground: Curiosity has yet to kill this one...<br>\nIn inventory: A cat.']
+
+        if ", <br>" in examine:
+            examine_list = examine.split(", <br>")            
+        elif ",<br>" in examine:
+            examine_list = examine.split(",<br>")
+        elif ",<br/>" in examine:
+            examine_list = examine.split(",<br/>") 
+        elif ", <br/>" in examine:
+            examine_list = examine.split(", <br/>")             
+        elif ",<br />" in examine:
+            examine_list = examine.split(",<br />")    
+        elif ", <br />" in examine:
+            examine_list = examine.split(", <br />")       
+        elif "<br>" in examine:
+            examine_list = examine.split("<br>")
+        elif "<br >" in examine:
+            examine_list = examine.split("<br >")
+        elif "<br/>" in examine:
+            examine_list = examine.split("<br/>")
+        elif "<br />" in examine:
+            examine_list = examine.split("<br />")
+        elif "&" in examine:
+            examine_list = examine.split("&")            
+        elif "\n" in examine:
+            examine_list = examine.split("\n")
+        if "," in examine:
+            examine_list = examine.split(",")
+
+        examine_list = list()
+        if "\n" in examine:
+            examine_list.append(examine.split("!")[0])
+        elif " and " in examine:
+            examine_list = examine.split(" and ")
+        elif " or " in examine:
+            examine_list = examine.split(" or ")            
+
+        examine_list_fin = list()
+        if examine_list:
+            for examine_name in examine_list:
+                examine_name = examine_name.strip()
+                examine_list_fin.append(examine_name)
+        else:
+            examine_list_fin.append(examine)
+
+        return examine_list_fin  
+
+        return examine   
+
+    def clean_store_price(self, input):
+        store_price = None
+        store_price = input
+        store_price = store_price.strip()
+        if store_price == "":
+            return None
+        return store_price
+
+    def clean_seller(self, input):
+        seller = None
+        seller = input
+        seller = seller.strip()
+        if seller == "" or seller.lower() == "no" or seller == None:
+            return None
+
+        seller = seller.replace("l/c", "")
+        seller = seller.replace("l/o", "")
+        seller = seller.replace("{", "")
+        seller = seller.replace("}", "")
+        seller = seller.replace("[", "")
+        seller = seller.replace("]", "") 
+
+        seller = seller.replace("41,600", "")   
+
+        seller_list = list()
+        if "!" in seller:
+            seller_list.append(seller.split("!")[0])
+        elif " and " in seller:
+            seller_list = seller.split(" and ")
+        elif " or " in seller:
+            seller_list = seller.split(" or ")            
+
+        seller_list_fin = list()
+        if seller_list:
+            for seller_name in seller_list:
+                seller_name = seller_name.strip()
+                seller_list_fin.append(seller_name)
+        else:
+            seller_list_fin.append(seller)
+
+        return seller_list_fin               
 
     def parse_InfoboxItem(self, template):
         self.logger.debug("Processing InfoBox template...")
-        self.logger.debug(template)
+        # self.logger.debug(template)
 
         # Determine if item is associated with a quest (TESTED)
         try:
@@ -563,6 +656,11 @@ class ItemDefinition(object):
         try:
             release_date = template.get("release").value
             self.release = self.clean_release_date(release_date)
+            # if self.release is not None:
+            #     print(self.id, self.name)
+            #     print(release_date)
+            #     print(self.release)
+            #     print("==================================")             
         except ValueError:
             self.release_date = None
 
@@ -578,25 +676,37 @@ class ItemDefinition(object):
         except ValueError:
             self.examine = None
 
-        return True
+        # Determine if item has a store price (TESTED)
+        try:
+            store_price = template.get("store").value
+            self.store_price = self.clean_store_price(store_price) 
+            # if self.store_price is not None:
+            #     print(self.id, self.name)
+            #     print(store_price)
+            #     print(self.store_price)
+            #     print("==================================")                 
+        except ValueError:
+            self.store_price = None
+        
+        # Determine if item has a store price (TESTED)
+        try:
+            seller = template.get("seller").value
+            self.seller = self.clean_seller(seller) 
+            # if self.seller is not None:
+            #     print(self.id, self.name)
+            #     print(seller)
+            #     print(self.seller)
+            #     print("==================================")                 
+        except ValueError:
+            self.seller = None
 
         # Buy limit is not stored in infobox?!
         # if not self.tradeable:
-        #     self.buy_limit = -1
+        #     self.buy_limit = None
         # else:
         #     self.buy_limit = 0
 
-        # Used to have code to fetch store prive and seller information
-        # try:
-        #     store_price = self.strip_infobox(template.get("store").value)
-        #     self.store_price = store_price      
-        # except ValueError:
-        #     self.store_price = -1
-        # try:
-        #     seller = self.strip_infobox(template.get("seller").value)
-        #     self.seller = seller   
-        # except ValueError:
-        #     self.seller = ""
+        return True
 
     def extract_InfoBoxBonuses(self):
         try:
@@ -614,7 +724,7 @@ class ItemDefinition(object):
               
     def parse_InfoboxBonuses(self, template):
         self.logger.debug("Processing InfoBox template...")
-        self.logger.debug(template)
+        # self.logger.debug(template)
         itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
         itemBonuses.attack_stab = self.strip_infobox(template.get("astab").value)
         itemBonuses.attack_slash = self.strip_infobox(template.get("aslash").value)
