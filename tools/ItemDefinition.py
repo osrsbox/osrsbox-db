@@ -36,6 +36,7 @@ import json
 import datetime
 import collections
 import logging
+import re
 
 # Pip install required
 import requests
@@ -93,13 +94,16 @@ def _datecast(val):
         return val.strftime("%d %B %Y")
     date = datetime.datetime.strptime(val, "%d %B %Y")   
     return date.strftime("%d %B %Y")        
-    # try:
-    #     date = datetime.datetime.strptime(val, "%d %B %Y")   
-    #     return date.strftime("%d %B %Y")
-    # except:
-    #     #print("  > %s" % val)
-    #     val = input("  > Enter a correct date: ")
-    #     return _datecast(val)
+
+def _listcast(val):
+    """ Check and convert to a list. """
+    if val is None:
+        return None
+    elif isinstance(val, list):
+        return val
+    elif isinstance(val, str):
+        temp_list = list()
+        return temp_list.append(val)
 
 ###############################################################################
 # ItemDefinition object
@@ -145,12 +149,6 @@ class ItemDefinition(object):
                             filemode='a',
                             level=logging.DEBUG)
         self.logger = logging.getLogger(__name__)
-
-        # # Setup specific logging
-        # logging.basicConfig(filename="ItemDefinition_SPEC.log",
-        #                     filemode='a',
-        #                     level=logging.DEBUG)
-        # self.logger_SPEC = logging.getLogger("SPEC")        
 
         # The name of the item on OSRS Wiki (can vary from actual name)
         self.wiki_name = None
@@ -251,7 +249,7 @@ class ItemDefinition(object):
         return self._quest_item
     @quest_item.setter
     def quest_item(self, value):
-        self._quest_item = _strcast(value)
+        self._quest_item = _listcast(value)
 
     @property
     def release_date(self):
@@ -265,7 +263,7 @@ class ItemDefinition(object):
         return self._seller
     @seller.setter
     def seller(self, value):
-        self._seller = _strcast(value)
+        self._seller = _listcast(value)
 
     @property
     def store_price(self):
@@ -279,7 +277,7 @@ class ItemDefinition(object):
         return self._examine
     @examine.setter
     def examine(self, value):
-        self._examine = _strcast(value)
+        self._examine = _listcast(value)
 	           
     @property
     def url(self):
@@ -289,8 +287,8 @@ class ItemDefinition(object):
         self._url = _strcast(value)
 
     def populate(self):
-        # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
-        ##print(">>>>>>>>>>>> Processing: %s" % self.itemID)
+        sys.stdout.write(">>> Processing: %s\r" % self.itemID)
+        # print(">>>>>>>>>>>> Processing: %s" % self.itemID)
 
         # Start section in logger
         self.logger.debug("============================================ START")
@@ -368,11 +366,6 @@ class ItemDefinition(object):
         self.print_pretty_debug_json()
 
         self.logger.debug("============================================ END")
-
-        # TODO: Move this check to another place, this is rediculous
-        directory = "items-json"
-        if not os.path.exists(directory):
-            os.makedirs(directory)
 
         # self.export_pretty_json()
 
@@ -492,6 +485,8 @@ class ItemDefinition(object):
         weight = None # Inventory weight
         weight = str(input)
         weight = weight.strip()
+        weight = weight.replace("[", "")
+        weight = weight.replace("]", "")        
         # Fix for weight ending in kg, or space kg
         if weight.endswith(" kg"):
             weight = weight.replace(" kg", "")
@@ -528,15 +523,77 @@ class ItemDefinition(object):
         examine = examine.replace("''", "")
         examine = examine.replace("{", "")
         examine = examine.replace("}", "")
+        examine = examine.replace("[", "")
+        examine = examine.replace("]", "")  
+        examine = examine.replace("*", "")
+        examine = examine.replace("<nowiki>", "")     
+        examine = examine.replace("</nowiki>", "")     
+        examine = examine.replace("sic", "")
+        examine = examine.replace("à", "") # not working
+        examine = examine.replace("(empty)", "Empty:")    
+        examine = examine.replace("(full)", "Full:")      
+        examine = examine.replace("(Player's Name)", "<players-name>") 
 
-# 1491 Witch's cat
-#  '''On the ground:''' Curiosity has yet to kill this one...<br>
-# '''In inventory:''' A cat.
+        examine = examine.replace("(Used in the Shield of Arrav quest)", "")
+        examine = examine.replace("(Used in The Grand Tree quest)", "")
+        examine = examine.replace("(Edgeville Dungeon entrance)", "")
+        examine = examine.replace("(Used to open the muddy chest in the lava maze)", "")
+        examine = examine.replace("(Used to open the sinister chest in Yanille dungeon)", "")
+        examine = examine.replace("(Used in the Dragon Slayer quest)", "")
+        examine = examine.replace("(Used in Heroes' Quest)", "")
+        examine = examine.replace("(Provides access to the deeper parts of Taverley Dungeon)", "")
+        examine = examine.replace("(Provides access to the Desert Mining Camp)", "")
+        examine = examine.replace("(Unlocks the cell door in the Desert Mining Camp)", "")
+        examine = examine.replace("(Access to the Desert Mining Camp's mine)", "")
+        examine = examine.replace("(Used in the Tourist Trap quest)", "")
+        examine = examine.replace("(Used in the Watchtower quest)", "")   
+        examine = examine.replace("(Used in the Zogre Flesh Eaters quest)", "")
+        examine = examine.replace("(Used in the Creature of Fenkenstrain quest)", "")
+        examine = examine.replace("(Opens chests found in the Mort'ton catacombs)", "")
+        examine = examine.replace("(Used in the Fremennik Trials quest)", "")
+        examine = examine.replace("(Allows access to the Crystal mine from the Haunted mine quest)", "")
+        examine = examine.replace("(Used in the Horror from the Deep quest)", "")
+        examine = examine.replace("(Used in the Darkness of Hallowvale quest)", "")
+        examine = examine.replace("(Used in the Priest in Peril quest)", "")
+        examine = examine.replace("(Allows access to the Water Ravine Dungeon from the Spirits of the Elid quest)", "")
+        examine = examine.replace("(Used to enter the cavern near the Temple of Light)", "")
+        examine = examine.replace("(Opens the locked coffins in the cave at Jiggig)", "")
+        examine = examine.replace("(Used to open a chest upstairs in Slepe church)", "")
+        examine = examine.replace("(Unlocks the gate to the roof of the Slayer Tower)", "")
+        examine = examine.replace("(Used in the Misthalin Mystery quest)", "")
+        examine = examine.replace("(Allows access to the goblin kitchen in the Observatory Dungeon)", "")
+        examine = examine.replace("(Used to access the prison cell inside of the Mourner HQ)", "")
+        examine = examine.replace("(Provides access to the elemental workshop)", "")
+        examine = examine.replace("(Provides access to the Black Knights jail cell in Taverley Dungeon)", "")
+        examine = examine.replace("(Used in the In Aid of the Myreque quest)", "")
+        examine = examine.replace("(Used in the Troll Stronghold quest)", "")
+        examine = examine.replace("(Used in the Smoke Dungeon in Desert Treasure)", "")
+        examine = examine.replace("(Quick access into the Temple of Ikov)", "")
+        examine = examine.replace("(Used to access the prison cell inside of the Mourner HQ)", "")
+        examine = examine.replace("(Used in The Golem quest)", "")
+        examine = examine.replace("(Used in the Smoke Dungeon in Desert Treasure)", "")
+        examine = examine.replace("(Allows access to the Crystal mine from the Haunted mine quest)", "")
+        examine = examine.replace("(Used in the Eadgar's Ruse quest)", "")
+        examine = examine.replace("(Used in the Troll Stronghold quest)", "")
+        examine = examine.replace("(Used in the Plague City quest)", "")
+        examine = examine.replace("(used to access the Hill Titan's lair)", "")
 
-# ['On the ground: Curiosity has yet to kill this one...<br>\nIn inventory: A cat.']
+        examine_list = list()
+        if self.name == "Clue scroll (hard)":
+            examine = examine.replace("\n", "")
+            examine = examine.replace("(Player's Name)", "<players-name>")
+            examine_list = re.split("<br/>|<br />", examine)         
+            examine_list = [a+b for a, b in zip(examine_list[::2],examine_list[1::2])]
+        if self.name == "Clue scroll (elite)":
+            examine_list.append(examine.split("\n")[0])
+            examine_list.append("Sherlock: A clue suggested by <players-name>! ")
 
-        if ", <br>" in examine:
-            examine_list = examine.split(", <br>")            
+        elif ", <br>" in examine:
+            examine_list = examine.split(", <br>")    
+        elif "<br>\n" in examine:
+            examine_list = examine.split("<br>\n")
+        elif "<br />\n" in examine:
+            examine_list = examine.split("<br />\n")                     
         elif ",<br>" in examine:
             examine_list = examine.split(",<br>")
         elif ",<br/>" in examine:
@@ -555,32 +612,34 @@ class ItemDefinition(object):
             examine_list = examine.split("<br/>")
         elif "<br />" in examine:
             examine_list = examine.split("<br />")
-        elif "&" in examine:
-            examine_list = examine.split("&")            
+        # elif "&" in examine:
+        #     examine_list = examine.split("&")            
         elif "\n" in examine:
-            examine_list = examine.split("\n")
-        if "," in examine:
-            examine_list = examine.split(",")
-
-        examine_list = list()
-        if "\n" in examine:
-            examine_list.append(examine.split("!")[0])
-        elif " and " in examine:
-            examine_list = examine.split(" and ")
-        elif " or " in examine:
-            examine_list = examine.split(" or ")            
+            examine_list = examine.split("\n")                
 
         examine_list_fin = list()
         if examine_list:
             for examine_name in examine_list:
                 examine_name = examine_name.strip()
+                if "(Whole)" in examine_name:
+                    examine_name = examine_name.replace("(Whole)", "")
+                    examine_name = "Whole: " + examine_name
+                if "(Half)" in examine_name:
+                    examine_name = examine_name.replace("(Half)", "")
+                    examine_name = "Half: " + examine_name
+                if "(uncharged)" in examine_name:
+                    examine_name = examine_name.replace("(uncharged)", "")
+                    examine_name = "Uncharged: " + examine_name
+                if "(charged)" in examine_name:
+                    examine_name = examine_name.replace("(charged)", "")
+                    examine_name = "Charged: " + examine_name
+                if examine_name == "":
+                    continue              
                 examine_list_fin.append(examine_name)
         else:
             examine_list_fin.append(examine)
 
         return examine_list_fin  
-
-        return examine   
 
     def clean_store_price(self, input):
         store_price = None
@@ -642,7 +701,7 @@ class ItemDefinition(object):
 
         # Determine the weight of an item (TESTED)
         try:
-            weight = self.strip_infobox(template.get("weight").value)
+            weight = template.get("weight").value
             self.weight = self.clean_weight(weight)
             # if self.weight is not None:
             #     print(self.id, self.name)
@@ -655,7 +714,7 @@ class ItemDefinition(object):
         # Determine the release date of an item (TESTED)
         try:
             release_date = template.get("release").value
-            self.release = self.clean_release_date(release_date)
+            self.release_date = self.clean_release_date(release_date)
             # if self.release is not None:
             #     print(self.id, self.name)
             #     print(release_date)
@@ -664,15 +723,16 @@ class ItemDefinition(object):
         except ValueError:
             self.release_date = None
 
-        # Determine the examine text of an item (TODO)
+        # Determine the examine text of an item (TESTED)
         try:
             examine = template.get("examine").value
             self.examine = self.clean_examine(examine)
-            if self.examine is not None:
-                print(self.id, self.name)
-                print(examine)
-                print(self.examine)
-                print("==================================")               
+            # if self.examine is not None:
+            #     print(self.id, self.name)
+            #     print(examine)
+            #     print(self.examine)
+            #     print(self.id, "||".join(self.examine))
+            #     print("==================================")
         except ValueError:
             self.examine = None
 
@@ -700,11 +760,11 @@ class ItemDefinition(object):
         except ValueError:
             self.seller = None
 
+        # Determine if item has a buy limit (TESTED)
+        if not self.tradeable:
+            self.buy_limit = None
         # Buy limit is not stored in infobox?!
-        # if not self.tradeable:
-        #     self.buy_limit = None
-        # else:
-        #     self.buy_limit = 0
+        # TODO: Need to implement solution with other input
 
         return True
 
@@ -749,7 +809,7 @@ class ItemDefinition(object):
             self.logger.critical("Could not determine equipable item slot")
             return False
 
-        # If item is weapon, or 2h determine attack speed
+        # If item is weapon, two-handed, or 2h determine attack speed
         if itemBonuses.slot == "weapon" or itemBonuses.slot == "two-handed" or itemBonuses.slot == "2h":
             try:
                 itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value) 
@@ -828,49 +888,6 @@ class ItemDefinition(object):
             #self.json_out["item_slot"] = self.item_slot
             #if self.item_slot == "weapon" or self.item_slot == "two-handed":
             #    self.json_out["weapon_speed"] = self.weapon_speed
-    
-    # def edit_json(self):
-    #     """ Construct JSON, print JSON, manually check and edit the contents. """
-    #     self.print_pretty_json()
-    #     answer = input("Would you like to change a field? [y, N]: ")
-    #     if answer.lower() == "y":
-    #         field = input("Name of field to change: ")
-    #         if field == "bonuses":
-    #             subfield = input("Name of sub-field to change: ")
-    #             subvalue = input("Enter new value for %s: " % subfield)
-    #             self.bonuses[subfield] = subvalue
-    #             self.check_json()
-    #         else:
-    #             value = input("Enter new value for %s: " % field)
-    #             setattr(self, field, value)
-    #         self.check_json()
-
-    # This should not be needed as everything is type/content checked
-    # def check_json(self):
-    #     """ Construct JSON, and auto check fields. """
-    #     required_fields = ["id",
-    #                        "name",
-    #                        "tradeable",
-    #                        "noteable",
-    #                        "equipable",
-    #                        "members",
-    #                        "weight",
-    #                        "buy_limit",
-    #                        "quest_item",
-    #                        "stackable",
-    #                        "release_date", 
-    #                        "cost",
-    #                        "lowalch",
-    #                        "highalch"]
-    #                        #  Update this list
-    #     for field in required_fields:
-    #         if not hasattr(self, field):
-    #             #print("ERROR: Missing object attribute for: %s" % field)
-    #     # This code needs to be more thorough and in ItemBonuses class
-    #     # if self.equipable:
-    #     #     if not self.bonuses:
-    #     #         #print("ERROR: Equipable object has no item bonuses")
-    #     #         quit()
 
 ################################################################################
 if __name__=="__main__":
@@ -887,4 +904,4 @@ if __name__=="__main__":
     assert _strcast(1)
     assert _strcast("OSRS Rocks!")
     
-    #print("Module tests passed.")
+    print("Module tests passed.")

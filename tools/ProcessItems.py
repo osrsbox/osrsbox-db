@@ -123,6 +123,11 @@ if __name__=="__main__":
             l = l.strip()
             all_wikia_quests.append(l)
 
+    # Make a dir for JSON output
+    directory = "items-json"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
     # Next, process ItemScraper RuneLite plugin output file
     pi = ProcessItems(args["file"],
                       all_wikia_items,
