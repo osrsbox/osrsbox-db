@@ -37,25 +37,35 @@ import lxml.etree
 import json
 
 def extract_buy_limit(itemName):
+    if "Grubs" in itemName:
+        return
     url = "http://oldschoolrunescape.wikia.com/wiki/" + itemName
     #http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=
     print("URL: %r" % url)
 
-    data = urllib.request.urlopen(url).read()
+    # data = urllib.request.urlopen(url).read()
+    request = urllib.request.urlopen(url)
+    if request.getcode() != 200:
+        return
+    data = request.read()
     doc = lxml.html.fromstring(data)
 
     # Try and fetch the Wikia infobox for the item
-    box = doc.xpath("//table[@class='wikitable infobox']")
-    if not box:
-        # If not discovered, try another Wikia infobox class
-        box = doc.xpath("//table[@class='wikitable infobox plainlinks']")
+    try:
+        box = doc.xpath("//table[@class='wikitable infobox']")
         if not box:
-            # Only for furnature pages
-            box = doc.xpath("//table[@class='wikitable infobox plainlinks [[:Template:Parentitle]]']")[0]
+            # If not discovered, try another Wikia infobox class
+            box = doc.xpath("//table[@class='wikitable infobox plainlinks']")
+            if not box:
+                # Only for furnature pages
+                box = doc.xpath("//table[@class='wikitable infobox plainlinks [[:Template:Parentitle]]']")[0]
+            else:
+                box = box[0]
         else:
             box = box[0]
-    else:
-        box = box[0]
+    except IndexError:
+        return
+        
     buy_limit = None
 
     # Fetch all the tr elements and loop through them
@@ -89,8 +99,8 @@ def extract_buy_limit(itemName):
 
     return buy_limit
 
-def query_category_items():
-    for result in query_category_items_callback({'generator': 'categorymembers'}):
+def query_category_items(lastContinue):
+    for result in query_category_items_callback({'generator': 'categorymembers'}, lastContinue):
         # Process result data
         for r in result['pages']:
             page_suffix = result['pages'][r]["title"]
@@ -99,20 +109,26 @@ def query_category_items():
             buy_limit = extract_buy_limit(page_suffix)
             print("%s|%s" % (result['pages'][r]["title"], buy_limit))
 
-def query_category_items_callback(request):
+def query_category_items_callback(request, lastContinue):
     request['action'] = 'query'
     request['format'] = 'json'
     request['prop'] = 'categories'
     request['gcmtitle'] = 'Category:Items'
     request['gcmlimit'] = 'max'
     request['cllimit'] = 'max'
-    lastContinue = {}
+    # request['gcmlimit'] = '20'
+    # request['cllimit'] = '20'
+    
+    # lastContinue = {}
+    lastContinue = lastContinue
+    print(">>>>>>> lastContinue: ", lastContinue)
     while True:
         # Clone original request
         req = request.copy()
         # Modify the original request
         # Insert values returned in the 'continue' section
         req.update(lastContinue)
+        print(">>>>>>> NEXT lastContinue", lastContinue)
         # Call API
         result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
         # print(result)
@@ -133,5 +149,10 @@ def query_category_items_callback(request):
 ################################################################################
 if __name__=="__main__":   
     print(">>> Print starting...")
-    # Start processing    
-    query_category_items()
+    # Start processing
+    # "Grubs_Ó_la_mode"
+    # {'gcmcontinue': 'page|32324c422053484f54|79029'}
+    lastContinue = {}
+    # lastContinue = {'gcmcontinue': 'page|47524f47|25115'}
+
+    query_category_items(lastContinue)

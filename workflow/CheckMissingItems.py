@@ -65,7 +65,8 @@ class CompareAllitemsFiles(object):
         added = list(added)
         added.sort(key=int)
         for id in added:
-            print("%s,%s" % (self.allitems_dict[id]["id"], self.allitems_dict[id]["name"]))
+            # print("%s,%s" % (self.allitems_dict[id]["id"], self.allitems_dict[id]["name"]))
+            print("%s|" % (self.allitems_dict[id]["name"]))
         # TODO: Should probably add a check for removed items as well
 
 ################################################################################

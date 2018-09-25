@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/17
+Date:    2018/09/25
 
 Description:
 ItemDefinition is a class to process the raw ItemDefinition data 
@@ -108,7 +108,7 @@ def _listcast(val):
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_quests):
+    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_quests, all_wikia_buylimits, all_wikia_normalized_names, all_wikia_items_construction):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
@@ -120,6 +120,12 @@ class ItemDefinition(object):
         self.all_wikia_items_bonuses = all_wikia_items_bonuses
         # Bulk dict of all OSRS Wikia quests
         self.all_wikia_quests = all_wikia_quests
+        # Bulk dict of all OSRS Wikia buylimits
+        self.all_wikia_buylimits = all_wikia_buylimits 
+        # Bulk dict of normalized OSRS Wikia names
+        self.all_wikia_normalized_names = all_wikia_normalized_names
+        # Bulk dist of all OSRS Wikia construction items
+        self.all_wikia_items_construction = all_wikia_items_construction
         
         # Dict of all ItemDefinition properties
         self.properties = {
@@ -152,6 +158,8 @@ class ItemDefinition(object):
 
         # The name of the item on OSRS Wiki (can vary from actual name)
         self.wiki_name = None
+
+        self.isFurniture = False
 
     @property
     def id(self):
@@ -360,6 +368,10 @@ class ItemDefinition(object):
                 #print(">>>>>>>>>>>> CRITICAL: Equipable item has no bonuses")
                 return # Could not finish, just exit
 
+        # TODO: Fix self.url and check
+        self.url = self.url.replace(" ", "_")
+        self.url = self.url.replace("'", "%27")
+
         # Log the second JSON input
         self.logger.debug("Dumping second input...")
         self.logger.debug("Starting: print_pretty_debug_json")
@@ -367,7 +379,7 @@ class ItemDefinition(object):
 
         self.logger.debug("============================================ END")
 
-        # self.export_pretty_json()
+        self.export_pretty_json()
 
         # Finished. Return the entire ItemDefinition object
         return self
@@ -384,14 +396,47 @@ class ItemDefinition(object):
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
             self.url = "http://oldschoolrunescape.wikia.com/wiki/" + self.name
+            self.isFurniture = False
             return True
+        elif self.name in self.all_wikia_items_construction:
+            self.logger.debug(">>> ITEM FOUND IN CONSTRUCTION:")
+            self.logger.debug("  > name: %s" % self.name)
+            self.logger.debug("  > id: %s" % self.id)
+            self.url = "http://oldschoolrunescape.wikia.com/wiki/" + self.name
+            self.isFurniture = True
+            return True
+        elif self.name in self.all_wikia_normalized_names:
+            self.logger.debug(">>> ITEM FOUND IN NORMALIZED:")
+            self.logger.debug("  > name: %s" % self.name)
+            self.logger.debug("  > id: %s" % self.id)
+            wikia_normalized_name = self.all_wikia_normalized_names[self.id]
+            self.url = "http://oldschoolrunescape.wikia.com/wiki/" + wikia_normalized_name
+            self.isFurniture = False
+            return True    
         else:
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.name)
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.id)
+            self.isFurniture = False
             return False
 
     def extract_InfoboxItem(self):
-        wikicode = mwparserfromhell.parse(self.all_wikia_items[self.name])
+        wikia_name = self.url
+        # Clean the URL to extract
+        wikia_name = wikia_name.replace("http://oldschoolrunescape.wikia.com/wiki/", "")
+        self.logger.debug(">>> wikia_name: %s" % wikia_name)
+        if not self.isFurniture:
+            try:
+                wikicode = mwparserfromhell.parse(self.all_wikia_items[wikia_name])
+            except KeyError:
+                return False
+        else:
+            try:
+                wikicode = mwparserfromhell.parse(self.all_wikia_items_construction[wikia_name])
+            except KeyError:
+                return False
+                
+        # TODO: Extract directly from OSRS Wiki
+        # wikicode = mwparserfromhell.parse(self.all_wikia_items[self.name])
         templates = wikicode.filter_templates()
         for template in templates:
             extracted_infobox = self.parse_InfoboxItem(template)
@@ -399,9 +444,7 @@ class ItemDefinition(object):
                 return True
             else:
                 return False 
-        return False
-
-        # TODO: Add wikia URL               
+        return False        
 
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
@@ -438,7 +481,7 @@ class ItemDefinition(object):
         if quest.lower() == "no":
             return None
         if quest.lower() == "yes":
-            return None            
+            return None
 
         quest_list = list()
         # Start trying to split quests
@@ -709,16 +752,16 @@ class ItemDefinition(object):
             #     print(self.weight)
             #     print("==================================")            
         except ValueError:
-            self.weight = -1
+            self.weight = None
 
         # Determine the release date of an item (TESTED)
         try:
             release_date = template.get("release").value
             self.release_date = self.clean_release_date(release_date)
-            # if self.release is not None:
+            # if self.release_date is not None:
             #     print(self.id, self.name)
             #     print(release_date)
-            #     print(self.release)
+            #     print(self.release_date)
             #     print("==================================")             
         except ValueError:
             self.release_date = None
@@ -763,8 +806,15 @@ class ItemDefinition(object):
         # Determine if item has a buy limit (TESTED)
         if not self.tradeable:
             self.buy_limit = None
-        # Buy limit is not stored in infobox?!
-        # TODO: Need to implement solution with other input
+        else:
+            try:
+                self.buy_limit = self.all_wikia_buylimits[self.name]
+            except KeyError:
+                self.buy_limit = None
+
+        # Set some furniture defaults
+        if self.isFurniture:
+            self.release_date = "31 May 2006"
 
         return True
 

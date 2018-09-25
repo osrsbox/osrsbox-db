@@ -61,11 +61,14 @@ import ItemDefinition
 ###############################################################################
 # ProcessItems object
 class ProcessItems(object):
-    def __init__(self, json_file, all_wikia_items, all_wikia_items_bonuses, all_wikia_quests):
+    def __init__(self, json_file, all_wikia_items, all_wikia_items_bonuses, all_wikia_quests, all_wikia_buylimits, all_wikia_normalized_names, all_wikia_items_construction):
         self.json_file = json_file
         self.all_wikia_items = all_wikia_items
         self.all_wikia_items_bonuses = all_wikia_items_bonuses
         self.all_wikia_quests = all_wikia_quests
+        self.all_wikia_buylimits = all_wikia_buylimits
+        self.all_wikia_normalized_names = all_wikia_normalized_names
+        self.all_wikia_items_construction = all_wikia_items_construction
         self.allitems = dict()
         self.allitemdefs = dict()
 
@@ -93,7 +96,7 @@ class ProcessItems(object):
     def construct_ItemDefinition(self, itemID, itemJSON):
         if itemID in self.already_processed:
             return
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_quests) 
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_quests, self.all_wikia_buylimits, self.all_wikia_normalized_names, self.all_wikia_items_construction) 
         item = itemdef.populate()
         if item:
             self.allitemdefs[itemID] = item 
@@ -116,12 +119,31 @@ if __name__=="__main__":
 
     with open("extract_infoboxes_bonuses.txt") as f:
         all_wikia_items_bonuses = json.load(f)
-    
+
+    with open("extract_infoboxes_construction.txt") as f:
+        all_wikia_items_construction = json.load(f)
+   
     all_wikia_quests = list()
     with open("extract_all_quests.txt") as f:
         for l in f:
             l = l.strip()
             all_wikia_quests.append(l)
+
+    all_wikia_buylimits = dict()
+    with open("extract_buy_limits.txt") as f:
+        for l in f:
+            l = l.strip()
+            l = l.split("|")
+            all_wikia_buylimits[l[0]] = l[1]    
+
+    all_wikia_normalized_names = dict()
+    with open("normalized_names.txt") as f:
+        for l in f:
+            l = l.strip()
+            if "TODO" in l:
+                continue
+            l = l.split("|")
+            all_wikia_normalized_names[l[0]] = l[2]
 
     # Make a dir for JSON output
     directory = "items-json"
@@ -132,6 +154,9 @@ if __name__=="__main__":
     pi = ProcessItems(args["file"],
                       all_wikia_items,
                       all_wikia_items_bonuses,
-                      all_wikia_quests)
+                      all_wikia_quests,
+                      all_wikia_buylimits,
+                      all_wikia_normalized_names,
+                      all_wikia_items_construction)
     pi.determine_already_processed()
     pi.process_allitems()
