@@ -343,14 +343,29 @@ class ItemDefinition(object):
                 self.logger.debug("Item InfoBox extracted successfully")
             elif self.status_code == 1:
                 self.logger.debug("Invalid item saved")
+                if self.equipable:
+                    self.make_blank_bonuses()
+                    self.logger.critical("Blank bonuses made.")
             elif self.status_code == 2:
-                self.logger.debug("Unobtainable item saved")      
+                self.logger.debug("Unobtainable item saved")
+                if self.equipable:
+                    self.make_blank_bonuses()
+                    self.logger.critical("Blank bonuses made.")
             elif self.status_code == 3:
-                self.logger.debug("Unusable item saved")   
+                self.logger.debug("Unusable item saved")  
+                if self.equipable:
+                    self.make_blank_bonuses()
+                    self.logger.critical("Blank bonuses made.")                 
             elif self.status_code == 4:
-                self.logger.debug("Not really an item, item saved")          
+                self.logger.debug("Not really an item, item saved")   
+                if self.equipable:
+                    self.make_blank_bonuses()
+                    self.logger.critical("Blank bonuses made.")                       
             elif self.status_code == 5:
-                self.logger.debug("No dedicated wiki page for item, saved")                   
+                self.logger.debug("No dedicated wiki page for item, saved")  
+                if self.equipable:
+                    self.make_blank_bonuses()
+                    self.logger.critical("Blank bonuses made.")
             else:
                 self.logger.critical("Item InfoBox extraction error.")
                 return # Could not finish, just exit
@@ -366,11 +381,12 @@ class ItemDefinition(object):
                 has_infobox_bonuses = self.extract_InfoBoxBonuses()
                 if has_infobox_bonuses:
                     self.logger.debug("Item InfoBox Bonuses extracted successfully")
-                elif self.status_code == 6:
-                    # TODO: This is currently not working
-                    return
+                elif self.status_code in [1,2,3,4,5,6]:
+                    self.make_blank_bonuses()
+                    self.logger.critical("Blank bonuses made.")
                 else:
                     self.logger.critical("Item InfoBox Bonuses extraction error.")
+                    self.logger.critical(self.status_code)
                     return # Could not finish, just exit 
             else:
                 self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
@@ -908,6 +924,32 @@ class ItemDefinition(object):
         self.itemBonuses = itemBonuses
 
         return True
+
+    def make_blank_bonuses(self):
+        # Parse the Infobox Bonuses template
+        self.logger.debug("Making a default bonuses object...")
+        # self.logger.debug(template)
+        itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
+        itemBonuses.attack_stab = 0
+        itemBonuses.attack_slash = 0
+        itemBonuses.attack_crush = 0
+        itemBonuses.attack_magic = 0
+        itemBonuses.attack_ranged = 0
+        itemBonuses.defence_stab = 0
+        itemBonuses.defence_slash = 0
+        itemBonuses.defence_crush  = 0
+        itemBonuses.defence_magic = 0
+        itemBonuses.defence_ranged = 0
+        itemBonuses.melee_strength = 0
+        itemBonuses.ranged_strength = 0
+        itemBonuses.magic_damage = 0
+        itemBonuses.prayer = 0
+        itemBonuses.slot  = None
+        itemBonuses.attack_speed = None
+        # Assign the correctly extracted item bonuses to the object
+        self.itemBonuses = itemBonuses
+
+        return True        
           
     ###########################################################################
     # Handle item to JSON

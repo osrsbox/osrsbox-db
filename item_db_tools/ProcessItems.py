@@ -154,6 +154,9 @@ if __name__=="__main__":
     if not os.path.exists(directory):
         os.makedirs(directory)
 
+    # Remove old logfile
+    #os.remove("ItemDefinition.log")
+
     # Next, build the ProcessItems class to handle all items
     pi = ProcessItems(args["file"],
                       all_wikia_items,
