@@ -145,6 +145,19 @@ class QuestMetadata(object):
         clean_input = clean_input.replace("]", "")
         return clean_input
 
+    def clean_series(self, input):
+        if input.lower() == "none" or input == None or input == "N/A":
+            return None
+        
+        input = input.replace("List of quest series#", "")
+        input = input.replace("Quests/Series#", "")
+        input = input.replace("Quests/Series|", "")
+        
+        input_list = input.split("|")
+        # Grab every second entry
+        input_list = input_list[0::2]
+        return input_list
+
     def populate(self):
         # print(self.wikicode)
 
@@ -169,10 +182,13 @@ class QuestMetadata(object):
         except ValueError:
             self.release = None   
 
-        # Quest difficulty
+        # Quest series
         try:
             series = self.wikicode.get("series").value
-            self.series = self.wikicode_cleaner(series)
+            series = self.wikicode_cleaner(series)
+            # print("   <<<", series)
+            series = self.clean_series(series)
+            self.series = series
         except ValueError:
             self.series = None
 
@@ -189,6 +205,8 @@ class QuestMetadata(object):
             self.developer = self.wikicode_cleaner(developer)
         except ValueError:
             self.developer = None
+
+        return self
 
     ###########################################################################
     # Handle item to JSON

@@ -100,7 +100,7 @@ if __name__=="__main__":
     removed = dd.removed()
     print(">>> Removed items")
     for itemID in removed:
-        print("%s,%s" % (itemID, allitems_new[itemID]["name"]))        
+        print("%s,%s" % (itemID, allitems_old[itemID]["name"]))        
 
     # Determine changed items
     changed = dd.changed()

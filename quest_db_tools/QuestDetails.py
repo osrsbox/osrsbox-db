@@ -153,3 +153,77 @@ class QuestDetails(object):
     @kills.setter
     def kills(self, value):
         self._kills = _strcast(value)
+
+    def wikicode_cleaner(self, input):
+        clean_input = str(input)
+        clean_input = clean_input.strip()
+        clean_input = clean_input.replace("[", "")
+        clean_input = clean_input.replace("]", "")
+        return clean_input
+
+    def populate(self):
+        # print(self.wikicode)
+
+        # Quest start (location)
+        try:
+            start = self.wikicode.get("start").value
+            self.start = self.wikicode_cleaner(start)
+        except ValueError:
+            self.start = None
+
+        # Difficulty
+        try:
+            difficulty = self.wikicode.get("difficulty").value
+            self.difficulty = self.wikicode_cleaner(difficulty)
+        except ValueError:
+            self.difficulty = None
+
+        # Quest description
+        try:
+            description = self.wikicode.get("description").value
+            self.description = self.wikicode_cleaner(description)
+        except ValueError:
+            self.description = None   
+
+        # Quest requirements
+        try:
+            requirements = self.wikicode.get("requirements").value
+            self.requirements = self.wikicode_cleaner(requirements)
+        except ValueError:
+            self.requirements = None
+
+        # Quest items
+        try:
+            items = self.wikicode.get("items").value
+            self.items = self.wikicode_cleaner(items)
+        except ValueError:
+            self.items = None
+
+        # Quest reccomended
+        try:
+            reccomended = self.wikicode.get("reccomended").value
+            self.reccomended = self.wikicode_cleaner(reccomended)
+        except ValueError:
+            self.reccomended = None
+
+        # Quest kills
+        try:
+            kills = self.wikicode.get("kills").value
+            self.kills = self.wikicode_cleaner(kills)
+        except ValueError:
+            self.kills = None
+
+        return self
+
+    ###########################################################################
+    # Handle item to JSON
+    def construct_json(self):
+        self.json_out = collections.OrderedDict()
+        self.json_out["start"] = self.start
+        self.json_out["difficulty"] = self.difficulty
+        self.json_out["description"] = self.description
+        self.json_out["requirements"] = self.requirements
+        self.json_out["items"] = self.items
+        self.json_out["reccomended"] = self.reccomended
+        self.json_out["kills"] = self.kills
+        return self.json_out

@@ -110,3 +110,44 @@ class QuestRewards(object):
     @qp.setter
     def qp(self, value):
         self._qp = _strcast(value)
+
+    @property
+    def rewards(self):
+        return self._rewards
+    @rewards.setter
+    def rewards(self, value):
+        self._rewards = _strcast(value)        
+
+    def wikicode_cleaner(self, input):
+        clean_input = str(input)
+        clean_input = clean_input.strip()
+        clean_input = clean_input.replace("[", "")
+        clean_input = clean_input.replace("]", "")
+        return clean_input
+
+    def populate(self):
+        # print(self.wikicode)
+
+        # Quest start (location)
+        try:
+            qp = self.wikicode.get("qp").value
+            self.qp = self.wikicode_cleaner(qp)
+        except ValueError:
+            self.qp = None
+
+        # Difficulty
+        try:
+            rewards = self.wikicode.get("rewards").value
+            self.rewards = self.wikicode_cleaner(rewards)
+        except ValueError:
+            self.rewards = None
+
+        return self
+
+    ###########################################################################
+    # Handle item to JSON
+    def construct_json(self):
+        self.json_out = collections.OrderedDict()
+        self.json_out["qp"] = self.qp
+        self.json_out["rewards"] = self.rewards
+        return self.json_out

@@ -38,6 +38,7 @@ import mwparserfromhell
 from collections import defaultdict
 
 def extract_wikicode(page_name):
+    page_name = page_name.replace("&", "%26")
     url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
     result = requests.get(url)
     data = result.json()
@@ -66,6 +67,16 @@ if __name__=="__main__":
         for l in f:
             l = l.strip()
             to_process[l] = None
+
+    with open("extract_all_quests_mini.txt") as f:
+        for l in f:
+            l = l.strip()
+            to_process[l] = None 
+
+    with open("extract_all_quests_sub.txt") as f:
+        for l in f:
+            l = l.strip()
+            to_process[l] = None                       
 
     total = len(to_process)
     count = 0

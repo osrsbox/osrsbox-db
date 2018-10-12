@@ -52,11 +52,18 @@ import QuestRewards
 ###############################################################################
 # QuestDefinition object
 class QuestDefinition(object):
-    def __init__(self, quest_name, wikicode):
+    def __init__(self, quest_name, quest_type, wikicode):
         # Name of the quest
         self.quest_name = quest_name
         # Wikicode of the OSRS Wiki quest page
         self.wikicode = wikicode
+        # Quest type (normal, mini, sub)
+        self.quest_type = quest_type
+
+        # Other quest classes
+        self.quest_metadata = None
+        self.quest_details = None
+        self.quest_rewards = None
 
         # Setup logging
         logging.basicConfig(filename="QuestDefintition.log",
@@ -66,10 +73,16 @@ class QuestDefinition(object):
 
     def populate(self):
         # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
-        # print("Processing: %s" % quest_name)
-        self.extract_InfoboxQuest()
+        print(">>> Processing: %s" % self.quest_name)
+        if self.quest_type == "mini":
+            self.extract_quest_details
+        else:
+            self.extract_quest_metadata()
+            self.extract_quest_details()
+            self.extract_quest_rewards()
+        return self
         
-    def extract_InfoboxQuest(self):
+    def extract_quest_metadata(self):
         wikicode = mwparserfromhell.parse(self.wikicode)
 
         templates = wikicode.filter_templates()
@@ -78,6 +91,34 @@ class QuestDefinition(object):
             template_name = template_name.lower()
             if "infobox quest" in template_name:
                 qm = QuestMetadata.QuestMetadata(template)
-                qm.populate()
-                json_out = qm.construct_json()
-                print(qm.number, self.quest_name)
+                self.quest_metadata = qm.populate()
+
+    def extract_quest_details(self):
+        wikicode = mwparserfromhell.parse(self.wikicode)
+
+        templates = wikicode.filter_templates()
+        for template in templates:
+            template_name = template.name.strip()
+            template_name = template_name.lower()
+            if "quest details" in template_name:
+                qd = QuestDetails.QuestDetails(template)
+                self.quest_details = qd.populate()
+
+    def extract_quest_rewards(self):
+        wikicode = mwparserfromhell.parse(self.wikicode)
+
+        templates = wikicode.filter_templates()
+        for template in templates:
+            template_name = template.name.strip()
+            template_name = template_name.lower()
+            if "quest rewards" in template_name:
+                qr = QuestRewards.QuestRewards(template)
+                self.quest_rewards = qr.populate()
+
+    def print_stuff(self):
+        # print("   ", self.quest_metadata.number)
+        # print("   ", self.quest_metadata.members)
+        # print("   ", self.quest_metadata.release)
+        print("   ", self.quest_metadata.series)
+        # print("   ", self.quest_metadata.difficulty)
+        # print("   ", self.quest_metadata.developer)

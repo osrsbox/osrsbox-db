@@ -42,6 +42,7 @@ import os
 import sys
 import json
 import glob
+import collections
 
 sys.path.append(os.getcwd())
 import QuestDefinition
@@ -52,16 +53,33 @@ if __name__=="__main__":
     # Start processing    
     print(">>> Starting processing...")
 
-    wikia_extraction_path = ".." + os.sep + "wiki_extraction_tools" + os.sep
+    wiki_extraction_path = ".." + os.sep + "wiki_extraction_tools" + os.sep
 
-    with open(wikia_extraction_path + "extract_all_quests_page_wikitext.txt") as f:
-        all_wikia_quest_pages = json.load(f)
+    with open(wiki_extraction_path + "extract_all_quests_page_wikitext.txt") as f:
+        all_wiki_quest_pages = json.load(f)
 
-    all_wikia_quest_names = list()
-    with open(wikia_extraction_path + "extract_all_quests.txt") as f:
+    all_quest_names = list()
+    
+    all_quest_names_normal = list()
+    with open(wiki_extraction_path + "extract_all_quests.txt") as f:
         for l in f:
             l = l.strip()
-            all_wikia_quest_names.append(l)  
+            all_quest_names_normal.append(l)
+            all_quest_names.append(l)
+
+    all_quest_names_mini = list()
+    with open(wiki_extraction_path + "extract_all_quests_mini.txt") as f:
+        for l in f:
+            l = l.strip()
+            all_quest_names_mini.append(l)
+            all_quest_names.append(l)    
+
+    all_quest_names_sub = list()
+    with open(wiki_extraction_path + "extract_all_quests_sub.txt") as f:
+        for l in f:
+            l = l.strip()
+            all_quest_names_sub.append(l)
+            all_quest_names.append(l)
 
     # Make a dir for JSON output
     # directory = "quests-json"
@@ -69,8 +87,40 @@ if __name__=="__main__":
     #     os.makedirs(directory)
 
     quests = dict()
+    all_quests = dict()
 
-    for quest_name in all_wikia_quest_names:
-        quest_wikicode = all_wikia_quest_pages[quest_name]       
-        qd = QuestDefinition.QuestDefinition(quest_name, quest_wikicode)
-        qd.extract_InfoboxQuest()
+    for quest_name in all_quest_names:
+        quest_type = ""
+        # Determine what type of quest (normal, mini, sub)
+        if quest_name in all_quest_names_mini:
+            quest_type = "mini"
+        elif quest_name in all_quest_names_sub:
+            quest_type = "sub"
+        elif quest_name in all_quest_names:
+            quest_type = "normal"
+        else:
+            print(">>> Warning could not categorize quest...")
+        
+        # Get the wikicode for the quest
+        quest_wikicode = all_wiki_quest_pages[quest_name]       
+        
+        # Create a QuestDefinition object for the quest
+        qd = QuestDefinition.QuestDefinition(quest_name, quest_type, quest_wikicode)
+        quest = qd.populate()
+        if quest_type is "normal":
+            quests[int(quest.quest_metadata.number)] = quest
+        all_quests[quest.quest_name] = quest
+
+    # Order the dictionary of the quests (not all quests)
+    od = collections.OrderedDict(sorted(quests.items()))
+
+    series = set()
+    for quest in sorted(od):
+        if quests[quest].quest_type is not "mini":
+            print(quest, quests[quest].quest_name, quests[quest].quest_metadata.series)
+            if quests[quest].quest_metadata.series is not None:
+                for s in quests[quest].quest_metadata.series:
+                    series.add(s)
+
+    for s in series:
+        print(s)
