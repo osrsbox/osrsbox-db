@@ -130,9 +130,6 @@ class ItemDefinition(object):
             "examine" : None,
             "url" : None}
 
-        # Item Bonuses (if equipable, but initialize one anyway)   
-        # self.itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
-
     ###########################################################################
     # Helpers: Setters and Getters
     @property
@@ -274,6 +271,13 @@ class ItemDefinition(object):
         for prop in self.properties:
             setattr(self, prop, input[prop]) 
             # setattr(x, 'y', v) is equivalent to x.y = v
+
+        if self.equipable:
+            # Item Bonuses
+            ib = ItemBonuses.ItemBonuses(self.id)
+            bonuses = ib.load_item(input["bonuses"])
+            self.bonuses = bonuses
+
         return self
           
     ###########################################################################
@@ -324,7 +328,7 @@ class ItemDefinition(object):
         self.json_out["examine"] = self.examine
         self.json_out["url"] = self.url
         if self.equipable:
-            bonuses_in_json = self.itemBonuses.construct_json()
+            bonuses_in_json = self.bonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
 
 ################################################################################

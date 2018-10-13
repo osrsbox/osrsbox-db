@@ -84,11 +84,11 @@ class ItemBonuses(object):
             "attack_speed",
             "slot"]   
 
-        for prop in self.properties:
-            if prop == "aspeed" or prop == "slot":
-                setattr(self, prop, "")
-            else:
-                setattr(self, prop, 0)
+        # for prop in self.properties:
+        #     if prop == "aspeed" or prop == "slot":
+        #         setattr(self, prop, "")
+        #     else:
+        #         setattr(self, prop, 0)
     
     ###########################################################################
     # Helpers: Setters and Getters    
@@ -207,6 +207,15 @@ class ItemBonuses(object):
     @attack_speed.setter
     def attack_speed(self, value):
         self._attack_speed = _intcast(value)
+
+    ###########################################################################
+    # Helpers: Processing
+    def load_item(self, input):
+        for prop in self.properties:
+            setattr(self, prop, input[prop]) 
+            # setattr(x, 'y', v) is equivalent to x.y = v
+
+        return self
 
     ###########################################################################
     # Handle item to JSON

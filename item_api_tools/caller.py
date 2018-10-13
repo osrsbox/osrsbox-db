@@ -44,12 +44,58 @@ if __name__=="__main__":
     ap.add_argument("-d", 
                     "--dir", 
                     required=True,
-                    help="Directory of JSON item files (/docs/items-json)")
+                    help="Directory of JSON item files (../docs/items-json)")
     args = vars(ap.parse_args())
     
     # Start processing    
-    print(">>> Starting processing...")
-
+    print(">>> Starting processing AllItems...")
     ai = AllItems.AllItems(args["dir"])
+    print(">>> Finished processing AllItems...")
+
     for item in ai:
-        print(item.id)
+        if item.name is not None:
+            print(item.id, item.name)
+
+    # # Count equipable items:
+    # total_count = 0
+    # equipable_count = 0
+    # for item in ai:
+    #     if item.equipable:
+    #         equipable_count += 1
+    #     total_count += 1 
+    # print(">>> In OSRS there are %d equipable items out of %d total items!" % (equipable_count, total_count))
+
+    # Management/Processing code commented below:
+
+    # # Make an output directory for any modified JSON files
+    # directory = "items-json"
+    # if not os.path.exists(directory):
+    #     os.makedirs(directory)
+
+    # # Temp code to fix old Wikia URLs
+    # for item in ai:
+    #     print("Processing: %s" % item.id)
+    #     if item.url == None:
+    #         continue
+    #     elif item.url == "":
+    #         item.url = None
+    #         item.export_pretty_json()
+    #     elif item.url == "http://oldschoolrunescape.wikia.com/wiki/":
+    #         item.url = None
+    #         item.export_pretty_json()
+    #     elif "http://oldschoolrunescape.wikia.com/wiki/" in item.url:
+    #         item.url = item.url.replace("http://oldschoolrunescape.wikia.com/wiki/", "https://oldschool.runescape.wiki/w/")
+    #         item.export_pretty_json()
+    #     elif "https://oldschoolrunescape.wikia.com/wiki/" in item.url:
+    #         item.url = item.url.replace("https://oldschoolrunescape.wikia.com/wiki/", "https://oldschool.runescape.wiki/w/")
+    #         item.export_pretty_json()
+
+    # # Simple diff for before and after
+    # import glob
+
+    # moded_fis = [os.path.basename(x) for x in glob.glob("items-json/*")]
+    # existing_fis = [os.path.basename(x) for x in glob.glob("../docs/items-json/*")]
+    # print(len(moded_fis))
+    # print(len(existing_fis))
+    # diff = list(set(existing_fis) - set(moded_fis))
+    # print(diff)
