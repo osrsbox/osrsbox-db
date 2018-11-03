@@ -39,8 +39,9 @@ import glob
 ###############################################################################
 # JoinSingleJSONFiles object
 class JoinSingleJSONFiles(object):
-    def __init__(self, dir):
+    def __init__(self, dir, output_fn):
         self.dir = dir
+        self.output_fn = output_fn
         self.allitems_db = dict()
 
     def process_allitems(self):
@@ -55,8 +56,8 @@ class JoinSingleJSONFiles(object):
                 # sys.stdout.write(">>> Processing: %d of %d\r" % (count, total))
                 self.allitems_db[json_obj["id"]] = json_obj
                 count += 1
-        # Print length of allitems dict
-        with open('allitems_db.json', 'w') as outfile:
+        # Save JSON file
+        with open(self.output_fn, 'w') as outfile:
             json.dump(self.allitems_db, outfile)
 
 ################################################################################
@@ -66,11 +67,15 @@ if __name__=="__main__":
     ap.add_argument("-d", 
                     "--dir", 
                     required=True,
-                    help="Directory of JSON files (docs/items-json/")
+                    help="Directory of JSON files (../docs/items-json/)")
+    ap.add_argument("-o", 
+                    "--output", 
+                    required=True,
+                    help="Name of the JSON output file (.e.g., items_complete.json)")                    
     args = vars(ap.parse_args())
     
     # Start processing    
     print(">>> Starting processing...")
     
-    j = JoinSingleJSONFiles(args["dir"])
+    j = JoinSingleJSONFiles(args["dir"], args["output"])
     j.process_allitems()
