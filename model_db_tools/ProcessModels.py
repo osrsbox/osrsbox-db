@@ -48,6 +48,7 @@ import sys
 import glob
 import json
 
+################################################################################
 def parse_fi(fi, type_name):
     # Skip Java consolidation output from RuneLite
     if (os.path.basename(fi) == "NullObjectID.java" or
@@ -59,6 +60,10 @@ def parse_fi(fi, type_name):
     # Load the JSON into a dict
     with open(fi) as f:
         json_data = json.loads(f.read())
+
+    # Name check (it is of no use if its empty/null, so exclude)
+    if json_data["name"] == "null" or json_data["name"] == "Null" or json_data["name"] == "":
+        return list()
 
     # Setup output dict
     model_dict = dict()
@@ -87,13 +92,15 @@ def parse_fi(fi, type_name):
         except KeyError:
             pass
 
-        try:
-            fi_model_list = json_data["models_2"]
-            for model_id in fi_model_list:
-                model_dict["model_id"] = model_id
-                all_models.append(model_dict)
-        except KeyError:
-            pass
+        # try:
+        #     fi_model_list = json_data["models_2"]
+        #     for model_id in fi_model_list:
+        #         if model_id == 0:
+        #             pass
+        #         model_dict["model_id"] = model_id
+        #         all_models.append(model_dict)
+        # except KeyError:
+        #     pass
     
     if type_name == "items":
         try:
@@ -148,6 +155,14 @@ if __name__=="__main__":
         for md in md_list:
             key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
             models_dict[key] = md
+
+    # # Loop dict and remove entries with name = null and model_id = 0
+    # to_delete = list()
+    # for k in models_dict:
+    #     if models_dict[k]["name"] == "null" and models_dict[k]["model_id"] == 0:
+    #        to_delete.append(k)
+    # for k in to_delete:
+    #     del models_dict[k]
 
     # Save all objects to JSON file
     print(">>> Saving output JSON file...")
