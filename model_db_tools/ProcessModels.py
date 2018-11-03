@@ -13,6 +13,12 @@ for each object, and extracts the object name, object id, and maps this
 to the model id numbers. You can use this information to easily find the
 name of a specific model id from the OSRS cache 
 
+Known keys for models:
+- objectModels (objects)
+- models (npcs)
+- models_2 (npcs)
+- inventoryModel (items)
+
 Requirements:
 No additional libraries required
 
@@ -42,6 +48,63 @@ import sys
 import glob
 import json
 
+def parse_fi(fi, type_name):
+    # Skip Java consolidation output from RuneLite
+    if (os.path.basename(fi) == "NullObjectID.java" or
+        os.path.basename(fi) == "ObjectID.java" or
+        os.path.basename(fi) == "NpcID.java" or
+        os.path.basename(fi) == "ItemID.java"):
+        return list()
+    
+    # Load the JSON into a dict
+    with open(fi) as f:
+        json_data = json.loads(f.read())
+
+    # Setup output dict
+    model_dict = dict()
+    model_dict["type_id"] = json_data["id"]
+    model_dict["name"] = json_data["name"]
+    model_dict["type"] = type_name
+    
+    fi_model_list = None
+    all_models = list()
+    
+    if type_name == "objects":
+        try:
+            fi_model_list = json_data["objectModels"]
+            for model_id in fi_model_list:
+                model_dict["model_id"] = model_id
+                all_models.append(model_dict)
+        except KeyError:
+            pass
+
+    if type_name == "npcs":
+        try:
+            fi_model_list = json_data["models"]
+            for model_id in fi_model_list:
+                model_dict["model_id"] = model_id
+                all_models.append(model_dict)
+        except KeyError:
+            pass
+
+        try:
+            fi_model_list = json_data["models_2"]
+            for model_id in fi_model_list:
+                model_dict["model_id"] = model_id
+                all_models.append(model_dict)
+        except KeyError:
+            pass
+    
+    if type_name == "items":
+        try:
+            model_id = json_data["inventoryModel"]
+            model_dict["model_id"] = model_id
+            all_models.append(model_dict)
+        except KeyError:
+            pass
+
+    return all_models
+
 ################################################################################
 if __name__=="__main__":
     import argparse
@@ -53,84 +116,43 @@ if __name__=="__main__":
     args = vars(ap.parse_args())    
 
     directory = args["directory"]
+    items = directory + os.sep + "items" + os.sep
+    npcs = directory + os.sep + "npcs" + os.sep
+    objects = directory + os.sep + "objects" + os.sep
 
-    fis = glob.glob(directory + os.sep + "*" + os.sep + "*")
+    models_dict = dict()
 
-    print(">>> Found definitions for %d items, npcs and objects..." % len(fis))
+    # Process item models
+    items_fis = glob.glob(items + "*")
+    print(">>> Processing %d items..." % len(items_fis))
+    for fi in items_fis:
+        md_list = parse_fi(fi, "items")
+        for md in md_list:
+            key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
+            models_dict[key] = md
 
-    all_models = dict()
-    count = 0
+    # Process npcs models
+    npcs_fis = glob.glob(npcs + "*")
+    print(">>> Processing %d npcs..." % len(npcs_fis))
+    for fi in npcs_fis:
+        md_list = parse_fi(fi, "npcs")
+        for md in md_list:
+            key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
+            models_dict[key] = md
 
-    # Start processing    
-    print(">>> Starting processing...")
+    # Process objects models
+    objects_fis = glob.glob(objects + "*")
+    print(">>> Processing %d objects..." % len(objects_fis))
+    for fi in objects_fis:
+        md_list = parse_fi(fi, "objects")
+        for md in md_list:
+            key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
+            models_dict[key] = md
 
-    for fi in fis:
-        # Skip Java consolidation output from RuneLite
-        if (os.path.basename(fi) == "NullObjectID.java" or
-           os.path.basename(fi) == "ObjectID.java" or
-           os.path.basename(fi) == "NpcID.java" or
-           os.path.basename(fi) == "ItemID.java"):
-           continue
-        
-        sys.stdout.write(">>> Processing: %d of %d\r" % (count, len(fis)))
-
-        # Load the JSON into a dict
-        with open(fi) as f:
-            json_data = json.loads(f.read())
-
-        # Setup output dict
-        model_dict = dict()
-        model_dict["type_id"] = json_data["id"]
-        model_dict["name"] = json_data["name"]
-        model_type = fi.split(os.sep)
-        model_dict["type"] = model_type[len(model_type)-2]
-        model_list = None
-        
-        # Known keys for models:
-        # objectModels
-        # models
-        # models_2
-        # inventoryModel
-        if model_dict["type"] == "objects":
-            try:
-                model_list = json_data["objectModels"]
-                for model in model_list:
-                    model_dict["model_id"] = model
-                    all_models[model] = model_dict
-            except KeyError:
-                pass
-
-        if model_dict["type"] == "npcs":
-            try:
-                model_list = json_data["models"]
-                for model in model_list:
-                    model_dict["model_id"] = model
-                    all_models[model] = model_dict
-            except KeyError:
-                pass
-
-            try:
-                model_list = json_data["models_2"]
-                for model in model_list:
-                    model_dict["model_id"] = model
-                    all_models[model] = model_dict
-            except KeyError:
-                pass
-        
-        if model_dict["type"] == "items":
-            try:
-                model = json_data["inventoryModel"]
-                model_dict["model_id"] = model
-                all_models[model] = model_dict
-            except KeyError:
-                pass
-
-        # Increase count
-        count += 1
-
-    print(">>> Finished...")
-    
     # Save all objects to JSON file
+    print(">>> Saving output JSON file...")
     out_fi = "models_summary.json"
     with open(out_fi, "w") as f:
-        json.dump(all_models, f)
+        json.dump(models_dict, f)
+
+    print(">>> Finished.")
