@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/11/03
+Date:    2018/11/04
 
 Description:
 ProcessModels is a simple script to parse the objects output from the 
@@ -54,15 +54,15 @@ if __name__=="__main__":
 
     directory = args["directory"]
 
-    # Start processing    
-    print(">>> Starting processing...")
-
     fis = glob.glob(directory + os.sep + "*" + os.sep + "*")
 
-    print("  > Found %d objects..." % len(fis))
+    print(">>> Found definitions for %d items, npcs and objects..." % len(fis))
 
     all_models = dict()
     count = 0
+
+    # Start processing    
+    print(">>> Starting processing...")
 
     for fi in fis:
         # Skip Java consolidation output from RuneLite
@@ -80,7 +80,7 @@ if __name__=="__main__":
 
         # Setup output dict
         model_dict = dict()
-        model_dict["id"] = json_data["id"]
+        model_dict["type_id"] = json_data["id"]
         model_dict["name"] = json_data["name"]
         model_type = fi.split(os.sep)
         model_dict["type"] = model_type[len(model_type)-2]
@@ -91,33 +91,39 @@ if __name__=="__main__":
         # models
         # models_2
         # inventoryModel
+        if model_dict["type"] == "objects":
+            try:
+                model_list = json_data["objectModels"]
+                for model in model_list:
+                    model_dict["model_id"] = model
+                    all_models[model] = model_dict
+            except KeyError:
+                pass
 
-        try:
-            model_list = json_data["objectModels"]
-            for model in model_list:
-                all_models[model] = model_dict
-        except KeyError:
-            pass
+        if model_dict["type"] == "npcs":
+            try:
+                model_list = json_data["models"]
+                for model in model_list:
+                    model_dict["model_id"] = model
+                    all_models[model] = model_dict
+            except KeyError:
+                pass
 
-        try:
-            model_list = json_data["models"]
-            for model in model_list:
+            try:
+                model_list = json_data["models_2"]
+                for model in model_list:
+                    model_dict["model_id"] = model
+                    all_models[model] = model_dict
+            except KeyError:
+                pass
+        
+        if model_dict["type"] == "items":
+            try:
+                model = json_data["inventoryModel"]
+                model_dict["model_id"] = model
                 all_models[model] = model_dict
-        except KeyError:
-            pass   
-
-        try:
-            model_list = json_data["models_2"]
-            for model in model_list:
-                all_models[model] = model_dict
-        except KeyError:
-            pass   
-            
-        try:
-            model = json_data["inventoryModel"]
-            all_models[model] = model_dict
-        except KeyError:
-            pass                                 
+            except KeyError:
+                pass
 
         # Increase count
         count += 1
