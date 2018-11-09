@@ -3,8 +3,8 @@
 ## DetermineNewItems.py
 
 - This script takes two files as arguments
-    - NEW JSON file from ItemScraper RuneLite plugin (`allitems.json`)
-    - OLD JSON file from ItemScraper RuneLite plugin (`allitems.json`)
+    - NEW JSON file from ItemScraper RuneLite plugin (`items_itemscraper.json`)
+    - OLD JSON file from ItemScraper RuneLite plugin (`items_itemscraper.json`)
 - A simple list is returned with
     - New items
     - Changed items
@@ -12,8 +12,8 @@
 - Only item name + item id is returned
 - Good to determine new items added to game since last dump
 - Command to run:
-- `python3.6 DetermineNewItems.py -n allitems.json -o ../docs/allitems.json`
-- `python.exe .\DetermineNewItems.py -n allitems.json -o ..\docs\allitems.json`
+- `python3.6 DetermineNewItems.py -n items_itemscraper.json -o ../docs/items_itemscraper.json`
+- `python.exe .\DetermineNewItems.py -n items_itemscraper.json -o ..\docs\items_itemscraper.json`
 
 ## JoinSingleJSONFiles.py
 
@@ -29,16 +29,16 @@
 
 ## CheckMissingItems.py
 
-- Comparing existing osrsbox-db contents to new allitems.json
+- Comparing existing osrsbox-db contents to new items_itemscraper.json
 - Command input:
-    - allitems.json file
+    - items_itemscraper.json file
     - allitems_db.json file (output of JoinSingleJSONFiles.py)
 - A simple list is returned with new items
 - Only item name + item id is returned
 - Good to determine items missing from osrsbox-db
 - Command to run:
-- `python3.6 CheckMissingItems.py -f ../docs/allitems.json -d allitems_db.json`
-- `python.exe .\CheckMissingItems.py -f ..\docs\allitems.json -d allitems_db.json`
+- `python3.6 CheckMissingItems.py -f ../docs/items_itemscraper.json -d allitems_db.json`
+- `python.exe .\CheckMissingItems.py -f ..\docs\items_itemscraper.json -d allitems_db.json`
 
 ## allitems_db.json
 
