@@ -110,7 +110,10 @@ if __name__=="__main__":
         for key in allitems_new[itemID]:
             if(allitems_new[itemID][key] != allitems_old[itemID][key]):
                 changed_keys.append(key)
-        print("%s,%s,%s" % (itemID, allitems_new[itemID]["name"], changed_keys))
+        if changed_keys:
+            print("> %s,%s,%s" % (itemID, allitems_new[itemID]["name"], changed_keys))
+            for prop in changed_keys:
+                print(prop, allitems_new[itemID][prop])
 
     # Determine unchanged items
     # This is commented out, as the results are always large

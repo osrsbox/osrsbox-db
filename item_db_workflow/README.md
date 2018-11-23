@@ -17,15 +17,15 @@
 
 ## JoinSingleJSONFiles.py
 
-- This script takes a directory as an argument
+- This script takes a directory as an argument and a filename to output
 - For example: The directory could be:
     - `..\docs\items-json`
     - `..\item_db_tools\items-json`
 - The script will parse all single JSON files
 - All JSON files are combined into allitems_db.json
 - Command to run:
-- `python3.6 JoinSingleJSONFiles.py -d ../docs/items-json`
-- `python.exe JoinSingleJSONFiles.py -d ..\docs\items-json`
+- `python3.6 JoinSingleJSONFiles.py -d ../docs/items-json -o output.json`
+- `python.exe JoinSingleJSONFiles.py -d ..\docs\items-json -o output.json`
 
 ## CheckMissingItems.py
 
@@ -40,13 +40,20 @@
 - `python3.6 CheckMissingItems.py -f ../docs/items_itemscraper.json -d allitems_db.json`
 - `python.exe .\CheckMissingItems.py -f ..\docs\items_itemscraper.json -d allitems_db.json`
 
-## allitems_db.json
+## JoinSingleJSONFiles_ItemScraper.py
 
-- osrsbox-db contents (items-json) amalgamated into one JSON file
-- Created using JoinSingleJSONFiles.py
+- This script is almost the same as `JoinSingleJSONFiles.py`, however, it sets the itemscraper plugin default for all properties scraped from the OSRS Wiki
+- This script takes a directory as an argument and a filename to output
+- For example: The directory could be:
+    - `..\docs\items-json`
+    - `..\item_db_tools\items-json`
+- The script will parse all single JSON files
+- All JSON files are combined into allitems_db.json
+- Command to run:
+- `python3.6 JoinSingleJSONFiles.py -d ../docs/items-json -o output.json`
+- `python.exe JoinSingleJSONFiles.py -d ..\docs\items-json -o output.json`
 
-## osrsbox-db-missing-items.txt
+## osrsbox-db-errors.txt
 
-- List of items currently missing from osrsbox-db
+- List of items currently missing or incorrect from osrsbox-db
 - Created using CheckMissingItems.py
-- Contains: item-id,item-name
