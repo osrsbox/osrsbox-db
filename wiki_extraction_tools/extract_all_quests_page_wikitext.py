@@ -4,10 +4,13 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/15
+Date:    2018/12/01
 
 Description:
-Extract all Wikia "Infobox Items" from a list of page titles
+Extract all Wiki wikitext from a list of page titles
+
+Requirements:
+pip3 install mwparserfromhell
 
 Copyright (c) 2018, PH01L
 
@@ -26,9 +29,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 >>> CHANGELOG:
     1.0.0       Base functionality
+    1.1.0       Updated script for new OSRS Wiki API
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
+
+custom_agent = {
+    'User-Agent': 'some-agent',
+    'From': 'name@domain.com' 
+}
 
 import os
 import json
@@ -39,7 +48,7 @@ from collections import defaultdict
 
 def extract_wikicode(page_name):
     page_name = page_name.replace("&", "%26")
-    url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
+    url = "https://oldschool.runescape.wiki/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
     result = requests.get(url)
     data = result.json()
     try:
@@ -59,24 +68,13 @@ if __name__=="__main__":
     all = defaultdict(list)
 
     # Populate all items (items and other) into a dict
-    # maps item name to None
-    # dict is just for unique strings
+    # Maps item name to None, dict is just for unique strings
     to_process = dict()
 
     with open("extract_all_quests.txt") as f:
         for l in f:
             l = l.strip()
-            to_process[l] = None
-
-    with open("extract_all_quests_mini.txt") as f:
-        for l in f:
-            l = l.strip()
-            to_process[l] = None 
-
-    with open("extract_all_quests_sub.txt") as f:
-        for l in f:
-            l = l.strip()
-            to_process[l] = None                       
+            to_process[l] = None                     
 
     total = len(to_process)
     count = 0

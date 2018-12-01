@@ -41,10 +41,6 @@
 - `python.exe .\extract_all_items.py`
 - `python.exe .\extract_all_items.py > .\extract_all_items.txt`
 
-- The similar scripts are:
-    - `extract_all_other.py`: Extract other categories
-    - `extract_all_quests.py`: Extract from "Category:Quests"
-
 ## extract_all_items_page_wikitext.py
 
 - NOTE: This is the best script to use, pull data once
@@ -53,44 +49,74 @@
 - The script ingests (hardcoded) two files:
     - `extract_all_items.txt`
     - `extract_all_other.txt`
-- The script outputs (hardcoded) one file:
+- The script outputs two (hardcoded) files:
     - `extract_all_items_page_wikitext.txt`
+    - `extract_all_items_page_wikitext_bonuses.txt`
 - The script prints the name of every item on the OSRS Wiki (unless redirected)
 - This item name can be appended to the OSRS Wiki base URL to use with the API
 - Command to run:
 - `python3.6 extract_all_items_page_wikitext.py`
 - `python.exe extract_all_items_page_wikitext.py`
 
-## extract_buy_limits.py
+## extract_all_other.py
 
+- Purpose: Extract item names from:
+    - Category:Construction
+    - Category:Furniture
+    - Category:Flatpacks
+    - Category:Pets
 - This script takes no command line arguments
-- The script does two things:
-    - Fetch every item in Category:Items
-    - Scrape the webpage for the buy limit value
-- The raw HTML has to be scraped, as the OSRS Wiki API does not provide access to the buy limit value
-- The item name (OSRS Wiki name) and buy limit is returned
-- Redirect to a file to save the output
-- The current delimiter is a pipe (`|`)
+- This item name can be appended to the OSRS Wiki URL to visit the page
+- Save the output using redirection
 - Command to run:
-- `python3.6 extract_buy_limits.py`
-- `python.exe extract_buy_limits.py`
+- `python3.6 extract_all_other.py`
+- `python3.6 extract_all_other.py > extract_all_other.txt`
+- `python.exe .\extract_all_other.py`
+- `python.exe .\extract_all_other.py > .\extract_all_other.txt`
 
-## buylimits.txt
+## extract_all_quests.py
 
-- A compiled list of all buy limits on the OSRS Wiki
-- Last updated: 2018/09/26
-- This file is manually updated based on OSRS Wiki and RuneLite `ge-limits.json` file
-- The current delimiter is a pipe (`|`)
-- Structure: `itemName|buyLimit`
-
-## extract_all_pages.py
-
+- Purpose: Extract item names from:
+    - Category:Quests
+    - Category:Miniquests
+    - Category:Special_quests
 - This script takes no command line arguments
-- The script prints the title of *every page* on the OSRS Wiki
-- WARNING: This script will take a long time, and waste Wikia bandwidth
+- This item name can be appended to the OSRS Wiki URL to visit the page
+- Save the output using redirection
 - Command to run:
-- `python3.6 extract_all_pages.py`
-- `python.exe extract_all_pages.py`
+- `python3.6 extract_all_quests.py`
+- `python3.6 extract_all_quests.py > extract_all_quests.txt`
+- `python.exe .\extract_all_quests.py`
+- `python.exe .\extract_all_quests.py > .\extract_all_quests.txt`
+
+## extract_all_quests_page_wikitext.py
+
+- NOTE: This is the best script to use, pull data once
+- Purpose: extract complete wikitext/wikicode from all input pages
+- This script takes no command line arguments
+- The script ingests (hardcoded) two files:
+    - `extract_all_quests.txt`
+- The script outputs two (hardcoded) files:
+    - `extract_all_quests_page_wikitext.txt`
+- The script prints the name of every quest on the OSRS Wiki (unless redirected)
+- This item name can be appended to the OSRS Wiki base URL to use with the API
+- Command to run:
+- `python3.6 extract_all_quests_page_wikitext.py`
+- `python.exe extract_all_quests_page_wikitext.py`
+
+## extract_templates_infobox.py
+
+- Purpose: extract templates from wikitext/wikicode for all input pages
+- The script ingests one (hardcoded) files:
+    - `extract_all_items_page_wikitext.txt`
+- The script outputs multiple (hardcoded) files:
+    - `extract_templates_InfoboxItems.txt`
+    - `extract_templates_InfoboxBonuses.txt`
+    - `extract_templates_InfoboxConstruction.txt`
+    - `extract_templates_InfoboxPet.txt`
+- Command to run:
+- `python3.6 extract_templates.py`
+- `python.exe .\extract_templates.py`
 
 ## normalized_names.txt
 

@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/01
+Date:    2018/12/01
 
 Description:
 Extract all other items on the OSRS Wiki
@@ -26,29 +26,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 >>> CHANGELOG:
     1.0.0       Base functionality
+    1.1.0       Updated script for new OSRS Wiki API
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 import requests
 
+custom_agent = {
+    'User-Agent': 'some-agent',
+    'From': 'name@domain.com' 
+}
+
 def query_category_items(category):
-    for result in query_category_items_callback({'generator': 'categorymembers'}, category):
+    for result in query_category_items_callback({'list': 'categorymembers'}, category):
         # Process result data
-        for r in result['pages']:
-            print(result['pages'][r]["title"])
+        for r in result['categorymembers']:
+            print(r["title"])            
 
 def query_category_items_callback(request, category):
     request['action'] = 'query'
     request['format'] = 'json'
-    request['prop'] = 'categories'
-    # request['gcmtitle'] = 'Category:Construction'
-    # request['gcmtitle'] = 'Category:Furniture'
-    # request['gcmtitle'] = 'Category:Flatpacks'
-    # request['gcmtitle'] = 'Category:Pets'
-    request['gcmtitle'] = 'Category:' + category
-    request['gcmlimit'] = 'max'
-    request['cllimit'] = 'max'
+    # request['cmtitle'] = 'Category:Construction'
+    # request['cmtitle'] = 'Category:Furniture'
+    # request['cmtitle'] = 'Category:Flatpacks'
+    # request['cmtitle'] = 'Category:Pets'
+    request['cmtitle'] = 'Category:' + category
+    request['cmlimit'] = '500'    
     lastContinue = {}
     while True:
         # Clone original request
@@ -57,21 +61,17 @@ def query_category_items_callback(request, category):
         # Insert values returned in the 'continue' section
         req.update(lastContinue)
         # Call API
-        result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
-        # print(result)
+        result = requests.get('https://oldschool.runescape.wiki/api.php', headers=custom_agent, params=req).json()
         if 'error' in result:
-            #raise Error(result['error'])
             print(">>> ERROR!")
             break
         if 'warnings' in result:
             print(result['warnings'])
         if 'query' in result:
             yield result['query']
-        if 'query-continue' not in result:
+        if 'continue' not in result:
             break
-        if 'categorymembers' not in result['query-continue']:
-            break
-        lastContinue = result['query-continue']['categorymembers']
+        lastContinue = result['continue']
 
 ################################################################################
 if __name__=="__main__":   

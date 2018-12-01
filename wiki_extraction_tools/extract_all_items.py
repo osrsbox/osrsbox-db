@@ -4,10 +4,10 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/01
+Date:    2018/11/30
 
 Description:
-Extract all items on the OSRS Wiki
+Extract all titles of Category:Items pages on the OSRS Wiki
 
 Copyright (c) 2018, PH01L
 
@@ -26,25 +26,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 >>> CHANGELOG:
     1.0.0       Base functionality
+    1.1.0       Updated script for new OSRS Wiki API
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 import requests
 
+custom_agent = {
+    'User-Agent': 'some-agent',
+    'From': 'name@domain.com' 
+}
+
 def query_category_items():
-    for result in query_category_items_callback({'generator': 'categorymembers'}):
+    for result in query_category_items_callback({'list': 'categorymembers'}):
         # Process result data
-        for r in result['pages']:
-            print(result['pages'][r]["title"])
+        for r in result['categorymembers']:
+            print(r["title"])
 
 def query_category_items_callback(request):
     request['action'] = 'query'
     request['format'] = 'json'
-    request['prop'] = 'categories'
-    request['gcmtitle'] = 'Category:Items'
-    request['gcmlimit'] = 'max'
-    request['cllimit'] = 'max'
+    request['cmtitle'] = 'Category:Items'
+    request['cmlimit'] = '500'
     lastContinue = {}
     while True:
         # Clone original request
@@ -53,21 +57,17 @@ def query_category_items_callback(request):
         # Insert values returned in the 'continue' section
         req.update(lastContinue)
         # Call API
-        result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
-        # print(result)
+        result = requests.get('https://oldschool.runescape.wiki/api.php', headers=custom_agent, params=req).json()
         if 'error' in result:
-            #raise Error(result['error'])
             print(">>> ERROR!")
             break
         if 'warnings' in result:
             print(result['warnings'])
         if 'query' in result:
             yield result['query']
-        if 'query-continue' not in result:
+        if 'continue' not in result:
             break
-        if 'categorymembers' not in result['query-continue']:
-            break
-        lastContinue = result['query-continue']['categorymembers']
+        lastContinue = result['continue']
 
 ################################################################################
 if __name__=="__main__":   
