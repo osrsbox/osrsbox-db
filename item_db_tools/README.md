@@ -4,14 +4,14 @@
 
 - Purpose: Handle construction of raw item data + OSRS Wiki data to JSON files for each item
 - This script takes one command line argument:
-    - `-f allitems.json`: This file should be taken from the docs directory
+    - `-f items_itemscraper.json`: This file should be taken from the docs directory
 - Requirements:
     - `mwparserfromhell`
     - `dateparser`
 - This script does not download any information from the OSRS Wiki. Instead it processes a collection of previously downloaded files from the `wikia_extraction` folder. All of these values are hardcoded that map to the files produced by the OSRS Wiki extraction tools.
 - Command to run:
-- `python3.6 ProcessItems.py`
-- `python.exe .\ProcessItems.py`
+- `python3.6 ProcessItems.py -f ../docs/items_itemscraper.json`
+- `python.exe .\ProcessItems.py -f ..\docs\items_itemscraper.json`
 
 ## ItemDefinition.py
 

@@ -73,11 +73,10 @@ class ProcessItems(object):
 
     def determine_already_processed(self):
         # Determine any items that have already been processed
-        fis = glob.glob("items-json" + os.sep + "*")
+        fis = glob.glob(".." + os.sep + "docs" + os.sep + "items-json" + os.sep + "*")
         for fi in fis:
-            fi = fi.replace(".json", "")
-            fi = fi.replace("items-json", "")
-            fi = fi.replace("\\", "")
+            fi = os.path.basename(fi)
+            fi = os.path.splitext(fi)[0]
             self.already_processed.append(fi)
 
     def process_allitems(self):
