@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/01
+Date:    2018/12/08
 
 Description:
 ProcessItems is a class to handle multiple osrsbox-db item-json files.
@@ -70,6 +70,7 @@ class AllItems(object):
 
     def load_all_items(self):
         # Loop through every item
+        count = 0
         for json_file in self.fis:
             # Load JSON file to allitems dict
             with open(json_file) as f:
@@ -81,3 +82,5 @@ class AllItems(object):
                 self.all_items.append(item)
                 self.all_items_dict[item.id] = item
                 #print(item)
+                sys.stdout.write(">>> Processing: %d\r" % count)
+                count += 1

@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/30
+Date:    2018/12/08
 
 Description:
 ItemBonuses is a class to process handle the item bonuses for OSRS items
@@ -55,12 +55,6 @@ def _intcast(val):
             if val.isdigit():
                 return int(val)
 
-def _strcast(val):
-    """ Convert value to string. """
-    if val is None:
-        return None
-    return str(val)
-
 ###############################################################################
 # ItemBonuses object
 class ItemBonuses(object):
@@ -83,13 +77,7 @@ class ItemBonuses(object):
             "prayer",
             "attack_speed",
             "slot"]   
-
-        # for prop in self.properties:
-        #     if prop == "aspeed" or prop == "slot":
-        #         setattr(self, prop, "")
-        #     else:
-        #         setattr(self, prop, 0)
-    
+  
     ###########################################################################
     # Helpers: Setters and Getters    
     # Attacking Stats
@@ -193,28 +181,11 @@ class ItemBonuses(object):
     def prayer(self, value):
         self._prayer = _intcast(value)
 
-    # Other
-    @property
-    def slot(self):
-        return self._slot
-    @slot.setter
-    def slot(self, value):
-        self._slot = _strcast(value)
-
-    @property
-    def attack_speed(self):
-        return self._attack_speed
-    @attack_speed.setter
-    def attack_speed(self, value):
-        self._attack_speed = _intcast(value)
-
     ###########################################################################
     # Helpers: Processing
     def load_item(self, input):
         for prop in self.properties:
             setattr(self, prop, input[prop]) 
-            # setattr(x, 'y', v) is equivalent to x.y = v
-
         return self
 
     ###########################################################################
@@ -235,8 +206,6 @@ class ItemBonuses(object):
         self.json_out["ranged_strength"] = self.ranged_strength
         self.json_out["magic_damage"] = self.magic_damage
         self.json_out["prayer"] = self.prayer
-        self.json_out["slot"] = self.slot
-        self.json_out["attack_speed"] = self.attack_speed
         return self.json_out     
 
 ################################################################################

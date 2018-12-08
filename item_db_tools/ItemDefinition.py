@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/25
+Date:    2018/12/07
 
 Description:
 ItemDefinition is a class to process the raw ItemDefinition data from
@@ -94,7 +94,10 @@ def _datecast(val):
         return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
-    date = datetime.datetime.strptime(val, "%d %B %Y")   
+    try:
+        date = datetime.datetime.strptime(val, "%d %B %Y")
+    except ValueError:
+        date = dateparser.parse(val)
     return date.strftime("%d %B %Y")        
 
 def _listcast(val):
@@ -110,7 +113,7 @@ def _listcast(val):
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names):
+    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names, item_exists_in_db):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
@@ -124,6 +127,9 @@ class ItemDefinition(object):
         self.all_wikia_buylimits = all_wikia_buylimits 
         # Bulk dict of normalized OSRS Wikia names
         self.all_wikia_normalized_names = all_wikia_normalized_names
+
+        # Flag to determine if item already exists in db
+        self.item_exists_in_db = item_exists_in_db
         
         # Dict of all ItemDefinition properties
         # Not currently used, but kept for future
@@ -405,9 +411,15 @@ class ItemDefinition(object):
 
         self.logger.debug("============================================ END")
 
-        # Actually output a JSON file
-        # Comment out for testing
-        self.export_pretty_json()
+        # Check if item already exists in db
+        if self.item_exists_in_db:
+            self.compare_JSON_files()
+            # Put in a compare method
+        else:
+            # Actually output a JSON file
+            # Comment out for testing
+            #self.export_pretty_json()
+            pass
 
         # Finished. Return the entire ItemDefinition object
         return self
@@ -424,7 +436,7 @@ class ItemDefinition(object):
             self.logger.debug(">>> ITEM FOUND:")
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
-            self.url = "http://oldschoolrunescape.wikia.com/wiki/" + self.name
+            self.url = "https://oldschool.runescape.wiki/w/" + self.name
             self.wiki_name = self.name
             return True
         elif str(self.id) in self.all_wikia_normalized_names:
@@ -432,7 +444,7 @@ class ItemDefinition(object):
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
             wikia_normalized_name = self.all_wikia_normalized_names[str(self.id)][1]
-            self.url = "http://oldschoolrunescape.wikia.com/wiki/" + wikia_normalized_name
+            self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name
             self.wiki_name = wikia_normalized_name
             self.status_code = int(self.all_wikia_normalized_names[str(self.id)][2])
             return True    
@@ -450,16 +462,20 @@ class ItemDefinition(object):
             wikicode = mwparserfromhell.parse(self.all_wikia_items[self.wiki_name])
         except KeyError:
             return False
-                
+
         # Loop through templates in wikicode from wiki page
         # Then call Inforbox Item processing method
         templates = wikicode.filter_templates()
         for template in templates:
             extracted_infobox = self.parse_InfoboxItem(template)
+            
+            # Return true/false if the infobox is extractable
             if extracted_infobox:
                 return True
             else:
                 return False 
+
+        # Default to return false (no infobox found)
         return False        
 
     def strip_infobox(self, input):
@@ -548,7 +564,7 @@ class ItemDefinition(object):
         weight = weight.strip()
 
         weight = weight.replace("[", "")
-        weight = weight.replace("]", "")        
+        weight = weight.replace("]", "")
         
         # Fix for weight ending in kg, or space kg
         if weight.endswith(" kg"):
@@ -557,7 +573,7 @@ class ItemDefinition(object):
             weight = weight.replace("kg", "")
         if "kg" in weight:
             weight = weight.replace("kg", "")
-        
+
         # Some items have Inventory/Equipped weights:
         # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
         if "Inventory" in weight:
@@ -568,6 +584,14 @@ class ItemDefinition(object):
             weight = weight_list[0]
             weight = weight.replace("Inventory:", "")
             weight = weight.strip()
+
+        if ">" in weight:
+            weight = weight.replace(">", "")
+        if "<" in weight:
+            weight = weight.replace("<", "")
+
+        if weight == "": # New addition
+            weight = 0
 
         return weight
 
@@ -780,83 +804,199 @@ class ItemDefinition(object):
 
         return seller_list_fin               
 
+    def extract_Infobox_value(self, template, key):
+        value = None
+        try:
+            value = template.get(key).value
+            return value
+        except ValueError:
+            return value
+
     def parse_InfoboxItem(self, template):
         # Parse an actual Infobox Item template
         self.logger.debug("Processing InfoBox template...")
         # self.logger.debug(template)
+        # print("++++++++++++++++++++++", self.name)
+
+        # Set defaults for versioned infoboxes
+        self.is_versioned = False
+        self.version_count = 0
+
+        # Check if the infobox is versioned
+        try:
+            template.get("version1").value
+            self.is_versioned = True
+            # Now, try to determine how many versions are present
+            i = 1
+            while i <= 12: # Guessing max verison number is 12 (crystal bow)
+                version_number = "version" + str(i) # e.g., version1, version2
+                try:
+                    template.get(version_number).value
+                    self.version_count += 1
+                except ValueError:
+                    break
+                i += 1
+        except ValueError:
+            pass
+
+        # Output:
+        # is_versioned = has multiple versions available
+        # version_count = the number of versions available
+
+        self.current_version = None
+
+        if self.is_versioned:
+            self.logger.debug("NOTE: versioned infobox...")
+            #print(self.name, self.is_versioned, self.version_count)
+            try:
+                template.get("name1").value
+                i = 1
+                while i <= self.version_count:
+                    name_name = "name" + str(i)
+                    if self.name == template.get(name_name).value.strip():
+                        self.current_version = i
+                    i += 1
+            except ValueError:
+                pass
+
+        # Which values have versions: every value!
+        # quest = yes
+        # weight = yes
+        # release = yes
+        # store_price = yes
+        # seller = yes
+        # examine = yes
 
         # Determine if item is associated with a quest (TESTED)
-        try:
-            quest = template.get("quest").value
+        quest = None
+        if self.current_version is not None:
+            key = "quest" + str(self.current_version)
+            quest = self.extract_Infobox_value(template, key)
+        if quest is None:
+            quest = self.extract_Infobox_value(template, "quest")
+        if quest is not None:
             self.quest_item = self.clean_quest(quest)
-            # if self.quest_item is not None:
-            #     print(self.id, self.name)
-            #     print(quest)
-            #     print(self.quest_item)
-            #     print("==================================")
-        except ValueError:
-            self.quest_item = None
+
+        # try:
+        #     quest = template.get("quest").value
+        #     self.quest_item = self.clean_quest(quest)
+        #     # if self.quest_item is not None:
+        #     #     print(self.id, self.name)
+        #     #     print(quest)
+        #     #     print(self.quest_item)
+        #     #     print("==================================")
+        # except ValueError:
+        #     self.quest_item = None
 
         # Determine the weight of an item (TESTED)
-        try:
-            weight = template.get("weight").value
+        weight = None
+        if self.current_version is not None:
+            key = "weight" + str(self.current_version)
+            weight = self.extract_Infobox_value(template, key)
+        if weight is None:
+            weight = self.extract_Infobox_value(template, "weight")
+        if weight is not None:
             self.weight = self.clean_weight(weight)
-            # if self.weight is not None:
-            #     print(self.id, self.name)
-            #     print(weight)
-            #     print(self.weight)
-            #     print("==================================")            
-        except ValueError:
-            self.weight = None
+
+        # try:
+        #     weight = template.get("weight").value
+        #     self.weight = self.clean_weight(weight)
+        #     # if self.weight is not None:
+        #     #     print(self.id, self.name)
+        #     #     print(weight)
+        #     #     print(self.weight)
+        #     #     print("==================================")            
+        # except ValueError:
+        #     self.weight = None
 
         # Determine the release date of an item (TESTED)
-        try:
-            release_date = template.get("release").value
+        release_date = None
+        if self.current_version is not None:
+            key = "release" + str(self.current_version)
+            release_date = self.extract_Infobox_value(template, key)
+        if release_date is None:
+            release_date = self.extract_Infobox_value(template, "release")
+        if release_date is not None:
             self.release_date = self.clean_release_date(release_date)
-            # if self.release_date is not None:
-            #     print(self.id, self.name)
-            #     print(release_date)
-            #     print(self.release_date)
-            #     print("==================================")             
-        except ValueError:
-            self.release_date = None
+
+        # try:
+        #     release_date = template.get("release").value
+        #     self.release_date = self.clean_release_date(release_date)
+        #     # if self.release_date is not None:
+        #     #     print(self.id, self.name)
+        #     #     print(release_date)
+        #     #     print(self.release_date)
+        #     #     print("==================================")             
+        # except ValueError:
+        #     self.release_date = None
 
         # Determine if item has a store price (TESTED)
-        try:
-            store_price = template.get("store").value
-            self.store_price = self.clean_store_price(store_price) 
-            # if self.store_price is not None:
-            #     print(self.id, self.name)
-            #     print(store_price)
-            #     print(self.store_price)
-            #     print("==================================")                 
-        except ValueError:
-            self.store_price = None
+        store_price = None
+        if self.current_version is not None:
+            key = "store" + str(self.current_version)
+            store_price = self.extract_Infobox_value(template, key)
+        if store_price is None:
+            store_price = self.extract_Infobox_value(template, "store")
+        if store_price is not None:
+            self.store_price = self.clean_store_price(store_price)
+        else:
+            self.store_price = None            
+
+        # try:
+        #     store_price = template.get("store").value
+        #     self.store_price = self.clean_store_price(store_price) 
+        #     # if self.store_price is not None:
+        #     #     print(self.id, self.name)
+        #     #     print(store_price)
+        #     #     print(self.store_price)
+        #     #     print("==================================")                 
+        # except ValueError:
+        #     self.store_price = None
         
         # Determine if item has a store price (TESTED)
-        try:
-            seller = template.get("seller").value
-            self.seller = self.clean_seller(seller) 
-            # if self.seller is not None:
-            #     print(self.id, self.name)
-            #     print(seller)
-            #     print(self.seller)
-            #     print("==================================")                 
-        except ValueError:
+        seller = None
+        if self.current_version is not None:
+            key = "seller" + str(self.current_version)
+            seller = self.extract_Infobox_value(template, key)
+        if seller is None:
+            seller = self.extract_Infobox_value(template, "seller")
+        if seller is not None:
+            self.seller = self.clean_seller(seller)
+        else:
             self.seller = None
 
+        # try:
+        #     seller = template.get("seller").value
+        #     self.seller = self.clean_seller(seller) 
+        #     # if self.seller is not None:
+        #     #     print(self.id, self.name)
+        #     #     print(seller)
+        #     #     print(self.seller)
+        #     #     print("==================================")                 
+        # except ValueError:
+        #     self.seller = None
+
         # Determine the examine text of an item (TESTED)
-        try:
-            examine = template.get("examine").value
+        examine = None
+        if self.current_version is not None:
+            key = "examine" + str(self.current_version)
+            examine = self.extract_Infobox_value(template, key)
+        if examine is None:
+            examine = self.extract_Infobox_value(template, "examine")
+        if examine is not None:
             self.examine = self.clean_examine(examine)
-            # if self.examine is not None:
-            #     print(self.id, self.name)
-            #     print(examine)
-            #     print(self.examine)
-            #     print(self.id, "||".join(self.examine))
-            #     print("==================================")
-        except ValueError:
-            self.examine = None            
+
+        # try:
+        #     examine = template.get("examine").value
+        #     self.examine = self.clean_examine(examine)
+        #     # if self.examine is not None:
+        #     #     print(self.id, self.name)
+        #     #     print(examine)
+        #     #     print(self.examine)
+        #     #     print(self.id, "||".join(self.examine))
+        #     #     print("==================================")
+        # except ValueError:
+        #     self.examine = None            
 
         # Determine if item has a buy limit (TESTED)
         if not self.tradeable:
@@ -884,25 +1024,51 @@ class ItemDefinition(object):
                 return False   
         return False
               
+    def clean_InfoboxBonuses_value(self, template, prop):
+        value = None
+        if self.current_version is not None:
+            key = prop + str(self.current_version)
+            value = self.extract_Infobox_value(template, key)
+        if value is None:
+            value = self.extract_Infobox_value(template, prop)
+        if value is not None:
+            #itemBonuses.attack_stab = self.strip_infobox(value)
+            return self.strip_infobox(value)
+
     def parse_InfoboxBonuses(self, template):
         # Parse the Infobox Bonuses template
         self.logger.debug("Processing InfoBox template...")
         # self.logger.debug(template)
         itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
-        itemBonuses.attack_stab = self.strip_infobox(template.get("astab").value)
-        itemBonuses.attack_slash = self.strip_infobox(template.get("aslash").value)
-        itemBonuses.attack_crush = self.strip_infobox(template.get("acrush").value)
-        itemBonuses.attack_magic = self.strip_infobox(template.get("amagic").value)
-        itemBonuses.attack_ranged = self.strip_infobox(template.get("arange").value)
-        itemBonuses.defence_stab = self.strip_infobox(template.get("dstab").value)
-        itemBonuses.defence_slash = self.strip_infobox(template.get("dslash").value)
-        itemBonuses.defence_crush  = self.strip_infobox(template.get("dcrush").value)
-        itemBonuses.defence_magic = self.strip_infobox(template.get("dmagic").value)
-        itemBonuses.defence_ranged = self.strip_infobox(template.get("drange").value)
-        itemBonuses.melee_strength = self.strip_infobox(template.get("str").value)
-        itemBonuses.ranged_strength = self.strip_infobox(template.get("rstr").value)
-        itemBonuses.magic_damage = self.strip_infobox(template.get("mdmg").value)
-        itemBonuses.prayer = self.strip_infobox(template.get("prayer").value)
+
+        itemBonuses.attack_stab = self.clean_InfoboxBonuses_value(template, "astab")
+        itemBonuses.attack_slash = self.clean_InfoboxBonuses_value(template, "aslash")
+        itemBonuses.attack_crush = self.clean_InfoboxBonuses_value(template, "acrush")
+        itemBonuses.attack_magic = self.clean_InfoboxBonuses_value(template, "amagic")
+        itemBonuses.attack_ranged = self.clean_InfoboxBonuses_value(template, "arange")
+        itemBonuses.defence_stab = self.clean_InfoboxBonuses_value(template, "dstab")
+        itemBonuses.defence_slash = self.clean_InfoboxBonuses_value(template, "dslash")
+        itemBonuses.defence_crush = self.clean_InfoboxBonuses_value(template, "dcrush")
+        itemBonuses.defence_magic = self.clean_InfoboxBonuses_value(template, "dmagic")
+        itemBonuses.defence_ranged = self.clean_InfoboxBonuses_value(template, "drange")
+        itemBonuses.melee_strength = self.clean_InfoboxBonuses_value(template, "str")
+        itemBonuses.ranged_strength = self.clean_InfoboxBonuses_value(template, "rstr")
+        itemBonuses.magic_damage = self.clean_InfoboxBonuses_value(template, "mdmg")
+        itemBonuses.prayer = self.clean_InfoboxBonuses_value(template, "prayer")
+
+        # itemBonuses.attack_slash = self.strip_infobox(template.get("aslash").value)
+        # itemBonuses.attack_crush = self.strip_infobox(template.get("acrush").value)
+        # itemBonuses.attack_magic = self.strip_infobox(template.get("amagic").value)
+        # itemBonuses.attack_ranged = self.strip_infobox(template.get("arange").value)
+        # itemBonuses.defence_stab = self.strip_infobox(template.get("dstab").value)
+        # itemBonuses.defence_slash = self.strip_infobox(template.get("dslash").value)
+        # itemBonuses.defence_crush  = self.strip_infobox(template.get("dcrush").value)
+        # itemBonuses.defence_magic = self.strip_infobox(template.get("dmagic").value)
+        # itemBonuses.defence_ranged = self.strip_infobox(template.get("drange").value)
+        # itemBonuses.melee_strength = self.strip_infobox(template.get("str").value)
+        # itemBonuses.ranged_strength = self.strip_infobox(template.get("rstr").value)
+        # itemBonuses.magic_damage = self.strip_infobox(template.get("mdmg").value)
+        # itemBonuses.prayer = self.strip_infobox(template.get("prayer").value)
         
         try:
             itemBonuses.slot  = self.strip_infobox(template.get("slot").value)
@@ -918,7 +1084,10 @@ class ItemDefinition(object):
                 itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value) 
             except ValueError:
                 itemBonuses.attack_speed = None
-                return False  
+                return False
+
+        # level_req
+        # skill_req
 
         # Assign the correctly extracted item bonuses to the object
         self.itemBonuses = itemBonuses
@@ -946,6 +1115,8 @@ class ItemDefinition(object):
         itemBonuses.prayer = 0
         itemBonuses.slot  = None
         itemBonuses.attack_speed = None
+        itemBonuses.level_req = None
+        itemBonuses.skill_req = None
         # Assign the correctly extracted item bonuses to the object
         self.itemBonuses = itemBonuses
 
@@ -1014,7 +1185,34 @@ class ItemDefinition(object):
             bonuses_in_json = self.itemBonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
 
-################################################################################
+###########################################################################
+# Compare new JSON to existing JSON
+    def compare_JSON_files(self):
+        # Create JSON out object to compare:
+        self.construct_json()
+
+        # Load existing db entry
+        fi_name = ".." + os.sep + "docs" + os.sep + "items-json" + os.sep + self.itemID + ".json"
+        with open(fi_name) as f:
+            existing_json_fi = json.load(f)
+        
+        ### Compare
+        # First loop checks, second loop prints
+        changed = False
+        for prop in self.properties:
+            if self.json_out[prop] != existing_json_fi[prop]:
+                changed = True
+                break
+
+        if changed:
+            print("+++++++++++++++++++++++++", self.itemID, self.name)
+            for prop in self.properties:
+                if self.json_out[prop] != existing_json_fi[prop]:
+                    print("+++ MISMATCH!:", prop)
+                    print("NEW:", type(self.json_out[prop]), self.json_out[prop])
+                    print("OLD:", type(existing_json_fi[prop]), existing_json_fi[prop])
+
+###########################################################################
 if __name__=="__main__":
     # Run unit tests
     assert _intcast(-1) == -1

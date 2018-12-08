@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/04
+Date:    2018/12/07
 
 Description:
 ItemBonuses is a class to process handle the item bonuses for OSRS items
@@ -82,7 +82,9 @@ class ItemBonuses(object):
             "magic_damage",
             "prayer",
             "attack_speed",
-            "slot"]   
+            "slot",
+            "skill_req",
+            "level_req"]   
         self.wikia_properties = [
             "astab",
             "aslash",
@@ -101,7 +103,7 @@ class ItemBonuses(object):
             "aspeed",
             "slot"] 
         for prop in self.properties:
-            if prop == "aspeed" or prop == "slot":
+            if prop == "aspeed" or prop == "slot" or prop == "skill_req":
                 setattr(self, prop, "")
             else:
                 setattr(self, prop, 0)
@@ -222,6 +224,20 @@ class ItemBonuses(object):
     def attack_speed(self, value):
         self._attack_speed = _intcast(value)
 
+    @property
+    def level_req(self):
+        return self._level_req
+    @level_req.setter
+    def level_req(self, value):
+        self._level_req = _intcast(value)
+
+    @property
+    def skill_req(self):
+        return self._skill_req
+    @skill_req.setter
+    def skill_req(self, value):
+        self._skill_req = _strcast(value)        
+
     ###########################################################################
     # Handle item to JSON
     def construct_json(self):
@@ -242,6 +258,8 @@ class ItemBonuses(object):
         self.json_out["prayer"] = self.prayer
         self.json_out["slot"] = self.slot
         self.json_out["attack_speed"] = self.attack_speed
+        self.json_out["skill_req"] = self.skill_req
+        self.json_out["level_req"] = self.level_req        
         return self.json_out     
 
 ################################################################################

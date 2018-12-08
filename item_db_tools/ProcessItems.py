@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/01
+Date:    2018/12/07
 
 Description:
 ProcessItems is a class to amalgamate OSRS item information from a variety
@@ -93,9 +93,10 @@ class ProcessItems(object):
 
     def construct_ItemDefinition(self, itemID, itemJSON):
         # For each item, create an ItemDefinition and process it
+        item_exists_in_db = False
         if itemID in self.already_processed:
-            return
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_buylimits, self.all_wikia_normalized_names) 
+            item_exists_in_db = True
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_buylimits, self.all_wikia_normalized_names, item_exists_in_db) 
         item = itemdef.populate()
         if item:
             self.allitemdefs[itemID] = item 
@@ -112,6 +113,10 @@ if __name__=="__main__":
     
     # Start processing    
     print(">>> Starting processing...")
+
+    # Remove old log file
+    if os.path.exists("ItemDefinition.log"):
+        os.remove("ItemDefinition.log")
 
     wikia_extraction_path = ".." + os.sep + "wiki_extraction_tools" + os.sep
 
@@ -132,7 +137,7 @@ if __name__=="__main__":
             all_wikia_items[k] = v
 
     all_wikia_buylimits = dict()
-    with open(wikia_extraction_path + "extract_buy_limits.txt") as f:
+    with open(wikia_extraction_path + "all_buylimits.txt") as f:
         for l in f:
             l = l.strip()
             l = l.split("|")
