@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/08
+Date:    2018/12/10
 
 Description:
 ItemDefinition is a class to load and manipulate osrsbox-db items-json
@@ -279,9 +279,9 @@ class ItemDefinition(object):
             bonuses = ib.load_item(input["bonuses"])
             self.bonuses = bonuses
             # # Item Equipment
-            # ie = ItemEquipment.ItemEquipment(self.id)
-            # equipment = ie.load_item(input["equipment"])
-            # self.equipment = equipment            
+            ie = ItemEquipment.ItemEquipment(self.id)
+            equipment = ie.load_item(input["equipment"])
+            self.equipment = equipment
 
         return self
           
@@ -335,8 +335,8 @@ class ItemDefinition(object):
         if self.equipable:
             bonuses_in_json = self.bonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
-            # equipment_in_json = self.equipment.construct_json()
-            # self.json_out["equipment"] = equipment_in_json            
+            equipment_in_json = self.equipment.construct_json()
+            self.json_out["equipment"] = equipment_in_json            
 
 ################################################################################
 if __name__=="__main__":

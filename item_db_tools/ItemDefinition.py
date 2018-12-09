@@ -11,6 +11,9 @@ ItemDefinition is a class to process the raw ItemDefinition data from
 RuneLite extraction then add supplementaty information gatered from the
 OSRS Wiki. 
 
+Warning: This code grew from simple to spaghetti! It is currently out of 
+control and needs a rewrite and reorganization!
+
 Copyright (c) 2018, PH01L
 
 ###############################################################################
@@ -44,9 +47,10 @@ import re
 import mwparserfromhell
 import dateparser
 
-# Import ItemBonuses class
+# Import ItemBonuses and ItemEquipment class
 sys.path.append(os.getcwd())
 import ItemBonuses
+import ItemEquipment
 
 ###############################################################################
 # Helper methods
@@ -113,7 +117,7 @@ def _listcast(val):
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names, item_exists_in_db):
+    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names, item_exists_in_db, item_skill_requirements):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
@@ -127,6 +131,8 @@ class ItemDefinition(object):
         self.all_wikia_buylimits = all_wikia_buylimits 
         # Bulk dict of normalized OSRS Wikia names
         self.all_wikia_normalized_names = all_wikia_normalized_names
+        # Bulk dict of all equipable items with requirements
+        self.item_skill_requirements = item_skill_requirements
 
         # Flag to determine if item already exists in db
         self.item_exists_in_db = item_exists_in_db
@@ -154,6 +160,9 @@ class ItemDefinition(object):
 
         # Item Bonuses (if equipable, but initialize one anyway)   
         self.itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
+
+        # Item Equipment (if equipable, but initialize one anyway)   
+        self.itemEquipment = ItemEquipment.ItemEquipment(self.itemID)        
 
         # Setup logging
         logging.basicConfig(filename="ItemDefinition.log",
@@ -292,7 +301,7 @@ class ItemDefinition(object):
         return self._examine
     @examine.setter
     def examine(self, value):
-        self._examine = _listcast(value)
+        self._examine = _strcast(value)
 	           
     @property
     def url(self):
@@ -303,6 +312,7 @@ class ItemDefinition(object):
 
     def populate(self):
         # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
+        
         
         # Start section in logger
         self.logger.debug("============================================ START")
@@ -326,6 +336,8 @@ class ItemDefinition(object):
         self.release_date = self.itemJSON["release_date"]
         self.examine = self.itemJSON["examine"]
         self.url = self.itemJSON["url"]
+
+        # print(">>>>>>>>>>>>>> Processing: %s, %s" % (self.itemID, self.name))
 
         # Log the initial JSON input
         self.logger.debug("Dumping first input...")
@@ -412,14 +424,15 @@ class ItemDefinition(object):
         self.logger.debug("============================================ END")
 
         # Check if item already exists in db
-        if self.item_exists_in_db:
-            self.compare_JSON_files()
-            # Put in a compare method
-        else:
-            # Actually output a JSON file
-            # Comment out for testing
-            #self.export_pretty_json()
-            pass
+        # if self.item_exists_in_db:
+        #     self.compare_JSON_files()
+        #     # Put in a compare method
+        # else:
+        #     # Actually output a JSON file
+        #     # Comment out for testing
+        #     self.export_pretty_json()
+
+        self.export_pretty_json()
 
         # Finished. Return the entire ItemDefinition object
         return self
@@ -445,6 +458,12 @@ class ItemDefinition(object):
             self.logger.debug("  > id: %s" % self.id)
             wikia_normalized_name = self.all_wikia_normalized_names[str(self.id)][1]
             self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name
+            if self.url == "https://oldschool.runescape.wiki/w/":
+                self.url = None
+                return False
+            if self.url == "https://oldschool.runescape.wiki/w/None":
+                self.url = None
+                return False                
             self.wiki_name = wikia_normalized_name
             self.status_code = int(self.all_wikia_normalized_names[str(self.id)][2])
             return True    
@@ -689,75 +708,85 @@ class ItemDefinition(object):
         examine = examine.replace("(Used in Olaf's Quest)", "")
         examine = examine.replace("(Used in the Ghost Ahoy quest)", "")
 
-        # Specific fix for clue scroll items
-        examine_list = list()
+        # # Specific fix for clue scroll items
+        # examine_list = list()
+        # if self.name == "Clue scroll (hard)":
+        #     examine = examine.replace("\n", "")
+        #     examine = examine.replace("(Player's Name)", "<players-name>")
+        #     examine_list = re.split("<br/>|<br />", examine)         
+        #     examine_list = [a+b for a, b in zip(examine_list[::2],examine_list[1::2])]
+        # if self.name == "Clue scroll (elite)":
+        #     examine_list.append(examine.split("\n")[0])
+        #     examine_list.append("Sherlock: A clue suggested by <players-name>! ")
+
+        # # Start splitting multiple examine texts to a list
+        # elif ", <br>" in examine:
+        #     examine_list = examine.split(", <br>")    
+        # elif "<br>\n" in examine:
+        #     examine_list = examine.split("<br>\n")
+        # elif "<br />\n" in examine:
+        #     examine_list = examine.split("<br />\n")                     
+        # elif ",<br>" in examine:
+        #     examine_list = examine.split(",<br>")
+        # elif ",<br/>" in examine:
+        #     examine_list = examine.split(",<br/>") 
+        # elif ", <br/>" in examine:
+        #     examine_list = examine.split(", <br/>")             
+        # elif ",<br />" in examine:
+        #     examine_list = examine.split(",<br />")    
+        # elif ", <br />" in examine:
+        #     examine_list = examine.split(", <br />")       
+        # elif "<br>" in examine:
+        #     examine_list = examine.split("<br>")
+        # elif "<br >" in examine:
+        #     examine_list = examine.split("<br >")
+        # elif "<br/>" in examine:
+        #     examine_list = examine.split("<br/>")
+        # elif "<br />" in examine:
+        #     examine_list = examine.split("<br />")
+        # elif "\n" in examine:
+        #     examine_list = examine.split("\n")                
+
+        # # Quick and dirty fix for two different items
+        # if self.name == "Key (medium)":
+        #     examine_list = ["Inventory: This kitten seems to like you", "A key to some drawers.", "A key to unlock a treasure chest."]
+        # if self.wiki_name == "Cat":
+        #     examine_list = ["Inventory (Kitten): This kitten seems to like you.", "Inventory (Cat): This cat definitely likes you.", "Inventory (Overgrown): This cat is so well fed it can hardly move.", "Follower (Kitten): A friendly little pet.", "Follower (Cat): A fully grown feline.", "Follower (Overgrown): A friendly, not-so-little pet."]
+
+        # # Start making a final list
+        # examine_list_fin = list()
+        # if examine_list:
+        #     for examine_name in examine_list:
+        #         examine_name = examine_name.strip()
+        #         if "(Whole)" in examine_name:
+        #             examine_name = examine_name.replace("(Whole)", "")
+        #             examine_name = "Whole: " + examine_name
+        #         if "(Half)" in examine_name:
+        #             examine_name = examine_name.replace("(Half)", "")
+        #             examine_name = "Half: " + examine_name
+        #         if "(uncharged)" in examine_name:
+        #             examine_name = examine_name.replace("(uncharged)", "")
+        #             examine_name = "Uncharged: " + examine_name
+        #         if "(charged)" in examine_name:
+        #             examine_name = examine_name.replace("(charged)", "")
+        #             examine_name = "Charged: " + examine_name
+        #         if examine_name == "":
+        #             continue              
+        #         examine_list_fin.append(examine_name)
+        # else:
+        #     examine_list_fin.append(examine.strip())
+
+        # Special cirumstances for clue scrolls:
+        if self.name == "Clue scroll (easy)":
+            examine = "A set of instructions to be followed.; A clue!; A piece of the world map, but where?; It points to great treasure!"
+        if self.name == "Clue scroll (medium)":
+            examine = "A set of instructions to be followed; A clue!; A piece of the world map,but where?; Perhaps someone at the observatory can teach me to navigate?; It points to great treasure!"
         if self.name == "Clue scroll (hard)":
-            examine = examine.replace("\n", "")
-            examine = examine.replace("(Player's Name)", "<players-name>")
-            examine_list = re.split("<br/>|<br />", examine)         
-            examine_list = [a+b for a, b in zip(examine_list[::2],examine_list[1::2])]
+            examine = "Emote: A set of instructions to be followed.; Anagram: A clue!, Map: A place of the world map, but where?; Coordinates: Perhaps someone at the observatory can teach me to navigate?; Fairy ring: A clue suggested by <players-name>!"
         if self.name == "Clue scroll (elite)":
-            examine_list.append(examine.split("\n")[0])
-            examine_list.append("Sherlock: A clue suggested by <players-name>! ")
+            examine = "A clue!; Sherlock: A clue suggested by <players-name>!"
 
-        # Start splitting multiple examine texts to a list
-        elif ", <br>" in examine:
-            examine_list = examine.split(", <br>")    
-        elif "<br>\n" in examine:
-            examine_list = examine.split("<br>\n")
-        elif "<br />\n" in examine:
-            examine_list = examine.split("<br />\n")                     
-        elif ",<br>" in examine:
-            examine_list = examine.split(",<br>")
-        elif ",<br/>" in examine:
-            examine_list = examine.split(",<br/>") 
-        elif ", <br/>" in examine:
-            examine_list = examine.split(", <br/>")             
-        elif ",<br />" in examine:
-            examine_list = examine.split(",<br />")    
-        elif ", <br />" in examine:
-            examine_list = examine.split(", <br />")       
-        elif "<br>" in examine:
-            examine_list = examine.split("<br>")
-        elif "<br >" in examine:
-            examine_list = examine.split("<br >")
-        elif "<br/>" in examine:
-            examine_list = examine.split("<br/>")
-        elif "<br />" in examine:
-            examine_list = examine.split("<br />")
-        elif "\n" in examine:
-            examine_list = examine.split("\n")                
-
-        # Quick and dirty fix for two different items
-        if self.name == "Key (medium)":
-            examine_list = ["Inventory: This kitten seems to like you", "A key to some drawers.", "A key to unlock a treasure chest."]
-        if self.wiki_name == "Cat":
-            examine_list = ["Inventory (Kitten): This kitten seems to like you.", "Inventory (Cat): This cat definitely likes you.", "Inventory (Overgrown): This cat is so well fed it can hardly move.", "Follower (Kitten): A friendly little pet.", "Follower (Cat): A fully grown feline.", "Follower (Overgrown): A friendly, not-so-little pet."]
-
-        # Start making a final list
-        examine_list_fin = list()
-        if examine_list:
-            for examine_name in examine_list:
-                examine_name = examine_name.strip()
-                if "(Whole)" in examine_name:
-                    examine_name = examine_name.replace("(Whole)", "")
-                    examine_name = "Whole: " + examine_name
-                if "(Half)" in examine_name:
-                    examine_name = examine_name.replace("(Half)", "")
-                    examine_name = "Half: " + examine_name
-                if "(uncharged)" in examine_name:
-                    examine_name = examine_name.replace("(uncharged)", "")
-                    examine_name = "Uncharged: " + examine_name
-                if "(charged)" in examine_name:
-                    examine_name = examine_name.replace("(charged)", "")
-                    examine_name = "Charged: " + examine_name
-                if examine_name == "":
-                    continue              
-                examine_list_fin.append(examine_name)
-        else:
-            examine_list_fin.append(examine.strip())
-
-        return examine_list_fin  
+        return examine  
 
     def clean_store_price(self, input):
         # Clean a store price value
@@ -846,7 +875,6 @@ class ItemDefinition(object):
         self.current_version = None
 
         if self.is_versioned:
-            self.logger.debug("NOTE: versioned infobox...")
             #print(self.name, self.is_versioned, self.version_count)
             try:
                 template.get("name1").value
@@ -858,6 +886,9 @@ class ItemDefinition(object):
                     i += 1
             except ValueError:
                 pass
+            if self.current_version == None:
+                self.current_version = 1
+            self.logger.debug("NOTE: versioned infobox: %s" % self.current_version)
 
         # Which values have versions: every value!
         # quest = yes
@@ -1056,6 +1087,10 @@ class ItemDefinition(object):
         itemBonuses.magic_damage = self.clean_InfoboxBonuses_value(template, "mdmg")
         itemBonuses.prayer = self.clean_InfoboxBonuses_value(template, "prayer")
 
+        # Assign the correctly extracted item bonuses to the object
+        self.itemBonuses = itemBonuses
+
+        # Old, un-versioned code
         # itemBonuses.attack_slash = self.strip_infobox(template.get("aslash").value)
         # itemBonuses.attack_crush = self.strip_infobox(template.get("acrush").value)
         # itemBonuses.attack_magic = self.strip_infobox(template.get("amagic").value)
@@ -1070,27 +1105,35 @@ class ItemDefinition(object):
         # itemBonuses.magic_damage = self.strip_infobox(template.get("mdmg").value)
         # itemBonuses.prayer = self.strip_infobox(template.get("prayer").value)
         
+        # Item Equipment
+        itemEquipment = ItemEquipment.ItemEquipment(self.itemID)
+
         try:
-            itemBonuses.slot  = self.strip_infobox(template.get("slot").value)
-            itemBonuses.slot = itemBonuses.slot.lower()
+            itemEquipment.slot  = self.strip_infobox(template.get("slot").value)
+            itemEquipment.slot = itemEquipment.slot.lower()
         except ValueError:
-            itemBonuses.slot = None
+            itemEquipment.slot = None
             self.logger.critical("Could not determine equipable item slot")
             return False
 
         # If item is weapon, two-handed, or 2h determine attack speed
-        if itemBonuses.slot == "weapon" or itemBonuses.slot == "two-handed" or itemBonuses.slot == "2h":
+        if itemEquipment.slot == "weapon" or itemEquipment.slot == "two-handed" or itemEquipment.slot == "2h":
             try:
-                itemBonuses.attack_speed = self.strip_infobox(template.get("aspeed").value) 
+                itemEquipment.attack_speed = self.strip_infobox(template.get("aspeed").value) 
             except ValueError:
-                itemBonuses.attack_speed = None
+                itemEquipment.attack_speed = None
+                self.logger.critical("Could not determine equipable item attack speed")
                 return False
 
-        # level_req
-        # skill_req
+        # Fetch item skill requirements
+        try:
+            skill_reqs = self.item_skill_requirements[str(self.id)]
+            itemEquipment.skill_reqs = skill_reqs
+        except KeyError:
+            itemEquipment.skill_reqs = None
 
-        # Assign the correctly extracted item bonuses to the object
-        self.itemBonuses = itemBonuses
+        # Assign the correctly extracted item equipment to the object
+        self.itemEquipment = itemEquipment
 
         return True
 
@@ -1113,10 +1156,6 @@ class ItemDefinition(object):
         itemBonuses.ranged_strength = 0
         itemBonuses.magic_damage = 0
         itemBonuses.prayer = 0
-        itemBonuses.slot  = None
-        itemBonuses.attack_speed = None
-        itemBonuses.level_req = None
-        itemBonuses.skill_req = None
         # Assign the correctly extracted item bonuses to the object
         self.itemBonuses = itemBonuses
 
@@ -1184,6 +1223,8 @@ class ItemDefinition(object):
         if self.equipable:
             bonuses_in_json = self.itemBonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
+            equipment_in_json = self.itemEquipment.construct_json()
+            self.json_out["equipment"] = equipment_in_json            
 
 ###########################################################################
 # Compare new JSON to existing JSON
@@ -1203,6 +1244,11 @@ class ItemDefinition(object):
             if self.json_out[prop] != existing_json_fi[prop]:
                 changed = True
                 break
+                if self.equipable:
+                    for prop in self.itemBonuses.properties:
+                        if self.json_out["bonuses"][prop] != existing_json_fi["bonuses"][prop]:
+                            changed = True
+                            break
 
         if changed:
             print("+++++++++++++++++++++++++", self.itemID, self.name)
@@ -1211,6 +1257,14 @@ class ItemDefinition(object):
                     print("+++ MISMATCH!:", prop)
                     print("NEW:", type(self.json_out[prop]), self.json_out[prop])
                     print("OLD:", type(existing_json_fi[prop]), existing_json_fi[prop])
+            if self.equipable:
+                for prop in self.itemBonuses.properties:
+                    if self.json_out["bonuses"][prop] != existing_json_fi["bonuses"][prop]:
+                        print("+++ BONUSES MISMATCH!:", prop)
+                        print("NEW:", type(self.json_out["bonuses"][prop]), self.json_out["bonuses"][prop])
+                        print("OLD:", type(existing_json_fi["bonuses"][prop]), existing_json_fi["bonuses"][prop])   
+
+        return changed                 
 
 ###########################################################################
 if __name__=="__main__":

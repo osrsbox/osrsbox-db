@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/07
+Date:    2018/12/10
 
 Description:
 ProcessItems is a class to amalgamate OSRS item information from a variety
@@ -60,12 +60,13 @@ import ItemDefinition
 ###############################################################################
 # ProcessItems object
 class ProcessItems(object):
-    def __init__(self, json_file, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names):
+    def __init__(self, json_file, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names, item_skill_requirements):
         self.json_file = json_file
         self.all_wikia_items = all_wikia_items
         self.all_wikia_items_bonuses = all_wikia_items_bonuses
         self.all_wikia_buylimits = all_wikia_buylimits
         self.all_wikia_normalized_names = all_wikia_normalized_names
+        self.item_skill_requirements = item_skill_requirements
         self.allitems = dict()
         self.allitemdefs = dict()
 
@@ -96,7 +97,7 @@ class ProcessItems(object):
         item_exists_in_db = False
         if itemID in self.already_processed:
             item_exists_in_db = True
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_buylimits, self.all_wikia_normalized_names, item_exists_in_db) 
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_buylimits, self.all_wikia_normalized_names, item_exists_in_db, self.item_skill_requirements) 
         item = itemdef.populate()
         if item:
             self.allitemdefs[itemID] = item 
@@ -152,6 +153,12 @@ if __name__=="__main__":
             l = l.split("|")
             all_wikia_normalized_names[l[0]] = [l[1], l[2], l[3]]
 
+    item_skill_requirements = dict()
+    with open(wikia_extraction_path + "item_skill_requirements.json") as f:
+        temp = json.load(f)
+        for k,v in temp.items():
+            item_skill_requirements[k] = v            
+
     # Make a dir for JSON output
     # This directory is not in docs, it is a temp working space
     directory = "items-json"
@@ -166,7 +173,8 @@ if __name__=="__main__":
                       all_wikia_items,
                       all_wikia_items_bonuses,
                       all_wikia_buylimits,
-                      all_wikia_normalized_names)
+                      all_wikia_normalized_names,
+                      item_skill_requirements)
     # Check for already processes files in items-json (in this dir)
     pi.determine_already_processed()
     # Start processing each item ID

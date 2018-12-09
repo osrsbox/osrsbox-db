@@ -80,11 +80,7 @@ class ItemBonuses(object):
             "melee_strength",
             "ranged_strength",
             "magic_damage",
-            "prayer",
-            "attack_speed",
-            "slot",
-            "skill_req",
-            "level_req"]   
+            "prayer"]   
         self.wikia_properties = [
             "astab",
             "aslash",
@@ -99,14 +95,10 @@ class ItemBonuses(object):
             "str",
             "rstr",
             "mdmg",
-            "prayer",
-            "aspeed",
-            "slot"] 
+            "prayer"] 
+
         for prop in self.properties:
-            if prop == "aspeed" or prop == "slot" or prop == "skill_req":
-                setattr(self, prop, "")
-            else:
-                setattr(self, prop, 0)
+            setattr(self, prop, 0)
     
     # Attacking Stats
     @property
@@ -207,36 +199,7 @@ class ItemBonuses(object):
         return self._prayer
     @prayer.setter
     def prayer(self, value):
-        self._prayer = _intcast(value)
-
-    # Other
-    @property
-    def slot(self):
-        return self._slot
-    @slot.setter
-    def slot(self, value):
-        self._slot = _strcast(value)
-
-    @property
-    def attack_speed(self):
-        return self._attack_speed
-    @attack_speed.setter
-    def attack_speed(self, value):
-        self._attack_speed = _intcast(value)
-
-    @property
-    def level_req(self):
-        return self._level_req
-    @level_req.setter
-    def level_req(self, value):
-        self._level_req = _intcast(value)
-
-    @property
-    def skill_req(self):
-        return self._skill_req
-    @skill_req.setter
-    def skill_req(self, value):
-        self._skill_req = _strcast(value)        
+        self._prayer = _intcast(value)       
 
     ###########################################################################
     # Handle item to JSON
@@ -255,11 +218,7 @@ class ItemBonuses(object):
         self.json_out["melee_strength"] = self.melee_strength
         self.json_out["ranged_strength"] = self.ranged_strength
         self.json_out["magic_damage"] = self.magic_damage
-        self.json_out["prayer"] = self.prayer
-        self.json_out["slot"] = self.slot
-        self.json_out["attack_speed"] = self.attack_speed
-        self.json_out["skill_req"] = self.skill_req
-        self.json_out["level_req"] = self.level_req        
+        self.json_out["prayer"] = self.prayer 
         return self.json_out     
 
 ################################################################################

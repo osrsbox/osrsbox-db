@@ -7,8 +7,8 @@ Website: osrsbox.com
 Date:    2018/12/10
 
 Description:
-ItemEquipment is a class to process handle the equipment specs for OSRS items
-that are equipable; for example, weapons and armour.
+ItemEquipment is a class to process handle the item equipment information 
+for OSRS items that are equipable; for example, weapons and armour.
 
 Copyright (c) 2018, PH01L
 
@@ -79,10 +79,18 @@ class ItemEquipment(object):
         self.properties = [
             "attack_speed",
             "slot",
-            "requirements"]   
-   
-    ###########################################################################
-    # Helpers: Setters and Getters
+            "skill_reqs"
+            ]   
+        for prop in self.properties:
+            if prop == "slot":
+                setattr(self, prop, "")
+            elif prop == "skill_reqs":
+                setattr(self, prop, [])
+            else:
+                setattr(self, prop, 0)
+            
+    
+    # Setters and Getters
     @property
     def slot(self):
         return self._slot
@@ -98,18 +106,11 @@ class ItemEquipment(object):
         self._attack_speed = _intcast(value)
 
     @property
-    def requirements(self):
-        return self._requirements
-    @requirements.setter
-    def requirements(self, value):
-        self._requirements = _listcast(value)        
-
-    ###########################################################################
-    # Helpers: Processing
-    def load_item(self, input):
-        for prop in self.properties:
-            setattr(self, prop, input[prop]) 
-        return self
+    def skill_reqs(self):
+        return self._skill_reqs
+    @skill_reqs.setter
+    def skill_reqs(self, value):
+        self._skill_reqs = _listcast(value)      
 
     ###########################################################################
     # Handle item to JSON
@@ -117,7 +118,7 @@ class ItemEquipment(object):
         self.json_out = collections.OrderedDict()
         self.json_out["slot"] = self.slot
         self.json_out["attack_speed"] = self.attack_speed
-        self.json_out["requirements"] = self.requirements
+        self.json_out["skill_reqs"] = self.skill_reqs
         return self.json_out     
 
 ################################################################################

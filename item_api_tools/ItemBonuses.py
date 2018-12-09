@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/08
+Date:    2018/12/10
 
 Description:
 ItemBonuses is a class to process handle the item bonuses for OSRS items
@@ -74,9 +74,7 @@ class ItemBonuses(object):
             "melee_strength",
             "ranged_strength",
             "magic_damage",
-            "prayer",
-            "attack_speed",
-            "slot"]   
+            "prayer"]   
   
     ###########################################################################
     # Helpers: Setters and Getters    
@@ -179,7 +177,7 @@ class ItemBonuses(object):
         return self._prayer
     @prayer.setter
     def prayer(self, value):
-        self._prayer = _intcast(value)
+        self._prayer = _intcast(value)   
 
     ###########################################################################
     # Helpers: Processing
