@@ -79,7 +79,7 @@ class ItemEquipment(object):
         self.properties = [
             "attack_speed",
             "slot",
-            "requirements"]   
+            "skill_reqs"]   
    
     ###########################################################################
     # Helpers: Setters and Getters
@@ -98,11 +98,11 @@ class ItemEquipment(object):
         self._attack_speed = _intcast(value)
 
     @property
-    def requirements(self):
-        return self._requirements
-    @requirements.setter
-    def requirements(self, value):
-        self._requirements = _listcast(value)        
+    def skill_reqs(self):
+        return self._skill_reqs
+    @skill_reqs.setter
+    def skill_reqs(self, value):
+        self._skill_reqs = _listcast(value)        
 
     ###########################################################################
     # Helpers: Processing
@@ -117,7 +117,7 @@ class ItemEquipment(object):
         self.json_out = collections.OrderedDict()
         self.json_out["slot"] = self.slot
         self.json_out["attack_speed"] = self.attack_speed
-        self.json_out["requirements"] = self.requirements
+        self.json_out["skill_reqs"] = self.skill_reqs
         return self.json_out     
 
 ################################################################################

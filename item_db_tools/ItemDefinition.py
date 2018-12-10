@@ -311,8 +311,7 @@ class ItemDefinition(object):
         self._url = _strcast(value)
 
     def populate(self):
-        # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
-        
+        sys.stdout.write(">>> Processing: %s\r" % self.itemID)
         
         # Start section in logger
         self.logger.debug("============================================ START")
@@ -386,9 +385,10 @@ class ItemDefinition(object):
                     self.logger.critical("Blank bonuses made.")
             else:
                 self.logger.critical("Item InfoBox extraction error.")
-                return # Could not finish, just exit
+                #return # Could not finish, just exit
         else:
             self.logger.critical("Item has no OSRS Wikia page. Setting default values.")
+            self.export_pretty_json()
             return # Could not finish, just exit
 
         # Continue processing... but only if equipable
@@ -404,8 +404,9 @@ class ItemDefinition(object):
                     self.logger.critical("Blank bonuses made.")
                 else:
                     self.logger.critical("Item InfoBox Bonuses extraction error.")
-                    self.logger.critical(self.status_code)
-                    return # Could not finish, just exit 
+                    self.logger.critical("Status Code: %s" % self.status_code)
+                    self.make_blank_bonuses()
+                    # return # Could not finish, just exit 
             else:
                 self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
                 return # Could not finish, just exit
@@ -416,6 +417,13 @@ class ItemDefinition(object):
         self.url = self.url.replace("&", "%26")
         self.url = self.url.replace("+", "%2B")
 
+        # Dirty hack
+        if self.url:
+            if self.url == "https://oldschool.runescape.wiki/w/":
+                self.url = None
+            if self.url == "https://oldschool.runescape.wiki/w/None":
+                self.url = None
+
         # Log the second JSON input
         self.logger.debug("Dumping second input...")
         self.logger.debug("Starting: print_pretty_debug_json")
@@ -424,10 +432,12 @@ class ItemDefinition(object):
         self.logger.debug("============================================ END")
 
         # Check if item already exists in db
+        # changed = False
         # if self.item_exists_in_db:
-        #     self.compare_JSON_files()
-        #     # Put in a compare method
-        # else:
+        #     changed = self.compare_JSON_files()
+        
+        # if changed:
+        #     print("CHANGED")
         #     # Actually output a JSON file
         #     # Comment out for testing
         #     self.export_pretty_json()
@@ -457,15 +467,13 @@ class ItemDefinition(object):
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
             wikia_normalized_name = self.all_wikia_normalized_names[str(self.id)][1]
-            self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name
-            if self.url == "https://oldschool.runescape.wiki/w/":
-                self.url = None
-                return False
-            if self.url == "https://oldschool.runescape.wiki/w/None":
-                self.url = None
-                return False                
+            self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name             
             self.wiki_name = wikia_normalized_name
             self.status_code = int(self.all_wikia_normalized_names[str(self.id)][2])
+            # if self.url == "https://oldschool.runescape.wiki/w/":
+            #     self.url = None
+            # if self.url == "https://oldschool.runescape.wiki/w/None":
+            #     self.url = None
             return True    
         else:
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.name)
@@ -1159,6 +1167,12 @@ class ItemDefinition(object):
         # Assign the correctly extracted item bonuses to the object
         self.itemBonuses = itemBonuses
 
+        itemEquipment = ItemEquipment.ItemEquipment(self.itemID)
+        itemEquipment.slot = None
+        itemEquipment.attack_speed = 0
+        itemEquipment.skill_reqs = None
+        self.itemEquipment = itemEquipment
+
         return True        
           
     ###########################################################################
@@ -1197,8 +1211,8 @@ class ItemDefinition(object):
     def export_pretty_json(self):
         # Export pretty JSON to individual file
         self.construct_json()
-        out_fi = "items-json" + os.sep + str(self.id) + ".json"
-        with open(out_fi, "w") as f:
+        out_fi = ".." + os.sep + "docs" + os.sep + "items-json" + os.sep + str(self.id) + ".json"
+        with open(out_fi, "w", newline="\n") as f:
             json.dump(self.json_out, f, indent=4)
 
     def construct_json(self):
@@ -1249,6 +1263,10 @@ class ItemDefinition(object):
                         if self.json_out["bonuses"][prop] != existing_json_fi["bonuses"][prop]:
                             changed = True
                             break
+                    for prop in self.itemEquipment.properties:
+                        if self.json_out["equipment"][prop] != existing_json_fi["equipment"][prop]:
+                            changed = True
+                            break                            
 
         if changed:
             print("+++++++++++++++++++++++++", self.itemID, self.name)
@@ -1263,6 +1281,11 @@ class ItemDefinition(object):
                         print("+++ BONUSES MISMATCH!:", prop)
                         print("NEW:", type(self.json_out["bonuses"][prop]), self.json_out["bonuses"][prop])
                         print("OLD:", type(existing_json_fi["bonuses"][prop]), existing_json_fi["bonuses"][prop])   
+                    if self.json_out["equipment"][prop] != existing_json_fi["equipment"][prop]:
+                        print("+++ equipment MISMATCH!:", prop)
+                        print("NEW:", type(self.json_out["equipment"][prop]), self.json_out["equipment"][prop])
+                        print("OLD:", type(existing_json_fi["equipment"][prop]), existing_json_fi["equipment"][prop])   
+
 
         return changed                 
 

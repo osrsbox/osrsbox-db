@@ -73,6 +73,8 @@ class AllItems(object):
         count = 0
         for json_file in self.fis:
             # Load JSON file to allitems dict
+            # sys.stdout.write(">>> Processing: %d\r" % count)
+            # print(json_file)
             with open(json_file) as f:
                 temp = json.load(f)
                 # Load the item using the ItemDefinition class
@@ -81,6 +83,4 @@ class AllItems(object):
                 # Add item to list and dict
                 self.all_items.append(item)
                 self.all_items_dict[item.id] = item
-                #print(item)
-                sys.stdout.write(">>> Processing: %d\r" % count)
                 count += 1
