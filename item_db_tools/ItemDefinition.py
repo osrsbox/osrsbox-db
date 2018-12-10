@@ -312,7 +312,7 @@ class ItemDefinition(object):
 
     def populate(self):
         sys.stdout.write(">>> Processing: %s\r" % self.itemID)
-        
+
         # Start section in logger
         self.logger.debug("============================================ START")
         self.logger.debug("ItemID: %s" % self.itemID)
@@ -349,7 +349,7 @@ class ItemDefinition(object):
         # Try to find a OSRS Wikia page for this item 
         self.logger.debug("Starting: determine_wiki_page")
         has_wikia_page = self.determine_wiki_page()
-        
+       
         # has_wikia_page indicates if OSRS Wikia page was found
         if has_wikia_page:
             # This item has an OSRS Wikia page
@@ -362,34 +362,37 @@ class ItemDefinition(object):
                 self.logger.debug("Invalid item saved")
                 if self.equipable:
                     self.make_blank_bonuses()
-                    self.logger.critical("Blank bonuses made.")
+                    self.logger.warning("Blank bonuses made.")
             elif self.status_code == 2:
                 self.logger.debug("Unobtainable item saved")
                 if self.equipable:
                     self.make_blank_bonuses()
-                    self.logger.critical("Blank bonuses made.")
+                    self.logger.warning("Blank bonuses made.")
             elif self.status_code == 3:
                 self.logger.debug("Unusable item saved")  
                 if self.equipable:
                     self.make_blank_bonuses()
-                    self.logger.critical("Blank bonuses made.")                 
+                    self.logger.warning("Blank bonuses made.")
             elif self.status_code == 4:
                 self.logger.debug("Not really an item, item saved")   
                 if self.equipable:
                     self.make_blank_bonuses()
-                    self.logger.critical("Blank bonuses made.")                       
+                    self.logger.warning("Blank bonuses made.")
             elif self.status_code == 5:
                 self.logger.debug("No dedicated wiki page for item, saved")  
                 if self.equipable:
                     self.make_blank_bonuses()
-                    self.logger.critical("Blank bonuses made.")
+                    self.logger.warning("Blank bonuses made.")
             else:
                 self.logger.critical("Item InfoBox extraction error.")
-                #return # Could not finish, just exit
+                return # Could not finish, just exit
+                # print("Item InfoBox extraction error.")
+                # quit()
         else:
             self.logger.critical("Item has no OSRS Wikia page. Setting default values.")
-            self.export_pretty_json()
             return # Could not finish, just exit
+            # print("Item has no OSRS Wikia page. Setting default values.")
+            # quit()
 
         # Continue processing... but only if equipable
         if self.equipable:
@@ -401,15 +404,17 @@ class ItemDefinition(object):
                     self.logger.debug("Item InfoBox Bonuses extracted successfully")
                 elif self.status_code in [1,2,3,4,5,6]:
                     self.make_blank_bonuses()
-                    self.logger.critical("Blank bonuses made.")
+                    self.logger.warning("Blank bonuses made.")
                 else:
                     self.logger.critical("Item InfoBox Bonuses extraction error.")
                     self.logger.critical("Status Code: %s" % self.status_code)
                     self.make_blank_bonuses()
-                    # return # Could not finish, just exit 
+                    return # Could not finish, just exit 
             else:
                 self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
                 return # Could not finish, just exit
+                # print("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
+                # quit()
 
         # Fix self.url and check
         self.url = self.url.replace(" ", "_")
@@ -435,13 +440,10 @@ class ItemDefinition(object):
         # changed = False
         # if self.item_exists_in_db:
         #     changed = self.compare_JSON_files()
-        
         # if changed:
         #     print("CHANGED")
-        #     # Actually output a JSON file
-        #     # Comment out for testing
-        #     self.export_pretty_json()
 
+        # Actually output a JSON file, comment out for testing
         self.export_pretty_json()
 
         # Finished. Return the entire ItemDefinition object
@@ -1132,6 +1134,8 @@ class ItemDefinition(object):
                 itemEquipment.attack_speed = None
                 self.logger.critical("Could not determine equipable item attack speed")
                 return False
+        if itemEquipment.attack_speed == 0:
+            itemEquipment.attack_speed = None
 
         # Fetch item skill requirements
         try:
