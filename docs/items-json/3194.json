@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "20 September 2004",
-    "examine": [
-        "A steel halberd."
-    ],
+    "examine": "A steel halberd.",
     "url": "https://oldschool.runescape.wiki/w/Steel_halberd",
     "bonuses": {
         "attack_stab": 14,
@@ -32,8 +30,16 @@
         "melee_strength": 20,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 5
+            }
+        ]
     }
 }

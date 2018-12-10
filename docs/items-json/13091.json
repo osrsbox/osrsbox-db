@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "05 March 2015",
-    "examine": [
-        "A nice sturdy pike."
-    ],
+    "examine": "A nice sturdy pike.",
     "url": "https://oldschool.runescape.wiki/w/Crystal_halberd",
     "bonuses": {
         "attack_stab": 85,
@@ -32,8 +30,24 @@
         "melee_strength": 118,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 75
+            },
+            {
+                "skill": "strength",
+                "level": 35
+            },
+            {
+                "skill": "agility",
+                "level": 50
+            }
+        ]
     }
 }

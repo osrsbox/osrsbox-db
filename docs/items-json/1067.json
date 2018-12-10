@@ -14,9 +14,7 @@
     "buy_limit": 125,
     "quest_item": null,
     "release_date": "04 January 2001",
-    "examine": [
-        "These look pretty heavy."
-    ],
+    "examine": "These look pretty heavy.",
     "url": "https://oldschool.runescape.wiki/w/Iron_platelegs",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "legs",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 1
+            }
+        ]
     }
 }

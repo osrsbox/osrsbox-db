@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "14 April 2003",
-    "examine": [
-        "An iron tipped spear."
-    ],
+    "examine": "A poisoned iron tipped spear.",
     "url": "https://oldschool.runescape.wiki/w/Iron_spear",
     "bonuses": {
         "attack_stab": 8,
@@ -32,8 +30,16 @@
         "melee_strength": 10,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 1
+            }
+        ]
     }
 }

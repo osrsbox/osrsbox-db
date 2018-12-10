@@ -10,13 +10,11 @@
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
-    "weight": 0.0,
+    "weight": 0.4,
     "buy_limit": null,
     "quest_item": null,
     "release_date": "12 June 2006",
-    "examine": [
-        "A defensive weapon."
-    ],
+    "examine": "A defensive weapon.",
     "url": "https://oldschool.runescape.wiki/w/Mithril_defender",
     "bonuses": {
         "attack_stab": 10,
@@ -32,8 +30,20 @@
         "melee_strength": 3,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 20
+            },
+            {
+                "skill": "defence",
+                "level": 20
+            }
+        ]
     }
 }

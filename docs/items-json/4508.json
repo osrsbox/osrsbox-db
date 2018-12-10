@@ -14,10 +14,8 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "13 December 2004",
-    "examine": [
-        "Very decorative sword."
-    ],
-    "url": "https://oldschool.runescape.wiki/w/Gold_decorative_sword",
+    "examine": "Very decorative sword.",
+    "url": "https://oldschool.runescape.wiki/w/Decorative_sword_(gold)",
     "bonuses": {
         "attack_stab": 20,
         "attack_slash": 29,
@@ -32,8 +30,16 @@
         "melee_strength": 31,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 5
+            }
+        ]
     }
 }

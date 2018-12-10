@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "17 October 2013",
-    "examine": [
-        "A ghastly weapon with evil origins."
-    ],
+    "examine": "A ghastly weapon with evil origins.",
     "url": "https://oldschool.runescape.wiki/w/Staff_of_the_dead",
     "bonuses": {
         "attack_stab": 55,
@@ -32,8 +30,20 @@
         "melee_strength": 72,
         "ranged_strength": 0,
         "magic_damage": 15,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 75
+            },
+            {
+                "skill": "magic",
+                "level": 75
+            }
+        ]
     }
 }

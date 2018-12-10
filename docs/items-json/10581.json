@@ -16,9 +16,7 @@
         "Contact!"
     ],
     "release_date": "10 January 2007",
-    "examine": [
-        "A mystical-feeling dagger."
-    ],
+    "examine": "A mystical-feeling dagger.",
     "url": "https://oldschool.runescape.wiki/w/Keris",
     "bonuses": {
         "attack_stab": 40,
@@ -34,8 +32,16 @@
         "melee_strength": 30,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 2,
+        "prayer": 2
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 50
+            }
+        ]
     }
 }

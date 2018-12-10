@@ -14,9 +14,7 @@
     "buy_limit": 15,
     "quest_item": null,
     "release_date": "20 September 2004",
-    "examine": [
-        "A bronze halberd."
-    ],
+    "examine": "A bronze halberd.",
     "url": "https://oldschool.runescape.wiki/w/Bronze_halberd",
     "bonuses": {
         "attack_stab": 7,
@@ -32,8 +30,16 @@
         "melee_strength": 8,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 1
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "13 April 2017",
-    "examine": [
-        "An old and magical staff, now bearing extra enchantment."
-    ],
+    "examine": "An old and magical staff, now bearing extra enchantment.",
     "url": "https://oldschool.runescape.wiki/w/Slayer%27s_staff_(e)",
     "bonuses": {
         "attack_stab": 7,
@@ -32,8 +30,20 @@
         "melee_strength": 35,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "slayer",
+                "level": 55
+            },
+            {
+                "skill": "magic",
+                "level": 50
+            }
+        ]
     }
 }

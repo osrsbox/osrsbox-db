@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "21 January 2004",
-    "examine": [
-        "A finely balanced throwing axe."
-    ],
+    "examine": "A finely balanced throwing axe.",
     "url": "https://oldschool.runescape.wiki/w/Steel_thrownaxe",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 11,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 5
+            }
+        ]
     }
 }

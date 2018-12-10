@@ -14,10 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "04 July 2006",
-    "examine": [
-        "Uncharged: An inert-seeming cave horror mask.",
-        "Charged: A magic cave horror mask."
-    ],
+    "examine": "An inert-seeming cave horror mask.",
     "url": "https://oldschool.runescape.wiki/w/Black_mask",
     "bonuses": {
         "attack_stab": 0,
@@ -33,8 +30,24 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "head",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 10
+            },
+            {
+                "skill": "strength",
+                "level": 20
+            },
+            {
+                "skill": "combat",
+                "level": 40
+            }
+        ]
     }
 }

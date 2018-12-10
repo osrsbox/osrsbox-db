@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 May 2005",
-    "examine": [
-        "Ahrim the Blighted's armoured robe top."
-    ],
+    "examine": "Ahrim the Blighted's armoured robe top.",
     "url": "https://oldschool.runescape.wiki/w/Ahrim%27s_robetop",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "body",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 70
+            },
+            {
+                "skill": "defence",
+                "level": 70
+            }
+        ]
     }
 }

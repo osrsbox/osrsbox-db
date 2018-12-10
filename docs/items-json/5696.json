@@ -13,10 +13,8 @@
     "weight": 1.0,
     "buy_limit": null,
     "quest_item": null,
-    "release_date": "26 July 2001",
-    "examine": [
-        "A powerful dagger."
-    ],
+    "release_date": "11 July 2005",
+    "examine": "The blade is covered with a nasty poison.",
     "url": "https://oldschool.runescape.wiki/w/Rune_dagger",
     "bonuses": {
         "attack_stab": 25,
@@ -32,8 +30,16 @@
         "melee_strength": 24,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 40
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "20 February 2006",
-    "examine": [
-        "A rune kiteshield with a heraldic design."
-    ],
+    "examine": "A rune kiteshield with a heraldic design.",
     "url": "https://oldschool.runescape.wiki/w/Rune_shield_(h3)",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 40
+            }
+        ]
     }
 }

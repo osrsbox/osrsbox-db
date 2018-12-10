@@ -10,13 +10,11 @@
     "cost": 250000,
     "lowalch": 100000,
     "highalch": 150000,
-    "weight": null,
+    "weight": 0.9,
     "buy_limit": null,
     "quest_item": null,
     "release_date": "06 September 2018",
-    "examine": [
-        "A powerful coif."
-    ],
+    "examine": "A powerful coif.",
     "url": "https://oldschool.runescape.wiki/w/Morrigan%27s_coif",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "head",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 78
+            }
+        ]
     }
 }

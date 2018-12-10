@@ -16,9 +16,7 @@
         "Another Slice of H.A.M."
     ],
     "release_date": "24 April 2007",
-    "examine": [
-        "It has ancient goblin symbols on it."
-    ],
+    "examine": "It has ancient goblin symbols on it.",
     "url": "https://oldschool.runescape.wiki/w/Ancient_mace",
     "bonuses": {
         "attack_stab": 10,
@@ -34,8 +32,20 @@
         "melee_strength": 14,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 3,
+        "prayer": 3
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 15
+            },
+            {
+                "skill": "prayer",
+                "level": 25
+            }
+        ]
     }
 }

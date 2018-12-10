@@ -16,9 +16,7 @@
         "In Aid of the Myreque"
     ],
     "release_date": "22 March 2006",
-    "examine": [
-        "A specially crafted hammer with strange markings on it."
-    ],
+    "examine": "A specially crafted hammer with strange markings on it.",
     "url": "https://oldschool.runescape.wiki/w/Gadderhammer",
     "bonuses": {
         "attack_stab": -4,
@@ -34,8 +32,16 @@
         "melee_strength": 35,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 30
+            }
+        ]
     }
 }

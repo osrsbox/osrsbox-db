@@ -14,9 +14,7 @@
     "buy_limit": 125,
     "quest_item": null,
     "release_date": "01 February 2018",
-    "examine": [
-        "A solid willow shield covered in snakeskin leather."
-    ],
+    "examine": "A solid willow shield covered in snakeskin leather.",
     "url": "https://oldschool.runescape.wiki/w/Snakeskin_shield",
     "bonuses": {
         "attack_stab": -15,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 30
+            },
+            {
+                "skill": "defence",
+                "level": 30
+            }
+        ]
     }
 }

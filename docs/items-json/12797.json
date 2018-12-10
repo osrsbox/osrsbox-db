@@ -10,13 +10,11 @@
     "cost": 97960,
     "lowalch": 39184,
     "highalch": 58776,
-    "weight": 2.2,
+    "weight": 2.4,
     "buy_limit": null,
     "quest_item": null,
     "release_date": "13 March 2014",
-    "examine": [
-        "If rocks could feel fear, they'd fear this."
-    ],
+    "examine": "If rocks could feel fear, they'd fear this.",
     "url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe",
     "bonuses": {
         "attack_stab": 38,
@@ -32,8 +30,16 @@
         "melee_strength": 42,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 60
+            }
+        ]
     }
 }

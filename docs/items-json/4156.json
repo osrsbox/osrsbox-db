@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "26 January 2005",
-    "examine": [
-        "I can just about see things in this shield's reflection."
-    ],
+    "examine": "I can just about see things in this shield's reflection.",
     "url": "https://oldschool.runescape.wiki/w/Mirror_shield",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "slayer",
+                "level": 25
+            },
+            {
+                "skill": "defence",
+                "level": 20
+            }
+        ]
     }
 }

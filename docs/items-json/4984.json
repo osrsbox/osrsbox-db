@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 May 2005",
-    "examine": [
-        "Verac the Defiled's Flail."
-    ],
+    "examine": "Verac the Defiled's Flail.",
     "url": "https://oldschool.runescape.wiki/w/Verac%27s_flail",
     "bonuses": {
         "attack_stab": 68,
@@ -32,8 +30,16 @@
         "melee_strength": 72,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 6,
+        "prayer": 6
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 70
+            }
+        ]
     }
 }

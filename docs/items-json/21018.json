@@ -10,13 +10,11 @@
     "cost": 45000,
     "lowalch": 18000,
     "highalch": 27000,
-    "weight": 0.0,
+    "weight": 0.453,
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "05 January 2017",
-    "examine": [
-        "The hat of a powerful sorceress from a bygone era."
-    ],
+    "examine": "The hat of a powerful sorceress from a bygone era.",
     "url": "https://oldschool.runescape.wiki/w/Ancestral_hat",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 2,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "head",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 65
+            },
+            {
+                "skill": "magic",
+                "level": 75
+            }
+        ]
     }
 }

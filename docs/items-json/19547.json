@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "06 May 2016",
-    "examine": [
-        "A deep sense of anguish burns within this powerful necklace."
-    ],
+    "examine": "A deep sense of anguish burns within this powerful necklace.",
     "url": "https://oldschool.runescape.wiki/w/Necklace_of_anguish",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 5,
         "magic_damage": 0,
-        "prayer": 2,
+        "prayer": 2
+    },
+    "equipment": {
         "slot": "neck",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "hitpoints",
+                "level": 75
+            }
+        ]
     }
 }

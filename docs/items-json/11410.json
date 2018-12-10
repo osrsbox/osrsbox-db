@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "03 July 2007",
-    "examine": [
-        "An adamant-tipped, one-handed hasta."
-    ],
+    "examine": "A poison tipped, one-handed adamantite hasta.",
     "url": "https://oldschool.runescape.wiki/w/Adamant_hasta",
     "bonuses": {
         "attack_stab": 24,
@@ -32,8 +30,16 @@
         "melee_strength": 28,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 30
+            }
+        ]
     }
 }

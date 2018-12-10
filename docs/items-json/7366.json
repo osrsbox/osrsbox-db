@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "20 February 2006",
-    "examine": [
-        "Those studs should provide a bit more protection. Nice trim too!"
-    ],
+    "examine": "Those studs should provide a bit more protection. Nice trim too!",
     "url": "https://oldschool.runescape.wiki/w/Studded_chaps_(g)",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "legs",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 20
+            },
+            {
+                "skill": "defence",
+                "level": 1
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "20 February 2006",
-    "examine": [
-        "A two-handed Dragon Sword."
-    ],
+    "examine": "A two-handed Dragon Sword.",
     "url": "https://oldschool.runescape.wiki/w/Dragon_2h_sword",
     "bonuses": {
         "attack_stab": -4,
@@ -32,8 +30,16 @@
         "melee_strength": 93,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 60
+            }
+        ]
     }
 }

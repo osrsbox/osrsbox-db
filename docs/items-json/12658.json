@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "24 July 2014",
-    "examine": [
-        "An ancient staff, formerly owned by Iban, now upgraded to hold more charges."
-    ],
+    "examine": "An ancient staff, formerly owned by Iban, now upgraded to hold more charges.",
     "url": "https://oldschool.runescape.wiki/w/Iban%27s_staff_(u)",
     "bonuses": {
         "attack_stab": 10,
@@ -32,8 +30,20 @@
         "melee_strength": 50,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 50
+            },
+            {
+                "skill": "magic",
+                "level": 50
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": 14000,
     "quest_item": null,
     "release_date": "18 March 2002",
-    "examine": [
-        "It's a slightly magical stick."
-    ],
+    "examine": "It's a slightly magical stick.",
     "url": "https://oldschool.runescape.wiki/w/Air_battlestaff",
     "bonuses": {
         "attack_stab": 7,
@@ -32,8 +30,16 @@
         "melee_strength": 35,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 1
+            }
+        ]
     }
 }

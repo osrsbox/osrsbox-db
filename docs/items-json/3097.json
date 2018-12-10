@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 August 2004",
-    "examine": [
-        "A set of fighting claws."
-    ],
+    "examine": "A set of fighting claws.",
     "url": "https://oldschool.runescape.wiki/w/Steel_claws",
     "bonuses": {
         "attack_stab": 8,
@@ -32,8 +30,16 @@
         "melee_strength": 12,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 5
+            }
+        ]
     }
 }

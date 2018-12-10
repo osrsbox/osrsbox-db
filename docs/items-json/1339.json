@@ -14,9 +14,7 @@
     "buy_limit": 125,
     "quest_item": null,
     "release_date": "29 March 2004",
-    "examine": [
-        "I don't think it's intended for joinery."
-    ],
+    "examine": "I don't think it's intended for joinery.",
     "url": "https://oldschool.runescape.wiki/w/Steel_warhammer",
     "bonuses": {
         "attack_stab": -4,
@@ -32,8 +30,16 @@
         "melee_strength": 16,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 4
+        "attack_speed": 6,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 5
+            }
+        ]
     }
 }

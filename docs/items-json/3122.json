@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 August 2004",
-    "examine": [
-        "A solid stone shield."
-    ],
+    "examine": "A solid stone shield.",
     "url": "https://oldschool.runescape.wiki/w/Granite_shield",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 50
+            },
+            {
+                "skill": "strength",
+                "level": 50
+            }
+        ]
     }
 }

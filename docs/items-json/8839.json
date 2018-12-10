@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "06 June 2006",
-    "examine": [
-        "Torso armor from the order of the Void Knights."
-    ],
+    "examine": "Torso armor from the order of the Void Knights.",
     "url": "https://oldschool.runescape.wiki/w/Void_knight_top",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,36 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "body",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 42
+            },
+            {
+                "skill": "strength",
+                "level": 42
+            },
+            {
+                "skill": "hitpoints",
+                "level": 42
+            },
+            {
+                "skill": "range",
+                "level": 42
+            },
+            {
+                "skill": "magic",
+                "level": 42
+            },
+            {
+                "skill": "prayer",
+                "level": 22
+            }
+        ]
     }
 }

@@ -10,13 +10,11 @@
     "cost": 2500000,
     "lowalch": 1000000,
     "highalch": 1500000,
-    "weight": 0.4,
+    "weight": 0.45,
     "buy_limit": null,
     "quest_item": null,
     "release_date": "07 June 2018",
-    "examine": [
-        "A defensive weapon."
-    ],
+    "examine": "A defensive weapon.",
     "url": "https://oldschool.runescape.wiki/w/Avernic_defender",
     "bonuses": {
         "attack_stab": 30,
@@ -32,8 +30,20 @@
         "melee_strength": 8,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 70
+            },
+            {
+                "skill": "defence",
+                "level": 70
+            }
+        ]
     }
 }

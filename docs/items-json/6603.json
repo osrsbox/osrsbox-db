@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "17 October 2005",
-    "examine": [
-        "A Magical staff."
-    ],
+    "examine": "A Magical staff.",
     "url": "https://oldschool.runescape.wiki/w/White_magic_staff",
     "bonuses": {
         "attack_stab": 2,
@@ -32,8 +30,16 @@
         "melee_strength": 7,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 1,
+        "prayer": 1
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 10
+            }
+        ]
     }
 }

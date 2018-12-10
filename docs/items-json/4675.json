@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "18 April 2005",
-    "examine": [
-        "A magical staff of ancient origin..."
-    ],
+    "examine": "A magical staff of ancient origin...",
     "url": "https://oldschool.runescape.wiki/w/Ancient_staff",
     "bonuses": {
         "attack_stab": 10,
@@ -32,8 +30,20 @@
         "melee_strength": 50,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": -1,
+        "prayer": -1
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 50
+            },
+            {
+                "skill": "attack",
+                "level": 50
+            }
+        ]
     }
 }

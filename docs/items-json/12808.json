@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 October 2014",
-    "examine": [
-        "The blade of an Icyene, blessed with a tear from Saradomin himself."
-    ],
+    "examine": "The blade of an Icyene, blessed with a tear from Saradomin himself.",
     "url": "https://oldschool.runescape.wiki/w/Saradomin%27s_blessed_sword",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 88,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 2,
+        "prayer": 2
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 75
+            }
+        ]
     }
 }

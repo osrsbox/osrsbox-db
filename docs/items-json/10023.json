@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "21 November 2006",
-    "examine": [
-        "A very large, single leather glove"
-    ],
+    "examine": "A very large, single leather glove",
     "url": "https://oldschool.runescape.wiki/w/Falconer%27s_glove",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "hunter",
+                "level": 43
+            }
+        ]
     }
 }

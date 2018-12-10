@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "17 October 2013",
-    "examine": [
-        "A chainskirt of great craftsmanship."
-    ],
+    "examine": "A chainskirt of great craftsmanship.",
     "url": "https://oldschool.runescape.wiki/w/Armadyl_chainskirt",
     "bonuses": {
         "attack_stab": -6,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 1,
+        "prayer": 1
+    },
+    "equipment": {
         "slot": "legs",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 70
+            },
+            {
+                "skill": "ranged",
+                "level": 70
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "06 May 2016",
-    "examine": [
-        "A deep sense of torture burns within this powerful amulet."
-    ],
+    "examine": "A deep sense of torture burns within this powerful amulet.",
     "url": "https://oldschool.runescape.wiki/w/Amulet_of_torture",
     "bonuses": {
         "attack_stab": 15,
@@ -32,8 +30,16 @@
         "melee_strength": 10,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 2,
+        "prayer": 2
+    },
+    "equipment": {
         "slot": "neck",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "hitpoints",
+                "level": 75
+            }
+        ]
     }
 }

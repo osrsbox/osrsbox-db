@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "06 October 2016",
-    "examine": [
-        "A brutal weapon popular among giants."
-    ],
+    "examine": "A brutal weapon popular among giants.",
     "url": "https://oldschool.runescape.wiki/w/Hill_giant_club",
     "bonuses": {
         "attack_stab": -4,
@@ -32,8 +30,16 @@
         "melee_strength": 70,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 40
+            }
+        ]
     }
 }

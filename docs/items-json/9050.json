@@ -14,11 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "17 July 2006",
-    "examine": [
-        "Fully charged: This sceptre is fully charged.",
-        "Charges used: This Sceptre has x remaining charges.",
-        "Uncharged: This sceptre has no remaining charges."
-    ],
+    "examine": "This sceptre has no remaining charges.",
     "url": "https://oldschool.runescape.wiki/w/Pharaoh%27s_sceptre",
     "bonuses": {
         "attack_stab": 7,
@@ -34,8 +30,20 @@
         "melee_strength": 32,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 30
+            },
+            {
+                "skill": "magic",
+                "level": 30
+            }
+        ]
     }
 }

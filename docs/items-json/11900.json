@@ -14,10 +14,8 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "16 January 2014",
-    "examine": [
-        "Very decorative armour."
-    ],
-    "url": "https://oldschool.runescape.wiki/w/Decorative_range_legs",
+    "examine": "Very decorative armour.",
+    "url": "https://oldschool.runescape.wiki/w/Decorative_armour_(ranged_legs)",
     "bonuses": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "legs",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 5
+            }
+        ]
     }
 }

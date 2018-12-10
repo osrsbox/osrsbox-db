@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "16 October 2014",
-    "examine": [
-        "An ethereal shield with a spectral sigil attached to it."
-    ],
+    "examine": "An ethereal shield with a spectral sigil attached to it.",
     "url": "https://oldschool.runescape.wiki/w/Spectral_spirit_shield",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,24 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 3,
+        "prayer": 3
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 75
+            },
+            {
+                "skill": "prayer",
+                "level": 70
+            },
+            {
+                "skill": "magic",
+                "level": 65
+            }
+        ]
     }
 }

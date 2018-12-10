@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "01 August 2005",
-    "examine": [
-        "Some finely crafted Fremennik boots, made from spined dagannoth hide."
-    ],
+    "examine": "Some finely crafted Fremennik boots, made from spined dagannoth hide.",
     "url": "https://oldschool.runescape.wiki/w/Spined_boots",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "feet",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 40
+            },
+            {
+                "skill": "magic",
+                "level": 40
+            }
+        ]
     }
 }

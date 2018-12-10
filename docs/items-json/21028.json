@@ -14,9 +14,7 @@
     "buy_limit": 5,
     "quest_item": null,
     "release_date": "05 January 2017",
-    "examine": [
-        "A very powerful harpoon."
-    ],
+    "examine": "A very powerful harpoon.",
     "url": "https://oldschool.runescape.wiki/w/Dragon_harpoon",
     "bonuses": {
         "attack_stab": 38,
@@ -32,8 +30,16 @@
         "melee_strength": 42,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 60
+            }
+        ]
     }
 }

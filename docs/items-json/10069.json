@@ -10,13 +10,11 @@
     "cost": 400,
     "lowalch": 160,
     "highalch": 240,
-    "weight": null,
+    "weight": 0.4,
     "buy_limit": 125,
     "quest_item": null,
     "release_date": "21 November 2006",
-    "examine": [
-        "A surprisingly aerodynamic cape."
-    ],
+    "examine": "A surprisingly aerodynamic cape.",
     "url": "https://oldschool.runescape.wiki/w/Spotted_cape",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "cape",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "hunter",
+                "level": 40
+            }
+        ]
     }
 }

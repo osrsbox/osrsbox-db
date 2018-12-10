@@ -14,9 +14,7 @@
     "buy_limit": 40,
     "quest_item": null,
     "release_date": "04 January 2001",
-    "examine": [
-        "A powerful axe."
-    ],
+    "examine": "A powerful axe.",
     "url": "https://oldschool.runescape.wiki/w/Adamant_axe",
     "bonuses": {
         "attack_stab": -2,
@@ -32,8 +30,16 @@
         "melee_strength": 19,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 30
+            }
+        ]
     }
 }

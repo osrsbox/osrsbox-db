@@ -14,14 +14,12 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "01 February 2018",
-    "examine": [
-        "A solid magic wood shield covered in red dragon leather."
-    ],
+    "examine": "A solid magic wood shield covered in red dragon leather.",
     "url": "https://oldschool.runescape.wiki/w/Red_d%27hide_shield",
     "bonuses": {
         "attack_stab": -15,
         "attack_slash": -15,
-        "attack_crush": -15,
+        "attack_crush": -11,
         "attack_magic": -10,
         "attack_ranged": 6,
         "defence_stab": 18,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 60
+            },
+            {
+                "skill": "defence",
+                "level": 40
+            }
+        ]
     }
 }

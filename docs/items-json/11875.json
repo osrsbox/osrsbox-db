@@ -14,9 +14,7 @@
     "buy_limit": 7000,
     "quest_item": null,
     "release_date": "06 January 2014",
-    "examine": [
-        "Crossbow bolts with broad tips."
-    ],
+    "examine": "Crossbow bolts with broad tips.",
     "url": "https://oldschool.runescape.wiki/w/Broad_bolts",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 100,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "ammo",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 61
+            },
+            {
+                "skill": "slayer",
+                "level": 55
+            }
+        ]
     }
 }

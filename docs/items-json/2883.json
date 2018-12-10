@@ -16,9 +16,7 @@
         "Big Chompy Bird Hunting"
     ],
     "release_date": "18 May 2004",
-    "examine": [
-        "More powerful than a normal bow, useful against large game birds."
-    ],
+    "examine": "More powerful than a normal bow, useful against large game birds.",
     "url": "https://oldschool.runescape.wiki/w/Ogre_bow",
     "bonuses": {
         "attack_stab": 0,
@@ -34,8 +32,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 2
+        "attack_speed": 8,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 30
+            }
+        ]
     }
 }

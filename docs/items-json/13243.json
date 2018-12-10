@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "27 August 2015",
-    "examine": [
-        "A very powerful, fiery pickaxe."
-    ],
+    "examine": "A very powerful, fiery pickaxe.",
     "url": "https://oldschool.runescape.wiki/w/Infernal_pickaxe",
     "bonuses": {
         "attack_stab": 38,
@@ -32,8 +30,16 @@
         "melee_strength": 42,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 60
+            }
+        ]
     }
 }

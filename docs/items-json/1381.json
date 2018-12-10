@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "04 January 2001",
-    "examine": [
-        "A magical staff."
-    ],
+    "examine": "A magical staff.",
     "url": "https://oldschool.runescape.wiki/w/Staff_of_air",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 3,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 1
+            }
+        ]
     }
 }

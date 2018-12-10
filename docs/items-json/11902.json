@@ -14,9 +14,7 @@
     "buy_limit": 70,
     "quest_item": null,
     "release_date": "23 January 2014",
-    "examine": [
-        "A razor-sharp sword."
-    ],
+    "examine": "A razor-sharp sword.",
     "url": "https://oldschool.runescape.wiki/w/Leaf-bladed_sword",
     "bonuses": {
         "attack_stab": 67,
@@ -32,8 +30,20 @@
         "melee_strength": 50,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 50
+            },
+            {
+                "skill": "slayer",
+                "level": 55
+            }
+        ]
     }
 }

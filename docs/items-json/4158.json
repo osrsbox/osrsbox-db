@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "26 January 2005",
-    "examine": [
-        "A spear with a leaf-shaped point."
-    ],
+    "examine": "A spear with a leaf-shaped point.",
     "url": "https://oldschool.runescape.wiki/w/Leaf-bladed_spear",
     "bonuses": {
         "attack_stab": 47,
@@ -32,8 +30,20 @@
         "melee_strength": 50,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "slayer",
+                "level": 55
+            },
+            {
+                "skill": "attack",
+                "level": 50
+            }
+        ]
     }
 }

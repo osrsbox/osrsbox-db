@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "08 January 2015",
-    "examine": [
-        "It needs to be charged with Zulrah's scales."
-    ],
+    "examine": "It needs to be charged with Zulrah's scales.",
     "url": "https://oldschool.runescape.wiki/w/Toxic_staff_of_the_dead",
     "bonuses": {
         "attack_stab": 55,
@@ -32,8 +30,20 @@
         "melee_strength": 72,
         "ranged_strength": 0,
         "magic_damage": 15,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 75
+            },
+            {
+                "skill": "attack",
+                "level": 75
+            }
+        ]
     }
 }

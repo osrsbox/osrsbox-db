@@ -14,9 +14,7 @@
     "buy_limit": 11000,
     "quest_item": null,
     "release_date": "11 June 2007",
-    "examine": [
-        "A deadly throwing dart with a dragon tip."
-    ],
+    "examine": "A deadly throwing dart with a dragon tip.",
     "url": "https://oldschool.runescape.wiki/w/Dragon_dart",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 20,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 7
+        "attack_speed": 3,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 60
+            }
+        ]
     }
 }

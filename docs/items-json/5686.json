@@ -13,10 +13,8 @@
     "weight": 0.4,
     "buy_limit": null,
     "quest_item": null,
-    "release_date": "04 January 2001",
-    "examine": [
-        "Short but pointy."
-    ],
+    "release_date": "11 July 2005",
+    "examine": "The blade is covered with poison.",
     "url": "https://oldschool.runescape.wiki/w/Iron_dagger",
     "bonuses": {
         "attack_stab": 5,
@@ -32,8 +30,16 @@
         "melee_strength": 4,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 1
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "05 May 2004",
-    "examine": [
-        "Endorsed by Robin Hood."
-    ],
+    "examine": "Endorsed by Robin Hood.",
     "url": "https://oldschool.runescape.wiki/w/Robin_hood_hat",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "head",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 40
+            },
+            {
+                "skill": "defence",
+                "level": 1
+            }
+        ]
     }
 }

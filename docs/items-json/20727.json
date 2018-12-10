@@ -14,9 +14,7 @@
     "buy_limit": 70,
     "quest_item": null,
     "release_date": "15 September 2016",
-    "examine": [
-        "A razor-sharp battleaxe."
-    ],
+    "examine": "A razor-sharp battleaxe.",
     "url": "https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe",
     "bonuses": {
         "attack_stab": -2,
@@ -32,8 +30,20 @@
         "melee_strength": 92,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 65
+            },
+            {
+                "skill": "slayer",
+                "level": 55
+            }
+        ]
     }
 }

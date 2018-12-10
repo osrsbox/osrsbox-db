@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "04 January 2018",
-    "examine": [
-        "A light shield with a haunting, skeletal visage."
-    ],
+    "examine": "A light shield with a haunting, skeletal visage.",
     "url": "https://oldschool.runescape.wiki/w/Dragonfire_ward",
     "bonuses": {
         "attack_stab": -10,
@@ -32,8 +30,20 @@
         "melee_strength": -2,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 70
+            },
+            {
+                "skill": "defence",
+                "level": 75
+            }
+        ]
     }
 }

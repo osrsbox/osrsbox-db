@@ -16,9 +16,7 @@
         "Lunar Diplomacy"
     ],
     "release_date": "24 July 2006",
-    "examine": [
-        "A Moonclan staff."
-    ],
+    "examine": "A Moonclan staff.",
     "url": "https://oldschool.runescape.wiki/w/Lunar_staff",
     "bonuses": {
         "attack_stab": 3,
@@ -34,8 +32,16 @@
         "melee_strength": 15,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 3,
+        "prayer": 3
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 65
+            }
+        ]
     }
 }

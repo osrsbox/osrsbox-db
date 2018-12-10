@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "04 July 2006",
-    "examine": [
-        "A stick on a string... pure style."
-    ],
+    "examine": "A stick on a string... pure style.",
     "url": "https://oldschool.runescape.wiki/w/Witchwood_icon",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 1,
+        "prayer": 1
+    },
+    "equipment": {
         "slot": "neck",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "slayer",
+                "level": 35
+            }
+        ]
     }
 }

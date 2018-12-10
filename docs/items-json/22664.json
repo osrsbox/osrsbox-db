@@ -10,30 +10,40 @@
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
-    "weight": 3.0,
+    "weight": 3.175,
     "buy_limit": null,
     "quest_item": null,
     "release_date": "07 June 2018",
-    "examine": [
-        "A powerful scythe. It is currently uncharged."
-    ],
+    "examine": "A powerful scythe.",
     "url": "https://oldschool.runescape.wiki/w/Scythe_of_vitur",
     "bonuses": {
-        "attack_stab": 50,
-        "attack_slash": 75,
-        "attack_crush": 10,
+        "attack_stab": 70,
+        "attack_slash": 110,
+        "attack_crush": 30,
         "attack_magic": -6,
         "attack_ranged": 0,
         "defence_stab": -2,
-        "defence_slash": 6,
-        "defence_crush": 0,
+        "defence_slash": 8,
+        "defence_crush": 10,
         "defence_magic": 0,
         "defence_ranged": 0,
-        "melee_strength": 50,
+        "melee_strength": 75,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 75
+            },
+            {
+                "skill": "strength",
+                "level": 75
+            }
+        ]
     }
 }

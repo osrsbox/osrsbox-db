@@ -10,13 +10,11 @@
     "cost": 80000,
     "lowalch": 32000,
     "highalch": 48000,
-    "weight": 1.8,
+    "weight": 1.814,
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "05 January 2017",
-    "examine": [
-        "The robe bottoms of a powerful sorceress from a bygone era."
-    ],
+    "examine": "The robe bottoms of a powerful sorceress from a bygone era.",
     "url": "https://oldschool.runescape.wiki/w/Ancestral_robe_bottom",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 2,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "legs",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 65
+            },
+            {
+                "skill": "magic",
+                "level": 75
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "17 May 2005",
-    "examine": [
-        "Blunt rune arrow... ouch."
-    ],
+    "examine": "Blunt rune arrow... ouch.",
     "url": "https://oldschool.runescape.wiki/w/Rune_brutal",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 60,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "ammo",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 40
+            }
+        ]
     }
 }

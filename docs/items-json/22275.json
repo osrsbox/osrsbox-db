@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "01 February 2018",
-    "examine": [
-        "A solid maple shield covered in green dragon leather."
-    ],
+    "examine": "A solid maple shield covered in green dragon leather.",
     "url": "https://oldschool.runescape.wiki/w/Green_d%27hide_shield",
     "bonuses": {
         "attack_stab": -15,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 40
+            },
+            {
+                "skill": "defence",
+                "level": 40
+            }
+        ]
     }
 }

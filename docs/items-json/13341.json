@@ -10,13 +10,11 @@
     "cost": 99000,
     "lowalch": 39600,
     "highalch": 59400,
-    "weight": 0.4,
+    "weight": null,
     "buy_limit": null,
     "quest_item": null,
     "release_date": "18 October 2006",
-    "examine": [
-        "The cape worn by the most agile of heroes."
-    ],
+    "examine": "The cape worn by the most agile of heroes.",
     "url": "https://oldschool.runescape.wiki/w/Agility_cape",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": null,
+        "prayer": 4
+    },
+    "equipment": {
         "slot": "cape",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "agility",
+                "level": 99
+            }
+        ]
     }
 }

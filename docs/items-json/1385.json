@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "04 January 2001",
-    "examine": [
-        "A Magical staff."
-    ],
+    "examine": "A Magical staff.",
     "url": "https://oldschool.runescape.wiki/w/Staff_of_earth",
     "bonuses": {
         "attack_stab": 1,
@@ -32,8 +30,16 @@
         "melee_strength": 5,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 1
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "19 September 2005",
-    "examine": [
-        "A staff of obsidian."
-    ],
+    "examine": "A staff of obsidian.",
     "url": "https://oldschool.runescape.wiki/w/Toktz-mej-tal",
     "bonuses": {
         "attack_stab": 15,
@@ -32,8 +30,20 @@
         "melee_strength": 55,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 5,
+        "prayer": 5
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 4
+        "attack_speed": 6,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 60
+            },
+            {
+                "skill": "magic",
+                "level": 60
+            }
+        ]
     }
 }

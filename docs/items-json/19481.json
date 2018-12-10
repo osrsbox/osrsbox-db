@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "06 May 2016",
-    "examine": [
-        "A powerful weapon forged from the wreckage of an airship."
-    ],
+    "examine": "A powerful weapon forged from the wreckage of an airship.",
     "url": "https://oldschool.runescape.wiki/w/Heavy_ballista",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 15,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "ranged",
+                "level": 75
+            }
+        ]
     }
 }

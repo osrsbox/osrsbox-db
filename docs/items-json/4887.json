@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 May 2005",
-    "examine": [
-        "Dharok the Wretched's greataxe."
-    ],
+    "examine": "Dharok the Wretched's greataxe.",
     "url": "https://oldschool.runescape.wiki/w/Dharok%27s_greataxe",
     "bonuses": {
         "attack_stab": -4,
@@ -32,8 +30,20 @@
         "melee_strength": 105,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 70
+            },
+            {
+                "skill": "strength",
+                "level": 70
+            }
+        ]
     }
 }

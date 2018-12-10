@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "20 September 2004",
-    "examine": [
-        "A black halberd."
-    ],
+    "examine": "A black halberd.",
     "url": "https://oldschool.runescape.wiki/w/Black_halberd",
     "bonuses": {
         "attack_stab": 19,
@@ -32,8 +30,20 @@
         "melee_strength": 20,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 10
+            },
+            {
+                "skill": "strength",
+                "level": 5
+            }
+        ]
     }
 }

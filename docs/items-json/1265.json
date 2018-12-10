@@ -14,9 +14,7 @@
     "buy_limit": 40,
     "quest_item": null,
     "release_date": "27 May 2003",
-    "examine": [
-        "Used for mining."
-    ],
+    "examine": "Used for mining.",
     "url": "https://oldschool.runescape.wiki/w/Bronze_pickaxe",
     "bonuses": {
         "attack_stab": 4,
@@ -32,8 +30,20 @@
         "melee_strength": 5,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "mining",
+                "level": 1
+            },
+            {
+                "skill": "attack",
+                "level": 1
+            }
+        ]
     }
 }

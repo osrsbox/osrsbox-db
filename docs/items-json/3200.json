@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "20 September 2004",
-    "examine": [
-        "An adamant halberd."
-    ],
+    "examine": "An adamant halberd.",
     "url": "https://oldschool.runescape.wiki/w/Adamant_halberd",
     "bonuses": {
         "attack_stab": 28,
@@ -32,8 +30,20 @@
         "melee_strength": 42,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 30
+            },
+            {
+                "skill": "strength",
+                "level": 15
+            }
+        ]
     }
 }

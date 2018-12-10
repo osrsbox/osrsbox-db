@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "08 February 2018",
-    "examine": [
-        "A ghastly weapon with evil origins combined with a holy light."
-    ],
+    "examine": "A ghastly weapon with evil origins combined with a holy light.",
     "url": "https://oldschool.runescape.wiki/w/Staff_of_light",
     "bonuses": {
         "attack_stab": 55,
@@ -32,8 +30,20 @@
         "melee_strength": 72,
         "ranged_strength": 0,
         "magic_damage": 15,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "magic",
+                "level": 75
+            },
+            {
+                "skill": "attack",
+                "level": 75
+            }
+        ]
     }
 }

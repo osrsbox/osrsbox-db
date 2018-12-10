@@ -13,10 +13,8 @@
     "weight": 1.0,
     "buy_limit": null,
     "quest_item": null,
-    "release_date": "06 June 2006",
-    "examine": [
-        "A mace used by the order of the Void Knights."
-    ],
+    "release_date": "17 July 2007",
+    "examine": "A mace used by the order of the Void Knights.",
     "url": "https://oldschool.runescape.wiki/w/Void_knight_mace",
     "bonuses": {
         "attack_stab": 22,
@@ -32,8 +30,36 @@
         "melee_strength": 38,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 6,
+        "prayer": 6
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 42
+            },
+            {
+                "skill": "strength",
+                "level": 42
+            },
+            {
+                "skill": "hitpoints",
+                "level": 42
+            },
+            {
+                "skill": "range",
+                "level": 42
+            },
+            {
+                "skill": "magic",
+                "level": 42
+            },
+            {
+                "skill": "prayer",
+                "level": 22
+            }
+        ]
     }
 }

@@ -14,9 +14,7 @@
     "buy_limit": 8,
     "quest_item": null,
     "release_date": "05 January 2017",
-    "examine": [
-        "A buckler carved from the twisted remains of the Great Olm."
-    ],
+    "examine": "A buckler carved from the twisted remains of the Great Olm.",
     "url": "https://oldschool.runescape.wiki/w/Twisted_buckler",
     "bonuses": {
         "attack_stab": -7,
@@ -32,8 +30,20 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "shield",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "defence",
+                "level": 75
+            },
+            {
+                "skill": "ranged",
+                "level": 75
+            }
+        ]
     }
 }

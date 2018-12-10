@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "06 July 2016",
-    "examine": [
-        "Holy handwear!"
-    ],
+    "examine": "Holy handwear!",
     "url": "https://oldschool.runescape.wiki/w/Holy_wraps",
     "bonuses": {
         "attack_stab": 0,
@@ -32,8 +30,16 @@
         "melee_strength": 0,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 3,
+        "prayer": 3
+    },
+    "equipment": {
         "slot": "hands",
-        "attack_speed": 0
+        "attack_speed": 0,
+        "skill_reqs": [
+            {
+                "skill": "prayer",
+                "level": 31
+            }
+        ]
     }
 }

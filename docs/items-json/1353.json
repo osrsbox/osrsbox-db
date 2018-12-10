@@ -14,9 +14,7 @@
     "buy_limit": 40,
     "quest_item": null,
     "release_date": "04 January 2001",
-    "examine": [
-        "A woodcutter's axe."
-    ],
+    "examine": "A woodcutter's axe.",
     "url": "https://oldschool.runescape.wiki/w/Steel_axe",
     "bonuses": {
         "attack_stab": -2,
@@ -32,8 +30,16 @@
         "melee_strength": 9,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 5
+            }
+        ]
     }
 }

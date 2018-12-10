@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "09 June 2016",
-    "examine": [
-        "The Magical sword 'Silverlight', enhanced with the blood of Agrith-Naar and ancient shards."
-    ],
+    "examine": "The Magical sword 'Silverlight', enhanced with the blood of Agrith-Naar and ancient shards.",
     "url": "https://oldschool.runescape.wiki/w/Arclight",
     "bonuses": {
         "attack_stab": 10,
@@ -32,8 +30,16 @@
         "melee_strength": 8,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 6
+        "attack_speed": 4,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 75
+            }
+        ]
     }
 }

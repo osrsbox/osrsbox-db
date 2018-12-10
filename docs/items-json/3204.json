@@ -14,9 +14,7 @@
     "buy_limit": 70,
     "quest_item": null,
     "release_date": "20 September 2004",
-    "examine": [
-        "A dragon halberd."
-    ],
+    "examine": "A dragon halberd.",
     "url": "https://oldschool.runescape.wiki/w/Dragon_halberd",
     "bonuses": {
         "attack_stab": 70,
@@ -32,8 +30,20 @@
         "melee_strength": 89,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "2h",
-        "attack_speed": 3
+        "attack_speed": 7,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 60
+            },
+            {
+                "skill": "strength",
+                "level": 30
+            }
+        ]
     }
 }

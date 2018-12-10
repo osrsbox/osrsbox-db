@@ -14,9 +14,7 @@
     "buy_limit": null,
     "quest_item": null,
     "release_date": "15 September 2016",
-    "examine": [
-        "It's a slightly magical stick."
-    ],
+    "examine": "It's a slightly magical stick.",
     "url": "https://oldschool.runescape.wiki/w/Dust_battlestaff",
     "bonuses": {
         "attack_stab": 7,
@@ -32,8 +30,20 @@
         "melee_strength": 35,
         "ranged_strength": 0,
         "magic_damage": 0,
-        "prayer": 0,
+        "prayer": 0
+    },
+    "equipment": {
         "slot": "weapon",
-        "attack_speed": 5
+        "attack_speed": 5,
+        "skill_reqs": [
+            {
+                "skill": "attack",
+                "level": 30
+            },
+            {
+                "skill": "magic",
+                "level": 30
+            }
+        ]
     }
 }
