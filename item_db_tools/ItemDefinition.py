@@ -472,10 +472,6 @@ class ItemDefinition(object):
             self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name             
             self.wiki_name = wikia_normalized_name
             self.status_code = int(self.all_wikia_normalized_names[str(self.id)][2])
-            # if self.url == "https://oldschool.runescape.wiki/w/":
-            #     self.url = None
-            # if self.url == "https://oldschool.runescape.wiki/w/None":
-            #     self.url = None
             return True    
         else:
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.name)
@@ -899,14 +895,6 @@ class ItemDefinition(object):
             if self.current_version == None:
                 self.current_version = 1
             self.logger.debug("NOTE: versioned infobox: %s" % self.current_version)
-
-        # Which values have versions: every value!
-        # quest = yes
-        # weight = yes
-        # release = yes
-        # store_price = yes
-        # seller = yes
-        # examine = yes
 
         # Determine if item is associated with a quest (TESTED)
         quest = None

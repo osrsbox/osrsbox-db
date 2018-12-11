@@ -41,15 +41,15 @@ import ItemBonuses
 if __name__=="__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-d", 
-                    "--dir", 
+    ap.add_argument("-i", 
+                    "--input", 
                     required=True,
-                    help="Directory of JSON item files (../docs/items-json)")
+                    help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items_complete.json) ")
     args = vars(ap.parse_args())
     
     # Start processing    
     print(">>> Starting processing AllItems...")
-    ai = AllItems.AllItems(args["dir"])
+    ai = AllItems.AllItems(args["input"])
     print(">>> Finished processing AllItems...")
 
     for item in ai:

@@ -42,8 +42,8 @@ import ItemBonuses
 ###############################################################################
 # AllItems object
 class AllItems(object):
-    def __init__(self, dir):
-        self.fis = glob.glob(dir + "*")
+    def __init__(self, input_data):
+        self.input_data = input_data
         self.all_items = list()
         self.all_items_dict = dict()
         self.load_all_items()
@@ -69,18 +69,35 @@ class AllItems(object):
         return self.all_items_dict.values()
 
     def load_all_items(self):
-        # Loop through every item
+        # Counter
         count = 0
-        for json_file in self.fis:
-            # Load JSON file to allitems dict
-            # sys.stdout.write(">>> Processing: %d\r" % count)
-            # print(json_file)
+
+        # Handle input_data (either items-json dir, or items_complete.json)
+        if os.path.isdir(self.input_data):
+            fis = glob.glob(self.input_data + "*")
+            # Loop through every item
+            for json_file in fis:
+                # Load JSON file to allitems dict
+                sys.stdout.write(">>> Processing: %d\r" % count)
+                with open(json_file) as f:
+                    temp = json.load(f)
+                    # Load the item using the ItemDefinition class
+                    id = ItemDefinition.ItemDefinition()
+                    item = id.load_item(temp)
+                    # Add item to list and dict
+                    self.all_items.append(item)
+                    self.all_items_dict[item.id] = item
+                    count += 1
+
+        elif os.path.isfile(self.input_data):
+            json_file = self.input_data
             with open(json_file) as f:
                 temp = json.load(f)
-                # Load the item using the ItemDefinition class
-                id = ItemDefinition.ItemDefinition()
-                item = id.load_item(temp)
-                # Add item to list and dict
-                self.all_items.append(item)
-                self.all_items_dict[item.id] = item
-                count += 1
+                for entry in temp:
+                    # Load the item using the ItemDefinition class
+                    id = ItemDefinition.ItemDefinition()
+                    item = id.load_item(temp[entry])
+                    # Add item to list and dict
+                    self.all_items.append(item)
+                    self.all_items_dict[item.id] = item
+                    count += 1                    

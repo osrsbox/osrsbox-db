@@ -54,12 +54,12 @@ class JoinSingleJSONFiles(object):
             with open(fi) as f:
                 json_obj = json.load(f)
     	        # Set the following properties to itemscraper default (to ease comparison)
-                json_obj["quest_item"] = False
-                json_obj["examine"] = None
-                json_obj["weight"] = -1
-                json_obj["url"] = None
-                json_obj["buy_limit"] = -1
-                json_obj["release_date"] = None
+                # json_obj["quest_item"] = False
+                # json_obj["examine"] = None
+                # json_obj["weight"] = -1
+                # json_obj["url"] = None
+                # json_obj["buy_limit"] = -1
+                # json_obj["release_date"] = None
                 # sys.stdout.write(">>> Processing: %d of %d\r" % (count, total))
                 self.allitems_db[json_obj["id"]] = json_obj
                 count += 1
