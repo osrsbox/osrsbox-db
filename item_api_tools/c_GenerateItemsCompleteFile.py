@@ -7,9 +7,8 @@ Website: osrsbox.com
 Date:    2018/12/18
 
 Description:
-Simple caller script to generate seperate JSON files for different
-item slots. For example, the database is scanned and every item that
-has the equipment slot of head is added to a file called items_head.json
+Simple caller script to join all JSON files in items-json folder to a 
+single file called items_complete.json
 
 Copyright (c) 2018, PH01L
 
@@ -41,7 +40,6 @@ import AllItems
 import ItemDefinition
 import ItemBonuses
 
-import collections
 import json
 
 ################################################################################
@@ -58,28 +56,17 @@ if __name__=="__main__":
     print(">>> Reading in database contents...")
     ai = AllItems.AllItems(args["input"])
 
-    # Create output directory for files
-    print(">>> Create output directory...")
-    directory = "items-json-slot"
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    # Dict to store all items
+    items = dict()
 
-    # Default dict (list) for all item slots
-    items = collections.defaultdict(list)
-
-    # Fetch every equipable item with an item slot value
-    print(">>> Processing data by item slot...")
+    # Fetch every item and add to items dict
+    print(">>> Processing database contents...")
     for item in ai:
-        if item.equipable:
-            if item.equipment.slot is not None:
-                items[item.equipment.slot].append(item)
+        json_item_out = item.construct_json()
+        items[item.id] = json_item_out
 
-    # Process each item found, and 
-    for slot in items:
-        json_out = dict()
-        for item in items[slot]:
-            json_item_out = item.construct_json()
-            json_out[item.id] = json_item_out
-        out_fi = "items-json-slot" + os.sep + "items_" + slot + ".json"
-        with open(out_fi, "w") as f:
-            json.dump(json_out, f)
+    # Save all items to items_complete.json
+    print(">>> Saving items_complete.json file to pwd...")
+    out_fi = "items_complete.json"
+    with open(out_fi, "w") as f:
+        json.dump(items, f)

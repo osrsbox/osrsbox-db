@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/10
+Date:    2018/12/18
 
 Description:
 ItemDefinition is a class to load and manipulate osrsbox-db items-json
@@ -36,12 +36,6 @@ import sys
 import json
 import datetime
 import collections
-import logging
-import re
-
-# These require pip install
-import mwparserfromhell
-import dateparser
 
 # Import ItemBonuses and ItemEquipment class
 sys.path.append(os.getcwd())
@@ -54,48 +48,37 @@ def _strcast(val):
     """ Convert value to string. """
     if val is None:
         return None
-    return str(val)
+    else:
+        return str(val)
 
 def _intcast(val):
     """ Convert input to integer. """
     if val is None:
         return None
-    if isinstance(val, int):
-        return val
-    if isinstance(val, str):
-        if val[0] == "-":
-            if val[1:].isdigit():
-                return int(val)
-        else:
-            if val.isdigit():
-                return int(val)
+    else:
+        return int(val)
 
 def _floatcast(val):
     """ Convert input to float. """
     if val is None:
         return None
-    if isinstance(val, float):
-        return val
-    if isinstance(val, str):
-        return float(val)                
+    else:
+        return float(val)             
                 
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
         return None
-    elif val in ["True", "true", True, "Yes", "yes"]:
-        return True
-    elif val in ["False", "false", False, "No", "no"]:
-        return False   
+    else:
+        return bool(val)
 
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
     if val is None:
         return None
-    elif isinstance(val, datetime.date):
-        return val.strftime("%d %B %Y")
-    date = datetime.datetime.strptime(val, "%d %B %Y")   
-    return date.strftime("%d %B %Y")        
+    else:
+        date = datetime.datetime.strptime(val, "%d %B %Y")   
+        return date.strftime("%d %B %Y")        
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -103,9 +86,6 @@ def _listcast(val):
         return None
     elif isinstance(val, list):
         return val
-    elif isinstance(val, str):
-        temp_list = list()
-        return temp_list.append(val)
 
 ###############################################################################
 # ItemDefinition object
@@ -271,7 +251,6 @@ class ItemDefinition(object):
     def load_item(self, input):
         for prop in self.properties:
             setattr(self, prop, input[prop]) 
-            # setattr(x, 'y', v) is equivalent to x.y = v
 
         if self.equipable:
             # Item Bonuses
@@ -345,10 +324,11 @@ if __name__=="__main__":
     assert _intcast(-1) == -1
     assert _intcast("-1") == -1
   
-    assert _boolcast("false") == False
+    assert _boolcast(False) == False
     assert _boolcast("True")
     assert _boolcast("true")
     assert _boolcast(False) == False
+    assert _boolcast(True) != False
     assert _boolcast(True)
 
     assert _strcast(1)

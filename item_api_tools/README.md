@@ -12,7 +12,6 @@ This folder hosts the code used to interact with the item database. This code is
     - `-i ..\docs\items-json`: This directory should be taken from the docs directory
 - Requirements:
     - Python 3
-    - `dateparser`
 
 #### ItemDefinition.py
 

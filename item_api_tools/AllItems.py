@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/08
+Date:    2018/12/18
 
 Description:
 AllItems is a class to handle multiple osrsbox-db item-json files or a

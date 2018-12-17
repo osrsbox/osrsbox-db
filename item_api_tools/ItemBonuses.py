@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/10
+Date:    2018/12/18
 
 Description:
 ItemBonuses is a class to process handle the item bonuses for OSRS items
@@ -40,20 +40,8 @@ def _intcast(val):
     """ Convert input to integer. """
     if val is None:
         return None
-    if isinstance(val, int):
-        return val
-    if isinstance(val, str):
-        if val == "":
-            return (0)
-        if val[0] == "-":
-            if val[1:].isdigit():
-                return int(val)
-        if val[0] == "+":
-            if val[1:].isdigit():
-                return int(val)                
-        else:
-            if val.isdigit():
-                return int(val)
+    else:
+        return int(val)
 
 ###############################################################################
 # ItemBonuses object
