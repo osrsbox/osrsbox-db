@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/11/30
+Date:    2018/12/17
 
 Description:
 Extract all quest titles on the OSRS Wiki
@@ -42,7 +42,9 @@ def query_category_items(category):
     for result in query_category_items_callback({'list': 'categorymembers'}, category):
         # Process result data
         for r in result['categorymembers']:
-            print(r["title"])
+            # print(r["title"])
+            fi.write(r["title"])
+            fi.write("\n")
 
 def query_category_items_callback(request, category):
     request['action'] = 'query'
@@ -71,7 +73,10 @@ def query_category_items_callback(request, category):
 
 ################################################################################
 if __name__=="__main__":   
-    # Start processing    
+    # Start processing
+    out_fi = "extract_all_quests.txt"
+    fi = open(out_fi, "w")        
     query_category_items("Quests")
     query_category_items("Miniquests")
     query_category_items("Special_quests")
+    fi.close()

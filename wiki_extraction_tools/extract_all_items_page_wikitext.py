@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/11/30
+Date:    2018/12/17
 
 Description:
 Extract all Wikia "Infobox Items" and "Infobox bonuses" 
@@ -73,11 +73,49 @@ def extract_InfoboxItem(page_name):
         if "switch infobox" in template_name:
             bonuses[page_name].append(str(template))      
 
+def query_recent_changes():
+    for result in query_recent_changes_callback({'list': 'recentchanges'}):
+        # Process result data
+        for r in result['recentchanges']:
+            print(r)
+            recent_page_changes.append(r["title"])
+
+def query_recent_changes_callback(request):
+    request['action'] = 'query'
+    request['format'] = 'json'
+    request['rcend'] = '1544400000' # Change this in future
+    request['rclimit'] = '20'
+    lastContinue = {}
+    while True:
+        # Clone original request
+        req = request.copy()
+        # Modify the original request
+        # Insert values returned in the 'continue' section
+        req.update(lastContinue)
+        # Call API
+        result = requests.get('https://oldschool.runescape.wiki/api.php', headers=custom_agent, params=req).json()
+        if 'error' in result:
+            print(">>> ERROR!")
+            break
+        if 'warnings' in result:
+            print(result['warnings'])
+        if 'query' in result:
+            yield result['query']
+        if 'continue' not in result:
+            break
+        lastContinue = result['continue']
+
 ################################################################################
 if __name__=="__main__":   
     # Start processing
     all = defaultdict(list)
     bonuses = defaultdict(list)
+
+    # Extract recent changes from the wiki
+    # NOTE: Not currently implemented - seemed a lot of requests
+    # recent_page_changes = list()
+    # query_recent_changes()
+    # print("Finished querying recent page changes...")
 
     # Populate all items (items and other) into a dict
     # Maps item name to None, dict is just for unique strings
@@ -101,11 +139,11 @@ if __name__=="__main__":
         count += 1
     
     # Write all extracted wikitext to a JSON file
-    fi_out = "extract_all_items_page_wikitext.txt"
+    fi_out = "extract_all_items_page_wikitext.json"
     with open(fi_out, "w") as f:
         json.dump(all, f)
 
     # Write all extracted wikitext to a JSON file
-    fi_out = "extract_all_items_page_wikitext_bonuses.txt"
+    fi_out = "extract_all_items_page_wikitext_bonuses.json"
     with open(fi_out, "w") as f:
         json.dump(bonuses, f)

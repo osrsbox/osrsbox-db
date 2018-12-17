@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/01
+Date:    2018/12/17
 
 Description:
 Extract all categories on the OSRS Wiki
@@ -42,7 +42,9 @@ def query_category_items():
     for result in query_category_items_callback({'generator': 'allcategories'}):
         # Process result data
         for r in result['pages']:
-            print(result['pages'][r]["title"])
+            #print(result['pages'][r]["title"])
+            fi.write(result['pages'][r]["title"])
+            fi.write("\n")
 
 def query_category_items_callback(request):
     request['action'] = 'query'
@@ -71,5 +73,8 @@ def query_category_items_callback(request):
 
 ################################################################################
 if __name__=="__main__":   
-    # Start processing    
+    # Start processing
+    out_fi = "extract_all_categories.txt"
+    fi = open(out_fi, "w")    
     query_category_items()
+    fi.close()

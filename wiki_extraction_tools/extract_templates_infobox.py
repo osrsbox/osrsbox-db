@@ -68,7 +68,7 @@ if __name__=="__main__":
     infobox_construction = defaultdict(list)
     infobox_pet = defaultdict(list)
     
-    with open("extract_all_items_page_wikitext.txt") as f:
+    with open("extract_all_items_page_wikitext.json") as f:
         wikitext_dict = json.load(f)
 
     for item_name in wikitext_dict:
@@ -81,15 +81,15 @@ if __name__=="__main__":
     print("Total infobox_construction: %d" % len(infobox_construction))
     print("Total infobox_pet: %d" % len(infobox_pet))
 
-    fi_out = "extract_templates_InfoboxItems.txt"
+    fi_out = "extract_templates_InfoboxItems.json"
     with open(fi_out, "w") as f:
         json.dump(infobox_items, f)
-    fi_out = "extract_templates_InfoboxBonuses.txt"
+    fi_out = "extract_templates_InfoboxBonuses.json"
     with open(fi_out, "w") as f:
         json.dump(infobox_bonuses, f)
-    fi_out = "extract_templates_InfoboxConstruction.txt"
+    fi_out = "extract_templates_InfoboxConstruction.json"
     with open(fi_out, "w") as f:
         json.dump(infobox_construction, f)
-    fi_out = "extract_templates_InfoboxPet.txt"
+    fi_out = "extract_templates_InfoboxPet.json"
     with open(fi_out, "w") as f:
         json.dump(infobox_pet, f)        
