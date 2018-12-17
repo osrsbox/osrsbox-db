@@ -311,7 +311,7 @@ class ItemDefinition(object):
         self._url = _strcast(value)
 
     def populate(self):
-        sys.stdout.write(">>> Processing: %s\r" % self.itemID)
+        # sys.stdout.write(">>> Processing: %s\r" % self.itemID)
 
         # Start section in logger
         self.logger.debug("============================================ START")
@@ -442,6 +442,9 @@ class ItemDefinition(object):
         #     changed = self.compare_JSON_files()
         # if changed:
         #     print("CHANGED")
+
+        # Check modified items
+        self.compare_JSON_files()
 
         # Actually output a JSON file, comment out for testing
         self.export_pretty_json()
@@ -714,73 +717,24 @@ class ItemDefinition(object):
         examine = examine.replace("(Used in Olaf's Quest)", "")
         examine = examine.replace("(Used in the Ghost Ahoy quest)", "")
 
-        # # Specific fix for clue scroll items
-        # examine_list = list()
-        # if self.name == "Clue scroll (hard)":
-        #     examine = examine.replace("\n", "")
-        #     examine = examine.replace("(Player's Name)", "<players-name>")
-        #     examine_list = re.split("<br/>|<br />", examine)         
-        #     examine_list = [a+b for a, b in zip(examine_list[::2],examine_list[1::2])]
-        # if self.name == "Clue scroll (elite)":
-        #     examine_list.append(examine.split("\n")[0])
-        #     examine_list.append("Sherlock: A clue suggested by <players-name>! ")
+        # TODO: Fix remaining examine text when not item specific
+        # Working code in progress below
 
-        # # Start splitting multiple examine texts to a list
-        # elif ", <br>" in examine:
-        #     examine_list = examine.split(", <br>")    
-        # elif "<br>\n" in examine:
-        #     examine_list = examine.split("<br>\n")
-        # elif "<br />\n" in examine:
-        #     examine_list = examine.split("<br />\n")                     
-        # elif ",<br>" in examine:
-        #     examine_list = examine.split(",<br>")
-        # elif ",<br/>" in examine:
-        #     examine_list = examine.split(",<br/>") 
-        # elif ", <br/>" in examine:
-        #     examine_list = examine.split(", <br/>")             
-        # elif ",<br />" in examine:
-        #     examine_list = examine.split(",<br />")    
-        # elif ", <br />" in examine:
-        #     examine_list = examine.split(", <br />")       
-        # elif "<br>" in examine:
-        #     examine_list = examine.split("<br>")
-        # elif "<br >" in examine:
-        #     examine_list = examine.split("<br >")
-        # elif "<br/>" in examine:
-        #     examine_list = examine.split("<br/>")
-        # elif "<br />" in examine:
-        #     examine_list = examine.split("<br />")
-        # elif "\n" in examine:
-        #     examine_list = examine.split("\n")                
-
-        # # Quick and dirty fix for two different items
-        # if self.name == "Key (medium)":
-        #     examine_list = ["Inventory: This kitten seems to like you", "A key to some drawers.", "A key to unlock a treasure chest."]
-        # if self.wiki_name == "Cat":
-        #     examine_list = ["Inventory (Kitten): This kitten seems to like you.", "Inventory (Cat): This cat definitely likes you.", "Inventory (Overgrown): This cat is so well fed it can hardly move.", "Follower (Kitten): A friendly little pet.", "Follower (Cat): A fully grown feline.", "Follower (Overgrown): A friendly, not-so-little pet."]
-
-        # # Start making a final list
-        # examine_list_fin = list()
-        # if examine_list:
-        #     for examine_name in examine_list:
-        #         examine_name = examine_name.strip()
-        #         if "(Whole)" in examine_name:
-        #             examine_name = examine_name.replace("(Whole)", "")
-        #             examine_name = "Whole: " + examine_name
-        #         if "(Half)" in examine_name:
-        #             examine_name = examine_name.replace("(Half)", "")
-        #             examine_name = "Half: " + examine_name
-        #         if "(uncharged)" in examine_name:
-        #             examine_name = examine_name.replace("(uncharged)", "")
-        #             examine_name = "Uncharged: " + examine_name
-        #         if "(charged)" in examine_name:
-        #             examine_name = examine_name.replace("(charged)", "")
-        #             examine_name = "Charged: " + examine_name
-        #         if examine_name == "":
-        #             continue              
-        #         examine_list_fin.append(examine_name)
-        # else:
-        #     examine_list_fin.append(examine.strip())
+        # # Split examine text if required
+        # if "<br" in examine and "clue scroll" not in self.name.lower():
+        #     worked = True
+        #     if "<br />" in examine:
+        #         examine_list = examine.split("<br />")
+        #         examine_list = [e.strip() for e in examine_list]
+        #         examine = "; ".join(examine_list)
+        #     elif "<br/>" in examine:
+        #         examine_list = examine.split("<br/>")
+        #         examine_list = [e.strip() for e in examine_list]
+        #         examine = "; ".join(examine_list)
+        #     elif "<br>" in examine:
+        #         examine_list = examine.split("<br>")
+        #         examine_list = [e.strip() for e in examine_list]
+        #         examine = "; ".join(examine_list)
 
         # Special cirumstances for clue scrolls:
         if self.name == "Clue scroll (easy)":
@@ -1173,13 +1127,13 @@ class ItemDefinition(object):
         # Print JSON to console
         self.construct_json()
         json_obj = json.dumps(self.json_out)
-        #print(json_obj)
+        print(json_obj)
 
     def print_pretty_json(self):
         # Pretty print JSON to console
         self.construct_json()
         json_obj = json.dumps(self.json_out, indent=4)
-        #print(json_obj)
+        print(json_obj)
 
     def print_debug_json(self):
         # Print JSON to log file
@@ -1238,14 +1192,20 @@ class ItemDefinition(object):
         # Create JSON out object to compare:
         self.construct_json()
 
+        changed = False
+
         # Load existing db entry
         fi_name = ".." + os.sep + "docs" + os.sep + "items-json" + os.sep + self.itemID + ".json"
-        with open(fi_name) as f:
-            existing_json_fi = json.load(f)
+        try:
+            with open(fi_name) as f:
+                existing_json_fi = json.load(f)
+        except FileNotFoundError: 
+            print("+++++++++++++++++++++++++ NEW:", self.itemID, self.name)
+            self.print_pretty_json()
+            return changed
         
         ### Compare
         # First loop checks, second loop prints
-        changed = False
         for prop in self.properties:
             if self.json_out[prop] != existing_json_fi[prop]:
                 changed = True
@@ -1261,7 +1221,7 @@ class ItemDefinition(object):
                             break                            
 
         if changed:
-            print("+++++++++++++++++++++++++", self.itemID, self.name)
+            print("+++++++++++++++++++++++++ CHANGED:", self.itemID, self.name)
             for prop in self.properties:
                 if self.json_out[prop] != existing_json_fi[prop]:
                     print("+++ MISMATCH!:", prop)
@@ -1272,7 +1232,8 @@ class ItemDefinition(object):
                     if self.json_out["bonuses"][prop] != existing_json_fi["bonuses"][prop]:
                         print("+++ BONUSES MISMATCH!:", prop)
                         print("NEW:", type(self.json_out["bonuses"][prop]), self.json_out["bonuses"][prop])
-                        print("OLD:", type(existing_json_fi["bonuses"][prop]), existing_json_fi["bonuses"][prop])   
+                        print("OLD:", type(existing_json_fi["bonuses"][prop]), existing_json_fi["bonuses"][prop])
+                for prop in self.itemEquipment.properties:                          
                     if self.json_out["equipment"][prop] != existing_json_fi["equipment"][prop]:
                         print("+++ equipment MISMATCH!:", prop)
                         print("NEW:", type(self.json_out["equipment"][prop]), self.json_out["equipment"][prop])

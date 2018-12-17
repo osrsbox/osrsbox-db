@@ -121,18 +121,18 @@ if __name__=="__main__":
 
     wikia_extraction_path = ".." + os.sep + "wiki_extraction_tools" + os.sep
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxItems.txt") as f:
+    with open(wikia_extraction_path + "extract_templates_InfoboxItems.json") as f:
         all_wikia_items = json.load(f)
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxBonuses.txt") as f:
+    with open(wikia_extraction_path + "extract_templates_InfoboxBonuses.json") as f:
         all_wikia_items_bonuses = json.load(f)
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxConstruction.txt") as f:
+    with open(wikia_extraction_path + "extract_templates_InfoboxConstruction.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
             all_wikia_items[k] = v
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxPet.txt") as f:
+    with open(wikia_extraction_path + "extract_templates_InfoboxPet.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
             all_wikia_items[k] = v

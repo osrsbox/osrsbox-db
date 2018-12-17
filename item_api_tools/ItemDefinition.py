@@ -257,7 +257,7 @@ class ItemDefinition(object):
         return self._examine
     @examine.setter
     def examine(self, value):
-        self._examine = _listcast(value)
+        self._examine = _strcast(value)
 	           
     @property
     def url(self):
