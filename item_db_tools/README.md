@@ -1,4 +1,6 @@
-# osrsbox-db: Item database population tools
+# osrsbox-db: Item Database API Tools
+
+This folder hosts the code used to build the osrsbox-db. This process is fully automated, so that no additional modification of the output JSON files is required. _Warning:_ This code is currently is a mess! I would not recommend using it, and it needs a tidy up for anyone else but myself to use! But feel free to use it as a reference or to get an idea of how the database is populated.
 
 ## ProcessItems.py
 
@@ -15,7 +17,7 @@
 
 ## ItemDefinition.py
 
-- Purpose: Handle construction of a single OSRS item
+- Purpose: Class to handle construction of a single OSRS item
 - Each item is build from:
     - The raw ItemDefinition data taken from the ItemScraper plugin using RuneLite
     - Data extracted from the OSRS Wiki
@@ -23,6 +25,12 @@
 
 ## ItemBonuses.py
 
-- Purpose: Handle construction of equipment bonuses for a single OSRS item
+- Purpose: Class to handle construction of equipment bonuses for a single OSRS item
 - Each item bonuses are only build for equipable items
+- All data is sourced from OSRS Wiki files
+
+## ItemEquipment.py
+
+- Purpose: Class to handle construction of equipment metadata for a single OSRS item
+- Each item equipment are only build for equipable items
 - All data is sourced from OSRS Wiki files

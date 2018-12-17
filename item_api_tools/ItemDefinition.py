@@ -336,7 +336,8 @@ class ItemDefinition(object):
             bonuses_in_json = self.bonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
             equipment_in_json = self.equipment.construct_json()
-            self.json_out["equipment"] = equipment_in_json            
+            self.json_out["equipment"] = equipment_in_json
+        return self.json_out            
 
 ################################################################################
 if __name__=="__main__":

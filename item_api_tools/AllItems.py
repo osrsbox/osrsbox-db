@@ -7,7 +7,8 @@ Website: osrsbox.com
 Date:    2018/12/08
 
 Description:
-ProcessItems is a class to handle multiple osrsbox-db item-json files.
+AllItems is a class to handle multiple osrsbox-db item-json files or a
+single items_complete.json file.
 
 Copyright (c) 2018, PH01L
 
