@@ -56,4 +56,4 @@ if __name__=="__main__":
 
     for item in ai:
         if item.name is not None:
-            print(item.id, item.name)
+            print(item.id, item.buy_limit)
