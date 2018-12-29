@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/10
+Date:    2018/12/29
 
 Description:
 ProcessItems is a class to amalgamate OSRS item information from a variety
@@ -14,7 +14,7 @@ class sources information from the following locations:
 1) Base item information from my ItemScraper RuneLite plugin. The ItemScraper
 plugin returns a file named allitems.json which contains all the item 
 information from the OSRS Cache
-2) Any remaining information from the OSRS Wikia which is fetched using the 
+2) Any remaining information from the OSRS wiki which is fetched using the 
 MediaWiki API using my custom Python scripts and classes
 
 Output: The output from this program is a folder called items-json which
@@ -60,12 +60,12 @@ import ItemDefinition
 ###############################################################################
 # ProcessItems object
 class ProcessItems(object):
-    def __init__(self, json_file, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names, item_skill_requirements):
+    def __init__(self, json_file, all_wiki_items, all_wiki_items_bonuses, all_wiki_buylimits, all_wiki_normalized_names, item_skill_requirements):
         self.json_file = json_file
-        self.all_wikia_items = all_wikia_items
-        self.all_wikia_items_bonuses = all_wikia_items_bonuses
-        self.all_wikia_buylimits = all_wikia_buylimits
-        self.all_wikia_normalized_names = all_wikia_normalized_names
+        self.all_wiki_items = all_wiki_items
+        self.all_wiki_items_bonuses = all_wiki_items_bonuses
+        self.all_wiki_buylimits = all_wiki_buylimits
+        self.all_wiki_normalized_names = all_wiki_normalized_names
         self.item_skill_requirements = item_skill_requirements
         self.allitems = dict()
         self.allitemdefs = dict()
@@ -97,7 +97,7 @@ class ProcessItems(object):
         item_exists_in_db = False
         if itemID in self.already_processed:
             item_exists_in_db = True
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wikia_items, self.all_wikia_items_bonuses, self.all_wikia_buylimits, self.all_wikia_normalized_names, item_exists_in_db, self.item_skill_requirements) 
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wiki_items, self.all_wiki_items_bonuses, self.all_wiki_buylimits, self.all_wiki_normalized_names, item_exists_in_db, self.item_skill_requirements) 
         item = itemdef.populate()
         if item:
             self.allitemdefs[itemID] = item 
@@ -119,42 +119,43 @@ if __name__=="__main__":
     if os.path.exists("ItemDefinition.log"):
         os.remove("ItemDefinition.log")
 
-    wikia_extraction_path = ".." + os.sep + "wiki_extraction_tools" + os.sep
+    extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
+    extraction_path_other = ".." + os.sep + "extraction_tools_other" + os.sep
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxItems.json") as f:
-        all_wikia_items = json.load(f)
+    with open(extraction_path_wiki + "extract_templates_InfoboxItems.json") as f:
+        all_wiki_items = json.load(f)
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxBonuses.json") as f:
-        all_wikia_items_bonuses = json.load(f)
+    with open(extraction_path_wiki + "extract_templates_InfoboxBonuses.json") as f:
+        all_wiki_items_bonuses = json.load(f)
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxConstruction.json") as f:
+    with open(extraction_path_wiki + "extract_templates_InfoboxConstruction.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
-            all_wikia_items[k] = v
+            all_wiki_items[k] = v
 
-    with open(wikia_extraction_path + "extract_templates_InfoboxPet.json") as f:
+    with open(extraction_path_wiki + "extract_templates_InfoboxPet.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
-            all_wikia_items[k] = v
+            all_wiki_items[k] = v
 
-    all_wikia_buylimits = dict()
-    with open(wikia_extraction_path + "all_buylimits.txt") as f:
+    all_wiki_buylimits = dict()
+    with open(extraction_path_other + "all_buy_limits.txt") as f:
         for l in f:
             l = l.strip()
             l = l.split("|")
-            all_wikia_buylimits[l[0]] = l[1]    
+            all_wiki_buylimits[l[0]] = l[1]    
 
-    all_wikia_normalized_names = dict()
-    with open(wikia_extraction_path + "normalized_names.txt") as f:
+    all_wiki_normalized_names = dict()
+    with open(extraction_path_other + "normalized_names.txt") as f:
         for l in f:
             l = l.strip()
             if "#" in l or l.startswith("TODO"):
                 continue
             l = l.split("|")
-            all_wikia_normalized_names[l[0]] = [l[1], l[2], l[3]]
+            all_wiki_normalized_names[l[0]] = [l[1], l[2], l[3]]
 
     item_skill_requirements = dict()
-    with open(wikia_extraction_path + "item_skill_requirements.json") as f:
+    with open(extraction_path_other + "item_skill_requirements.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
             item_skill_requirements[k] = v            
@@ -170,10 +171,10 @@ if __name__=="__main__":
 
     # Next, build the ProcessItems class to handle all items
     pi = ProcessItems(args["file"],
-                      all_wikia_items,
-                      all_wikia_items_bonuses,
-                      all_wikia_buylimits,
-                      all_wikia_normalized_names,
+                      all_wiki_items,
+                      all_wiki_items_bonuses,
+                      all_wiki_buylimits,
+                      all_wiki_normalized_names,
                       item_skill_requirements)
     # Check for already processes files in items-json (in this dir)
     pi.determine_already_processed()
