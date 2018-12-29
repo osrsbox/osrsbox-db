@@ -1,5 +1,7 @@
 # osrsbox-db: OSRS Wiki extraction tools
 
+Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data that is somewhat-regularly update
+
 ## General workflow for updating:
 
 - Start by extracting names for OSRS Wiki pages that need to be extracted

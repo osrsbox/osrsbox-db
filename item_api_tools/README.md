@@ -1,29 +1,15 @@
 # osrsbox-db: Item Database API Tools
 
-This folder hosts the code used to interact with the item database. This code is tested and works pretty well for a short and simple implementation. 
+This folder hosts the code used to interact with the item database. This code is tested and works pretty well for a short and simple implementation. The only requirement to use the API is Python 3. It has not been tested using Python 2.7.
 
 ## API Classes
 
-#### AllItems.py
+The Python API is comprised as a collection of Python classes. This code provides the ability to load and manage the database of items. When an item is loaded, various checks are performed to make sure all the properties have correct data types. In addition, there is a class to handle every object in the database, to make processing simpler. The four Python classes are described below.
 
-- Purpose: Class to handle and store all items in the database
-- This script takes one command line argument:
-    - `-i ..\docs\items_complete.json`: This file should be taken from the docs directory
-    - `-i ..\docs\items-json`: This directory should be taken from the docs directory
-- Requirements:
-    - Python 3
-
-#### ItemDefinition.py
-
-- Purpose: Class to handle a single item
-
-#### ItemBonuses.py
-
-- Purpose: Class to handle a single item bonuses
-
-#### ItemEquipment.py
-
-- Purpose: Class to handle a single item equipment metadata
+1. `AllItems.py`: Handles (loads and stores) all items in the database
+1. `ItemDefinition.py`: Handles an instance of a single item from the database
+1. `ItemBonuses.py`: Handles an instance of the item bonuses of a single item from the database (this is for equipable items only)
+1. `ItemEquipment.py`: Handles an instance of the item equipment properties of a single item from the database (this is for equipable items only)
 
 ## API Tools
 

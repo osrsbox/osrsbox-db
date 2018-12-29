@@ -1,5 +1,7 @@
 # osrsbox-db: OSRS Other data extraction tools
 
+Collection of Python tools to extract data from a variety of sources including equipable item skill requirements, grand exchange buy limits, and name normalization for more efficient OSRS Wiki lookups
+
 ## all_buy_limits.py
 
 - A simple script to parse the `ge_limits.json` file from the RuneLite client, compare then against the osrsbox-db. The goal is to convert the item ID to name, and extract the buy limit data with it.
