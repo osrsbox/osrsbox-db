@@ -100,6 +100,7 @@ class ItemDefinition(object):
             "stackable" : None,
             "noted" : None,
             "noteable" : None,
+            "linked_id" : None,
             "equipable" : None,
             "cost" : None,
             "lowalch" : None,
@@ -161,6 +162,13 @@ class ItemDefinition(object):
     @noteable.setter
     def noteable(self, value):
         self._noteable = _boolcast(value)
+
+    @property
+    def linked_id(self):
+        return self._linked_id
+    @linked_id.setter
+    def linked_id(self, value):
+        self._linked_id = _intcast(value)
 
     @property
     def equipable(self):
@@ -301,6 +309,7 @@ class ItemDefinition(object):
         self.json_out["stackable"] = self.stackable
         self.json_out["noted"] = self.noted
         self.json_out["noteable"] = self.noteable
+        self.json_out["linked_id"] = self.linked_id
         self.json_out["equipable"] = self.equipable
         self.json_out["cost"] = self.cost
         self.json_out["lowalch"] = self.lowalch

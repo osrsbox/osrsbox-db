@@ -147,6 +147,7 @@ class ItemDefinition(object):
             "stackable" : None,
             "noted" : None,
             "noteable" : None,
+            "linked_id" : None,
             "equipable" : None,
             "cost" : None,
             "lowalch" : None,
@@ -225,6 +226,13 @@ class ItemDefinition(object):
     @noteable.setter
     def noteable(self, value):
         self._noteable = _boolcast(value)
+
+    @property
+    def linked_id(self):
+        return self._linked_id
+    @linked_id.setter
+    def linked_id(self, value):
+        self._linked_id = _intcast(value)
 
     @property
     def equipable(self):
@@ -325,6 +333,7 @@ class ItemDefinition(object):
         self.stackable = self.itemJSON["stackable"]
         self.noted = self.itemJSON["noted"]
         self.noteable = self.itemJSON["noteable"]
+        self.linked_id = self.itemJSON["linked_id"]
         self.equipable = self.itemJSON["equipable"]
         self.cost = self.itemJSON["cost"]
         self.lowalch = self.itemJSON["lowalch"]
@@ -444,7 +453,7 @@ class ItemDefinition(object):
         #     print("CHANGED")
 
         # Check modified items
-        self.compare_JSON_files()
+        # self.compare_JSON_files()
 
         # Actually output a JSON file, comment out for testing
         self.export_pretty_json()
@@ -466,6 +475,10 @@ class ItemDefinition(object):
             self.logger.debug("  > id: %s" % self.id)
             self.url = "https://oldschool.runescape.wiki/w/" + self.name
             self.wiki_name = self.name
+            try:
+                self.status_code = int(self.all_wikia_normalized_names[str(self.id)][2])
+            except KeyError:
+                pass
             return True
         elif str(self.id) in self.all_wikia_normalized_names:
             self.logger.debug(">>> ITEM FOUND IN NORMALIZED:")
@@ -604,13 +617,17 @@ class ItemDefinition(object):
 
         # Some items have Inventory/Equipped weights:
         # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
-        if "Inventory" in weight:
+        if "inventory" in weight.lower():
             weight = weight.replace("'''", "")
             weight = weight.replace("{", "")
             weight = weight.replace("}", "")
-            weight_list = weight.split("<br>")
+            if "<br>" in weight:
+                weight_list = weight.split("<br>")
+            if "<br />" in weight:
+                weight_list = weight.split("<br />")
             weight = weight_list[0]
             weight = weight.replace("Inventory:", "")
+            weight = weight.replace("In inventory:", "")
             weight = weight.strip()
 
         if ">" in weight:
@@ -1170,6 +1187,7 @@ class ItemDefinition(object):
         self.json_out["stackable"] = self.stackable
         self.json_out["noted"] = self.noted
         self.json_out["noteable"] = self.noteable
+        self.json_out["linked_id"] = self.linked_id
         self.json_out["equipable"] = self.equipable
         self.json_out["cost"] = self.cost
         self.json_out["lowalch"] = self.lowalch
