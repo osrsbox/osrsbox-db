@@ -35,8 +35,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "1.1.0"
 
 custom_agent = {
-    'User-Agent': 'osrsbox-agent',
-    'From': 'phoil@osrsbox.com' 
+    'User-Agent': 'some-agent',
+    'From': 'name@domain.com' 
 }
 
 import os
