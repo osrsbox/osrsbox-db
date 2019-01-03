@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/17
+Date:    2019/01/04
 
 Description:
 Extract all other items on the OSRS Wiki
@@ -42,7 +42,7 @@ def query_category_items(category):
     for result in query_category_items_callback({'list': 'categorymembers'}, category):
         # Process result data
         for r in result['categorymembers']:
-            # print(r["title"])
+            print(r["title"])
             fi.write(r["title"])
             fi.write("\n")
 

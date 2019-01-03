@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/17
+Date:    2019/01/047
 
 Description:
 Extract all titles of Category:Items pages on the OSRS Wiki
@@ -44,7 +44,7 @@ def query_category_items():
     for result in query_category_items_callback({'list': 'categorymembers'}):
         # Process result data
         for r in result['categorymembers']:
-            # print(r["title"])
+            print(r["title"])
             fi.write(r["title"])
             fi.write("\n")
     fi.close()            
