@@ -4,13 +4,14 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/17
+Date:    2018/01/10
 
 Description:
-Extract all Wikia "Infobox Items" and "Infobox bonuses" 
-from a list of page titles. The inputs required are:
-extract_all_items.txt from extract_all_items.py
-extract_all_other.txt from extract_all_other.txt
+Extract all wikitext from all items pages. The required input is the 
+"extract_all_items.txt" file from the "extract_all_items.py" script. This
+script will extract all wikitext to "extract_all_items_page_wikitext"
+directory for later processing. Item page wiki text are saved as separate
+JSON files with random names.
 
 Copyright (c) 2018, PH01L
 
@@ -40,110 +41,75 @@ custom_agent = {
 }
 
 import os
-import json
 import sys
+import json
+import glob
+import random
+import string
 import requests
 import mwparserfromhell
-from collections import defaultdict
 
-def extract_InfoboxItem(page_name):
+def extract_wikitext(page_name):
     page_name = page_name.replace("&", "%26")
     page_name = page_name.replace("+", "%2B")
     # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
     url = "https://oldschool.runescape.wiki/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
     result = requests.get(url, headers=custom_agent)
     data = result.json()
+
     try:
         # Extract the actual content
         input = data["parse"]["wikitext"]["*"].encode("utf-8")
     except KeyError:
-        return False
-    # Parse actual content using mwparser
-    wikicode = mwparserfromhell.parse(input)
-    # Dump the entire wikitext to a dict. The dict maps:
-    # the item name (page_name) to wikitext object as a string
-    all[page_name].append(str(wikicode))
+        # Or return if cannot extract wikitext from page
+        return
 
-    templates = wikicode.filter_templates()
-    for template in templates:
-        template_name = template.name.strip()
-        template_name = template_name.lower()
-        if "bonuses" in template_name:
-            bonuses[page_name].append(str(template))
-        if "switch infobox" in template_name:
-            bonuses[page_name].append(str(template))      
+    # Parse actual wikitext content using mwparserfromhell
+    wikitext = mwparserfromhell.parse(input)
 
-def query_recent_changes():
-    for result in query_recent_changes_callback({'list': 'recentchanges'}):
-        # Process result data
-        for r in result['recentchanges']:
-            print(r)
-            recent_page_changes.append(r["title"])
+    # Convert to JSON 
+    item_dict = dict()
+    item_dict[page_name] = str(wikitext)
 
-def query_recent_changes_callback(request):
-    request['action'] = 'query'
-    request['format'] = 'json'
-    request['rcend'] = '1544400000' # Change this in future
-    request['rclimit'] = '20'
-    lastContinue = {}
-    while True:
-        # Clone original request
-        req = request.copy()
-        # Modify the original request
-        # Insert values returned in the 'continue' section
-        req.update(lastContinue)
-        # Call API
-        result = requests.get('https://oldschool.runescape.wiki/api.php', headers=custom_agent, params=req).json()
-        if 'error' in result:
-            print(">>> ERROR!")
-            break
-        if 'warnings' in result:
-            print(result['warnings'])
-        if 'query' in result:
-            yield result['query']
-        if 'continue' not in result:
-            break
-        lastContinue = result['continue']
+    out_fi_name = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(64))
+    
+    out_fi = "extract_all_items_page_wikitext" + os.sep + out_fi_name + ".json"
+    with open(out_fi, "w") as f:
+        json.dump(item_dict, f)  
 
 ################################################################################
 if __name__=="__main__":   
-    # Start processing
-    all = defaultdict(list)
-    bonuses = defaultdict(list)
-
-    # Extract recent changes from the wiki
-    # NOTE: Not currently implemented - seemed a lot of requests
-    # recent_page_changes = list()
-    # query_recent_changes()
-    # print("Finished querying recent page changes...")
-
-    # Populate all items (items and other) into a dict
-    # Maps item name to None, dict is just for unique strings
-    to_process = dict()
-
+    # Start processing: extract_all_items.txt
+    print(">>> Starting to extract wikitext for all items...")
+    
+    print("  > Reading extract_all_items page titles...")
+    items_to_process = list()
     with open("extract_all_items.txt") as f:
         for l in f:
             l = l.strip()
-            to_process[l] = None
+            items_to_process.append(l)
 
-    with open("extract_all_other.txt") as f:
-        for l in f:
-            l = l.strip()
-            to_process[l] = None
+    # Determine previously extracted page_titles
+    print("  > Determining already extracted page titles...")
+    processed_fis_path = "extract_all_items_page_wikitext" + os.sep + "*"
+    processed_fis = glob.glob(processed_fis_path)
+    items_already_processed = list()
+    # Strip path from files
+    for fi in processed_fis:
+        with open(fi) as f:
+            data = json.load(f)
+            item_name = next(iter(data))
+            items_already_processed.append(item_name)
 
-    total = len(to_process)
+    print("  > Starting wikitext extraction...")
+    items_count = len(items_to_process)
     count = 0
-    for k in to_process:
-        sys.stdout.write(">>> Processing: %d or %d, with name: %s\r" % (count, total, k))
-        extract_InfoboxItem(k)
-        count += 1
-    
-    # Write all extracted wikitext to a JSON file
-    fi_out = "extract_all_items_page_wikitext.json"
-    with open(fi_out, "w") as f:
-        json.dump(all, f)
-
-    # Write all extracted wikitext to a JSON file
-    fi_out = "extract_all_items_page_wikitext_bonuses.json"
-    with open(fi_out, "w") as f:
-        json.dump(bonuses, f)
+    for item_page_title in items_to_process:
+        sys.stdout.write(">>> Processing: %d out of %d\r" % (count, items_count))
+        if item_page_title in items_already_processed:
+            # Skip if already processed
+            count += 1
+            continue
+        # Extract wikitext
+        extract_wikitext(item_page_title)
+        count += 1    

@@ -6,17 +6,16 @@ Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki si
 
 - Start by extracting names for OSRS Wiki pages that need to be extracted
     - `python.exe .\extract_all_items.py`
-    - If on Windows, change `extract_all_items.txt` encoding from UTF16 to UTF8
-    - `python.exe .\extract_all_other.py`
-    - If on Windows, change `extract_all_items.txt` encoding from UTF16 to UTF8
 - Next, extract the Wikicode from all required pages
     - `python.exe .\extract_all_items_page_wikitext.py`
     - This queries a lot of pages, approximately 7,000
     - Should only be run when necessary
 - Next, extract the templates from the OSRS Wiki wikicode file
-    - `python.exe .\extract_templates_infobox.py`
+    - `python.exe .\extract_all_items_templates.py`
     - This saves a collection of files that only contain wiki templates
     - These files are used for ingestion into `item_db_tools\ProcessItems.py`
+
+# GENERAL
 
 ## extract_all_categories.py
 
@@ -29,9 +28,16 @@ Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki si
 - `python3.6 extract_all_categories.py`
 - `python.exe .\extract_all_categories.py`
 
+# ITEMS
+
 ## extract_all_items.py
 
-- Purpose: Extract item names from "Category:Items" 
+- Purpose: Extract page names from:
+    - Category:Items
+    - Category:Construction
+    - Category:Furniture
+    - Category:Flatpacks
+    - Category:Pets 
 - This script takes no command line arguments
 - This item name can be appended to the OSRS Wiki URL to visit the page
 - Save the output using redirection
@@ -56,19 +62,23 @@ Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki si
 - `python3.6 extract_all_items_page_wikitext.py`
 - `python.exe extract_all_items_page_wikitext.py`
 
-## extract_all_other.py
+## extract_all_items_templates.py
 
-- Purpose: Extract item names from:
-    - Category:Construction
-    - Category:Furniture
-    - Category:Flatpacks
-    - Category:Pets
-- This script takes no command line arguments
-- This item name can be appended to the OSRS Wiki URL to visit the page
-- Save the output using redirection
+- Purpose: extract templates from wikitext/wikicode for all input pages
+- The script ingests one (hardcoded) directory of file:
+    - `extract_all_items_templates`
+    - The directory is the output from `extract_all_items_page_wikitext.py`
+    - This directory is not provided in the repository
+- The script outputs multiple (hardcoded) files:
+    - `extract_all_items_templates_InfoboxItems.json`
+    - `extract_all_items_templatess_InfoboxBonuses.json`
+    - `extract_all_items_templates_InfoboxConstruction.json`
+    - `extract_all_items_templates_InfoboxPet.json`
 - Command to run:
-- `python3.6 extract_all_other.py`
-- `python.exe .\extract_all_other.py`
+- `python3.6 extract_all_items_templates.py`
+- `python.exe .\extract_all_items_templates.py`
+
+# QUESTS
 
 ## extract_all_quests.py
 
@@ -98,16 +108,6 @@ Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki si
 - `python3.6 extract_all_quests_page_wikitext.py`
 - `python.exe extract_all_quests_page_wikitext.py`
 
-## extract_templates_infobox.py
+# BESTIARY
 
-- Purpose: extract templates from wikitext/wikicode for all input pages
-- The script ingests one (hardcoded) files:
-    - `extract_all_items_page_wikitext.txt`
-- The script outputs multiple (hardcoded) files:
-    - `extract_templates_InfoboxItems.json`
-    - `extract_templates_InfoboxBonuses.json`
-    - `extract_templates_InfoboxConstruction.json`
-    - `extract_templates_InfoboxPet.json`
-- Command to run:
-- `python3.6 extract_templates.py`
-- `python.exe .\extract_templates.py`
+Coming soon
