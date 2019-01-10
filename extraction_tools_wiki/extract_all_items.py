@@ -40,13 +40,15 @@ custom_agent = {
 
 def query_category_items():
     out_fi = "extract_all_items.txt"
-    fi = open(out_fi, "w")    
+    fi = open(out_fi, "w", newline='')    
     for result in query_category_items_callback({'list': 'categorymembers'}):
         # Process result data
         for r in result['categorymembers']:
-            print(r["title"])
-            fi.write(r["title"])
-            fi.write("\n")
+            page_title = r["title"]
+            if page_title.startswith("File:"):
+                continue
+            print(page_title)
+            fi.write(page_title + "\n")
     fi.close()            
 
 def query_category_items_callback(request):

@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2019/01/04
+Date:    2019/01/10
 
 Description:
 Extract all other items on the OSRS Wiki
@@ -42,9 +42,11 @@ def query_category_items(category):
     for result in query_category_items_callback({'list': 'categorymembers'}, category):
         # Process result data
         for r in result['categorymembers']:
-            print(r["title"])
-            fi.write(r["title"])
-            fi.write("\n")
+            page_title = r["title"]
+            if page_title.startswith("File:"):
+                continue
+            print(page_title)
+            fi.write(page_title + "\n")
 
 def query_category_items_callback(request, category):
     request['action'] = 'query'
@@ -79,7 +81,7 @@ def query_category_items_callback(request, category):
 if __name__=="__main__":
     # Start processing
     out_fi = "extract_all_other.txt"
-    fi = open(out_fi, "w")       
+    fi = open(out_fi, "w", newline='')       
     query_category_items("Construction")
     query_category_items("Furniture")
     query_category_items("Flatpacks")

@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/21
+Date:    2018/01/10
 
 Description:
 Simple caller script to determine new items added after a game update. Takes
@@ -87,17 +87,20 @@ if __name__=="__main__":
     # Determine added items
     print(">>> Added items")
     added = dd.added()
+    added = sorted(added)
     for itemID in added:
         print("%s,%s" % (itemID, allitems_new[itemID]["name"]))
 
     # Determine removed items
     removed = dd.removed()
+    removed = sorted(removed)
     print(">>> Removed items")
     for itemID in removed:
         print("%s,%s" % (itemID, allitems_old[itemID]["name"]))        
 
     # Determine changed items
     changed = dd.changed()
+    changed = sorted(changed)
     print(">>> Changed items")
     for itemID in changed:
         changed_keys = list()
@@ -105,9 +108,9 @@ if __name__=="__main__":
             if(allitems_new[itemID][key] != allitems_old[itemID][key]):
                 changed_keys.append(key)
         if changed_keys:
-            print("> %s,%s,%s" % (itemID, allitems_new[itemID]["name"], changed_keys))
+            print(">>> %s, %s" % (itemID, allitems_old[itemID]["name"]))
             for prop in changed_keys:
-                print(prop, allitems_new[itemID][prop])
+                print("  > %s: %s" % (prop, allitems_new[itemID][prop]))
 
     # Determine unchanged items
     # This is commented out, as the results are always large
