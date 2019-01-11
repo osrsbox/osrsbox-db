@@ -50,10 +50,10 @@ import requests
 import mwparserfromhell
 
 def extract_wikitext(page_name):
-    page_name = page_name.replace("&", "%26")
-    page_name = page_name.replace("+", "%2B")
+    norm_page_name = page_name.replace("&", "%26")
+    norm_page_name = norm_page_name.replace("+", "%2B")
     # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
-    url = "https://oldschool.runescape.wiki/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
+    url = "https://oldschool.runescape.wiki/api.php?action=parse&prop=wikitext&format=json&page=" + norm_page_name
     result = requests.get(url, headers=custom_agent)
     data = result.json()
 

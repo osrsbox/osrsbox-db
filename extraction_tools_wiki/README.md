@@ -32,32 +32,28 @@ Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki si
 
 ## extract_all_items.py
 
-- Purpose: Extract page names from:
+- Purpose: Extract page titles for items from the following categories:
     - Category:Items
     - Category:Construction
     - Category:Furniture
     - Category:Flatpacks
     - Category:Pets 
-- This script takes no command line arguments
-- This item name can be appended to the OSRS Wiki URL to visit the page
-- Save the output using redirection
+- This script outputs one (hardcoded) file:
+    - `extract_all_items.txt`
+- The extracted item page title can be appended to the OSRS Wiki URL to visit the page
 - Command to run:
 - `python3.6 extract_all_items.py`
 - `python.exe .\extract_all_items.py`
 
 ## extract_all_items_page_wikitext.py
 
-- NOTE: This is the best script to use, pull data once
-- Purpose: extract complete wikitext/wikicode from all input pages
-- This script takes no command line arguments
-- The script ingests (hardcoded) two files:
+- Purpose: Extract complete wikitext from all input page titles for all items
+- The script ingests one (hardcoded) file:
     - `extract_all_items.txt`
-    - `extract_all_other.txt`
-- The script outputs two (hardcoded) files:
-    - `extract_all_items_page_wikitext.json`
-    - `extract_all_items_page_wikitext_bonuses.json`
-- The script prints the name of every item on the OSRS Wiki (unless redirected)
-- This item name can be appended to the OSRS Wiki base URL to use with the API
+- The script outputs wikitext to one (hardcoded) directory:
+    - `extract_all_items_page_wikitext`
+    - Output file names are randomised 64 characters
+    - Each output JSON file contains key of item name, that maps to value of wikitext
 - Command to run:
 - `python3.6 extract_all_items_page_wikitext.py`
 - `python.exe extract_all_items_page_wikitext.py`
