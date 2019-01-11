@@ -269,10 +269,12 @@ if __name__=="__main__":
             # If item is equipable and not process, process it!
             clean_name = clean(item.name)
             requirements = determine_requirements(item.name)
-            if requirements["requirements"] == None:
-                known_items[item.name] = requirements["requirements"]
+            if requirements == None:
+                known_items[item.id] = None
+            elif requirements["requirements"] == None:
+                known_items[item.id] = requirements["requirements"]
             else:
-                known_items[item.name] = requirements["requirements"]
+                known_items[item.id] = requirements["requirements"]
 
     # Finally, save any changes
     with open(isr_file, "w") as f:

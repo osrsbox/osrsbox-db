@@ -453,10 +453,10 @@ class ItemDefinition(object):
         #     print("CHANGED")
 
         # Check modified items
-        # self.compare_JSON_files()
+        self.compare_JSON_files()
 
         # Actually output a JSON file, comment out for testing
-        self.export_pretty_json()
+        # self.export_pretty_json()
 
         # Finished. Return the entire ItemDefinition object
         return self

@@ -122,18 +122,18 @@ if __name__=="__main__":
     extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
     extraction_path_other = ".." + os.sep + "extraction_tools_other" + os.sep
 
-    with open(extraction_path_wiki + "extract_templates_InfoboxItems.json") as f:
+    with open(extraction_path_wiki + "extract_all_items_templates_InfoboxItems.json") as f:
         all_wiki_items = json.load(f)
 
-    with open(extraction_path_wiki + "extract_templates_InfoboxBonuses.json") as f:
+    with open(extraction_path_wiki + "extract_all_items_templates_InfoboxBonuses.json") as f:
         all_wiki_items_bonuses = json.load(f)
 
-    with open(extraction_path_wiki + "extract_templates_InfoboxConstruction.json") as f:
+    with open(extraction_path_wiki + "extract_all_items_templates_InfoboxConstruction.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
             all_wiki_items[k] = v
 
-    with open(extraction_path_wiki + "extract_templates_InfoboxPet.json") as f:
+    with open(extraction_path_wiki + "extract_all_items_templates_InfoboxPet.json") as f:
         temp = json.load(f)
         for k,v in temp.items():
             all_wiki_items[k] = v
@@ -160,11 +160,11 @@ if __name__=="__main__":
         for k,v in temp.items():
             item_skill_requirements[k] = v            
 
-    # Make a dir for JSON output
-    # This directory is not in docs, it is a temp working space
-    directory = "items-json"
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    # # Make a dir for JSON output
+    # # This directory is not in docs, it is a temp working space
+    # directory = "items-json"
+    # if not os.path.exists(directory):
+    #     os.makedirs(directory)
 
     # Remove old logfile
     #os.remove("ItemDefinition.log")
