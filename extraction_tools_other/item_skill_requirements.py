@@ -161,15 +161,12 @@ def determine_requirements(item_name):
     if skill_req_input == '7':
         # Fetch formatted skill requirement from options dict
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        if isinstance(skill_req_input, str):
-            first_skill_req = skill_req_input # This breaks stuff
-        else:
-            first_skill_req = options[skill_req_input]
+        first_skill_req = skill_req_input # This breaks stuff
         level_req_input = input(">>> LEVEL: %s - " % item_name)
         first_level_req = int(level_req_input)
 
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        second_skill_req = options[skill_req_input]
+        second_skill_req = skill_req_input
         level_req_input = input(">>> LEVEL: %s - " % item_name)
         second_level_req = int(level_req_input)        
 
