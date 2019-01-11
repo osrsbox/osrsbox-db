@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/17
+Date:    2018/01/10
 
 Description:
 Extract all quest titles on the OSRS Wiki

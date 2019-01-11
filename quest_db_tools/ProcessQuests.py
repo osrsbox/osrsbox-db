@@ -53,33 +53,39 @@ if __name__=="__main__":
     # Start processing    
     print(">>> Starting processing...")
 
-    wiki_extraction_path = ".." + os.sep + "wiki_extraction_tools" + os.sep
+    wiki_extraction_path = ".." + os.sep + "extraction_tools_wiki" + os.sep
 
-    with open(wiki_extraction_path + "extract_all_quests_page_wikitext.txt") as f:
-        all_wiki_quest_pages = json.load(f)
+    # Load all JSON files with quest wikitext
+    print(">>> Loading wikitext...")
+    all_wiki_quest_pages = dict()
+
+    wikitext_fis_path = wiki_extraction_path + "extract_all_quests_page_wikitext" + os.sep + "*"
+    wikitext_fis = glob.glob(wikitext_fis_path)
+
+    for fi in wikitext_fis:
+        with open(fi) as f:
+            data = json.load(f)
+            quest_name = next(iter(data))
+            print(quest_name)
+            wikitext_str = data[quest_name]
+            all_wiki_quest_pages[quest_name] = wikitext_str
 
     all_quest_names = list()
     
+    print(">>> Loading quest lists...")
     all_quest_names_normal = list()
-    with open(wiki_extraction_path + "extract_all_quests.txt") as f:
+    with open("quests.txt") as f:
         for l in f:
             l = l.strip()
             all_quest_names_normal.append(l)
             all_quest_names.append(l)
 
     all_quest_names_mini = list()
-    with open(wiki_extraction_path + "extract_all_quests_mini.txt") as f:
+    with open("miniquests.txt") as f:
         for l in f:
             l = l.strip()
             all_quest_names_mini.append(l)
             all_quest_names.append(l)    
-
-    all_quest_names_sub = list()
-    with open(wiki_extraction_path + "extract_all_quests_sub.txt") as f:
-        for l in f:
-            l = l.strip()
-            all_quest_names_sub.append(l)
-            all_quest_names.append(l)
 
     # Make a dir for JSON output
     # directory = "quests-json"
@@ -89,13 +95,12 @@ if __name__=="__main__":
     quests = dict()
     all_quests = dict()
 
+    print(">>> Processing quests...")
     for quest_name in all_quest_names:
         quest_type = ""
         # Determine what type of quest (normal, mini, sub)
         if quest_name in all_quest_names_mini:
             quest_type = "mini"
-        elif quest_name in all_quest_names_sub:
-            quest_type = "sub"
         elif quest_name in all_quest_names:
             quest_type = "normal"
         else:

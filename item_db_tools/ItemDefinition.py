@@ -763,6 +763,19 @@ class ItemDefinition(object):
         if self.name == "Clue scroll (elite)":
             examine = "A clue!; Sherlock: A clue suggested by <players-name>!"
 
+        if self.name in ["Hell cat",
+                         "Hell-kitten",
+                         "Lazy cat",
+                         "Lazy hell cat",
+                         "Overgrown hellcat",
+                         "Pet cat",
+                         "Pet kitten",
+                         "Wily hellcat"]:
+            examine = "Inventory: This kitten seems to like you. (Kitten), This cat definitely likes you. (Cat), This cat is so well fed it can hardly move. (Overgrown); Follower: A friendly little pet. (Kitten), A fully grown feline. (Cat), A friendly, not-so-little pet. (Overgrown)"
+
+        if self.name == "Clue scroll":
+            examine = "A clue!; A clue suggested by <players-name>!"
+
         return examine  
 
     def clean_store_price(self, input):

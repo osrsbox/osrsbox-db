@@ -101,6 +101,10 @@ if __name__=="__main__":
             item_name = next(iter(data))
             items_already_processed.append(item_name)
 
+    directory = "extract_all_items_page_wikitext"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
     print("  > Starting wikitext extraction...")
     items_count = len(items_to_process)
     count = 0
