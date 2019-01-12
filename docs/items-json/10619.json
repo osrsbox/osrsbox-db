@@ -2,7 +2,8 @@
     "id": 10619,
     "name": "Initiate hauberk",
     "members": true,
-    "tradeable": false,
+    "tradeable": true,
+    "tradeable_on_ge": false,
     "stackable": false,
     "noted": false,
     "noteable": false,
@@ -12,7 +13,7 @@
     "lowalch": 4000,
     "highalch": 6000,
     "weight": 8.0,
-    "buy_limit": null,
+    "buy_limit": 125,
     "quest_item": [
         "Recruitment Drive"
     ],

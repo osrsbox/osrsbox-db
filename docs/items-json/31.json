@@ -2,7 +2,8 @@
     "id": 31,
     "name": "Bucket of wax",
     "members": true,
-    "tradeable": false,
+    "tradeable": true,
+    "tradeable_on_ge": false,
     "stackable": true,
     "noted": true,
     "noteable": true,
@@ -12,7 +13,7 @@
     "lowalch": 2,
     "highalch": 3,
     "weight": 2.5,
-    "buy_limit": null,
+    "buy_limit": 15,
     "quest_item": [
         "Merlin's Crystal",
         "Troll Romance"

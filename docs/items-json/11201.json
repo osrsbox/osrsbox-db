@@ -2,7 +2,8 @@
     "id": 11201,
     "name": "Dwarven helmet",
     "members": true,
-    "tradeable": false,
+    "tradeable": true,
+    "tradeable_on_ge": false,
     "stackable": true,
     "noted": true,
     "noteable": true,
@@ -12,7 +13,7 @@
     "lowalch": 24000,
     "highalch": 36000,
     "weight": 1.9,
-    "buy_limit": null,
+    "buy_limit": 50,
     "quest_item": [
         "Grim Tales"
     ],
