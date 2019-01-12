@@ -4,12 +4,12 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/15
+Date:    2019/01/11
 
 Description:
-Extract all Wikia templates from a list of page titles
+Join directory of single JSON files with item_name -> item_wikitext
 
-Copyright (c) 2018, PH01L
+Copyright (c) 2019, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -33,32 +33,19 @@ __version__ = "1.0.0"
 import os
 import json
 import glob
-import requests
-import mwparserfromhell
-from collections import defaultdict
 
 ################################################################################
 if __name__=="__main__":   
-    # Start processing
-    infobox_items = defaultdict(list)
-    infobox_bonuses = defaultdict(list)
-    infobox_construction = defaultdict(list)
-    infobox_pet = defaultdict(list)
-    
-    # Determine previously extracted wiki pages
     wikitext_fis_path = "extract_all_items_page_wikitext" + os.sep + "*"
     wikitext_fis = glob.glob(wikitext_fis_path)
 
-    to_del = list()
+    all_quests = dict()
     for fi in wikitext_fis:
         with open(fi) as f:
             data = json.load(f)
-            item_name = next(iter(data))
-            if "%" in item_name:
-                print(item_name)
-                to_del.append(fi)        
-                
-    for fi in to_del:
-        os.remove(fi)
-            
-   
+            quest_name = next(iter(data))
+            quest_wikitext = data[quest_name]
+            all_quests[quest_name] = quest_wikitext
+             
+    with open("extract_all_items_page_wikitext.json", "w") as fi:
+        json.dump(all_quests, fi)
