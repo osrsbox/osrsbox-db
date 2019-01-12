@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/07
+Date:    2019/01/11
 
 Description:
 ItemDefinition is a class to process the raw ItemDefinition data from
@@ -14,7 +14,7 @@ OSRS Wiki.
 Warning: This code grew from simple to spaghetti! It is currently out of 
 control and needs a rewrite and reorganization!
 
-Copyright (c) 2018, PH01L
+Copyright (c) 2019, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -144,6 +144,7 @@ class ItemDefinition(object):
             "name" : None,
             "members" : None,
             "tradeable" : None,
+            "tradeable_on_ge" : None,
             "stackable" : None,
             "noted" : None,
             "noteable" : None,
@@ -204,7 +205,14 @@ class ItemDefinition(object):
         return self._tradeable
     @tradeable.setter
     def tradeable(self, value):
-        self._tradeable = _boolcast(value)                		
+        self._tradeable = _boolcast(value)
+
+    @property
+    def tradeable_on_ge(self):
+        return self._tradeable_on_ge
+    @tradeable_on_ge.setter
+    def tradeable_on_ge(self, value):
+        self._tradeable_on_ge = _boolcast(value)          
 
     @property
     def stackable(self):
@@ -329,7 +337,9 @@ class ItemDefinition(object):
         self.id = self.itemJSON["id"]
         self.name = self.itemJSON["name"]
         self.members = self.itemJSON["members"]
-        self.tradeable = self.itemJSON["tradeable"]
+        # TODO: Currently not set in item_scraper
+        self.tradeable = None 
+        self.tradeable_on_ge = self.itemJSON["tradeable"]
         self.stackable = self.itemJSON["stackable"]
         self.noted = self.itemJSON["noted"]
         self.noteable = self.itemJSON["noteable"]
@@ -495,9 +505,6 @@ class ItemDefinition(object):
             return False
 
     def extract_InfoboxItem(self):
-        # Quick fix for url encoded names
-        self.wiki_name = self.wiki_name.replace("&", "%26")
-        self.wiki_name = self.wiki_name.replace("+", "%2B")   
         self.logger.debug(">>> wiki_name: %s" % self.wiki_name)
         try:
             wikicode = mwparserfromhell.parse(self.all_wikia_items[self.wiki_name])
@@ -648,6 +655,14 @@ class ItemDefinition(object):
         release_date = release_date.replace("[", "")
         release_date = release_date.replace("]", "")        
         return release_date
+
+    def clean_tradeable(self, input):
+        tradeable = None
+        tradeable = input
+        tradeable = tradeable.strip()
+        tradeable = tradeable.replace("[", "")
+        tradeable = tradeable.replace("]", "")
+        return tradeable        
 
     def clean_examine(self, input):
         # Clean an examine text value
@@ -989,6 +1004,18 @@ class ItemDefinition(object):
         # except ValueError:
         #     self.seller = None
 
+        # Determine the examine text of an item (NOT TESTED)
+        tradeable = None
+        if self.current_version is not None:
+            key = "tradeable" + str(self.current_version)
+            tradeable = self.extract_Infobox_value(template, key)
+        if tradeable is None:
+            tradeable = self.extract_Infobox_value(template, "tradeable")
+        if tradeable is not None:
+            self.tradeable = self.clean_tradeable(tradeable)
+        else:
+            self.tradeable = False
+
         # Determine the examine text of an item (TESTED)
         examine = None
         if self.current_version is not None:
@@ -1197,6 +1224,7 @@ class ItemDefinition(object):
         self.json_out["name"] = self.name
         self.json_out["members"] = self.members
         self.json_out["tradeable"] = self.tradeable
+        self.json_out["tradeable_on_ge"] = self.tradeable_on_ge
         self.json_out["stackable"] = self.stackable
         self.json_out["noted"] = self.noted
         self.json_out["noteable"] = self.noteable

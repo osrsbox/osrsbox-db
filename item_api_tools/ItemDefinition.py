@@ -4,13 +4,13 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/12/18
+Date:    2019/01/11
 
 Description:
 ItemDefinition is a class to load and manipulate osrsbox-db items-json
 files.
 
-Copyright (c) 2018, PH01L
+Copyright (c) 2019, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -97,6 +97,7 @@ class ItemDefinition(object):
             "name" : None,
             "members" : None,
             "tradeable" : None,
+            "tradeable_on_ge" : None,
             "stackable" : None,
             "noted" : None,
             "noteable" : None,
@@ -140,7 +141,14 @@ class ItemDefinition(object):
         return self._tradeable
     @tradeable.setter
     def tradeable(self, value):
-        self._tradeable = _boolcast(value)                		
+        self._tradeable = _boolcast(value)
+
+    @property
+    def tradeable_on_ge(self):
+        return self._tradeable_on_ge
+    @tradeable_on_ge.setter
+    def tradeable_on_ge(self, value):
+        self._tradeable_on_ge = _boolcast(value)         
 
     @property
     def stackable(self):
@@ -306,6 +314,7 @@ class ItemDefinition(object):
         self.json_out["name"] = self.name
         self.json_out["members"] = self.members
         self.json_out["tradeable"] = self.tradeable
+        self.json_out["tradeable_on_ge"] = self.tradeable_on_ge
         self.json_out["stackable"] = self.stackable
         self.json_out["noted"] = self.noted
         self.json_out["noteable"] = self.noteable
