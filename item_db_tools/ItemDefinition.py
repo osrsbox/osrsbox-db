@@ -412,6 +412,7 @@ class ItemDefinition(object):
             return # Could not finish, just exit
             # print("Item has no OSRS Wikia page. Setting default values.")
             # quit()
+            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> NO WIKI PAGE!")
 
         # Continue processing... but only if equipable
         if self.equipable:
@@ -622,6 +623,8 @@ class ItemDefinition(object):
         if "kg" in weight:
             weight = weight.replace("kg", "")
 
+        weight = weight.replace("N/A", "")
+
         # Some items have Inventory/Equipped weights:
         # ValueError: could not convert string to float: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
         if "inventory" in weight.lower():
@@ -678,7 +681,7 @@ class ItemDefinition(object):
         examine = examine.replace("*", "")
         examine = examine.replace("<nowiki>", "")     
         examine = examine.replace("</nowiki>", "")     
-        examine = examine.replace("sic", "")
+        #examine = examine.replace("sic", "")
         examine = examine.replace("à", "") # TODO: Not working, only one item affected
         examine = examine.replace("(empty)", "Empty:")    
         examine = examine.replace("(full)", "Full:")      
@@ -748,6 +751,7 @@ class ItemDefinition(object):
         examine = examine.replace("(Used to open the hatch in the elemental workshop)", "")
         examine = examine.replace("(Used in Olaf's Quest)", "")
         examine = examine.replace("(Used in the Ghost Ahoy quest)", "")
+        examine = examine.replace("(Used in the Ghosts Ahoy quest)", "")
 
         # TODO: Fix remaining examine text when not item specific
         # Working code in progress below
@@ -1044,6 +1048,8 @@ class ItemDefinition(object):
         else:
             try:
                 self.buy_limit = self.all_wikia_buylimits[self.name]
+                if self.noted:
+                    self.buy_limit = None
             except KeyError:
                 self.buy_limit = None
 
