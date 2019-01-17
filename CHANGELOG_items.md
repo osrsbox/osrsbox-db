@@ -1,6 +1,27 @@
-# Date: 2019/01/10
-# Title: The Kebos Lowlands
-# Added items: 265
+### Date: 2019/01/17
+### Title: Kebos Graphical Changes and Other Fixes
+### Added items: 17
+23047,Mystic hat (dusk)
+23048,Mystic hat (dusk)
+23049,Mystic hat (dusk)
+23050,Mystic robe top (dusk)
+23051,Mystic robe top (dusk)
+23052,Mystic robe top (dusk)
+23053,Mystic robe bottom (dusk)
+23054,Mystic robe bottom (dusk)
+23055,Mystic robe bottom (dusk)
+23056,Mystic gloves (dusk)
+23057,Mystic gloves (dusk)
+23058,Mystic gloves (dusk)
+23059,Mystic boots (dusk)
+23060,Mystic boots (dusk)
+23061,Mystic boots (dusk)
+23062,Nest box (seeds)
+23063,Nest box (seeds)
+
+### Date: 2019/01/10
+### Title: The Kebos Lowlands
+### Added items: 265
 22731,Dragon hasta
 22732,Dragon hasta
 22733,Dragon hasta
@@ -267,9 +288,9 @@
 23045,Clue scroll (hard)
 23046,Clue scroll (medium)
 
-# Date: 2018/12/13
-# Title: Christmas Event 2018
-# Added items: 18
+### Date: 2018/12/13
+### Title: Christmas Event 2018
+### Added items: 18
 22722,Chair
 22729,Knight summoner
 22717,Tree skirt
@@ -289,27 +310,27 @@
 22718,Tree skirt
 22721,Lumbridge task list
 
-# Date: 2018/12/06
-# Title: The Collection Log and Deadman Permadeath Beta
-# Added items: 2
+### Date: 2018/12/06
+### Title: The Collection Log and Deadman Permadeath Beta
+### Added items: 2
 22712,Collection log
 22711,Collection log
 
-# Date: 2018/11/29
-# Title: Spellbook Filters and Bounty Hunter Changes
-# Added items: 0
+### Date: 2018/11/29
+### Title: Spellbook Filters and Bounty Hunter Changes
+### Added items: 0
 
-# Date: 2018/11/23
-# Title: Bird Nest Balancing and PvP Changes
-# Added items: 0
+### Date: 2018/11/23
+### Title: Bird Nest Balancing and PvP Changes
+### Added items: 0
 
-# Date: 2018/11/15
-# Title: POH Portals, DHCB Recolour and Planned Changes
-# Added items: 0
+### Date: 2018/11/15
+### Title: POH Portals, DHCB Recolour and Planned Changes
+### Added items: 0
 
-# Date: 2018/11/08
-# Title: The Portal Nexus
-# Added items: 7
+### Date: 2018/11/08
+### Title: The Portal Nexus
+### Added items: 7
 22704,Portal nexus
 22710,Curator's medallion
 22707,Crystalline portal nexus
@@ -318,9 +339,9 @@
 22706,Gilded portal nexus
 22709,Mounted digsite pendant
 
-# Date: 2018/10/25
-# Title: Halloween 2018 Event and Tutorial Island Improvements
-# Added items: 26
+### Date: 2018/10/25
+### Title: Halloween 2018 Event and Tutorial Island Improvements
+### Added items: 26
 22684,Eek
 22698,Clown trousers
 22687,Church lectern
@@ -348,17 +369,17 @@
 22697,Clown trousers
 22693,Clown bow tie
 
-# Date: 2018/10/18
-# Title: Mobile Changes, Various Bugfixes and new Merch!
-# Added items: 0
+### Date: 2018/10/18
+### Title: Mobile Changes, Various Bugfixes and new Merch!
+### Added items: 0
 
-# Date: 2018/10/11
-# Title: Spellbook Rework, Wise Old Man and, Increased Zoom
-# Added items: 0
+### Date: 2018/10/11
+### Title: Spellbook Rework, Wise Old Man and, Increased Zoom
+### Added items: 0
 
-# Date: 2018/10/04 
-# Title: Master Clue Reward and Quality of Life Changes
-# Added items: 6
+### Date: 2018/10/04 
+### Title: Master Clue Reward and Quality of Life Changes
+### Added items: 6
 22675,Scroll sack
 22676,Scroll sack
 22672,Kq head (tattered)
@@ -366,9 +387,9 @@
 22671,Kq head (tattered)
 22674,Stuffed kq head (tattered)
 
-# Date: 2018/09/27 
-# Title: Decanting, Withdraw X, and Bucket Packs
-# Added items: 7
+### Date: 2018/09/27 
+### Title: Decanting, Withdraw X, and Bucket Packs
+### Added items: 7
 22662,Empty bucket pack
 22666,Rubber chicken
 22665,Armadyl godsword
@@ -377,17 +398,17 @@
 22664,Scythe of vitur
 22661,Empty bucket pack
 
-# Date: 2018/09/20 
-# Title: Deadman Experience Cap Increase and Quality of Life Changes
-# Added items: 0
+### Date: 2018/09/20 
+### Title: Deadman Experience Cap Increase and Quality of Life Changes
+### Added items: 0
 
-# Date: 2018/09/13 
-# Title: Left Click Range Cooking, Slayer Helm Recolour and Player Survey
-# Added items: 0
+### Date: 2018/09/13 
+### Title: Left Click Range Cooking, Slayer Helm Recolour and Player Survey
+### Added items: 0
 
-# Date: 2018/09/06 
-# Title: Making Friends With My Arm, Deadman Autumn Finals and Full Mobile Launch
-# Added items: 71
+### Date: 2018/09/06 
+### Title: Making Friends With My Arm, Deadman Autumn Finals and Full Mobile Launch
+### Added items: 71
 22599,Icy basalt
 22634,Morrigan's throwing axe
 22656,Zuriel's robe bottom
