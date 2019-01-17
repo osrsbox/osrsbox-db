@@ -4,13 +4,13 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/25
+Date:    2019/01/13
 
 Description:
 QuestDefinition is a class to process the raw data parsed from the
 OSRS Wiki site to help make the osrsbox-db quest objects
 
-Copyright (c) 2018, PH01L
+Copyright (c) 2019, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify

@@ -4,12 +4,12 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2019/01/10
+Date:    2019/01/13
 
 Description:
-Extract all item page titles from the OSRS Wiki
+Extract all bestiary page titles on the OSRS Wiki
 
-Copyright (c) 2018, PH01L
+Copyright (c) 2019, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -26,39 +26,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 >>> CHANGELOG:
     1.0.0       Base functionality
-    1.1.0       Updated script for new OSRS Wiki API
-    1.2.0       Update to combine items and other into one script
 """
 
-__version__ = "1.1.0"
+__version__ = "1.0.0"
 
 import requests
 
-custom_agent = {
-    'User-Agent': 'some-agent',
-    'From': 'name@domain.com' 
-}
-
-def query_category_items(category):
-    for result in query_category_items_callback({'list': 'categorymembers'}, category):
+def query_category_items():
+    for result in query_category_items_callback({'generator': 'categorymembers'}):
         # Process result data
-        for r in result['categorymembers']:
-            page_title = r["title"]
-            if page_title.startswith("File:"):
-                continue
+        for r in result['pages']:
+            page_title = result['pages'][r]["title"]
             print(page_title)
-            fi.write(page_title + "\n")
+            fi.write(page_title + "\n")            
 
-def query_category_items_callback(request, category):
+def query_category_items_callback(request):
     request['action'] = 'query'
     request['format'] = 'json'
-    # request['cmtitle'] = 'Category:Items'
-    # request['cmtitle'] = 'Category:Construction'
-    # request['cmtitle'] = 'Category:Furniture'
-    # request['cmtitle'] = 'Category:Flatpacks'
-    # request['cmtitle'] = 'Category:Pets'
-    request['cmtitle'] = 'Category:' + category
-    request['cmlimit'] = '500'    
+    request['prop'] = 'categories'
+    request['gcmtitle'] = 'Category:Bestiary'
+    request['gcmlimit'] = 'max'
+    request['cllimit'] = 'max'
     lastContinue = {}
     while True:
         # Clone original request
@@ -67,26 +55,26 @@ def query_category_items_callback(request, category):
         # Insert values returned in the 'continue' section
         req.update(lastContinue)
         # Call API
-        result = requests.get('https://oldschool.runescape.wiki/api.php', headers=custom_agent, params=req).json()
+        result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
+        # print(result)
         if 'error' in result:
+            #raise Error(result['error'])
             print(">>> ERROR!")
             break
         if 'warnings' in result:
             print(result['warnings'])
         if 'query' in result:
             yield result['query']
-        if 'continue' not in result:
+        if 'query-continue' not in result:
             break
-        lastContinue = result['continue']
+        if 'categorymembers' not in result['query-continue']:
+            break
+        lastContinue = result['query-continue']['categorymembers']
 
 ################################################################################
-if __name__=="__main__":
+if __name__=="__main__":   
     # Start processing
-    out_fi = "extract_all_items.txt"
-    fi = open(out_fi, "w", newline='') 
-    query_category_items("Items")     
-    query_category_items("Construction")
-    query_category_items("Furniture")
-    query_category_items("Flatpacks")
-    query_category_items("Pets")
+    out_fi = "extract_all_bestiary_wikia.txt"
+    fi = open(out_fi, "w", newline='')     
+    query_category_items()
     fi.close()

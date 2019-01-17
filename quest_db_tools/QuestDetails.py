@@ -157,8 +157,8 @@ class QuestDetails(object):
     def wikicode_cleaner(self, input):
         clean_input = str(input)
         clean_input = clean_input.strip()
-        clean_input = clean_input.replace("[", "")
-        clean_input = clean_input.replace("]", "")
+        # clean_input = clean_input.replace("[", "")
+        # clean_input = clean_input.replace("]", "")
         return clean_input
 
     def populate(self):
@@ -170,6 +170,8 @@ class QuestDetails(object):
             self.start = self.wikicode_cleaner(start)
         except ValueError:
             self.start = None
+
+        print(self.start)
 
         # Difficulty
         try:
@@ -191,6 +193,8 @@ class QuestDetails(object):
             self.requirements = self.wikicode_cleaner(requirements)
         except ValueError:
             self.requirements = None
+
+        print(self.requirements)
 
         # Quest items
         try:

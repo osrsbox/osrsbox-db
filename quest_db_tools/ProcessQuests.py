@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2018/09/01
+Date:    2019/01/13
 
 Description:
 ProcessQuestss is a caller to parse the OSRS Wiki wikicode data
@@ -17,7 +17,7 @@ pip install dateparser
 
 pip install wikitextparser
 
-Copyright (c) 2018, PH01L
+Copyright (c) 2019, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -66,7 +66,6 @@ if __name__=="__main__":
         with open(fi) as f:
             data = json.load(f)
             quest_name = next(iter(data))
-            print(quest_name)
             wikitext_str = data[quest_name]
             all_wiki_quest_pages[quest_name] = wikitext_str
 
@@ -81,11 +80,11 @@ if __name__=="__main__":
             all_quest_names.append(l)
 
     all_quest_names_mini = list()
-    with open("miniquests.txt") as f:
-        for l in f:
-            l = l.strip()
-            all_quest_names_mini.append(l)
-            all_quest_names.append(l)    
+    # with open("miniquests.txt") as f:
+    #     for l in f:
+    #         l = l.strip()
+    #         all_quest_names_mini.append(l)
+    #         all_quest_names.append(l)    
 
     # Make a dir for JSON output
     # directory = "quests-json"
@@ -116,16 +115,13 @@ if __name__=="__main__":
             quests[int(quest.quest_metadata.number)] = quest
         all_quests[quest.quest_name] = quest
 
-    # Order the dictionary of the quests (not all quests)
-    od = collections.OrderedDict(sorted(quests.items()))
+    # # Order the dictionary of the quests (not all quests)
+    # od = collections.OrderedDict(sorted(quests.items()))
 
-    series = set()
-    for quest in sorted(od):
-        if quests[quest].quest_type is not "mini":
-            print(quest, quests[quest].quest_name, quests[quest].quest_metadata.series)
-            if quests[quest].quest_metadata.series is not None:
-                for s in quests[quest].quest_metadata.series:
-                    series.add(s)
-
-    for s in series:
-        print(s)
+    # series = set()
+    # for quest in sorted(od):
+    #     if quests[quest].quest_type is not "mini":
+    #         print(quest, quests[quest].quest_name, quests[quest].quest_metadata.series)
+    #         if quests[quest].quest_metadata.series is not None:
+    #             for s in quests[quest].quest_metadata.series:
+    #                 series.add(s)
