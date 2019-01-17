@@ -3,7 +3,11 @@ import subprocess
 cmd = "git log --pretty=format:'%h|%ad|%s' --date=iso"
 cmd = cmd.split(" ")
 
-print("## Repository Changelog:\n")
+out_fi = "CHANGELOG_repo.md"
+
+fi = open(out_fi, "w", newline='\n')
+
+fi.write("## Repository Changelog:\n\n")
 res = subprocess.check_output(cmd)
 for line in res.splitlines():
     line = line.decode("utf-8")
@@ -14,9 +18,8 @@ for line in res.splitlines():
     commit_date = line_parts[1]
     commit_date = commit_date.replace(" +1300", "")
     commit_date = commit_date.replace(" +1200", "")
-    print("#### %s: %s" % (commit_date, commit_hash))
+    fi.write("#### %s: %s\n" % (commit_date, commit_hash))
     commit_msg = line_parts[2]
     commit_lines = commit_msg.split(". ")
     for msg in commit_lines:
-        print("-", msg)
-    print()
+        fi.write("- %s\n\n" % msg)
