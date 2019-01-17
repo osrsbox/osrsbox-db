@@ -388,7 +388,7 @@
 	- 22696,Clown gown
 	- 22697,Clown trousers
 	- 22693,Clown bow tie
-- 
+
 ### 2018/10/18: Mobile Changes, Various Bugfixes and new Merch!
 - Added items: 0
 

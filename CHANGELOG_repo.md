@@ -1,5 +1,10 @@
 ## Repository Changelog:
 
+#### 2019-01-18 07:36:06: 9d8a539a5
+- Fixed terrible formatting for CHANGELOG_items.md
+- Rewrote determine new items script to have updated markdown formatting
+- Added removed and changed items to item changelog.
+
 #### 2019-01-18 07:11:17: 3e4e75cf8
 - Updated changelog functionality
 - The CHANGELOG_repo.md file holds major repository commit messages

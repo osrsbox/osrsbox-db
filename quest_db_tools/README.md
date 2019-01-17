@@ -17,7 +17,3 @@
     - `QuestMetadata`: Data from the `Infobox Quest` wiki template
     - `QuestDetails`: Data from the `Infobox Details` wiki template
     - `QuestDefinition`: Data from the `Infobox Rewards` wiki template
-
-## todo_list.txt
-
-- List and notes of issues or current problems (developement notes)

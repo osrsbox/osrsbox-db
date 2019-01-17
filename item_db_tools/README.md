@@ -10,7 +10,7 @@ This folder hosts the code used to build the osrsbox-db. This process is fully a
 - Requirements:
     - `mwparserfromhell`
     - `dateparser`
-- This script does not download any information from the OSRS Wiki. Instead it processes a collection of previously downloaded files from the `wikia_extraction` folder. All of these values are hardcoded that map to the files produced by the OSRS Wiki extraction tools.
+- This script does not download any information from the OSRS Wiki or other sources. Instead it processes a collection of previously downloaded files from the `extraction_tools_wiki` and `extraction_tools_other` folders. All of these values are hardcoded that map to the files produced by the extraction tools.
 - Command to run:
 - `python3.6 ProcessItems.py -f ../docs/items_itemscraper.json`
 - `python.exe .\ProcessItems.py -f ..\docs\items_itemscraper.json`

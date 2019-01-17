@@ -8,12 +8,16 @@ Collection of Python tools to extract data from the new (non-Wikia) OSRS Wiki si
     - `python.exe .\extract_all_items.py`
 - Next, extract the Wikicode from all required pages
     - `python.exe .\extract_all_items_page_wikitext.py`
-    - This queries a lot of pages, approximately 7,000
+    - This queries a lot of pages, approximately 8,000
     - Should only be run when necessary
+- Next, run the script to join the individual JSON files
+    - `python.exe .\extract_all_items_page_wikitext_join.py`
+    - This will create a file called `extract_all_items_page_wikitext.json`
+    - This file is added to the repo, while the `extract_all_items_page_wikitext` folder is not. This approach is only to easily restart the extract wikitext script after connection timeouts etc.
 - Next, extract the templates from the OSRS Wiki wikicode file
     - `python.exe .\extract_all_items_templates.py`
     - This saves a collection of files that only contain wiki templates
-    - These files are used for ingestion into `item_db_tools\ProcessItems.py`
+    - These files are used for ingestion into `..\item_db_tools\ProcessItems.py`
 
 # GENERAL
 

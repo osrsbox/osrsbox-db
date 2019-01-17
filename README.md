@@ -18,6 +18,7 @@ For more user-firendly information see:
 - `item_db_tools`: Collection of Python tools used to create the OSRS item database. This code is currently a mess!
 - `model_db_tools`: Collection of Python tools to handle model ID number extraction.
 - `quest_db_tools`: Collection of Python tools used to create the OSRS quest database (work in progress).
-- `CHANGELOG.txt`: Document of changes to the item database, specifically, newly added items. More detailed changes can be seen by viewing the commit logs of this repository.
+- `CHANGELOG_repo.md`: Document of changes to this repository in an easy to read format.
+- `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update that have been added to the database.
 
 For additional information on each component of the project, I would recommend viewing the `README.md` file that is provided for every folder in the project.
