@@ -85,36 +85,37 @@ if __name__=="__main__":
     dd  = DetermineNewItems(allitems_new, allitems_old)
     
     # Determine added items
-    print(">>> Added items")
     added = dd.added()
     added = sorted(added)
+    print("- Added items: %d" % len(added))
     for itemID in added:
-        print("%s,%s" % (itemID, allitems_new[itemID]["name"]))
+        print("    - %s,%s" % (itemID, allitems_new[itemID]["name"]))
 
     # Determine removed items
     removed = dd.removed()
     removed = sorted(removed)
-    print(">>> Removed items")
+    print("- Removed items: %d" % len(removed))
     for itemID in removed:
-        print("%s,%s" % (itemID, allitems_old[itemID]["name"]))        
+        print("    - %s,%s" % (itemID, allitems_old[itemID]["name"]))        
 
     # Determine changed items
     changed = dd.changed()
     changed = sorted(changed)
-    print(">>> Changed items")
+    print("- Changed items: %d" % len(changed))
     for itemID in changed:
         changed_keys = list()
         for key in allitems_new[itemID]:
             if(allitems_new[itemID][key] != allitems_old[itemID][key]):
                 changed_keys.append(key)
         if changed_keys:
-            print(">>> %s, %s" % (itemID, allitems_old[itemID]["name"]))
-            for prop in changed_keys:
-                print("  > %s: %s" % (prop, allitems_new[itemID][prop]))
+            print("    - %s,%s,%s" % (itemID, 
+                                      allitems_old[itemID]["name"],
+                                      '|'.join(changed_keys)))
 
     # Determine unchanged items
     # This is commented out, as the results are always large
     # unchanged = dd.unchanged()
-    # print(">>> Unchanged items")
+    # unchanged = sorted(unchanged)
+    # print("- Unchanged items: %d" % len(unchanged))
     # for itemID in unchanged:
-    #     print("%s,%s" % (itemID, allitems_new[itemID]["name"]))
+    #     print("    - %s,%s" % (itemID, allitems_new[itemID]["name"]))

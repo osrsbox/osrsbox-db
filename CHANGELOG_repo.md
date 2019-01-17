@@ -1,5 +1,10 @@
 ## Repository Changelog:
 
+#### 2019-01-18 07:11:17: 3e4e75cf8
+- Updated changelog functionality
+- The CHANGELOG_repo.md file holds major repository commit messages
+- The CHANGELOG_items.md file contains just changes to the item database.
+
 #### 2019-01-18 06:22:23: 46a233a7a
 - Weekly update: 01/18 - added new inventory icons (mystic recolor).
 
