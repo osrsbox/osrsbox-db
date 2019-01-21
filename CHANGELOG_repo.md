@@ -1,5 +1,44 @@
 ## Repository Changelog:
 
+#### 2019-01-19 20:46:44: 98cf9c651
+- Added bestiary_db_tools and a collection of work in progress scripts
+
+- Very similar method to items_db_tools, build from cache and osrs wiki data
+
+- Still have to fix BeastDefinition and properties
+
+- Have to implement and check stats class, and have to implement drops class.
+
+#### 2019-01-19 20:39:13: 0b9d0db7c
+- Added a collection of OSRS Wiki extraction scripts and data dumps for the future bestiary database.
+
+#### 2019-01-18 10:03:11: 069fcc247
+- Update for 01/18 game update
+
+- Generated all individual JSON files, items_complete and items-json-slot files
+
+- Lots of changes to new items from Kebos update last week that have been populated on the wiki
+
+- Also lots of small changes to weight and examine text for many items.
+
+#### 2019-01-18 09:54:08: f7d4d29ba
+- Update to finish database regeneration for todays update
+
+- Updated item_itemscraper, items_summary files from new cache dump
+
+- Updated normalized_name for some name changes
+
+- Updated ItemDefinition from db_tools to fix buy_limit issue with noted items
+
+- This fixes #13 (with regen to come).
+
+#### 2019-01-18 09:13:25: a0acaeb5a
+- Updated OSRS Wiki item data
+
+- Added new JSON file with all item data in wikitext format
+
+- Updated repo changelog generation script.
+
 #### 2019-01-18 07:49:06: 85a541e99
 - Slight updates to project readme files
 
