@@ -44,8 +44,9 @@ import dateparser
 
 # Import ItemBonuses and ItemEquipment class
 sys.path.append(os.getcwd())
+import MonsterStats
+# Future imports
 # import BeastSlayer
-# import BeastStats
 # import BeastDrops
 
 ###############################################################################
@@ -113,24 +114,18 @@ def _listcast(val):
         return temp_list.append(val)
 
 ###############################################################################
-# BeastDefinition object
-class BeastDefinition(object):
-    def __init__(self, beast_data, all_wiki_bestiary, wiki_extraction_errors):
-        # Input beast_name
-        beast_data = beast_data.split("|")
-        self.beast_id = beast_data[0]
-        self.beast_name = beast_data[1]
-        self.beast_combat_level = beast_data[2]
+# MonsterDefinition object
+class MonsterDefinition(object):
+    def __init__(self, monster_data, all_wiki_monsters):
+        # Input monster_data (id, name, combat)
+        monster_data = monster_data.split("|")
+        self.monster_id = monster_data[0]
+        self.monster_name = monster_data[1]
+        self.monster_combat_level = monster_data[2]
 
-        self.all_wiki_bestiary = all_wiki_bestiary
+        self.all_wiki_monsters = all_wiki_monsters
 
-        self.wiki_extraction_errors = list()
-        for error_name in wiki_extraction_errors:
-            error_name = error_name.lower()
-            self.wiki_extraction_errors.append(error_name)
-
-        # Dict of all BeastDefinition properties
-        # Not currently used, but kept for future
+        # Dict of all MonsterDefinition properties
         self.properties = {
             "id" : None,
             "name" : None,
@@ -147,14 +142,11 @@ class BeastDefinition(object):
             "attack_style" : None,
             "url" : None}
 
-        # Item Bonuses (if equipable, but initialize one anyway)   
-        # self.itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
-
-        # Item Equipment (if equipable, but initialize one anyway)   
-        # self.itemEquipment = ItemEquipment.ItemEquipment(self.itemID)        
+        #  Initialize MonsterStats object
+        self.monsterStats = MonsterStats.MonsterStats(self.monster_id)       
 
         # Setup logging
-        logging.basicConfig(filename="BeastDefinition.log",
+        logging.basicConfig(filename="MonsterDefinition.log",
                             filemode='a',
                             level=logging.DEBUG)
         self.logger = logging.getLogger(__name__)
@@ -263,36 +255,34 @@ class BeastDefinition(object):
 
         # Start section in logger
         self.logger.debug("============================================ START")
-        self.logger.debug("beast_name: %s" % self.beast_name)
+        self.logger.debug("monster_name: %s" % self.monster_name)
 
-        self.name = self.beast_name
-        self.id = self.beast_id
-        self.combat_level = self.beast_combat_level
+        self.name = self.monster_name
+        self.id = self.monster_id
+        self.combat_level = self.monster_combat_level
 
         print(">>>", self.name)
 
-        if self.name.lower() in self.wiki_extraction_errors:
-            return
-
+        # Determine if monster has a wiki page
         has_wiki_page = self.determine_wiki_page()
-
         print("has_wiki_page:", has_wiki_page)
 
+        # If wiki page present, try extract the Infobox Monster
         if has_wiki_page:
-            self.wikitext = self.all_wiki_bestiary[self.name]
+            self.wikitext = self.all_wiki_monsters[self.name]
             has_infobox_monster = self.extract_InfoboxMonster()
+            print("has_infobox_monster:", has_infobox_monster)
         else:
+            # Exit if no wiki page found
             return
 
-        print("has_infobox_monster:", has_infobox_monster)
-
         if has_infobox_monster:
-            self.parse_InfoboxMonster()
-            print(self.release_date)
+            self.monsterStats.parse_wikitext_template(self.infobox_monster_template, "")
+            # Empty string is version, needs fixing
 
-        # print(self.beast_name, self.combat_level, has_wiki_page)
-
-        # Infobox Monster
+        # if has_infobox_monster:
+        #     self.parse_InfoboxMonster()
+        #     print(self.release_date)
 
         # Actually output a JSON file, comment out for testing
         # self.export_pretty_json()
@@ -306,7 +296,7 @@ class BeastDefinition(object):
         # Check if the item name is in the Wiki API dump
         # Return True if found by self.beast_name
         # Return False if not found
-        if self.name in self.all_wiki_bestiary:
+        if self.name in self.all_wiki_monsters:
             self.logger.debug(">>> BEAST FOUND:")
             self.logger.debug("  > name: %s" % self.name)
             # self.logger.debug("  > id: %s" % self.id)
@@ -324,9 +314,8 @@ class BeastDefinition(object):
             template_name = template.name.strip()
             template_name = template_name.lower()
             if "infobox monster" in template_name:
-                self.infobox_monster = template
+                self.infobox_monster_template = template
                 return True
-
         # Default to return false (no infobox found)
         return False        
 
@@ -426,44 +415,35 @@ class BeastDefinition(object):
     def export_json(self):
         # Export JSON to individual file
         self.construct_json()
-        out_fi = "items-json" + os.sep + str(self.id) + ".json"
+        out_fi = "monsters-json" + os.sep + str(self.id) + ".json"
         with open(out_fi, "w") as f:
             json.dump(self.json_out, f)
 
     def export_pretty_json(self):
         # Export pretty JSON to individual file
         self.construct_json()
-        out_fi = ".." + os.sep + "docs" + os.sep + "items-json" + os.sep + str(self.id) + ".json"
+        out_fi = ".." + os.sep + "docs" + os.sep + "monsters-json" + os.sep + str(self.id) + ".json"
         with open(out_fi, "w", newline="\n") as f:
             json.dump(self.json_out, f, indent=4)
 
     def construct_json(self):
-        # TODO: Update construction
         self.json_out = collections.OrderedDict()
         self.json_out["id"] = self.id
         self.json_out["name"] = self.name
         self.json_out["members"] = self.members
-        self.json_out["tradeable"] = self.tradeable
-        self.json_out["tradeable_on_ge"] = self.tradeable_on_ge
-        self.json_out["stackable"] = self.stackable
-        self.json_out["noted"] = self.noted
-        self.json_out["noteable"] = self.noteable
-        self.json_out["linked_id"] = self.linked_id
-        self.json_out["equipable"] = self.equipable
-        self.json_out["cost"] = self.cost
-        self.json_out["lowalch"] = self.lowalch
-        self.json_out["highalch"] = self.highalch        
-        self.json_out["weight"] = self.weight
-        self.json_out["buy_limit"] = self.buy_limit
-        self.json_out["quest_item"] = self.quest_item
-        self.json_out["release_date"] = self.release_date     
+        self.json_out["release_date"] = self.release_date
+        self.json_out["combat_level"] = self.combat_level
         self.json_out["examine"] = self.examine
+        self.json_out["hitpoints"] = self.hitpoints
+        self.json_out["maxhit"] = self.maxhit
+        self.json_out["aggressive"] = self.aggressive
+        self.json_out["poison"] = self.poison
+        self.json_out["weakness"] = self.weakness
+        self.json_out["attack_type"] = self.attack_type
+        self.json_out["attack_style"] = self.attack_style
         self.json_out["url"] = self.url
-        if self.equipable:
-            bonuses_in_json = self.itemBonuses.construct_json()
-            self.json_out["bonuses"] = bonuses_in_json
-            equipment_in_json = self.itemEquipment.construct_json()
-            self.json_out["equipment"] = equipment_in_json
+        
+        # TODO: Add support for constructing JSON for other objects
 
 ###########################################################################
 if __name__=="__main__":

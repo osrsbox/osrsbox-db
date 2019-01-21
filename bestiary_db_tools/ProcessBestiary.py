@@ -36,28 +36,27 @@ import json
 import glob
 
 sys.path.append(os.getcwd())
-import BeastDefinition
+import MonsterDefinition
 
 ###############################################################################
 # ProcessBestiary object
 class ProcessBestiary(object):
-    def __init__(self, all_bestiary_names, all_wiki_bestiary, wiki_extraction_errors):
-        self.all_bestiary_names = all_bestiary_names
-        self.all_wiki_bestiary = all_wiki_bestiary
-        self.wiki_extraction_errors = wiki_extraction_errors      
+    def __init__(self, all_wiki_monsters, all_monster_names):
+        self.all_wiki_monsters = all_wiki_monsters
+        self.all_monster_names = all_monster_names
 
-    def process_all_beasts(self):
+    def process_all_monsters(self):
         # Loop through every item
-        print(">>> Processing all beasts...")
+        print(">>> Processing all monsters...")
         # Print length
-        print("  > Total beast count: %d" % len(self.all_bestiary_names))
+        print("  > Total beast count: %d" % len(self.all_monster_names))
         # Individually process each item
-        for beast_data in all_bestiary_names:
-            self.construct_BeastDefinition(beast_data)
+        for monster_data in self.all_monster_names:
+            self.construct_MonsterDefinition(monster_data)
 
-    def construct_BeastDefinition(self, beast_data):
-        beast_def = BeastDefinition.BeastDefinition(beast_data, self.all_wiki_bestiary, self.wiki_extraction_errors) 
-        beast = beast_def.populate()
+    def construct_MonsterDefinition(self, monster_data):
+        monster_def = MonsterDefinition.MonsterDefinition(monster_data, self.all_wiki_monsters) 
+        monster = monster_def.populate()
 
 ################################################################################
 if __name__=="__main__":    
@@ -65,34 +64,24 @@ if __name__=="__main__":
     print(">>> Starting processing...")
 
     # Remove old log file
-    if os.path.exists("BeastDefinition.log"):
-        os.remove("BeastDefinition.log")
+    if os.path.exists("MonsterDefinition.log"):
+        os.remove("MonsterDefinition.log")
 
     extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
     extraction_path_other = ".." + os.sep + "extraction_tools_other" + os.sep
 
-    with open(extraction_path_wiki + "extract_all_bestiary_page_wikitext.json") as f:
-        all_wiki_bestiary = json.load(f)
+    with open(extraction_path_wiki + "extract_all_monsters_page_wikitext.json") as f:
+        all_wiki_monsters = json.load(f)
 
-    wiki_extraction_errors = list()
-    with open(extraction_path_wiki + "extract_all_bestiary_wikitext_errors.txt") as f:
+    all_monster_names = list()
+    with open(extraction_path_wiki + "extract_all_monsters_from_defs_unique.txt") as f:
         for line in f:
             line = line.strip()
-            wiki_extraction_errors.append(line)
-
-    all_bestiary_names = list()
-    with open(extraction_path_wiki + "extract_all_bestiary_from_defs.txt") as f:
-        for line in f:
-            line = line.strip()
-            all_bestiary_names.append(line)
+            all_monster_names.append(line)
 
     # Next, build the ProcessItems class to handle all items
-    pb = ProcessBestiary(all_bestiary_names,
-                         all_wiki_bestiary,
-                         wiki_extraction_errors)
+    pb = ProcessBestiary(all_wiki_monsters,
+                         all_monster_names)
     
-    # Check for already processes files in items-json (in this dir)
-    # pi.determine_already_processed()
-
-    # Start processing each item ID
-    pb.process_all_beasts()
+    # Start processing each monster
+    pb.process_all_monsters()

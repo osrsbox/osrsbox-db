@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2019/01/19
+Date:    2019/01/22
 
 Description:
 
@@ -61,16 +61,16 @@ def _strcast(val):
     return str(val)
 
 ###############################################################################
-# ItemBonuses object
-class ItemBonuses(object):
-    def __init__(self, itemID):
-        self.itemID = itemID
+# MonsterStats object
+class MonsterStats(object):
+    def __init__(self, monsterID):
+        self.monsterID = monsterID
         self.properties = [
             "attack_level",
             "strength_level",
             "defence_level",
             "magic_level",
-            "range_level",
+            "ranged_level",
             "attack_stab",
             "attack_slash",
             "attack_crush",
@@ -84,8 +84,7 @@ class ItemBonuses(object):
             "attack_accuracy",
             "melee_strength",
             "ranged_strength",
-            "magic_damage",
-            "prayer"]
+            "magic_damage"]
 
         for prop in self.properties:
             setattr(self, prop, 0)
@@ -120,11 +119,11 @@ class ItemBonuses(object):
         self._magic_level = _intcast(value)
 
     @property
-    def range_level(self):
-        return self._range_level
-    @range_level.setter
-    def range_level(self, value):
-        self._range_level = _intcast(value)                                    
+    def ranged_level(self):
+        return self._ranged_level
+    @ranged_level.setter
+    def ranged_level(self, value):
+        self._ranged_level = _intcast(value)                                    
 
     # Attacking Stats
     @property
@@ -227,12 +226,37 @@ class ItemBonuses(object):
     def magic_damage(self, value):
         self._magic_damage = _intcast(value)
 
-    @property
-    def prayer(self):
-        return self._prayer
-    @prayer.setter
-    def prayer(self, value):
-        self._prayer = _intcast(value)       
+    ###########################################################################
+    # Handle template to object
+    def extract_template_value(self, template, key):
+        value = None
+        try:
+            value = template.get(key).value
+            return value
+        except ValueError:
+            return value
+
+    def parse_wikitext_template(self, template, version):
+        # Parse the Infobox Monsters template to MonsterStats object
+        self.attack_level = self.extract_template_value(template, "att" + version)
+        self.strength_level = self.extract_template_value(template, "str" + version)
+        self.defence_level = self.extract_template_value(template, "def" + version)
+        self.magic_level = self.extract_template_value(template, "mage" + version)
+        self.ranged_level = self.extract_template_value(template, "range" + version)
+        self.attack_stab = self.extract_template_value(template, "astab" + version)
+        self.attack_slash = self.extract_template_value(template, "aslash" + version)
+        self.attack_crush = self.extract_template_value(template, "acrush" + version)
+        self.attack_magic = self.extract_template_value(template, "amagic" + version)
+        self.attack_ranged = self.extract_template_value(template, "arange" + version)
+        self.defence_stab = self.extract_template_value(template, "dstab" + version)
+        self.defence_slash = self.extract_template_value(template, "dslash" + version)
+        self.defence_crush = self.extract_template_value(template, "dcrush" + version)
+        self.defence_magic = self.extract_template_value(template, "dmagic" + version)
+        self.defence_ranged = self.extract_template_value(template, "drange" + version)
+        self.attack_accuracy = self.extract_template_value(template, "attbns" + version)
+        self.melee_strength = self.extract_template_value(template, "strbns" + version)
+        self.ranged_strength = self.extract_template_value(template, "rngbns" + version)
+        self.magic_damage = self.extract_template_value(template, "mbns" + version)
 
     ###########################################################################
     # Handle item to JSON
@@ -257,7 +281,6 @@ class ItemBonuses(object):
         self.json_out["melee_strength"] = self.melee_strength
         self.json_out["ranged_strength"] = self.ranged_strength
         self.json_out["magic_damage"] = self.magic_damage
-        self.json_out["prayer"] = self.prayer 
         return self.json_out     
 
 ################################################################################
