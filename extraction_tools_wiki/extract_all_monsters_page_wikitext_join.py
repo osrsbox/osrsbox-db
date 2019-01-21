@@ -4,10 +4,10 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2019/01/19
+Date:    2019/01/22
 
 Description:
-Join directory of single JSON files with beast_name -> beast_wikitext
+Join directory of single JSON files with monster_name -> monster_wikitext
 
 Copyright (c) 2019, PH01L
 
@@ -36,16 +36,16 @@ import glob
 
 ################################################################################
 if __name__=="__main__":   
-    wikitext_fis_path = "extract_all_bestiary_page_wikitext" + os.sep + "*"
+    wikitext_fis_path = "extract_all_monsters_page_wikitext" + os.sep + "*"
     wikitext_fis = glob.glob(wikitext_fis_path)
 
-    all_beasts = dict()
+    all_monsters = dict()
     for fi in wikitext_fis:
         with open(fi) as f:
             data = json.load(f)
-            beast_name = next(iter(data))
-            beast_wikitext = data[beast_name]
-            all_beasts[beast_name] = beast_wikitext
+            monster_name = next(iter(data))
+            monster_wikitext = data[monster_name]
+            all_monsters[monster_name] = monster_wikitext
              
-    with open("extract_all_bestiary_page_wikitext.json", "w") as fi:
-        json.dump(all_beasts, fi)
+    with open("extract_all_monsters_page_wikitext.json", "w") as fi:
+        json.dump(all_monsters, fi)

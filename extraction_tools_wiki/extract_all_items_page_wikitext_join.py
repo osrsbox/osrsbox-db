@@ -4,7 +4,7 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2019/01/11
+Date:    2019/01/22
 
 Description:
 Join directory of single JSON files with item_name -> item_wikitext
@@ -39,13 +39,13 @@ if __name__=="__main__":
     wikitext_fis_path = "extract_all_items_page_wikitext" + os.sep + "*"
     wikitext_fis = glob.glob(wikitext_fis_path)
 
-    all_quests = dict()
+    all_items = dict()
     for fi in wikitext_fis:
         with open(fi) as f:
             data = json.load(f)
-            quest_name = next(iter(data))
-            quest_wikitext = data[quest_name]
-            all_quests[quest_name] = quest_wikitext
+            item_name = next(iter(data))
+            item_wikitext = data[item_name]
+            all_items[item_name] = item_wikitext
              
     with open("extract_all_items_page_wikitext.json", "w") as fi:
-        json.dump(all_quests, fi)
+        json.dump(all_items, fi)

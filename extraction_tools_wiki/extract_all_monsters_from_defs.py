@@ -4,10 +4,10 @@
 Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: osrsbox.com
-Date:    2019/01/19
+Date:    2019/01/21
 
 Description:
-Extract all attackable NPCs (beasts) from NpcDefinition files
+Extract all attackable NPCs (monsters) from NpcDefinition files
 
 Copyright (c) 2019, PH01L
 
@@ -40,29 +40,45 @@ def_fis = glob.glob("npcs/*.json")
 def_fis = sorted(def_fis)
 
 # Setup out files
-out_fi = "extract_all_bestiary_from_defs.txt"
-fi = open(out_fi, "w", newline="\n")
+out_fi = "extract_all_monsters_from_defs.txt"
+all_monsters = open(out_fi, "w", newline="\n")
 
+out_fi = "extract_all_monsters_from_defs_unique.txt"
+all_monsters_unique = open(out_fi, "w", newline="\n")
+
+known = list()
 for def_fi in def_fis:
     with open(def_fi) as f:
         json_data = json.load(f)
         # Look for Attack in right-click options
         if "Attack" in json_data["options"]:
             # Get useful data from NpcDefinition
-            beast_name = json_data["name"]
-            beast_id = json_data["id"]
-            beast_combat_level = json_data["combatLevel"]
+            monster_name = json_data["name"]
+            monster_id = json_data["id"]
+            monster_combat_level = json_data["combatLevel"]
             # Print NPC name
-            print(beast_name)
-            # Skip strange beast names
-            if beast_name.startswith("<col"):
+            print(monster_name)
+            # Skip strange monster names
+            if monster_name.startswith("<col"):
                 continue
-            if beast_name == "null":
+            if monster_name == "null":
                 continue
-            # Write out details of beast
+            # Write out details of monster to all_monsters
             # Format: id|name|norm_name|combatlevel
-            fi.write("%s|%s|%s\n" % (beast_id, 
-                                     beast_name, 
-                                     beast_combat_level))
+            all_monsters.write("%s|%s|%s\n" % (monster_id, 
+                                               monster_name, 
+                                               monster_combat_level))
+            
+            unique_monster_name = monster_name + "_" + str(monster_combat_level)
+            # Write out details of monster to all_monsters_unique
+            # only is the monster is new
+            if unique_monster_name not in known:
+                all_monsters_unique.write("%s|%s|%s\n" % (monster_id, 
+                                                          monster_name, 
+                                                          monster_combat_level))
 
-fi.close()
+            # Add monsters name and level to a list
+            known.append(unique_monster_name)
+
+all_monsters.close()
+all_monsters_unique.close()
