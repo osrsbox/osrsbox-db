@@ -263,35 +263,35 @@ class MonsterDefinition(object):
 
         # print(">>>", self.name)
 
-        # Determine if monster has a wiki page
-        has_wiki_page = self.determine_wiki_page()
+        ###### OLD CODE FOR MONSTER FROM CACHE SOLUTION  
+        # # Determine if monster has a wiki page
+        # has_wiki_page = self.determine_wiki_page()
         
-        # # Exit if there is no wiki page
-        # if not has_wiki_page:
-        #     print(self.name)
+        # # # Exit if there is no wiki page
+        # # if not has_wiki_page:
+        # #     print(self.name)
+        # #     return
+
+        # # If wiki page present, try extract the Infobox Monster
+        # if has_wiki_page:
+        #     self.wikitext = self.all_wiki_monsters[self.name]
+        #     has_monster_template = self.extract_template()
+        #     print("has_monster_template:", has_monster_template)
+        # else:
+        #     # Exit if no wiki page found
         #     return
 
-        # If wiki page present, try extract the Infobox Monster
-        if has_wiki_page:
-            self.wikitext = self.all_wiki_monsters[self.name]
-            has_monster_template = self.extract_template()
-            print("has_monster_template:", has_monster_template)
-        else:
-            # Exit if no wiki page found
-            return
-
-        if has_monster_template:
-            self.monsterStats.parse_wikitext_template(self.infobox_monster_template, "")
-            # Empty string is version, needs fixing
-
         # if has_monster_template:
-        #     self.parse_InfoboxMonster()
-        #     print(self.release_date)
+        #     self.monsterStats.parse_wikitext_template(self.infobox_monster_template, "")
+        #     # Empty string is version, needs fixing
 
-        # Actually output a JSON file, comment out for testing
-        # self.export_pretty_json()
+        # # if has_monster_template:
+        # #     self.parse_InfoboxMonster()
+        # #     print(self.release_date)
 
-        # Finished. Return the entire ItemDefinition object
+        # # Actually output a JSON file, comment out for testing
+        # # self.export_pretty_json()
+
         return self
 
     ###########################################################################

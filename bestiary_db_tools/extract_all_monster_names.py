@@ -41,6 +41,9 @@ extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
 with open(extraction_path_wiki + "extract_all_monsters_page_wikitext.json") as f:
     all_wiki_monsters = json.load(f)
 
+# Create an dictionary for versioned monsters
+json_data = dict()
+
 for name in all_wiki_monsters:
     # print(name)
     wikitext = mwparserfromhell.parse(all_wiki_monsters[name])
@@ -84,4 +87,15 @@ for name in all_wiki_monsters:
         else:
             print(">>> Name      %s" % name)
             print("  > Versions: %d" % 1)
+
+        if is_versioned:
+            i = 1
+            while i < version_count:
+                new_name = name + "_" + str(i)
+                json_data[new_name] = all_wiki_monsters[name]
+                i += 1
+        else:
+            json_data[name] = all_wiki_monsters[name]
                 
+with open("all_monsters_wikitext.json", "w") as f:
+    json.dump(json_data, f, indent=4)

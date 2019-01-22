@@ -41,9 +41,10 @@ import MonsterDefinition
 ###############################################################################
 # ProcessBestiary object
 class ProcessBestiary(object):
-    def __init__(self, all_wiki_monsters, all_monster_names):
-        self.all_wiki_monsters = all_wiki_monsters
-        self.all_monster_names = all_monster_names
+    def __init__(self, all_wiki_monsters, all_monster_names, all_wiki_monsters_verisoned):
+        self.all_wiki_monsters = all_wiki_monsters # Default wikitext dict from 
+        self.all_monster_names = all_monster_names # From cache defs, not unique list
+        self.all_wiki_monsters_verisoned = all_wiki_monsters_verisoned # Wikitext, with versioning
 
     def process_all_monsters(self):
         # Loop through every item
@@ -51,8 +52,10 @@ class ProcessBestiary(object):
         # Print length
         print("  > Total beast count: %d" % len(self.all_monster_names))
         # Individually process each item
-        for monster_data in self.all_monster_names:
-            self.construct_MonsterDefinition(monster_data)
+        # for monster_data in self.all_monster_names:
+        #     self.construct_MonsterDefinition(monster_data)
+        for monster_name in self.all_wiki_monsters_verisoned:
+            self.construct_MonsterDefinition(self.all_wiki_monsters_verisoned[monster_name])
 
     def construct_MonsterDefinition(self, monster_data):
         monster_def = MonsterDefinition.MonsterDefinition(monster_data, self.all_wiki_monsters) 
@@ -73,6 +76,9 @@ if __name__=="__main__":
     with open(extraction_path_wiki + "extract_all_monsters_page_wikitext.json") as f:
         all_wiki_monsters = json.load(f)
 
+    with open("all_monsters_wikitext.json") as f:
+        all_wiki_monsters_verisoned = json.load(f)
+
     all_monster_names = list()
     with open(extraction_path_wiki + "extract_all_monsters_from_defs_unique.txt") as f:
         for line in f:
@@ -81,7 +87,8 @@ if __name__=="__main__":
 
     # Next, build the ProcessItems class to handle all items
     pb = ProcessBestiary(all_wiki_monsters,
-                         all_monster_names)
+                         all_monster_names,
+                         all_wiki_monsters_verisoned)
     
     # Start processing each monster
     pb.process_all_monsters()
