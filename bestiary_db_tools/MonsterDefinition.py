@@ -261,26 +261,30 @@ class MonsterDefinition(object):
         self.id = self.monster_id
         self.combat_level = self.monster_combat_level
 
-        print(">>>", self.name)
+        # print(">>>", self.name)
 
         # Determine if monster has a wiki page
         has_wiki_page = self.determine_wiki_page()
-        print("has_wiki_page:", has_wiki_page)
+        
+        # # Exit if there is no wiki page
+        # if not has_wiki_page:
+        #     print(self.name)
+        #     return
 
         # If wiki page present, try extract the Infobox Monster
         if has_wiki_page:
             self.wikitext = self.all_wiki_monsters[self.name]
-            has_infobox_monster = self.extract_InfoboxMonster()
-            print("has_infobox_monster:", has_infobox_monster)
+            has_monster_template = self.extract_template()
+            print("has_monster_template:", has_monster_template)
         else:
             # Exit if no wiki page found
             return
 
-        if has_infobox_monster:
+        if has_monster_template:
             self.monsterStats.parse_wikitext_template(self.infobox_monster_template, "")
             # Empty string is version, needs fixing
 
-        # if has_infobox_monster:
+        # if has_monster_template:
         #     self.parse_InfoboxMonster()
         #     print(self.release_date)
 
@@ -290,25 +294,31 @@ class MonsterDefinition(object):
         # Finished. Return the entire ItemDefinition object
         return self
 
+    ###########################################################################
+    # Handle wiki lookup, and template extraction
     def determine_wiki_page(self):
-        self.logger.debug("Searching for item in OSRS Wiki by name...")
+        self.logger.debug("Searching for monster in OSRS Wiki by name...")
         
-        # Check if the item name is in the Wiki API dump
-        # Return True if found by self.beast_name
-        # Return False if not found
+        # Check if the monster name is in the Wiki dump
         if self.name in self.all_wiki_monsters:
-            self.logger.debug(">>> BEAST FOUND:")
+            self.logger.debug(">>> MONSTER NAME FOUND:")
             self.logger.debug("  > name: %s" % self.name)
-            # self.logger.debug("  > id: %s" % self.id)
+            self.logger.debug("  > id: %s" % self.id)
             self.url = "https://oldschool.runescape.wiki/w/" + self.name
+            # Return True if found by self.name
             return True
         else:
+            self.logger.error(">>> MONSTER NAME NOT FOUND:")
+            self.logger.error("  > name: %s" % self.name)
+            self.logger.error("  > id: %s" % self.id)            
+            # Return False if not found        
             return False
 
-    def extract_InfoboxMonster(self):
+    def extract_template(self):
+        # Read wikitext using parser
         wikitext = mwparserfromhell.parse(self.wikitext)
 
-        # Extract templates in the page
+        # Extract Infobox Monster template in the page
         templates = wikitext.filter_templates()
         for template in templates:
             template_name = template.name.strip()
@@ -316,9 +326,12 @@ class MonsterDefinition(object):
             if "infobox monster" in template_name:
                 self.infobox_monster_template = template
                 return True
-        # Default to return false (no infobox found)
+        # Default to return false (Infobox Monster not found)
+        self.infobox_monster_template = None
         return False        
 
+    ###########################################################################
+    # Handle wikitext extraction, and template extraction
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
         clean_input = str(input)
@@ -356,25 +369,8 @@ class MonsterDefinition(object):
             self.release_date = self.clean_release_date(release_date)
         else:
             self.release_date = None
-
-
         return True
-
-    def extract_InfoBoxBonuses(self):
-        # Extract Infobox Bonuses from wikitext
-        try:
-            wikicode = mwparserfromhell.parse(self.all_wikia_items_bonuses[self.wiki_name])
-        except KeyError:
-            return False
-        templates = wikicode.filter_templates()
-        for template in templates:
-            extracted_infobox = self.parse_InfoboxBonuses(template)
-            if extracted_infobox:
-                return True
-            else:
-                return False   
-        return False
-              
+             
     def clean_InfoboxBonuses_value(self, template, prop):
         value = None
         # if self.current_version is not None:
@@ -387,7 +383,25 @@ class MonsterDefinition(object):
             return self.strip_infobox(value)
           
     ###########################################################################
-    # Handle item to JSON
+    # Handle monster to JSON
+    def construct_json(self):
+        self.json_out = collections.OrderedDict()
+        self.json_out["id"] = self.id
+        self.json_out["name"] = self.name
+        self.json_out["members"] = self.members
+        self.json_out["release_date"] = self.release_date
+        self.json_out["combat_level"] = self.combat_level
+        self.json_out["examine"] = self.examine
+        self.json_out["hitpoints"] = self.hitpoints
+        self.json_out["maxhit"] = self.maxhit
+        self.json_out["aggressive"] = self.aggressive
+        self.json_out["poison"] = self.poison
+        self.json_out["weakness"] = self.weakness
+        self.json_out["attack_type"] = self.attack_type
+        self.json_out["attack_style"] = self.attack_style
+        self.json_out["url"] = self.url
+        # TODO: Add support for constructing JSON for other objects
+
     def print_json(self):
         # Print JSON to console
         self.construct_json()
@@ -425,25 +439,6 @@ class MonsterDefinition(object):
         out_fi = ".." + os.sep + "docs" + os.sep + "monsters-json" + os.sep + str(self.id) + ".json"
         with open(out_fi, "w", newline="\n") as f:
             json.dump(self.json_out, f, indent=4)
-
-    def construct_json(self):
-        self.json_out = collections.OrderedDict()
-        self.json_out["id"] = self.id
-        self.json_out["name"] = self.name
-        self.json_out["members"] = self.members
-        self.json_out["release_date"] = self.release_date
-        self.json_out["combat_level"] = self.combat_level
-        self.json_out["examine"] = self.examine
-        self.json_out["hitpoints"] = self.hitpoints
-        self.json_out["maxhit"] = self.maxhit
-        self.json_out["aggressive"] = self.aggressive
-        self.json_out["poison"] = self.poison
-        self.json_out["weakness"] = self.weakness
-        self.json_out["attack_type"] = self.attack_type
-        self.json_out["attack_style"] = self.attack_style
-        self.json_out["url"] = self.url
-        
-        # TODO: Add support for constructing JSON for other objects
 
 ###########################################################################
 if __name__=="__main__":

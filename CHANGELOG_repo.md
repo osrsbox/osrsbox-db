@@ -1,5 +1,26 @@
 ## Repository Changelog:
 
+#### 2019-01-22 08:49:02: 37cb8f676
+- Updated bestiary_db_tools for new wiki extraction method
+
+- Authored most of the MonsterStats class (apart from JSON output)
+
+- Fixed some logic in MonsterDefinition for future development
+
+- Primary goal at the moment of wiki infobox monster versioning.
+
+#### 2019-01-22 07:54:16: 45cf858f7
+- Updated monster wiki extraction tools
+
+- Changes name from bestiary to monster
+
+- Started using Category:Monsters for wiki extraction instead of using the OSRS cache names directly.
+
+#### 2019-01-21 19:48:41: 7d50e32a6
+- Added script to check osrs item name normalization
+
+- Reads items_complete.json and checks if the item name is present in the latest wiki item dump.
+
 #### 2019-01-19 20:46:44: 98cf9c651
 - Added bestiary_db_tools and a collection of work in progress scripts
 
