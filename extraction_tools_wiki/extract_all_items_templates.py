@@ -68,7 +68,7 @@ if __name__=="__main__":
     infobox_pet = defaultdict(list)
     
     # Determine previously extracted wiki pages
-    wikitext_fis_path = "extract_all_items_page_wikitext" + os.sep + "*"
+    wikitext_fis_path = os.path.join("extract_all_items_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
 
     for fi in wikitext_fis:

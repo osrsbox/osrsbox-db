@@ -80,6 +80,6 @@ if __name__=="__main__":
         for item in items[slot]:
             json_item_out = item.construct_json()
             json_out[item.id] = json_item_out
-        out_fi = "items-json-slot" + os.sep + "items_" + slot + ".json"
+        out_fi = os.path.join("items-json-slot", "items_" + slot + ".json")
         with open(out_fi, "w") as f:
             json.dump(json_out, f)

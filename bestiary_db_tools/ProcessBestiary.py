@@ -70,8 +70,8 @@ if __name__=="__main__":
     if os.path.exists("MonsterDefinition.log"):
         os.remove("MonsterDefinition.log")
 
-    extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
-    extraction_path_other = ".." + os.sep + "extraction_tools_other" + os.sep
+    extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
+    extraction_path_other = os.path.join("..", "extraction_tools_other", "")
 
     with open(extraction_path_wiki + "extract_all_monsters_page_wikitext.json") as f:
         all_wiki_monsters = json.load(f)

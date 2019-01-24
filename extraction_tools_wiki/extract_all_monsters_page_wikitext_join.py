@@ -35,8 +35,8 @@ import json
 import glob
 
 ################################################################################
-if __name__=="__main__":   
-    wikitext_fis_path = "extract_all_monsters_page_wikitext" + os.sep + "*"
+if __name__=="__main__":
+    wikitext_fis_path = os.path.join("extract_all_monsters_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
 
     all_monsters = dict()

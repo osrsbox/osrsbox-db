@@ -38,14 +38,14 @@ import json
 
 # Get the dictionary of item ID -> wikitext
 all_wiki_items = dict()
-extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
+extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
 with open(extraction_path_wiki + "extract_all_items_templates_InfoboxItems.json") as f:
     all_wiki_items = json.load(f)
 
 # Read in normalized_names.txt
 all_wiki_normalized_names = dict()
 all_wiki_normalized_ids = dict()
-extraction_path_other = ".." + os.sep + "extraction_tools_other" + os.sep
+extraction_path_other = os.path.join("..", "extraction_tools_other", "")
 with open(extraction_path_other + "normalized_names.txt") as f:
     for l in f:
         l = l.strip()
@@ -57,7 +57,7 @@ with open(extraction_path_other + "normalized_names.txt") as f:
 
 # Get the latest cache dump
 items = dict()
-in_fi = ".." + os.sep + "docs" + os.sep + "items_itemscraper.json"
+in_fi = os.path.join("..", "docs", "items_itemscraper.json")
 with open(in_fi) as f:
     temp = json.load(f)
     for k,v in temp.items():
