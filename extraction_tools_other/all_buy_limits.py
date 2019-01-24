@@ -35,7 +35,7 @@ import sys
 import json
 
 # Import osrsbox-db API classes
-path = ".." + os.sep + "item_api_tools" + os.sep
+path = os.path.join("..", "item_api_tools", "")
 sys.path.append(path)
 import AllItems
 import ItemDefinition

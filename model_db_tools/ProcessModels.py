@@ -123,9 +123,9 @@ if __name__=="__main__":
     args = vars(ap.parse_args())    
 
     directory = args["directory"]
-    items = directory + os.sep + "items" + os.sep
-    npcs = directory + os.sep + "npcs" + os.sep
-    objects = directory + os.sep + "objects" + os.sep
+    items = os.path.join(directory, "items", "")
+    npcs = os.path.join(directory, "npcs", "")
+    objects = os.path.join(directory, "objects", "")
 
     models_dict = dict()
 

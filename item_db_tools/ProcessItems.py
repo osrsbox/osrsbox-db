@@ -74,7 +74,7 @@ class ProcessItems(object):
 
     def determine_already_processed(self):
         # Determine any items that have already been processed
-        fis = glob.glob(".." + os.sep + "docs" + os.sep + "items-json" + os.sep + "*")
+        fis = glob.glob(os.path.join("..", "docs", "items-json", "*"))
         for fi in fis:
             fi = os.path.basename(fi)
             fi = os.path.splitext(fi)[0]
@@ -119,8 +119,8 @@ if __name__=="__main__":
     if os.path.exists("ItemDefinition.log"):
         os.remove("ItemDefinition.log")
 
-    extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
-    extraction_path_other = ".." + os.sep + "extraction_tools_other" + os.sep
+    extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
+    extraction_path_other = os.path.join("..", "extraction_tools_other", "")
 
     with open(extraction_path_wiki + "extract_all_items_templates_InfoboxItems.json") as f:
         all_wiki_items = json.load(f)

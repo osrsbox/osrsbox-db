@@ -36,7 +36,7 @@ import json
 # These require pip install
 import mwparserfromhell
 
-extraction_path_wiki = ".." + os.sep + "extraction_tools_wiki" + os.sep
+extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
 
 with open(extraction_path_wiki + "extract_all_monsters_page_wikitext.json") as f:
     all_wiki_monsters = json.load(f)

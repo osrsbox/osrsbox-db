@@ -72,8 +72,8 @@ def extract_wikitext(page_name):
     item_dict[page_name] = str(wikitext)
 
     out_fi_name = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(64))
-    
-    out_fi = "extract_all_items_page_wikitext" + os.sep + out_fi_name + ".json"
+
+    out_fi = os.path.join("extract_all_items_page_wikitext", out_fi_name + ".json")
     with open(out_fi, "w") as f:
         json.dump(item_dict, f)  
 
@@ -91,7 +91,7 @@ if __name__=="__main__":
 
     # Determine previously extracted page_titles
     print("  > Determining already extracted page titles...")
-    processed_fis_path = "extract_all_items_page_wikitext" + os.sep + "*"
+    processed_fis_path = os.path.join("extract_all_items_page_wikitext", "*")
     processed_fis = glob.glob(processed_fis_path)
     items_already_processed = list()
     # Strip path from files
