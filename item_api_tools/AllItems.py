@@ -36,9 +36,8 @@ import sys
 import json
 import glob
 
-sys.path.append(os.getcwd())
-import ItemDefinition
-import ItemBonuses
+from . import ItemDefinition
+
 
 ###############################################################################
 # AllItems object

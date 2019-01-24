@@ -39,13 +39,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "0.1.0"
 
 import os
-import sys
 import json
 import glob
-import collections
 
-sys.path.append(os.getcwd())
-import QuestDefinition
+
+from . import QuestDefinition
+
 
 ################################################################################
 if __name__=="__main__":
