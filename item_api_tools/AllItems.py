@@ -32,29 +32,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "0.1.0"
 
 import os
-import sys
 import json
 import glob
+import logging
 
 from . import ItemDefinition
 
+log = logging.getLogger(__name__)
 
-###############################################################################
-# AllItems object
-class AllItems(object):
-    def __init__(self, input_data):
-        self.input_data = input_data
-        self.all_items = list()
-        self.all_items_dict = dict()
-        self.load_all_items()
+
+class AllItems:
+    def __init__(self, input_data_file_or_directory):
+        self.all_items = []  # TODO: Check to see which of these are necessary
+        self.all_items_dict = {}  # TODO: Check to see which of these are necessary
+        self.load_all_items(input_data_file_or_directory)
 
     def __iter__(self):
-        # Generator
-        for itemID in self.all_items:
-            yield itemID          
-        # Generator (for dict)
-        # for itemID, object in self.all_items.items():
-        #     yield itemID, object        
+        for item_id in self.all_items:
+            yield item_id
 
     def get_itemids_objects(self):
         # Return keys
@@ -68,36 +63,56 @@ class AllItems(object):
         # Return values
         return self.all_items_dict.values()
 
-    def load_all_items(self):
-        # Counter
-        count = 0
-
+    def load_all_items(self, input_data_file_or_directory):
         # Handle input_data (either items-json dir, or items_complete.json)
-        if os.path.isdir(self.input_data):
-            fis = glob.glob(self.input_data + "*")
-            # Loop through every item
-            for json_file in fis:
-                # Load JSON file to allitems dict
-                sys.stdout.write(">>> Processing: %d\r" % count)
-                with open(json_file) as f:
-                    temp = json.load(f)
-                    # Load the item using the ItemDefinition class
-                    id = ItemDefinition.ItemDefinition()
-                    item = id.load_item(temp)
-                    # Add item to list and dict
-                    self.all_items.append(item)
-                    self.all_items_dict[item.id] = item
-                    count += 1
+        if os.path.isdir(input_data_file_or_directory):
+            if input_data_file_or_directory.endswith("/"):
+                path = input_data_file_or_directory + "*"
+            else:
+                path = os.path.join(input_data_file_or_directory, "*")
 
-        elif os.path.isfile(self.input_data):
-            json_file = self.input_data
+            self._load_items_from_directory(path_to_directory=path)
+
+        elif os.path.isfile(input_data_file_or_directory):
+            self._load_items_from_file(input_data_file_or_directory)
+
+    def _load_items_from_directory(self, path_to_directory: str):
+        """
+        The directory should contain json file objects with items.
+
+        The `items-json` directory contains the format for these files.
+        """
+        count = 1
+        # Loop through every item file
+        for json_file in glob.glob(path_to_directory):
+
+            if os.path.isdir(json_file):
+                continue
+
+            log.debug("Processing item: %d" % count)
             with open(json_file) as f:
                 temp = json.load(f)
-                for entry in temp:
-                    # Load the item using the ItemDefinition class
-                    id = ItemDefinition.ItemDefinition()
-                    item = id.load_item(temp[entry])
-                    # Add item to list and dict
-                    self.all_items.append(item)
-                    self.all_items_dict[item.id] = item
-                    count += 1                    
+
+            self._load_item(temp)
+            count += 1
+
+    def _load_items_from_file(self, path_to_json_file: str):
+        """The `path_to_json_file` should be a json file containing a structure like `all_items.json`."""
+        count = 1
+
+        with open(path_to_json_file) as f:
+            temp = json.load(f)
+
+        for entry in temp:
+            self._load_item(temp[entry])
+            count += 1
+
+    def _load_item(self, item_json):
+        """Convert the ``item_json`` into a :class:`ItemDefinition.ItemDefinition` and store it."""
+        # Load the item using the ItemDefinition class
+        item_definition = ItemDefinition.ItemDefinition()
+        item = item_definition.load_item(item_json)
+
+        # Add item to list and dict
+        self.all_items.append(item)
+        self.all_items_dict[item.id] = item
