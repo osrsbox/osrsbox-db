@@ -30,16 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
-import sys
 import json
 
-# Import osrsbox-db API classes
-path = os.path.join("..", "item_api_tools", "")
-sys.path.append(path)
-import AllItems
-import ItemDefinition
-import ItemBonuses
+from item_api_tools import AllItems
 
 ################################################################################
 if __name__=="__main__":

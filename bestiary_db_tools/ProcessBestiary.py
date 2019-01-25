@@ -31,12 +31,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "0.1.0"
 
 import os
-import sys
 import json
-import glob
 
-sys.path.append(os.getcwd())
-import MonsterDefinition
+from bestiary_db_tools import MonsterDefinition
+
 
 ###############################################################################
 # ProcessBestiary object

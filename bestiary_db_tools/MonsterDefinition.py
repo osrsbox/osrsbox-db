@@ -31,20 +31,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "1.0.0"
 
 import os
-import sys
 import json
 import datetime
 import collections
 import logging
-import re
 
 # These require pip install
 import mwparserfromhell
 import dateparser
 
 # Import ItemBonuses and ItemEquipment class
-sys.path.append(os.getcwd())
-import MonsterStats
+from bestiary_db_tools import MonsterStats
 # Future imports
 # import BeastSlayer
 # import BeastDrops

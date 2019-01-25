@@ -31,23 +31,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
-import sys
-import json
-import datetime
-import collections
 import logging
-import re
 
 # Pip install required
-import requests
 import mwparserfromhell
-import dateparser
 
-sys.path.append(os.getcwd())
-import QuestMetadata
-import QuestDetails
-import QuestRewards
+from . import QuestMetadata, QuestDetails, QuestRewards
+
 
 ###############################################################################
 # QuestDefinition object

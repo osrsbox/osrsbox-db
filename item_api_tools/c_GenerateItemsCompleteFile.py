@@ -31,14 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
-import sys
-
-# Import osrsbox-db API classes
-sys.path.append(os.getcwd())
-import AllItems
-import ItemDefinition
-import ItemBonuses
+from . import AllItems
 
 import json
 
