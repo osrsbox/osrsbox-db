@@ -52,13 +52,13 @@ if __name__=="__main__":
     # Start processing    
     print(">>> Starting processing...")
 
-    wiki_extraction_path = ".." + os.sep + "extraction_tools_wiki" + os.sep
+    wiki_extraction_path = os.path.join("..", "extraction_tools_wiki", "")
 
     # Load all JSON files with quest wikitext
     print(">>> Loading wikitext...")
     all_wiki_quest_pages = dict()
 
-    wikitext_fis_path = wiki_extraction_path + "extract_all_quests_page_wikitext" + os.sep + "*"
+    wikitext_fis_path = os.path.join(wiki_extraction_path + "extract_all_quests_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
 
     for fi in wikitext_fis:

@@ -295,14 +295,14 @@ class ItemDefinition(object):
     def export_json(self):
         # Export JSON to individual file
         self.construct_json()
-        out_fi = "items-json" + os.sep + str(self.id) + ".json"
+        out_fi = os.path.join("items-json", str(self.id) + ".json")
         with open(out_fi, "w") as f:
             json.dump(self.json_out, f)
 
     def export_pretty_json(self):
         # Export pretty JSON to individual file
         self.construct_json()
-        out_fi = "items-json" + os.sep + str(self.id) + ".json"
+        out_fi = os.path.join("items-json", str(self.id) + ".json")
         with open(out_fi, "w") as f:
             json.dump(self.json_out, f, indent=4)
 

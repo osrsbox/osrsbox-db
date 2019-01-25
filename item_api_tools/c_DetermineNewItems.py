@@ -63,7 +63,7 @@ if __name__=="__main__":
     # Start processing
 
     print(">>> Processing OLD items_itemscraper.json file...")
-    fi_name = ".." + os.sep + "docs" + os.sep + "items_itemscraper.json"
+    fi_name = os.path.join("..", "docs", "items_itemscraper.json")
     with open(fi_name) as f:
         allitems_old = json.load(f)
     print("  > Old item count: %d" % len(allitems_old))
