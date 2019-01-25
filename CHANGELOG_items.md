@@ -1,3 +1,15 @@
+### 2019/01/24: Boxing Mechanics and Lots of Fixes
+- Added items: 0
+- Removed items: 2
+    - 10568,Null
+    - 980,Null
+- Changed items: 5
+    - 10567,Null,noteable|linked_id
+    - 22743,Dragon hasta(kp),noteable|tradeable|linked_id
+    - 22744,Dragon hasta(kp),noteable|noted|name|linked_id
+    - 22988,Hydra tail,highalch|lowalch|cost
+    - 22989,Hydra tail,highalch|lowalch|cost
+
 ### 2019/01/17: Kebos Graphical Changes and Other Fixes
 - Added items: 17
     - 23047,Mystic hat (dusk)
