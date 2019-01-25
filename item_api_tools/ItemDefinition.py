@@ -262,7 +262,8 @@ class ItemDefinition(object):
 
     ###########################################################################
     # Helpers: Processing
-    def load_item(self, input):
+    # TODO: Change this into a class method and return a new ItemDefinition object instead
+    def load_item(self, input) -> "ItemDefinition":
         for prop in self.properties:
             setattr(self, prop, input[prop]) 
 
