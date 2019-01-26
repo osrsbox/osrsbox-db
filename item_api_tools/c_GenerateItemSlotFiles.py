@@ -39,16 +39,16 @@ import json
 from . import AllItems
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", 
-                    "--input", 
+    ap.add_argument("-i",
+                    "--input",
                     required=True,
                     help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items_complete.json) ")
     args = vars(ap.parse_args())
-    
-    # Start processing    
+
+    # Start processing
     print(">>> Reading in database contents...")
     ai = AllItems.AllItems(args["input"])
 
@@ -68,7 +68,7 @@ if __name__=="__main__":
             if item.equipment.slot is not None:
                 items[item.equipment.slot].append(item)
 
-    # Process each item found, and 
+    # Process each item found, and
     for slot in items:
         json_out = dict()
         for item in items[slot]:

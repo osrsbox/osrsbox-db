@@ -35,8 +35,9 @@ import requests
 
 custom_agent = {
     'User-Agent': 'some-agent',
-    'From': 'name@domain.com' 
+    'From': 'name@domain.com'
 }
+
 
 def query_category_items(category):
     for result in query_category_items_callback({'list': 'categorymembers'}, category):
@@ -45,6 +46,7 @@ def query_category_items(category):
             # print(r["title"])
             fi.write(r["title"])
             fi.write("\n")
+
 
 def query_category_items_callback(request, category):
     request['action'] = 'query'
@@ -71,11 +73,12 @@ def query_category_items_callback(request, category):
             break
         lastContinue = result['continue']
 
+
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing
     out_fi = "extract_all_quests.txt"
-    fi = open(out_fi, "w")        
+    fi = open(out_fi, "w")
     query_category_items("Quests")
     query_category_items("Miniquests")
     query_category_items("Special_quests")

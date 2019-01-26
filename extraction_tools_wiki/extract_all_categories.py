@@ -35,12 +35,13 @@ import requests
 
 custom_agent = {
     'User-Agent': 'some-agent',
-    'From': 'name@domain.com' 
+    'From': 'name@domain.com'
 }
+
 
 def query_category_items():
     out_fi = "extract_all_categories.txt"
-    fi = open(out_fi, "w", newline='')    
+    fi = open(out_fi, "w", newline='')
     for result in query_category_items_callback({'generator': 'allcategories'}):
         # Process result data
         for r in result['pages']:
@@ -48,6 +49,7 @@ def query_category_items():
             print(page_title)
             fi.write(page_title + "\n")
     fi.close()
+
 
 def query_category_items_callback(request):
     request['action'] = 'query'
@@ -74,7 +76,8 @@ def query_category_items_callback(request):
             break
         lastContinue = result['continue']
 
+
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing
     query_category_items()

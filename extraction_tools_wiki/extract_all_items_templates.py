@@ -33,9 +33,9 @@ __version__ = "1.0.0"
 import os
 import json
 import glob
-import requests
 import mwparserfromhell
 from collections import defaultdict
+
 
 def extract_templates(item_name, wikitext_str):
     # Parse actual content using mwparser
@@ -57,16 +57,17 @@ def extract_templates(item_name, wikitext_str):
         elif "infobox construction" in template_name:
             infobox_construction[item_name].append(str(template))
         elif "infobox pet" in template_name:
-            infobox_pet[item_name].append(str(template))            
+            infobox_pet[item_name].append(str(template))
+
 
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing
     infobox_items = defaultdict(list)
     infobox_bonuses = defaultdict(list)
     infobox_construction = defaultdict(list)
     infobox_pet = defaultdict(list)
-    
+
     # Determine previously extracted wiki pages
     wikitext_fis_path = os.path.join("extract_all_items_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
@@ -96,4 +97,4 @@ if __name__=="__main__":
         json.dump(infobox_construction, f)
     fi_out = "extract_all_items_templates_InfoboxPet.json"
     with open(fi_out, "w") as f:
-        json.dump(infobox_pet, f)        
+        json.dump(infobox_pet, f)

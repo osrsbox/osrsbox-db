@@ -34,8 +34,9 @@ import os
 import json
 import glob
 
+
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     wikitext_fis_path = os.path.join("extract_all_quests_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
 
@@ -46,6 +47,6 @@ if __name__=="__main__":
             quest_name = next(iter(data))
             quest_wikitext = data[quest_name]
             all_quests[quest_name] = quest_wikitext
-             
+
     with open("extract_all_quests_page_wikitext.json", "w") as fi:
         json.dump(all_quests, fi)

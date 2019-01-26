@@ -46,13 +46,13 @@ from bestiary_db_tools import MonsterStats
 # import BeastSlayer
 # import BeastDrops
 
-###############################################################################
-# Helper methods
+
 def _strcast(val):
     """ Convert value to string. """
     if val is None:
         return None
     return str(val)
+
 
 def _intcast(val):
     """ Convert input to integer. """
@@ -68,6 +68,7 @@ def _intcast(val):
             if val.isdigit():
                 return int(val)
 
+
 def _floatcast(val):
     """ Convert input to float. """
     if val is None:
@@ -75,8 +76,9 @@ def _floatcast(val):
     if isinstance(val, float):
         return val
     if isinstance(val, str):
-        return float(val)                
-                
+        return float(val)
+
+
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
@@ -84,7 +86,8 @@ def _boolcast(val):
     elif val in ["True", "true", True, "Yes", "yes"]:
         return True
     elif val in ["False", "false", False, "No", "no"]:
-        return False   
+        return False
+
 
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
@@ -98,7 +101,8 @@ def _datecast(val):
         date = datetime.datetime.strptime(val, "%d %B %Y")
     except ValueError:
         date = dateparser.parse(val)
-    return date.strftime("%d %B %Y")        
+    return date.strftime("%d %B %Y")
+
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -110,8 +114,7 @@ def _listcast(val):
         temp_list = list()
         return temp_list.append(val)
 
-###############################################################################
-# MonsterDefinition object
+
 class MonsterDefinition(object):
     def __init__(self, monster_data, all_wiki_monsters):
         # Input monster_data (id, name, combat)
@@ -124,23 +127,23 @@ class MonsterDefinition(object):
 
         # Dict of all MonsterDefinition properties
         self.properties = {
-            "id" : None,
-            "name" : None,
-            "members" : None,
-            "release_date" : None,
-            "combat_level" : None,
-            "examine" : None,
-            "hitpoints" : None,
-            "maxhit" : None,
-            "aggressive" : None,
-            "poison" : None,
-            "weakness" : None,
-            "attack_type" : None,
-            "attack_style" : None,
-            "url" : None}
+            "id": None,
+            "name": None,
+            "members": None,
+            "release_date": None,
+            "combat_level": None,
+            "examine": None,
+            "hitpoints": None,
+            "maxhit": None,
+            "aggressive": None,
+            "poison": None,
+            "weakness": None,
+            "attack_type": None,
+            "attack_style": None,
+            "url": None}
 
         #  Initialize MonsterStats object
-        self.monsterStats = MonsterStats.MonsterStats(self.monster_id)       
+        self.monsterStats = MonsterStats.MonsterStats(self.monster_id)
 
         # Setup logging
         logging.basicConfig(filename="MonsterDefinition.log",
@@ -152,6 +155,7 @@ class MonsterDefinition(object):
     @property
     def id(self):
         return self._id
+
     @id.setter
     def id(self, value):
         self._id = _intcast(value)
@@ -159,6 +163,7 @@ class MonsterDefinition(object):
     @property
     def name(self):
         return self._name
+
     @name.setter
     def name(self, value):
         self._name = _strcast(value)
@@ -166,6 +171,7 @@ class MonsterDefinition(object):
     @property
     def members(self):
         return self._members
+
     @members.setter
     def members(self, value):
         self._members = _boolcast(value)
@@ -173,6 +179,7 @@ class MonsterDefinition(object):
     @property
     def release_date(self):
         return self._release_date
+
     @release_date.setter
     def release_date(self, value):
         self._release_date = _datecast(value)
@@ -180,6 +187,7 @@ class MonsterDefinition(object):
     @property
     def combat_level(self):
         return self._combat_level
+
     @combat_level.setter
     def combat_level(self, value):
         self._combat_level = _intcast(value)
@@ -187,6 +195,7 @@ class MonsterDefinition(object):
     @property
     def examine(self):
         return self._examine
+
     @examine.setter
     def examine(self, value):
         self._examine = _strcast(value)
@@ -194,6 +203,7 @@ class MonsterDefinition(object):
     @property
     def hitpoints(self):
         return self._hitpoints
+
     @hitpoints.setter
     def hitpoints(self, value):
         self._hitpoints = _intcast(value)
@@ -201,6 +211,7 @@ class MonsterDefinition(object):
     @property
     def maxhit(self):
         return self._maxhit
+
     @maxhit.setter
     def maxhit(self, value):
         self._maxhit = _intcast(value)
@@ -208,6 +219,7 @@ class MonsterDefinition(object):
     @property
     def aggressive(self):
         return self._aggressive
+
     @aggressive.setter
     def aggressive(self, value):
         self._aggressive = _boolcast(value)
@@ -215,6 +227,7 @@ class MonsterDefinition(object):
     @property
     def poison(self):
         return self._poison
+
     @poison.setter
     def poison(self, value):
         self._poison = _boolcast(value)
@@ -222,6 +235,7 @@ class MonsterDefinition(object):
     @property
     def weakness(self):
         return self._weakness
+
     @weakness.setter
     def weakness(self, value):
         self._weakness = _listcast(value)
@@ -229,6 +243,7 @@ class MonsterDefinition(object):
     @property
     def attack_type(self):
         return self._attack_type
+
     @attack_type.setter
     def attack_type(self, value):
         self._attack_type = _strcast(value)
@@ -236,6 +251,7 @@ class MonsterDefinition(object):
     @property
     def attack_style(self):
         return self._attack_style
+
     @attack_style.setter
     def attack_style(self, value):
         self._attack_style = _strcast(value)
@@ -243,6 +259,7 @@ class MonsterDefinition(object):
     @property
     def url(self):
         return self._url
+
     @url.setter
     def url(self, value):
         self._url = _strcast(value)
@@ -260,10 +277,10 @@ class MonsterDefinition(object):
 
         # print(">>>", self.name)
 
-        ###### OLD CODE FOR MONSTER FROM CACHE SOLUTION  
+        # # OLD CODE FOR MONSTER FROM CACHE SOLUTION
         # # Determine if monster has a wiki page
         # has_wiki_page = self.determine_wiki_page()
-        
+
         # # # Exit if there is no wiki page
         # # if not has_wiki_page:
         # #     print(self.name)
@@ -291,11 +308,9 @@ class MonsterDefinition(object):
 
         return self
 
-    ###########################################################################
-    # Handle wiki lookup, and template extraction
     def determine_wiki_page(self):
         self.logger.debug("Searching for monster in OSRS Wiki by name...")
-        
+
         # Check if the monster name is in the Wiki dump
         if self.name in self.all_wiki_monsters:
             self.logger.debug(">>> MONSTER NAME FOUND:")
@@ -307,8 +322,8 @@ class MonsterDefinition(object):
         else:
             self.logger.error(">>> MONSTER NAME NOT FOUND:")
             self.logger.error("  > name: %s" % self.name)
-            self.logger.error("  > id: %s" % self.id)            
-            # Return False if not found        
+            self.logger.error("  > id: %s" % self.id)
+            # Return False if not found
             return False
 
     def extract_template(self):
@@ -325,10 +340,8 @@ class MonsterDefinition(object):
                 return True
         # Default to return false (Infobox Monster not found)
         self.infobox_monster_template = None
-        return False        
+        return False
 
-    ###########################################################################
-    # Handle wikitext extraction, and template extraction
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
         clean_input = str(input)
@@ -343,7 +356,7 @@ class MonsterDefinition(object):
         release_date = input
         release_date = release_date.strip()
         release_date = release_date.replace("[", "")
-        release_date = release_date.replace("]", "")        
+        release_date = release_date.replace("]", "")
         return release_date
 
     def extract_Infobox_value(self, template, key):
@@ -367,7 +380,7 @@ class MonsterDefinition(object):
         else:
             self.release_date = None
         return True
-             
+
     def clean_InfoboxBonuses_value(self, template, prop):
         value = None
         # if self.current_version is not None:
@@ -376,9 +389,9 @@ class MonsterDefinition(object):
         if value is None:
             value = self.extract_Infobox_value(template, prop)
         if value is not None:
-            #itemBonuses.attack_stab = self.strip_infobox(value)
+            # itemBonuses.attack_stab = self.strip_infobox(value)
             return self.strip_infobox(value)
-          
+
     ###########################################################################
     # Handle monster to JSON
     def construct_json(self):
@@ -422,7 +435,7 @@ class MonsterDefinition(object):
         self.construct_json()
         json_obj = json.dumps(self.json_out, indent=4)
         self.logger.debug(json_obj)
-            
+
     def export_json(self):
         # Export JSON to individual file
         self.construct_json()
@@ -437,19 +450,20 @@ class MonsterDefinition(object):
         with open(out_fi, "w", newline="\n") as f:
             json.dump(self.json_out, f, indent=4)
 
+
 ###########################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     # Run unit tests
     assert _intcast(-1) == -1
     assert _intcast("-1") == -1
-  
-    assert _boolcast("false") == False
+
+    assert _boolcast("false") is False
     assert _boolcast("True")
     assert _boolcast("true")
-    assert _boolcast(False) == False
+    assert _boolcast(False) is False
     assert _boolcast(True)
 
     assert _strcast(1)
     assert _strcast("OSRS Rocks!")
-    
+
     print("Module tests passed.")

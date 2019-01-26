@@ -36,8 +36,9 @@ import requests
 
 custom_agent = {
     'User-Agent': 'some-agent',
-    'From': 'name@domain.com' 
+    'From': 'name@domain.com'
 }
+
 
 def query_category_items(category):
     for result in query_category_items_callback({'list': 'categorymembers'}, category):
@@ -49,6 +50,7 @@ def query_category_items(category):
             print(page_title)
             fi.write(page_title + "\n")
 
+
 def query_category_items_callback(request, category):
     request['action'] = 'query'
     request['format'] = 'json'
@@ -58,7 +60,7 @@ def query_category_items_callback(request, category):
     # request['cmtitle'] = 'Category:Flatpacks'
     # request['cmtitle'] = 'Category:Pets'
     request['cmtitle'] = 'Category:' + category
-    request['cmlimit'] = '500'    
+    request['cmlimit'] = '500'
     lastContinue = {}
     while True:
         # Clone original request
@@ -79,12 +81,13 @@ def query_category_items_callback(request, category):
             break
         lastContinue = result['continue']
 
+
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     # Start processing
     out_fi = "extract_all_items.txt"
-    fi = open(out_fi, "w", newline='') 
-    query_category_items("Items")     
+    fi = open(out_fi, "w", newline='')
+    query_category_items("Items")
     query_category_items("Construction")
     query_category_items("Furniture")
     query_category_items("Flatpacks")

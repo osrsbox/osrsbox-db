@@ -8,7 +8,7 @@ Date:    2019/01/13
 
 Description:
 ProcessQuestss is a caller to parse the OSRS Wiki wikicode data
-to automate population of JSON files. 
+to automate population of JSON files.
 
 Requirements:
 pip install requests
@@ -47,9 +47,9 @@ from . import QuestDefinition
 
 
 ################################################################################
-if __name__=="__main__":
-    
-    # Start processing    
+if __name__ == "__main__":
+
+    # Start processing
     print(">>> Starting processing...")
 
     wiki_extraction_path = os.path.join("..", "extraction_tools_wiki", "")
@@ -69,21 +69,21 @@ if __name__=="__main__":
             all_wiki_quest_pages[quest_name] = wikitext_str
 
     all_quest_names = list()
-    
+
     print(">>> Loading quest lists...")
     all_quest_names_normal = list()
     with open("quests.txt") as f:
-        for l in f:
-            l = l.strip()
-            all_quest_names_normal.append(l)
-            all_quest_names.append(l)
+        for line in f:
+            line = line.strip()
+            all_quest_names_normal.append(line)
+            all_quest_names.append(line)
 
     all_quest_names_mini = list()
     # with open("miniquests.txt") as f:
     #     for l in f:
     #         l = l.strip()
     #         all_quest_names_mini.append(l)
-    #         all_quest_names.append(l)    
+    #         all_quest_names.append(l)
 
     # Make a dir for JSON output
     # directory = "quests-json"
@@ -103,10 +103,10 @@ if __name__=="__main__":
             quest_type = "normal"
         else:
             print(">>> Warning could not categorize quest...")
-        
+
         # Get the wikicode for the quest
-        quest_wikicode = all_wiki_quest_pages[quest_name]       
-        
+        quest_wikicode = all_wiki_quest_pages[quest_name]
+
         # Create a QuestDefinition object for the quest
         qd = QuestDefinition.QuestDefinition(quest_name, quest_type, quest_wikicode)
         quest = qd.populate()

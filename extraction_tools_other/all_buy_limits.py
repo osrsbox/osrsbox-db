@@ -35,28 +35,28 @@ import json
 from item_api_tools import AllItems
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", 
-                    "--input", 
+    ap.add_argument("-i",
+                    "--input",
                     required=True,
                     help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items_complete.json) ")
     args = vars(ap.parse_args())
-    
+
     ge_limits = dict()
     # Load the ge_limits.json file
     with open('ge_limits.json') as f:
         ge_limits = json.load(f)
 
-    # Start processing    
+    # Start processing
     ai = AllItems.AllItems(args["input"])
 
     # Get a dict with: id -> ItemDefinition
     all_item_ids = dict()
     for item in ai:
         all_item_ids[item.id] = item
-    
+
     # Make a list of: name|buy_limit
     buy_limits_list = list()
     for entry in ge_limits:

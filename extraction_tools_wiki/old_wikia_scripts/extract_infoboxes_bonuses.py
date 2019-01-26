@@ -30,15 +30,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
 import json
 import requests
 import mwparserfromhell
 from collections import defaultdict
 
+
 def extract_InfoboxItem(page_name):
     page_name = page_name.replace("&", "%26")
-    page_name = page_name.replace("+", "%2B")    
+    page_name = page_name.replace("+", "%2B")
     # Example: http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=3rd_age_pickaxe
     url = "http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
     result = requests.get(url)
@@ -62,25 +62,26 @@ def extract_InfoboxItem(page_name):
             #     f.write(str(template))
             # all[page_name] = str(template)
 
-        # if "infobox item" in template_name:
-        #     # Save template to: infoboxes_items
-        #     # fi_out = "infoboxes_items" + os.sep + page_name + "--infobox_item"
-        #     # with open(fi_out, "w") as f:
-        #     #     f.write(str(template))
+            # if "infobox item" in template_name:
+            # Save template to: infoboxes_items
+            # fi_out = "infoboxes_items" + os.sep + page_name + "--infobox_item"
+            # with open(fi_out, "w") as f:
+            #     f.write(str(template))
             all[page_name].append(str(template))
         if "switch infobox" in template_name:
-            
-            all[page_name].append(str(template))            
+
+            all[page_name].append(str(template))
+
 
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing
     all = defaultdict(list)
     with open("extract_all_items.txt") as f:
-        for l in f:
-            l = l.strip()
-            print(l)
-            extract_InfoboxItem(l)
+        for line in f:
+            line = line.strip()
+            print(line)
+            extract_InfoboxItem(line)
 
     fi_out = "extract_infoboxes_bonuses.txt"
     with open(fi_out, "w") as f:

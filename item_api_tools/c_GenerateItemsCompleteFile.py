@@ -7,7 +7,7 @@ Website: osrsbox.com
 Date:    2018/12/18
 
 Description:
-Simple caller script to join all JSON files in items-json folder to a 
+Simple caller script to join all JSON files in items-json folder to a
 single file called items_complete.json
 
 Copyright (c) 2018, PH01L
@@ -36,16 +36,16 @@ from . import AllItems
 import json
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", 
-                    "--input", 
+    ap.add_argument("-i",
+                    "--input",
                     required=True,
                     help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items_complete.json) ")
     args = vars(ap.parse_args())
-    
-    # Start processing    
+
+    # Start processing
     print(">>> Reading in database contents...")
     ai = AllItems.AllItems(args["input"])
 

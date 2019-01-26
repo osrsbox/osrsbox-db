@@ -32,11 +32,13 @@ __version__ = "1.0.0"
 
 import requests
 
+
 def query_category_items():
     for result in query_category_items_callback({'generator': 'categorymembers'}):
         # Process result data
         for r in result['pages']:
             print(result['pages'][r]["title"])
+
 
 def query_category_items_callback(request):
     request['action'] = 'query'
@@ -56,7 +58,7 @@ def query_category_items_callback(request):
         result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
         # print(result)
         if 'error' in result:
-            #raise Error(result['error'])
+            # raise Error(result['error'])
             print(">>> ERROR!")
             break
         if 'warnings' in result:
@@ -69,7 +71,8 @@ def query_category_items_callback(request):
             break
         lastContinue = result['query-continue']['categorymembers']
 
+
 ################################################################################
-if __name__=="__main__":   
-    # Start processing    
+if __name__ == "__main__":
+    # Start processing
     query_category_items()

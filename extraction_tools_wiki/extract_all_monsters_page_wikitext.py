@@ -7,8 +7,8 @@ Website: osrsbox.com
 Date:    2019/01/22
 
 Description:
-Extract all wikitext from all monster pages. The required input is the 
-"extract_all_monsters.txt" file from the "extract_all_monsters.py" script. 
+Extract all wikitext from all monster pages. The required input is the
+"extract_all_monsters.txt" file from the "extract_all_monsters.py" script.
 This script will extract all wikitext to "extract_all_monsters_page_wikitext"
 directory for later processing. Monster page wiki text are saved as separate
 JSON files with random names.
@@ -34,11 +34,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-custom_agent = {
-    'User-Agent': 'some-agent',
-    'From': 'name@domain.com' 
-}
-
 import os
 import sys
 import json
@@ -47,6 +42,12 @@ import random
 import string
 import requests
 import mwparserfromhell
+
+custom_agent = {
+    'User-Agent': 'some-agent',
+    'From': 'name@domain.com'
+}
+
 
 def extract_wikitext(page_name):
     url = "https://oldschool.runescape.wiki/api.php?action=parse&prop=wikitext&format=json&page=" + page_name
@@ -63,7 +64,7 @@ def extract_wikitext(page_name):
     # Parse actual wikitext content using mwparserfromhell
     wikitext = mwparserfromhell.parse(input)
 
-    # Convert to JSON 
+    # Convert to JSON
     monster_dict = dict()
     monster_dict[page_name] = str(wikitext)
 
@@ -71,19 +72,20 @@ def extract_wikitext(page_name):
 
     out_fi = os.path.join("extract_all_monsters_page_wikitext", out_fi_name + ".json")
     with open(out_fi, "w") as f:
-        json.dump(monster_dict, f)  
+        json.dump(monster_dict, f)
+
 
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing: extract_all_monsters.txt
     print(">>> Starting to extract wikitext for all monsters...")
-    
+
     print("  > Reading extract_all_monsters page titles...")
     monsters_to_process = list()
     with open("extract_all_monsters.txt") as f:
-        for l in f:
-            l = l.strip()
-            monsters_to_process.append(l)
+        for line in f:
+            line = line.strip()
+            monsters_to_process.append(line)
 
     # Determine previously extracted page_titles
     print("  > Determining already extracted page titles...")
@@ -112,4 +114,4 @@ if __name__=="__main__":
             continue
         # Extract wikitext
         extract_wikitext(monster_page_title)
-        count += 1    
+        count += 1

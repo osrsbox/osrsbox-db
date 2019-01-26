@@ -30,12 +30,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
 import json
 import sys
 import requests
 import mwparserfromhell
 from collections import defaultdict
+
 
 def extract_wikicode(page_name):
     page_name = page_name.replace("&", "%26")
@@ -53,8 +53,9 @@ def extract_wikicode(page_name):
     # the item name (page_name) to wikitext object as a string
     all[page_name].append(str(wikicode))
 
+
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing
     all = defaultdict(list)
 
@@ -64,19 +65,19 @@ if __name__=="__main__":
     to_process = dict()
 
     with open("extract_all_quests.txt") as f:
-        for l in f:
-            l = l.strip()
-            to_process[l] = None
+        for line in f:
+            line = line.strip()
+            to_process[line] = None
 
     with open("extract_all_quests_mini.txt") as f:
-        for l in f:
-            l = l.strip()
-            to_process[l] = None 
+        for line in f:
+            line = line.strip()
+            to_process[line] = None
 
     with open("extract_all_quests_sub.txt") as f:
-        for l in f:
-            l = l.strip()
-            to_process[l] = None                       
+        for line in f:
+            line = line.strip()
+            to_process[line] = None
 
     total = len(to_process)
     count = 0
@@ -84,7 +85,7 @@ if __name__=="__main__":
         sys.stdout.write(">>> Processing: %d or %d, with name: %s\r" % (count, total, k))
         extract_wikicode(k)
         count += 1
-    
+
     # Write all extracted wikitext to a JSON file
     fi_out = "extract_all_quests_page_wikitext.txt"
     with open(fi_out, "w") as f:

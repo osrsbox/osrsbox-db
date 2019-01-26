@@ -71,7 +71,7 @@ class QuestDefinition(object):
             self.extract_quest_details()
             self.extract_quest_rewards()
         return self
-        
+
     def extract_quest_metadata(self):
         wikicode = mwparserfromhell.parse(self.wikicode)
 

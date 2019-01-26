@@ -40,9 +40,9 @@ from bestiary_db_tools import MonsterDefinition
 # ProcessBestiary object
 class ProcessBestiary(object):
     def __init__(self, all_wiki_monsters, all_monster_names, all_wiki_monsters_verisoned):
-        self.all_wiki_monsters = all_wiki_monsters # Default wikitext dict from 
-        self.all_monster_names = all_monster_names # From cache defs, not unique list
-        self.all_wiki_monsters_verisoned = all_wiki_monsters_verisoned # Wikitext, with versioning
+        self.all_wiki_monsters = all_wiki_monsters  # Default wikitext dict from
+        self.all_monster_names = all_monster_names  # From cache defs, not unique list
+        self.all_wiki_monsters_verisoned = all_wiki_monsters_verisoned  # Wikitext, with versioning
 
     def process_all_monsters(self):
         # Loop through every item
@@ -56,12 +56,13 @@ class ProcessBestiary(object):
             self.construct_MonsterDefinition(self.all_wiki_monsters_verisoned[monster_name])
 
     def construct_MonsterDefinition(self, monster_data):
-        monster_def = MonsterDefinition.MonsterDefinition(monster_data, self.all_wiki_monsters) 
-        monster = monster_def.populate()
+        monster_def = MonsterDefinition.MonsterDefinition(monster_data, self.all_wiki_monsters)
+        monster_def.populate()
+
 
 ################################################################################
-if __name__=="__main__":    
-    # Start processing    
+if __name__ == "__main__":
+    # Start processing
     print(">>> Starting processing...")
 
     # Remove old log file
@@ -87,6 +88,6 @@ if __name__=="__main__":
     pb = ProcessBestiary(all_wiki_monsters,
                          all_monster_names,
                          all_wiki_monsters_verisoned)
-    
+
     # Start processing each monster
     pb.process_all_monsters()

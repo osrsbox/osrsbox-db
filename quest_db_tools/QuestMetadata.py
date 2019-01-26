@@ -30,18 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
-import sys
-import json
 import datetime
 import collections
-import logging
-import re
 
-# Pip install required
-import requests
-import mwparserfromhell
-import dateparser
 
 ###############################################################################
 # Helper methods
@@ -51,6 +42,7 @@ def _strcast(val):
         return None
     return str(val)
 
+
 def _intcast(val):
     """ Convert input to integer. """
     if val is None:
@@ -58,8 +50,9 @@ def _intcast(val):
     if isinstance(val, int):
         return val
     if isinstance(val, str):
-        return int(val)          
-                
+        return int(val)
+
+
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
@@ -67,7 +60,8 @@ def _boolcast(val):
     elif val in ["True", "true", True, "Yes", "yes"]:
         return True
     elif val in ["False", "false", False, "No", "no"]:
-        return False   
+        return False
+
 
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
@@ -75,8 +69,9 @@ def _datecast(val):
         return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
-    date = datetime.datetime.strptime(val, "%d %B %Y")   
-    return date.strftime("%d %B %Y")        
+    date = datetime.datetime.strptime(val, "%d %B %Y")
+    return date.strftime("%d %B %Y")
+
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -87,6 +82,7 @@ def _listcast(val):
     elif isinstance(val, str):
         temp_list = list()
         return temp_list.append(val)
+
 
 ###############################################################################
 # QuestMetadata object
@@ -99,6 +95,7 @@ class QuestMetadata(object):
     @property
     def number(self):
         return self._number
+
     @number.setter
     def number(self, value):
         self._number = _intcast(value)
@@ -106,6 +103,7 @@ class QuestMetadata(object):
     @property
     def members(self):
         return self._members
+
     @members.setter
     def members(self, value):
         self._members = _boolcast(value)
@@ -113,13 +111,15 @@ class QuestMetadata(object):
     @property
     def release_date(self):
         return self._release_date
+
     @release_date.setter
     def release_date(self, value):
-        self._release_date = _datecast(value)	
+        self._release_date = _datecast(value)
 
     @property
     def series(self):
         return self._series
+
     @series.setter
     def series(self, value):
         self._series = _strcast(value)
@@ -127,6 +127,7 @@ class QuestMetadata(object):
     @property
     def difficulty(self):
         return self._difficulty
+
     @difficulty.setter
     def difficulty(self, value):
         self._difficulty = _strcast(value)
@@ -134,6 +135,7 @@ class QuestMetadata(object):
     @property
     def developer(self):
         return self._developer
+
     @developer.setter
     def developer(self, value):
         self._developer = _strcast(value)
@@ -146,13 +148,13 @@ class QuestMetadata(object):
         return clean_input
 
     def clean_series(self, input):
-        if input.lower() == "none" or input == None or input == "N/A":
+        if input.lower() == "none" or input is None or input == "N/A":
             return None
-        
+
         input = input.replace("List of quest series#", "")
         input = input.replace("Quests/Series#", "")
         input = input.replace("Quests/Series|", "")
-        
+
         input_list = input.split("|")
         # Grab every second entry
         input_list = input_list[0::2]
@@ -180,7 +182,7 @@ class QuestMetadata(object):
             release = self.wikicode.get("release").value
             self.release = self.wikicode_cleaner(release)
         except ValueError:
-            self.release = None   
+            self.release = None
 
         # Quest series
         try:
@@ -219,4 +221,3 @@ class QuestMetadata(object):
         self.json_out["difficulty"] = self.difficulty
         self.json_out["developer"] = self.developer
         return self.json_out
-             

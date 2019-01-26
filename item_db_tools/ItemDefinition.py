@@ -9,9 +9,9 @@ Date:    2019/01/11
 Description:
 ItemDefinition is a class to process the raw ItemDefinition data from
 RuneLite extraction then add supplementaty information gatered from the
-OSRS Wiki. 
+OSRS Wiki.
 
-Warning: This code grew from simple to spaghetti! It is currently out of 
+Warning: This code grew from simple to spaghetti! It is currently out of
 control and needs a rewrite and reorganization!
 
 Copyright (c) 2019, PH01L
@@ -40,12 +40,11 @@ import json
 import datetime
 import collections
 import logging
-
-# These require pip install
 import mwparserfromhell
 import dateparser
 
 from . import ItemBonuses, ItemEquipment
+
 
 ###############################################################################
 # Helper methods
@@ -54,6 +53,7 @@ def _strcast(val):
     if val is None:
         return None
     return str(val)
+
 
 def _intcast(val):
     """ Convert input to integer. """
@@ -69,6 +69,7 @@ def _intcast(val):
             if val.isdigit():
                 return int(val)
 
+
 def _floatcast(val):
     """ Convert input to float. """
     if val is None:
@@ -76,8 +77,9 @@ def _floatcast(val):
     if isinstance(val, float):
         return val
     if isinstance(val, str):
-        return float(val)                
-                
+        return float(val)
+
+
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
@@ -85,7 +87,8 @@ def _boolcast(val):
     elif val in ["True", "true", True, "Yes", "yes"]:
         return True
     elif val in ["False", "false", False, "No", "no"]:
-        return False   
+        return False
+
 
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
@@ -97,7 +100,8 @@ def _datecast(val):
         date = datetime.datetime.strptime(val, "%d %B %Y")
     except ValueError:
         date = dateparser.parse(val)
-    return date.strftime("%d %B %Y")        
+    return date.strftime("%d %B %Y")
+
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -109,10 +113,13 @@ def _listcast(val):
         temp_list = list()
         return temp_list.append(val)
 
+
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self, itemID, itemJSON, all_wikia_items, all_wikia_items_bonuses, all_wikia_buylimits, all_wikia_normalized_names, item_exists_in_db, item_skill_requirements):
+    def __init__(self, itemID, itemJSON, all_wikia_items,
+                 all_wikia_items_bonuses, all_wikia_buylimits,
+                 all_wikia_normalized_names, item_exists_in_db, item_skill_requirements):
         # Input itemID number
         self.itemID = itemID
         # Input JSON file (from RuneLite ItemScraper)
@@ -123,7 +130,7 @@ class ItemDefinition(object):
         # Bulk dict of all OSRS Wikia Item bonuses
         self.all_wikia_items_bonuses = all_wikia_items_bonuses
         # Bulk dict of all OSRS Wikia buylimits
-        self.all_wikia_buylimits = all_wikia_buylimits 
+        self.all_wikia_buylimits = all_wikia_buylimits
         # Bulk dict of normalized OSRS Wikia names
         self.all_wikia_normalized_names = all_wikia_normalized_names
         # Bulk dict of all equipable items with requirements
@@ -131,35 +138,35 @@ class ItemDefinition(object):
 
         # Flag to determine if item already exists in db
         self.item_exists_in_db = item_exists_in_db
-        
+
         # Dict of all ItemDefinition properties
         # Not currently used, but kept for future
         self.properties = {
-            "id" : None,
-            "name" : None,
-            "members" : None,
-            "tradeable" : None,
-            "tradeable_on_ge" : None,
-            "stackable" : None,
-            "noted" : None,
-            "noteable" : None,
-            "linked_id" : None,
-            "equipable" : None,
-            "cost" : None,
-            "lowalch" : None,
-            "highalch" : None,
-            "weight" : None,
-            "buy_limit" : None,
-            "quest_item" : None,
-            "release_date" : None,
-            "examine" : None,
-            "url" : None}
+            "id": None,
+            "name": None,
+            "members": None,
+            "tradeable": None,
+            "tradeable_on_ge": None,
+            "stackable": None,
+            "noted": None,
+            "noteable": None,
+            "linked_id": None,
+            "equipable": None,
+            "cost": None,
+            "lowalch": None,
+            "highalch": None,
+            "weight": None,
+            "buy_limit": None,
+            "quest_item": None,
+            "release_date": None,
+            "examine": None,
+            "url": None}
 
-        # Item Bonuses (if equipable, but initialize one anyway)   
+        # Item Bonuses (if equipable, but initialize one anyway)
         self.itemBonuses = ItemBonuses.ItemBonuses(self.itemID)
 
-        # Item Equipment (if equipable, but initialize one anyway)   
-        self.itemEquipment = ItemEquipment.ItemEquipment(self.itemID)        
+        # Item Equipment (if equipable, but initialize one anyway)
+        self.itemEquipment = ItemEquipment.ItemEquipment(self.itemID)
 
         # Setup logging
         logging.basicConfig(filename="ItemDefinition.log",
@@ -177,6 +184,7 @@ class ItemDefinition(object):
     @property
     def id(self):
         return self._id
+
     @id.setter
     def id(self, value):
         self._id = _intcast(value)
@@ -184,6 +192,7 @@ class ItemDefinition(object):
     @property
     def name(self):
         return self._name
+
     @name.setter
     def name(self, value):
         self._name = _strcast(value)
@@ -191,6 +200,7 @@ class ItemDefinition(object):
     @property
     def members(self):
         return self._members
+
     @members.setter
     def members(self, value):
         self._members = _boolcast(value)
@@ -198,6 +208,7 @@ class ItemDefinition(object):
     @property
     def tradeable(self):
         return self._tradeable
+
     @tradeable.setter
     def tradeable(self, value):
         self._tradeable = _boolcast(value)
@@ -205,20 +216,23 @@ class ItemDefinition(object):
     @property
     def tradeable_on_ge(self):
         return self._tradeable_on_ge
+
     @tradeable_on_ge.setter
     def tradeable_on_ge(self, value):
-        self._tradeable_on_ge = _boolcast(value)          
+        self._tradeable_on_ge = _boolcast(value)
 
     @property
     def stackable(self):
         return self._stackable
+
     @stackable.setter
     def stackable(self, value):
-        self._stackable = _boolcast(value)  
+        self._stackable = _boolcast(value)
 
     @property
     def noted(self):
         return self._noted
+
     @noted.setter
     def noted(self, value):
         self._noted = _boolcast(value)
@@ -226,6 +240,7 @@ class ItemDefinition(object):
     @property
     def noteable(self):
         return self._noteable
+
     @noteable.setter
     def noteable(self, value):
         self._noteable = _boolcast(value)
@@ -233,6 +248,7 @@ class ItemDefinition(object):
     @property
     def linked_id(self):
         return self._linked_id
+
     @linked_id.setter
     def linked_id(self, value):
         self._linked_id = _intcast(value)
@@ -240,6 +256,7 @@ class ItemDefinition(object):
     @property
     def equipable(self):
         return self._equipable
+
     @equipable.setter
     def equipable(self, value):
         self._equipable = _boolcast(value)
@@ -247,20 +264,23 @@ class ItemDefinition(object):
     @property
     def cost(self):
         return self._cost
+
     @cost.setter
     def cost(self, value):
-        self._cost = _intcast(value)	
+        self._cost = _intcast(value)
 
     @property
     def lowalch(self):
         return self._lowalch
+
     @lowalch.setter
     def lowalch(self, value):
-        self._lowalch = _intcast(value)	          
-        
+        self._lowalch = _intcast(value)
+
     @property
     def highalch(self):
         return self._highalch
+
     @highalch.setter
     def highalch(self, value):
         self._highalch = _intcast(value)
@@ -268,6 +288,7 @@ class ItemDefinition(object):
     @property
     def weight(self):
         return self._weight
+
     @weight.setter
     def weight(self, value):
         self._weight = _floatcast(value)
@@ -275,6 +296,7 @@ class ItemDefinition(object):
     @property
     def buy_limit(self):
         return self._buy_limit
+
     @buy_limit.setter
     def buy_limit(self, value):
         self._buy_limit = _intcast(value)
@@ -282,6 +304,7 @@ class ItemDefinition(object):
     @property
     def quest_item(self):
         return self._quest_item
+
     @quest_item.setter
     def quest_item(self, value):
         self._quest_item = _listcast(value)
@@ -289,13 +312,15 @@ class ItemDefinition(object):
     @property
     def release_date(self):
         return self._release_date
+
     @release_date.setter
     def release_date(self, value):
-        self._release_date = _datecast(value)	
+        self._release_date = _datecast(value)
 
     @property
     def seller(self):
         return self._seller
+
     @seller.setter
     def seller(self, value):
         self._seller = _listcast(value)
@@ -303,6 +328,7 @@ class ItemDefinition(object):
     @property
     def store_price(self):
         return self._store_price
+
     @store_price.setter
     def store_price(self, value):
         self._store_price = _intcast(value)
@@ -310,13 +336,15 @@ class ItemDefinition(object):
     @property
     def examine(self):
         return self._examine
+
     @examine.setter
     def examine(self, value):
         self._examine = _strcast(value)
-	           
+
     @property
     def url(self):
         return self._url
+
     @url.setter
     def url(self, value):
         self._url = _strcast(value)
@@ -333,7 +361,7 @@ class ItemDefinition(object):
         self.name = self.itemJSON["name"]
         self.members = self.itemJSON["members"]
         # TODO: Currently not set in item_scraper
-        self.tradeable = None 
+        self.tradeable = None
         self.tradeable_on_ge = self.itemJSON["tradeable"]
         self.stackable = self.itemJSON["stackable"]
         self.noted = self.itemJSON["noted"]
@@ -342,7 +370,7 @@ class ItemDefinition(object):
         self.equipable = self.itemJSON["equipable"]
         self.cost = self.itemJSON["cost"]
         self.lowalch = self.itemJSON["lowalch"]
-        self.highalch = self.itemJSON["highalch"]        
+        self.highalch = self.itemJSON["highalch"]
         self.weight = self.itemJSON["weight"]
         self.buy_limit = self.itemJSON["buy_limit"]
         self.quest_item = self.itemJSON["quest_item"]
@@ -360,10 +388,10 @@ class ItemDefinition(object):
         # All properties from ItemScraper RuneLite plugin are now loaded
         # Time to fetch other information of OSRS Wikia
 
-        # Try to find a OSRS Wikia page for this item 
+        # Try to find a OSRS Wikia page for this item
         self.logger.debug("Starting: determine_wiki_page")
         has_wikia_page = self.determine_wiki_page()
-       
+
         # has_wikia_page indicates if OSRS Wikia page was found
         if has_wikia_page:
             # This item has an OSRS Wikia page
@@ -383,28 +411,28 @@ class ItemDefinition(object):
                     self.make_blank_bonuses()
                     self.logger.warning("Blank bonuses made.")
             elif self.status_code == 3:
-                self.logger.debug("Unusable item saved")  
+                self.logger.debug("Unusable item saved")
                 if self.equipable:
                     self.make_blank_bonuses()
                     self.logger.warning("Blank bonuses made.")
             elif self.status_code == 4:
-                self.logger.debug("Not really an item, item saved")   
+                self.logger.debug("Not really an item, item saved")
                 if self.equipable:
                     self.make_blank_bonuses()
                     self.logger.warning("Blank bonuses made.")
             elif self.status_code == 5:
-                self.logger.debug("No dedicated wiki page for item, saved")  
+                self.logger.debug("No dedicated wiki page for item, saved")
                 if self.equipable:
                     self.make_blank_bonuses()
                     self.logger.warning("Blank bonuses made.")
             else:
                 self.logger.critical("Item InfoBox extraction error.")
-                return # Could not finish, just exit
+                return  # Could not finish, just exit
                 # print("Item InfoBox extraction error.")
                 # quit()
         else:
             self.logger.critical("Item has no OSRS Wikia page. Setting default values.")
-            return # Could not finish, just exit
+            return  # Could not finish, just exit
             # print("Item has no OSRS Wikia page. Setting default values.")
             # quit()
             print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> NO WIKI PAGE!")
@@ -417,17 +445,17 @@ class ItemDefinition(object):
                 has_infobox_bonuses = self.extract_InfoBoxBonuses()
                 if has_infobox_bonuses:
                     self.logger.debug("Item InfoBox Bonuses extracted successfully")
-                elif self.status_code in [1,2,3,4,5,6]:
+                elif self.status_code in [1, 2, 3, 4, 5, 6]:
                     self.make_blank_bonuses()
                     self.logger.warning("Blank bonuses made.")
                 else:
                     self.logger.critical("Item InfoBox Bonuses extraction error.")
                     self.logger.critical("Status Code: %s" % self.status_code)
                     self.make_blank_bonuses()
-                    return # Could not finish, just exit 
+                    return  # Could not finish, just exit
             else:
                 self.logger.critical("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
-                return # Could not finish, just exit
+                return  # Could not finish, just exit
                 # print("Item is equipable, but has not OSRS Wikia page. Need to manually fix this item.")
                 # quit()
 
@@ -469,9 +497,9 @@ class ItemDefinition(object):
 
     def determine_wiki_page(self):
         wiki_name = self.name.replace("&", "%26")
-        wiki_name = wiki_name.replace("+", "%2B")  
+        wiki_name = wiki_name.replace("+", "%2B")
         self.logger.debug("Searching for item in OSRS Wikia by name...")
-        
+
         # Check if the item name is in the Wikia API Dump
         # Return True if found by self.name
         # Return False if not found
@@ -491,10 +519,10 @@ class ItemDefinition(object):
             self.logger.debug("  > name: %s" % self.name)
             self.logger.debug("  > id: %s" % self.id)
             wikia_normalized_name = self.all_wikia_normalized_names[str(self.id)][1]
-            self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name             
+            self.url = "https://oldschool.runescape.wiki/w/" + wikia_normalized_name
             self.wiki_name = wikia_normalized_name
             self.status_code = int(self.all_wikia_normalized_names[str(self.id)][2])
-            return True    
+            return True
         else:
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.name)
             self.logger.debug(">>> ITEM NOT FOUND: %s" % self.id)
@@ -512,15 +540,15 @@ class ItemDefinition(object):
         templates = wikicode.filter_templates()
         for template in templates:
             extracted_infobox = self.parse_InfoboxItem(template)
-            
+
             # Return true/false if the infobox is extractable
             if extracted_infobox:
                 return True
             else:
-                return False 
+                return False
 
         # Default to return false (no infobox found)
-        return False        
+        return False
 
     def strip_infobox(self, input):
         # Clean an passed InfoBox string
@@ -549,9 +577,9 @@ class ItemDefinition(object):
         quest = quest.replace("miniquest", "")
         quest = quest.replace("Miniquest", "")
         quest = quest.replace("various", "Various")
-        
+
         quest = quest.strip()
-        
+
         # Generic test for not a quest item
         if quest.lower() == "no":
             return None
@@ -562,17 +590,17 @@ class ItemDefinition(object):
         quest_list = list()
         # Start trying to split quests
         if ", <br>" in quest:
-            quest_list = quest.split(", <br>")            
+            quest_list = quest.split(", <br>")
         elif ",<br>" in quest:
             quest_list = quest.split(",<br>")
         elif ",<br/>" in quest:
-            quest_list = quest.split(",<br/>") 
+            quest_list = quest.split(",<br/>")
         elif ", <br/>" in quest:
-            quest_list = quest.split(", <br/>")             
+            quest_list = quest.split(", <br/>")
         elif ",<br />" in quest:
-            quest_list = quest.split(",<br />")    
+            quest_list = quest.split(",<br />")
         elif ", <br />" in quest:
-            quest_list = quest.split(", <br />")       
+            quest_list = quest.split(", <br />")
         elif "<br>" in quest:
             quest_list = quest.split("<br>")
         elif "<br >" in quest:
@@ -582,12 +610,12 @@ class ItemDefinition(object):
         elif "<br />" in quest:
             quest_list = quest.split("<br />")
         elif "&" in quest:
-            quest_list = quest.split("&")            
+            quest_list = quest.split("&")
         elif "\n" in quest:
             quest_list = quest.split("\n")
         if "," in quest:
             quest_list = quest.split(",")
-        
+
         # Start creating the final list to return
         quest_list_fin = list()
         if quest_list:
@@ -609,7 +637,7 @@ class ItemDefinition(object):
 
         weight = weight.replace("[", "")
         weight = weight.replace("]", "")
-        
+
         # Fix for weight ending in kg, or space kg
         if weight.endswith(" kg"):
             weight = weight.replace(" kg", "")
@@ -640,7 +668,7 @@ class ItemDefinition(object):
         if "<" in weight:
             weight = weight.replace("<", "")
 
-        if weight == "": # New addition
+        if weight == "":  # New addition
             weight = 0
 
         return weight
@@ -651,7 +679,7 @@ class ItemDefinition(object):
         release_date = input
         release_date = release_date.strip()
         release_date = release_date.replace("[", "")
-        release_date = release_date.replace("]", "")        
+        release_date = release_date.replace("]", "")
         return release_date
 
     def clean_tradeable(self, input):
@@ -660,7 +688,7 @@ class ItemDefinition(object):
         tradeable = tradeable.strip()
         tradeable = tradeable.replace("[", "")
         tradeable = tradeable.replace("]", "")
-        return tradeable        
+        return tradeable
 
     def clean_examine(self, input):
         # Clean an examine text value
@@ -672,19 +700,19 @@ class ItemDefinition(object):
         examine = examine.replace("{", "")
         examine = examine.replace("}", "")
         examine = examine.replace("[", "")
-        examine = examine.replace("]", "")  
+        examine = examine.replace("]", "")
         examine = examine.replace("*", "")
-        examine = examine.replace("<nowiki>", "")     
-        examine = examine.replace("</nowiki>", "")     
-        #examine = examine.replace("sic", "")
-        examine = examine.replace("à", "") # TODO: Not working, only one item affected
-        examine = examine.replace("(empty)", "Empty:")    
-        examine = examine.replace("(full)", "Full:")      
-        examine = examine.replace("(Player's Name)", "<players-name>") 
-        examine = examine.replace("<number of cabbages>", "x") 
-        examine = examine.replace("2!", "") 
-        examine = examine.replace("In POH", "POH") 
-        
+        examine = examine.replace("<nowiki>", "")
+        examine = examine.replace("</nowiki>", "")
+        # examine = examine.replace("sic", "")
+        examine = examine.replace("à", "")  # TODO: Not working, only one item affected
+        examine = examine.replace("(empty)", "Empty:")
+        examine = examine.replace("(full)", "Full:")
+        examine = examine.replace("(Player's Name)", "<players-name>")
+        examine = examine.replace("<number of cabbages>", "x")
+        examine = examine.replace("2!", "")
+        examine = examine.replace("In POH", "POH")
+
         # Examine text fixes for some quest items
         examine = examine.replace("(Used in the Shield of Arrav quest)", "")
         examine = examine.replace("(Used in The Grand Tree quest)", "")
@@ -698,7 +726,7 @@ class ItemDefinition(object):
         examine = examine.replace("(Unlocks the cell door in the Desert Mining Camp)", "")
         examine = examine.replace("(Access to the Desert Mining Camp's mine)", "")
         examine = examine.replace("(Used in the Tourist Trap quest)", "")
-        examine = examine.replace("(Used in the Watchtower quest)", "")   
+        examine = examine.replace("(Used in the Watchtower quest)", "")
         examine = examine.replace("(Used in the Zogre Flesh Eaters quest)", "")
         examine = examine.replace("(Used in the Creature of Fenkenstrain quest)", "")
         examine = examine.replace("(Opens chests found in the Mort'ton catacombs)", "")
@@ -769,11 +797,16 @@ class ItemDefinition(object):
 
         # Special cirumstances for clue scrolls:
         if self.name == "Clue scroll (easy)":
-            examine = "A set of instructions to be followed.; A clue!; A piece of the world map, but where?; It points to great treasure!"
+            examine = """A set of instructions to be followed.; A clue!; A piece of the world map, but where?;
+                         It points to great treasure!"""
         if self.name == "Clue scroll (medium)":
-            examine = "A set of instructions to be followed; A clue!; A piece of the world map,but where?; Perhaps someone at the observatory can teach me to navigate?; It points to great treasure!"
+            examine = """A set of instructions to be followed; A clue!; A piece of the world map,but where?;
+                         Perhaps someone at the observatory can teach me to navigate?; It points to great treasure!"""
         if self.name == "Clue scroll (hard)":
-            examine = "Emote: A set of instructions to be followed.; Anagram: A clue!, Map: A place of the world map, but where?; Coordinates: Perhaps someone at the observatory can teach me to navigate?; Fairy ring: A clue suggested by <players-name>!"
+            examine = """Emote: A set of instructions to be followed.; Anagram: A clue!,
+                         Map: A place of the world map, but where?; Coordinates:
+                         Perhaps someone at the observatory can teach me to navigate?;
+                         Fairy ring: A clue suggested by <players-name>!"""
         if self.name == "Clue scroll (elite)":
             examine = "A clue!; Sherlock: A clue suggested by <players-name>!"
 
@@ -785,12 +818,15 @@ class ItemDefinition(object):
                          "Pet cat",
                          "Pet kitten",
                          "Wily hellcat"]:
-            examine = "Inventory: This kitten seems to like you. (Kitten), This cat definitely likes you. (Cat), This cat is so well fed it can hardly move. (Overgrown); Follower: A friendly little pet. (Kitten), A fully grown feline. (Cat), A friendly, not-so-little pet. (Overgrown)"
+            examine = """Inventory: This kitten seems to like you. (Kitten), This cat definitely
+                         likes you. (Cat), This cat is so well fed it can hardly move. (Overgrown);
+                         Follower: A friendly little pet. (Kitten), A fully grown feline. (Cat), A
+                         friendly, not-so-little pet. (Overgrown)"""
 
         if self.name == "Clue scroll":
             examine = "A clue!; A clue suggested by <players-name>!"
 
-        return examine  
+        return examine
 
     def clean_store_price(self, input):
         # Clean a store price value
@@ -806,7 +842,7 @@ class ItemDefinition(object):
         seller = None
         seller = input
         seller = seller.strip()
-        if seller == "" or seller.lower() == "no" or seller == None:
+        if seller == "" or seller.lower() == "no" or seller:
             return None
 
         seller = seller.replace("l/c", "")
@@ -815,9 +851,9 @@ class ItemDefinition(object):
         seller = seller.replace("}", "")
         seller = seller.replace("[", "")
         seller = seller.replace("]", "")
-        
+
         seller = seller.replace(" - Mystic Robes", "")
-        seller = seller.replace("41,600", "")   
+        seller = seller.replace("41,600", "")
 
         seller_list = list()
         if "!" in seller:
@@ -825,7 +861,7 @@ class ItemDefinition(object):
         elif " and " in seller:
             seller_list = seller.split(" and ")
         elif " or " in seller:
-            seller_list = seller.split(" or ")            
+            seller_list = seller.split(" or ")
 
         seller_list_fin = list()
         if seller_list:
@@ -835,7 +871,7 @@ class ItemDefinition(object):
         else:
             seller_list_fin.append(seller)
 
-        return seller_list_fin               
+        return seller_list_fin
 
     def extract_Infobox_value(self, template, key):
         value = None
@@ -861,8 +897,8 @@ class ItemDefinition(object):
             self.is_versioned = True
             # Now, try to determine how many versions are present
             i = 1
-            while i <= 12: # Guessing max verison number is 12 (crystal bow)
-                version_number = "version" + str(i) # e.g., version1, version2
+            while i <= 12:  # Guessing max verison number is 12 (crystal bow)
+                version_number = "version" + str(i)  # e.g., version1, version2
                 try:
                     template.get(version_number).value
                     self.version_count += 1
@@ -879,7 +915,7 @@ class ItemDefinition(object):
         self.current_version = None
 
         if self.is_versioned:
-            #print(self.name, self.is_versioned, self.version_count)
+            # print(self.name, self.is_versioned, self.version_count)
             try:
                 template.get("name1").value
                 i = 1
@@ -890,7 +926,7 @@ class ItemDefinition(object):
                     i += 1
             except ValueError:
                 pass
-            if self.current_version == None:
+            if self.current_version:
                 self.current_version = 1
             self.logger.debug("NOTE: versioned infobox: %s" % self.current_version)
 
@@ -932,7 +968,7 @@ class ItemDefinition(object):
         #     #     print(self.id, self.name)
         #     #     print(weight)
         #     #     print(self.weight)
-        #     #     print("==================================")            
+        #     #     print("==================================")
         # except ValueError:
         #     self.weight = None
 
@@ -953,7 +989,7 @@ class ItemDefinition(object):
         #     #     print(self.id, self.name)
         #     #     print(release_date)
         #     #     print(self.release_date)
-        #     #     print("==================================")             
+        #     #     print("==================================")
         # except ValueError:
         #     self.release_date = None
 
@@ -967,19 +1003,19 @@ class ItemDefinition(object):
         if store_price is not None:
             self.store_price = self.clean_store_price(store_price)
         else:
-            self.store_price = None            
+            self.store_price = None
 
         # try:
         #     store_price = template.get("store").value
-        #     self.store_price = self.clean_store_price(store_price) 
+        #     self.store_price = self.clean_store_price(store_price)
         #     # if self.store_price is not None:
         #     #     print(self.id, self.name)
         #     #     print(store_price)
         #     #     print(self.store_price)
-        #     #     print("==================================")                 
+        #     #     print("==================================")
         # except ValueError:
         #     self.store_price = None
-        
+
         # Determine if item has a store price (TESTED)
         seller = None
         if self.current_version is not None:
@@ -994,12 +1030,12 @@ class ItemDefinition(object):
 
         # try:
         #     seller = template.get("seller").value
-        #     self.seller = self.clean_seller(seller) 
+        #     self.seller = self.clean_seller(seller)
         #     # if self.seller is not None:
         #     #     print(self.id, self.name)
         #     #     print(seller)
         #     #     print(self.seller)
-        #     #     print("==================================")                 
+        #     #     print("==================================")
         # except ValueError:
         #     self.seller = None
 
@@ -1035,7 +1071,7 @@ class ItemDefinition(object):
         #     #     print(self.id, "||".join(self.examine))
         #     #     print("==================================")
         # except ValueError:
-        #     self.examine = None            
+        #     self.examine = None
 
         # Determine if item has a buy limit (TESTED)
         if not self.tradeable:
@@ -1062,9 +1098,9 @@ class ItemDefinition(object):
             if extracted_infobox:
                 return True
             else:
-                return False   
+                return False
         return False
-              
+
     def clean_InfoboxBonuses_value(self, template, prop):
         value = None
         if self.current_version is not None:
@@ -1073,7 +1109,7 @@ class ItemDefinition(object):
         if value is None:
             value = self.extract_Infobox_value(template, prop)
         if value is not None:
-            #itemBonuses.attack_stab = self.strip_infobox(value)
+            # itemBonuses.attack_stab = self.strip_infobox(value)
             return self.strip_infobox(value)
 
     def parse_InfoboxBonuses(self, template):
@@ -1114,12 +1150,12 @@ class ItemDefinition(object):
         # itemBonuses.ranged_strength = self.strip_infobox(template.get("rstr").value)
         # itemBonuses.magic_damage = self.strip_infobox(template.get("mdmg").value)
         # itemBonuses.prayer = self.strip_infobox(template.get("prayer").value)
-        
+
         # Item Equipment
         itemEquipment = ItemEquipment.ItemEquipment(self.itemID)
 
         try:
-            itemEquipment.slot  = self.strip_infobox(template.get("slot").value)
+            itemEquipment.slot = self.strip_infobox(template.get("slot").value)
             itemEquipment.slot = itemEquipment.slot.lower()
         except ValueError:
             itemEquipment.slot = None
@@ -1129,7 +1165,7 @@ class ItemDefinition(object):
         # If item is weapon, two-handed, or 2h determine attack speed
         if itemEquipment.slot == "weapon" or itemEquipment.slot == "two-handed" or itemEquipment.slot == "2h":
             try:
-                itemEquipment.attack_speed = self.strip_infobox(template.get("aspeed").value) 
+                itemEquipment.attack_speed = self.strip_infobox(template.get("aspeed").value)
             except ValueError:
                 itemEquipment.attack_speed = None
                 self.logger.critical("Could not determine equipable item attack speed")
@@ -1161,7 +1197,7 @@ class ItemDefinition(object):
         itemBonuses.attack_ranged = 0
         itemBonuses.defence_stab = 0
         itemBonuses.defence_slash = 0
-        itemBonuses.defence_crush  = 0
+        itemBonuses.defence_crush = 0
         itemBonuses.defence_magic = 0
         itemBonuses.defence_ranged = 0
         itemBonuses.melee_strength = 0
@@ -1177,8 +1213,8 @@ class ItemDefinition(object):
         itemEquipment.skill_reqs = None
         self.itemEquipment = itemEquipment
 
-        return True        
-          
+        return True
+
     ###########################################################################
     # Handle item to JSON
     def print_json(self):
@@ -1204,7 +1240,7 @@ class ItemDefinition(object):
         self.construct_json()
         json_obj = json.dumps(self.json_out, indent=4)
         self.logger.debug(json_obj)
-            
+
     def export_json(self):
         # Export JSON to individual file
         self.construct_json()
@@ -1233,18 +1269,18 @@ class ItemDefinition(object):
         self.json_out["equipable"] = self.equipable
         self.json_out["cost"] = self.cost
         self.json_out["lowalch"] = self.lowalch
-        self.json_out["highalch"] = self.highalch        
+        self.json_out["highalch"] = self.highalch
         self.json_out["weight"] = self.weight
         self.json_out["buy_limit"] = self.buy_limit
         self.json_out["quest_item"] = self.quest_item
-        self.json_out["release_date"] = self.release_date     
+        self.json_out["release_date"] = self.release_date
         self.json_out["examine"] = self.examine
         self.json_out["url"] = self.url
         if self.equipable:
             bonuses_in_json = self.itemBonuses.construct_json()
             self.json_out["bonuses"] = bonuses_in_json
             equipment_in_json = self.itemEquipment.construct_json()
-            self.json_out["equipment"] = equipment_in_json            
+            self.json_out["equipment"] = equipment_in_json
 
 ###########################################################################
 # Compare new JSON to existing JSON
@@ -1259,12 +1295,12 @@ class ItemDefinition(object):
         try:
             with open(fi_name) as f:
                 existing_json_fi = json.load(f)
-        except FileNotFoundError: 
+        except FileNotFoundError:
             print("+++++++++++++++++++++++++ NEW:", self.itemID, self.name)
             self.print_pretty_json()
             return changed
-        
-        ### Compare
+
+        # Compare
         # First loop checks, second loop prints
         for prop in self.properties:
             if self.json_out[prop] != existing_json_fi[prop]:
@@ -1278,7 +1314,7 @@ class ItemDefinition(object):
                     for prop in self.itemEquipment.properties:
                         if self.json_out["equipment"][prop] != existing_json_fi["equipment"][prop]:
                             changed = True
-                            break                            
+                            break
 
         if changed:
             print("+++++++++++++++++++++++++ CHANGED:", self.itemID, self.name)
@@ -1293,28 +1329,28 @@ class ItemDefinition(object):
                         print("+++ BONUSES MISMATCH!:", prop)
                         print("NEW:", type(self.json_out["bonuses"][prop]), self.json_out["bonuses"][prop])
                         print("OLD:", type(existing_json_fi["bonuses"][prop]), existing_json_fi["bonuses"][prop])
-                for prop in self.itemEquipment.properties:                          
+                for prop in self.itemEquipment.properties:
                     if self.json_out["equipment"][prop] != existing_json_fi["equipment"][prop]:
                         print("+++ equipment MISMATCH!:", prop)
                         print("NEW:", type(self.json_out["equipment"][prop]), self.json_out["equipment"][prop])
-                        print("OLD:", type(existing_json_fi["equipment"][prop]), existing_json_fi["equipment"][prop])   
+                        print("OLD:", type(existing_json_fi["equipment"][prop]), existing_json_fi["equipment"][prop])
 
+        return changed
 
-        return changed                 
 
 ###########################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     # Run unit tests
     assert _intcast(-1) == -1
     assert _intcast("-1") == -1
-  
-    assert _boolcast("false") == False
+
+    assert _boolcast("false") is False
     assert _boolcast("True")
     assert _boolcast("true")
-    assert _boolcast(False) == False
+    assert _boolcast(False) is False
     assert _boolcast(True)
 
     assert _strcast(1)
     assert _strcast("OSRS Rocks!")
-    
+
     print("Module tests passed.")
