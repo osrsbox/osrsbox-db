@@ -30,11 +30,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
 import json
-import requests
 import mwparserfromhell
 from collections import defaultdict
+
 
 def extract_templates(item_name, wikicode_str):
     # page_name = page_name.replace("&", "%26")
@@ -58,16 +57,17 @@ def extract_templates(item_name, wikicode_str):
         elif "infobox construction" in template_name:
             infobox_construction[item_name].append(str(template))
         elif "infobox pet" in template_name:
-            infobox_pet[item_name].append(str(template))            
+            infobox_pet[item_name].append(str(template))
+
 
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing
     infobox_items = defaultdict(list)
     infobox_bonuses = defaultdict(list)
     infobox_construction = defaultdict(list)
     infobox_pet = defaultdict(list)
-    
+
     with open("extract_all_items_page_wikitext.txt") as f:
         wikitext_dict = json.load(f)
 
@@ -92,4 +92,4 @@ if __name__=="__main__":
         json.dump(infobox_construction, f)
     fi_out = "extract_templates_InfoboxPet.txt"
     with open(fi_out, "w") as f:
-        json.dump(infobox_pet, f)        
+        json.dump(infobox_pet, f)

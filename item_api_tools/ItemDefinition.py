@@ -49,6 +49,7 @@ def _strcast(val):
     else:
         return str(val)
 
+
 def _intcast(val):
     """ Convert input to integer. """
     if val is None:
@@ -56,13 +57,15 @@ def _intcast(val):
     else:
         return int(val)
 
+
 def _floatcast(val):
     """ Convert input to float. """
     if val is None:
         return None
     else:
-        return float(val)             
-                
+        return float(val)
+
+
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
@@ -70,13 +73,15 @@ def _boolcast(val):
     else:
         return bool(val)
 
+
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
     if val is None:
         return None
     else:
-        date = datetime.datetime.strptime(val, "%d %B %Y")   
-        return date.strftime("%d %B %Y")        
+        date = datetime.datetime.strptime(val, "%d %B %Y")
+        return date.strftime("%d %B %Y")
+
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -85,37 +90,39 @@ def _listcast(val):
     elif isinstance(val, list):
         return val
 
+
 ###############################################################################
 # ItemDefinition object
 class ItemDefinition(object):
-    def __init__(self):     
+    def __init__(self):
         # Dict of all ItemDefinition properties
         self.properties = {
-            "id" : None,
-            "name" : None,
-            "members" : None,
-            "tradeable" : None,
-            "tradeable_on_ge" : None,
-            "stackable" : None,
-            "noted" : None,
-            "noteable" : None,
-            "linked_id" : None,
-            "equipable" : None,
-            "cost" : None,
-            "lowalch" : None,
-            "highalch" : None,
-            "weight" : None,
-            "buy_limit" : None,
-            "quest_item" : None,
-            "release_date" : None,
-            "examine" : None,
-            "url" : None}
+            "id": None,
+            "name": None,
+            "members": None,
+            "tradeable": None,
+            "tradeable_on_ge": None,
+            "stackable": None,
+            "noted": None,
+            "noteable": None,
+            "linked_id": None,
+            "equipable": None,
+            "cost": None,
+            "lowalch": None,
+            "highalch": None,
+            "weight": None,
+            "buy_limit": None,
+            "quest_item": None,
+            "release_date": None,
+            "examine": None,
+            "url": None}
 
     ###########################################################################
     # Helpers: Setters and Getters
     @property
     def id(self):
         return self._id
+
     @id.setter
     def id(self, value):
         self._id = _intcast(value)
@@ -123,6 +130,7 @@ class ItemDefinition(object):
     @property
     def name(self):
         return self._name
+
     @name.setter
     def name(self, value):
         self._name = _strcast(value)
@@ -130,6 +138,7 @@ class ItemDefinition(object):
     @property
     def members(self):
         return self._members
+
     @members.setter
     def members(self, value):
         self._members = _boolcast(value)
@@ -137,6 +146,7 @@ class ItemDefinition(object):
     @property
     def tradeable(self):
         return self._tradeable
+
     @tradeable.setter
     def tradeable(self, value):
         self._tradeable = _boolcast(value)
@@ -144,20 +154,23 @@ class ItemDefinition(object):
     @property
     def tradeable_on_ge(self):
         return self._tradeable_on_ge
+
     @tradeable_on_ge.setter
     def tradeable_on_ge(self, value):
-        self._tradeable_on_ge = _boolcast(value)         
+        self._tradeable_on_ge = _boolcast(value)
 
     @property
     def stackable(self):
         return self._stackable
+
     @stackable.setter
     def stackable(self, value):
-        self._stackable = _boolcast(value)  
+        self._stackable = _boolcast(value)
 
     @property
     def noted(self):
         return self._noted
+
     @noted.setter
     def noted(self, value):
         self._noted = _boolcast(value)
@@ -165,6 +178,7 @@ class ItemDefinition(object):
     @property
     def noteable(self):
         return self._noteable
+
     @noteable.setter
     def noteable(self, value):
         self._noteable = _boolcast(value)
@@ -172,6 +186,7 @@ class ItemDefinition(object):
     @property
     def linked_id(self):
         return self._linked_id
+
     @linked_id.setter
     def linked_id(self, value):
         self._linked_id = _intcast(value)
@@ -179,6 +194,7 @@ class ItemDefinition(object):
     @property
     def equipable(self):
         return self._equipable
+
     @equipable.setter
     def equipable(self, value):
         self._equipable = _boolcast(value)
@@ -186,20 +202,23 @@ class ItemDefinition(object):
     @property
     def cost(self):
         return self._cost
+
     @cost.setter
     def cost(self, value):
-        self._cost = _intcast(value)	
+        self._cost = _intcast(value)
 
     @property
     def lowalch(self):
         return self._lowalch
+
     @lowalch.setter
     def lowalch(self, value):
-        self._lowalch = _intcast(value)	          
-        
+        self._lowalch = _intcast(value)
+
     @property
     def highalch(self):
         return self._highalch
+
     @highalch.setter
     def highalch(self, value):
         self._highalch = _intcast(value)
@@ -207,6 +226,7 @@ class ItemDefinition(object):
     @property
     def weight(self):
         return self._weight
+
     @weight.setter
     def weight(self, value):
         self._weight = _floatcast(value)
@@ -214,6 +234,7 @@ class ItemDefinition(object):
     @property
     def buy_limit(self):
         return self._buy_limit
+
     @buy_limit.setter
     def buy_limit(self, value):
         self._buy_limit = _intcast(value)
@@ -221,6 +242,7 @@ class ItemDefinition(object):
     @property
     def quest_item(self):
         return self._quest_item
+
     @quest_item.setter
     def quest_item(self, value):
         self._quest_item = _listcast(value)
@@ -228,13 +250,15 @@ class ItemDefinition(object):
     @property
     def release_date(self):
         return self._release_date
+
     @release_date.setter
     def release_date(self, value):
-        self._release_date = _datecast(value)	
+        self._release_date = _datecast(value)
 
     @property
     def seller(self):
         return self._seller
+
     @seller.setter
     def seller(self, value):
         self._seller = _listcast(value)
@@ -242,6 +266,7 @@ class ItemDefinition(object):
     @property
     def store_price(self):
         return self._store_price
+
     @store_price.setter
     def store_price(self, value):
         self._store_price = _intcast(value)
@@ -249,13 +274,15 @@ class ItemDefinition(object):
     @property
     def examine(self):
         return self._examine
+
     @examine.setter
     def examine(self, value):
         self._examine = _strcast(value)
-	           
+
     @property
     def url(self):
         return self._url
+
     @url.setter
     def url(self, value):
         self._url = _strcast(value)
@@ -265,7 +292,7 @@ class ItemDefinition(object):
     # TODO: Change this into a class method and return a new ItemDefinition object instead
     def load_item(self, input) -> "ItemDefinition":
         for prop in self.properties:
-            setattr(self, prop, input[prop]) 
+            setattr(self, prop, input[prop])
 
         if self.equipable:
             # Item Bonuses
@@ -278,7 +305,7 @@ class ItemDefinition(object):
             self.equipment = equipment
 
         return self
-          
+
     ###########################################################################
     # Helpers: JSON
     def print_json(self):
@@ -321,11 +348,11 @@ class ItemDefinition(object):
         self.json_out["equipable"] = self.equipable
         self.json_out["cost"] = self.cost
         self.json_out["lowalch"] = self.lowalch
-        self.json_out["highalch"] = self.highalch        
+        self.json_out["highalch"] = self.highalch
         self.json_out["weight"] = self.weight
         self.json_out["buy_limit"] = self.buy_limit
         self.json_out["quest_item"] = self.quest_item
-        self.json_out["release_date"] = self.release_date     
+        self.json_out["release_date"] = self.release_date
         self.json_out["examine"] = self.examine
         self.json_out["url"] = self.url
         if self.equipable:
@@ -333,22 +360,23 @@ class ItemDefinition(object):
             self.json_out["bonuses"] = bonuses_in_json
             equipment_in_json = self.equipment.construct_json()
             self.json_out["equipment"] = equipment_in_json
-        return self.json_out            
+        return self.json_out
+
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     # Run unit tests
     assert _intcast(-1) == -1
     assert _intcast("-1") == -1
-  
-    assert _boolcast(False) == False
+
+    assert _boolcast(False) is False
     assert _boolcast("True")
     assert _boolcast("true")
-    assert _boolcast(False) == False
-    assert _boolcast(True) != False
+    assert _boolcast(False) is False
+    assert _boolcast(True) is not False
     assert _boolcast(True)
 
     assert _strcast(1)
     assert _strcast("OSRS Rocks!")
-    
+
     print("Module tests passed.")

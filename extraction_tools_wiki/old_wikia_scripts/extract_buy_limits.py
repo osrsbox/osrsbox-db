@@ -34,13 +34,13 @@ import requests
 import urllib.request
 import lxml.html
 import lxml.etree
-import json
+
 
 def extract_buy_limit(itemName):
     if "Grubs" in itemName:
         return
     url = "http://oldschoolrunescape.wikia.com/wiki/" + itemName
-    #http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=
+    # http://oldschoolrunescape.wikia.com/api.php?action=parse&prop=wikitext&format=json&page=
     print("URL: %r" % url)
 
     # data = urllib.request.urlopen(url).read()
@@ -65,25 +65,25 @@ def extract_buy_limit(itemName):
             box = box[0]
     except IndexError:
         return
-        
+
     buy_limit = None
 
     # Fetch all the tr elements and loop through them
     trs = box.xpath("tr")
-    for tr in trs:                     
+    for tr in trs:
         # Find the title of each tr element
         tr_title = tr.xpath("th/a/text()")
         # print("tr_title:", tr_title)
-        
-        # Find corresponding value for property 
-        value = tr.xpath("td/text()")
+
+        # Find corresponding value for property
+        # value = tr.xpath("td/text()")
         # print("value:   ", value)
-            
+
         try:
             propertyTitle = tr_title[0]
         except IndexError:
             continue
-        
+
         # Find the buy limit
         propertyTitle = propertyTitle.strip()
         propertyTitle = propertyTitle.lower()
@@ -99,6 +99,7 @@ def extract_buy_limit(itemName):
 
     return buy_limit
 
+
 def query_category_items(lastContinue):
     for result in query_category_items_callback({'generator': 'categorymembers'}, lastContinue):
         # Process result data
@@ -109,6 +110,7 @@ def query_category_items(lastContinue):
             buy_limit = extract_buy_limit(page_suffix)
             print("%s|%s" % (result['pages'][r]["title"], buy_limit))
 
+
 def query_category_items_callback(request, lastContinue):
     request['action'] = 'query'
     request['format'] = 'json'
@@ -118,7 +120,7 @@ def query_category_items_callback(request, lastContinue):
     request['cllimit'] = 'max'
     # request['gcmlimit'] = '20'
     # request['cllimit'] = '20'
-    
+
     # lastContinue = {}
     lastContinue = lastContinue
     print(">>>>>>> lastContinue: ", lastContinue)
@@ -133,7 +135,7 @@ def query_category_items_callback(request, lastContinue):
         result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
         # print(result)
         if 'error' in result:
-            #raise Error(result['error'])
+            # raise Error(result['error'])
             print(">>> ERROR!")
             break
         if 'warnings' in result:
@@ -146,8 +148,9 @@ def query_category_items_callback(request, lastContinue):
             break
         lastContinue = result['query-continue']['categorymembers']
 
+
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     print(">>> Print starting...")
     # Start processing
     # "Grubs_Ó_la_mode"

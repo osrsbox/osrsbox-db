@@ -34,8 +34,9 @@ import os
 import json
 import glob
 
+
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     wikitext_fis_path = os.path.join("extract_all_monsters_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
 
@@ -46,6 +47,6 @@ if __name__=="__main__":
             monster_name = next(iter(data))
             monster_wikitext = data[monster_name]
             all_monsters[monster_name] = monster_wikitext
-             
+
     with open("extract_all_monsters_page_wikitext.json", "w") as fi:
         json.dump(all_monsters, fi)

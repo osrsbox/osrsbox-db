@@ -35,7 +35,7 @@ import json
 import glob
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     wikitext_fis_path = os.path.join("extract_all_items_page_wikitext", "*")
     wikitext_fis = glob.glob(wikitext_fis_path)
 
@@ -46,6 +46,6 @@ if __name__=="__main__":
             item_name = next(iter(data))
             item_wikitext = data[item_name]
             all_items[item_name] = item_wikitext
-             
+
     with open("extract_all_items_page_wikitext.json", "w") as fi:
         json.dump(all_items, fi)

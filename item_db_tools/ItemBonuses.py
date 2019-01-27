@@ -31,8 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import json
 import collections
+
 
 ###############################################################################
 # Helper methods
@@ -50,16 +50,18 @@ def _intcast(val):
                 return int(val)
         if val[0] == "+":
             if val[1:].isdigit():
-                return int(val)                
+                return int(val)
         else:
             if val.isdigit():
                 return int(val)
+
 
 def _strcast(val):
     """ Convert value to string. """
     if val is None:
         return None
     return str(val)
+
 
 ###############################################################################
 # ItemBonuses object
@@ -80,7 +82,7 @@ class ItemBonuses(object):
             "melee_strength",
             "ranged_strength",
             "magic_damage",
-            "prayer"]   
+            "prayer"]
         self.wikia_properties = [
             "astab",
             "aslash",
@@ -95,15 +97,16 @@ class ItemBonuses(object):
             "str",
             "rstr",
             "mdmg",
-            "prayer"] 
+            "prayer"]
 
         for prop in self.properties:
             setattr(self, prop, 0)
-    
+
     # Attacking Stats
     @property
     def attack_stab(self):
         return self._attack_stab
+
     @attack_stab.setter
     def attack_stab(self, value):
         self._attack_stab = _intcast(value)
@@ -111,6 +114,7 @@ class ItemBonuses(object):
     @property
     def attack_slash(self):
         return self._attack_slash
+
     @attack_slash.setter
     def attack_slash(self, value):
         self._attack_slash = _intcast(value)
@@ -118,6 +122,7 @@ class ItemBonuses(object):
     @property
     def attack_crush(self):
         return self._attack_crush
+
     @attack_crush.setter
     def attack_crush(self, value):
         self._attack_crush = _intcast(value)
@@ -125,6 +130,7 @@ class ItemBonuses(object):
     @property
     def attack_magic(self):
         return self._attack_magic
+
     @attack_magic.setter
     def attack_magic(self, value):
         self._attack_magic = _intcast(value)
@@ -132,6 +138,7 @@ class ItemBonuses(object):
     @property
     def attack_ranged(self):
         return self._attack_ranged
+
     @attack_ranged.setter
     def attack_ranged(self, value):
         self._attack_ranged = _intcast(value)
@@ -140,6 +147,7 @@ class ItemBonuses(object):
     @property
     def defence_stab(self):
         return self._defence_stab
+
     @defence_stab.setter
     def defence_stab(self, value):
         self._defence_stab = _intcast(value)
@@ -147,6 +155,7 @@ class ItemBonuses(object):
     @property
     def defence_slash(self):
         return self._defence_slash
+
     @defence_slash.setter
     def defence_slash(self, value):
         self._defence_slash = _intcast(value)
@@ -154,6 +163,7 @@ class ItemBonuses(object):
     @property
     def defence_crush(self):
         return self._defence_crush
+
     @defence_crush.setter
     def defence_crush(self, value):
         self._defence_crush = _intcast(value)
@@ -161,6 +171,7 @@ class ItemBonuses(object):
     @property
     def defence_magic(self):
         return self._defence_magic
+
     @defence_magic.setter
     def defence_magic(self, value):
         self._defence_magic = _intcast(value)
@@ -168,6 +179,7 @@ class ItemBonuses(object):
     @property
     def defence_ranged(self):
         return self._defence_ranged
+
     @defence_ranged.setter
     def defence_ranged(self, value):
         self._defence_ranged = _intcast(value)
@@ -176,6 +188,7 @@ class ItemBonuses(object):
     @property
     def melee_strength(self):
         return self._melee_strength
+
     @melee_strength.setter
     def melee_strength(self, value):
         self._melee_strength = _intcast(value)
@@ -183,6 +196,7 @@ class ItemBonuses(object):
     @property
     def ranged_strength(self):
         return self._ranged_strength
+
     @ranged_strength.setter
     def ranged_strength(self, value):
         self._ranged_strength = _intcast(value)
@@ -190,6 +204,7 @@ class ItemBonuses(object):
     @property
     def magic_damage(self):
         return self._magic_damage
+
     @magic_damage.setter
     def magic_damage(self, value):
         self._magic_damage = _intcast(value)
@@ -197,9 +212,10 @@ class ItemBonuses(object):
     @property
     def prayer(self):
         return self._prayer
+
     @prayer.setter
     def prayer(self, value):
-        self._prayer = _intcast(value)       
+        self._prayer = _intcast(value)
 
     ###########################################################################
     # Handle item to JSON
@@ -218,15 +234,16 @@ class ItemBonuses(object):
         self.json_out["melee_strength"] = self.melee_strength
         self.json_out["ranged_strength"] = self.ranged_strength
         self.json_out["magic_damage"] = self.magic_damage
-        self.json_out["prayer"] = self.prayer 
-        return self.json_out     
+        self.json_out["prayer"] = self.prayer
+        return self.json_out
+
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     # Run unit tests
     assert _intcast(-1) == -1
     assert _intcast("-1") == -1
     assert _intcast("1") == 1
     assert _intcast("+1") == 1
-   
+
     print("Module tests passed.")

@@ -12,13 +12,13 @@ of sources to produce rich item metadata files in JSON format. The ProcessItems
 class sources information from the following locations:
 
 1) Base item information from my ItemScraper RuneLite plugin. The ItemScraper
-plugin returns a file named allitems.json which contains all the item 
+plugin returns a file named allitems.json which contains all the item
 information from the OSRS Cache
-2) Any remaining information from the OSRS wiki which is fetched using the 
+2) Any remaining information from the OSRS wiki which is fetched using the
 MediaWiki API using my custom Python scripts and classes
 
 Output: The output from this program is a folder called items-json which
-contains a single file for every item in OSRS. Each file is named using the 
+contains a single file for every item in OSRS. Each file is named using the
 unique item ID. In addition, a single file is also exported which contains
 every item in OSRS with rich metadata.
 
@@ -55,6 +55,7 @@ import glob
 
 from . import ItemDefinition
 
+
 ###############################################################################
 # ProcessItems object
 class ProcessItems(object):
@@ -87,7 +88,7 @@ class ProcessItems(object):
         # Print length of allitems dict
         print("  > Total item count: %d" % len(self.allitems))
         # Individually process each item
-        for k,v in self.allitems.items():
+        for k, v in self.allitems.items():
             self.construct_ItemDefinition(k, v)
 
     def construct_ItemDefinition(self, itemID, itemJSON):
@@ -95,22 +96,26 @@ class ProcessItems(object):
         item_exists_in_db = False
         if itemID in self.already_processed:
             item_exists_in_db = True
-        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wiki_items, self.all_wiki_items_bonuses, self.all_wiki_buylimits, self.all_wiki_normalized_names, item_exists_in_db, self.item_skill_requirements) 
+        itemdef = ItemDefinition.ItemDefinition(itemID, itemJSON, self.all_wiki_items,
+                                                self.all_wiki_items_bonuses, self.all_wiki_buylimits,
+                                                self.all_wiki_normalized_names, item_exists_in_db,
+                                                self.item_skill_requirements)
         item = itemdef.populate()
         if item:
-            self.allitemdefs[itemID] = item 
+            self.allitemdefs[itemID] = item
+
 
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-f", 
-                    "--file", 
+    ap.add_argument("-f",
+                    "--file",
                     required=True,
                     help="JSON file from ItemScraper RuneLite plugin")
     args = vars(ap.parse_args())
-    
-    # Start processing    
+
+    # Start processing
     print(">>> Starting processing...")
 
     # Remove old log file
@@ -128,35 +133,35 @@ if __name__=="__main__":
 
     with open(extraction_path_wiki + "extract_all_items_templates_InfoboxConstruction.json") as f:
         temp = json.load(f)
-        for k,v in temp.items():
+        for k, v in temp.items():
             all_wiki_items[k] = v
 
     with open(extraction_path_wiki + "extract_all_items_templates_InfoboxPet.json") as f:
         temp = json.load(f)
-        for k,v in temp.items():
+        for k, v in temp.items():
             all_wiki_items[k] = v
 
     all_wiki_buylimits = dict()
     with open(extraction_path_other + "all_buy_limits.txt") as f:
-        for l in f:
-            l = l.strip()
-            l = l.split("|")
-            all_wiki_buylimits[l[0]] = l[1]    
+        for line in f:
+            line = line.strip()
+            line = line.split("|")
+            all_wiki_buylimits[line[0]] = line[1]
 
     all_wiki_normalized_names = dict()
     with open(extraction_path_other + "normalized_names.txt") as f:
-        for l in f:
-            l = l.strip()
-            if "#" in l or l.startswith("TODO"):
+        for line in f:
+            line = line.strip()
+            if "#" in line or line.startswith("TODO"):
                 continue
-            l = l.split("|")
-            all_wiki_normalized_names[l[0]] = [l[1], l[2], l[3]]
+            line = line.split("|")
+            all_wiki_normalized_names[line[0]] = [line[1], line[2], line[3]]
 
     item_skill_requirements = dict()
     with open(extraction_path_other + "item_skill_requirements.json") as f:
         temp = json.load(f)
-        for k,v in temp.items():
-            item_skill_requirements[k] = v            
+        for k, v in temp.items():
+            item_skill_requirements[k] = v
 
     # # Make a dir for JSON output
     # # This directory is not in docs, it is a temp working space
@@ -165,7 +170,7 @@ if __name__=="__main__":
     #     os.makedirs(directory)
 
     # Remove old logfile
-    #os.remove("ItemDefinition.log")
+    # os.remove("ItemDefinition.log")
 
     # Next, build the ProcessItems class to handle all items
     pi = ProcessItems(args["file"],

@@ -34,15 +34,16 @@ import json
 
 from item_api_tools import AllItems
 
+
 ################################################################################
 def determine_requirements(item_name):
     # Start with the desired skill
     options = {
         '0': None,
-        '1': 'attack', 
-        '2': 'strength', 
-        '3': 'defence', 
-        '4': 'prayer', 
+        '1': 'attack',
+        '2': 'strength',
+        '3': 'defence',
+        '4': 'prayer',
         '5': "ranged",
         '6': 'magic',
         '7': '',
@@ -63,12 +64,12 @@ def determine_requirements(item_name):
     print("9. Agility")
     print("10. Firemaking")
     print("x. Exit")
-    
+
     out_dict = dict()
 
     # Ask for the required skill (7 for multiple skills)
     skill_req_input = input(">>> SKILL: %s - " % item_name)
-    
+
     # Exit check
     if skill_req_input == 'x':
         return None
@@ -101,9 +102,9 @@ def determine_requirements(item_name):
         out_dict["requirements"] = to_list
         return out_dict
 
-    if skill_req_input == 'c': # for a custom, not on the list
+    if skill_req_input == 'c':  # for a custom, not on the list
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        skill_req = skill_req_input # This breaks stuff
+        skill_req = skill_req_input  # This breaks stuff
         level_req_input = input(">>> LEVEL: %s - " % item_name)
         level_req = int(level_req_input)
         to_list = list()
@@ -111,22 +112,22 @@ def determine_requirements(item_name):
         out_dict["requirements"] = to_list
         return out_dict
 
-    if skill_req_input == 't': # for a custom, not on the list
+    if skill_req_input == 't':  # for a custom, not on the list
         to_list = list()
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        skill_req = options[skill_req_input] # This breaks stuff
+        skill_req = options[skill_req_input]  # This breaks stuff
         level_req_input = input(">>> LEVEL: %s - " % item_name)
         level_req = int(level_req_input)
         to_list.append({"skill_req": skill_req, "level_req": level_req})
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        skill_req = options[skill_req_input] # This breaks stuff
+        skill_req = options[skill_req_input]  # This breaks stuff
         level_req_input = input(">>> LEVEL: %s - " % item_name)
         level_req = int(level_req_input)
         to_list.append({"skill_req": skill_req, "level_req": level_req})
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        skill_req = options[skill_req_input] # This breaks stuff
+        skill_req = options[skill_req_input]  # This breaks stuff
         level_req_input = input(">>> LEVEL: %s - " % item_name)
-        level_req = int(level_req_input)        
+        level_req = int(level_req_input)
         to_list.append({"skill_req": skill_req, "level_req": level_req})
         out_dict["requirements"] = to_list
         return out_dict
@@ -139,8 +140,7 @@ def determine_requirements(item_name):
         # Fetch formatted skill requirement from options dict
         skill_req = options[skill_req_input]
         # Ask for level requirement, if no skill requirement, level requirement is None
-        level_req = None
-        if skill_req == None:
+        if skill_req:
             level_req = None
         else:
             level_req_input = input(">>> LEVEL: %s - " % item_name)
@@ -153,18 +153,19 @@ def determine_requirements(item_name):
     if skill_req_input == '7':
         # Fetch formatted skill requirement from options dict
         skill_req_input = input(">>> SKILL: %s - " % item_name)
-        first_skill_req = skill_req_input # This breaks stuff
+        first_skill_req = skill_req_input  # This breaks stuff
         level_req_input = input(">>> LEVEL: %s - " % item_name)
         first_level_req = int(level_req_input)
 
         skill_req_input = input(">>> SKILL: %s - " % item_name)
         second_skill_req = skill_req_input
         level_req_input = input(">>> LEVEL: %s - " % item_name)
-        second_level_req = int(level_req_input)        
+        second_level_req = int(level_req_input)
 
-        out_dict["requirements"] = [{"skill_req": first_skill_req, "level_req": first_level_req}, 
+        out_dict["requirements"] = [{"skill_req": first_skill_req, "level_req": first_level_req},
                                     {"skill_req": second_skill_req, "level_req": second_level_req}]
-        return out_dict        
+        return out_dict
+
 
 def clean(input):
     # input = input.replace(" 100", "")
@@ -200,7 +201,7 @@ def clean(input):
     # input = input.replace("(4)", "")
     # input = input.replace("(3)", "")
     # input = input.replace("(2)", "")
-    # input = input.replace("(1)", "")   
+    # input = input.replace("(1)", "")
     # input = input.replace(" 9/10", " full")
     # input = input.replace(" 8/10", " full")
     # input = input.replace(" 7/10", " full")
@@ -227,12 +228,13 @@ def clean(input):
     # input = input.replace("(i)", "")
     return input
 
+
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", 
-                    "--input", 
+    ap.add_argument("-i",
+                    "--input",
                     required=True,
                     help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items_complete.json) ")
     args = vars(ap.parse_args())
@@ -245,7 +247,7 @@ if __name__=="__main__":
     known_items = dict()
     with open(isr_file) as f:
         known_items = json.load(f)
-    
+
     done = list()
     for i in known_items:
         done.append(i)
@@ -258,9 +260,9 @@ if __name__=="__main__":
             # If item is equipable and not process, process it!
             clean_name = clean(item.name)
             requirements = determine_requirements(item.name)
-            if requirements == None:
+            if requirements:
                 known_items[item.id] = None
-            elif requirements["requirements"] == None:
+            elif requirements["requirements"]:
                 known_items[item.id] = requirements["requirements"]
             else:
                 known_items[item.id] = requirements["requirements"]

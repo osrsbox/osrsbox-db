@@ -30,12 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
-import sys
-import json
 import datetime
 import collections
-import re
+
 
 ###############################################################################
 # Helper methods
@@ -44,6 +41,7 @@ def _strcast(val):
     if val is None:
         return None
     return str(val)
+
 
 def _intcast(val):
     """ Convert input to integer. """
@@ -59,6 +57,7 @@ def _intcast(val):
             if val.isdigit():
                 return int(val)
 
+
 def _floatcast(val):
     """ Convert input to float. """
     if val is None:
@@ -66,8 +65,9 @@ def _floatcast(val):
     if isinstance(val, float):
         return val
     if isinstance(val, str):
-        return float(val)                
-                
+        return float(val)
+
+
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
@@ -75,7 +75,8 @@ def _boolcast(val):
     elif val in ["True", "true", True, "Yes", "yes"]:
         return True
     elif val in ["False", "false", False, "No", "no"]:
-        return False   
+        return False
+
 
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
@@ -83,8 +84,9 @@ def _datecast(val):
         return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
-    date = datetime.datetime.strptime(val, "%d %B %Y")   
-    return date.strftime("%d %B %Y")        
+    date = datetime.datetime.strptime(val, "%d %B %Y")
+    return date.strftime("%d %B %Y")
+
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -95,6 +97,7 @@ def _listcast(val):
     elif isinstance(val, str):
         temp_list = list()
         return temp_list.append(val)
+
 
 ###############################################################################
 # QuestRewards object
@@ -107,6 +110,7 @@ class QuestRewards(object):
     @property
     def qp(self):
         return self._qp
+
     @qp.setter
     def qp(self, value):
         self._qp = _strcast(value)
@@ -114,9 +118,10 @@ class QuestRewards(object):
     @property
     def rewards(self):
         return self._rewards
+
     @rewards.setter
     def rewards(self, value):
-        self._rewards = _strcast(value)        
+        self._rewards = _strcast(value)
 
     def wikicode_cleaner(self, input):
         clean_input = str(input)

@@ -7,11 +7,11 @@ Website: osrsbox.com
 Date:    2018/11/04
 
 Description:
-ProcessModels is a simple script to parse the objects output from the 
+ProcessModels is a simple script to parse the objects output from the
 RuneLite Cache tool. The script parses the individual JSON files, one
 for each object, and extracts the object name, object id, and maps this
 to the model id numbers. You can use this information to easily find the
-name of a specific model id from the OSRS cache 
+name of a specific model id from the OSRS cache
 
 Known keys for models:
 - objectModels (objects)
@@ -44,19 +44,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "0.1.0"
 
 import os
-import sys
 import glob
 import json
+
 
 ################################################################################
 def parse_fi(fi, type_name):
     # Skip Java consolidation output from RuneLite
     if (os.path.basename(fi) == "NullObjectID.java" or
-        os.path.basename(fi) == "ObjectID.java" or
-        os.path.basename(fi) == "NpcID.java" or
-        os.path.basename(fi) == "ItemID.java"):
+            os.path.basename(fi) == "ObjectID.java" or
+            os.path.basename(fi) == "NpcID.java" or
+            os.path.basename(fi) == "ItemID.java"):
         return list()
-    
+
     # Load the JSON into a dict
     with open(fi) as f:
         json_data = json.loads(f.read())
@@ -70,10 +70,9 @@ def parse_fi(fi, type_name):
     model_dict["type_id"] = json_data["id"]
     model_dict["name"] = json_data["name"]
     model_dict["type"] = type_name
-    
-    fi_model_list = None
+
     all_models = list()
-    
+
     if type_name == "objects":
         try:
             fi_model_list = json_data["objectModels"]
@@ -101,7 +100,7 @@ def parse_fi(fi, type_name):
         #         all_models.append(model_dict)
         # except KeyError:
         #     pass
-    
+
     if type_name == "items":
         try:
             model_id = json_data["inventoryModel"]
@@ -112,15 +111,16 @@ def parse_fi(fi, type_name):
 
     return all_models
 
+
 ################################################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("-d", 
-                    "--directory", 
+    ap.add_argument("-d",
+                    "--directory",
                     required=True,
                     help="Directory of definitions (in JSON) from RuneLite Cache tool")
-    args = vars(ap.parse_args())    
+    args = vars(ap.parse_args())
 
     directory = args["directory"]
     items = os.path.join(directory, "items", "")

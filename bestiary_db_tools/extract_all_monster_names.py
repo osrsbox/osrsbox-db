@@ -70,8 +70,8 @@ for name in all_wiki_monsters:
             is_versioned = True
             # Now, try to determine how many versions are present
             i = 1
-            while i <= 20: # Guessing max verison number, using 20
-                version_number = "version" + str(i) # e.g., version1, version2
+            while i <= 20:  # Guessing max verison number, using 20
+                version_number = "version" + str(i)  # e.g., version1, version2
                 try:
                     monster_template.get(version_number).value
                     version_count += 1
@@ -96,6 +96,6 @@ for name in all_wiki_monsters:
                 i += 1
         else:
             json_data[name] = all_wiki_monsters[name]
-                
+
 with open("all_monsters_wikitext.json", "w") as f:
     json.dump(json_data, f, indent=4)

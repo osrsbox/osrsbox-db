@@ -30,13 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-import os
-import sys
-import json
 import datetime
 import collections
-import logging
-import re
+
 
 ###############################################################################
 # Helper methods
@@ -45,6 +41,7 @@ def _strcast(val):
     if val is None:
         return None
     return str(val)
+
 
 def _intcast(val):
     """ Convert input to integer. """
@@ -60,6 +57,7 @@ def _intcast(val):
             if val.isdigit():
                 return int(val)
 
+
 def _floatcast(val):
     """ Convert input to float. """
     if val is None:
@@ -67,8 +65,9 @@ def _floatcast(val):
     if isinstance(val, float):
         return val
     if isinstance(val, str):
-        return float(val)                
-                
+        return float(val)
+
+
 def _boolcast(val):
     """ Convert value to boolean object. """
     if val is None:
@@ -76,7 +75,8 @@ def _boolcast(val):
     elif val in ["True", "true", True, "Yes", "yes"]:
         return True
     elif val in ["False", "false", False, "No", "no"]:
-        return False   
+        return False
+
 
 def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
@@ -84,8 +84,9 @@ def _datecast(val):
         return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
-    date = datetime.datetime.strptime(val, "%d %B %Y")   
-    return date.strftime("%d %B %Y")        
+    date = datetime.datetime.strptime(val, "%d %B %Y")
+    return date.strftime("%d %B %Y")
+
 
 def _listcast(val):
     """ Check and convert to a list. """
@@ -96,6 +97,7 @@ def _listcast(val):
     elif isinstance(val, str):
         temp_list = list()
         return temp_list.append(val)
+
 
 ###############################################################################
 # QuestDetails object
@@ -108,6 +110,7 @@ class QuestDetails(object):
     @property
     def start(self):
         return self._start
+
     @start.setter
     def start(self, value):
         self._start = _strcast(value)
@@ -115,6 +118,7 @@ class QuestDetails(object):
     @property
     def difficulty(self):
         return self._difficulty
+
     @difficulty.setter
     def difficulty(self, value):
         self._difficulty = _strcast(value)
@@ -122,6 +126,7 @@ class QuestDetails(object):
     @property
     def description(self):
         return self._description
+
     @description.setter
     def description(self, value):
         self._description = _strcast(value)
@@ -129,6 +134,7 @@ class QuestDetails(object):
     @property
     def requirements(self):
         return self._requirements
+
     @requirements.setter
     def requirements(self, value):
         self._requirements = _strcast(value)
@@ -136,6 +142,7 @@ class QuestDetails(object):
     @property
     def items(self):
         return self._items
+
     @items.setter
     def items(self, value):
         self._items = _strcast(value)
@@ -143,6 +150,7 @@ class QuestDetails(object):
     @property
     def reccomended(self):
         return self._reccomended
+
     @reccomended.setter
     def reccomended(self, value):
         self._reccomended = _strcast(value)
@@ -150,6 +158,7 @@ class QuestDetails(object):
     @property
     def kills(self):
         return self._kills
+
     @kills.setter
     def kills(self, value):
         self._kills = _strcast(value)
@@ -185,7 +194,7 @@ class QuestDetails(object):
             description = self.wikicode.get("description").value
             self.description = self.wikicode_cleaner(description)
         except ValueError:
-            self.description = None   
+            self.description = None
 
         # Quest requirements
         try:

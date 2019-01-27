@@ -30,8 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.0.0"
 
-
-import os
 import json
 import glob
 
@@ -65,16 +63,16 @@ for def_fi in def_fis:
                 continue
             # Write out details of monster to all_monsters
             # Format: id|name|norm_name|combatlevel
-            all_monsters.write("%s|%s|%s\n" % (monster_id, 
-                                               monster_name, 
+            all_monsters.write("%s|%s|%s\n" % (monster_id,
+                                               monster_name,
                                                monster_combat_level))
-            
+
             unique_monster_name = monster_name + "_" + str(monster_combat_level)
             # Write out details of monster to all_monsters_unique
             # only is the monster is new
             if unique_monster_name not in known:
-                all_monsters_unique.write("%s|%s|%s\n" % (monster_id, 
-                                                          monster_name, 
+                all_monsters_unique.write("%s|%s|%s\n" % (monster_id,
+                                                          monster_name,
                                                           monster_combat_level))
 
             # Add monsters name and level to a list

@@ -45,6 +45,7 @@ def query_category_items():
             print(">>> %d" % count)
             count += 1
 
+
 def query_category_items_callback(request):
     request['action'] = 'query'
     request['format'] = 'json'
@@ -61,7 +62,7 @@ def query_category_items_callback(request):
         result = requests.get('http://oldschoolrunescape.wikia.com/api.php', params=req).json()
         # print(result)
         if 'error' in result:
-            #raise Error(result['error'])
+            # raise Error(result['error'])
             print(">>> ERROR!")
             break
         if 'warnings' in result:
@@ -74,9 +75,10 @@ def query_category_items_callback(request):
             break
         lastContinue = result['query-continue']['allpages']
 
+
 ################################################################################
-if __name__=="__main__":   
-    # Start processing    
+if __name__ == "__main__":
+    # Start processing
     query_category_items()
     with open('extract_all_pages.json', 'w') as fp:
         json.dump(allpages, fp)

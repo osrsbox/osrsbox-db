@@ -8,7 +8,7 @@ Date:    2019/01/21
 
 Description:
 Simple script to determine item names that have been extracted from the cache,
-but are not in the OSRS Wiki Category:Item. Output to be used to determine 
+but are not in the OSRS Wiki Category:Item. Output to be used to determine
 item names that require normalization.
 
 Copyright (c) 2019, PH01L
@@ -33,7 +33,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __version__ = "1.0.0"
 
 import os
-import sys
 import json
 
 # Get the dictionary of item ID -> wikitext
@@ -47,20 +46,20 @@ all_wiki_normalized_names = dict()
 all_wiki_normalized_ids = dict()
 extraction_path_other = os.path.join("..", "extraction_tools_other", "")
 with open(extraction_path_other + "normalized_names.txt") as f:
-    for l in f:
-        l = l.strip()
-        if "#" in l or l.startswith("TODO"):
+    for line in f:
+        line = line.strip()
+        if "#" in line or line.startswith("TODO"):
             continue
-        l = l.split("|")
-        all_wiki_normalized_ids[l[0]] = [l[1], l[2], l[3]] 
-        all_wiki_normalized_names[l[1]] = [l[0], l[2], l[3]] 
+        line = line.split("|")
+        all_wiki_normalized_ids[line[0]] = [line[1], line[2], line[3]]
+        all_wiki_normalized_names[line[1]] = [line[0], line[2], line[3]]
 
 # Get the latest cache dump
 items = dict()
 in_fi = os.path.join("..", "docs", "items_itemscraper.json")
 with open(in_fi) as f:
     temp = json.load(f)
-    for k,v in temp.items():
+    for k, v in temp.items():
         items[k] = v
 
 # Find items that are not problematic (they are in wiki dump)
@@ -74,8 +73,8 @@ for k in items:
     if item_name in all_wiki_items:
         if item_name in all_wiki_normalized_names:
             print(item_name)
-    
-    # # Check 2: If name is not in wiki_items... 
+
+    # # Check 2: If name is not in wiki_items...
     # # This is a name that should be normalized
     # if item_name not in all_wiki_items:
     #     print(item_name)

@@ -7,7 +7,7 @@ Website: osrsbox.com
 Date:    2018/01/10
 
 Description:
-Extract all wikitext from all items pages. The required input is the 
+Extract all wikitext from all items pages. The required input is the
 "extract_all_items.txt" file from the "extract_all_items.py" script. This
 script will extract all wikitext to "extract_all_items_page_wikitext"
 directory for later processing. Item page wiki text are saved as separate
@@ -35,11 +35,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __version__ = "1.1.0"
 
-custom_agent = {
-    'User-Agent': 'some-agent',
-    'From': 'name@domain.com' 
-}
-
 import os
 import sys
 import json
@@ -48,6 +43,12 @@ import random
 import string
 import requests
 import mwparserfromhell
+
+custom_agent = {
+    'User-Agent': 'some-agent',
+    'From': 'name@domain.com'
+}
+
 
 def extract_wikitext(page_name):
     norm_page_name = page_name.replace("&", "%26")
@@ -67,7 +68,7 @@ def extract_wikitext(page_name):
     # Parse actual wikitext content using mwparserfromhell
     wikitext = mwparserfromhell.parse(input)
 
-    # Convert to JSON 
+    # Convert to JSON
     item_dict = dict()
     item_dict[page_name] = str(wikitext)
 
@@ -75,19 +76,20 @@ def extract_wikitext(page_name):
 
     out_fi = os.path.join("extract_all_items_page_wikitext", out_fi_name + ".json")
     with open(out_fi, "w") as f:
-        json.dump(item_dict, f)  
+        json.dump(item_dict, f)
+
 
 ################################################################################
-if __name__=="__main__":   
+if __name__ == "__main__":
     # Start processing: extract_all_items.txt
     print(">>> Starting to extract wikitext for all items...")
-    
+
     print("  > Reading extract_all_items page titles...")
     items_to_process = list()
     with open("extract_all_items.txt") as f:
-        for l in f:
-            l = l.strip()
-            items_to_process.append(l)
+        for line in f:
+            line = line.strip()
+            items_to_process.append(line)
 
     # Determine previously extracted page_titles
     print("  > Determining already extracted page titles...")
@@ -116,4 +118,4 @@ if __name__=="__main__":
             continue
         # Extract wikitext
         extract_wikitext(item_page_title)
-        count += 1    
+        count += 1
