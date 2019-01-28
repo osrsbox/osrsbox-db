@@ -31,7 +31,6 @@ import datetime
 
 from .wiki_page_titles import WikiPageTitles
 from .wiki_page_text import WikiPageText
-from .wiki_text_templates import WikiTextTemplates
 
 
 if __name__ == "__main__":
@@ -49,17 +48,6 @@ if __name__ == "__main__":
     # The first category argument, used to build the output file name
     PRIMARY_CATEGORY = TARGET_CATEGORIES[0].lower()
 
-    # Specify the custom user agent for all requests
-    USER_AGENT = "some-agent"
-    USER_EMAIL = "name@domain.com"
-
-    # Boolean to trigger load page titles from file, or run fresh page title extraction
-    LOAD_FILES = True
-
-    # Set the revision date, extract wiki pages only after this date
-    LAST_EXTRACTION_DATE = datetime.datetime.strptime("2019-01-28T00:00:00Z",
-                                                      '%Y-%m-%dT%H:%M:%SZ')
-
     # Specify the name for the page titles output JSON file
     TITLES_FILE_NAME = "extract_page_titles_" + PRIMARY_CATEGORY + ".json"
     TITLES_FILE_PATH = os.path.join("extraction_tools_wiki", TITLES_FILE_NAME)
@@ -67,6 +55,19 @@ if __name__ == "__main__":
     # Specify the name for the wiki text output JSON file
     TEXT_FILE_NAME = "extract_page_text_" + PRIMARY_CATEGORY + ".json"
     TEXT_FILE_PATH = os.path.join("extraction_tools_wiki", TEXT_FILE_NAME)
+
+    # STAGE ZERO: SET SCRIPT CONFIGURATION
+
+    # Specify the custom user agent for all requests
+    USER_AGENT = "some-agent"
+    USER_EMAIL = "name@domain.com"
+
+    # Boolean to trigger load page titles from file, or run fresh page title extraction
+    LOAD_FILES = False
+
+    # Set the revision date, extract wiki pages only after this date
+    LAST_EXTRACTION_DATE = datetime.datetime.strptime("2019-01-29T00:00:00Z",
+                                                      '%Y-%m-%dT%H:%M:%SZ')
 
     # STAGE ONE: EXTRACT PAGE TITLES
 
@@ -79,8 +80,8 @@ if __name__ == "__main__":
 
     # Load previously extracted page titles from JSON, or extract from OSRS Wiki API
     if LOAD_FILES:
-        loaded_page_titles = WIKI_PAGE_TITLES.load_page_titles()
-        if not loaded_page_titles:
+        LOADED_PAGE_TITLES = WIKI_PAGE_TITLES.load_page_titles()
+        if not LOADED_PAGE_TITLES:
             print(">>> ERROR: Specified page titles to load, but not file found...")
             print(">>> EXITING.")
             sys.exit(1)
@@ -130,15 +131,3 @@ if __name__ == "__main__":
         wiki_page_text.export_wiki_text_to_json()
 
         PAGE_TITLES_COUNT += 1
-
-    quit()  # TODO: Up to here (template extraction)
-
-    # STAGE THREE: EXTRACT TEMPLATES FROM WIKI TEXT
-
-    with open(TEXT_FILE_PATH, "r") as json_wiki_text_file:
-        all_items_wiki_text = json.load(json_wiki_text_file)
-
-    for page_title, wiki_text in all_items_wiki_text:
-        # Create object to extract wiki text templates
-        wiki_text_templates = WikiTextTemplates(page_title,
-                                                wiki_text)

@@ -30,18 +30,10 @@ LOG = logging.getLogger(__name__)
 class WikiPageText:
     """This class handles extraction of wiki text using an OSRS Wiki API query.
 
-    Args:
-        page_title (str): OSRS Wiki page titles used for API query.
-        out_file_name (str): The file name used for exporting the wiki text to JSON.
-        user_agent (str): A custom user-agent name to be used for the API request.
-        user_email (str): A custom user-agent email to be used for the API request.
-
-    Attributes:
-        base_url (str): The OSRS Wiki URL.
-        page_title (str): OSRS Wiki page titles used for API query.
-        out_file_name (str): The file name used for exporting the wiki text to JSON.
-        custom_agent (dict): A custom user-agent to be used for the API request.
-        wiki_text (str): The raw wiki text extracted from the OSRS Wiki.
+    :param str page_title: OSRS Wiki page titles used for API query.
+    :param str out_file_name: The file name used for exporting the wiki text to JSON.
+    :param str user_agent: A custom user-agent name to be used for the API request.
+    :param str user_email: A custom user-agent email to be used for the API request.
     """
     def __init__(self, page_title, out_file_name, user_agent, user_email):
         self.base_url = "https://oldschool.runescape.wiki/api.php"
@@ -54,7 +46,12 @@ class WikiPageText:
         self.wiki_text = None
 
     def extract_page_wiki_text(self):
-        """Extract wikitext from OSRS Wiki for a provided page name."""
+        """Extract wikitext from OSRS Wiki for a provided page name.
+
+        This function uses the class attributes as input to query the OSRS Wiki
+        API and extract the wiki text for a specific page. The page to query is
+        determined by the page title.
+        """
         request = dict()
         request['action'] = 'parse'
         request['prop'] = 'wikitext'
@@ -75,7 +72,13 @@ class WikiPageText:
         self.wiki_text = wiki_text
 
     def export_wiki_text_to_json(self):
-        """Export all extracted wiki text to a JSON file."""
+        """Export all extracted wiki text to a JSON file.
+
+        Querying the OSRS Wiki constantly is a bad approach. This function writes any
+        extracted wiki text to a file to save re-querying the API. This function
+        attempts to overwrite pre-existing wiki text entry in a file, where the key
+        is the page title, and the value is the wiki text.
+        """
         # Create dictionary for export
         json_data = {self.page_title: str(self.wiki_text)}
 

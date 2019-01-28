@@ -31,17 +31,10 @@ LOG = logging.getLogger(__name__)
 class WikiPageTitles:
     """This class handles extraction of wiki page titles by category using an OSRS Wiki API query.
 
-    Args:
-        categories (:obj:`list` of :obj:`str`): A list of OSRS Wiki categories.
-        out_file_name (str): The file name used for exporting the wiki page titles to JSON.
-        user_agent (str): A custom user-agent name to be used for the API request.
-        user_email (str): A custom user-agent email to be used for the API request.
-
-    Attributes:
-        base_url (str): The OSRS Wiki URL.
-        categories (:obj:`list` of :obj:`str`): A list of OSRS Wiki categories.
-        out_file_name (str): The file name used for exporting the wiki text to JSON.
-        custom_agent (dict): A custom user-agent to be used for the API request.
+    :param :obj:`list` of :obj:`str` categories: A list of OSRS Wiki categories.
+    :param str out_file_name: The file name used for exporting the wiki page titles to JSON.
+    :param str user_agent: A custom user-agent name to be used for the API request.
+    :param str user_email: A custom user-agent email to be used for the API request.
     """
     def __init__(self, categories, out_file_name, user_agent, user_email):
         self.base_url = "https://oldschool.runescape.wiki/api.php"
@@ -54,14 +47,23 @@ class WikiPageTitles:
         }
 
     def __iter__(self):
+        """Iterate (loop) over the extracted or loaded OSRS Wiki page titles.
+
+        :return: An extracted page title from the OSRS Wiki for a specific category.
+        :rtype: str
+        """
         for page_title in self.page_titles:
             yield page_title
 
     def load_page_titles(self):
         """Load a JSON file of OSRS Wiki page titles that have previously been extracted.
 
-        Returns:
+        If you already have a recently dumped JSON file of OSRS Wiki page titles you
+        can load them using this function. This saves performing additional wiki API
+        queries when you have an up-to-date list of page titles.
 
+        :return: A boolean to indicate if a file with page titles was loaded correctly.
+        :rtype: bool
         """
         if not os.path.isfile(self.out_file_name):
             return False
@@ -70,16 +72,29 @@ class WikiPageTitles:
             return True
 
     def extract_page_titles(self):
-        """Query a list of categories in the OSRS Wiki and return a list of page titles."""
-        for category in self.categories:
-            self.extract_page_titles_from_category(category)
+        """Query a list of categories in the OSRS Wiki and return a list of page titles.
 
-    def extract_page_titles_from_category(self, category):
-        """Query a specific category in the OSRS Wiki and populate a list of page tiles."""
-        # Construct MediaWiki request
+        This function is used to loop the list of categories that you want to extract
+        from the OSRS Wiki using the MediaWiki API. You can all it using one category,
+        for example: `Items`. Or you can use a list of category strings, for example:
+        `Items, Pets, Furniture`.
+        """
+        for category in self.categories:
+            self._extract_page_titles_from_category(category)
+
+    def _extract_page_titles_from_category(self, category):
+        """Query a specific category in the OSRS Wiki and populate a list of page tiles.
+
+        A function to extract all page titles from a provided OSRS Wiki category. The
+        extracted page title is useful to perform additional API queries, such as
+        extracting wiki text or revision timestamps.
+
+        :param str category: A string representing the OSRS Wiki category to extract.
+        """
+        # Start construct MediaWiki request
         request = {'list': 'categorymembers'}
 
-        for result in self.extract_page_titles_from_category_callback(request, category):
+        for result in self._extract_page_titles_from_category_callback(request, category):
             # Process JSON result data
             for entry in result['categorymembers']:
                 page_title = entry["title"]
@@ -89,8 +104,16 @@ class WikiPageTitles:
                 # Log the page title, and append to list
                 self.page_titles[page_title] = None
 
-    def extract_page_titles_from_category_callback(self, request, category):
-        """Query callback function for OSRS Wiki category query."""
+    def _extract_page_titles_from_category_callback(self, request, category):
+        """Query callback function for OSRS Wiki category query.
+
+        A callback function for using MediaWiki generators. Since the category query is a
+        list function, you can use a generator to continue queries when the returned data
+        is longer than the maximum returned query.
+
+        :param dict request: A dictionary to be populated with the OSRS Wiki API request.
+        :param str category: A string representing the OSRS Wiki category to extract.
+        """
         request['cmtitle'] = 'Category:' + category
         request['action'] = 'query'
         request['format'] = 'json'
@@ -127,7 +150,14 @@ class WikiPageTitles:
             last_continue = result['continue']
 
     def extract_last_revision_timestamp(self):
-        """Extract the last revision timestamp for all page titles from OSRS Wiki."""
+        """Extract the last revision timestamp for all page titles from OSRS Wiki.
+
+        The MediaWiki API used by the OSRS Wiki has the functionality to return the
+        last revision date of a specific page. This function extracts the revision date
+        for all the extracted page titles. This value can be used to determine if
+        changes have recently been made to the page, and if the page should be processed
+        again.
+        """
         # Loop 50 page titles at a time, the max number for a revisions request using page titles
         for block_list in itertools.zip_longest(*[iter(self.page_titles)] * 50):
             # Remove None entries from the list of page titles
