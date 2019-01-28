@@ -53,14 +53,6 @@ class WikiPageText:
         }
         self.wiki_text = None
 
-    def check_revision_date(self, last_revision_date, last_extraction_date):
-        """Check the previous revision date to see if the page title needs to be extracted.
-
-        Returns:
-            True if the page title is up-to-date, False otherwise.
-        """
-        return False
-
     def extract_page_wiki_text(self):
         """Extract wikitext from OSRS Wiki for a provided page name."""
         request = dict()

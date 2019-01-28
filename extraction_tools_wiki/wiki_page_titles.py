@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import os
 import json
 import logging
 import itertools
@@ -57,9 +58,16 @@ class WikiPageTitles:
             yield page_title
 
     def load_page_titles(self):
-        """Load a JSON file of OSRS Wiki page titles that have previously been extracted."""
+        """Load a JSON file of OSRS Wiki page titles that have previously been extracted.
+
+        Returns:
+
+        """
+        if not os.path.isfile(self.out_file_name):
+            return False
         with open(self.out_file_name) as input_json_file:
             self.page_titles = json.load(input_json_file)
+            return True
 
     def extract_page_titles(self):
         """Query a list of categories in the OSRS Wiki and return a list of page titles."""
