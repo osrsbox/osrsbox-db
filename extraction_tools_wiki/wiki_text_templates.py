@@ -3,7 +3,7 @@ Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2019, PH01L1
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -43,7 +43,7 @@ class WikiTextTemplates:
         self.wiki_text = wiki_text
 
     def extract_templates(self):
-        """Extract common OSRS templates from wiki raw text."""
+        """Extract common OSRS templates from raw wiki text."""
         # List of useful OSRS Wiki templates
         osrs_template_types = ["infobox item",
                                "infobox bonuses",
@@ -65,7 +65,7 @@ class WikiTextTemplates:
 
             if template_name in osrs_template_types:
                 wiki_text_template = str(template)
-                wiki_text_template_type = template_name.replace(" ", "_")
+                wiki_text_template_type = template_name.replace("infobox ", " ")
                 self.export_template(wiki_text_template, wiki_text_template_type)
 
     def export_template(self, wiki_text_template, wiki_text_template_type):

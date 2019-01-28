@@ -53,19 +53,15 @@ class WikiPageText:
         }
         self.wiki_text = None
 
-    def has_been_processed(self):
-        """Check the output file to see if the page title has already been processed.
+    def check_revision_date(self, last_revision_date, last_extraction_date):
+        """Check the previous revision date to see if the page title needs to be extracted.
 
         Returns:
-            True if the page title has been processed, False otherwise.
+            True if the page title is up-to-date, False otherwise.
         """
-        if not os.path.isfile(self.out_file_name):
-            return False
-        with open(self.out_file_name, mode='r') as existing_out_file:
-            json_data = json.load(existing_out_file)
-            return bool(self.page_title in json_data)
+        return False
 
-    def extract_page_wikitext(self):
+    def extract_page_wiki_text(self):
         """Extract wikitext from OSRS Wiki for a provided page name."""
         request = dict()
         request['action'] = 'parse'

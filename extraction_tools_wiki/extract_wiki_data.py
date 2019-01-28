@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
+import json
 import datetime
 
 from .wiki_page_titles import WikiPageTitles
@@ -47,24 +48,27 @@ if __name__ == "__main__":
     PRIMARY_CATEGORY = TARGET_CATEGORIES[0].lower()
 
     # Specify the custom user agent for all requests
-    USER_AGENT = "some-agent"
-    USER_EMAIL = "name@domain.com"
+    USER_AGENT = "osrsbox-agent"
+    USER_EMAIL = "phoil@osrsbox.com"
 
     # Boolean to trigger load page titles from file, or run fresh page title extraction
-    LOAD_FILES = False
+    LOAD_FILES = False  # TODO: If this is true, and file doesn't exist, script crashes
+
+    # Set the revision date, extract wiki pages only after this date
+    LAST_EXTRACTION_DATE = datetime.datetime.strptime("2018-01-01T00:00:00Z",
+                                                      '%Y-%m-%dT%H:%M:%SZ')
 
     # Specify the name for the page titles output JSON file
-    TITLES_FILE_NAME = "extract_page_titles" + PRIMARY_CATEGORY + ".json"
+    TITLES_FILE_NAME = "extract_page_titles_" + PRIMARY_CATEGORY + ".json"
     TITLES_FILE_PATH = os.path.join("extraction_tools_wiki", TITLES_FILE_NAME)
 
     # Specify the name for the wiki text output JSON file
-    TEXT_FILE_NAME = "extract_page_text" + PRIMARY_CATEGORY + ".json"
+    TEXT_FILE_NAME = "extract_page_text_" + PRIMARY_CATEGORY + ".json"
     TEXT_FILE_PATH = os.path.join("extraction_tools_wiki", TEXT_FILE_NAME)
 
-    # Set the revision date, extract wiki pages only after this date
-    REVISION_DATE = datetime.datetime.strptime("2018-01-01T00:00:00Z",
-                                               '%Y-%m-%dT%H:%M:%SZ')
+    # STAGE ONE: EXTRACT PAGE TITLES
 
+    print(">>> Starting wiki page titles extraction...")
     # Create object to handle page titles extraction
     WIKI_PAGE_TITLES = WikiPageTitles(TARGET_CATEGORIES,
                                       TITLES_FILE_PATH,
@@ -79,16 +83,55 @@ if __name__ == "__main__":
         WIKI_PAGE_TITLES.extract_last_revision_timestamp()
         WIKI_PAGE_TITLES.export_page_titles_in_json()
 
-    print(">>> Number of extracted wiki pages: %d" % len(WIKI_PAGE_TITLES.page_titles))
+    # Determine page titles count
+    PAGE_TITLES_TOTAL = len(WIKI_PAGE_TITLES.page_titles)
+    print(">>> Number of extracted wiki pages: %d" % PAGE_TITLES_TOTAL)
 
+    # STAGE TWO: EXTRACT WIKI USING PAGE TITLES
+
+    # Open file
+    JSON_DATA = dict()
+    if os.path.isfile(TEXT_FILE_PATH):
+        with open(TEXT_FILE_PATH, mode='r') as existing_out_file:
+            JSON_DATA = json.load(existing_out_file)
+
+    PAGE_TITLES_COUNT = 1
     print(">>> Starting wiki text extraction for extracted page titles...")
     for page_title, page_revision_date in WIKI_PAGE_TITLES.page_titles.items():
-        print("  > Extracting wiki text for: %s" % page_title)
+        print("  > Progress: %s of %s - Processing: %s" % ('{:4d}'.format(PAGE_TITLES_COUNT),
+                                                           '{:4d}'.format(PAGE_TITLES_TOTAL),
+                                                           page_title))
+
+        # Check if page title is already present in JSON output file
+        if page_title in JSON_DATA:
+            PAGE_TITLES_COUNT += 1
+            continue
+
+        # Create object to extract page wiki text
         wiki_page_text = WikiPageText(page_title,
                                       TEXT_FILE_PATH,
                                       USER_AGENT,
                                       USER_EMAIL)
-        # If the page title has not been extracted, extract wiki text and save to JSON file
-        if not wiki_page_text.has_been_processed():
-            wiki_page_text.extract_page_wikitext()
+
+        # Check revision date
+        last_revision_date = WIKI_PAGE_TITLES.page_titles[page_title]
+        page_requires_update = wiki_page_text.extract_page_wiki_text(last_revision_date, LAST_EXTRACTION_DATE)
+
+        if page_requires_update:
+            # If the page title has not been extracted, extract wiki text and save to JSON file
+            wiki_page_text.extract_page_wiki_text()
             wiki_page_text.export_wiki_text_to_json()
+
+        PAGE_TITLES_COUNT += 1
+
+    quit()
+
+    # STAGE THREE: EXTRACT TEMPLATES FROM WIKI TEXT
+
+    with open(TEXT_FILE_PATH, "r") as json_wiki_text_file:
+        all_items_wiki_text = json.load(json_wiki_text_file)
+
+    for page_title, wiki_text in all_items_wiki_text:
+        # Create object to extract wiki text templates
+        wiki_text_templates = WikiTextTemplates(page_title,
+                                                wiki_text)
