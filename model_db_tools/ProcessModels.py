@@ -47,88 +47,62 @@ import os
 import glob
 import json
 
+SKIP_VALIDATION_FILES = ("NullObjectID.java", "ObjectID.java", "NpcID.java", "ItemID.java",)
+SKIP_EMPTY_NAMES = ("null", "Null", "")
+TYPE_NAME_TO_JSON_KEY = {
+    "objects": "objectModels",
+    "npcs": "models",
+    "items": "inventoryModel",
+}
 
-################################################################################
+
 def parse_fi(fi, type_name):
     # Skip Java consolidation output from RuneLite
-    if (os.path.basename(fi) == "NullObjectID.java" or
-            os.path.basename(fi) == "ObjectID.java" or
-            os.path.basename(fi) == "NpcID.java" or
-            os.path.basename(fi) == "ItemID.java"):
-        return list()
+    if os.path.basename(fi) in SKIP_VALIDATION_FILES:
+        return []
 
     # Load the JSON into a dict
     with open(fi) as f:
         json_data = json.loads(f.read())
 
     # Name check (it is of no use if its empty/null, so exclude)
-    if json_data["name"] == "null" or json_data["name"] == "Null" or json_data["name"] == "":
-        return list()
+    if json_data["name"] in SKIP_EMPTY_NAMES:
+        return []
 
     # Setup output dict
-    model_dict = dict()
-    model_dict["type_id"] = json_data["id"]
-    model_dict["name"] = json_data["name"]
-    model_dict["type"] = type_name
+    model_dict = {
+        "type_id": json_data["id"],
+        "name": json_data["name"],
+        "type": type_name
+    }
 
-    all_models = list()
+    all_models = []
+    json_data_key = TYPE_NAME_TO_JSON_KEY.get(type_name)
 
-    if type_name == "objects":
+    if json_data_key is not None:
         try:
-            fi_model_list = json_data["objectModels"]
-            for model_id in fi_model_list:
-                model_dict["model_id"] = model_id
-                all_models.append(model_dict)
+
+            # The items type is modeled a bit differently and doesn't return a list.
+            # To make everything work under the same process, we wrap it in a list so we can iterate over it.
+            fi_model_list = [json_data[json_data_key]] if type_name == "items" else json_data[json_data_key]
+
         except KeyError:
-            pass
+            fi_model_list = []
 
-    if type_name == "npcs":
-        try:
-            fi_model_list = json_data["models"]
-            for model_id in fi_model_list:
-                model_dict["model_id"] = model_id
-                all_models.append(model_dict)
-        except KeyError:
-            pass
-
-        # try:
-        #     fi_model_list = json_data["models_2"]
-        #     for model_id in fi_model_list:
-        #         if model_id == 0:
-        #             pass
-        #         model_dict["model_id"] = model_id
-        #         all_models.append(model_dict)
-        # except KeyError:
-        #     pass
-
-    if type_name == "items":
-        try:
-            model_id = json_data["inventoryModel"]
+        for model_id in fi_model_list:
             model_dict["model_id"] = model_id
             all_models.append(model_dict)
-        except KeyError:
-            pass
 
     return all_models
 
 
-################################################################################
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-d",
-                    "--directory",
-                    required=True,
-                    help="Directory of definitions (in JSON) from RuneLite Cache tool")
-    args = vars(ap.parse_args())
+def main(path_to_definitions):
+    items = os.path.join(path_to_definitions, "items", "")
+    npcs = os.path.join(path_to_definitions, "npcs", "")
+    objects = os.path.join(path_to_definitions, "objects", "")
+    models_dict = {}
 
-    directory = args["directory"]
-    items = os.path.join(directory, "items", "")
-    npcs = os.path.join(directory, "npcs", "")
-    objects = os.path.join(directory, "objects", "")
-
-    models_dict = dict()
-
+    # TODO(@PH01L): The following 3 for loops can be simplified since they share common code.
     # Process item models
     items_fis = glob.glob(items + "*")
     print(">>> Processing %d items..." % len(items_fis))
@@ -156,18 +130,25 @@ if __name__ == "__main__":
             key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
             models_dict[key] = md
 
-    # # Loop dict and remove entries with name = null and model_id = 0
-    # to_delete = list()
-    # for k in models_dict:
-    #     if models_dict[k]["name"] == "null" and models_dict[k]["model_id"] == 0:
-    #        to_delete.append(k)
-    # for k in to_delete:
-    #     del models_dict[k]
+    return models_dict
+
+
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-d",
+                    "--directory",
+                    required=True,
+                    help="Directory of definitions (in JSON) from RuneLite Cache tool")
+    args = vars(ap.parse_args())
+    path_to_definitions = args["directory"]
+
+    models_dict = main(path_to_definitions)
+
+    print(">>> Finished.")
 
     # Save all objects to JSON file
     print(">>> Saving output JSON file...")
     out_fi = "models_summary.json"
     with open(out_fi, "w") as f:
         json.dump(models_dict, f)
-
-    print(">>> Finished.")
