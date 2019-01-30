@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import logging
+from typing import Dict
 import requests
 
 LOG = logging.getLogger(__name__)
@@ -117,7 +118,7 @@ class WikiPageTitles:
                 # Log the page title, and append to list
                 self.page_titles[page_title] = None
 
-    def _extract_page_titles_from_category_callback(self, request: dict, category: str):
+    def _extract_page_titles_from_category_callback(self, request: Dict, category: str):
         """Query callback function for OSRS Wiki category query.
 
         A callback function for using MediaWiki generators. Since the category query is a
@@ -132,7 +133,7 @@ class WikiPageTitles:
         request['format'] = 'json'
         request['cmlimit'] = '500'
 
-        last_continue = {}  # type: dict
+        last_continue = {}
 
         while True:
             # Clone original request
@@ -166,7 +167,7 @@ class WikiPageTitles:
             # Update the last fetched page title to continue query
             last_continue = result['continue']
 
-    def extract_last_revision_timestamp(self, page_titles_string: str) -> dict:
+    def extract_last_revision_timestamp(self, page_titles_string: str) -> Dict:
         """Extract the last revision timestamp for page titles from OSRS Wiki.
 
         The MediaWiki API used by the OSRS Wiki has the functionality to return the
