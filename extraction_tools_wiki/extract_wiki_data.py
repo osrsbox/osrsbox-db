@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     # Determine page titles count
     page_titles_total = len(wiki_page_titles)
-    print(">>> Number of extracted wiki pages: %d" % page_titles_total)
+    print(f">>> Number of extracted wiki pages: {page_titles_total:d}")
 
     # STAGE TWO: EXTRACT WIKI USING PAGE TITLES
 
@@ -116,9 +116,7 @@ if __name__ == "__main__":
     page_titles_count = 1
     print(">>> Starting wiki text extraction for extracted page titles...")
     for page_title, page_revision_date in wiki_page_titles.page_titles.items():
-        print("  > Progress: %s of %s - Processing: %s" % ('{:4d}'.format(page_titles_count),
-                                                           '{:4d}'.format(page_titles_total),
-                                                           page_title))
+        print(f"  > Progress: {page_titles_count:4d} of {page_titles_total:4d} - Processing: {page_title}")
 
         # Convert revision date to datetime object
         last_revision_date = datetime.datetime.strptime(wiki_page_titles[page_title],

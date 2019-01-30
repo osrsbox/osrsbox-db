@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
-import sys
 import json
 import logging
 import requests
@@ -43,26 +42,24 @@ class WikiPageTitles:
             'User-Agent': user_agent,
             'From': user_email
         }
-        self.page_titles = dict()  # type: dict
+        self.page_titles: Dict[str, str] = dict()
 
-    def __iter__(self):
+    def __iter__(self) -> str:
         """Iterate (loop) over the extracted or loaded OSRS Wiki page titles.
 
         :return: An extracted page title from the OSRS Wiki for a specific category.
-        :rtype: str
         """
         for page_title in self.page_titles:
             yield page_title
 
-    def __len__(self):
+    def __len__(self) -> int:
         """Return the length of the extract or loaded OSRS Wiki page titles.
 
         :return: The number of extracted or loaded page titles.
-        :rtype int:
         """
         return len(self.page_titles)
 
-    def __getitem__(self, key: str):
+    def __getitem__(self, key: str) -> str:
         """Return the revision date of the provided page title.
 
         :param key: The page title to extract the revision date from.
@@ -71,7 +68,7 @@ class WikiPageTitles:
         """
         return self.page_titles[key]
 
-    def load_page_titles(self, in_file_name: str):
+    def load_page_titles(self, in_file_name: str) -> bool:
         """Load a JSON file of OSRS Wiki page titles that have previously been extracted.
 
         If you already have a recently dumped JSON file of OSRS Wiki page titles you
@@ -80,7 +77,6 @@ class WikiPageTitles:
 
         :param in_file_name: The name of the file to load page titles from.
         :return: A boolean to indicate if a file with page titles was loaded correctly.
-        :rtype: bool
         """
         if not os.path.isfile(in_file_name):
             return False
@@ -151,8 +147,7 @@ class WikiPageTitles:
                                       headers=self.custom_agent,
                                       params=req).json()
             except requests.exceptions.RequestException as e:
-                print(e)
-                sys.exit(">>> ERROR: Get request error. Exiting.")
+                raise SystemExit(">>> ERROR: Get request error. Exiting.") from e
 
             # Handle HTTP response
             if 'query' in result:
@@ -171,7 +166,7 @@ class WikiPageTitles:
             # Update the last fetched page title to continue query
             last_continue = result['continue']
 
-    def extract_last_revision_timestamp(self, page_titles_string: str):
+    def extract_last_revision_timestamp(self, page_titles_string: str) -> dict:
         """Extract the last revision timestamp for page titles from OSRS Wiki.
 
         The MediaWiki API used by the OSRS Wiki has the functionality to return the
@@ -183,7 +178,6 @@ class WikiPageTitles:
 
         :param page_titles_string: A string of pipe separated wiki page titles.
         :return pages_revision_data:
-        :rtype dict:
         """
         # Construct query for fetching page revisions
         request = {

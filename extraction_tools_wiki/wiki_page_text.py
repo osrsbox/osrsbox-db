@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
-import sys
 import json
 import logging
 import requests
@@ -52,11 +51,12 @@ class WikiPageText:
         API and extract the wiki text for a specific page. The page to query is
         determined by the page title.
         """
-        request = dict()
-        request['action'] = 'parse'
-        request['prop'] = 'wikitext'
-        request['format'] = 'json'
-        request['page'] = self.page_title
+        request = {
+            "action": "parse",
+            "prop": "wikitext",
+            "format": "json",
+            "page": self.page_title
+        }
 
         # Perform HTTP GET request
         try:
@@ -64,8 +64,7 @@ class WikiPageText:
                                      headers=self.custom_agent,
                                      params=request).json()
         except requests.exceptions.RequestException as e:
-            print(e)
-            sys.exit(">>> ERROR: Get request error. Exiting.")
+            raise SystemExit(">>> ERROR: Get request error. Exiting.") from e
 
         try:
             # Try to extract the wiki text from the HTTP response
