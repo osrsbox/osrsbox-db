@@ -66,7 +66,7 @@ if __name__ == "__main__":
     user_email = "name@domain.com"
 
     # Boolean to trigger load page titles from file, or run fresh page title extraction
-    load_files = True
+    load_files = False
 
     # Set the revision date, extract wiki pages only after this date
     last_extraction_date = datetime.datetime.strptime("2019-01-28T00:00:00Z",
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     # Determine page titles count
     page_titles_total = len(wiki_page_titles)
-    print(f">>> Number of extracted wiki pages: {page_titles_total:d}")
+    print(f">>> Number of extracted wiki pages: {page_titles_total}")
 
     # STAGE TWO: EXTRACT WIKI USING PAGE TITLES
 

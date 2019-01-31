@@ -23,6 +23,7 @@ import os
 import json
 import logging
 from typing import Dict
+from typing import Generator
 import requests
 
 LOG = logging.getLogger(__name__)
@@ -45,7 +46,7 @@ class WikiPageTitles:
         }
         self.page_titles: Dict[str, str] = dict()
 
-    def __iter__(self) -> str:
+    def __iter__(self) -> Generator[str, None, None]:
         """Iterate (loop) over the extracted or loaded OSRS Wiki page titles.
 
         :return: An extracted page title from the OSRS Wiki for a specific category.
