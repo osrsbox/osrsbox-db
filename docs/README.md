@@ -1,6 +1,8 @@
-# osrsbox-db: Public API docs/ Folder
+## osrsbox-db: Public RESTful API docs/ Folder
 
-This folder contains the publicly available API of osrsbox-db. Basically, every file inside this specfic folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any file name (from this folder) to the base URL, and you can fetch this data. A summary of the contents are listed below with descriptions:
+This folder contains the publicly available database/dataset and somewhat-RESTful API of osrsbox-db. Basically, every file inside this specfic folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any file name (from this folder) to the base URL, and you can fetch this data. You can also clone this entire repository and access the files provided in this folder.
+ 
+A summary of the contents are listed below with descriptions:
 
 - `items-icons`: Collection of PNG files (20K+) for every item inventory icon in OSRS
 - `items-json`: Collection of JSON files (20K+) of extensive item metadata for every item in OSRS
