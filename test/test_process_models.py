@@ -9,8 +9,8 @@ import pytest
 # @TODO(PH01L): We should get a version of this that uses live data instead of mocks.
 @pytest.mark.parametrize("json_loads_return", [
     {"id": "id", "name": "name", "type": "items", "inventoryModel": ["model"]},
-    {"id": "id", "name": "name", "type": "items", "models": ["model"]},
-    {"id": "id", "name": "name", "type": "items", "objectModels": ["model"]},
+    {"id": "id", "name": "name", "type": "npcs", "models": ["model"]},
+    {"id": "id", "name": "name", "type": "objects", "objectModels": ["model"]},
 ])
 @patch("model_db_tools.ProcessModels.os.path.basename", return_value="base_path")
 @patch("model_db_tools.ProcessModels.glob.glob", side_effect=[[MagicMock()], [MagicMock()], [MagicMock()]])

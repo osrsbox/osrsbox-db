@@ -47,7 +47,7 @@ import os
 import glob
 import json
 
-SKIP_VALIDATION_FILES = ("NullObjectID.java", "ObjectID.java", "NpcID.java", "ItemID.java",)
+SKIP_VALIDATION_FILES = ("NullObjectID.java", "ObjectID.java", "NpcID.java", "ItemID.java", "NullItemID.java",)
 SKIP_EMPTY_NAMES = ("null", "Null", "")
 TYPE_NAME_TO_JSON_KEY = {
     "objects": "objectModels",
@@ -56,7 +56,7 @@ TYPE_NAME_TO_JSON_KEY = {
 }
 
 
-def parse_fi(fi, type_name):
+def extract_model_ids_from_def_file(fi, type_name):
     # Skip Java consolidation output from RuneLite
     if os.path.basename(fi) in SKIP_VALIDATION_FILES:
         return []
@@ -71,9 +71,9 @@ def parse_fi(fi, type_name):
 
     # Setup output dict
     model_dict = {
+        "type": type_name,
         "type_id": json_data["id"],
         "name": json_data["name"],
-        "type": type_name
     }
 
     all_models = []
@@ -97,38 +97,23 @@ def parse_fi(fi, type_name):
 
 
 def main(path_to_definitions):
-    items = os.path.join(path_to_definitions, "items", "")
-    npcs = os.path.join(path_to_definitions, "npcs", "")
-    objects = os.path.join(path_to_definitions, "objects", "")
+    cache_dump_names = ["items", "npcs", "objects"]
+    # Create output dictionary to return
     models_dict = {}
 
-    # TODO(@PH01L): The following 3 for loops can be simplified since they share common code.
-    # Process item models
-    items_fis = glob.glob(items + "*")
-    print(">>> Processing %d items..." % len(items_fis))
-    for fi in items_fis:
-        md_list = parse_fi(fi, "items")
-        for md in md_list:
-            key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
-            models_dict[key] = md
+    for cache_dump_name in cache_dump_names:
+        print(f"  > Processing: {cache_dump_name}")
+        # Set the path to the cache dump location
+        cache_dump_path = os.path.join(path_to_definitions, cache_dump_name, "")
 
-    # Process npcs models
-    npcs_fis = glob.glob(npcs + "*")
-    print(">>> Processing %d npcs..." % len(npcs_fis))
-    for fi in npcs_fis:
-        md_list = parse_fi(fi, "npcs")
-        for md in md_list:
-            key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
-            models_dict[key] = md
+        # Get a list of all files in the cache directory
+        cache_dump_fis = glob.glob(cache_dump_path + "*")
 
-    # Process objects models
-    objects_fis = glob.glob(objects + "*")
-    print(">>> Processing %d objects..." % len(objects_fis))
-    for fi in objects_fis:
-        md_list = parse_fi(fi, "objects")
-        for md in md_list:
-            key = md["type"] + "_" + str(md["type_id"]) + "_" + str(md["model_id"])
-            models_dict[key] = md
+        for cache_file in cache_dump_fis:
+            model_list = extract_model_ids_from_def_file(cache_file, cache_dump_name)
+            for model in model_list:
+                key = f"{model['type']}_{model['type_id']}_{model['model_id']}"
+                models_dict[key] = model
 
     return models_dict
 
@@ -151,4 +136,4 @@ if __name__ == "__main__":
     print(">>> Saving output JSON file...")
     out_fi = "models_summary.json"
     with open(out_fi, "w") as f:
-        json.dump(models_dict, f)
+        json.dump(models_dict, f, indent=4)
