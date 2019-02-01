@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 
-from item_api_tools.AllItems import AllItems
+from osrsbox_db.item_api_tools.AllItems import AllItems
 
 NUMBER_OF_ITEMS = 21409  # The current number of items being loaded from the db
 

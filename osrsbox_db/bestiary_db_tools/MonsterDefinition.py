@@ -41,7 +41,9 @@ import mwparserfromhell
 import dateparser
 
 # Import ItemBonuses and ItemEquipment class
-from bestiary_db_tools import MonsterStats
+from osrsbox_db.bestiary_db_tools import MonsterStats
+
+
 # Future imports
 # import BeastSlayer
 # import BeastDrops

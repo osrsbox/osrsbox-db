@@ -30,8 +30,8 @@ import json
 import datetime
 import itertools
 
-from extraction_tools_wiki.wiki_page_titles import WikiPageTitles
-from extraction_tools_wiki.wiki_page_text import WikiPageText
+from osrsbox_db.extraction_tools_wiki.wiki_page_titles import WikiPageTitles
+from osrsbox_db.extraction_tools_wiki.wiki_page_text import WikiPageText
 
 
 OSRS_WIKI_API_URL = "https://oldschool.runescape.wiki/api.php"

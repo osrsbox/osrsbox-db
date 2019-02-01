@@ -33,7 +33,7 @@ __version__ = "0.1.0"
 import os
 import json
 
-from bestiary_db_tools import MonsterDefinition
+from osrsbox_db.bestiary_db_tools import MonsterDefinition
 
 
 ###############################################################################

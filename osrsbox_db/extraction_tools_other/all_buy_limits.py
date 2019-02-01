@@ -32,7 +32,7 @@ __version__ = "1.0.0"
 
 import json
 
-from item_api_tools import AllItems
+from osrsbox_db.item_api_tools import AllItems
 
 ################################################################################
 if __name__ == "__main__":
