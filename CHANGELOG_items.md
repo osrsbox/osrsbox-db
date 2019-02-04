@@ -1,3 +1,15 @@
+### 2019/01/31: Chambers of Xeric, Kebos, and Collection Log Changes
+- Added items: 3
+    - 23064,Jar of chemicals
+    - 23065,Jar of chemicals
+    - 23066,Jar of chemicals
+- Removed items: 0
+- Changed items: 4
+    - 13258,Angler hat,highalch|lowalch|cost
+    - 13259,Angler top,highalch|lowalch|cost
+    - 13260,Angler waders,highalch|lowalch|cost
+    - 13261,Angler boots,highalch|lowalch|cost
+
 ### 2019/01/24: Boxing Mechanics and Lots of Fixes
 - Added items: 0
 - Removed items: 2
