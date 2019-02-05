@@ -29,12 +29,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
+import pathlib
 from typing import List
 from typing import Dict
 
 from extraction_tools_cache import osrs_cache_data
+from extraction_tools_cache import osrs_cache_constants
 
 SKIP_EMPTY_NAMES = ("null", "Null", "")
 TYPE_NAME_TO_JSON_KEY = {
@@ -42,17 +43,14 @@ TYPE_NAME_TO_JSON_KEY = {
     "npcs": "models",
     "items": "inventoryModel",
 }
-CACHE_DUMP_FILES = [
-    "items.json",
-    "npcs.json",
-    "objects.json"
-]
 
 
 def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
     """Extracts the model ID number from an item, npc or object from definition data.
 
-
+    :param json_data: A dictionary from an item, npc or object definition file.
+    :param type_name: The type of item definition (items, npcs, or objects).
+    :return all_models: A list of dictionaries containing ID, type, type ID and model ID.
     """
     # Name check (it is of no use if it is empty/null, so exclude)
     if json_data["name"] in SKIP_EMPTY_NAMES:
@@ -71,17 +69,19 @@ def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
     # Get the specific JSON key which varies between items, npcs and objects
     json_data_key = TYPE_NAME_TO_JSON_KEY.get(type_name)
 
-    if json_data_key is not None:
-        try:
-            # The items type is modeled a bit differently and doesn't return a list.
-            # To make everything work under the same process, we wrap it in a list so we can iterate over it.
-            fi_model_list = [json_data[json_data_key]] if type_name == "items" else json_data[json_data_key]
-        except KeyError:
-            fi_model_list = []
+    if json_data_key is None:
+        return all_models
 
-        for model_id in fi_model_list:
-            model_dict["model_id"] = model_id
-            all_models.append(model_dict)
+    try:
+        # The items type is modeled a bit differently and doesn't return a list.
+        # To make everything work under the same process, we wrap it in a list so we can iterate over it.
+        fi_model_list = [json_data[json_data_key]] if type_name == "items" else json_data[json_data_key]
+    except KeyError:
+        fi_model_list = []
+
+    for model_id in fi_model_list:
+        model_dict["model_id"] = model_id
+        all_models.append(model_dict)
 
     return all_models
 
@@ -99,15 +99,17 @@ if __name__ == "__main__":
     models_dict = {}
 
     # Loop the three cache dump files (items, npcs, objects)
-    for cache_file in CACHE_DUMP_FILES:
+    for cache_file in osrs_cache_constants.CACHE_DUMP_FILES:
         # Set the path to the compressed JSON files
-        compressed_json_file = os.path.join(path_to_definitions, cache_file)
+        compressed_json_file = pathlib.Path() / path_to_definitions / cache_file
 
         # Set the current cache dump type
-        cache_type = cache_file.replace(".json", "")
+        cache_type = pathlib.PurePath(cache_file)
+        cache_type = str(cache_type.with_suffix(""))
 
         # Load and decompress the compressed definition file
         definitions = osrs_cache_data.CacheDefinitionFiles(compressed_json_file)
+        definitions.decompress_cache_file()
 
         # Loop all entries in the decompressed and loaded definition file
         for id_number in definitions:

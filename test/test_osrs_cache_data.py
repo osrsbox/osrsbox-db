@@ -22,37 +22,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import pytest
 from pathlib import Path
 
 from extraction_tools_cache import osrs_cache_data
 
-NUMBER_OF_ITEMS = 23067  # The number of items being loaded from the cache dump
-NUMBER_OF_NPCS = 8627  # The number of npcs being loaded from the cache dump
-NUMBER_OF_OBJECTS = 34657  # The number of objects being loaded from the cache dump
-TEST_DATA = {
-    "id": 7410,
-    "name": "Greater abyssal demon",
-    "models": [
-        32921
-    ]
-}
+
+@pytest.mark.parametrize("test_data,expected", [
+    ({"id": 7410, "name": "Greater abyssal demon", "models": [32921]},
+     "eJyrVspMUbJSMDcxNNBRUMpLzE0F8pTci1ITS1KLFBKTKouLE3MUUlJz8/OUgApy81NSc4qBSqKNjSyNDGNrAWB5EzI=")
+])
+def test_osrs_cache_data_compression(test_data, expected):
+    id_number, json_out = osrs_cache_data.compress_definition_file(test_data)
+    assert json_out == expected
 
 
-def test_osrs_cache_data_compression():
-    id_number, json_out = osrs_cache_data.compress_definition_file(TEST_DATA)
-    assert id_number == 7410
-    assert json_out == "eJyrVspMUbJSMDcxNNBRUMpLzE0F8pTci1ITS1KLFBKTKouLE3MUUlJz8/OUgApy81NSc4qBSqKNjSyNDGNrAWB5EzI="
-
-
-def test_osrs_cache_data_decompression(path_to_cache_dir: Path):
-    # Loop the cache types
-    for cache_type in osrs_cache_data.CACHE_DUMP_TYPES:
-        path_to_cache_file = path_to_cache_dir / f"{cache_type}.json"
-        definitions = osrs_cache_data.CacheDefinitionFiles(path_to_cache_file)
-
-        if cache_type == "items":
-            assert len(definitions) == NUMBER_OF_ITEMS
-        elif cache_type == "npcs":
-            assert len(definitions) == NUMBER_OF_NPCS
-        elif cache_type == "objects":
-            assert len(definitions) == NUMBER_OF_OBJECTS
+@pytest.mark.parametrize("cache_type,expected", [
+    ("items", 23067),
+    ("npcs", 8627),
+    ("objects", 34657)
+])
+def test_osrs_cache_data_decompression(path_to_cache_dir: Path, cache_type, expected):
+    path_to_cache_file = path_to_cache_dir / f"{cache_type}.json"
+    definitions = osrs_cache_data.CacheDefinitionFiles(path_to_cache_file)
+    definitions.decompress_cache_file()
+    assert len(definitions) == expected

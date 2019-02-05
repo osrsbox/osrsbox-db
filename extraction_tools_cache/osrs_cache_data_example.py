@@ -34,6 +34,7 @@ if __name__ == "__main__":
 
     # Initialize the CacheDefinitionFiles object, passing the items.json file as a parameter
     definitions = CacheDefinitionFiles(compressed_json_file)
+    definitions.decompress_cache_file()
 
     # Use the class generator to loop the definition file ID numbers in the object
     for id_number in definitions:

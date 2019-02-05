@@ -40,20 +40,7 @@ from typing import Tuple
 from typing import Generator
 from base64 import b64encode, b64decode
 
-
-CACHE_DUMP_TYPES = [
-    "items",
-    "npcs",
-    "objects"
-]
-
-JAVA_CLASS_FILES = (
-    "NullObjectID.java",
-    "ObjectID.java",
-    "NpcID.java",
-    "ItemID.java",
-    "NullItemID.java"
-)
+from extraction_tools_cache import osrs_cache_constants
 
 
 class CacheDefinitionFiles:
@@ -69,8 +56,6 @@ class CacheDefinitionFiles:
     def __init__(self, compressed_cache_file: str):
         self.compressed_cache_file = compressed_cache_file
         self.definitions: Dict[str, str] = dict()
-        # When initializing the object, decompress the provided cache file
-        self._decompress_cache_file()
 
     def __len__(self) -> int:
         """Return the number of cache definitions.
@@ -95,18 +80,21 @@ class CacheDefinitionFiles:
         for id_number in self.definitions:
             yield id_number
 
-    def _decompress_cache_file(self):
-        """Internal method to automatically decompress a compressed JSON file."""
-        # Start by checking the provided file is actually a file that exists
-        if not os.path.isfile(self.compressed_cache_file):
-            raise SystemExit(">>> ERROR: The provided file is not a file! Exiting.")
+    def decompress_cache_file(self):
+        """Internal method to automatically decompress a compressed JSON file.
 
-        # Open the file and try loading the JSON content
-        with open(self.compressed_cache_file) as compressed_file:
-            try:
-                json_data = json.loads(compressed_file.read())
-            except json.JSONDecodeError:
-                raise SystemExit(">>> ERROR: The provided file is not a valid JSON file! Exiting.")
+        :raises SystemExit:
+        """
+
+        try:
+            # Open the file and try loading the JSON content
+            with open(self.compressed_cache_file) as compressed_file:
+                try:
+                    json_data = json.loads(compressed_file.read())
+                except json.JSONDecodeError:
+                    raise SystemExit(">>> ERROR: The provided file is not a valid JSON file! Exiting.")
+        except IOError:
+            raise SystemExit(">>> ERROR: Could not open file.")
 
         # Try to decompress the first key to ensure correct file is provided
         compressed_json_data = json_data["1"]
@@ -123,6 +111,7 @@ class CacheDefinitionFiles:
         """Internal method to decompress a single definition file entry.
 
         :param compressed_json_data: A string of compressed representation of a definition file.
+        :return bool: True if file is able to be decompressed.
         """
         try:
             decoded_data = b64decode(compressed_json_data)
@@ -137,7 +126,6 @@ class CacheDefinitionFiles:
         except json.JSONDecodeError:
             return False
 
-        # If all extraction phases passed, return True
         return True
 
 
@@ -145,6 +133,8 @@ def compress_definition_file(json_data: Dict) -> Tuple[str, str]:
     """Compress a single cache definition file.
 
     :param json_data: The definition file JSON data to compress.
+    :return id_number: The ID number of the cache definition file.
+    :return json_out: A compressed representation of the cache definition file data.
     """
     # First, fetch the ID number, used for the key
     id_number = json_data["id"]
@@ -174,7 +164,7 @@ def compress_single_cache_type(path_to_definition_files: str, output_json_file: 
     definition_files = glob.glob(path_to_definition_files + "*")
     for definition_file in definition_files:
         # Skip any generated Java class files used by RuneLite
-        if os.path.basename(definition_file) in JAVA_CLASS_FILES:
+        if os.path.basename(definition_file) in osrs_cache_constants.JAVA_CLASS_FILES:
             continue
 
         # Open each definition file for processing and dump the JSON content
@@ -193,7 +183,7 @@ def compress_all_cache_types(root_path_of_cache_dump: str):
     :param root_path_of_cache_dump: The path for the items, npcs and objects cache dump folders.
     """
     print(f">>> Processing cache dump in the following root path: {root_path_of_cache_dump}")
-    for cache_dump_type in CACHE_DUMP_TYPES:
+    for cache_dump_type in osrs_cache_constants.CACHE_DUMP_TYPES:
         full_path = os.path.join(root_path_of_cache_dump, cache_dump_type, "")
         output_json_file = f"{cache_dump_type}.json"
         compress_single_cache_type(full_path, output_json_file)
