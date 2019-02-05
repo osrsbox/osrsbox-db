@@ -110,7 +110,7 @@ if __name__ == "__main__":
         # Create a QuestDefinition object for the quest
         qd = QuestDefinition.QuestDefinition(quest_name, quest_type, quest_wikicode)
         quest = qd.populate()
-        if quest_type is "normal":
+        if quest_type == "normal":
             quests[int(quest.quest_metadata.number)] = quest
         all_quests[quest.quest_name] = quest
 

@@ -93,7 +93,7 @@ def _datecast(val):
     """ Check date by converting to datetime object, and convert back to str. """
     if val is None:
         return None
-    if val is "":
+    if val == "":
         return None
     elif isinstance(val, datetime.date):
         return val.strftime("%d %B %Y")
