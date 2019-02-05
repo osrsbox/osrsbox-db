@@ -1,4 +1,4 @@
-# osrsbox-db
+# osrsbox-db [![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db)
 
 ## A complete and up-to-date database of Old School Runescape (OSRS) items
 
