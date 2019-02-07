@@ -236,7 +236,7 @@ if __name__ == "__main__":
     ap.add_argument("-i",
                     "--input",
                     required=True,
-                    help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items_complete.json) ")
+                    help="Two options: 1) Directory of JSON item files (../docs/items-json), or 2) Single JSON file (../docs/items-complete.json) ")
     args = vars(ap.parse_args())
 
     # Start processing all items in database

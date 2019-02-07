@@ -56,7 +56,7 @@ with open(extraction_path_other + "normalized_names.txt") as f:
 
 # Get the latest cache dump
 items = dict()
-in_fi = os.path.join("..", "docs", "items_itemscraper.json")
+in_fi = os.path.join("..", "docs", "items-itemscraper.json")
 with open(in_fi) as f:
     temp = json.load(f)
     for k, v in temp.items():
