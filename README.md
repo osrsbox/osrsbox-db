@@ -12,6 +12,7 @@ For more user-friendly information see:
 ## Summary of Project Structure
 
 - `docs`: The publicly accessible item database available through this repo or a somewhat-RESTful API. This folder contains the actual item database that is publicly available, or browsable within this repository.
+- `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools used by other tools in this project.
 - `extraction_tools_other`: Collection of Python tools to extract data from a variety of sources including equipable item skill requirements, grand exchange buy limits, and name normalization for more efficient OSRS Wiki lookups
 - `extraction_tools_wiki`: Collection of Python modules to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data that is somewhat-regularly updated
 - `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update that have been added to the database.
