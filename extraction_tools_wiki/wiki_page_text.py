@@ -68,7 +68,7 @@ class WikiPageText:
 
         try:
             # Try to extract the wiki text from the HTTP response
-            wiki_text = page_data["parse"]["wikitext"]["*"].encode("utf-8")
+            wiki_text = page_data["parse"]["wikitext"]["*"]
         except KeyError:
             # Set to None if wiki text extraction failed
             wiki_text = None

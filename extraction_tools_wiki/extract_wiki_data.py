@@ -52,12 +52,10 @@ if __name__ == "__main__":
     primary_category = target_categories[0].lower()
 
     # Specify the name for the page titles output JSON file
-    titles_file_name = f"extract_page_titles_{primary_category}.json"
-    titles_file_path = os.path.join("extraction_tools_wiki", titles_file_name)
+    titles_file_path = f"extract_page_titles_{primary_category}.json"
 
     # Specify the name for the wiki text output JSON file
-    text_file_name = f"extract_page_text_{primary_category}.json"
-    text_file_path = os.path.join("extraction_tools_wiki", text_file_name)
+    text_file_path = f"extract_page_text_{primary_category}.json"
 
     # STAGE ZERO: SET SCRIPT CONFIGURATION
 
@@ -69,7 +67,7 @@ if __name__ == "__main__":
     load_files = False
 
     # Set the revision date, extract wiki pages only after this date
-    last_extraction_date = datetime.datetime.strptime("2019-01-28T00:00:00Z",
+    last_extraction_date = datetime.datetime.strptime("2019-02-01T00:00:00Z",
                                                       '%Y-%m-%dT%H:%M:%SZ')
 
     # STAGE ONE: EXTRACT PAGE TITLES
