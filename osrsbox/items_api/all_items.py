@@ -26,7 +26,7 @@ from typing import Dict
 from typing import List
 from typing import Generator
 
-from osrsbox.items_api import item_definition
+from osrsbox.items_api.item_definition import ItemDefinition
 
 
 class AllItems:
@@ -35,8 +35,8 @@ class AllItems:
     :param input_data_file_or_directory: The osrsbox-db items folder of JSON files, or single JSON file.
     """
     def __init__(self, input_data_file_or_directory: str):
-        self.all_items: List[object] = list()
-        self.all_items_dict: Dict[int, object] = dict()
+        self.all_items: List[ItemDefinition] = list()
+        self.all_items_dict: Dict[int, ItemDefinition] = dict()
         self.load_all_items(input_data_file_or_directory)
 
     def __iter__(self) -> Generator[str, None, None]:
@@ -44,7 +44,7 @@ class AllItems:
         for item_id in self.all_items:
             yield item_id
 
-    def __getitem__(self, id_number: int) -> object:
+    def __getitem__(self, id_number: int) -> ItemDefinition:
         """Return the item definition object for a loaded item.
 
         :param id_number: The item ID number.
@@ -59,12 +59,13 @@ class AllItems:
         """
         return len(self.all_items)
 
-    def load_all_items(self, input_data_file_or_directory: str):
+    def load_all_items(self, input_data_file_or_directory: str) -> None:
         """Load the items database via a JSON file, or directory of JSON files.
 
         :param input_data_file_or_directory: The path to the data input.
         """
         if os.path.isdir(input_data_file_or_directory):
+
             if input_data_file_or_directory.endswith("/"):
                 path = input_data_file_or_directory + "*"
             else:
@@ -75,12 +76,11 @@ class AllItems:
         elif os.path.isfile(input_data_file_or_directory):
             self._load_items_from_file(input_data_file_or_directory)
 
-    def _load_items_from_directory(self, path_to_directory: str):
+    def _load_items_from_directory(self, path_to_directory: str) -> None:
         """Load item database from a directory of JSON files (`items-json`).
 
         :param path_to_directory: The path to the `items-json` directory.
         """
-        count = 1
         # Loop through every item file
         for json_file in glob.glob(path_to_directory):
 
@@ -91,26 +91,22 @@ class AllItems:
                 temp = json.load(input_json_file)
 
             self._load_item(temp)
-            count += 1
 
-    def _load_items_from_file(self, path_to_json_file: str):
+    def _load_items_from_file(self, path_to_json_file: str) -> None:
         """Load item database from a single JSON file (`items_complete.json`).
 
         :param path_to_json_file: The path to the `items_complete.json` file.
         """
-        count = 1
-
         with open(path_to_json_file) as input_json_file:
             temp = json.load(input_json_file)
 
         for entry in temp:
             self._load_item(temp[entry])
-            count += 1
 
-    def _load_item(self, item_json: Dict):
-        """Convert the `item_json` into a :class:`ItemDefinition.ItemDefinition` and store it."""
+    def _load_item(self, item_json: Dict) -> None:
+        """Convert the `item_json` into a :class:`ItemDefinition` and store it."""
         # Load the item using the ItemDefinition class
-        item_def = item_definition.ItemDefinition()
+        item_def = ItemDefinition()
         item_def.load_item_definition_from_file(item_json)
 
         # Add item to list

@@ -22,29 +22,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import collections
 from typing import Dict
 
-import safe_cast
-
 
 class ItemStats:
     """This class defines the stats structure and properties for an OSRS item."""
     def __init__(self):
-        self.properties = [
-            "attack_stab",
-            "attack_slash",
-            "attack_crush",
-            "attack_magic",
-            "attack_ranged",
-            "defence_stab",
-            "defence_slash",
-            "defence_crush",
-            "defence_magic",
-            "defence_ranged",
-            "melee_strength",
-            "ranged_strength",
-            "magic_damage",
-            "prayer"]
-
-        self.json_out = collections.OrderedDict()
+        self._attack_stab = None
+        self._attack_slash = None
+        self._attack_crush = None
+        self._attack_magic = None
+        self._attack_ranged = None
+        self._defence_stab = None
+        self._defence_slash = None
+        self._defence_crush = None
+        self._defence_magic = None
+        self._defence_ranged = None
+        self._melee_strength = None
+        self._ranged_strength = None
+        self._magic_damage = None
+        self._prayer = None
 
     @property
     def attack_stab(self) -> int:
@@ -53,7 +48,7 @@ class ItemStats:
 
     @attack_stab.setter
     def attack_stab(self, value):
-        self._attack_stab = safe_cast.safe_cast(value, int, default=None)
+        self._attack_stab = value
 
     @property
     def attack_slash(self) -> int:
@@ -62,7 +57,7 @@ class ItemStats:
 
     @attack_slash.setter
     def attack_slash(self, value):
-        self._attack_slash = safe_cast.safe_cast(value, int, default=None)
+        self._attack_slash = value
 
     @property
     def attack_crush(self) -> int:
@@ -71,7 +66,7 @@ class ItemStats:
 
     @attack_crush.setter
     def attack_crush(self, value):
-        self._attack_crush = safe_cast.safe_cast(value, int, default=None)
+        self._attack_crush = value
 
     @property
     def attack_magic(self) -> int:
@@ -80,7 +75,7 @@ class ItemStats:
 
     @attack_magic.setter
     def attack_magic(self, value):
-        self._attack_magic = safe_cast.safe_cast(value, int, default=None)
+        self._attack_magic = value
 
     @property
     def attack_ranged(self) -> int:
@@ -89,7 +84,7 @@ class ItemStats:
 
     @attack_ranged.setter
     def attack_ranged(self, value):
-        self._attack_ranged = safe_cast.safe_cast(value, int, default=None)
+        self._attack_ranged = value
 
     @property
     def defence_stab(self) -> int:
@@ -98,7 +93,7 @@ class ItemStats:
 
     @defence_stab.setter
     def defence_stab(self, value):
-        self._defence_stab = safe_cast.safe_cast(value, int, default=None)
+        self._defence_stab = value
 
     @property
     def defence_slash(self) -> int:
@@ -107,7 +102,7 @@ class ItemStats:
 
     @defence_slash.setter
     def defence_slash(self, value):
-        self._defence_slash = safe_cast.safe_cast(value, int, default=None)
+        self._defence_slash = value
 
     @property
     def defence_crush(self) -> int:
@@ -116,7 +111,7 @@ class ItemStats:
 
     @defence_crush.setter
     def defence_crush(self, value):
-        self._defence_crush = safe_cast.safe_cast(value, int, default=None)
+        self._defence_crush = value
 
     @property
     def defence_magic(self) -> int:
@@ -125,7 +120,7 @@ class ItemStats:
 
     @defence_magic.setter
     def defence_magic(self, value):
-        self._defence_magic = safe_cast.safe_cast(value, int, default=None)
+        self._defence_magic = value
 
     @property
     def defence_ranged(self) -> int:
@@ -134,7 +129,7 @@ class ItemStats:
 
     @defence_ranged.setter
     def defence_ranged(self, value):
-        self._defence_ranged = safe_cast.safe_cast(value, int, default=None)
+        self._defence_ranged = value
 
     @property
     def melee_strength(self) -> int:
@@ -143,7 +138,7 @@ class ItemStats:
 
     @melee_strength.setter
     def melee_strength(self, value):
-        self._melee_strength = safe_cast.safe_cast(value, int, default=None)
+        self._melee_strength = value
 
     @property
     def ranged_strength(self) -> int:
@@ -152,7 +147,7 @@ class ItemStats:
 
     @ranged_strength.setter
     def ranged_strength(self, value):
-        self._ranged_strength = safe_cast.safe_cast(value, int, default=None)
+        self._ranged_strength = value
 
     @property
     def magic_damage(self) -> int:
@@ -161,7 +156,7 @@ class ItemStats:
 
     @magic_damage.setter
     def magic_damage(self, value):
-        self._magic_damage = safe_cast.safe_cast(value, int, default=None)
+        self._magic_damage = value
 
     @property
     def prayer(self) -> int:
@@ -170,17 +165,25 @@ class ItemStats:
 
     @prayer.setter
     def prayer(self, value):
-        self._prayer = safe_cast.safe_cast(value, int, default=None)
+        self._prayer = value
 
     def load_item_stats_from_file(self, item_data: Dict):
         """Load an ItemStats object from an existing JSON file.
 
         :param item_data: A dictionary loaded from a JSON file.
         """
-        for prop in self.properties:
+        for prop in vars(self):
+            prop = prop[1:]
             setattr(self, prop, item_data[prop])
 
-    def construct_json(self):
-        """Construct dictionary/JSON of ItemStats for exporting or printing."""
-        for prop in self.properties:
-            self.json_out[prop] = getattr(self, prop)
+    def construct_json(self) -> Dict:
+        """Construct dictionary/JSON of ItemStats for exporting or printing.
+
+        :return json_out: A dictionary of all stats properties.
+        """
+        json_out = collections.OrderedDict()
+        for prop in vars(self):
+            prop = prop[1:]
+            json_out[prop] = getattr(self, prop)
+
+        return json_out

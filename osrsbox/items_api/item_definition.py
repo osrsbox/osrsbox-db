@@ -21,12 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import json
-import datetime
 import collections
 from typing import List
 from typing import Dict
-
-import safe_cast
 
 from osrsbox.items_api import item_stats
 from osrsbox.items_api import item_equipment
@@ -40,34 +37,29 @@ class ItemDefinition:
     Equipable items have additional properties defined in the linked ItemStats
     and ItemEquipment classes.
     """
-    def __init__(self):
-        self.properties = [
-            "id",
-            "name",
-            "members",
-            "tradeable",
-            "tradeable_on_ge",
-            "stackable",
-            "noted",
-            "noteable",
-            "linked_id",
-            "equipable",
-            "cost",
-            "lowalch",
-            "highalch",
-            "weight",
-            "buy_limit",
-            "quest_item",
-            "release_date",
-            "examine",
-            "url"]
 
-        # Initialize an empty ItemStats object
-        self.item_stats: object = item_stats.ItemStats()
-        # Initialize an empty ItemEquipment object
-        self.item_equipment: object = item_equipment.ItemEquipment()
-        # Initialize an empty output dictionary for an item
-        self.json_out: Dict = collections.OrderedDict()
+    def __init__(self):
+        self._id = None
+        self._name = None
+        self._members = None
+        self._tradeable = None
+        self._tradeable_on_ge = None
+        self._stackable = None
+        self._noted = None
+        self._noteable = None
+        self._linked_id = None
+        self._equipable = None
+        self._cost = None
+        self._lowalch = None
+        self._highalch = None
+        self._weight = None
+        self._buy_limit = None
+        self._quest_item = None
+        self._release_date = None
+        # self._seller = None
+        # self._store_price = None
+        self._examine = None
+        self._url = None
 
     @property
     def id(self) -> int:
@@ -76,7 +68,7 @@ class ItemDefinition:
 
     @id.setter
     def id(self, value: int):
-        self._id = safe_cast.safe_cast(value, int, default=None)
+        self._id = value
 
     @property
     def name(self) -> str:
@@ -85,7 +77,7 @@ class ItemDefinition:
 
     @name.setter
     def name(self, value: str):
-        self._name = safe_cast.safe_cast(value, str, default=None)
+        self._name = value
 
     @property
     def members(self) -> bool:
@@ -94,7 +86,7 @@ class ItemDefinition:
 
     @members.setter
     def members(self, value: bool):
-        self._members = safe_cast.safe_cast(value, bool, default=None)
+        self._members = value
 
     @property
     def tradeable(self) -> bool:
@@ -103,7 +95,7 @@ class ItemDefinition:
 
     @tradeable.setter
     def tradeable(self, value: bool):
-        self._tradeable = safe_cast.safe_cast(value, bool, default=None)
+        self._tradeable = value
 
     @property
     def tradeable_on_ge(self) -> bool:
@@ -112,7 +104,7 @@ class ItemDefinition:
 
     @tradeable_on_ge.setter
     def tradeable_on_ge(self, value: bool):
-        self._tradeable_on_ge = safe_cast.safe_cast(value, bool, default=None)
+        self._tradeable_on_ge = value
 
     @property
     def stackable(self) -> bool:
@@ -121,7 +113,7 @@ class ItemDefinition:
 
     @stackable.setter
     def stackable(self, value: bool):
-        self._stackable = safe_cast.safe_cast(value, bool, default=None)
+        self._stackable = value
 
     @property
     def noted(self) -> bool:
@@ -130,7 +122,7 @@ class ItemDefinition:
 
     @noted.setter
     def noted(self, value: bool):
-        self._noted = safe_cast.safe_cast(value, bool, default=None)
+        self._noted = value
 
     @property
     def noteable(self) -> bool:
@@ -139,7 +131,7 @@ class ItemDefinition:
 
     @noteable.setter
     def noteable(self, value: bool):
-        self._noteable = safe_cast.safe_cast(value, bool, default=None)
+        self._noteable = value
 
     @property
     def linked_id(self) -> int:
@@ -148,7 +140,7 @@ class ItemDefinition:
 
     @linked_id.setter
     def linked_id(self, value: int):
-        self._linked_id = safe_cast.safe_cast(value, int, default=None)
+        self._linked_id = value
 
     @property
     def equipable(self) -> int:
@@ -157,7 +149,7 @@ class ItemDefinition:
 
     @equipable.setter
     def equipable(self, value: bool):
-        self._equipable = safe_cast.safe_cast(value, bool, default=None)
+        self._equipable = value
 
     @property
     def cost(self) -> int:
@@ -166,7 +158,7 @@ class ItemDefinition:
 
     @cost.setter
     def cost(self, value: int):
-        self._cost = safe_cast.safe_cast(value, int, default=None)
+        self._cost = value
 
     @property
     def lowalch(self) -> int:
@@ -175,7 +167,7 @@ class ItemDefinition:
 
     @lowalch.setter
     def lowalch(self, value: int):
-        self._lowalch = safe_cast.safe_cast(value, int, default=None)
+        self._lowalch = value
 
     @property
     def highalch(self) -> int:
@@ -184,7 +176,7 @@ class ItemDefinition:
 
     @highalch.setter
     def highalch(self, value: int):
-        self._highalch = safe_cast.safe_cast(value, int, default=None)
+        self._highalch = value
 
     @property
     def weight(self) -> float:
@@ -193,7 +185,7 @@ class ItemDefinition:
 
     @weight.setter
     def weight(self, value: float):
-        self._weight = safe_cast.safe_cast(value, float, default=None)
+        self._weight = value
 
     @property
     def buy_limit(self) -> int:
@@ -202,7 +194,7 @@ class ItemDefinition:
 
     @buy_limit.setter
     def buy_limit(self, value: int):
-        self._buy_limit = safe_cast.safe_cast(value, int, default=None)
+        self._buy_limit = value
 
     @property
     def quest_item(self) -> List:
@@ -211,29 +203,25 @@ class ItemDefinition:
 
     @quest_item.setter
     def quest_item(self, value: List):
-        self._quest_item = safe_cast.safe_cast(value, list, default=None)
+        self._quest_item = value
 
     @property
-    def release_date(self) -> object:
+    def release_date(self) -> str:
         """The release date of the item."""
         return self._release_date
 
     @release_date.setter
-    def release_date(self, value: datetime):
-        if not value:
-            return None
-        date = datetime.datetime.strptime(value, "%d %B %Y")
-        date = date.strftime("%d %B %Y")
-        self._release_date = date
+    def release_date(self, value: str):
+        self._release_date = value
 
     @property
     def seller(self) -> List:
-        """A list of stores that sell the item."""
+        """A list of stores/sellers that sell the item."""
         return self._seller
 
     @seller.setter
     def seller(self, value: List):
-        self._seller = safe_cast.safe_cast(value, list, default=None)
+        self._seller = value
 
     @property
     def store_price(self) -> int:
@@ -242,7 +230,7 @@ class ItemDefinition:
 
     @store_price.setter
     def store_price(self, value: int):
-        self._store_price = safe_cast.safe_cast(value, int, default=None)
+        self._store_price = value
 
     @property
     def examine(self) -> str:
@@ -251,7 +239,7 @@ class ItemDefinition:
 
     @examine.setter
     def examine(self, value: str):
-        self._examine = safe_cast.safe_cast(value, str, default=None)
+        self._examine = value
 
     @property
     def url(self) -> str:
@@ -260,20 +248,28 @@ class ItemDefinition:
 
     @url.setter
     def url(self, value: str):
-        self._url = safe_cast.safe_cast(value, str, default=None)
+        self._url = value
 
     def load_item_definition_from_file(self, item_data: Dict):
         """Load an ItemDefinition object from an existing JSON file.
 
         :param item_data: A dictionary loaded from a JSON file.
         """
-        for prop in self.properties:
+        for prop in vars(self):
+            prop = prop[1:]
             setattr(self, prop, item_data[prop])
 
         # If the item is equipable, it should have stats and equipment objects populated
         if self.equipable:
+            # Initialize an empty ItemStats object
+            self.item_stats: object = item_stats.ItemStats()
+
             # Populate items stats
             self.item_stats.load_item_stats_from_file(item_data["bonuses"])
+
+            # Initialize an empty ItemEquipment object
+            self.item_equipment: object = item_equipment.ItemEquipment()
+
             # Populate item equipment
             self.item_equipment.load_item_equipment_from_file(item_data["equipment"])
 
@@ -282,35 +278,27 @@ class ItemDefinition:
 
         :return json_out: All class attributes stored in a dictionary.
         """
-        for prop in self.properties:
-            self.json_out[prop] = getattr(self, prop)
+        json_out: Dict = collections.OrderedDict()
+        for prop in vars(self):
+            if prop.startswith("_"):
+                prop = prop[1:]
+                json_out[prop] = getattr(self, prop)
 
         if self.equipable:
-            self.item_stats.construct_json()
-            self.item_equipment.construct_json()
+            json_out["bonuses"] = self.item_stats.construct_json()
+            json_out["equipment"] = self.item_equipment.construct_json()
 
-        return self.json_out
+        return json_out
 
-    def print_json(self, pretty: bool):
-        """Output Item to console.
-
-        :param pretty: Toggles pretty (indented) JSON output.
-        """
-        self.construct_json()
-        if pretty:
-            json_obj = json.dumps(self.json_out, indent=4)
-        else:
-            json_obj = json.dumps(self.json_out)
-        print(json_obj)
-
-    def export_json(self, pretty: bool):
+    def export_json(self, pretty: bool, export_path: str):
         """Output Item to JSON file.
 
         :param pretty: Toggles pretty (indented) JSON output.
+        :param export_path: The folder location to save the JSON output to.
         """
         self.construct_json()
         out_file_name = str(self.id) + ".json"
-        out_file_path = os.path.join("items-json", out_file_name)
+        out_file_path = os.path.join(export_path, out_file_name)
         with open(out_file_path, "w") as out_file:
             if pretty:
                 json.dump(self.json_out, out_file, indent=4)

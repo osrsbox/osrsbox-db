@@ -23,18 +23,13 @@ import collections
 from typing import Dict
 from typing import List
 
-import safe_cast
-
 
 class ItemEquipment:
     """This class defines the equipment structure and properties for an OSRS item."""
     def __init__(self):
-        self.properties = [
-            "attack_speed",
-            "slot",
-            "skill_reqs"]
-
-        self.json_out = collections.OrderedDict()
+        self.attack_speed = None
+        self.slot = None
+        self.skill_reqs = None
 
     @property
     def slot(self) -> str:
@@ -43,7 +38,7 @@ class ItemEquipment:
 
     @slot.setter
     def slot(self, value):
-        self._slot = safe_cast.safe_cast(value, str, default=None)
+        self._slot = value
 
     @property
     def attack_speed(self) -> int:
@@ -52,7 +47,7 @@ class ItemEquipment:
 
     @attack_speed.setter
     def attack_speed(self, value):
-        self._attack_speed = safe_cast.safe_cast(value, int, default=None)
+        self._attack_speed = value
 
     @property
     def skill_reqs(self) -> List:
@@ -61,17 +56,25 @@ class ItemEquipment:
 
     @skill_reqs.setter
     def skill_reqs(self, value):
-        self._skill_reqs = safe_cast.safe_cast(value, list, default=None)
+        self._skill_reqs = value
 
     def load_item_equipment_from_file(self, item_data: Dict):
         """Load an ItemEquipment object from an existing JSON file entry.
 
         :param item_data: A dictionary loaded from a JSON file.
         """
-        for prop in self.properties:
+        for prop in vars(self):
+            prop = prop[1:]
             setattr(self, prop, item_data[prop])
 
-    def construct_json(self):
-        """Construct dictionary/JSON of item_equipment property for exporting or printing."""
-        for prop in self.properties:
-            self.json_out[prop] = getattr(self, prop)
+    def construct_json(self) -> Dict:
+        """Construct dictionary/JSON of item_equipment property for exporting or printing.
+
+        :return json_out: A dictionary of all equipment properties.
+        """
+        json_out = collections.OrderedDict()
+        for prop in vars(self):
+            prop = prop[1:]
+            json_out[prop] = getattr(self, prop)
+
+        return json_out
