@@ -12,12 +12,12 @@ For more user-friendly information see:
 ## Summary of Project Structure
 
 - `docs`: The publicly accessible item database available through this repo or a somewhat-RESTful API. This folder contains the actual item database that is publicly available, or browsable within this repository.
-- `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools used by other tools in this project.
-- `extraction_tools_other`: Collection of Python tools to extract data from a variety of sources including equipable item skill requirements, grand exchange buy limits, and name normalization for more efficient OSRS Wiki lookups
-- `extraction_tools_wiki`: Collection of Python modules to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data that is somewhat-regularly updated
+- `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools used in other parts in this project.
+- `extraction_tools_other`: Collection of Python tools to extract data from a variety of sources including equipable item skill requirements, grand exchange buy limits, and name normalization for more efficient OSRS Wiki lookups.
+- `extraction_tools_wiki`: Collection of Python modules to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data (category page titles and raw wiki text) for items, quests and monsters that is somewhat-regularly updated.
+- `osrsbox`: The future Python package:
+    - `items_api`: The Python API for interacting with the items database. Has modules to load all items in the database, iterate through items and access the different item properties.
+    - `items_tools`: A collection of simple Python scripts that use the `items_api` to provide an example of what can be achieved and how to use the items database.
+- `test`: A collection of unit tests
 - `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update that have been added to the database.
-
-## Current Project Status
-
-The project is currently in an active stage of development with lots of changes happening. However, the items database is still current as of 2019/02/07. Although the items Python API has been temporarily removed, you can expect it back ASAP. The project is currently being re-structured and re-packaged into a much more logical manner. 
  
