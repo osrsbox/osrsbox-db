@@ -19,9 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import re
 import datetime
-import dateparser
 from typing import List
+
+import dateparser
 
 
 def clean_weight(value: str) -> float:
@@ -206,109 +208,24 @@ def clean_examine(value, name):
     """docstring"""
     examine = value
     examine = examine.strip()
-    examine = examine.replace("'''", "")
-    examine = examine.replace("''", "")
-    examine = examine.replace("{", "")
-    examine = examine.replace("}", "")
+
     examine = examine.replace("[", "")
     examine = examine.replace("]", "")
-    examine = examine.replace("*", "")
-    examine = examine.replace("<nowiki>", "")
-    examine = examine.replace("</nowiki>", "")
-    # examine = examine.replace("sic", "")
-    examine = examine.replace("à", "")  # TODO: Not working, only one item affected
-    examine = examine.replace("(empty)", "Empty:")
-    examine = examine.replace("(full)", "Full:")
-    examine = examine.replace("(Player's Name)", "<players-name>")
-    examine = examine.replace("<number of cabbages>", "x")
-    examine = examine.replace("2!", "")
-    examine = examine.replace("In POH", "POH")
 
-    # Examine text fixes for some quest items
-    examine = examine.replace("(Used in the Shield of Arrav quest)", "")
-    examine = examine.replace("(Used in The Grand Tree quest)", "")
-    examine = examine.replace("(Edgeville Dungeon entrance)", "")
-    examine = examine.replace("(Used to open the muddy chest in the lava maze)", "")
-    examine = examine.replace("(Used to open the sinister chest in Yanille dungeon)", "")
-    examine = examine.replace("(Used in the Dragon Slayer quest)", "")
-    examine = examine.replace("(Used in Heroes' Quest)", "")
-    examine = examine.replace("(Provides access to the deeper parts of Taverley Dungeon)", "")
-    examine = examine.replace("(Provides access to the Desert Mining Camp)", "")
-    examine = examine.replace("(Unlocks the cell door in the Desert Mining Camp)", "")
-    examine = examine.replace("(Access to the Desert Mining Camp's mine)", "")
-    examine = examine.replace("(Used in the Tourist Trap quest)", "")
-    examine = examine.replace("(Used in the Watchtower quest)", "")
-    examine = examine.replace("(Used in the Zogre Flesh Eaters quest)", "")
-    examine = examine.replace("(Used in the Creature of Fenkenstrain quest)", "")
-    examine = examine.replace("(Opens chests found in the Mort'ton catacombs)", "")
-    examine = examine.replace("(Used in the Fremennik Trials quest)", "")
-    examine = examine.replace("(Allows access to the Crystal mine from the Haunted mine quest)", "")
-    examine = examine.replace("(Used in the Horror from the Deep quest)", "")
-    examine = examine.replace("(Used in the Darkness of Hallowvale quest)", "")
-    examine = examine.replace("(Used in the Priest in Peril quest)", "")
-    examine = examine.replace("(Allows access to the Water Ravine Dungeon from the Spirits of the Elid quest)", "")
-    examine = examine.replace("(Used to enter the cavern near the Temple of Light)", "")
-    examine = examine.replace("(Opens the locked coffins in the cave at Jiggig)", "")
-    examine = examine.replace("(Used to open a chest upstairs in Slepe church)", "")
-    examine = examine.replace("(Unlocks the gate to the roof of the Slayer Tower)", "")
-    examine = examine.replace("(Used in the Misthalin Mystery quest)", "")
-    examine = examine.replace("(Allows access to the goblin kitchen in the Observatory Dungeon)", "")
-    examine = examine.replace("(Used to access the prison cell inside of the Mourner HQ)", "")
-    examine = examine.replace("(Provides access to the elemental workshop)", "")
-    examine = examine.replace("(Provides access to the Black Knights jail cell in Taverley Dungeon)", "")
-    examine = examine.replace("(Used in the In Aid of the Myreque quest)", "")
-    examine = examine.replace("(Used in the Troll Stronghold quest)", "")
-    examine = examine.replace("(Used in the Smoke Dungeon in Desert Treasure)", "")
-    examine = examine.replace("(Quick access into the Temple of Ikov)", "")
-    examine = examine.replace("(Used to access the prison cell inside of the Mourner HQ)", "")
-    examine = examine.replace("(Used in The Golem quest)", "")
-    examine = examine.replace("(Used in the Smoke Dungeon in Desert Treasure)", "")
-    examine = examine.replace("(Allows access to the Crystal mine from the Haunted mine quest)", "")
-    examine = examine.replace("(Used in the Eadgar's Ruse quest)", "")
-    examine = examine.replace("(Used in the Troll Stronghold quest)", "")
-    examine = examine.replace("(Used in the Plague City quest)", "")
-    examine = examine.replace("(used to access the Hill Titan's lair)", "")
-    examine = examine.replace("(Used in the Ernest the Chicken quest)", "")
-    examine = examine.replace("(Unlocks a door found in the Waterfall Dungeon)", "")
-    examine = examine.replace("(Opens the cell found in the Gnome Village Dungeon)", "")
-    examine = examine.replace("(Used in the Biohazard quest)", "")
-    examine = examine.replace("(Used in the Pirate's Treasure quest)", "")
-    examine = examine.replace("(Provides access to Rashiliyia's Tomb)", "")
-    examine = examine.replace("(Used in The Digsite quest)", "")
-    examine = examine.replace("(Used in the Demon Slayer quest)", "")
-    examine = examine.replace("(Used in the Hazeel Cult quest)", "")
-    examine = examine.replace("(Used in the Witch's House quest)", "")
-    examine = examine.replace("(Used in the Prince Ali Rescue quest)", "")
-    examine = examine.replace("(Used in The Lost Tribe quest)", "")
-    examine = examine.replace("(Used in the Recruitment Drive quest)", "")
-    examine = examine.replace("(Used to open a chest deep in the HAM cave)", "")
-    examine = examine.replace("(Used to open the hatch in the elemental workshop)", "")
-    examine = examine.replace("(Used in Olaf's Quest)", "")
-    examine = examine.replace("(Used in the Ghost Ahoy quest)", "")
-    examine = examine.replace("(Used in the Ghosts Ahoy quest)", "")
+    # Generic fix for clue scroll related items
+    clue_scrolls = ["Clue scroll (easy)",
+                    "Clue scroll (medium)",
+                    "Clue scroll (hard)",
+                    "Clue scroll (elite)"]
+    if name in clue_scrolls:
+        examine = "A clue!"
+        return examine
+    if name == "Key (medium)":
+        examine = "A key to unlock a treasure chest.; A key to some drawers.; A key to a chest."
+        return examine
 
-    # Special cirumstances for clue scrolls:
-    if name == "Clue scroll (easy)":
-        examine = """A set of instructions to be followed.; A clue!; A piece of the world map, but where?; It points to great treasure!"""
-    if name == "Clue scroll (medium)":
-        examine = """A set of instructions to be followed; A clue!; A piece of the world map,but where?; Perhaps someone at the observatory can teach me to navigate?; It points to great treasure!"""
-    if name == "Clue scroll (hard)":
-        examine = """Emote: A set of instructions to be followed.; Anagram: A clue!, Map: A place of the world map, but where?; Coordinates: Perhaps someone at the observatory can teach me to navigate?; Fairy ring: A clue suggested by <players-name>!"""
-    if name == "Clue scroll (elite)":
-        examine = "A clue!; Sherlock: A clue suggested by <players-name>!"
-
-    if name in ["Hell cat",
-                     "Hell-kitten",
-                     "Lazy cat",
-                     "Lazy hell cat",
-                     "Overgrown hellcat",
-                     "Pet cat",
-                     "Pet kitten",
-                     "Wily hellcat"]:
-        examine = """Inventory: This kitten seems to like you. (Kitten), This cat definitely likes you. (Cat), This cat is so well fed it can hardly move. (Overgrown); Follower: A friendly little pet. (Kitten), A fully grown feline. (Cat), A friendly, not-so-little pet. (Overgrown)"""
-
-    if name == "Clue scroll":
-        examine = "A clue!; A clue suggested by <players-name>!"
+    # Fix for quest related examine texts (mostly for keys)
+    examine = re.sub(r' \([^()]*\)', '', examine)
 
     return examine
 

@@ -19,7 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import logging
 import mwparserfromhell
 
@@ -212,16 +211,16 @@ class BuildItem:
                 return  # Could not finish, just exit
 
         # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
-        self.compare_json_files()
+        # self.compare_json_files()
 
         json_out = self.itemDefinition.construct_json()
         self.logger.debug(json_out)
 
         self.logger.debug("============================================ END")
 
-        # Actually output a JSON file, comment out for testing
-        output_dir = os.path.join("..", "docs", "items-json")
-        self.itemDefinition.export_json(True, output_dir)
+        # # Actually output a JSON file, comment out for testing
+        # output_dir = os.path.join("..", "docs", "items-json")
+        # self.itemDefinition.export_json(True, output_dir)
 
     def populate_from_scraper(self):
         self.itemDefinition.id = self.item_json["id"]
