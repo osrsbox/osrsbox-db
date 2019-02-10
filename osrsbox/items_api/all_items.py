@@ -93,9 +93,9 @@ class AllItems:
             self._load_item(temp)
 
     def _load_items_from_file(self, path_to_json_file: str) -> None:
-        """Load item database from a single JSON file (`items_complete.json`).
+        """Load item database from a single JSON file (`items-complete.json`).
 
-        :param path_to_json_file: The path to the `items_complete.json` file.
+        :param path_to_json_file: The path to the `items-complete.json` file.
         """
         with open(path_to_json_file) as input_json_file:
             temp = json.load(input_json_file)
