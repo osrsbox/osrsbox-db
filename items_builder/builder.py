@@ -27,10 +27,10 @@ from items_builder import items_build_item
 
 if __name__ == "__main__":
     # Delete old log file
-    if os.path.exists(os.path.join("items_build_db", "builder.log")):
-        os.remove(os.path.join("items_build_db", "builder.log"))
+    if os.path.exists("builder.log"):
+        os.remove("builder.log")
 
-    # Get the raw output from OSRS cache
+    # Load the raw output from OSRS cache
     scraper_path = os.path.join("..", "docs", "items-scraper.json")
     with open(scraper_path) as f:
         cache_items = json.load(f)

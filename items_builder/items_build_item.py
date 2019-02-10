@@ -35,12 +35,14 @@ class BuildItem:
         # Input JSON file (from RuneLite ItemScraper plugin)
         self.item_json = item_json
 
-        self.wiki_text = wiki_text
-        self.normalized_names = normalized_names
-        self.buy_limits = buy_limits
-        self.skill_requirements = skill_requirements
-        self.current_db = current_db
+        # Input data
+        self.wiki_text = wiki_text  # Dict of raw wiki text from OSRS Wiki
+        self.normalized_names = normalized_names  # Maps cache names to OSRS Wiki names
+        self.buy_limits = buy_limits  # Dictionary of item buy limits
+        self.skill_requirements = skill_requirements  # Dictionary of item requirements
+        self.current_db = current_db  # Dictionary dump of current database contents
 
+        # For this item, initialize the required objects
         self.itemDefinition = ItemDefinition()
         self.itemDefinition.item_stats = ItemStats()
         self.itemDefinition.item_equipment = ItemEquipment()
@@ -104,33 +106,31 @@ class BuildItem:
         # STAGE ZERO: CREATE OBJECTS
         self.logger.debug("STAGE ZERO: Create object...")
 
-        self.itemDefinition.id = None
-        self.itemDefinition.name = None
-        self.itemDefinition.members = None
-        self.itemDefinition.tradeable = None
-        self.itemDefinition.tradeable_on_ge = None
-        self.itemDefinition.stackable = None
-        self.itemDefinition.noted = None
-        self.itemDefinition.noteable = None
-        self.itemDefinition.linked_id = None
-        self.itemDefinition.equipable = None
-        self.itemDefinition.cost = None
-        self.itemDefinition.lowalch = None
-        self.itemDefinition.highalch = None
-        self.itemDefinition.weight = None
-        self.itemDefinition.buy_limit = None
-        self.itemDefinition.quest_item = None
-        self.itemDefinition.release_date = None
-        self.itemDefinition.examine = None
-        self.itemDefinition.wiki_name = None
-        self.itemDefinition.wiki_url = None
+        # self.itemDefinition.id = None
+        # self.itemDefinition.name = None
+        # self.itemDefinition.members = None
+        # self.itemDefinition.tradeable = None
+        # self.itemDefinition.tradeable_on_ge = None
+        # self.itemDefinition.stackable = None
+        # self.itemDefinition.noted = None
+        # self.itemDefinition.noteable = None
+        # self.itemDefinition.linked_id = None
+        # self.itemDefinition.equipable = None
+        # self.itemDefinition.cost = None
+        # self.itemDefinition.lowalch = None
+        # self.itemDefinition.highalch = None
+        # self.itemDefinition.weight = None
+        # self.itemDefinition.buy_limit = None
+        # self.itemDefinition.quest_item = None
+        # self.itemDefinition.release_date = None
+        # self.itemDefinition.examine = None
 
         # Also, load blank equipable item properties
         if self.itemDefinition.equipable:
             self.equipable_item_set_default()
 
         # STAGE ONE: LOAD ITEM SCRAPER DATA
-        self.logger.debug("STAGE ONE: Loading item_scraper.json data to object...")
+        self.logger.debug("STAGE ONE: Loading item-scraper.json data to object...")
 
         self.populate_from_scraper()
 
@@ -211,8 +211,9 @@ class BuildItem:
                 return  # Could not finish, just exit
 
         # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
-        # self.compare_json_files()
+        self.logger.debug("STAGE FIVE: Compare object to existing database entry...")
 
+        self.compare_json_files()
         json_out = self.itemDefinition.construct_json()
         self.logger.debug(json_out)
 

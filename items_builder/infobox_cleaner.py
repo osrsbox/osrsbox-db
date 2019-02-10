@@ -29,6 +29,7 @@ import dateparser
 def clean_weight(value: str) -> float:
     """A helper method to convert the weight entry from a OSRS Wiki infobox to a float.
 
+    :param value: The extracted raw wiki text.
     :return weight: The weight on an item.
     """
     weight = str(value)
@@ -84,11 +85,15 @@ def clean_weight(value: str) -> float:
 def clean_quest(value: str) -> List:
     """A helper method to convert the quest entry from an OSRS Wiki infobox to a boolean.
 
+    :param value: The extracted raw wiki text.
     :return quest: A boolean to identify if an item is associated with a quest.
     """
     # Clean a quest value
     quest = value
     quest = quest.strip()
+
+    # TODO: Change this to a boolean, not a list
+    # The wiki data is not sufficient enough for a list
 
     quest = quest.replace("Growing Pains]] [[Fairy Tale II", "Growing Pains]] <br> [[Fairy Tale II")
     quest = quest.replace("[", "")
@@ -162,6 +167,7 @@ def clean_release_date(value: str) -> str:
     The returned value will be a specifically formatted string: dd Month YYYY.
     For example, 25 June 2017 or 01 November 2014.
 
+    :param value: The extracted raw wiki text.
     :return release_date: A cleaned release date of an item.
     """
     release_date = value
@@ -186,6 +192,7 @@ def clean_release_date(value: str) -> str:
 def clean_tradeable(value: str) -> bool:
     """A helper method to convert the tradeable entry from an OSRS Wiki infobox.
 
+    :param value: The extracted raw wiki text.
     :return tradeable: A cleaned tradeable property of an item.
     """
     tradeable = str(value)
@@ -204,9 +211,14 @@ def clean_tradeable(value: str) -> bool:
     return tradeable
 
 
-def clean_examine(value, name):
-    """docstring"""
-    examine = value
+def clean_examine(value: str, name: str) -> str:
+    """A helper method to convert the examine text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :param name: The name of the item being processed.
+    :return tradeable: A cleaned tradeable property of an item.
+    """
+    examine = str(value)
     examine = examine.strip()
 
     examine = examine.replace("[", "")
@@ -221,7 +233,7 @@ def clean_examine(value, name):
         examine = "A clue!"
         return examine
     if name == "Key (medium)":
-        examine = "A key to unlock a treasure chest.; A key to some drawers.; A key to a chest."
+        examine = "A key to unlock a treasure chest."
         return examine
 
     # Fix for quest related examine texts (mostly for keys)
@@ -233,6 +245,7 @@ def clean_examine(value, name):
 def clean_store_price(value: str) -> str:
     """"A helper method to convert the store price entry from an OSRS Wiki infobox.
 
+    :param value: The extracted raw wiki text.
     :return store_price: A cleaned store price property of an item.
     """
     store_price = value
@@ -260,6 +273,7 @@ def clean_store_price(value: str) -> str:
 def clean_seller(value: str) -> str:
     """A helper method to convert the seller entry from an OSRS Wiki infobox.
 
+    :param value: The extracted raw wiki text.
     :return seller: A cleaned seller property of an item.
     """
     seller = value
