@@ -44,6 +44,7 @@ if __name__ == "__main__":
     extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
     extraction_path_other = os.path.join("..", "extraction_tools_other", "")
 
+    # Load the wiki text file
     with open(extraction_path_wiki + "extract_page_text_items.json") as wiki_text_file:
         wiki_text = json.load(wiki_text_file)
 
@@ -83,4 +84,5 @@ if __name__ == "__main__":
                                              buy_limits,
                                              skill_requirements,
                                              current_db)
+        # Start the build item population function
         builder.populate()

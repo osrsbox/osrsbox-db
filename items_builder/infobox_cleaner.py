@@ -25,14 +25,12 @@ from typing import List
 
 
 def clean_weight(value: str) -> float:
-    """A helper method to convert the weight entry from an infobox to a float.
+    """A helper method to convert the weight entry from a OSRS Wiki infobox to a float.
 
     :return weight: The weight on an item.
     """
     weight = str(value)
     weight = weight.strip()
-
-    # print("START", weight)
 
     # Replace generic wiki text links
     weight = weight.replace("[", "")
@@ -76,17 +74,15 @@ def clean_weight(value: str) -> float:
     if weight == "":
         weight = 0
 
-    # print("END", weight)
-
     # Cast to a float, and return
     weight = float(weight)
     return weight
 
 
 def clean_quest(value: str) -> List:
-    """A helper method to convert the quest entry from an infobox to a list.
+    """A helper method to convert the quest entry from an OSRS Wiki infobox to a boolean.
 
-    :return quest: A list of quests associated with an item.
+    :return quest: A boolean to identify if an item is associated with a quest.
     """
     # Clean a quest value
     quest = value
@@ -158,8 +154,14 @@ def clean_quest(value: str) -> List:
     return quest_list_fin
 
 
-def clean_release_date(value):
-    """docstring"""
+def clean_release_date(value: str) -> str:
+    """A helper method to convert the release date entry from an OSRS Wiki infobox.
+
+    The returned value will be a specifically formatted string: dd Month YYYY.
+    For example, 25 June 2017 or 01 November 2014.
+
+    :return release_date: A cleaned release date of an item.
+    """
     release_date = value
     release_date = release_date.strip()
     release_date = release_date.replace("[", "")
@@ -179,8 +181,11 @@ def clean_release_date(value):
     return release_date
 
 
-def clean_tradeable(value):
-    """docstring"""
+def clean_tradeable(value: str) -> bool:
+    """A helper method to convert the tradeable entry from an OSRS Wiki infobox.
+
+    :return tradeable: A cleaned tradeable property of an item.
+    """
     tradeable = str(value)
     tradeable = tradeable.strip()
 
@@ -308,8 +313,11 @@ def clean_examine(value, name):
     return examine
 
 
-def clean_store_price(value):
-    """docstring"""
+def clean_store_price(value: str) -> str:
+    """"A helper method to convert the store price entry from an OSRS Wiki infobox.
+
+    :return store_price: A cleaned store price property of an item.
+    """
     store_price = value
     store_price = store_price.strip()
 
@@ -332,8 +340,11 @@ def clean_store_price(value):
     return store_price
 
 
-def clean_seller(value):
-    # Clean seller value
+def clean_seller(value: str) -> str:
+    """A helper method to convert the seller entry from an OSRS Wiki infobox.
+
+    :return seller: A cleaned seller property of an item.
+    """
     seller = value
     seller = seller.strip()
 

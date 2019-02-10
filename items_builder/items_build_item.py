@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import os
 import logging
 import mwparserfromhell
 
@@ -156,8 +157,7 @@ class BuildItem:
         #         print(f"TODO:{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|X")
 
         if not has_wiki_page:
-            # These will be items that cannot be processed
-            # Program should exit, and PH01L should fix!
+            # These will be items that cannot be processed and the program should exit
             print(">>> Cannot find wiki page...")
             print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
             quit()
@@ -220,7 +220,8 @@ class BuildItem:
         self.logger.debug("============================================ END")
 
         # Actually output a JSON file, comment out for testing
-        # self.itemDefinition.export_json(True, "items-json")
+        output_dir = os.path.join("..", "docs", "items-json")
+        self.itemDefinition.export_json(True, output_dir)
 
     def populate_from_scraper(self):
         self.itemDefinition.id = self.item_json["id"]
