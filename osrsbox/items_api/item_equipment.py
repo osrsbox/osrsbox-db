@@ -27,8 +27,8 @@ from typing import List
 class ItemEquipment:
     """This class defines the equipment structure and properties for an OSRS item."""
     def __init__(self):
-        self.attack_speed = None
         self.slot = None
+        self.attack_speed = None
         self.skill_reqs = None
 
     @property

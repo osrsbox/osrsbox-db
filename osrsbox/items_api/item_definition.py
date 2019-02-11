@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import collections
-from typing import List
 from typing import Dict
 
 from osrsbox.items_api import item_stats
@@ -197,12 +196,12 @@ class ItemDefinition:
         self._buy_limit = value
 
     @property
-    def quest_item(self) -> List:
-        """A list of quests the item is associated with."""
+    def quest_item(self) -> bool:
+        """If the item is associated with a quest, or not."""
         return self._quest_item
 
     @quest_item.setter
-    def quest_item(self, value: List):
+    def quest_item(self, value: bool):
         self._quest_item = value
 
     @property
@@ -214,23 +213,23 @@ class ItemDefinition:
     def release_date(self, value: str):
         self._release_date = value
 
-    @property
-    def seller(self) -> List:
-        """A list of stores/sellers that sell the item."""
-        return self._seller
-
-    @seller.setter
-    def seller(self, value: List):
-        self._seller = value
-
-    @property
-    def store_price(self) -> int:
-        """The store price of the item."""
-        return self._store_price
-
-    @store_price.setter
-    def store_price(self, value: int):
-        self._store_price = value
+    # @property
+    # def seller(self) -> List:
+    #     """A list of stores/sellers that sell the item."""
+    #     return self._seller
+    #
+    # @seller.setter
+    # def seller(self, value: List):
+    #     self._seller = value
+    #
+    # @property
+    # def store_price(self) -> int:
+    #     """The store price of the item."""
+    #     return self._store_price
+    #
+    # @store_price.setter
+    # def store_price(self, value: int):
+    #     self._store_price = value
 
     @property
     def examine(self) -> str:
@@ -296,11 +295,11 @@ class ItemDefinition:
         :param pretty: Toggles pretty (indented) JSON output.
         :param export_path: The folder location to save the JSON output to.
         """
-        self.construct_json()
+        json_out = self.construct_json()
         out_file_name = str(self.id) + ".json"
         out_file_path = os.path.join(export_path, out_file_name)
-        with open(out_file_path, "w") as out_file:
+        with open(out_file_path, "w", newline="\n") as out_file:
             if pretty:
-                json.dump(self.json_out, out_file, indent=4)
+                json.dump(json_out, out_file, indent=4)
             else:
-                json.dump(self.json_out, out_file)
+                json.dump(json_out, out_file)
