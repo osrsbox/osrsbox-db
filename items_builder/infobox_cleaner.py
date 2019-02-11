@@ -92,73 +92,26 @@ def clean_quest(value: str) -> List:
     quest = value
     quest = quest.strip()
 
-    # TODO: Change this to a boolean, not a list
-    # The wiki data is not sufficient enough for a list
-
-    quest = quest.replace("Growing Pains]] [[Fairy Tale II", "Growing Pains]] <br> [[Fairy Tale II")
-    quest = quest.replace("[", "")
-    quest = quest.replace("]", "")
-    quest = quest.replace("{", "")
-    quest = quest.replace("}", "")
-    quest = quest.replace("*", "")
-    quest = quest.replace("II|II", "II")
-    quest = quest.replace("Tears of Guthix (quest)|", "")
-    quest = quest.replace("(quest)", "")
-    quest = quest.replace("(miniquest)", "")
-    quest = quest.replace("miniquest", "")
-    quest = quest.replace("Miniquest", "")
-    quest = quest.replace("various", "Various")
-
-    quest = quest.strip()
+    squest = quest
 
     # Generic test for not a quest item
-    if quest.lower() == "no":
-        return None
-    if quest.lower() == "yes":
-        # This returns none, as the db wants a quest name
-        return None
-
-    quest_list = list()
-    # Start trying to split quests
-    if ", <br>" in quest:
-        quest_list = quest.split(", <br>")
-    elif ",<br>" in quest:
-        quest_list = quest.split(",<br>")
-    elif ",<br/>" in quest:
-        quest_list = quest.split(",<br/>")
-    elif ", <br/>" in quest:
-        quest_list = quest.split(", <br/>")
-    elif ",<br />" in quest:
-        quest_list = quest.split(",<br />")
-    elif ", <br />" in quest:
-        quest_list = quest.split(", <br />")
-    elif "<br>" in quest:
-        quest_list = quest.split("<br>")
-    elif "<br >" in quest:
-        quest_list = quest.split("<br >")
-    elif "<br/>" in quest:
-        quest_list = quest.split("<br/>")
-    elif "<br />" in quest:
-        quest_list = quest.split("<br />")
-    elif "&" in quest:
-        quest_list = quest.split("&")
-    elif "\n" in quest:
-        quest_list = quest.split("\n")
-    if "," in quest:
-        quest_list = quest.split(",")
-
-    # Start creating the final list to return
-    quest_list_fin = list()
-    if quest_list:
-        for quest_name in quest_list:
-            quest_name = quest_name.strip()
-            quest_name = quest_name.replace("<br>", "")
-            quest_name = quest_name.replace("<br/>", "")
-            quest_list_fin.append(quest_name)
+    if quest.lower() == "no" or quest.lower() == "":
+        quest = False
+    elif quest.lower() == "yes":
+        quest = True
+    elif "[[" in quest:
+        quest = True
     else:
-        quest_list_fin.append(quest)
+        # Only two items get here (Rune mysteries related items)
+        quest = True
 
-    return quest_list_fin
+    # if quest is True or quest is False:
+    #     pass
+    # else:
+    #     print("START:", squest)
+    #     print("END  :", quest)
+
+    return quest
 
 
 def clean_release_date(value: str) -> str:

@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 
-from items_builder import items_build_item
+from items_builder import item_builder
 
 
 if __name__ == "__main__":
@@ -77,12 +77,12 @@ if __name__ == "__main__":
     for item_id in cache_items:
         json_data = cache_items[item_id]
         # Initialize the BuildItem class
-        builder = items_build_item.BuildItem(item_id,
-                                             json_data,
-                                             wiki_text,
-                                             normalized_names,
-                                             buy_limits,
-                                             skill_requirements,
-                                             current_db)
+        builder = item_builder.BuildItem(item_id,
+                                         json_data,
+                                         wiki_text,
+                                         normalized_names,
+                                         buy_limits,
+                                         skill_requirements,
+                                         current_db)
         # Start the build item population function
         builder.populate()

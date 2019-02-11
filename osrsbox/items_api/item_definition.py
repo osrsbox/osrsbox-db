@@ -197,12 +197,12 @@ class ItemDefinition:
         self._buy_limit = value
 
     @property
-    def quest_item(self) -> List:
-        """A list of quests the item is associated with."""
+    def quest_item(self) -> bool:
+        """If the item is associated with a quest, or not."""
         return self._quest_item
 
     @quest_item.setter
-    def quest_item(self, value: List):
+    def quest_item(self, value: bool):
         self._quest_item = value
 
     @property
