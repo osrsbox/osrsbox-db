@@ -336,7 +336,6 @@ class BuildItem:
                     # Now, try to determine how many versions are present
                     i = 1
                     while i <= 20:  # Guessing max version number is 20
-                        version_number = "version" + str(i)  # e.g., version1, version2
                         try:
                             template.get(version_identifier + "1").value
                             version_count += 1
