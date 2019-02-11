@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import os
 import logging
 import mwparserfromhell
 
@@ -105,25 +106,6 @@ class BuildItem:
 
         # STAGE ZERO: CREATE OBJECTS
         self.logger.debug("STAGE ZERO: Create object...")
-
-        # self.itemDefinition.id = None
-        # self.itemDefinition.name = None
-        # self.itemDefinition.members = None
-        # self.itemDefinition.tradeable = None
-        # self.itemDefinition.tradeable_on_ge = None
-        # self.itemDefinition.stackable = None
-        # self.itemDefinition.noted = None
-        # self.itemDefinition.noteable = None
-        # self.itemDefinition.linked_id = None
-        # self.itemDefinition.equipable = None
-        # self.itemDefinition.cost = None
-        # self.itemDefinition.lowalch = None
-        # self.itemDefinition.highalch = None
-        # self.itemDefinition.weight = None
-        # self.itemDefinition.buy_limit = None
-        # self.itemDefinition.quest_item = None
-        # self.itemDefinition.release_date = None
-        # self.itemDefinition.examine = None
 
         # Also, load blank equipable item properties
         if self.itemDefinition.equipable:
@@ -219,9 +201,9 @@ class BuildItem:
 
         self.logger.debug("============================================ END")
 
-        # # Actually output a JSON file, comment out for testing
-        # output_dir = os.path.join("..", "docs", "items-json")
-        # self.itemDefinition.export_json(True, output_dir)
+        # Actually output a JSON file, comment out for testing
+        output_dir = os.path.join("..", "docs", "items-json")
+        self.itemDefinition.export_json(True, output_dir)
 
     def populate_from_scraper(self):
         self.itemDefinition.id = self.item_json["id"]
@@ -377,6 +359,24 @@ class BuildItem:
             except ValueError:
                 pass
 
+        # Check if the infobox is versioned using name attribute
+        if version_count == 0:  # Check that we still do not have a version
+            try:
+                template.get("itemname1").value
+                is_versioned = True
+                # Now, try to determine how many versions are present
+                i = 1
+                while i <= 20:  # Guessing max version number is 20
+                    version_number = "itemname" + str(i)  # e.g., version1, version2
+                    try:
+                        template.get(version_number).value
+                        version_count += 1
+                    except ValueError:
+                        break
+                    i += 1
+            except ValueError:
+                pass
+
         # STAGE TWO: Match a versioned infobox to the item name
 
         if is_versioned:
@@ -396,6 +396,16 @@ class BuildItem:
                 i = 1
                 while i <= version_count:
                     versioned_name = "version" + str(i)
+                    if self.itemDefinition.name == template.get(versioned_name).value.strip():
+                        self.current_version = i
+                    i += 1
+            except ValueError:
+                pass
+            try:
+                template.get("itemname1").value
+                i = 1
+                while i <= version_count:
+                    versioned_name = "itemname" + str(i)
                     if self.itemDefinition.name == template.get(versioned_name).value.strip():
                         self.current_version = i
                     i += 1

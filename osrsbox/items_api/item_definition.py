@@ -299,7 +299,7 @@ class ItemDefinition:
         json_out = self.construct_json()
         out_file_name = str(self.id) + ".json"
         out_file_path = os.path.join(export_path, out_file_name)
-        with open(out_file_path, "w") as out_file:
+        with open(out_file_path, "w", newline="\n") as out_file:
             if pretty:
                 json.dump(json_out, out_file, indent=4)
             else:
