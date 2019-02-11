@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import os
 import json
 
 from osrsbox.items_api import all_items
@@ -48,6 +49,6 @@ if __name__ == "__main__":
 
     # Save all items to items_complete.json
     print(">>> Saving items-complete.json file to current working directory...")
-    out_fi = "items-complete.json"
+    out_fi = os.path.join("..", "..", "docs", "items-complete.json")
     with open(out_fi, "w", newline="\n") as f:
         json.dump(items, f)

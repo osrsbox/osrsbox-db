@@ -65,6 +65,6 @@ if __name__ == "__main__":
         for item in items[slot]:
             json_out_temp = item.construct_json()
             json_out[item.id] = json_out_temp
-        out_fi = os.path.join("items-json-slot", "items-" + slot + ".json")
+        out_fi = os.path.join("..", "..", "docs", "items-json-slot", "items-" + slot + ".json")
         with open(out_fi, "w", newline="\n") as f:
             json.dump(json_out, f)
