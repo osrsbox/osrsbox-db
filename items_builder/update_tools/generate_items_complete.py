@@ -43,11 +43,11 @@ if __name__ == "__main__":
     items = {}
 
     for item in ai:
-        item.construct_json()
-        items[item.id] = item.json_out
+        json_out = item.construct_json()
+        items[item.id] = json_out
 
     # Save all items to items_complete.json
-    print(">>> Saving items_complete.json file to current working directory...")
-    out_fi = "items_complete.json"
-    with open(out_fi, "w") as f:
+    print(">>> Saving items-complete.json file to current working directory...")
+    out_fi = "items-complete.json"
+    with open(out_fi, "w", newline="\n") as f:
         json.dump(items, f)

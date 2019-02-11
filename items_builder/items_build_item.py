@@ -100,6 +100,7 @@ class BuildItem:
             "skill_reqs"]
 
     def populate(self):
+        """The primary entry and item object population function."""
         # Start section in logger
         self.logger.debug("============================================ START")
         self.logger.debug(f"item_id: {self.item_id}")
@@ -187,10 +188,8 @@ class BuildItem:
             else:
                 self.logger.critical("Item InfoBox Bonuses extraction error.")
                 self.logger.critical("Status Code: %s" % self.status_code)
-                self.equipable_item_set_default()
-                print("QUITTING THIS SHIT")
+                print(">>> ERROR: Could not determine equipable item bonuses...")
                 quit()
-                return  # Could not finish, just exit
 
         # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
         self.logger.debug("STAGE FIVE: Compare object to existing database entry...")
@@ -206,6 +205,7 @@ class BuildItem:
         self.itemDefinition.export_json(True, output_dir)
 
     def populate_from_scraper(self):
+        """Populate the itemDefinition object from the item-scraper file content."""
         self.itemDefinition.id = self.item_json["id"]
         if self.item_json["name"] in [None, "null", "Null", ""]:
             self.itemDefinition.name = None
@@ -323,94 +323,44 @@ class BuildItem:
 
         # STAGE ONE: Determine if we have a versioned infobox, and the version count
 
-        # Check if the infobox is versioned, and get a version count
-        if version_count == 0:
-            try:
-                template.get("version1").value
-                is_versioned = True
-                # Now, try to determine how many versions are present
-                i = 1
-                while i <= 20:  # Guessing max version number is 20
-                    version_number = "version" + str(i)  # e.g., version1, version2
-                    try:
-                        template.get(version_number).value
-                        version_count += 1
-                    except ValueError:
-                        break
-                    i += 1
-            except ValueError:
-                pass
+        version_identifiers = ["version",
+                               "name",
+                               "itemname"]
 
-        # Check if the infobox is versioned using name attribute
-        if version_count == 0:  # Check that we still do not have a version
-            try:
-                template.get("name1").value
-                is_versioned = True
-                # Now, try to determine how many versions are present
-                i = 1
-                while i <= 20:  # Guessing max version number is 20
-                    version_number = "name" + str(i)  # e.g., version1, version2
-                    try:
-                        template.get(version_number).value
-                        version_count += 1
-                    except ValueError:
-                        break
-                    i += 1
-            except ValueError:
-                pass
-
-        # Check if the infobox is versioned using name attribute
-        if version_count == 0:  # Check that we still do not have a version
-            try:
-                template.get("itemname1").value
-                is_versioned = True
-                # Now, try to determine how many versions are present
-                i = 1
-                while i <= 20:  # Guessing max version number is 20
-                    version_number = "itemname" + str(i)  # e.g., version1, version2
-                    try:
-                        template.get(version_number).value
-                        version_count += 1
-                    except ValueError:
-                        break
-                    i += 1
-            except ValueError:
-                pass
+        for version_identifier in version_identifiers:
+            # Check if the infobox is versioned, and get a version count
+            if version_count == 0:
+                try:
+                    template.get(version_identifier + "1").value
+                    is_versioned = True
+                    # Now, try to determine how many versions are present
+                    i = 1
+                    while i <= 20:  # Guessing max version number is 20
+                        version_number = "version" + str(i)  # e.g., version1, version2
+                        try:
+                            template.get(version_identifier + "1").value
+                            version_count += 1
+                        except ValueError:
+                            break
+                        i += 1
+                except ValueError:
+                    pass
 
         # STAGE TWO: Match a versioned infobox to the item name
 
         if is_versioned:
             # Try determine
-            try:
-                template.get("name1").value
-                i = 1
-                while i <= version_count:
-                    versioned_name = "name" + str(i)
-                    if self.itemDefinition.name == template.get(versioned_name).value.strip():
-                        self.current_version = i
-                    i += 1
-            except ValueError:
-                pass
-            try:
-                template.get("version1").value
-                i = 1
-                while i <= version_count:
-                    versioned_name = "version" + str(i)
-                    if self.itemDefinition.name == template.get(versioned_name).value.strip():
-                        self.current_version = i
-                    i += 1
-            except ValueError:
-                pass
-            try:
-                template.get("itemname1").value
-                i = 1
-                while i <= version_count:
-                    versioned_name = "itemname" + str(i)
-                    if self.itemDefinition.name == template.get(versioned_name).value.strip():
-                        self.current_version = i
-                    i += 1
-            except ValueError:
-                pass
+            for version_identifier in version_identifiers:
+                try:
+                    template.get(version_identifier + "1").value
+                    i = 1
+                    while i <= version_count:
+                        versioned_name = version_identifier + str(i)
+                        if self.itemDefinition.name == template.get(versioned_name).value.strip():
+                            self.current_version = i
+                        i += 1
+                except ValueError:
+                    pass
 
             self.logger.debug("NOTE: versioned infobox: %s" % self.current_version)
 
@@ -510,7 +460,16 @@ class BuildItem:
 
         return True
 
-    def extract_infobox_value(self, template, key):
+    def extract_infobox_value(self, template: mwparserfromhell.nodes.template.Template, key: str) -> str:
+        """Helper method to extract a value from a template using a specified key.
+
+        This helper method is a simple solution to repeatedly try to fetch a specific
+        entry from a wiki text template (a mwparserfromhell template object).
+
+        :param template: A mediawiki wiki text template.
+        :param key: The key to query in the template.
+        :return value: The extracted template value based on supplied key.
+        """
         value = None
         try:
             value = template.get(key).value
@@ -519,7 +478,11 @@ class BuildItem:
         except ValueError:
             return value
 
-    def extract_bonuses(self):
+    def extract_bonuses(self) -> bool:
+        """Extract the infobox bonuses template from raw wikitext.
+
+        :return: If the infobox bonuses template was extracted successfully or not.
+        """
         # Extract Infobox Bonuses from wikitext
         try:
             wikicode = mwparserfromhell.parse(self.wiki_text[self.itemDefinition.wiki_name])
@@ -534,8 +497,11 @@ class BuildItem:
 
         return False
 
-    def parse_bonuses(self, template):
-        # Parse the Infobox Bonuses template
+    def parse_bonuses(self, template: mwparserfromhell.nodes.template.Template) -> bool:
+        """Parse the wiki text template and extract item bonus values from it.
+
+        :param template: A mediawiki wiki text template.
+        """
         self.itemDefinition.item_stats.attack_stab = self.clean_bonuses_value(template, "astab")
         self.itemDefinition.item_stats.attack_slash = self.clean_bonuses_value(template, "aslash")
         self.itemDefinition.item_stats.attack_crush = self.clean_bonuses_value(template, "acrush")
@@ -579,7 +545,13 @@ class BuildItem:
 
         return True
 
-    def clean_bonuses_value(self, template, prop):
+    def clean_bonuses_value(self, template: mwparserfromhell.nodes.template.Template, prop: str):
+        """Clean a item bonuses value extracted from a wiki template.
+
+        :param template: A mediawiki wiki text template.
+        :param prop: The key to query in the template.
+        :return value: The extracted template value that has been int cast.
+        """
         value = None
 
         # Try and get the versioned infobox value
@@ -608,15 +580,20 @@ class BuildItem:
 
         return value
 
-    def strip_infobox(self, input):
+    def strip_infobox(self, value: str) -> str:
+        """Generic infobox wiki text cleaner.
+
+        :return clean_value: A cleaned wiki text value.
+        """
         # Clean an passed InfoBox string
-        clean_input = str(input)
-        clean_input = clean_input.strip()
-        clean_input = clean_input.replace("[", "")
-        clean_input = clean_input.replace("]", "")
-        return clean_input
+        clean_value = str(value)
+        clean_value = clean_value.strip()
+        clean_value = clean_value.replace("[", "")
+        clean_value = clean_value.replace("]", "")
+        return clean_value
 
     def equipable_item_set_default(self):
+        """Set a default item_stats and item_equipment object."""
         self.itemDefinition.item_stats.attack_stab = 0
         self.itemDefinition.item_stats.attack_slash = 0
         self.itemDefinition.item_stats.attack_crush = 0
@@ -636,7 +613,11 @@ class BuildItem:
         self.itemDefinition.item_equipment.attack_speed = None
         self.itemDefinition.item_equipment.skill_reqs = None
 
-    def compare_json_files(self):
+    def compare_json_files(self) -> bool:
+        """Print the difference between this item object, and the item that exists in the database.
+
+        :return changed: A boolean if the item is different, or not.
+        """
         changed = False
         changes = dict()
 
@@ -672,9 +653,9 @@ class BuildItem:
             print(f">>>>>>>>>>> id: {self.itemDefinition.id}\tname: {self.itemDefinition.name}")
             for prop in changes:
                 print("+++ MISMATCH!:", prop)
-                print("TYPES:", type(changes[prop][0]), type(changes[prop][1]))
-                print("OLD:", changes[prop][1])
-                print("NEW:", changes[prop][0])
+                print("TYPES:", type(changes[prop][1]), type(changes[prop][0]))
+                print("OLD: %r" % changes[prop][1])
+                print("NEW: %r" % changes[prop][0])
             print()
 
         return changed

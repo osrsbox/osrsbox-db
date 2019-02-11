@@ -30,7 +30,7 @@ def clean_weight(value: str) -> float:
     """A helper method to convert the weight entry from a OSRS Wiki infobox to a float.
 
     :param value: The extracted raw wiki text.
-    :return weight: The weight on an item.
+    :return weight: The weight of an item.
     """
     weight = str(value)
     weight = weight.strip()
@@ -238,6 +238,33 @@ def clean_examine(value: str, name: str) -> str:
 
     # Fix for quest related examine texts (mostly for keys)
     examine = re.sub(r' \([^()]*\)', '', examine)
+
+    # Remove nowiki tags
+    examine = examine.replace("<nowiki>", "")
+    examine = examine.replace("</nowiki>", "")
+
+    # Remove linked tags
+    examine = examine.replace("{{*}}", "")
+
+    # Remove triple/double quotes
+    examine = examine.replace("'''", "")
+    examine = examine.replace("''", "")
+
+    # Remove stars (used for lists in wiki)
+    examine = examine.replace("*", "")
+
+    # Remove breaks
+    examine = examine.replace("<br />", " ")
+    examine = examine.replace("<br/>", " ")
+    examine = examine.replace("<br>", " ")
+
+    # Remove any line breaks for spaces
+    examine = examine.replace("\n", " ")
+
+    # Remove double spaces for single spaces
+    examine = examine.replace("  ", " ")
+
+    examine = examine.strip()
 
     return examine
 
