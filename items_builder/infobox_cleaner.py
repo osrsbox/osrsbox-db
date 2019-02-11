@@ -92,8 +92,6 @@ def clean_quest(value: str) -> List:
     quest = value
     quest = quest.strip()
 
-    squest = quest
-
     # Generic test for not a quest item
     if quest.lower() == "no" or quest.lower() == "":
         quest = False
@@ -104,12 +102,6 @@ def clean_quest(value: str) -> List:
     else:
         # Only two items get here (Rune mysteries related items)
         quest = True
-
-    # if quest is True or quest is False:
-    #     pass
-    # else:
-    #     print("START:", squest)
-    #     print("END  :", quest)
 
     return quest
 

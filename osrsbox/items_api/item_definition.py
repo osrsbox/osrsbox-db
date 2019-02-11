@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import collections
-from typing import List
 from typing import Dict
 
 from osrsbox.items_api import item_stats
