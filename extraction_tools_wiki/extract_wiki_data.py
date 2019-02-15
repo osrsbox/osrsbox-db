@@ -67,7 +67,7 @@ if __name__ == "__main__":
     load_files = False
 
     # Set the revision date, extract wiki pages only after this date
-    last_extraction_date = datetime.datetime.strptime("2019-02-06T00:00:00Z",
+    last_extraction_date = datetime.datetime.strptime("2019-02-10T00:00:00Z",
                                                       '%Y-%m-%dT%H:%M:%SZ')
 
     # STAGE ONE: EXTRACT PAGE TITLES
