@@ -1,3 +1,11 @@
+### 2019/02/14: Boss Heads and Chambers of Xeric
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
+### 2019/02/7: X Marks The Spot
+- Missed out on recording data changes this week
+
 ### 2019/01/31: Chambers of Xeric, Kebos, and Collection Log Changes
 - Added items: 3
     - 23064,Jar of chemicals

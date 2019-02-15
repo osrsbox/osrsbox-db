@@ -52,12 +52,6 @@ if __name__ == "__main__":
             if item.item_equipment.slot is not None:
                 items[item.item_equipment.slot].append(item)
 
-    # Create output directory for files
-    print(">>> Create output directory...")
-    directory = "items-json-slot"
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-
     # Process each item found, and add to an individual file for each equipment slot
     print(">>> Saving items-slot files to current working directory...")
     for slot in items:
