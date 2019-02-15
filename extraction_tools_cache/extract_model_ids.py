@@ -125,6 +125,6 @@ if __name__ == "__main__":
 
     # Save all extracted models ID numbers to JSON file
     print(">>> Saving output JSON file...")
-    out_fi = "models-summary.json"
-    with open(out_fi, "w") as f:
+    out_fi = pathlib.Path() / ".." / "docs" / "models-summary.json"
+    with open(out_fi, "w", newline="\n") as f:
         json.dump(models_dict, f, indent=4)
