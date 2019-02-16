@@ -1,15 +1,7 @@
-# !/usr/bin/python
-
 """
 Author:  PH01L
 Email:   phoil@osrsbox.com
-Website: osrsbox.com
-Date:    2019/01/21
-
-Description:
-Simple script to determine item names that have been extracted from the cache,
-but are not in the OSRS Wiki Category:Item. Output to be used to determine
-item names that require normalization.
+Website: https://www.osrsbox.com
 
 Copyright (c) 2019, PH01L
 
@@ -25,56 +17,54 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
-
->>> CHANGELOG:
-    1.0.0       Base functionality
 """
-
-__version__ = "1.0.0"
 
 import os
 import json
 
-# Get the dictionary of item ID -> wikitext
-all_wiki_items = dict()
-extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
-with open(extraction_path_wiki + "extract_all_items_templates_InfoboxItems.json") as f:
-    all_wiki_items = json.load(f)
 
-# Read in normalized_names.txt
-all_wiki_normalized_names = dict()
-all_wiki_normalized_ids = dict()
-extraction_path_other = os.path.join("..", "extraction_tools_other", "")
-with open(extraction_path_other + "normalized_names.txt") as f:
-    for line in f:
-        line = line.strip()
-        if "#" in line or line.startswith("TODO"):
-            continue
-        line = line.split("|")
-        all_wiki_normalized_ids[line[0]] = [line[1], line[2], line[3]]
-        all_wiki_normalized_names[line[1]] = [line[0], line[2], line[3]]
+if __name__ == "__main__":
 
-# Get the latest cache dump
-items = dict()
-in_fi = os.path.join("..", "docs", "items-itemscraper.json")
-with open(in_fi) as f:
-    temp = json.load(f)
-    for k, v in temp.items():
-        items[k] = v
+    # Get the dictionary of item ID -> wikitext
+    all_wiki_items = dict()
+    extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
+    with open(extraction_path_wiki + "extract_page_text_items.json") as f:
+        all_wiki_items = json.load(f)
 
-# Find items that are not problematic (they are in wiki dump)
-for k in items:
-    item_name = items[k]["name"]
-    item_id = k
-    # Comment/Uncomment as necessary...
+    # Read in normalized_names.txt
+    all_wiki_normalized_names = dict()
+    all_wiki_normalized_ids = dict()
+    extraction_path_other = os.path.join("..", "extraction_tools_other", "")
+    with open(extraction_path_other + "normalized_names.txt") as f:
+        for line in f:
+            line = line.strip()
+            if "#" in line or line.startswith("TODO"):
+                continue
+            line = line.split("|")
+            all_wiki_normalized_ids[line[0]] = [line[1], line[2], line[3]]
+            all_wiki_normalized_names[line[1]] = [line[0], line[2], line[3]]
 
-    # Check 1: If name is in wiki_items and normalized
-    # This shouldn't happen, and should be removed from normalized list
-    if item_name in all_wiki_items:
-        if item_name in all_wiki_normalized_names:
-            print(item_name)
+    # Get the latest cache dump
+    items = dict()
+    in_fi = os.path.join("..", "data", "items-scraper.json")
+    with open(in_fi) as f:
+        temp = json.load(f)
+        for k, v in temp.items():
+            items[k] = v
 
-    # # Check 2: If name is not in wiki_items...
-    # # This is a name that should be normalized
-    # if item_name not in all_wiki_items:
-    #     print(item_name)
+    # Find items that are not problematic (they are in wiki dump)
+    for k in items:
+        item_name = items[k]["name"]
+        item_id = k
+        # Comment/Uncomment as necessary...
+
+        # Check 1: If name is in wiki_items and normalized
+        # This shouldn't happen, and should be removed from normalized list
+        if item_name in all_wiki_items:
+            if item_name in all_wiki_normalized_names:
+                print(item_name)
+
+        # # Check 2: If name is not in wiki_items...
+        # # This is a name that should be normalized
+        # if item_name not in all_wiki_items:
+        #     print(item_name)

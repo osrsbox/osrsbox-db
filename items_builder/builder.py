@@ -30,27 +30,29 @@ if __name__ == "__main__":
     if os.path.exists("builder.log"):
         os.remove("builder.log")
 
+    # Set data input directories
+    paths_wiki = os.path.join("..", "extraction_tools_wiki", "")
+    paths_other = os.path.join("..", "extraction_tools_other", "")
+    paths_data = os.path.join("..", "data", "")
+    paths_docs = os.path.join("..", "docs")
+
     # Load the raw output from OSRS cache
-    scraper_path = os.path.join("..", "docs", "items-scraper.json")
+    scraper_path = os.path.join(paths_data, "items-scraper.json")
     with open(scraper_path) as f:
         cache_items = json.load(f)
 
     # Load the current database contents
-    items_complete_path = os.path.join("..", "docs", "items-complete.json")
+    items_complete_path = os.path.join(paths_docs, "items-complete.json")
     with open(items_complete_path) as f:
         current_db = json.load(f)
 
-    # Set data input directories
-    extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
-    extraction_path_other = os.path.join("..", "extraction_tools_other", "")
-
     # Load the wiki text file
-    with open(extraction_path_wiki + "extract_page_text_items.json") as wiki_text_file:
+    with open(paths_wiki + "extract_page_text_items.json") as wiki_text_file:
         wiki_text = json.load(wiki_text_file)
 
     # Load all normalized names
     normalized_names = dict()
-    with open(extraction_path_other + "normalized_names.txt") as f:
+    with open(paths_other + "normalized_names.txt") as f:
         for line in f:
             line = line.strip()
             if "#" in line or line.startswith("TODO"):
@@ -59,19 +61,12 @@ if __name__ == "__main__":
             normalized_names[line[0]] = [line[1], line[2], line[3]]
 
     # Load buy limit data
-    buy_limits = dict()
-    with open(extraction_path_other + "all_buy_limits.txt") as f:
-        for line in f:
-            line = line.strip()
-            line = line.split("|")
-            buy_limits[line[0]] = line[1]
+    with open(paths_data + "ge-limits-names.json") as f:
+        buy_limits = json.load(f)
 
     # Load skill requirement data
-    skill_requirements = dict()
-    with open(extraction_path_other + "item_skill_requirements.json") as f:
-        temp = json.load(f)
-        for k, v in temp.items():
-            skill_requirements[k] = v
+    with open(paths_data + "item-skill-requirements.json") as f:
+        skill_requirements = json.load(f)
 
     # Start processing every item!
     for item_id in cache_items:
