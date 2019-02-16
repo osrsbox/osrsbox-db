@@ -11,6 +11,7 @@ For more user-friendly information see:
 
 ## Summary of Project Structure
 
+- `data`: Collection of useful data files used in the osrsbox-db project.
 - `docs`: The publicly accessible item database available through this repo or a somewhat-RESTful API. This folder contains the actual item database that is publicly available, or browsable within this repository.
 - `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools used in other parts in this project.
 - `extraction_tools_other`: Collection of Python tools to extract data from a variety of sources including equipable item skill requirements, grand exchange buy limits, and name normalization for more efficient OSRS Wiki lookups.
