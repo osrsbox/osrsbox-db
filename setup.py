@@ -8,10 +8,10 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'osrsbox'
-DESCRIPTION = 'A complete and up-to-date database of Old School Runescape (OSRS) items.'
+DESCRIPTION = 'A complete and up-to-date database of Old School RuneScape (OSRS) items.'
 URL = 'https://github.com/osrsbox/osrsbox-db'
-EMAIL = 'me@example.com'  # TODO: @PH01L
-AUTHOR = 'Awesome Soul'  # TODO: @PH01L
+EMAIL = 'phoil@osrsbox.com'
+AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
 VERSION = "1.0.0"
 
