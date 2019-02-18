@@ -22,11 +22,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import glob
+from pathlib import Path
 from typing import Dict
 from typing import List
 from typing import Generator
 
 from osrsbox.items_api.item_definition import ItemDefinition
+
+PATH_TO_DOCS = Path(__file__).absolute().parent / ".." / ".." / "docs"
+PATH_TO_ITEMS_COMPLETE_JSON = PATH_TO_DOCS / "items-complete.json"
 
 
 class AllItems:
@@ -34,7 +38,7 @@ class AllItems:
 
     :param input_data_file_or_directory: The osrsbox-db items folder of JSON files, or single JSON file.
     """
-    def __init__(self, input_data_file_or_directory: str):
+    def __init__(self, input_data_file_or_directory: str = PATH_TO_ITEMS_COMPLETE_JSON):
         self.all_items: List[ItemDefinition] = list()
         self.all_items_dict: Dict[int, ItemDefinition] = dict()
         self.load_all_items(input_data_file_or_directory)
