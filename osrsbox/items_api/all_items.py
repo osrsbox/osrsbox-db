@@ -110,8 +110,7 @@ class AllItems:
     def _load_item(self, item_json: Dict) -> None:
         """Convert the `item_json` into a :class:`ItemDefinition` and store it."""
         # Load the item using the ItemDefinition class
-        item_def = ItemDefinition()
-        item_def.load_item_definition_from_file(item_json)
+        item_def = ItemDefinition(**item_json)
 
         # Add item to list
         self.all_items.append(item_def)
