@@ -1,3 +1,29 @@
+### 2019/02/21: 6th Birthday and QoL
+- Added items: 19
+    - 23091,Ornate gloves
+    - 23092,Ornate gloves
+    - 23093,Ornate boots
+    - 23094,Ornate boots
+    - 23095,Ornate legs
+    - 23096,Ornate legs
+    - 23097,Ornate top
+    - 23098,Ornate top
+    - 23099,Ornate cape
+    - 23100,Ornate cape
+    - 23101,Ornate helm
+    - 23102,Ornate helm
+    - 23103,Cook's shopping list
+    - 23104,Cook's letter
+    - 23105,Brewer's folly
+    - 23106,Vyvin's wine
+    - 23107,Beer glass of water
+    - 23108,Birthday cake
+    - 23109,Birthday cake
+- Removed items: 0
+- Changed items: 2
+    - 2568,Ring of forging,members
+    - 2569,Ring of forging,members
+
 ### 2019/02/14: Boss Heads and Chambers of Xeric
 - Added items: 0
 - Removed items: 0

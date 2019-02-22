@@ -65,6 +65,6 @@ if __name__ == "__main__":
 
     # Save all extracted attackable NPCs to JSON file
     print(">>> Saving output JSON file...")
-    out_fi = pathlib.Path() / ".." / "docs" / "attackable-npcs.json"
+    out_fi = pathlib.Path() / ".." / "data" / "attackable-npcs.json"
     with open(out_fi, "w", newline="\n") as f:
         json.dump(attackable_npcs, f)

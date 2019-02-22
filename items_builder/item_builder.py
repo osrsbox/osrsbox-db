@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import os
 import logging
 import mwparserfromhell
 
@@ -117,7 +118,7 @@ class BuildItem:
         self.populate_from_scraper()
 
         self.logger.debug(f"id: {self.itemDefinition.id}|name: {self.itemDefinition.name}")
-        print(f"<<<<<<<<<<<<<< id: {self.itemDefinition.id}\tname: {self.itemDefinition.name}")
+        # print(f"<<<<<<<<<<<<<< id: {self.itemDefinition.id}\tname: {self.itemDefinition.name}")
 
         # STAGE TWO: DETERMINE WIKI PAGE
         self.logger.debug("STAGE TWO: Determining OSRS Wiki page...")
@@ -200,8 +201,8 @@ class BuildItem:
         self.logger.debug("============================================ END")
 
         # Actually output a JSON file, comment out for testing
-        # output_dir = os.path.join("..", "docs", "items-json")
-        # self.itemDefinition.export_json(True, output_dir)
+        output_dir = os.path.join("..", "docs", "items-json")
+        self.itemDefinition.export_json(True, output_dir)
 
     def populate_from_scraper(self):
         """Populate the itemDefinition object from the item-scraper file content."""

@@ -76,7 +76,7 @@ class DetermineNewItems:
 if __name__ == "__main__":
     # Read in the old item_scraper.json file
     print(">>> Processing OLD items_scraper.json file...")
-    fi_name = os.path.join("..", "..", "docs", "items-scraper.json")
+    fi_name = os.path.join("..", "..", "data", "items-scraper.json")
     with open(fi_name) as f:
         old_items = json.load(f)
 
