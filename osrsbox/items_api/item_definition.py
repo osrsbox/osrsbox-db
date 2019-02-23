@@ -24,8 +24,7 @@ import json
 import collections
 from typing import Dict, Optional
 
-from osrsbox.items_api import item_stats
-from osrsbox.items_api import item_equipment
+from osrsbox.items_api.item_equipment import ItemEquipment
 
 
 class ItemDefinition:
@@ -33,14 +32,14 @@ class ItemDefinition:
 
     The ItemDefinition class is the object that retains all properties and stats
     for one specific item. Every item has the properties defined in this class.
-    Equipable items have additional properties defined in the linked ItemStats
-    and ItemEquipment classes.
+    Equipable items have additional properties defined in the linked ItemEquipment
+    class.
     """
 
     def __init__(self, id=None, name=None, members=None, tradeable=None, tradeable_on_ge=None, stackable=None,
-                 noted=None, noteable=None, linked_id=None, equipable=None, cost=None, lowalch=None, highalch=None,
-                 weight=None, buy_limit=None, quest_item=None, release_date=None, examine=None, url=None, bonuses=None,
-                 equipment=None):
+                 noted=None, noteable=None, linked_id=None, equipable=None, cost=None, lowalch=None,
+                 highalch=None, weight=None, buy_limit=None, quest_item=None, release_date=None, examine=None,
+                 url=None, equipment=None):
         self.id = id
         self.name = name
         self.members = members
@@ -61,16 +60,10 @@ class ItemDefinition:
         self.examine = examine
         self.url = url
 
-        self.item_stats: Optional[item_stats.ItemStats] = None
-        self.item_equipment: Optional[item_equipment.ItemEquipment] = None
+        self.item_equipment: Optional[ItemEquipment] = None
 
         if self.equipable:
-            # TODO: convert these into proper constructors
-            self.item_stats = item_stats.ItemStats()
-            self.item_stats.load_item_stats_from_file(bonuses)
-
-            self.item_equipment = item_equipment.ItemEquipment()
-            self.item_equipment.load_item_equipment_from_file(equipment)
+            self.item_equipment = ItemEquipment(**equipment)
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON for exporting or printing.
@@ -79,12 +72,10 @@ class ItemDefinition:
         """
         json_out: Dict = collections.OrderedDict()
 
-        # TODO: maybe we can use self.__dict__ here?
-        for prop in vars(self):
+        for prop in self.__dict__:
             json_out[prop] = getattr(self, prop)
 
         if self.equipable:
-            json_out["bonuses"] = self.item_stats.construct_json()
             json_out["equipment"] = self.item_equipment.construct_json()
 
         return json_out
