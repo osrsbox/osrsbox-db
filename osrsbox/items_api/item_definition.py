@@ -73,6 +73,8 @@ class ItemDefinition:
         json_out: Dict = collections.OrderedDict()
 
         for prop in self.__dict__:
+            if prop == "item_equipment":
+                continue
             json_out[prop] = getattr(self, prop)
 
         if self.equipable:
