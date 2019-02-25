@@ -21,51 +21,38 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import collections
 from typing import Dict
-from typing import List
 
 
 class ItemEquipment:
-    """This class defines the equipment structure and properties for an OSRS item."""
-    def __init__(self):
-        self.slot = None
-        self.attack_speed = None
-        self.skill_reqs = None
+    """This class defines the properties for an equipable OSRS item.
 
-    @property
-    def slot(self) -> str:
-        """The equipment slot of an item."""
-        return self._slot
+    The ItemEquipment class is the object that retains all items properties related
+    to equipable items. This includes item stats (attack, defence bonuses) and
+    additional properties about equipment slot, attack speed and skill requirements
+    for the item.
+    """
 
-    @slot.setter
-    def slot(self, value):
-        self._slot = value
-
-    @property
-    def attack_speed(self) -> int:
-        """The attack speed of a weapon."""
-        return self._attack_speed
-
-    @attack_speed.setter
-    def attack_speed(self, value):
-        self._attack_speed = value
-
-    @property
-    def skill_reqs(self) -> List:
-        """A list of item skill requirements."""
-        return self._skill_reqs
-
-    @skill_reqs.setter
-    def skill_reqs(self, value):
-        self._skill_reqs = value
-
-    def load_item_equipment_from_file(self, item_data: Dict):
-        """Load an ItemEquipment object from an existing JSON file entry.
-
-        :param item_data: A dictionary loaded from a JSON file.
-        """
-        for prop in vars(self):
-            prop = prop[1:]
-            setattr(self, prop, item_data[prop])
+    def __init__(self, attack_stab=None, attack_slash=None, attack_crush=None, attack_magic=None,
+                 attack_ranged=None, defence_stab=None, defence_slash=None, defence_crush=None,
+                 defence_magic=None, defence_ranged=None, melee_strength=None, ranged_strength=None,
+                 magic_damage=None, prayer=None, slot=None, attack_speed=None, skill_reqs=None):
+        self.attack_stab = attack_stab
+        self.attack_slash = attack_slash
+        self.attack_crush = attack_crush
+        self.attack_magic = attack_magic
+        self.attack_ranged = attack_ranged
+        self.defence_stab = defence_stab
+        self.defence_slash = defence_slash
+        self.defence_crush = defence_crush
+        self.defence_magic = defence_magic
+        self.defence_ranged = defence_ranged
+        self.melee_strength = melee_strength
+        self.ranged_strength = ranged_strength
+        self.magic_damage = magic_damage
+        self.prayer = prayer
+        self.slot = slot
+        self.attack_speed = attack_speed
+        self.skill_reqs = skill_reqs
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON of item_equipment property for exporting or printing.
@@ -73,8 +60,7 @@ class ItemEquipment:
         :return json_out: A dictionary of all equipment properties.
         """
         json_out = collections.OrderedDict()
-        for prop in vars(self):
-            prop = prop[1:]
+        for prop in self.__dict__:
             json_out[prop] = getattr(self, prop)
 
         return json_out
