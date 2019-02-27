@@ -1,10 +1,29 @@
-# osrsbox-db [![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db)
+# osrsbox-db 
+
+[![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db) [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox)
 
 ## A complete and up-to-date database of Old School Runescape (OSRS) items
 
-This repository hosts a complete and up-to-date database of OSRS items. Complete means it holds every single items in OSRS. Up-to-date means this database is updated after every weekly game update to ensure accurate information. Current development is working towards adding a similar database for monsters and quests.
+This repository hosts a complete and up-to-date database of OSRS items. **Complete** means it holds every single items in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. Current development is working towards adding a similar database for monsters.
 
-For more user-friendly information see: 
+## The `osrsbox` Package
+
+If you just want to access the item database, it is probably more sensible to use the [`osrsbox` package available from PyPi](https://pypi.org/project/osrsbox/1.0.0/). This repo hosts the package in the `osrsbox` folder, while the other folders are used to store essential data and Python modules to build the item database. You can install the `osrsbox` package using `pip`:
+
+```
+pip install osrsbox
+```
+
+You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module directly. A simple example of using the package to print out the name of every item in OSRS is provided below:
+
+```
+>>> from osrsbox import items_api
+>>> all_db_items = items_api.load()
+>>> for item in all_db_items:
+...     print(item.id, item.name)
+```
+
+More information regarding loading and using the package can be found in the [`osrsbox` package README file](osrsbox/README.md). Additionally, for more additional information about the project see: 
 
 - https://www.osrsbox.com/projects/osrsbox-db/
 - https://www.osrsbox.com/blog/tags/Database/
