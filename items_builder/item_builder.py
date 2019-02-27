@@ -24,8 +24,6 @@ import logging
 import mwparserfromhell
 
 from osrsbox.items_api.item_definition import ItemDefinition
-from osrsbox.items_api.item_stats import ItemStats
-from osrsbox.items_api.item_equipment import ItemEquipment
 from items_builder import infobox_cleaner
 
 
@@ -43,10 +41,8 @@ class BuildItem:
         self.skill_requirements = skill_requirements  # Dictionary of item requirements
         self.current_db = current_db  # Dictionary dump of current database contents
 
-        # For this item, initialize the required objects
-        self.itemDefinition = ItemDefinition()
-        self.itemDefinition.item_stats = ItemStats()
-        self.itemDefinition.item_equipment = ItemEquipment()
+        # For this item, create dictionary for property storage
+        self.item_dict = dict()
 
         # Setup logging
         logging.basicConfig(filename="builder.log",
@@ -78,7 +74,7 @@ class BuildItem:
             "examine",
             "url"]
 
-        self.stat_properties = [
+        self.equipment_properties = [
             "attack_stab",
             "attack_slash",
             "attack_crush",
@@ -92,9 +88,7 @@ class BuildItem:
             "melee_strength",
             "ranged_strength",
             "magic_damage",
-            "prayer"]
-
-        self.equipment_properties = [
+            "prayer",
             "attack_speed",
             "slot",
             "skill_reqs"]
@@ -105,20 +99,13 @@ class BuildItem:
         self.logger.debug("============================================ START")
         self.logger.debug(f"item_id: {self.item_id}")
 
-        # STAGE ZERO: CREATE OBJECTS
-        self.logger.debug("STAGE ZERO: Create object...")
-
-        # Also, load blank equipable item properties
-        if self.itemDefinition.equipable:
-            self.equipable_item_set_default()
-
         # STAGE ONE: LOAD ITEM SCRAPER DATA
         self.logger.debug("STAGE ONE: Loading item-scraper.json data to object...")
 
         self.populate_from_scraper()
 
-        self.logger.debug(f"id: {self.itemDefinition.id}|name: {self.itemDefinition.name}")
-        # print(f"<<<<<<<<<<<<<< id: {self.itemDefinition.id}\tname: {self.itemDefinition.name}")
+        self.logger.debug(f'id: {self.item_dict["id"]}|name: {self.item_dict["name"]}')
+        # print(f'>>> id: {self.item_dict["id"]}\tname: {self.item_dict["name"]}')
 
         # STAGE TWO: DETERMINE WIKI PAGE
         self.logger.debug("STAGE TWO: Determining OSRS Wiki page...")
@@ -129,14 +116,14 @@ class BuildItem:
         # # You must comment out the normalization lookup in determine_wiki_page
         # # WARNING: Does not check equipable item infobox extraction errors!
         # if not has_wiki_page:
-        #     if str(self.itemDefinition.id) in self.normalized_names:
-        #         normalized_name = self.normalized_names[str(self.itemDefinition.id)][1]
+        #     if str(self.item_dict["id"]) in self.normalized_names:
+        #         normalized_name = self.normalized_names[str(self.item_dict["id"])][1]
         #         if normalized_name == "" or not normalized_name:
-        #             normalized_name = self.itemDefinition.name
-        #         status = self.normalized_names[str(self.itemDefinition.id)][2]
-        #         print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{normalized_name}|{status}")
+        #             normalized_name = self.item_dict["name"]
+        #         status = self.normalized_names[str(self.item_dict["id"])][2]
+        #         print(f"{self.item_dict["id"]}|{self.item_dict["name"]}|{normalized_name}|{status}")
         #     else:
-        #         print(f"TODO:{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|X")
+        #         print(f"TODO:{self.item_dict["id"]}|{self.item_dict["name"]}|{self.item_dict["name"]}|X")
 
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
@@ -180,7 +167,9 @@ class BuildItem:
         # STAGE FOUR: PARSE INFOBOX FOR EQUIPABLE ITEMS
         self.logger.debug("STAGE FIVE: Parsing the bonuses...")
 
-        if self.itemDefinition.equipable and has_wiki_page:
+        self.item_dict["equipment"] = dict()
+
+        if self.item_dict["equipable"] and has_wiki_page:
             # Continue processing... but only if the item is equipable
             has_infobox_bonuses = self.extract_bonuses()
             if has_infobox_bonuses:
@@ -191,10 +180,19 @@ class BuildItem:
                 print(">>> ERROR: Could not determine equipable item bonuses...")
                 quit()
 
+        # Create ItemDefintion object
+        if "wiki_name" in self.item_dict:
+            del self.item_dict["wiki_name"]
+        if "store_price" in self.item_dict:
+            del self.item_dict["store_price"]
+        if "seller" in self.item_dict:
+            del self.item_dict["seller"]
+        self.itemDefinition = ItemDefinition(**self.item_dict)
+
         # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
         self.logger.debug("STAGE FIVE: Compare object to existing database entry...")
 
-        self.compare_json_files()
+        self.compare_json_files(self.itemDefinition)
         json_out = self.itemDefinition.construct_json()
         self.logger.debug(json_out)
 
@@ -206,44 +204,44 @@ class BuildItem:
 
     def populate_from_scraper(self):
         """Populate the itemDefinition object from the item-scraper file content."""
-        self.itemDefinition.id = self.item_json["id"]
+        self.item_dict["id"] = self.item_json["id"]
         if self.item_json["name"] in [None, "null", "Null", ""]:
-            self.itemDefinition.name = None
+            self.item_dict["name"] = None
         else:
-            self.itemDefinition.name = self.item_json["name"]
+            self.item_dict["name"] = self.item_json["name"]
         # Need to set these properties
-        self.itemDefinition.members = self.item_json["members"]
-        self.itemDefinition.tradeable_on_ge = self.item_json["tradeable_on_ge"]
-        self.itemDefinition.stackable = self.item_json["stackable"]
-        self.itemDefinition.noted = self.item_json["noted"]
-        self.itemDefinition.noteable = self.item_json["noteable"]
-        self.itemDefinition.linked_id = self.item_json["linked_id"]
-        self.itemDefinition.equipable = self.item_json["equipable"]
-        self.itemDefinition.cost = self.item_json["cost"]
-        self.itemDefinition.lowalch = self.item_json["lowalch"]
-        self.itemDefinition.highalch = self.item_json["highalch"]
+        self.item_dict["members"] = self.item_json["members"]
+        self.item_dict["tradeable_on_ge"] = self.item_json["tradeable_on_ge"]
+        self.item_dict["stackable"] = self.item_json["stackable"]
+        self.item_dict["noted"] = self.item_json["noted"]
+        self.item_dict["noteable"] = self.item_json["noteable"]
+        self.item_dict["linked_id"] = self.item_json["linked_id"]
+        self.item_dict["equipable"] = self.item_json["equipable"]
+        self.item_dict["cost"] = self.item_json["cost"]
+        self.item_dict["lowalch"] = self.item_json["lowalch"]
+        self.item_dict["highalch"] = self.item_json["highalch"]
 
     def determine_wiki_page(self):
         """Determine the OSRS Wiki page/url/name using the item name."""
         # Set the initial wiki_name property to the actual item name
         # This may change depending on the item lookup success/failure
-        wiki_name = self.itemDefinition.name
+        wiki_name = self.item_dict["name"]
 
         # PHASE ONE: Check if the item name is in the OSRS Wiki item dump using normalized name
 
-        if str(self.itemDefinition.id) in self.normalized_names:
+        if str(self.item_dict["id"]) in self.normalized_names:
             self.logger.debug(">>> ITEM FOUND IN NORMALIZED")
             # Determine normalized wiki name using lookup
-            normalized_name = self.normalized_names[str(self.itemDefinition.id)][1]
+            normalized_name = self.normalized_names[str(self.item_dict["id"])][1]
             # Set wiki URL and name
             wiki_url = normalized_name.replace(" ", "_")
             wiki_url = wiki_url.replace("'", "%27")
             wiki_url = wiki_url.replace("&", "%26")
             wiki_url = wiki_url.replace("+", "%2B")
-            self.itemDefinition.url = f"https://oldschool.runescape.wiki/w/{wiki_url}"
-            self.itemDefinition.wiki_name = normalized_name
+            self.item_dict["url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
+            self.item_dict["wiki_name"] = normalized_name
             # Set item status code
-            self.status_code = int(self.normalized_names[str(self.itemDefinition.id)][2])
+            self.status_code = int(self.normalized_names[str(self.item_dict["id"])][2])
             # Item name found in dump using normalization, return True
             return True
 
@@ -252,15 +250,15 @@ class BuildItem:
         if wiki_name in self.wiki_text:
             self.logger.debug(">>> ITEM FOUND")
             # Set wiki URL and name
-            wiki_url = self.itemDefinition.name.replace(" ", "_")
+            wiki_url = self.item_dict["name"].replace(" ", "_")
             wiki_url = wiki_url.replace("'", "%27")
             wiki_url = wiki_url.replace("&", "%26")
             wiki_url = wiki_url.replace("+", "%2B")
-            self.itemDefinition.url = f"https://oldschool.runescape.wiki/w/{wiki_url}"
-            self.itemDefinition.wiki_name = self.itemDefinition.name
+            self.item_dict["url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
+            self.item_dict["wiki_name"] = self.item_dict["name"]
             # Set item status code, try/except as it may not be in list
             try:
-                self.status_code = int(self.normalized_names[str(self.itemDefinition.id)][2])
+                self.status_code = int(self.normalized_names[str(self.item_dict["name"])][2])
             except KeyError:
                 self.status_code = 0  # Zero is no issue with item, direct lookup
             # Item name found in dump without normalization, return True
@@ -277,7 +275,7 @@ class BuildItem:
         self.template_bonuses = None
 
         try:
-            wiki_text_entry = self.wiki_text[self.itemDefinition.wiki_name]
+            wiki_text_entry = self.wiki_text[self.item_dict["wiki_name"]]
             wikicode = mwparserfromhell.parse(wiki_text_entry)
         except KeyError:
             # The wiki_name was not found in the available dumped wikitext pages
@@ -306,7 +304,7 @@ class BuildItem:
             return False
 
         # If any equipable item, and no bonuses was found, return false
-        if self.itemDefinition.equipable and not self.template_bonuses:
+        if self.item_dict["equipable"] and not self.template_bonuses:
             self.logger.debug("extract_infobox: not self.template_bonuses")
             return False
 
@@ -355,7 +353,7 @@ class BuildItem:
                     i = 1
                     while i <= version_count:
                         versioned_name = version_identifier + str(i)
-                        if self.itemDefinition.name == template.get(versioned_name).value.strip():
+                        if self.item_dict["name"] == template.get(versioned_name).value.strip():
                             self.current_version = i
                         i += 1
                 except ValueError:
@@ -374,7 +372,7 @@ class BuildItem:
         if weight is None:
             weight = self.extract_infobox_value(template, "weight")
         if weight is not None:
-            self.itemDefinition.weight = infobox_cleaner.clean_weight(weight)
+            self.item_dict["weight"] = infobox_cleaner.clean_weight(weight)
 
         # QUEST: Determine if item is associated with a quest ()
         quest = None
@@ -384,7 +382,7 @@ class BuildItem:
         if quest is None:
             quest = self.extract_infobox_value(template, "quest")
         if quest is not None:
-            self.itemDefinition.quest_item = infobox_cleaner.clean_quest(quest)
+            self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
 
         # Determine the release date of an item ()
         release_date = None
@@ -394,7 +392,7 @@ class BuildItem:
         if release_date is None:
             release_date = self.extract_infobox_value(template, "release")
         if release_date is not None:
-            self.itemDefinition.release_date = infobox_cleaner.clean_release_date(release_date)
+            self.item_dict["release_date"] = infobox_cleaner.clean_release_date(release_date)
 
         # Determine if item has a store price ()
         store_price = None
@@ -404,7 +402,7 @@ class BuildItem:
         if store_price is None:
             store_price = self.extract_infobox_value(template, "store")
         if store_price is not None:
-            self.itemDefinition.store_price = infobox_cleaner.clean_store_price(store_price)
+            self.item_dict["store_price"] = infobox_cleaner.clean_store_price(store_price)
 
         # Determine if item has a store price ()
         seller = None
@@ -414,7 +412,7 @@ class BuildItem:
         if seller is None:
             seller = self.extract_infobox_value(template, "seller")
         if seller is not None:
-            self.itemDefinition.seller = infobox_cleaner.clean_seller(seller)
+            self.item_dict["seller"] = infobox_cleaner.clean_seller(seller)
 
         # Determine the examine text of an item ()
         tradeable = None
@@ -424,9 +422,9 @@ class BuildItem:
         if tradeable is None:
             tradeable = self.extract_infobox_value(template, "tradeable")
         if tradeable is not None:
-            self.itemDefinition.tradeable = infobox_cleaner.clean_tradeable(tradeable)
+            self.item_dict["tradeable"] = infobox_cleaner.clean_tradeable(tradeable)
         else:
-            self.itemDefinition.tradeable = False
+            self.item_dict["tradeable"] = False
 
         # Determine the examine text of an item ()
         examine = None
@@ -436,7 +434,7 @@ class BuildItem:
         if examine is None:
             examine = self.extract_infobox_value(template, "examine")
         if examine is not None:
-            self.itemDefinition.examine = infobox_cleaner.clean_examine(examine, self.itemDefinition.name)
+            self.item_dict["examine"] = infobox_cleaner.clean_examine(examine, self.item_dict["name"])
         else:
             # Being here means the extraction for "examine" failed
             key = "itemexamine" + str(self.current_version)
@@ -444,18 +442,18 @@ class BuildItem:
             if examine is None:
                 examine = self.extract_infobox_value(template, "itemexamine")
             if examine is not None:
-                self.itemDefinition.examine = infobox_cleaner.clean_examine(examine, self.itemDefinition.name)
+                self.item_dict["examine"] = infobox_cleaner.clean_examine(examine, self.item_dict["name"])
 
         # Determine if item has a buy limit ()
-        if not self.itemDefinition.tradeable:
-            self.itemDefinition.buy_limit = None
+        if not self.item_dict["tradeable"]:
+            self.item_dict["buy_limit"] = None
         else:
             try:
-                self.itemDefinition.buy_limit = int(self.buy_limits[self.itemDefinition.name])
-                if self.itemDefinition.noted:
-                    self.itemDefinition.buy_limit = None
+                self.item_dict["buy_limit"] = int(self.buy_limits[self.item_dict["name"]])
+                if self.item_dict["noted"]:
+                    self.item_dict["buy_limit"] = None
             except KeyError:
-                self.itemDefinition.buy_limit = None
+                self.item_dict["buy_limit"] = None
 
         return True
 
@@ -484,7 +482,7 @@ class BuildItem:
         """
         # Extract Infobox Bonuses from wikitext
         try:
-            wikicode = mwparserfromhell.parse(self.wiki_text[self.itemDefinition.wiki_name])
+            wikicode = mwparserfromhell.parse(self.wiki_text[self.item_dict["wiki_name"]])
         except KeyError:
             return False
         templates = wikicode.filter_templates()
@@ -501,46 +499,49 @@ class BuildItem:
 
         :param template: A mediawiki wiki text template.
         """
-        self.itemDefinition.item_stats.attack_stab = self.clean_bonuses_value(template, "astab")
-        self.itemDefinition.item_stats.attack_slash = self.clean_bonuses_value(template, "aslash")
-        self.itemDefinition.item_stats.attack_crush = self.clean_bonuses_value(template, "acrush")
-        self.itemDefinition.item_stats.attack_magic = self.clean_bonuses_value(template, "amagic")
-        self.itemDefinition.item_stats.attack_ranged = self.clean_bonuses_value(template, "arange")
-        self.itemDefinition.item_stats.defence_stab = self.clean_bonuses_value(template, "dstab")
-        self.itemDefinition.item_stats.defence_slash = self.clean_bonuses_value(template, "dslash")
-        self.itemDefinition.item_stats.defence_crush = self.clean_bonuses_value(template, "dcrush")
-        self.itemDefinition.item_stats.defence_magic = self.clean_bonuses_value(template, "dmagic")
-        self.itemDefinition.item_stats.defence_ranged = self.clean_bonuses_value(template, "drange")
-        self.itemDefinition.item_stats.melee_strength = self.clean_bonuses_value(template, "str")
-        self.itemDefinition.item_stats.ranged_strength = self.clean_bonuses_value(template, "rstr")
-        self.itemDefinition.item_stats.magic_damage = self.clean_bonuses_value(template, "mdmg")
-        self.itemDefinition.item_stats.prayer = self.clean_bonuses_value(template, "prayer")
+        self.item_dict["equipment"]["attack_stab"] = self.clean_bonuses_value(template, "astab")
+        self.item_dict["equipment"]["attack_slash"] = self.clean_bonuses_value(template, "aslash")
+        self.item_dict["equipment"]["attack_crush"] = self.clean_bonuses_value(template, "acrush")
+        self.item_dict["equipment"]["attack_magic"] = self.clean_bonuses_value(template, "amagic")
+        self.item_dict["equipment"]["attack_ranged"] = self.clean_bonuses_value(template, "arange")
+        self.item_dict["equipment"]["defence_stab"] = self.clean_bonuses_value(template, "dstab")
+        self.item_dict["equipment"]["defence_slash"] = self.clean_bonuses_value(template, "dslash")
+        self.item_dict["equipment"]["defence_crush"] = self.clean_bonuses_value(template, "dcrush")
+        self.item_dict["equipment"]["defence_magic"] = self.clean_bonuses_value(template, "dmagic")
+        self.item_dict["equipment"]["defence_ranged"] = self.clean_bonuses_value(template, "drange")
+        self.item_dict["equipment"]["melee_strength"] = self.clean_bonuses_value(template, "str")
+        self.item_dict["equipment"]["ranged_strength"] = self.clean_bonuses_value(template, "rstr")
+        self.item_dict["equipment"]["magic_damage"] = self.clean_bonuses_value(template, "mdmg")
+        self.item_dict["equipment"]["prayer"] = self.clean_bonuses_value(template, "prayer")
 
+        self.item_dict["equipment"]["slot"] = None
         try:
-            self.itemDefinition.item_equipment.slot = self.strip_infobox(template.get("slot").value)
-            self.itemDefinition.item_equipment.slot = self.itemDefinition.item_equipment.slot.lower()
+            self.item_dict["equipment"]["slot"] = self.strip_infobox(template.get("slot").value)
+            self.item_dict["equipment"]["slot"] = self.item_dict["equipment"]["slot"].lower()
         except ValueError:
-            self.itemDefinition.item_equipment.slot = None
+            self.item_dict["equipment"]["slot"] = None
             self.logger.critical("Could not determine equipable item slot")
 
         # If item is weapon, two-handed, or 2h determine attack speed
-        if (self.itemDefinition.item_equipment.slot == "weapon" or
-                self.itemDefinition.item_equipment.slot == "two-handed" or
-                self.itemDefinition.item_equipment.slot == "2h"):
+        self.item_dict["equipment"]["attack_speed"] = None
+        if (self.item_dict["equipment"]["slot"] == "weapon" or
+                self.item_dict["equipment"]["slot"] == "two-handed" or
+                self.item_dict["equipment"]["slot"] == "2h"):
             try:
-                self.itemDefinition.item_equipment.attack_speed = int(self.strip_infobox(template.get("aspeed").value))
+                self.item_dict["equipment"]["attack_speed"] = int(self.strip_infobox(template.get("aspeed").value))
             except ValueError:
-                self.itemDefinition.item_equipment.attack_speed = None
+                self.item_dict["equipment"]["attack_speed"] = None
                 self.logger.critical("Could not determine equipable item attack speed")
-        if self.itemDefinition.item_equipment.attack_speed == 0:
-            self.itemDefinition.item_equipment.attack_speed = None
+        if self.item_dict["equipment"]["attack_speed"] == 0:
+            self.item_dict["equipment"]["attack_speed"] = None
 
         # Fetch item skill requirements
+        self.item_dict["equipment"]["skill_reqs"] = None
         try:
             skill_reqs = self.skill_requirements[str(self.item_id)]
-            self.itemDefinition.item_equipment.skill_reqs = skill_reqs
+            self.item_dict["equipment"]["skill_reqs"] = skill_reqs
         except KeyError:
-            self.itemDefinition.item_equipment.skill_reqs = None
+            self.item_dict["equipment"]["skill_reqs"] = None
 
         return True
 
@@ -593,26 +594,25 @@ class BuildItem:
 
     def equipable_item_set_default(self):
         """Set a default item_stats and item_equipment object."""
-        self.itemDefinition.item_stats.attack_stab = 0
-        self.itemDefinition.item_stats.attack_slash = 0
-        self.itemDefinition.item_stats.attack_crush = 0
-        self.itemDefinition.item_stats.attack_magic = 0
-        self.itemDefinition.item_stats.attack_ranged = 0
-        self.itemDefinition.item_stats.defence_stab = 0
-        self.itemDefinition.item_stats.defence_slash = 0
-        self.itemDefinition.item_stats.defence_crush = 0
-        self.itemDefinition.item_stats.defence_magic = 0
-        self.itemDefinition.item_stats.defence_ranged = 0
-        self.itemDefinition.item_stats.melee_strength = 0
-        self.itemDefinition.item_stats.ranged_strength = 0
-        self.itemDefinition.item_stats.magic_damage = 0
-        self.itemDefinition.item_stats.prayer = 0
+        self.item_dict["equipment"]["attack_stab"] = 0
+        self.item_dict["equipment"]["attack_slash"] = 0
+        self.item_dict["equipment"]["attack_crush"] = 0
+        self.item_dict["equipment"]["attack_magic"] = 0
+        self.item_dict["equipment"]["attack_ranged"] = 0
+        self.item_dict["equipment"]["defence_stab"] = 0
+        self.item_dict["equipment"]["defence_slash"] = 0
+        self.item_dict["equipment"]["defence_crush"] = 0
+        self.item_dict["equipment"]["defence_magic"] = 0
+        self.item_dict["equipment"]["defence_ranged"] = 0
+        self.item_dict["equipment"]["melee_strength"] = 0
+        self.item_dict["equipment"]["ranged_strength"] = 0
+        self.item_dict["equipment"]["magic_damage"] = 0
+        self.item_dict["equipment"]["prayer"] = 0
+        self.item_dict["equipment"]["slot"] = None
+        self.item_dict["equipment"]["attack_speed"] = None
+        self.item_dict["equipment"]["skill_reqs"] = None
 
-        self.itemDefinition.item_equipment.slot = None
-        self.itemDefinition.item_equipment.attack_speed = None
-        self.itemDefinition.item_equipment.skill_reqs = None
-
-    def compare_json_files(self) -> bool:
+    def compare_json_files(self, itemDefinition: ItemDefinition) -> bool:
         """Print the difference between this item object, and the item that exists in the database.
 
         :return changed: A boolean if the item is different, or not.
@@ -621,7 +621,7 @@ class BuildItem:
         changes = dict()
 
         # Create JSON out object to compare
-        current_json = self.itemDefinition.construct_json()
+        current_json = itemDefinition.construct_json()
 
         # Try get existing entry (KeyError means it doesn't exist - aka a new item)
         try:
@@ -635,12 +635,7 @@ class BuildItem:
                 changes[prop] = [current_json[prop], existing_json[prop]]
 
                 # Also check equipable
-                if self.itemDefinition.equipable:
-                    for stats_prop in self.stat_properties:
-                        if current_json["bonuses"][stats_prop] != existing_json["bonuses"][stats_prop]:
-                            changed = True
-                            changes[stats_prop] = [current_json["bonuses"][stats_prop],
-                                                   existing_json["bonuses"][stats_prop]]
+                if itemDefinition.equipable:
                     for equipment_prop in self.equipment_properties:
                         if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
                             changed = True
@@ -649,7 +644,7 @@ class BuildItem:
 
         # Print any item changes
         if changed:
-            print(f">>>>>>>>>>> id: {self.itemDefinition.id}\tname: {self.itemDefinition.name}")
+            print(f">>>>>>>>>>> id: {itemDefinition.id}\tname: {itemDefinition.name}")
             for prop in changes:
                 print("+++ MISMATCH!:", prop)
                 print("TYPES:", type(changes[prop][1]), type(changes[prop][0]))
