@@ -12,11 +12,19 @@ Current development is working towards adding a similar database for monsters.
 
 ## Project Requirements
 
+For the `osrsbox` package (see below) and any scripts in this repository you will need:
+
 - Python 3.6 or above
+
+If using this repository (the development version), you will also need a variety of Python packages. These are split into the general requirements documented in the [`requirements.txt`](requirements.txt) file, and additional development requirements for testing and building located in the [`requirements_dev.txt`](requirements_dev.txt). It is recommended to use `virtualenv` to setup your environment, for example:
+
+```
+pip install -r requirements.txt
+```
 
 ## The `osrsbox` Package
 
-If you just want to access the item database programmatically, it is probably more sensible to use the [`osrsbox` package available from PyPi](https://pypi.org/project/osrsbox/). Basically, you can load the item database and loop item objects and their properties. 
+If you just want to access the item database programmatically, it is probably more sensible to use the [`osrsbox` package available from PyPi](https://pypi.org/project/osrsbox/). Basically, you can load the item database and process item objects and their properties. 
 
 This repo hosts the package in the `osrsbox` folder, while the other folders are used to store essential data and Python modules to build the item database. You can install the `osrsbox` package using `pip`:
 
@@ -24,7 +32,7 @@ This repo hosts the package in the `osrsbox` folder, while the other folders are
 pip install osrsbox
 ```
 
-You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module directly. A simple example of using the package to print out the name of every item in OSRS is provided below:
+You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module directly. A simple example of importing the `items_api` module, loading the item database, and printing out the ID and name of every item in OSRS is provided below:
 
 ```
 >>> from osrsbox import items_api
@@ -35,7 +43,7 @@ You can load the package using `import osrsbox`, however, you probably want to l
 
 ## Additional Documentation
 
-More information regarding loading and using the package can be found in the [`osrsbox` package README file](osrsbox/README.md). Additionally, for more additional information about the project see: 
+More information regarding loading and using the package can be found in the [`osrsbox` package README file](osrsbox/README.md). Additionally, for detailed information about the project see the [OSRSBox](https://www.osrsbox.com/) website for the official project page, and the _Database_ tag to find blog posts about the project: 
 
 - https://www.osrsbox.com/projects/osrsbox-db/
 - https://www.osrsbox.com/blog/tags/Database/
@@ -55,3 +63,6 @@ More information regarding loading and using the package can be found in the [`o
 - `test`: A collection of unit tests
 - `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update that have been added to the database.
  
+ ## Project Feedback and Contribution
+
+I would thoroughly appreciate any feedback regarding the OSRSBox database project, especially problems with the inaccuracies of the data provided in the database. So if encounter any issue, could you please let me know. The same goes for any discovered bugs, or if you have a specific feature request. The best method is to [open a new Github issue](https://github.com/osrsbox/osrsbox-db/issues) in the project repository. In addition, please feel free to submit a pull request if you have code that you wish to contribute - I would thoroughly appreciate the helping hand. For any code contributions, the best method is to [open a new GitHub pull request](https://github.com/osrsbox/osrsbox-db/pulls) in the project repository.
