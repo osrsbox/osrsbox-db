@@ -40,7 +40,7 @@ def test_osrs_cache_data_compression(test_data, expected):
 @pytest.mark.parametrize("cache_type,expected", [
     ("items", 23110),
     ("npcs", 8645),
-    ("objects", 34705)
+    ("objects", 34713)
 ])
 def test_osrs_cache_data_decompression(path_to_cache_dir: Path, cache_type, expected):
     path_to_cache_file = path_to_cache_dir / f"{cache_type}.json"
