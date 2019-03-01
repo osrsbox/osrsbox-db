@@ -1,3 +1,12 @@
+### 2019/02/28: QoL and CoX Changes
+- Added items: 0
+- Removed items: 0
+- Changed items: 4
+    - 13648,Clue bottle (easy),highalch|lowalch|cost
+    - 13649,Clue bottle (medium),highalch|lowalch|cost
+    - 13650,Clue bottle (hard),highalch|lowalch|cost
+    - 13651,Clue bottle (elite),highalch|lowalch|cost
+
 ### 2019/02/21: 6th Birthday and QoL
 - Added items: 19
     - 23091,Ornate gloves
