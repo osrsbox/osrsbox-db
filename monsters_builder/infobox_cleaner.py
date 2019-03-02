@@ -93,7 +93,7 @@ def clean_combat_level(value: str) -> int:
     """
     # Handle: None, empty string, N/A string
     if value is None or "N/A" in value or value == "":
-        return None
+        return 0
 
     # For: https://oldschool.runescape.wiki/w/Mummy#Lv_96
     # {{*}} 96<br>'''Alight:'''<br>{{*}} 98

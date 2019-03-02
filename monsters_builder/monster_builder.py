@@ -175,15 +175,12 @@ class BuildMonster:
         # print(self.cache_combat_level)
 
         # CODE BLOCK TO DETERMINE COMBAT LEVEL DIFFERENCES BETWEEN CACHE AND OSRS WIKI
-        # if self.monster_dict["combat"]:
-        #     if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
-        #         print(f"ERROR: monster_id: {self.monster_id}, wiki_name: {self.wiki_name}")
-        #         print("ON WIKI: ", self.monster_dict["combat"])
-        #         print("IN CACHE:", self.cache_combat_level)
-        # else:
-        #     print(f"ERROR: monster_id: {self.monster_id}, wiki_name: {self.wiki_name}")
-        #     print("ON WIKI: ", self.monster_dict["combat"])
-        #     print("IN CACHE:", self.cache_combat_level)
+        if self.monster_dict["combat"]:
+            if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
+                print(f'{self.monster_id},{self.wiki_name},{self.monster_dict["combat"]},{self.cache_combat_level}')
+        else:
+            if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
+                print(f'{self.monster_id},{self.wiki_name},{self.monster_dict["combat"]},{self.cache_combat_level}')
 
         # HIT_POINTS: Determine the hitpoints of a monster (tested: False)
         key = "hitpoints" + str(self.infobox_version)
@@ -277,8 +274,6 @@ class BuildMonster:
         :param prop: The key to query in the template.
         :return value: The extracted template value that has been int cast.
         """
-        value = None
-
         # Try and get the versioned infobox value
         key = prop + str(self.infobox_version)
         value = self.extract_infobox_value(self.monster_template, key)
