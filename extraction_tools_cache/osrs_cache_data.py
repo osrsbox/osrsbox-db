@@ -185,27 +185,18 @@ def compress_all_cache_types(root_path_of_cache_dump: str):
     print(f">>> Processing cache dump in the following root path: {root_path_of_cache_dump}")
     for cache_dump_type in osrs_cache_constants.CACHE_DUMP_TYPES:
         full_path = os.path.join(root_path_of_cache_dump, cache_dump_type, "")
-        output_json_file = f"{cache_dump_type}.json"
+        output_json_file_path = os.path.dirname(os.path.realpath(__file__))
+        output_json_file_name = f"{cache_dump_type}.json"
+        output_json_file = os.path.join(output_json_file_path, output_json_file_name)
         compress_single_cache_type(full_path, output_json_file)
 
 
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-d",
-                    "--directory",
-                    help="<Required> Directory to compress",
-                    required=True)
-    ap.add_argument("-a",
-                    action="store_true",
-                    default=False)
-    args = vars(ap.parse_args())
+def main(cache_dump_path: str, process_all: bool):
+    """Main function for compressing OSRS cache data
 
-    # Set path as provided by the user
-    cache_dump_path = args["directory"]
-    # Determine if the user want to compress all, or one, dump
-    process_all = args["a"]
-
+    :param cache_dump_path: The location of the cache directories exported by RuneLite
+    :param process_all: Boolean to toggle processing of all cache dumps (items, npcs, objects)
+    """
     # Check if the supplied directory argument is actually a directory
     if os.path.isdir(cache_dump_path):
         # Check for trailing slash
@@ -222,3 +213,23 @@ if __name__ == "__main__":
         # Compress a single cache definition type
         out_file_name = f"{cache_dump_path}.json"
         compress_single_cache_type(cache_dump_path, out_file_name)
+
+
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-d",
+                    "--directory",
+                    help="<Required> Directory to compress",
+                    required=True)
+    ap.add_argument("-a",
+                    action="store_true",
+                    default=False)
+    args = vars(ap.parse_args())
+
+    # Set path as provided by the user
+    cache_path = args["directory"]
+    # Determine if the user wants to compress all, or one, dump
+    process_mode = args["a"]
+
+    main(cache_path, process_mode)

@@ -35,19 +35,13 @@ import pathlib
 from extraction_tools_cache import osrs_cache_data
 
 
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-c",
-                    "--cache",
-                    required=True,
-                    help="The compressed cache definitions file to process (npcs.json).")
-    args = vars(ap.parse_args())
-    path_to_compressed_json_file = args["cache"]
+def main(compressed_json_file_path: str):
+    """Main function to extract attackble NPC definition files
 
+    :param compressed_json_file_path: Compressed cache file
+    """
     attackable_npcs = {}
-
-    compressed_json_file = pathlib.Path() / path_to_compressed_json_file
+    compressed_json_file = pathlib.Path() / compressed_json_file_path
 
     # Load and decompress the compressed definition file
     definitions = osrs_cache_data.CacheDefinitionFiles(compressed_json_file)
@@ -68,3 +62,16 @@ if __name__ == "__main__":
     out_fi = pathlib.Path() / ".." / "data" / "attackable-npcs.json"
     with open(out_fi, "w", newline="\n") as f:
         json.dump(attackable_npcs, f)
+
+
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-c",
+                    "--cache",
+                    required=True,
+                    help="The compressed cache definitions file to process (npcs.json).")
+    args = vars(ap.parse_args())
+    path_to_compressed_json_file = args["cache"]
+
+    main(path_to_compressed_json_file)
