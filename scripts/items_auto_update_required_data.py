@@ -40,7 +40,7 @@ if __name__ == '__main__':
     extract_model_ids.main(cache_dump_path)
 
     print(">>> ATTACKABLE NPCS: Extracting and merging OSRS attackable NPC definition files...")
-    cache_dump_path_npcs = os.path.join("..", "extraction_tools_cache", "npcs", "")
+    cache_dump_path_npcs = os.path.join("..", "extraction_tools_cache", "npcs.json")
     extract_attackable_npcs.main(cache_dump_path_npcs)
 
     # STAGE TWO: Handle all OSRS Wiki data dumps
