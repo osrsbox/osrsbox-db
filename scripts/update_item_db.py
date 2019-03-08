@@ -26,6 +26,7 @@ from extraction_tools_cache import osrs_cache_constants
 from extraction_tools_cache import osrs_cache_data
 from extraction_tools_cache import extract_model_ids
 from extraction_tools_cache import extract_attackable_npcs
+from extraction_tools_wiki import extract_wiki_data
 
 
 if __name__ == '__main__':
@@ -43,6 +44,15 @@ if __name__ == '__main__':
     extract_attackable_npcs.main(cache_dump_path_npcs)
 
     # STAGE TWO: Handle all OSRS Wiki data dumps
+    print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
+    categories = ["Items", "Construction", "Furniture", "Pets"]
+    extract_wiki_data.main(categories)
+    print(f">>> WIKI DATA MONSTERS: Extracting page titles and wiki text...")
+    categories = ["Monsters"]
+    extract_wiki_data.main(categories)
+    print(f">>> WIKI DATA QUESTS: Extracting page titles and wiki text...")
+    categories = ["Quests", "Miniquests", "Special_quests"]
+    extract_wiki_data.main(categories)
 
     # STAGE THREE: Determine, then print any manual updates required (usually for tests)
     print(">>> Manual updates required:")

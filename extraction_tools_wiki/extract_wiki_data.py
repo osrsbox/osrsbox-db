@@ -29,6 +29,7 @@ import sys
 import json
 import datetime
 import itertools
+from typing import List
 
 from extraction_tools_wiki.wiki_page_titles import WikiPageTitles
 from extraction_tools_wiki.wiki_page_text import WikiPageText
@@ -36,20 +37,14 @@ from extraction_tools_wiki.wiki_page_text import WikiPageText
 
 OSRS_WIKI_API_URL = "https://oldschool.runescape.wiki/api.php"
 
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-c",
-                    "--categories",
-                    nargs="+",
-                    help="<Required> List of OSRS Wiki categories to extract",
-                    required=True)
-    args = vars(ap.parse_args())
 
-    # List of categories to process from the OSRS Wiki
-    target_categories = args["categories"]
+def main(categories: List):
+    """The main function for extracting OSRS Wiki category page titles and page wiki text.
+
+    :param categories: A List containing categories
+    """
     # The first category argument, used to build the output file name
-    primary_category = target_categories[0].lower()
+    primary_category = categories[0].lower()
 
     # Specify the name for the page titles output JSON file
     titles_file_path = f"extract_page_titles_{primary_category}.json"
@@ -75,7 +70,7 @@ if __name__ == "__main__":
     print(">>> Starting wiki page titles extraction...")
     # Create object to handle page titles extraction
     wiki_page_titles = WikiPageTitles(OSRS_WIKI_API_URL,
-                                      target_categories,
+                                      categories,
                                       user_agent,
                                       user_email)
 
@@ -137,3 +132,18 @@ if __name__ == "__main__":
         wiki_page_text.export_wiki_text_to_json(text_file_path)
 
         page_titles_count += 1
+
+
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-c",
+                    "--categories",
+                    nargs="+",
+                    help="<Required> List of OSRS Wiki categories to extract",
+                    required=True)
+    args = vars(ap.parse_args())
+
+    # List of categories to process from the OSRS Wiki
+    target_categories = args["categories"]
+    main(target_categories)
