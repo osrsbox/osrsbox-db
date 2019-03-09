@@ -1,3 +1,13 @@
+### 2019/03/07: QoL and W45 Changes
+- Added items: 0
+- Removed items: 0
+- Changed items: 5
+    - 23103,Cook's shopping list,name
+    - 23104,Cook's letter,name
+    - 23105,Brewer's folly,name
+    - 23106,Vyvin's wine,name
+    - 23107,Beer glass of water,name
+
 ### 2019/02/28: QoL and CoX Changes
 - Added items: 0
 - Removed items: 0
