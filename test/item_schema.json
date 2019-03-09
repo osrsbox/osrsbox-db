@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "title": "Item",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "members": {
+        "type": "boolean"
+      },
+      "tradeable": {
+        "type": ["boolean", "null"]
+      },
+      "tradeable_on_ge": {
+        "type": "boolean"
+      },
+      "stackable": {
+        "type": "boolean"
+      },
+      "noted": {
+        "type": "boolean"
+      },
+      "noteable": {
+        "type": "boolean"
+      },
+      "linked_id": {
+        "type": ["integer", "null"]
+      },
+      "equipable": {
+        "type": "boolean"
+      },
+      "cost": {
+        "type": "integer"
+      },
+      "lowalch": {
+        "type": "integer"
+      },
+      "highalch": {
+        "type": "integer"
+      },
+      "weight": {
+        "type": ["number", "null"]
+      },
+      "buy_limit": {
+        "type": ["integer", "null"]
+      },
+      "quest_item": {
+        "type": ["boolean", "null"]
+      },
+      "release_date": {
+        "type": ["string", "null"]
+      },
+      "examine": {
+        "type": ["string", "null"]
+      },
+      "url": {
+        "type": ["string", "null"]
+      }
+    }
+}
