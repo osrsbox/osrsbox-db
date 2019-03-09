@@ -37,9 +37,9 @@ class ItemDefinition:
     """
 
     def __init__(self, id=None, name=None, members=None, tradeable=None, tradeable_on_ge=None, stackable=None,
-                 noted=None, noteable=None, linked_id=None, equipable=None, cost=None, lowalch=None,
-                 highalch=None, weight=None, buy_limit=None, quest_item=None, release_date=None, examine=None,
-                 url=None, equipment=None):
+                 noted=None, noteable=None, linked_id=None, equipable=None, equipable_by_player=None, cost=None,
+                 lowalch=None, highalch=None, weight=None, buy_limit=None, quest_item=None, release_date=None,
+                 examine=None, url=None, equipment=None):
         self.id = id
         self.name = name
         self.members = members
@@ -50,6 +50,7 @@ class ItemDefinition:
         self.noteable = noteable
         self.linked_id = linked_id
         self.equipable = equipable
+        self.equipable_by_player = equipable_by_player
         self.cost = cost
         self.lowalch = lowalch
         self.highalch = highalch
@@ -60,10 +61,10 @@ class ItemDefinition:
         self.examine = examine
         self.url = url
 
-        self.item_equipment: Optional[ItemEquipment] = None
+        self.equipment: Optional[ItemEquipment] = None
 
-        if self.equipable:
-            self.item_equipment = ItemEquipment(**equipment)
+        if self.equipable_by_player:
+            self.equipment = ItemEquipment(**equipment)
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON for exporting or printing.
@@ -77,8 +78,8 @@ class ItemDefinition:
                 continue
             json_out[prop] = getattr(self, prop)
 
-        if self.equipable:
-            json_out["equipment"] = self.item_equipment.construct_json()
+        if self.equipable_by_player:
+            json_out["equipment"] = self.equipment.construct_json()
 
         return json_out
 
