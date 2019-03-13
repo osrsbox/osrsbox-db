@@ -19,7 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import collections
 from typing import Dict
 
 
@@ -59,7 +58,7 @@ class ItemEquipment:
 
         :return json_out: A dictionary of all equipment properties.
         """
-        json_out = collections.OrderedDict()
+        json_out = dict()
         for prop in self.__dict__:
             json_out[prop] = getattr(self, prop)
 

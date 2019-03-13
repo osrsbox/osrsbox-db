@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import json
-import collections
 from typing import Dict, Optional
 
 from osrsbox.items_api.item_equipment import ItemEquipment
@@ -37,9 +36,9 @@ class ItemDefinition:
     """
 
     def __init__(self, id=None, name=None, members=None, tradeable=None, tradeable_on_ge=None, stackable=None,
-                 noted=None, noteable=None, linked_id=None, equipable=None, cost=None, lowalch=None,
-                 highalch=None, weight=None, buy_limit=None, quest_item=None, release_date=None, examine=None,
-                 url=None, equipment=None):
+                 noted=None, noteable=None, linked_id=None, placeholder=None, equipable=None, equipable_by_player=None,
+                 cost=None, lowalch=None, highalch=None, weight=None, buy_limit=None, quest_item=None,
+                 release_date=None, examine=None, url=None, equipment=None):
         self.id = id
         self.name = name
         self.members = members
@@ -49,7 +48,9 @@ class ItemDefinition:
         self.noted = noted
         self.noteable = noteable
         self.linked_id = linked_id
+        self.placeholder = placeholder
         self.equipable = equipable
+        self.equipable_by_player = equipable_by_player
         self.cost = cost
         self.lowalch = lowalch
         self.highalch = highalch
@@ -60,25 +61,25 @@ class ItemDefinition:
         self.examine = examine
         self.url = url
 
-        self.item_equipment: Optional[ItemEquipment] = None
+        self.equipment: Optional[ItemEquipment] = None
 
-        if self.equipable:
-            self.item_equipment = ItemEquipment(**equipment)
+        if self.equipable_by_player:
+            self.equipment = ItemEquipment(**equipment)
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON for exporting or printing.
 
         :return json_out: All class attributes stored in a dictionary.
         """
-        json_out: Dict = collections.OrderedDict()
+        json_out: Dict = dict()
 
         for prop in self.__dict__:
-            if prop == "item_equipment":
+            if prop == "equipment":
                 continue
             json_out[prop] = getattr(self, prop)
 
-        if self.equipable:
-            json_out["equipment"] = self.item_equipment.construct_json()
+        if self.equipable_by_player:
+            json_out["equipment"] = self.equipment.construct_json()
 
         return json_out
 
