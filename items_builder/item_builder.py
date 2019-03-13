@@ -189,7 +189,7 @@ class BuildItem:
         if "seller" in self.item_dict:
             del self.item_dict["seller"]
         self.itemDefinition = ItemDefinition(**self.item_dict)
-        self.compare_json_files(self.itemDefinition)
+        # self.compare_json_files(self.itemDefinition)
         json_out = self.itemDefinition.construct_json()
         # Actually output a JSON file, comment out for testing
         output_dir = os.path.join("..", "docs", "items-json")
@@ -201,13 +201,13 @@ class BuildItem:
         """Populate the itemDefinition object from the item-scraper file content."""
         self.item_dict["id"] = self.item_json["id"]
         self.item_dict["name"] = self.item_json["name"]
-        # Need to set these properties
         self.item_dict["members"] = self.item_json["members"]
         self.item_dict["tradeable_on_ge"] = self.item_json["tradeable_on_ge"]
         self.item_dict["stackable"] = self.item_json["stackable"]
         self.item_dict["noted"] = self.item_json["noted"]
         self.item_dict["noteable"] = self.item_json["noteable"]
         self.item_dict["linked_id"] = self.item_json["linked_id"]
+        self.item_dict["placeholder"] = self.item_json["placeholder"]
         self.item_dict["equipable"] = self.item_json["equipable"]
         self.item_dict["cost"] = self.item_json["cost"]
         self.item_dict["lowalch"] = self.item_json["lowalch"]
