@@ -22,26 +22,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
-import glob
 from pathlib import Path
 
 import jsonschema
 
 
 def test_item_database(path_to_docs_dir: Path):
-    with open('test/item_schema.json', 'r') as f:
-        schema_data = f.read()
-    schema = json.loads(schema_data)
+    """Unit test to check item database contents against JSON schema
 
-    path_to_items_json_dir = os.path.join(path_to_docs_dir, "items-json", "")
-    fis = glob.glob(path_to_items_json_dir + "*.json")
+    :param path_to_docs_dir: The path to the `docs` folder.
+    """
+    # Read in the item_schema.json file
+    path_to_schema = Path("test/item_schema.json")
+    with open(path_to_schema, 'r') as f:
+        schema = json.loads(f.read())
+
+    # Set the path to the items-json folder and get all the JSON files
+    path_to_items_json_dir = Path(f"{path_to_docs_dir}/items-json")
+    fis = path_to_items_json_dir.glob("*.json")
     fis = sorted(fis)
 
+    # Validate each file
     for json_file in fis:
         with open(json_file) as fi:
             item = json.load(fi)
-            print(item["id"])
-            print(json_file)
             jsonschema.validate(instance=item, schema=schema)
