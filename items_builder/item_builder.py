@@ -63,6 +63,7 @@ class BuildItem:
             "noted",
             "noteable",
             "linked_id",
+            "placeholder",
             "equipable",
             "equipable_by_player",
             "cost",
@@ -129,7 +130,7 @@ class BuildItem:
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
             print(">>> Cannot find wiki page...")
-            print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
+            # print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
             quit()
 
         # STAGE THREE: EXTRACT and PARSE INFOBOX
@@ -171,7 +172,7 @@ class BuildItem:
                 self.logger.critical("Status Code: %s" % self.status_code)
                 self.item_dict["equipable_by_player"] = False
                 self.export()
-                print(">>> ERROR: Could not determine equipable item bonuses...")
+                # print(">>> ERROR: Could not determine equipable item bonuses...")
                 return
         else:
             self.item_dict["equipable_by_player"] = False
@@ -189,7 +190,7 @@ class BuildItem:
         if "seller" in self.item_dict:
             del self.item_dict["seller"]
         self.itemDefinition = ItemDefinition(**self.item_dict)
-        # self.compare_json_files(self.itemDefinition)
+        self.compare_json_files(self.itemDefinition)
         json_out = self.itemDefinition.construct_json()
         # Actually output a JSON file, comment out for testing
         output_dir = os.path.join("..", "docs", "items-json")
