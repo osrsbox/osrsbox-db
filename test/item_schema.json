@@ -1,0 +1,170 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "title": "Item Properties",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "members": {
+        "type": "boolean"
+      },
+      "tradeable": {
+        "type": ["boolean", "null"]
+      },
+      "tradeable_on_ge": {
+        "type": "boolean"
+      },
+      "stackable": {
+        "type": "boolean"
+      },
+      "noted": {
+        "type": "boolean"
+      },
+      "noteable": {
+        "type": "boolean"
+      },
+      "linked_id": {
+        "type": ["integer", "null"]
+      },
+      "placeholder": {
+        "type": "boolean"
+      },
+      "equipable": {
+        "type": "boolean"
+      },
+      "equipable_by_player": {
+        "type": "boolean"
+      },
+      "cost": {
+        "type": "integer"
+      },
+      "lowalch": {
+        "type": "integer"
+      },
+      "highalch": {
+        "type": "integer"
+      },
+      "weight": {
+        "type": ["number", "null"]
+      },
+      "buy_limit": {
+        "type": ["integer", "null"]
+      },
+      "quest_item": {
+        "type": ["boolean", "null"]
+      },
+      "release_date": {
+        "type": ["string", "null"]
+      },
+      "examine": {
+        "type": ["string", "null"]
+      },
+      "url": {
+        "type": ["string", "null"]
+      },
+      "equipment": {
+        "title": "Item Equipment",
+        "type": "object",
+        "properties": {
+          "attack_stab": {
+            "type": "integer"
+          },
+          "attack_slash": {
+            "type": "integer"
+          },
+          "attack_crush": {
+            "type": "integer"
+          },
+          "attack_magic": {
+            "type": "integer"
+          },
+          "attack_ranged": {
+            "type": "integer"
+          },
+          "defence_stab": {
+            "type": "integer"
+          },
+          "defence_slash": {
+            "type": "integer"
+          },
+          "defence_crush": {
+            "type": "integer"
+          },
+          "defence_magic": {
+            "type": "integer"
+          },
+          "defence_ranged": {
+            "type": "integer"
+          },
+          "melee_strength": {
+            "type": "integer"
+          },
+          "ranged_strength": {
+            "type": "integer"
+          },
+          "magic_damage": {
+            "type": "integer"
+          },
+          "prayer": {
+            "type": "integer"
+          },
+          "slot": {
+            "type": ["string", "null"]
+          },
+          "attack_speed": {
+            "type": ["integer", "null"]
+          },
+          "skill_reqs": {
+            "type": ["array", "null"]
+          }
+        },
+        "required": [
+          "attack_stab",
+          "attack_slash",
+          "attack_crush",
+          "attack_magic",
+          "attack_ranged",
+          "defence_stab",
+          "defence_slash",
+          "defence_crush",
+          "defence_magic",
+          "defence_ranged",
+          "melee_strength",
+          "ranged_strength",
+          "magic_damage",
+          "prayer",
+          "slot",
+          "attack_speed",
+          "skill_reqs"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "members",
+      "tradeable",
+      "tradeable_on_ge",
+      "stackable",
+      "noted",
+      "noteable",
+      "linked_id",
+      "placeholder",
+      "equipable",
+      "equipable_by_player",
+      "cost",
+      "lowalch",
+      "highalch",
+      "weight",
+      "buy_limit",
+      "quest_item",
+      "release_date",
+      "examine",
+      "url"
+    ]
+}
