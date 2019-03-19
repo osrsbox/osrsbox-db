@@ -81,3 +81,4 @@ if __name__ == "__main__":
                                          current_db)
         # Start the build item population function
         builder.populate()
+    print("Done.")

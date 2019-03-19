@@ -63,7 +63,9 @@ class BuildItem:
             "noted",
             "noteable",
             "linked_id",
+            "placeholder",
             "equipable",
+            "equipable_by_player",
             "cost",
             "lowalch",
             "highalch",
@@ -128,7 +130,7 @@ class BuildItem:
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
             print(">>> Cannot find wiki page...")
-            print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
+            # print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
             quit()
 
         # STAGE THREE: EXTRACT and PARSE INFOBOX
@@ -141,25 +143,15 @@ class BuildItem:
         if has_infobox:
             self.logger.debug("INFOBOX: Success")
             self.parse_primary_infobox()
-        elif self.status_code == 1:
+        elif self.status_code in [1, 2, 3, 4, 5]:
             self.logger.debug("INFOBOX: Invalid item saved")
-            return  # Cannot do any other population
-        elif self.status_code == 2:
-            self.logger.debug("INFOBOX: Unobtainable item saved")
-            return  # Cannot do any other population
-        elif self.status_code == 3:
-            self.logger.debug("INFOBOX: Unusable item saved")
-            return  # Cannot do any other population
-        elif self.status_code == 4:
-            self.logger.debug("INFOBOX: Not really an item, item saved")
-            return  # Cannot do any other population
-        elif self.status_code == 5:
-            self.logger.debug("INFOBOX: No dedicated wiki page for item, saved")
-            return  # Cannot do any other population
+            self.item_dict["equipable_by_player"] = False
+            self.item_dict["url"] = None
+            self.export()
         elif self.status_code == 6:
-            self.logger.debug("INFOBOX: No item bonuses")
             self.parse_primary_infobox()
-            return  # Cannot do any other population
+            self.item_dict["equipable_by_player"] = False
+            self.export()
         else:
             self.logger.critical("INFOBOX: Extraction error.")
             quit()
@@ -171,15 +163,25 @@ class BuildItem:
 
         if self.item_dict["equipable"] and has_wiki_page:
             # Continue processing... but only if the item is equipable
+            self.item_dict["equipable_by_player"] = True
             has_infobox_bonuses = self.extract_bonuses()
             if has_infobox_bonuses:
                 self.logger.debug("Item InfoBox Bonuses extracted successfully")
             else:
                 self.logger.critical("Item InfoBox Bonuses extraction error.")
                 self.logger.critical("Status Code: %s" % self.status_code)
-                print(">>> ERROR: Could not determine equipable item bonuses...")
-                quit()
+                self.item_dict["equipable_by_player"] = False
+                self.export()
+                # print(">>> ERROR: Could not determine equipable item bonuses...")
+                return
+        else:
+            self.item_dict["equipable_by_player"] = False
 
+        # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
+        self.logger.debug("STAGE FIVE: Compare object to existing database entry...")
+        self.export()
+
+    def export(self):
         # Create ItemDefintion object
         if "wiki_name" in self.item_dict:
             del self.item_dict["wiki_name"]
@@ -188,34 +190,25 @@ class BuildItem:
         if "seller" in self.item_dict:
             del self.item_dict["seller"]
         self.itemDefinition = ItemDefinition(**self.item_dict)
-
-        # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
-        self.logger.debug("STAGE FIVE: Compare object to existing database entry...")
-
         self.compare_json_files(self.itemDefinition)
         json_out = self.itemDefinition.construct_json()
-        self.logger.debug(json_out)
-
-        self.logger.debug("============================================ END")
-
         # Actually output a JSON file, comment out for testing
         output_dir = os.path.join("..", "docs", "items-json")
         self.itemDefinition.export_json(True, output_dir)
+        self.logger.debug(json_out)
+        return
 
     def populate_from_scraper(self):
         """Populate the itemDefinition object from the item-scraper file content."""
         self.item_dict["id"] = self.item_json["id"]
-        if self.item_json["name"] in [None, "null", "Null", ""]:
-            self.item_dict["name"] = None
-        else:
-            self.item_dict["name"] = self.item_json["name"]
-        # Need to set these properties
+        self.item_dict["name"] = self.item_json["name"]
         self.item_dict["members"] = self.item_json["members"]
         self.item_dict["tradeable_on_ge"] = self.item_json["tradeable_on_ge"]
         self.item_dict["stackable"] = self.item_json["stackable"]
         self.item_dict["noted"] = self.item_json["noted"]
         self.item_dict["noteable"] = self.item_json["noteable"]
         self.item_dict["linked_id"] = self.item_json["linked_id"]
+        self.item_dict["placeholder"] = self.item_json["placeholder"]
         self.item_dict["equipable"] = self.item_json["equipable"]
         self.item_dict["cost"] = self.item_json["cost"]
         self.item_dict["lowalch"] = self.item_json["lowalch"]
@@ -635,7 +628,7 @@ class BuildItem:
                 changes[prop] = [current_json[prop], existing_json[prop]]
 
                 # Also check equipable
-                if itemDefinition.equipable:
+                if itemDefinition.equipable_by_player:
                     for equipment_prop in self.equipment_properties:
                         if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
                             changed = True

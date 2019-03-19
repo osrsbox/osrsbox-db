@@ -80,6 +80,9 @@ class AllItems:
         elif os.path.isfile(input_data_file_or_directory):
             self._load_items_from_file(input_data_file_or_directory)
 
+        # Sort the list of items
+        self.all_items.sort(key=lambda x: x.id)
+
     def _load_items_from_directory(self, path_to_directory: str) -> None:
         """Load item database from a directory of JSON files (`items-json`).
 

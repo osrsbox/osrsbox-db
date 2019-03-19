@@ -86,22 +86,17 @@ def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
     return all_models
 
 
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-d",
-                    "--directory",
-                    required=True,
-                    help="Directory of compressed cache definitions dump.")
-    args = vars(ap.parse_args())
-    path_to_definitions = args["directory"]
+def main(path_to_cache_definitions: str):
+    """Main function for extracting OSRS model ID numbers.
 
+    :param path_to_cache_definitions: File system location of compressed cache definition files.
+    """
     models_dict = {}
 
     # Loop the three cache dump files (items, npcs, objects)
     for cache_file in osrs_cache_constants.CACHE_DUMP_FILES:
         # Set the path to the compressed JSON files
-        compressed_json_file = pathlib.Path() / path_to_definitions / cache_file
+        compressed_json_file = pathlib.Path() / path_to_cache_definitions / cache_file
 
         # Set the current cache dump type
         cache_type = pathlib.PurePath(cache_file)
@@ -124,7 +119,18 @@ if __name__ == "__main__":
                 models_dict[key] = model
 
     # Save all extracted models ID numbers to JSON file
-    print(">>> Saving output JSON file...")
     out_fi = pathlib.Path() / ".." / "docs" / "models-summary.json"
     with open(out_fi, "w", newline="\n") as f:
         json.dump(models_dict, f, indent=4)
+
+
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-d",
+                    "--directory",
+                    required=True,
+                    help="Directory of compressed cache definitions dump.")
+    args = vars(ap.parse_args())
+    path_to_definitions = args["directory"]
+    main(path_to_definitions)
