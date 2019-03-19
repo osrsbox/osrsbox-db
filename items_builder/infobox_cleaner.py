@@ -42,6 +42,8 @@ def clean_weight(value: str) -> float:
     # Remove "kg" from weight
     weight = weight.replace("kg", "")
 
+    weight = weight.replace(",", ".")
+
     # Some items have Inventory/Equipped weights:
     # For example: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
     if "inventory" in weight.lower():
