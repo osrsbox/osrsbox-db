@@ -6,6 +6,8 @@ import os
 
 from setuptools import find_packages, setup
 
+import config
+
 # Package meta-data.
 NAME = 'osrsbox'
 DESCRIPTION = 'A complete and up-to-date database of Old School RuneScape (OSRS) items.'
@@ -19,8 +21,7 @@ VERSION = "1.0.4"
 REQUIRED = [
 ]
 
-here = os.path.abspath(os.path.dirname(__file__))
-readme_location = os.path.join(here, "osrsbox")
+readme_location = config.PACKAGE_ROOT_PATH
 
 # Import the README and use it as the long-description.
 with io.open(os.path.join(readme_location, 'README.md'), encoding='utf-8') as f:

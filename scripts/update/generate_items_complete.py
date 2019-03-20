@@ -24,31 +24,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
+from pathlib import Path
 
-from osrsbox.items_api import all_items
+import config
+from osrsbox import items_api
 
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i",
-                    "--input",
-                    required=True,
-                    help="The folder of JSON item files (items-json)")
-    args = vars(ap.parse_args())
 
-    print(">>> Reading in items-json directory of JSON files...")
-    ai = all_items.AllItems(args["input"])
+def main():
+    """The main function for generating the `docs/items-complete.json` file"""
+    # Read in the item database content
+    all_db_items = items_api.load()
 
     items = {}
 
-    for item in ai:
+    for item in all_db_items:
         json_out = item.construct_json()
         items[item.id] = json_out
 
-    # Save all items to items_complete.json
-    print(">>> Saving items-complete.json file to current working directory...")
-    out_fi = os.path.join("..", "..", "docs", "items-complete.json")
-    with open(out_fi, "w", newline="\n") as f:
+    # Save all items to docs/items_complete.json
+    out_fi = Path(config.DOCS_PATH / "items-complete.json")
+    with open(out_fi, "w") as f:
         json.dump(items, f)
+
+
+if __name__ == "__main__":
+    print("Generating items-complete.json file...")
+    main()

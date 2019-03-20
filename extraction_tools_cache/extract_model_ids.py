@@ -30,10 +30,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import json
-import pathlib
+from pathlib import Path
+from pathlib import PurePath
 from typing import List
 from typing import Dict
 
+import config
 from extraction_tools_cache import osrs_cache_data
 from extraction_tools_cache import osrs_cache_constants
 
@@ -96,10 +98,10 @@ def main(path_to_cache_definitions: str):
     # Loop the three cache dump files (items, npcs, objects)
     for cache_file in osrs_cache_constants.CACHE_DUMP_FILES:
         # Set the path to the compressed JSON files
-        compressed_json_file = pathlib.Path() / path_to_cache_definitions / cache_file
+        compressed_json_file = Path(path_to_cache_definitions / cache_file)
 
         # Set the current cache dump type
-        cache_type = pathlib.PurePath(cache_file)
+        cache_type = PurePath(cache_file)
         cache_type = str(cache_type.with_suffix(""))
 
         # Load and decompress the compressed definition file
@@ -119,8 +121,8 @@ def main(path_to_cache_definitions: str):
                 models_dict[key] = model
 
     # Save all extracted models ID numbers to JSON file
-    out_fi = pathlib.Path() / ".." / "docs" / "models-summary.json"
-    with open(out_fi, "w", newline="\n") as f:
+    out_fi = Path(config.DATA_PATH / "models-summary.json")
+    with open(out_fi, "w") as f:
         json.dump(models_dict, f, indent=4)
 
 

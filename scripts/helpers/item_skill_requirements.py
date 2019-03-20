@@ -20,8 +20,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import json
+from pathlib import Path
 
-from osrsbox.items_api import all_items
+import config
+from osrsbox import items_api
 
 
 def determine_requirements(item_name):
@@ -217,22 +219,12 @@ def clean(input):
     return input
 
 
-################################################################################
 if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i",
-                    "--input",
-                    required=True,
-                    help="Either 1) Folder of JSON item (items-json), 2) Single JSON file (items-complete.json)")
-    args = vars(ap.parse_args())
-
     # Start processing all items in database
-    ai = all_items.AllItems(args["input"])
+    all_db_items = items_api.load()
 
     # Load current file
-    isr_file = "item-skill-requirements.json"
-    known_items = dict()
+    isr_file = Path(config.DATA_PATH / "item-skill-requirements.json")
     with open(isr_file) as f:
         known_items = json.load(f)
 
@@ -240,7 +232,7 @@ if __name__ == "__main__":
     for i in known_items:
         done.append(i)
 
-    for item in ai:
+    for item in all_db_items:
         if str(item.id) in done:
             # Item ID is already done, skip to next
             continue

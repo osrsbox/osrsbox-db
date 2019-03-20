@@ -19,23 +19,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
+from pathlib import Path
+
+import config
 
 
 if __name__ == "__main__":
-
     # Get the dictionary of item ID -> wikitext
-    all_wiki_items = dict()
-    extraction_path_wiki = os.path.join("..", "extraction_tools_wiki", "")
-    with open(extraction_path_wiki + "extract_page_text_items.json") as f:
+    all_wiki_items_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_items.json")
+    with open(all_wiki_items_path) as f:
         all_wiki_items = json.load(f)
 
     # Read in normalized_names.txt
     all_wiki_normalized_names = dict()
     all_wiki_normalized_ids = dict()
-    extraction_path_other = os.path.join("..", "extraction_tools_other", "")
-    with open(extraction_path_other + "normalized_names.txt") as f:
+    normalized_names_path = Path(config.ITEMS_BUILDER_PATH / "normalized_names.txt")
+    with open(normalized_names_path) as f:
         for line in f:
             line = line.strip()
             if "#" in line or line.startswith("TODO"):
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     # Get the latest cache dump
     items = dict()
-    in_fi = os.path.join("..", "data", "items-scraper.json")
+    in_fi = Path(config.DATA_PATH / "items-scraper.json")
     with open(in_fi) as f:
         temp = json.load(f)
         for k, v in temp.items():

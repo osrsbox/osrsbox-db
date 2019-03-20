@@ -19,9 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
-import glob
+from pathlib import Path
 
+import config
 from extraction_tools_cache import osrs_cache_constants
 from extraction_tools_cache import osrs_cache_data
 from extraction_tools_cache import extract_model_ids
@@ -31,16 +31,14 @@ from extraction_tools_wiki import extract_wiki_data
 
 if __name__ == '__main__':
     # STAGE ONE: Handle all OSRS cache data updates
-    cache_dump_path = os.path.join("..", "extraction_tools_cache", "")
-
     print(">>> CACHE COMPRESSION: Compressing OSRS Cache data for Items, NPCs and Objects...")
-    osrs_cache_data.main(cache_dump_path, True)
+    osrs_cache_data.main(config.EXTRACTION_CACHE_PATH, True)
 
     print(">>> MODEL IDS: Extracting OSRS model ID numbers from cache definition files...")
-    extract_model_ids.main(cache_dump_path)
+    extract_model_ids.main(config.EXTRACTION_CACHE_PATH)
 
     print(">>> ATTACKABLE NPCS: Extracting and merging OSRS attackable NPC definition files...")
-    cache_dump_path_npcs = os.path.join("..", "extraction_tools_cache", "npcs.json")
+    cache_dump_path_npcs = Path(config.EXTRACTION_CACHE_PATH / "npcs.json")
     extract_attackable_npcs.main(cache_dump_path_npcs)
 
     # STAGE TWO: Handle all OSRS Wiki data dumps
@@ -59,6 +57,8 @@ if __name__ == '__main__':
 
     # Check cache definition length for test.test_osrs_cache_data module
     for cache_type in osrs_cache_constants.CACHE_DUMP_TYPES:
-        cache_data_path = os.path.join(cache_dump_path, cache_type, "")
-        cache_data_len = len(glob.glob(cache_data_path + "*.json"))
+        cache_data_path = Path(config.EXTRACTION_CACHE_PATH / cache_type)
+        # Glob all files in cache type dir, convert generator to list, then determine file count
+        cache_data_fis = list(Path(config.EXTRACTION_CACHE_PATH).glob("*.json"))
+        cache_data_len = len(cache_data_fis)
         print(f"  > test.test_osrs_cache_data: {cache_type} - {cache_data_len}")
