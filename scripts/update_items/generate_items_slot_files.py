@@ -39,15 +39,10 @@ def main():
 
     items = collections.defaultdict(list)
 
-    for item in all_db_items:
-        json_out = item.construct_json()
-        items[item.id] = json_out
-
     # Fetch every equipable item with an item slot value
     for item in all_db_items:
-        if item.equipable:
-            if item.item_equipment.slot is not None:
-                items[item.item_equipment.slot].append(item)
+        if item.equipable_by_player:
+            items[item.equipment.slot].append(item)
 
     # Process each item found, and add to an individual file for each equipment slot
     for slot in items:
