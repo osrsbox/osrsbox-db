@@ -175,12 +175,12 @@ class BuildMonster:
         # print(self.cache_combat_level)
 
         # CODE BLOCK TO DETERMINE COMBAT LEVEL DIFFERENCES BETWEEN CACHE AND OSRS WIKI
-        if self.monster_dict["combat"]:
-            if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
-                print(f'{self.monster_id},{self.wiki_name},{self.monster_dict["combat"]},{self.cache_combat_level}')
-        else:
-            if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
-                print(f'{self.monster_id},{self.wiki_name},{self.monster_dict["combat"]},{self.cache_combat_level}')
+        # if self.monster_dict["combat"]:
+        #     if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
+        #         print(f'{self.monster_id},{self.wiki_name},{self.monster_dict["combat"]},{self.cache_combat_level}')
+        # else:
+        #     if not int(self.monster_dict["combat"]) == int(self.cache_combat_level):
+        #         print(f'{self.monster_id},{self.wiki_name},{self.monster_dict["combat"]},{self.cache_combat_level}')
 
         # HIT_POINTS: Determine the hitpoints of a monster (tested: False)
         key = "hitpoints" + str(self.infobox_version)
@@ -295,6 +295,6 @@ class BuildMonster:
                     if value.isdigit():
                         value = int(value)
         else:
-            print(f"ERROR: Stats: {self.monster_id}, {self.wiki_name}, {prop}, {self.infobox_version}")
+            print(f"  > STATS ERROR: ID:{self.monster_id}, WIKI:{self.wiki_name}, PROP:{prop}, VERSION:{self.infobox_version}")
 
         return value
