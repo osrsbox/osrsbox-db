@@ -24,41 +24,37 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
 import collections
+from pathlib import Path
 
-from osrsbox.items_api import all_items
+import config
+from osrsbox import items_api
 
-if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i",
-                    "--input",
-                    required=True,
-                    help="The single JSON file (items_complete.json)")
-    args = vars(ap.parse_args())
 
-    print(">>> Reading in items-json directory of JSON files...")
-    ai = all_items.AllItems(args["input"])
+def main():
+    """The main function for generating the `docs/items-slot/` JSON files."""
+    # Read in the item database content
+    all_db_items = items_api.load()
 
-    # Default dict (list) for all item slots
     items = collections.defaultdict(list)
 
     # Fetch every equipable item with an item slot value
-    print(">>> Processing data by item slot...")
-    for item in ai:
+    for item in all_db_items:
         if item.equipable_by_player:
-            if item.equipment.slot is not None:
-                items[item.equipment.slot].append(item)
+            items[item.equipment.slot].append(item)
 
     # Process each item found, and add to an individual file for each equipment slot
-    print(">>> Saving items-slot files to current working directory...")
     for slot in items:
         json_out = {}
         for item in items[slot]:
             json_out_temp = item.construct_json()
             json_out[item.id] = json_out_temp
-        out_fi = os.path.join("..", "..", "docs", "items-json-slot", "items-" + slot + ".json")
-        with open(out_fi, "w", newline="\n") as f:
+        out_fi = Path(config.DOCS_PATH / "items-json-slot" / f"items-{slot}.json")
+        with open(out_fi, "w") as f:
             json.dump(json_out, f)
+
+
+if __name__ == "__main__":
+    print("Generating items-json-slot JSON files...")
+    main()

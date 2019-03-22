@@ -19,31 +19,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
-import glob
-
-from extraction_tools_cache import osrs_cache_constants
-from extraction_tools_cache import osrs_cache_data
-from extraction_tools_cache import extract_model_ids
-from extraction_tools_cache import extract_attackable_npcs
 from extraction_tools_wiki import extract_wiki_data
 
 
 if __name__ == '__main__':
-    # STAGE ONE: Handle all OSRS cache data updates
-    cache_dump_path = os.path.join("..", "extraction_tools_cache", "")
-
-    print(">>> CACHE COMPRESSION: Compressing OSRS Cache data for Items, NPCs and Objects...")
-    osrs_cache_data.main(cache_dump_path, True)
-
-    print(">>> MODEL IDS: Extracting OSRS model ID numbers from cache definition files...")
-    extract_model_ids.main(cache_dump_path)
-
-    print(">>> ATTACKABLE NPCS: Extracting and merging OSRS attackable NPC definition files...")
-    cache_dump_path_npcs = os.path.join("..", "extraction_tools_cache", "npcs.json")
-    extract_attackable_npcs.main(cache_dump_path_npcs)
-
-    # STAGE TWO: Handle all OSRS Wiki data dumps
     print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
     categories = ["Items", "Construction", "Furniture", "Pets"]
     extract_wiki_data.main(categories)
@@ -53,12 +32,3 @@ if __name__ == '__main__':
     print(f">>> WIKI DATA QUESTS: Extracting page titles and wiki text...")
     categories = ["Quests", "Miniquests", "Special_quests"]
     extract_wiki_data.main(categories)
-
-    # STAGE THREE: Determine, then print any manual updates required (usually for tests)
-    print(">>> Manual updates required:")
-
-    # Check cache definition length for test.test_osrs_cache_data module
-    for cache_type in osrs_cache_constants.CACHE_DUMP_TYPES:
-        cache_data_path = os.path.join(cache_dump_path, cache_type, "")
-        cache_data_len = len(glob.glob(cache_data_path + "*.json"))
-        print(f"  > test.test_osrs_cache_data: {cache_type} - {cache_data_len}")

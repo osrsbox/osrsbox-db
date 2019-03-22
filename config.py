@@ -19,18 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import pytest
 from pathlib import Path
 
+PROJECT_ROOT_PATH = Path(__file__).parent
 
-PATH_TO_TEST_DIR = Path(__file__).absolute().parent
-
-
-@pytest.fixture(scope="session")
-def path_to_docs_dir() -> Path:
-    return PATH_TO_TEST_DIR / ".." / "docs"
-
-
-@pytest.fixture(scope="session")
-def path_to_cache_dir() -> Path:
-    return PATH_TO_TEST_DIR / ".." / "extraction_tools_cache"
+DATA_PATH = Path(PROJECT_ROOT_PATH / "data")
+DOCS_PATH = Path(PROJECT_ROOT_PATH / "docs")
+EXTRACTION_WIKI_PATH = Path(PROJECT_ROOT_PATH / "extraction_tools_wiki")
+EXTRACTION_CACHE_PATH = Path(PROJECT_ROOT_PATH / "extraction_tools_cache")
+ITEMS_BUILDER_PATH = Path(PROJECT_ROOT_PATH / "items_builder")
+PACKAGE_ROOT_PATH = Path(PROJECT_ROOT_PATH / "osrsbox")

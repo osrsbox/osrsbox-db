@@ -19,31 +19,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
+from pathlib import Path
 
-from osrsbox.items_api import all_items
+import config
+from osrsbox import items_api
 
 
 if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i",
-                    "--input",
-                    required=True,
-                    help="Either 1) Folder of JSON item (items-json), 2) Single JSON file (items-complete.json)")
-    args = vars(ap.parse_args())
-
     # Load all items from osrsbox item API
-    ai = all_items.AllItems(args["input"])
+    all_db_items = items_api.load()
 
     # Get a dict with: id -> ItemDefinition
     all_item_ids = {}
-    for item in ai:
+    for item in all_db_items:
         all_item_ids[item.id] = item
 
     # Load the ge-limits-ids.json file from RuneLite
-    ge_limits_path = os.path.join("..", "data", "ge-limits-ids.json")
+    ge_limits_path = Path(config.DATA_PATH / "ge-limits-ids.json")
     with open(ge_limits_path) as f:
         ge_limits = json.load(f)
 
@@ -55,6 +48,6 @@ if __name__ == "__main__":
         buy_limits[item_name] = buy_limit
 
     # Write out buy limit data file
-    out_fi = os.path.join("..", "data", "ge-limits-names.json")
-    with open(out_fi, "w", newline="\n") as f:
+    out_fi = Path(config.DATA_PATH / "ge-limits-names.json")
+    with open(out_fi, "w") as f:
         json.dump(buy_limits, f, indent=4)

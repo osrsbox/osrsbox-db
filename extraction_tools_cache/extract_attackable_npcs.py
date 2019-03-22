@@ -30,8 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import json
-import pathlib
+from pathlib import Path
 
+import config
 from extraction_tools_cache import osrs_cache_data
 
 
@@ -41,10 +42,9 @@ def main(compressed_json_file_path: str):
     :param compressed_json_file_path: Compressed cache file
     """
     attackable_npcs = {}
-    compressed_json_file = pathlib.Path() / compressed_json_file_path
 
     # Load and decompress the compressed definition file
-    definitions = osrs_cache_data.CacheDefinitionFiles(compressed_json_file)
+    definitions = osrs_cache_data.CacheDefinitionFiles(compressed_json_file_path)
     definitions.decompress_cache_file()
 
     # Loop all entries in the decompressed and loaded definition file
@@ -58,9 +58,8 @@ def main(compressed_json_file_path: str):
             attackable_npcs[id_number] = json_data
 
     # Save all extracted attackable NPCs to JSON file
-    print(">>> Saving output JSON file...")
-    out_fi = pathlib.Path() / ".." / "data" / "attackable-npcs.json"
-    with open(out_fi, "w", newline="\n") as f:
+    out_fi = Path(config.DATA_PATH / "attackable-npcs.json")
+    with open(out_fi, "w") as f:
         json.dump(attackable_npcs, f)
 
 
