@@ -4,7 +4,7 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-A simple script to determine new items added after a game update. Takes
+A simple script to determine new items added after a game update_items. Takes
 the items_scraper.json file from the ItemScraper RuneLite plugin as the
 new data input and compares the entries to the old items_scraper.json
 file that should be in the docs folder. Put the new items_scraper.json
@@ -37,7 +37,7 @@ import config
 class DetermineNewItems:
     """A simple class to determine added, removed, changed and unchanged items.
 
-    Every OSRS weekly update has the potential to add, remove or change item
+    Every OSRS weekly update_items has the potential to add, remove or change item
     properties. This class analyzes the OSRS cache dump of the existing
     database entries and compares to a new database dump.
     Calculate the difference between two dictionaries as:
