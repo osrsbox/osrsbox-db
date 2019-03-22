@@ -1,6 +1,8 @@
 # osrsbox-db 
 
-[![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db) [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox)
+[![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) 
+
+[![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
 
 ## A complete and up-to-date database of Old School Runescape (OSRS) items
 

@@ -1,3 +1,11 @@
+### 2019/03/21: Deadman Spring Finals and QoL
+- Added items: 2
+    - 23122,Oily pearl fishing rod
+    - 23123,Oily pearl fishing rod
+- Removed items: 0
+- Changed items: 1
+    - 2528,Lamp,highalch|lowalch|cost
+
 ### 2019/03/14: Updated Quest Panel, Sandstone Grinder and QoL
 - Added items: 12
     - 23110,Mystic set (light)

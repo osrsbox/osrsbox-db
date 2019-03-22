@@ -48,9 +48,9 @@ if __name__ == "__main__":
     # Fetch every equipable item with an item slot value
     print(">>> Processing data by item slot...")
     for item in ai:
-        if item.equipable:
-            if item.item_equipment.slot is not None:
-                items[item.item_equipment.slot].append(item)
+        if item.equipable_by_player:
+            if item.equipment.slot is not None:
+                items[item.equipment.slot].append(item)
 
     # Process each item found, and add to an individual file for each equipment slot
     print(">>> Saving items-slot files to current working directory...")

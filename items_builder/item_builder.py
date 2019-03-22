@@ -630,10 +630,13 @@ class BuildItem:
                 # Also check equipable
                 if itemDefinition.equipable_by_player:
                     for equipment_prop in self.equipment_properties:
-                        if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
-                            changed = True
-                            changes[equipment_prop] = [current_json["equipment"][equipment_prop],
-                                                       existing_json["equipment"][equipment_prop]]
+                        try:
+                            if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
+                                changed = True
+                                changes[equipment_prop] = [current_json["equipment"][equipment_prop],
+                                                           existing_json["equipment"][equipment_prop]]
+                        except KeyError:
+                            pass  # This should be fixed, when old/new item has no equipment key
 
         # Print any item changes
         if changed:
