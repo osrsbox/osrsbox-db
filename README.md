@@ -10,6 +10,11 @@ This repository hosts a complete and up-to-date database of every item in OSRS. 
 
 The item database has extensive properties for each item: a total of 21 properties for every item, and an additional 17 properties for equipable items. Each item has properties including whether an item is tradeable, stackable, or equipable or if the item is members only, or an item associated with a quest. For any equipable item, there are additional properties about combat stats the item has; for example, what slash attack bonus, magic defence bonus or prayer bonus an item provides.
 
+The item database is accessible using two primary methods:
+
+1. **A Python PyPi package named `osrsbox`**
+1. **A JSON API**
+
 Current development is working towards adding a similar database for monsters.
 
 ## Table of Contents
@@ -17,11 +22,13 @@ Current development is working towards adding a similar database for monsters.
 - [Additional Documentation](#additional-documentation)
 - [Project Requirements](#project-requirements)
 - [The `osrsbox` Package](#the-osrsbox-package)
-- [Project Structure](#summary-of-project-structure)
-- [Project Feedback](#project-feedback)
-- [Project Contribution](#project-contribution)
-- [Project License](#project-license)
-- [Project Attribution](#project-attribution)
+- [The `osrsbox-db` JSON API](#the-osrsbox-db-JSON-API)
+- [Project Information](#project-information)
+    - [Project Structure](#summary-of-project-structure)
+    - [Project Feedback](#project-feedback)
+    - [Project Contribution](#project-contribution)
+    - [Project License](#project-license)
+    - [Project Attribution](#project-attribution)
 
 ## Additional Documentation
 
@@ -58,14 +65,23 @@ This repo hosts the cource code for the package in the `osrsbox` folder, while t
 pip install osrsbox
 ```
 
-More information regarding using the `osrsbox` Python package can be found in the [`osrsbox` package README file](osrsbox/README.md). 
+More information regarding using the `osrsbox` Python package can be found in the [`osrsbox` package README file](osrsbox/README.md).
 
-## Summary of Project Structure
+## The `osrsbox-db` JSON API
+
+This project also includes an Internet-accessible JSON API for all items in the item database. The JSON API was originally written for the [`osrsbox-tooltips` project](https://github.com/osrsbox/osrsbox-tooltips), but has been used for a variety of other projects. The JSON API is useful when you do not want to write a program in Python, but would like to fetch the item database information programmatically. A key example being a web application. 
+
+The JSON API is available in the [`docs` folder](docs/) in this repository. More information regarding using the `osrsbox-db` JSON API can be found in the [`osrsbox-db` README file](docs/README.md).
+
+## Project Information
+
+This section contains additional information about the `osrsbox-db` project.
+
+### Summary of Project Structure
 
 - `data`: Collection of useful data files used in the osrsbox-db project.
 - `docs`: The publicly accessible item database available through this repo or by using the JSON API. This folder contains the actual item database that is publicly available, or browsable within this repository.
 - `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools used in other parts in this project.
-- `extraction_tools_other`: Collection of Python tools to extract data from a variety of sources including equipable item skill requirements, grand exchange buy limits, and name normalization for more efficient OSRS Wiki lookups.
 - `extraction_tools_wiki`: Collection of Python modules to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data (category page titles and raw wiki text) for items, quests and monsters that is somewhat-regularly updated.
 - `items_builder`: Collection of Python scripts to build the item database. The `builder.py` script is the primary entry point.
     - `update_tools`: Scripts used to update all data files after each weekly game update. 
@@ -76,15 +92,15 @@ More information regarding using the `osrsbox` Python package can be found in th
 - `test`: A collection of unit tests.
 - `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update that have been added to the database.
  
- ## Project Feedback
+ ### Project Feedback
 
 I would thoroughly appreciate any feedback regarding the osrsbox-db project, especially problems with the inaccuracies of the data provided. So if you notice any problem with the accuracy of item property data, could you please let me know. The same goes for any discovered bugs, or if you have a specific feature request. The best method is to [open a new Github issue](https://github.com/osrsbox/osrsbox-db/issues) in the project repository. 
 
-## Project Contribution
+### Project Contribution
 
 This project would thoroughly benefit from contribution from additional developers. Please feel free to submit a pull request if you have code that you wish to contribute - I would thoroughly appreciate the helping hand. For any code contributions, the best method is to [open a new GitHub pull request](https://github.com/osrsbox/osrsbox-db/pulls) in the project repository. Also, feel free to contact me (e.g., email) if you wish to discuss contribution before making a pull request.
 
-## Project License
+### Project License
 
 The osrsbox-db project is released under the GNU General Public License version 3 as published by the Free Software Foundation. You can read the [LICENSE](LICENSE) file for the full license, check the [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) page for additional information, or check the [tl;drLegal](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3) documentation for the license explained in simple english. The GPL license is specified for all source code contained in this project. Other content is specified under GPL if not listed in the **Exceptions to GPL** below.
 
@@ -94,6 +110,6 @@ Old School RuneScape (OSRS) content and materials are trademarks and copyrights 
 
 Additional data to help build this project is sourced from the [OSRS Wiki](https://oldschool.runescape.wiki/). This primarily includes item metadata. As specified by the [Weird Gloop Copyright](https://meta.weirdgloop.org/w/Meta:Copyrights) page, this content is licensed under CC BY-NC-SA 3.0 - [Attribution-NonCommercial-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-nc-sa/3.0/) license.
 
-## Project Attribution
+### Project Attribution
 
 The osrsbox-db project is a labour of love. I put a huge amount of time and effort into the project, and I want people to use it. That is the entire reason for it's existence. I am not too fussed about attribution guidelines... but if you want to use the project please adhere to the licenses used. Please feel free to link to this repository or my [OSRSBox website](https://www.osrsbox.com/) if you use it in your project - mainly so others can find it, and hopefully use it too!
