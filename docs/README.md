@@ -1,6 +1,6 @@
 ## osrsbox-db: Public JSON API 
 
-This folder contains the publicly available database/dataset and somewhat-RESTful API of osrsbox-db. Basically, every file inside this specfic folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any file name (from this folder) to the base URL, and you can fetch this data. You can also clone this entire repository and access the files provided in this folder, or download a single file for offline processing.
+This folder contains the publicly available database/dataset and somewhat-RESTful API of osrsbox-db. Basically, every file inside this specific folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any file name (from this folder) to the base URL, and you can fetch this data. You can also clone this entire repository and access the files provided in this folder, or download a single file for offline processing.
  
 A summary of the files provided in the JSON API are listed below with descriptions:
 
@@ -10,8 +10,8 @@ A summary of the files provided in the JSON API are listed below with descriptio
 - `prayer-icon`: Collection of PNG files for each prayer in OSRS.
 - `prayer-json`: Collection of individual JSON files with properties and metadata about OSRS prayers.
 - `items-complete.json`: A single JSON file that contains all single JSON files from `items-json`
-- `items-summary.json`: A single JSON file that contains only item name and item ID number.
-- `models-summary.json`: A single JSON file that contains model ID numbers for items, objects and NPCs.
+- `items-summary.json`: A single JSON file that contains only the item name and item ID number.
+- `models-summary.json`: A single JSON file that contains model ID numbers for items, objects, and NPCs.
 
 ## Accessing the JSON API
 
@@ -42,7 +42,7 @@ In addition to the single JSON files for each item, there is also a collection o
     - [items-shield.json](https://www.osrsbox.com/osrsbox-db/items-json-slot/items-shield.json)
     - [items-weapon.json](https://www.osrsbox.com/osrsbox-db/items-json-slot/items-weapon.json)
 
-So how can you get and use these JSON files about OSRS items? It is pretty easy, but really depends on what you are trying to accomplish and what programming language you are using. 
+So how can you get and use these JSON files about OSRS items? It is pretty easy but really depends on what you are trying to accomplish and what programming language you are using. 
 
 ### Accessing the JSON API using wget
 
@@ -73,7 +73,7 @@ print(data)
 
 ### Accessing the JSON API using JavaScript
 
-Finally, let's have a look at JavaScript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a web page. The example below is a very simple method to download the JSON file using the jQuery getJSON function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., name and Black wizard hat (g)) on it's own line in a div element. If you want to experiment with the code, the code is available in a W3Schools TryIt Editor at [this link](https://www.w3schools.com/code/tryit.asp?filename=FY2CQ7W1J346).
+Finally, let's have a look at JavaScript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a web page. The example below is a very simple method to download the JSON file using the jQuery getJSON function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., name and Black wizard hat (g)) on its own line in a div element. If you want to experiment with the code, the code is available in a W3Schools TryIt Editor at [this link](https://www.w3schools.com/code/tryit.asp?filename=FY2CQ7W1J346).
 
 ```
 <!DOCTYPE html>
