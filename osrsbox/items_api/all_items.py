@@ -69,7 +69,7 @@ class AllItems:
 
         :param input_data_file_or_directory: The path to the data input.
         """
-        # Check if the a str is supplied, if so, convert to Path object
+        # Check if a str is supplied, if so, convert to Path object
         if isinstance(input_data_file_or_directory, str):
             input_data_file_or_directory = Path(input_data_file_or_directory)
 
