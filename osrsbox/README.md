@@ -1,8 +1,6 @@
 # osrsbox
 
-[![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) 
-
-[![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
 
 ## A complete and up-to-date database of Old School Runescape (OSRS) items accessible using a Python API
 
@@ -105,6 +103,7 @@ Not all items in OSRS are equipable. Only items with the `equipable_by_player` p
 
 ## Changelog
 
+- `1.0.8`: Fixed packaging issue.
 - `1.0.7`: Updated project documentation.
 - `1.0.6`: Fixed package install bug.
 - `1.0.5`: Release for game update 2019/03/21.
