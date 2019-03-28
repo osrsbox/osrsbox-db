@@ -23,6 +23,7 @@ import json
 from pathlib import Path
 from typing import Dict
 from typing import List
+from typing import Union
 from typing import Generator
 
 from osrsbox.items_api.item_definition import ItemDefinition
@@ -31,7 +32,7 @@ PATH_TO_ITEMS_COMPLETE_JSON = Path(__file__).absolute().parent / ".." / ".." / "
 if not PATH_TO_ITEMS_COMPLETE_JSON.is_file():
     PATH_TO_ITEMS_COMPLETE_JSON = Path(__file__).absolute().parent / ".." / "docs" / "items-complete.json"
     if not PATH_TO_ITEMS_COMPLETE_JSON.is_file():
-        raise SystemExit("Error: Default item database file not found. Exiting")
+        raise ValueError("Error: Default item database file not found. Exiting")
 
 
 class AllItems:
@@ -64,10 +65,11 @@ class AllItems:
         """
         return len(self.all_items)
 
-    def load_all_items(self, input_data_file_or_directory: Path) -> None:
+    def load_all_items(self, input_data_file_or_directory: Union[Path, str]) -> None:
         """Load the items database via a JSON file, or directory of JSON files.
 
         :param input_data_file_or_directory: The path to the data input.
+        :raises ValueError: Valid input not found.
         """
         # Check if a str is supplied, if so, convert to Path object
         if isinstance(input_data_file_or_directory, str):
@@ -79,7 +81,7 @@ class AllItems:
         elif input_data_file_or_directory.is_file():
             self._load_items_from_file(path_to_json_file=input_data_file_or_directory)
         else:
-            raise SystemExit("Error: Valid input not found. Exiting.")
+            raise ValueError("Error: Valid input not found. Exiting.")
 
         # Sort the list of items
         self.all_items.sort(key=lambda x: x.id)
@@ -88,13 +90,15 @@ class AllItems:
         """Load item database from a directory of JSON files (`items-json`).
 
         :param path_to_directory: The path to the `items-json` directory.
+        :raises ValueError: No JSON files found in supplied directory.
         """
         # Fetch all .json files in provided dir
         json_files = list(path_to_directory.glob("*.json"))
 
-        # Exit if no files were globbed
-        if len(json_files) == 0:
-            raise SystemExit("Error: No files found in the supplied directory, check the supplied path. Exiting.")
+        try:
+            json_files[0]
+        except IndexError as e:
+            raise ValueError("Error: No files found in directory, check the supplied path. Exiting.") from e
 
         # Loop through every item in JSON file
         for json_file in json_files:
@@ -115,12 +119,16 @@ class AllItems:
             self._load_item(temp[entry])
 
     def _load_item(self, item_json: Dict) -> None:
-        """Convert the `item_json` into a :class:`ItemDefinition` and store it."""
+        """Convert the `item_json` into a :class:`ItemDefinition` and store it.
+
+        :param item_json: A dict from an open and loaded JSON file.
+        :raises ValueError: Cannot populate item.
+        """
         # Load the item using the ItemDefinition class
         try:
             item_def = ItemDefinition(**item_json)
-        except TypeError:
-            raise SystemExit("Error: Invalid JSON structure found, check supplied input. Exiting")
+        except TypeError as e:
+            raise ValueError("Error: Invalid JSON structure found, check supplied input. Exiting") from e
 
         # Add item to list
         self.all_items.append(item_def)
