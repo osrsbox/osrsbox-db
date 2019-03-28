@@ -34,7 +34,8 @@ from osrsbox import items_api
 def main():
     """The main function for generating the `docs/items-complete.json` file"""
     # Read in the item database content
-    all_db_items = items_api.load()
+    path_to_items_json = Path(config.DOCS_PATH / "items-json")
+    all_db_items = items_api.all_items.AllItems(path_to_items_json)
 
     items = {}
 
@@ -44,6 +45,11 @@ def main():
 
     # Save all items to docs/items_complete.json
     out_fi = Path(config.DOCS_PATH / "items-complete.json")
+    with open(out_fi, "w") as f:
+        json.dump(items, f)
+
+    # Save all items to osrsbox/docs/items_complete.json
+    out_fi = Path(config.PACKAGE_ROOT_PATH / "docs" / "items-complete.json")
     with open(out_fi, "w") as f:
         json.dump(items, f)
 
