@@ -19,16 +19,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-from extraction_tools_wiki import extract_wiki_data
+from pathlib import Path
+
+import config
+from extraction_tools_cache import osrs_cache_constants
+from extraction_tools_cache import osrs_cache_data
+from extraction_tools_cache import extract_model_ids
+from extraction_tools_cache import extract_attackable_npcs
 
 
 if __name__ == '__main__':
-    print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
-    categories = ["Items", "Construction", "Furniture", "Pets"]
-    extract_wiki_data.main(categories)
-    print(f">>> WIKI DATA MONSTERS: Extracting page titles and wiki text...")
-    categories = ["Monsters"]
-    extract_wiki_data.main(categories)
-    print(f">>> WIKI DATA QUESTS: Extracting page titles and wiki text...")
-    categories = ["Quests", "Miniquests", "Special_quests"]
-    extract_wiki_data.main(categories)
+    # STAGE ONE: Handle all OSRS cache data updates
+    print(">>> CACHE COMPRESSION: Compressing OSRS Cache data for Items, NPCs and Objects...")
+    osrs_cache_data.main(config.EXTRACTION_CACHE_PATH, True)
+
+    print(">>> MODEL IDS: Extracting OSRS model ID numbers from cache definition files...")
+    extract_model_ids.main(config.EXTRACTION_CACHE_PATH)
+
+    print(">>> ATTACKABLE NPCS: Extracting and merging OSRS attackable NPC definition files...")
+    cache_dump_path_npcs = Path(config.EXTRACTION_CACHE_PATH / "npcs.json")
+    extract_attackable_npcs.main(cache_dump_path_npcs)
+
+    # STAGE TWO: Determine, then print any manual updates required (usually for tests)
+    print(">>> Manual updates required:")
+
+    # Check cache definition length for test.test_osrs_cache_data module
+    for cache_type in osrs_cache_constants.CACHE_DUMP_TYPES:
+        cache_data_path = Path(config.EXTRACTION_CACHE_PATH / cache_type)
+        # Glob all files in cache type dir, convert generator to list, then determine file count
+        cache_data_fis = list(Path(cache_data_path).glob("*.json"))
+        cache_data_len = len(cache_data_fis)
+        print(f"  > test.test_osrs_cache_data: {cache_type} - {cache_data_len}")

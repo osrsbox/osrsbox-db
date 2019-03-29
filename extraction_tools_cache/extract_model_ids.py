@@ -121,7 +121,7 @@ def main(path_to_cache_definitions: str):
                 models_dict[key] = model
 
     # Save all extracted models ID numbers to JSON file
-    out_fi = Path(config.DATA_PATH / "models-summary.json")
+    out_fi = Path(config.DOCS_PATH / "models-summary.json")
     with open(out_fi, "w") as f:
         json.dump(models_dict, f, indent=4)
 
