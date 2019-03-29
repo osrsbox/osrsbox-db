@@ -103,6 +103,7 @@ Not all items in OSRS are equipable. Only items with the `equipable_by_player` p
 
 ## Changelog
 
+- `1.0.9`: Release for game update 2019/03/28.
 - `1.0.8`: Fixed packaging issue.
 - `1.0.7`: Updated project documentation.
 - `1.0.6`: Fixed package install bug.
