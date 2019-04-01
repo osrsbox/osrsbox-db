@@ -93,7 +93,7 @@ class BuildItem:
             "prayer",
             "attack_speed",
             "slot",
-            "skill_reqs"]
+            "requirements"]
 
     def populate(self):
         """The primary entry and item object population function."""
@@ -529,12 +529,12 @@ class BuildItem:
             self.item_dict["equipment"]["attack_speed"] = None
 
         # Fetch item skill requirements
-        self.item_dict["equipment"]["skill_reqs"] = None
+        self.item_dict["equipment"]["requirements"] = None
         try:
-            skill_reqs = self.skill_requirements[str(self.item_id)]
-            self.item_dict["equipment"]["skill_reqs"] = skill_reqs
+            requirements = self.skill_requirements[str(self.item_id)]
+            self.item_dict["equipment"]["requirements"] = requirements
         except KeyError:
-            self.item_dict["equipment"]["skill_reqs"] = None
+            self.item_dict["equipment"]["requirements"] = None
 
         return True
 
@@ -603,7 +603,7 @@ class BuildItem:
         self.item_dict["equipment"]["prayer"] = 0
         self.item_dict["equipment"]["slot"] = None
         self.item_dict["equipment"]["attack_speed"] = None
-        self.item_dict["equipment"]["skill_reqs"] = None
+        self.item_dict["equipment"]["requirements"] = None
 
     def compare_json_files(self, itemDefinition: ItemDefinition) -> bool:
         """Print the difference between this item object, and the item that exists in the database.
@@ -630,10 +630,13 @@ class BuildItem:
                 # Also check equipable
                 if itemDefinition.equipable_by_player:
                     for equipment_prop in self.equipment_properties:
-                        if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
-                            changed = True
-                            changes[equipment_prop] = [current_json["equipment"][equipment_prop],
-                                                       existing_json["equipment"][equipment_prop]]
+                        try:
+                            if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
+                                changed = True
+                                changes[equipment_prop] = [current_json["equipment"][equipment_prop],
+                                                           existing_json["equipment"][equipment_prop]]
+                        except KeyError:
+                            pass  # This should be fixed, when old/new item has no equipment key
 
         # Print any item changes
         if changed:

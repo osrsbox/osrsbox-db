@@ -36,16 +36,10 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 6,
-        "skill_reqs": [
-            {
-                "skill": "attack",
-                "level": 75
-            },
-            {
-                "skill": "defence",
-                "level": 75
-            }
-        ]
+        "attack_speed": 7,
+        "requirements": {
+            "attack": 75,
+            "defence": 75
+        }
     }
 }

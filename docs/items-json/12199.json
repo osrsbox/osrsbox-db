@@ -37,11 +37,8 @@
         "prayer": 6,
         "slot": "weapon",
         "attack_speed": 5,
-        "skill_reqs": [
-            {
-                "skill": "prayer",
-                "level": 60
-            }
-        ]
+        "requirements": {
+            "prayer": 60
+        }
     }
 }

@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "head",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "strength",
-                "level": 50
-            },
-            {
-                "skill": "defence",
-                "level": 50
-            }
-        ]
+        "requirements": {
+            "strength": 50,
+            "defence": 50
+        }
     }
 }

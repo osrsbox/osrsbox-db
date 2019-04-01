@@ -1,29 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import io
-import os
-
+from pathlib import Path
 from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'osrsbox'
-DESCRIPTION = 'A complete and up-to-date database of Old School RuneScape (OSRS) items.'
+DESCRIPTION = 'A complete and up-to-date database of Old School Runescape (OSRS) items accessible using a Python API.'
 URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.0.4"
+VERSION = "1.1.0"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [
 ]
 
-here = os.path.abspath(os.path.dirname(__file__))
-readme_location = os.path.join(here, "osrsbox")
-
 # Import the README and use it as the long-description.
-with io.open(os.path.join(readme_location, 'README.md'), encoding='utf-8') as f:
+readme_location = Path(__file__).parent
+readme_location = Path(readme_location / "osrsbox" / "README.md")
+
+with open(readme_location, encoding='utf-8') as f:
     long_description = '\n' + f.read()
 
 setup(

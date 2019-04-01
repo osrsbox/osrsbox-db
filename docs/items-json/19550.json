@@ -37,11 +37,8 @@
         "prayer": 2,
         "slot": "ring",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "hitpoints",
-                "level": 75
-            }
-        ]
+        "requirements": {
+            "hitpoints": 75
+        }
     }
 }

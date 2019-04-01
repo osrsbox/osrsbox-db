@@ -37,11 +37,8 @@
         "prayer": 0,
         "slot": "2h",
         "attack_speed": 7,
-        "skill_reqs": [
-            {
-                "skill": "strength",
-                "level": 60
-            }
-        ]
+        "requirements": {
+            "strength": 60
+        }
     }
 }

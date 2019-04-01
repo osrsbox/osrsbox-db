@@ -37,31 +37,13 @@
         "prayer": 3,
         "slot": "legs",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "attack",
-                "level": 42
-            },
-            {
-                "skill": "strength",
-                "level": 42
-            },
-            {
-                "skill": "hitpoints",
-                "level": 42
-            },
-            {
-                "skill": "range",
-                "level": 42
-            },
-            {
-                "skill": "magic",
-                "level": 42
-            },
-            {
-                "skill": "prayer",
-                "level": 22
-            }
-        ]
+        "requirements": {
+            "attack": 42,
+            "strength": 42,
+            "hitpoints": 42,
+            "ranged": 42,
+            "magic": 42,
+            "prayer": 22
+        }
     }
 }

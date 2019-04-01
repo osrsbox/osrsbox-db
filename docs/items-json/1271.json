@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "weapon",
         "attack_speed": 5,
-        "skill_reqs": [
-            {
-                "skill": "mining",
-                "level": 31
-            },
-            {
-                "skill": "attack",
-                "level": 30
-            }
-        ]
+        "requirements": {
+            "mining": 31,
+            "attack": 30
+        }
     }
 }

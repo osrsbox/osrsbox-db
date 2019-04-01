@@ -21,7 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import json
+from pathlib import Path
 
+import config
 from items_builder import item_builder
 
 
@@ -30,29 +32,24 @@ if __name__ == "__main__":
     if os.path.exists("builder.log"):
         os.remove("builder.log")
 
-    # Set data input directories
-    paths_wiki = os.path.join("..", "extraction_tools_wiki", "")
-    paths_other = os.path.join("..", "extraction_tools_other", "")
-    paths_data = os.path.join("..", "data", "")
-    paths_docs = os.path.join("..", "docs")
-
     # Load the raw output from OSRS cache
-    scraper_path = os.path.join(paths_data, "items-scraper.json")
+    scraper_path = Path(config.DATA_PATH / "items-scraper.json")
     with open(scraper_path) as f:
         cache_items = json.load(f)
 
     # Load the current database contents
-    items_complete_path = os.path.join(paths_docs, "items-complete.json")
+    items_complete_path = Path(config.DOCS_PATH / "items-complete.json")
     with open(items_complete_path) as f:
         current_db = json.load(f)
 
     # Load the wiki text file
-    with open(paths_wiki + "extract_page_text_items.json") as wiki_text_file:
+    wiki_text_file_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_items.json")
+    with open(wiki_text_file_path) as wiki_text_file:
         wiki_text = json.load(wiki_text_file)
 
     # Load all normalized names
     normalized_names = dict()
-    with open(paths_other + "normalized_names.txt") as f:
+    with open("normalized_names.txt") as f:
         for line in f:
             line = line.strip()
             if "#" in line or line.startswith("TODO"):
@@ -61,11 +58,13 @@ if __name__ == "__main__":
             normalized_names[line[0]] = [line[1], line[2], line[3]]
 
     # Load buy limit data
-    with open(paths_data + "ge-limits-names.json") as f:
+    buy_limits_path = Path(config.DATA_PATH / "ge-limits-names.json")
+    with open(buy_limits_path) as f:
         buy_limits = json.load(f)
 
     # Load skill requirement data
-    with open(paths_data + "item-skill-requirements.json") as f:
+    skill_requirements_path = Path(config.DATA_PATH / "item-skill-requirements.json")
+    with open(skill_requirements_path) as f:
         skill_requirements = json.load(f)
 
     # Start processing every item!

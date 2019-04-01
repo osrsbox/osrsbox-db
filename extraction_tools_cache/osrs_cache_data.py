@@ -35,7 +35,9 @@ import glob
 import zlib
 import json
 import binascii
+from pathlib import Path
 from typing import Dict
+from typing import Union
 from typing import Tuple
 from typing import Generator
 from base64 import b64encode, b64decode
@@ -191,20 +193,15 @@ def compress_all_cache_types(root_path_of_cache_dump: str):
         compress_single_cache_type(full_path, output_json_file)
 
 
-def main(cache_dump_path: str, process_all: bool):
+def main(cache_dump_path: Union[str, Path], process_all: bool):
     """Main function for compressing OSRS cache data
 
     :param cache_dump_path: The location of the cache directories exported by RuneLite
     :param process_all: Boolean to toggle processing of all cache dumps (items, npcs, objects)
     """
-    # Check if the supplied directory argument is actually a directory
-    if os.path.isdir(cache_dump_path):
-        # Check for trailing slash
-        if not cache_dump_path.endswith(os.sep):
-            cache_dump_path = os.path.join(cache_dump_path, "")
-    else:
-        # Exit if the argument is not a directory
-        raise SystemExit(">>> ERROR: Provided directory is not a directory! Exiting.")
+    # Check if a str is supplied, if so, convert to Path object
+    if isinstance(cache_dump_path, str):
+        cache_dump_path = Path(cache_dump_path)
 
     if process_all:
         # Compress all cache definition files (for items, npcs and objects folders)
