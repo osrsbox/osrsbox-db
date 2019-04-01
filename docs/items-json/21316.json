@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "ammo",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "ranged",
-                "level": 61
-            },
-            {
-                "skill": "slayer",
-                "level": 65
-            }
-        ]
+        "requirements": {
+            "ranged": 61,
+            "slayer": 65
+        }
     }
 }

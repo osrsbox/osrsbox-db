@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "2h",
         "attack_speed": 5,
-        "skill_reqs": [
-            {
-                "skill": "agility",
-                "level": 50
-            },
-            {
-                "skill": "ranged",
-                "level": 70
-            }
-        ]
+        "requirements": {
+            "agility": 50,
+            "ranged": 70
+        }
     }
 }

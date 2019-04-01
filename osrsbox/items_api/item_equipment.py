@@ -34,7 +34,7 @@ class ItemEquipment:
     def __init__(self, attack_stab=None, attack_slash=None, attack_crush=None, attack_magic=None,
                  attack_ranged=None, defence_stab=None, defence_slash=None, defence_crush=None,
                  defence_magic=None, defence_ranged=None, melee_strength=None, ranged_strength=None,
-                 magic_damage=None, prayer=None, slot=None, attack_speed=None, skill_reqs=None):
+                 magic_damage=None, prayer=None, slot=None, attack_speed=None, requirements=None):
         self.attack_stab = attack_stab
         self.attack_slash = attack_slash
         self.attack_crush = attack_crush
@@ -51,7 +51,7 @@ class ItemEquipment:
         self.prayer = prayer
         self.slot = slot
         self.attack_speed = attack_speed
-        self.skill_reqs = skill_reqs
+        self.requirements = requirements
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON of item_equipment property for exporting or printing.

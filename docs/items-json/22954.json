@@ -37,11 +37,8 @@
         "prayer": 5,
         "slot": "feet",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill_req": "prayer",
-                "level_req": 60
-            }
-        ]
+        "requirements": {
+            "prayer": 60
+        }
     }
 }

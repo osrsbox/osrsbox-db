@@ -119,8 +119,8 @@
           "attack_speed": {
             "type": ["integer", "null"]
           },
-          "skill_reqs": {
-            "type": ["array", "null"]
+          "requirements": {
+            "type": ["object", "null"]
           }
         },
         "required": [
@@ -140,7 +140,7 @@
           "prayer",
           "slot",
           "attack_speed",
-          "skill_reqs"
+          "requirements"
         ]
       }
     },

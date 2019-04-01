@@ -37,15 +37,9 @@
         "prayer": 3,
         "slot": "shield",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "defence",
-                "level": 75
-            },
-            {
-                "skill": "prayer",
-                "level": 75
-            }
-        ]
+        "requirements": {
+            "defence": 75,
+            "prayer": 75
+        }
     }
 }

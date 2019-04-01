@@ -37,19 +37,10 @@
         "prayer": 0,
         "slot": "2h",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "ranged",
-                "level": 30
-            },
-            {
-                "skill": "attack",
-                "level": 30
-            },
-            {
-                "skill": "magic",
-                "level": 30
-            }
-        ]
+        "requirements": {
+            "ranged": 30,
+            "attack": 30,
+            "magic": 30
+        }
     }
 }

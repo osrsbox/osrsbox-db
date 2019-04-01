@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "shield",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "agility",
-                "level": 50
-            },
-            {
-                "skill": "defence",
-                "level": 70
-            }
-        ]
+        "requirements": {
+            "agility": 50,
+            "defence": 70
+        }
     }
 }
