@@ -37,11 +37,8 @@
         "prayer": 0,
         "slot": "weapon",
         "attack_speed": 4,
-        "skill_reqs": [
-            {
-                "skill": "magic",
-                "level": 60
-            }
-        ]
+        "requirements": {
+            "magic": 60
+        }
     }
 }

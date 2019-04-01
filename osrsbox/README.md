@@ -81,28 +81,29 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Al
 
 Not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are actually equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not actually equipable by a player). Any item that is deemed equipable by a player has the following properties.
 
-| Property        | Data type | Description                           |
-| --------------- | --------- | ------------------------------------- |
-| attack_stab     | integer   | The stab attack bonus of the item     |
-| attack_slash    | integer   | The slash attack bonus of the item    |
-| attack_crush    | integer   | The crush attack bonus of the item    |
-| attack_magic    | integer   | The magic attack bonus of the item    |
-| attack_ranged   | integer   | The ranged attack bonus of the item   |
-| defence_stab    | integer   | The stab defence bonus of the item    |
-| defence_slash   | integer   | The slash defence bonus of the item   |
-| defence_crush   | integer   | The crush defence bonus of the item   |
-| defence_magic   | integer   | The magic defence bonus of the item   |
-| defence_ranged  | integer   | The ranged defence bonus of the item  |
-| melee_strength  | integer   | The melee strength bonus of the item  |
-| ranged_strength | integer   | The ranged strength bonus of the item |
-| magic_damage    | integer   | The magic damage bonus of the item    |
-| prayer          | integer   | The prayer bonus of the item          |
-| slot            | string    | The item slot (e.g., head)            |
-| attack_speed    | integer   | The attack speed of an item           |
-| skill_reqs      | array     | An array of objects {skill: level}    |
+| Property        | Data type | Description                              |
+| --------------- | --------- | ---------------------------------------- |
+| attack_stab     | integer   | The stab attack bonus of the item        |
+| attack_slash    | integer   | The slash attack bonus of the item       |
+| attack_crush    | integer   | The crush attack bonus of the item       |
+| attack_magic    | integer   | The magic attack bonus of the item       |
+| attack_ranged   | integer   | The ranged attack bonus of the item      |
+| defence_stab    | integer   | The stab defence bonus of the item       |
+| defence_slash   | integer   | The slash defence bonus of the item      |
+| defence_crush   | integer   | The crush defence bonus of the item      |
+| defence_magic   | integer   | The magic defence bonus of the item      |
+| defence_ranged  | integer   | The ranged defence bonus of the item     |
+| melee_strength  | integer   | The melee strength bonus of the item     |
+| ranged_strength | integer   | The ranged strength bonus of the item    |
+| magic_damage    | integer   | The magic damage bonus of the item       |
+| prayer          | integer   | The prayer bonus of the item             |
+| slot            | string    | The item slot (e.g., head)               |
+| attack_speed    | integer   | The attack speed of an item              |
+| requirements    | object    | An object of requirements {skill: level} |
 
 ## Changelog
 
+- `1.1.0`: Changed equipable item requirements to an object.
 - `1.0.9`: Release for game update 2019/03/28.
 - `1.0.8`: Fixed packaging issue.
 - `1.0.7`: Updated project documentation.

@@ -37,11 +37,8 @@
         "prayer": 0,
         "slot": "ammo",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "ranged",
-                "level": 1
-            }
-        ]
+        "requirements": {
+            "ranged": 1
+        }
     }
 }

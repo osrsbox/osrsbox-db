@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "2h",
         "attack_speed": 5,
-        "skill_reqs": [
-            {
-                "skill": "slayer",
-                "level": 55
-            },
-            {
-                "skill": "attack",
-                "level": 50
-            }
-        ]
+        "requirements": {
+            "slayer": 55,
+            "attack": 50
+        }
     }
 }

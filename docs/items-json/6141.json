@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "legs",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill": "defence",
-                "level": 40
-            },
-            {
-                "skill": "magic",
-                "level": 40
-            }
-        ]
+        "requirements": {
+            "defence": 40,
+            "magic": 40
+        }
     }
 }

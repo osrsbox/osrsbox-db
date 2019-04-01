@@ -37,11 +37,8 @@
         "prayer": 0,
         "slot": "weapon",
         "attack_speed": 3,
-        "skill_reqs": [
-            {
-                "skill_req": "ranged",
-                "level_req": 60
-            }
-        ]
+        "requirements": {
+            "ranged": 60
+        }
     }
 }

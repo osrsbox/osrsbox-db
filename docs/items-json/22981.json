@@ -37,15 +37,9 @@
         "prayer": 0,
         "slot": "hands",
         "attack_speed": null,
-        "skill_reqs": [
-            {
-                "skill_req": "Attack",
-                "level_req": 80
-            },
-            {
-                "skill_req": "Defence",
-                "level_req": 80
-            }
-        ]
+        "requirements": {
+            "attack": 80,
+            "defence": 80
+        }
     }
 }
