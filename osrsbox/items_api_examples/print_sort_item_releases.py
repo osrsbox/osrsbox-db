@@ -23,21 +23,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-from osrsbox.items_api import all_items
+import collections
+import datetime
+
+from osrsbox import items_api
 
 
 if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i",
-                    "--input",
-                    required=True,
-                    help="Either 1) Folder of JSON item (items-json), 2) Single JSON file (items-complete.json)")
-    args = vars(ap.parse_args())
+    # Load all items
+    all_db_items = items_api.load()
 
-    # Initialize the AllItems class using the user-supplied osrsbox-db location
-    ai = all_items.AllItems(args["input"])
+    items_by_release_date = collections.defaultdict(list)
 
-    # Loop through all items in the database and print the item name for each item
-    for item in ai:
-        print(item.name)
+    # Loop through all items in the database
+    for item in all_db_items:
+        if item.release_date:  # Check item has a release date (aka, not None)
+            # Convert date string to a Python datetime object
+            datetime_object = datetime.datetime.strptime(item.release_date, '%d %B %Y')
+            # Append item object to dictionary > list
+            items_by_release_date[datetime_object].append(item)
+
+    # Sort dictionary by release date
+    items_by_release_date = sorted(items_by_release_date.items())
+
+    # Loop dictionary
+    for release_date, items in items_by_release_date:
+        # Loop list of items
+        for item in items:
+            # Print release date (as string), followed by item ID and name
+            print(f"{release_date.strftime('%Y-%m-%d'):<15} {item.id:<10} {item.name}")
