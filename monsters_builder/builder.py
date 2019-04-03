@@ -21,9 +21,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import json
+import logging
+from pathlib import Path
 
 import mwparserfromhell
 
+import config
 from monsters_builder import monster_builder
 
 
@@ -73,7 +76,7 @@ def map_npcs_from_cache_to_wiki(monster_name, wiki_text, attackable_npcs):
                 for id in ids:
                     monster_ids[id] = [monster_name, wiki_text, monster_template, version_count]
             except ValueError:
-                print(f"  > NO ID ERROR: NAME:{monster_name}")
+                logger.debug(f"NO ID: NAME: {monster_name}")
         else:
             i = 1
             while i <= version_count:
@@ -85,7 +88,7 @@ def map_npcs_from_cache_to_wiki(monster_name, wiki_text, attackable_npcs):
                         monster_ids[id] = [monster_name, wiki_text, monster_template, i]
                     i += 1
                 except ValueError:
-                    print(f"  > NO ID ERROR: NAME:{monster_name}")
+                    logger.debug(f"NO ID: NAME: {monster_name}")
                     i += 1
 
     return monster_ids
@@ -96,24 +99,26 @@ if __name__ == "__main__":
     if os.path.exists("builder.log"):
         os.remove("builder.log")
 
-    # Set data input directories
-    paths_wiki = os.path.join("..", "extraction_tools_wiki", "")
-    paths_other = os.path.join("..", "extraction_tools_other", "")
-    paths_data = os.path.join("..", "data", "")
-    paths_docs = os.path.join("..", "docs", "")
+    # Setup logging
+    logging.basicConfig(filename="builder.log",
+                        filemode='a',
+                        level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
 
     # Load the raw output from OSRS cache
-    with open(paths_data + "attackable-npcs.json") as f:
+    attackable_npcs_path = Path(config.DATA_PATH / "attackable-npcs.json")
+    with open(attackable_npcs_path) as f:
         attackable_npcs = json.load(f)
 
     # Load the wiki text file
-    with open(paths_wiki + "extract_page_text_monsters.json") as wiki_text_file:
+    wiki_text_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_monsters.json")
+    with open(wiki_text_path) as wiki_text_file:
         wiki_text = json.load(wiki_text_file)
 
     # STAGE ONE: Start correlation between the OSRS cache data, and OSRS Wiki data
 
     found_ids = dict()
-    print(">>> Starting ID correlation...")
+    logger.debug(">>> Starting ID correlation...")
     # Loop OSRS Wiki entries from monster category
     for monster_name, wiki_text in wiki_text.items():
         monster_ids = map_npcs_from_cache_to_wiki(monster_name, wiki_text, attackable_npcs)
@@ -123,7 +128,7 @@ if __name__ == "__main__":
 
     to_process = dict()  # monster id : cache_name, wiki_name, wiki_text,
 
-    print(">>> Populating attackable NPCs data...")
+    logger.debug(">>> Populating attackable NPCs data...")
     # Match attackable NPCs with wiki data
     attackable_npcs_list = sorted(attackable_npcs, key=lambda x: int(x))
     for monster_def_id in attackable_npcs_list:
@@ -144,13 +149,13 @@ if __name__ == "__main__":
                 "cache_combat_level": cache_combat_level
             }
         except KeyError:
-            print(f'  > NO WIKI ERROR: ID:{monster_def_id} NAME:{cache_def["name"]} CMB:{cache_def["combatLevel"]}')
+            logger.debug(f'NO WIKI: ID: {monster_def_id} NAME: {cache_def["name"]} CMB: {cache_def["combatLevel"]}')
 
-    print(">>> Starting to build the monster database...")
+    logger.debug(">>> Starting to build the monster database...")
     # Start processing every monster!
     for monster_id in to_process:
         # Initialize the BuildMonster class
-        print(f">>> {monster_id}")
+        logger.debug(f">>> {monster_id}")
         builder = monster_builder.BuildMonster(monster_id,
                                                to_process[monster_id])
         # Start the build monster population function

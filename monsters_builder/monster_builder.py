@@ -19,9 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import json
 import logging
+from pathlib import Path
+
 import mwparserfromhell
 
+import config
 from osrsbox.monsters_api.monster_definition import MonsterDefinition
 from monsters_builder import infobox_cleaner
 
@@ -62,22 +66,22 @@ class BuildMonster:
         self.monster_dict["cache_name"] = self.cache_name
         self.monster_dict["wiki_name"] = self.wiki_name
 
+        self.logger.debug(self.monster_template.encode("utf-8"))
+
         # STAGE TWO: PARSE THE TEMPLATE
         self.parse_monster_infobox_properties()
         self.parse_monster_infobox_stats()
 
-        # import json  # This should not be here, but simplifies testing and passing flake8 check
-        # print(json.dumps(self.monster_dict, indent=4))
+        # This should not be here, but simplifies testing and passing flake8 check
+        self.logger.debug(json.dumps(self.monster_dict, indent=4))
 
-        # self.compare_json_files(self.itemDefinition)
-        # json_out = self.itemDefinition.construct_json()
-        # self.logger.debug(json_out)
-        #
-        # self.logger.debug("============================================ END")
-        #
-        # # Actually output a JSON file, comment out for testing
-        # output_dir = os.path.join("..", "docs", "items-json")
-        # self.itemDefinition.export_json(True, output_dir)
+        # Populate the dataclass
+        for k, v in self.monster_dict.items():
+            setattr(self.monster_definition, k, v)
+
+        # Actually output a JSON file, comment out for testing
+        output_dir = Path(config.DOCS_PATH / "monsters-json" / "")
+        self.monster_definition.export_json(True, output_dir)
 
     def extract_infobox(self):
         """Extract the templates in the provided wikitext for the monster."""
@@ -99,6 +103,9 @@ class BuildMonster:
         if not self.templates:
             self.logger.debug("extract_infobox: not self.templates")
             return False
+
+        self.logger.debug("extract_infobox: FOUND self.templates")
+        self.logger.debug(self.templates)
 
         # If we got this far, return true
         return True
@@ -166,11 +173,11 @@ class BuildMonster:
         # COMBAT_LEVEL: Determine the combat level of a monster (tested: False)
         key = "combat" + str(self.infobox_version)
         # Try fecth using version number (e.g., id1, id2 - replace id with key name)
-        combat = self.extract_infobox_value(self.monster_template, key)
-        if combat is None:
-            combat = self.extract_infobox_value(self.monster_template, "combat")
+        combat_level = self.extract_infobox_value(self.monster_template, key)
+        if combat_level is None:
+            combat_level = self.extract_infobox_value(self.monster_template, "combat")
         # Clean and add to dict
-        self.monster_dict["combat"] = infobox_cleaner.clean_combat_level(combat)
+        self.monster_dict["combat_level"] = infobox_cleaner.clean_combat_level(combat_level)
         # print(self.monster_dict["combat"])
         # print(self.cache_combat_level)
 
@@ -185,11 +192,11 @@ class BuildMonster:
         # HIT_POINTS: Determine the hitpoints of a monster (tested: False)
         key = "hitpoints" + str(self.infobox_version)
         # Try fecth using version number (e.g., id1, id2 - replace id with key name)
-        hitpoints = self.extract_infobox_value(self.monster_template, key)
-        if hitpoints is None:
-            hitpoints = self.extract_infobox_value(self.monster_template, "hitpoints")
+        hit_points = self.extract_infobox_value(self.monster_template, key)
+        if hit_points is None:
+            hit_points = self.extract_infobox_value(self.monster_template, "hitpoints")
         # Clean and add to dict
-        self.monster_dict["hitpoints"] = infobox_cleaner.clean_hitpoints(hitpoints)
+        self.monster_dict["hit_points"] = infobox_cleaner.clean_hitpoints(hit_points)
 
         # TODO: max hit
         # TODO: attack type
@@ -216,20 +223,20 @@ class BuildMonster:
         # IMMUNE_POISON: Determine the immunity to poison property of a monster (tested: False)
         key = "immunepoison" + str(self.infobox_version)
         # Try fecth using version number (e.g., id1, id2 - replace id with key name)
-        immunepoison = self.extract_infobox_value(self.monster_template, key)
-        if immunepoison is None:
-            immunepoison = self.extract_infobox_value(self.monster_template, "immunepoison")
+        immune_poison = self.extract_infobox_value(self.monster_template, key)
+        if immune_poison is None:
+            immune_poison = self.extract_infobox_value(self.monster_template, "immunepoison")
         # Clean and add to dict
-        self.monster_dict["immune_poison"] = infobox_cleaner.clean_boolean(immunepoison)
+        self.monster_dict["immune_poison"] = infobox_cleaner.clean_boolean(immune_poison)
 
         # IMMUNE_VENOM: Determine the immunity to venon property of a monster (tested: False)
         key = "immunevenom" + str(self.infobox_version)
         # Try fecth using version number (e.g., id1, id2 - replace id with key name)
-        immunevenom = self.extract_infobox_value(self.monster_template, key)
-        if immunevenom is None:
-            immunevenom = self.extract_infobox_value(self.monster_template, "immunevenom")
+        immune_venom = self.extract_infobox_value(self.monster_template, key)
+        if immune_venom is None:
+            immune_venom = self.extract_infobox_value(self.monster_template, "immunevenom")
         # Clean and add to dict
-        self.monster_dict["immune_venom"] = infobox_cleaner.clean_boolean(immunevenom)
+        self.monster_dict["immune_venom"] = infobox_cleaner.clean_boolean(immune_venom)
 
         # TODO: weakness
         # TODO: slayer_level
@@ -238,10 +245,7 @@ class BuildMonster:
         # TODO: url
 
     def parse_monster_infobox_stats(self) -> bool:
-        """Parse the wiki text template and extract item bonus values from it.
-
-        :param template: A mediawiki wiki text template.
-        """
+        """Parse the wiki text template and extract item bonus values from it."""
         self.monster_dict["attack_level"] = self.clean_stats_value(self.monster_template, "att")
         self.monster_dict["strength_level"] = self.clean_stats_value(self.monster_template, "str")
         self.monster_dict["defence_level"] = self.clean_stats_value(self.monster_template, "def")
@@ -267,10 +271,9 @@ class BuildMonster:
 
         return True
 
-    def clean_stats_value(self, template: mwparserfromhell.nodes.template.Template, prop: str):
+    def clean_stats_value(self, prop: str):
         """Clean a item bonuses value extracted from a wiki template.
 
-        :param template: A mediawiki wiki text template.
         :param prop: The key to query in the template.
         :return value: The extracted template value that has been int cast.
         """
@@ -295,6 +298,9 @@ class BuildMonster:
                     if value.isdigit():
                         value = int(value)
         else:
-            print(f"  > STATS ERROR: ID:{self.monster_id}, WIKI:{self.wiki_name}, PROP:{prop}, VERSION:{self.infobox_version}")
+            self.logger.debug(f"STATS ISSUE: ID: {self.monster_id}, "
+                              f"WIKI: {self.wiki_name}, "
+                              f"PROP: {prop}, "
+                              f"VERSION: {self.infobox_version}")
 
         return value

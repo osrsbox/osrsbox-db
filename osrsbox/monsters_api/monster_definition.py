@@ -19,10 +19,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
-from dataclasses import dataclass
 from typing import Dict
+from pathlib import Path
+from dataclasses import dataclass
 
 
 @dataclass
@@ -92,7 +92,7 @@ class MonsterDefinition:
         """
         json_out = self.construct_json()
         out_file_name = str(self.id) + ".json"
-        out_file_path = os.path.join(export_path, out_file_name)
+        out_file_path = Path(export_path / out_file_name)
         with open(out_file_path, "w", newline="\n") as out_file:
             if pretty:
                 json.dump(json_out, out_file, indent=4)
