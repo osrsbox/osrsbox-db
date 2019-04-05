@@ -1,3 +1,8 @@
+### 2019/04/04: Treasure Trails Expansion: Progress Update
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/03/28: The Seed Vault
 - Added items: 0
 - Removed items: 0
