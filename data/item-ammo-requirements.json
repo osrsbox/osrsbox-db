@@ -1,8 +1,11 @@
-{
+var ammo_requirements = {
    "35": null,
    "74": null,
    "75": null,
-   "78": null,
+   "78": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
    "86": null,
    "87": null,
    "88": null,
@@ -51,7 +54,10 @@
    "740": null,
    "746": null,
    "747": null,
-   "767": null,
+   "767": {
+        weapon_type: "Crossbow",
+        ammo_tier : 1
+    },
    "772": null,
    "773": null,
    "774": null,
@@ -89,19 +95,58 @@
    "834": null,
    "835": null,
    "836": null,
-   "837": null,
-   "839": null,
-   "841": null,
-   "843": null,
-   "845": null,
-   "847": null,
-   "849": null,
-   "851": null,
-   "853": null,
-   "855": null,
-   "857": null,
-   "859": null,
-   "861": null,
+   "837": {
+        weapon_type: "Crossbow",
+        ammo_tier : 1
+    },
+   "839": {
+        weapon_type: "Longbow",
+        ammo_tier : 3
+    },
+   "841": {
+        weapon_type: "Shortbow",
+        ammo_tier : 3
+    },
+   "843": {
+        weapon_type: "Shortbow",
+        ammo_tier : 4
+    },
+   "845": {
+        weapon_type: "Longbow",
+        ammo_tier : 4
+    },
+   "847": {
+        weapon_type: "Longbow",
+        ammo_tier : 5
+    },
+   "849": {
+        weapon_type: "Shortbow",
+        ammo_tier : 5
+    },
+   "851": {
+        weapon_type: "Longbow",
+        ammo_tier : 6
+    },
+   "853": {
+        weapon_type: "Shortbow",
+        ammo_tier : 6
+    },
+   "855": {
+        weapon_type: "Longbow",
+        ammo_tier : 7
+    },
+   "857": {
+        weapon_type: "Shortbow",
+        ammo_tier : 7
+    },
+   "859": {
+        weapon_type: "Longbow",
+        ammo_tier : 8
+    },
+   "861": {
+        weapon_type: "Shortbow",
+        ammo_tier : 8
+    },
    "863": null,
    "864": null,
    "865": null,
@@ -116,23 +161,71 @@
    "874": null,
    "875": null,
    "876": null,
-   "877": null,
-   "878": null,
-   "879": null,
-   "880": null,
-   "881": null,
-   "882": null,
-   "883": null,
-   "884": null,
-   "885": null,
-   "886": null,
+   "877": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "878": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "879": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "880": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "881": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "882": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "883": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "884": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "885": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "886": {
+        ammo_type: "arrows",
+        ammo_tier : 4
+    },
    "887": null,
-   "888": null,
-   "889": null,
-   "890": null,
-   "891": null,
-   "892": null,
-   "893": null,
+   "888": {
+        ammo_type: "arrows",
+        ammo_tier : 5
+    },
+   "889": {
+        ammo_type: "arrows",
+        ammo_tier : 5
+    },
+   "890": {
+        ammo_type: "arrows",
+        ammo_tier : 6
+    },
+   "891": {
+        ammo_type: "arrows",
+        ammo_tier : 6
+    },
+   "892": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
+   "893": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
    "942": null,
    "975": null,
    "1005": null,
@@ -494,8 +587,12 @@
    "2671": null,
    "2673": null,
    "2675": null,
-   "2866": null,
-   "2883": null,
+   "2866": {
+        ammo_type: "ogre",
+    },
+   "2883": {
+        weapon_type: "Ogre Bow"
+    },
    "2890": null,
    "2894": null,
    "2896": null,
@@ -691,7 +788,10 @@
    "4153": null,
    "4156": null,
    "4158": null,
-   "4160": null,
+   "4160": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
    "4164": null,
    "4166": null,
    "4168": null,
@@ -824,10 +924,14 @@
    "4728": null,
    "4730": null,
    "4732": null,
-   "4734": null,
+   "4734": {
+        weapon_type: "Karils"
+    },
    "4736": null,
    "4738": null,
-   "4740": null,
+   "4740": {
+        ammo_type: "bolt racks"
+    },
    "4745": null,
    "4747": null,
    "4749": null,
@@ -842,8 +946,12 @@
    "4788": null,
    "4793": null,
    "4798": null,
-   "4803": null,
-   "4827": null,
+   "4803": {
+        ammo_type: "brutals"
+    },
+   "4827": {
+        weapon_type: "Ogre Comp"
+    },
    "4856": null,
    "4857": null,
    "4858": null,
@@ -984,18 +1092,54 @@
    "5607": null,
    "5608": null,
    "5609": null,
-   "5616": null,
-   "5617": null,
-   "5618": null,
-   "5619": null,
-   "5620": null,
-   "5621": null,
-   "5622": null,
-   "5623": null,
-   "5624": null,
-   "5625": null,
-   "5626": null,
-   "5627": null,
+   "5616": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "5617": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "5618": {
+        ammo_type: "arrows",
+        ammo_tier : 4
+    },
+   "5619": {
+        ammo_type: "arrows",
+        ammo_tier : 5
+    },
+   "5620": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
+   "5621": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
+   "5622": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "5623": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "5624": {
+        ammo_type: "arrows",
+        ammo_tier : 4
+    },
+   "5625": {
+        ammo_type: "arrows",
+        ammo_tier : 5
+    },
+   "5626": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
+   "5627": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
    "5628": null,
    "5629": null,
    "5630": null,
@@ -1070,8 +1214,14 @@
    "5736": null,
    "6040": null,
    "6041": null,
-   "6061": null,
-   "6062": null,
+   "6061": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "6062": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
    "6065": null,
    "6067": null,
    "6068": null,
@@ -1241,7 +1391,10 @@
    "6666": null,
    "6707": null,
    "6720": null,
-   "6724": null,
+   "6724": {
+        weapon_type: "Longbow",
+        ammo_tier : 7
+    },
    "6731": null,
    "6733": null,
    "6735": null,
@@ -1505,8 +1658,12 @@
    "8874": null,
    "8876": null,
    "8878": null,
-   "8880": null,
-   "8882": null,
+   "8880": {
+        weapon_type: "Bone"
+    },
+   "8882": {
+        ammo_type: "bone",
+    },
    "8901": null,
    "8903": null,
    "8905": null,
@@ -1582,59 +1739,218 @@
    "9102": null,
    "9104": null,
    "9106": null,
-   "9139": null,
-   "9140": null,
-   "9141": null,
-   "9142": null,
-   "9143": null,
-   "9144": null,
-   "9145": null,
-   "9174": null,
-   "9176": null,
-   "9177": null,
-   "9179": null,
-   "9181": null,
-   "9183": null,
-   "9185": null,
-   "9236": null,
-   "9237": null,
-   "9238": null,
-   "9239": null,
-   "9240": null,
-   "9241": null,
-   "9242": null,
-   "9243": null,
-   "9244": null,
-   "9245": null,
-   "9286": null,
-   "9287": null,
-   "9288": null,
-   "9289": null,
-   "9290": null,
-   "9291": null,
-   "9292": null,
-   "9293": null,
-   "9294": null,
-   "9295": null,
-   "9296": null,
-   "9297": null,
-   "9298": null,
-   "9299": null,
-   "9300": null,
-   "9301": null,
-   "9302": null,
-   "9303": null,
-   "9304": null,
-   "9305": null,
-   "9306": null,
-   "9335": null,
-   "9336": null,
-   "9337": null,
-   "9338": null,
-   "9339": null,
-   "9340": null,
-   "9341": null,
-   "9342": null,
+   "9139": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "9140": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9141": {
+        ammo_type: "bolts",
+        ammo_tier : 5
+    },
+   "9142": {
+        ammo_type: "bolts",
+        ammo_tier : 6
+    },
+   "9143": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9144": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9145": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9174": {
+        weapon_type: "Crossbow",
+        ammo_tier : 2
+    },
+   "9176": {
+        weapon_type: "Crossbow",
+        ammo_tier : 2
+    },
+   "9177": {
+        weapon_type: "Crossbow",
+        ammo_tier : 4
+    },
+   "9179": {
+        weapon_type: "Crossbow",
+        ammo_tier : 5
+    },
+   "9181": {
+        weapon_type: "Crossbow",
+        ammo_tier : 6
+    },
+   "9183": {
+        weapon_type: "Crossbow",
+        ammo_tier : 7
+    },
+   "9185": {
+        weapon_type: "Crossbow",
+        ammo_tier : 8
+    },
+   "9236": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "9237": {
+        ammo_type: "bolts",
+        ammo_tier : 2
+    },
+   "9238": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "9239": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9240": {
+        ammo_type: "bolts",
+        ammo_tier : 5
+    },
+   "9241": {
+        ammo_type: "bolts",
+        ammo_tier : 6
+    },
+   "9242": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9243": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9244": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9245": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9286": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "9287": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9288": {
+        ammo_type: "bolts",
+        ammo_tier : 5
+    },
+   "9289": {
+        ammo_type: "bolts",
+        ammo_tier : 6
+    },
+   "9290": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9291": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9292": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9293": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "9294": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9295": {
+        ammo_type: "bolts",
+        ammo_tier : 5
+    },
+   "9296": {
+        ammo_type: "bolts",
+        ammo_tier : 6
+    },
+   "9297": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9298": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9299": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9300": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "9301": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9302": {
+        ammo_type: "bolts",
+        ammo_tier : 5
+    },
+   "9303": {
+        ammo_type: "bolts",
+        ammo_tier : 6
+    },
+   "9304": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9305": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9306": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9335": {
+        ammo_type: "bolts",
+        ammo_tier : 3
+    },
+   "9336": {
+        ammo_type: "bolts",
+        ammo_tier : 4
+    },
+   "9337": {
+        ammo_type: "bolts",
+        ammo_tier : 5
+    },
+   "9338": {
+        ammo_type: "bolts",
+        ammo_tier : 6
+    },
+   "9339": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9340": {
+        ammo_type: "bolts",
+        ammo_tier : 7
+    },
+   "9341": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
+   "9342": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
    "9419": null,
    "9470": null,
    "9472": null,
@@ -1651,8 +1967,14 @@
    "9678": null,
    "9703": null,
    "9704": null,
-   "9705": null,
-   "9706": null,
+   "9705": {
+        weapon_type: "Shortbow",
+        ammo_tier : 0
+    },
+   "9706": {
+        ammo_type: "arrows",
+        ammo_tier : 0
+    },
    "9731": null,
    "9747": null,
    "9748": null,
@@ -1772,19 +2094,46 @@
    "10143": null,
    "10144": null,
    "10145": null,
-   "10146": null,
-   "10147": null,
-   "10148": null,
-   "10149": null,
+   "10146": {
+        weapon_type: "Salamander",
+        ammo_tier : 2
+    },
+   "10147": {
+        weapon_type: "Salamander",
+        ammo_tier : 3
+    },
+   "10148": {
+        weapon_type: "Salamander",
+        ammo_tier : 3
+    },
+   "10149": {
+        weapon_type: "Salamander",
+        ammo_tier : 1
+    },
    "10150": null,
-   "10156": null,
-   "10158": null,
-   "10159": null,
+   "10156": {
+        weapon_type: "Hunters Crossbow"
+    },
+   "10158": {
+        ammo_type: "kebbits",
+    },
+   "10159": {
+        ammo_type: "kebbits",
+    },
    "10171": null,
    "10172": null,
-   "10280": null,
-   "10282": null,
-   "10284": null,
+   "10280": {
+        weapon_type: "Longbow",
+        ammo_tier : 5
+    },
+   "10282": {
+        weapon_type: "Longbow",
+        ammo_tier : 8
+    },
+   "10284": {
+        weapon_type: "Longbow",
+        ammo_tier : 7
+    },
    "10286": null,
    "10288": null,
    "10290": null,
@@ -1980,17 +2329,38 @@
    "11194": null,
    "11195": null,
    "11200": null,
-   "11212": null,
-   "11217": null,
-   "11222": null,
-   "11227": null,
-   "11228": null,
-   "11229": null,
+   "11212": {
+        ammo_type: "arrows",
+        ammo_tier : 9
+    },
+   "11217": {
+        ammo_type: "arrows",
+        ammo_tier : 9
+    },
+   "11222": {
+        ammo_type: "arrows",
+        ammo_tier : 9
+    },
+   "11227": {
+        ammo_type: "arrows",
+        ammo_tier : 9
+    },
+   "11228": {
+        ammo_type: "arrows",
+        ammo_tier : 9
+    },
+   "11229": {
+        ammo_type: "arrows",
+        ammo_tier : 9
+    },
    "11230": null,
    "11231": null,
    "11233": null,
    "11234": null,
-   "11235": null,
+   "11235": {
+        weapon_type: "Longbow",
+        ammo_tier : 9
+    },
    "11259": null,
    "11280": null,
    "11282": null,
@@ -2089,7 +2459,10 @@
    "11782": null,
    "11783": null,
    "11784": null,
-   "11785": null,
+   "11785": {
+       weapon_type: "Crossbow",
+       ammo_tier : 9
+   },
    "11787": null,
    "11789": null,
    "11791": null,
@@ -2131,7 +2504,10 @@
    "11871": null,
    "11872": null,
    "11873": null,
-   "11875": null,
+   "11875": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
    "11889": null,
    "11893": null,
    "11894": null,
@@ -2289,7 +2665,10 @@
    "12420": null,
    "12421": null,
    "12422": null,
-   "12424": null,
+   "12424": {
+        weapon_type: "Longbow",
+        ammo_tier : 9
+    },
    "12426": null,
    "12428": null,
    "12430": null,
@@ -2659,7 +3038,9 @@
    "13681": null,
    "19476": null,
    "19478": null,
-   "19481": null,
+   "19481": {
+        weapon_type: "Heavy Crossbow"
+    },
    "19484": null,
    "19486": null,
    "19488": null,
@@ -2912,12 +3293,18 @@
    "20844": null,
    "20846": null,
    "20849": null,
-   "20997": null,
+   "20997": {
+        weapon_type: "Longbow",
+        ammo_tier : 9
+    },
    "21000": null,
    "21003": null,
    "21006": null,
    "21009": null,
-   "21012": null,
+   "21012": {
+       weapon_type: "Crossbow",
+       ammo_tier : 9
+   },
    "21015": null,
    "21018": null,
    "21021": null,
@@ -2994,17 +3381,32 @@
    "21301": null,
    "21304": null,
    "21314": null,
-   "21316": null,
+   "21316": {
+        ammo_type: "bolts",
+        ammo_tier : 8
+    },
    "21318": null,
    "21320": null,
    "21322": null,
    "21324": null,
-   "21326": null,
+   "21326": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
    "21328": null,
    "21330": null,
-   "21332": null,
-   "21334": null,
-   "21336": null,
+   "21332": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
+   "21334": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
+   "21336": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
    "21343": null,
    "21345": null,
    "21392": null,
@@ -3058,31 +3460,106 @@
    "21895": null,
    "21898": null,
    "21900": null,
-   "21902": null,
-   "21905": null,
-   "21924": null,
-   "21926": null,
-   "21928": null,
-   "21932": null,
-   "21934": null,
-   "21936": null,
-   "21938": null,
-   "21940": null,
-   "21942": null,
-   "21944": null,
-   "21946": null,
-   "21948": null,
-   "21950": null,
-   "21955": null,
-   "21957": null,
-   "21959": null,
-   "21961": null,
-   "21963": null,
-   "21965": null,
-   "21967": null,
-   "21969": null,
-   "21971": null,
-   "21973": null,
+   "21902": {
+       weapon_type: "Crossbow",
+       ammo_tier : 9
+   },
+   "21905": {
+       ammo_type: "bolts",
+       ammo_tier : 9
+   },
+   "21924": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21926": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21928": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21932": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21934": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21936": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21938": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21940": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21942": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21944": {
+       ammo_type: "bolts",
+       ammo_tier : 9
+   },
+   "21946": {
+       ammo_type: "bolts",
+       ammo_tier : 9
+   },
+   "21948": {
+       ammo_type: "bolts",
+       ammo_tier : 9
+   },
+   "21950": {
+       ammo_type: "bolts",
+       ammo_tier : 9
+   },
+   "21955": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21957": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21959": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21961": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21963": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21965": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21967": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21969": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21971": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
+   "21973": {
+        ammo_type: "bolts",
+        ammo_tier : 9
+    },
    "22002": null,
    "22003": null,
    "22109": null,
