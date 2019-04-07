@@ -45,10 +45,10 @@ class AllItems:
         self.all_items_dict: Dict[int, ItemDefinition] = dict()
         self.load_all_items(input_data_file_or_directory)
 
-    def __iter__(self) -> Generator[str, None, None]:
+    def __iter__(self) -> Generator[ItemDefinition, None, None]:
         """Iterate (loop) over each ItemDefinition object."""
-        for item_id in self.all_items:
-            yield item_id
+        for item in self.all_items:
+            yield item
 
     def __getitem__(self, id_number: int) -> ItemDefinition:
         """Return the item definition object for a loaded item.
@@ -126,7 +126,7 @@ class AllItems:
         """
         # Load the item using the ItemDefinition class
         try:
-            item_def = ItemDefinition(**item_json)
+            item_def = ItemDefinition.from_json(item_json)
         except TypeError as e:
             raise ValueError("Error: Invalid JSON structure found, check supplied input. Exiting") from e
 

@@ -15,6 +15,7 @@ VERSION = "1.1.1"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [
+    'dataclasses;python_version<"3.7"'
 ]
 
 # Import the README and use it as the long-description.
