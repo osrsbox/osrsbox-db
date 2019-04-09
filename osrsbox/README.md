@@ -17,6 +17,7 @@ The `osrsbox` package is a complete and up-to-date database of OSRS items that i
 ### Package Requirements
 
 - Python 3.6 or above
+- Dataclasses package (if Python is below 3.7)
 
 ### Installation
 
@@ -47,12 +48,12 @@ You can load the package using `import osrsbox`, however, you probably want to l
 
 ### Item Properties
 
-Each item is represented by the following objects:
+Each item is represented by Python objects. Every item has an `ItemDefinition` object, while only equipable items (`equipable_by_player`) have an additional object named `ItemEquipment`. Both are implemented using Python dataclasses. A brief summary of each item is provided below, followed by a list of attributes in each class:
 
 - `ItemDefinition`: Contains basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest` association.
 - `ItemEquipment`: All equipable items (armour and weapons) have stats including `attack_slash`, `defence_crush` and `melee_strength` values. Additional information about equipable items include `skill_reqs` to wear armour or wield weapons, and `attack_speed` and item `slot` properties.
 
-Every item in the osrsbox-db project has a selection of mandatory properties. All of the properties are listed in the table below.
+Every item in the osrsbox-db project has a selection of mandatory properties (these are in the `ItemDefinition` object). All of the properties are listed in the table below.
 
 | Property            | Data type   | Description                                          |
 | ------------------- | ------------| -----------------------------------------------------|
@@ -79,7 +80,7 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Al
 | url                 | string      | OSRS Wiki URL link                                   |
 | equipment           | object      | Object of item equipment properties (if equipable)   |
 
-Not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are actually equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not actually equipable by a player). Any item that is deemed equipable by a player has the following properties.
+Not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are actually equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not actually equipable by a player). Any item that is deemed equipable by a player has the following properties (these are in the `ItemEquipment` object).
 
 | Property        | Data type | Description                              |
 | --------------- | --------- | ---------------------------------------- |
@@ -103,6 +104,7 @@ Not all items in OSRS are equipable. Only items with the `equipable_by_player` p
 
 ## Changelog
 
+- `1.1.2`: Converted ItemDefinition, ItemEquipment to dataclass.
 - `1.1.1`: Release for game update 2019/04/04.
 - `1.1.0`: Changed equipable item requirements to an object.
 - `1.0.9`: Release for game update 2019/03/28.
