@@ -18,10 +18,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
+from dataclasses import dataclass, asdict
+from typing import Dict, Optional
 
-from typing import Dict
 
-
+@dataclass
 class ItemEquipment:
     """This class defines the properties for an equipable OSRS item.
 
@@ -30,36 +31,27 @@ class ItemEquipment:
     additional properties about equipment slot, attack speed and skill requirements
     for the item.
     """
-
-    def __init__(self, attack_stab=None, attack_slash=None, attack_crush=None, attack_magic=None,
-                 attack_ranged=None, defence_stab=None, defence_slash=None, defence_crush=None,
-                 defence_magic=None, defence_ranged=None, melee_strength=None, ranged_strength=None,
-                 magic_damage=None, prayer=None, slot=None, attack_speed=None, requirements=None):
-        self.attack_stab = attack_stab
-        self.attack_slash = attack_slash
-        self.attack_crush = attack_crush
-        self.attack_magic = attack_magic
-        self.attack_ranged = attack_ranged
-        self.defence_stab = defence_stab
-        self.defence_slash = defence_slash
-        self.defence_crush = defence_crush
-        self.defence_magic = defence_magic
-        self.defence_ranged = defence_ranged
-        self.melee_strength = melee_strength
-        self.ranged_strength = ranged_strength
-        self.magic_damage = magic_damage
-        self.prayer = prayer
-        self.slot = slot
-        self.attack_speed = attack_speed
-        self.requirements = requirements
+    attack_stab: int
+    attack_slash: int
+    attack_crush: int
+    attack_magic: int
+    attack_ranged: int
+    defence_stab: int
+    defence_slash: int
+    defence_crush: int
+    defence_magic: int
+    defence_ranged: int
+    melee_strength: int
+    ranged_strength: int
+    magic_damage: int
+    prayer: int
+    slot: Optional[str]
+    attack_speed: Optional[int]
+    requirements: Optional[Dict]
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON of item_equipment property for exporting or printing.
 
         :return json_out: A dictionary of all equipment properties.
         """
-        json_out = dict()
-        for prop in self.__dict__:
-            json_out[prop] = getattr(self, prop)
-
-        return json_out
+        return asdict(self)
