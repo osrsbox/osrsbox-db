@@ -130,8 +130,11 @@ class BuildItem:
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
             print(">>> Cannot find wiki page...")
+            if self.item_dict["name"] == "":
+                self.item_dict["equipable_by_player"] = False
+                self.export()
             # print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
-            quit()
+            # quit()
 
         # STAGE THREE: EXTRACT and PARSE INFOBOX
         self.logger.debug("STAGE THREE: Extracting the infobox...")
@@ -145,23 +148,27 @@ class BuildItem:
             self.parse_primary_infobox()
         elif self.status_code in [1, 2, 3, 4, 5]:
             self.logger.debug("INFOBOX: Invalid item saved")
-            self.item_dict["equipable_by_player"] = False
             self.item_dict["url"] = None
+            self.item_dict["equipable_by_player"] = False
             self.export()
+            return
         elif self.status_code == 6:
             self.parse_primary_infobox()
             self.item_dict["equipable_by_player"] = False
             self.export()
+            return
         else:
             self.logger.critical("INFOBOX: Extraction error.")
+            if self.item_dict["name"] == "":
+                self.export()
             quit()
 
         # STAGE FOUR: PARSE INFOBOX FOR EQUIPABLE ITEMS
-        self.logger.debug("STAGE FIVE: Parsing the bonuses...")
-
-        self.item_dict["equipment"] = dict()
 
         if self.item_dict["equipable"] and has_wiki_page:
+            self.logger.debug("STAGE FIVE: Parsing the bonuses...")
+
+            self.item_dict["equipment"] = dict()
             # Continue processing... but only if the item is equipable
             self.item_dict["equipable_by_player"] = True
             has_infobox_bonuses = self.extract_bonuses()
@@ -189,6 +196,16 @@ class BuildItem:
             del self.item_dict["store_price"]
         if "seller" in self.item_dict:
             del self.item_dict["seller"]
+
+        for prop in self.properties:
+            try:
+                self.item_dict[prop]
+            except KeyError:
+                self.item_dict[prop] = None
+
+        if self.item_dict["url"] == "https://oldschool.runescape.wiki/w/None":
+            self.item_dict["url"] = None
+
         self.itemDefinition = ItemDefinition(**self.item_dict)
         self.compare_json_files(self.itemDefinition)
         json_out = self.itemDefinition.construct_json()

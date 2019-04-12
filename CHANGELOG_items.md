@@ -1,3 +1,351 @@
+### 2019/04/11: Treasure Trails Expansion and Easter 2019
+- Added items: 334
+    - 23124,Gilded dragonhide set
+    - 23125,Gilded dragonhide set
+    - 23126,Gilded dragonhide set
+    - 23127,Clue nest (beginner)
+    - 23128,Clue nest (beginner)
+    - 23129,Clue bottle (beginner)
+    - 23130,Clue bottle (beginner)
+    - 23131,Clue scroll (medium)
+    - 23132,Challenge scroll (medium)
+    - 23133,Clue scroll (medium)
+    - 23134,Challenge scroll (medium)
+    - 23135,Clue scroll (medium)
+    - 23136,Clue scroll (medium)
+    - 23137,Clue scroll (medium)
+    - 23138,Clue scroll (medium)
+    - 23139,Clue scroll (medium)
+    - 23140,Clue scroll (medium)
+    - 23141,Clue scroll (medium)
+    - 23142,Clue scroll (medium)
+    - 23143,Clue scroll (medium)
+    - 23144,Clue scroll (elite)
+    - 23145,Clue scroll (elite)
+    - 23146,Clue scroll (elite)
+    - 23147,Clue scroll (elite)
+    - 23148,Clue scroll (elite)
+    - 23149,Clue scroll (easy)
+    - 23150,Clue scroll (easy)
+    - 23151,Clue scroll (easy)
+    - 23152,Clue scroll (easy)
+    - 23153,Clue scroll (easy)
+    - 23154,Clue scroll (easy)
+    - 23155,Clue scroll (easy)
+    - 23156,Clue scroll (easy)
+    - 23157,Clue scroll (easy)
+    - 23158,Clue scroll (easy)
+    - 23159,Clue scroll (easy)
+    - 23160,Clue scroll (easy)
+    - 23161,Clue scroll (easy)
+    - 23162,Clue scroll (easy)
+    - 23163,Clue scroll (easy)
+    - 23164,Clue scroll (easy)
+    - 23165,Clue scroll (easy)
+    - 23166,Clue scroll (easy)
+    - 23167,Clue scroll (hard)
+    - 23168,Clue scroll (hard)
+    - 23169,Clue scroll (hard)
+    - 23170,Clue scroll (hard)
+    - 23171,Puzzle box (hard)
+    - 23172,Clue scroll (hard)
+    - 23173,Puzzle box (hard)
+    - 23174,Clue scroll (hard)
+    - 23175,Clue scroll (hard)
+    - 23176,Clue scroll (hard)
+    - 23177,Clue scroll (hard)
+    - 23178,Clue scroll (hard)
+    - 23179,Clue scroll (hard)
+    - 23180,Clue scroll (hard)
+    - 23181,Clue scroll (hard)
+    - 23182,Clue scroll (beginner)
+    - 23183,Strange device
+    - 23184,Mimic
+    - 23185,Ring of 3rd age
+    - 23186,Ring of 3rd age
+    - 23187,Ring of 3rd age
+    - 23188,Guthix d'hide shield
+    - 23189,Guthix d'hide shield
+    - 23190,Guthix d'hide shield
+    - 23191,Saradomin d'hide shield
+    - 23192,Saradomin d'hide shield
+    - 23193,Saradomin d'hide shield
+    - 23194,Zamorak d'hide shield
+    - 23195,Zamorak d'hide shield
+    - 23196,Zamorak d'hide shield
+    - 23197,Ancient d'hide shield
+    - 23198,Ancient d'hide shield
+    - 23199,Ancient d'hide shield
+    - 23200,Armadyl d'hide shield
+    - 23201,Armadyl d'hide shield
+    - 23202,Armadyl d'hide shield
+    - 23203,Bandos d'hide shield
+    - 23204,Bandos d'hide shield
+    - 23205,Bandos d'hide shield
+    - 23206,Dual sai
+    - 23207,Dual sai
+    - 23208,Dual sai
+    - 23209,Rune platebody (h1)
+    - 23210,Rune platebody (h1)
+    - 23211,Rune platebody (h1)
+    - 23212,Rune platebody (h2)
+    - 23213,Rune platebody (h2)
+    - 23214,Rune platebody (h2)
+    - 23215,Rune platebody (h3)
+    - 23216,Rune platebody (h3)
+    - 23217,Rune platebody (h3)
+    - 23218,Rune platebody (h4)
+    - 23219,Rune platebody (h4)
+    - 23220,Rune platebody (h4)
+    - 23221,Rune platebody (h5)
+    - 23222,Rune platebody (h5)
+    - 23223,Rune platebody (h5)
+    - 23224,Thieving bag
+    - 23225,Thieving bag
+    - 23226,Thieving bag
+    - 23227,Rune defender ornament kit
+    - 23228,Rune defender ornament kit
+    - 23229,Rune defender ornament kit
+    - 23230,Rune defender (t)
+    - 23231,Rune defender (t)
+    - 23232,Tzhaar-ket-om ornament kit
+    - 23233,Tzhaar-ket-om ornament kit
+    - 23234,Tzhaar-ket-om ornament kit
+    - 23235,Tzhaar-ket-om (t)
+    - 23236,Tzhaar-ket-om (t)
+    - 23237,Berserker necklace ornament kit
+    - 23238,Berserker necklace ornament kit
+    - 23239,Berserker necklace ornament kit
+    - 23240,Berserker necklace (or)
+    - 23241,Berserker necklace (or)
+    - 23242,3rd age plateskirt
+    - 23243,3rd age plateskirt
+    - 23244,3rd age plateskirt
+    - 23245,Reward casket (beginner)
+    - 23246,Fremennik kilt
+    - 23247,Fremennik kilt
+    - 23248,Fremennik kilt
+    - 23249,Rangers' tights
+    - 23250,Rangers' tights
+    - 23251,Rangers' tights
+    - 23252,Giant boot
+    - 23253,Giant boot
+    - 23254,Giant boot
+    - 23255,Uri's hat
+    - 23256,Uri's hat
+    - 23257,Uri's hat
+    - 23258,Gilded coif
+    - 23259,Gilded coif
+    - 23260,Gilded coif
+    - 23261,Gilded d'hide vambs
+    - 23262,Gilded d'hide vambs
+    - 23263,Gilded d'hide vambs
+    - 23264,Gilded d'hide body
+    - 23265,Gilded d'hide body
+    - 23266,Gilded d'hide body
+    - 23267,Gilded d'hide chaps
+    - 23268,Gilded d'hide chaps
+    - 23269,Gilded d'hide chaps
+    - 23270,Adamant dragon mask
+    - 23271,Adamant dragon mask
+    - 23272,Adamant dragon mask
+    - 23273,Rune dragon mask
+    - 23274,Rune dragon mask
+    - 23275,Rune dragon mask
+    - 23276,Gilded pickaxe
+    - 23277,Gilded pickaxe
+    - 23278,Gilded pickaxe
+    - 23279,Gilded axe
+    - 23280,Gilded axe
+    - 23281,Gilded axe
+    - 23282,Gilded spade
+    - 23283,Gilded spade
+    - 23284,Gilded spade
+    - 23285,Mole slippers
+    - 23286,Mole slippers
+    - 23287,Mole slippers
+    - 23288,Frog slippers
+    - 23289,Frog slippers
+    - 23290,Frog slippers
+    - 23291,Bear feet
+    - 23292,Bear feet
+    - 23293,Bear feet
+    - 23294,Demon feet
+    - 23295,Demon feet
+    - 23296,Demon feet
+    - 23297,Jester cape
+    - 23298,Jester cape
+    - 23299,Jester cape
+    - 23300,Shoulder parrot
+    - 23301,Shoulder parrot
+    - 23302,Shoulder parrot
+    - 23303,Monk's robe top (t)
+    - 23304,Monk's robe top (t)
+    - 23305,Monk's robe top (t)
+    - 23306,Monk's robe (t)
+    - 23307,Monk's robe (t)
+    - 23308,Monk's robe (t)
+    - 23309,Amulet of defence (t)
+    - 23310,Amulet of defence (t)
+    - 23311,Amulet of defence (t)
+    - 23312,Sandwich lady hat
+    - 23313,Sandwich lady hat
+    - 23314,Sandwich lady hat
+    - 23315,Sandwich lady top
+    - 23316,Sandwich lady top
+    - 23317,Sandwich lady top
+    - 23318,Sandwich lady bottom
+    - 23319,Sandwich lady bottom
+    - 23320,Sandwich lady bottom
+    - 23321,Rune scimitar ornament kit (guthix)
+    - 23322,Rune scimitar ornament kit (guthix)
+    - 23323,Rune scimitar ornament kit (guthix)
+    - 23324,Rune scimitar ornament kit (saradomin)
+    - 23325,Rune scimitar ornament kit (saradomin)
+    - 23326,Rune scimitar ornament kit (saradomin)
+    - 23327,Rune scimitar ornament kit (zamorak)
+    - 23328,Rune scimitar ornament kit (zamorak)
+    - 23329,Rune scimitar ornament kit (zamorak)
+    - 23330,Rune scimitar
+    - 23331,Rune scimitar
+    - 23332,Rune scimitar
+    - 23333,Rune scimitar
+    - 23334,Rune scimitar
+    - 23335,Rune scimitar
+    - 23336,3rd age druidic robe top
+    - 23337,3rd age druidic robe top
+    - 23338,3rd age druidic robe top
+    - 23339,3rd age druidic robe bottoms
+    - 23340,3rd age druidic robe bottoms
+    - 23341,3rd age druidic robe bottoms
+    - 23342,3rd age druidic staff
+    - 23343,3rd age druidic staff
+    - 23344,3rd age druidic staff
+    - 23345,3rd age druidic cloak
+    - 23346,3rd age druidic cloak
+    - 23347,3rd age druidic cloak
+    - 23348,Tormented ornament kit
+    - 23349,Tormented ornament kit
+    - 23350,Tormented ornament kit
+    - 23351,Cape of skulls
+    - 23352,Cape of skulls
+    - 23353,Cape of skulls
+    - 23354,Amulet of power (t)
+    - 23355,Amulet of power (t)
+    - 23356,Amulet of power (t)
+    - 23357,Rain bow
+    - 23358,Rain bow
+    - 23359,Rain bow
+    - 23360,Ham joint
+    - 23361,Ham joint
+    - 23362,Ham joint
+    - 23363,Staff of bob the cat
+    - 23364,Staff of bob the cat
+    - 23365,Staff of bob the cat
+    - 23366,Black platebody (h1)
+    - 23367,Black platebody (h1)
+    - 23368,Black platebody (h1)
+    - 23369,Black platebody (h2)
+    - 23370,Black platebody (h2)
+    - 23371,Black platebody (h2)
+    - 23372,Black platebody (h3)
+    - 23373,Black platebody (h3)
+    - 23374,Black platebody (h3)
+    - 23375,Black platebody (h4)
+    - 23376,Black platebody (h4)
+    - 23377,Black platebody (h4)
+    - 23378,Black platebody (h5)
+    - 23379,Black platebody (h5)
+    - 23380,Black platebody (h5)
+    - 23381,Leather body (g)
+    - 23382,Leather body (g)
+    - 23383,Leather body (g)
+    - 23384,Leather chaps (g)
+    - 23385,Leather chaps (g)
+    - 23386,Leather chaps (g)
+    - 23387,Watson teleport
+    - 23388,Watson teleport
+    - 23389,Spiked manacles
+    - 23390,Spiked manacles
+    - 23391,Spiked manacles
+    - 23392,Adamant platebody (h1)
+    - 23393,Adamant platebody (h1)
+    - 23394,Adamant platebody (h1)
+    - 23395,Adamant platebody (h2)
+    - 23396,Adamant platebody (h2)
+    - 23397,Adamant platebody (h2)
+    - 23398,Adamant platebody (h3)
+    - 23399,Adamant platebody (h3)
+    - 23400,Adamant platebody (h3)
+    - 23401,Adamant platebody (h4)
+    - 23402,Adamant platebody (h4)
+    - 23403,Adamant platebody (h4)
+    - 23404,Adamant platebody (h5)
+    - 23405,Adamant platebody (h5)
+    - 23406,Adamant platebody (h5)
+    - 23407,Wolf mask
+    - 23408,Wolf mask
+    - 23409,Wolf mask
+    - 23410,Wolf cloak
+    - 23411,Wolf cloak
+    - 23412,Wolf cloak
+    - 23413,Climbing boots (g)
+    - 23414,Climbing boots (g)
+    - 23415,Climbing boots (g)
+    - 23416,Stash units (beginner)
+    - 23417,Puzzle box (master)
+    - 23418,
+    - 23419,
+    - 23420,
+    - 23421,
+    - 23422,
+    - 23423,
+    - 23424,
+    - 23425,
+    - 23426,
+    - 23427,
+    - 23428,
+    - 23429,
+    - 23430,
+    - 23431,
+    - 23432,
+    - 23433,
+    - 23434,
+    - 23435,
+    - 23436,
+    - 23437,
+    - 23438,
+    - 23439,
+    - 23440,
+    - 23441,
+    - 23442,Clue geode (beginner)
+    - 23443,Clue geode (beginner)
+    - 23444,Tormented bracelet (or)
+    - 23445,Tormented bracelet (or)
+    - 23446,Giant easter egg
+    - 23447,Giant easter egg
+    - 23448,Bunnyman mask
+    - 23449,Bunnyman mask
+    - 23450,Dried cocoa
+    - 23451,Hosidius milk
+    - 23452,Special spices
+    - 23453,Crate of baskets
+    - 23454,Fine silk
+    - 23455,Fine red silk
+    - 23456,Chocolate mixture(u)
+    - 23457,Choco serum
+- Removed items: 3
+    - 12401,Teleport scroll
+    - 7672,Null
+    - 7674,Null
+- Changed items: 6
+    - 19836,Reward casket (master),stackable
+    - 20543,Reward casket (elite),stackable
+    - 20544,Reward casket (hard),stackable
+    - 20545,Reward casket (medium),stackable
+    - 20546,Reward casket (easy),stackable
+    - 22350,Null,name
+
 ### 2019/04/04: Treasure Trails Expansion: Progress Update
 - Added items: 0
 - Removed items: 0

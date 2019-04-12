@@ -68,8 +68,11 @@
         "type": ["string", "null"]
       },
       "equipment": {
+        "type": ["object", "null"]
+      },
+      "equipment": {
         "title": "Item Equipment",
-        "type": "object",
+        "type": ["object", "null"],
         "properties": {
           "attack_stab": {
             "type": "integer"
@@ -165,6 +168,7 @@
       "quest_item",
       "release_date",
       "examine",
-      "url"
+      "url",
+      "equipment"
     ]
 }

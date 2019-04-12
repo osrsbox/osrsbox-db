@@ -70,6 +70,11 @@ if __name__ == "__main__":
     # Start processing every item!
     for item_id in cache_items:
         json_data = cache_items[item_id]
+
+        # Toggle to start, stop at a specific item ID
+        # if int(item_id) < 23000:
+        #     continue
+
         # Initialize the BuildItem class
         builder = item_builder.BuildItem(item_id,
                                          json_data,
