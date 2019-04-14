@@ -1,4 +1,4 @@
-var ammo_requirements = {
+{
    "35": null,
    "74": null,
    "75": null,
@@ -27,7 +27,10 @@ var ammo_requirements = {
    "579": null,
    "581": null,
    "589": null,
-   "598": null,
+   "598": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
    "616": null,
    "626": null,
    "628": null,
@@ -201,7 +204,10 @@ var ammo_requirements = {
         ammo_type: "arrows",
         ammo_tier : 4
     },
-   "887": null,
+   "887": {
+        ammo_type: "arrows",
+        ammo_tier : 4
+    },
    "888": {
         ammo_type: "arrows",
         ammo_tier : 5
@@ -226,7 +232,10 @@ var ammo_requirements = {
         ammo_type: "arrows",
         ammo_tier : 7
     },
-   "942": null,
+   "942": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
    "975": null,
    "1005": null,
    "1007": null,
@@ -516,16 +525,46 @@ var ammo_requirements = {
    "2501": null,
    "2503": null,
    "2513": null,
-   "2532": null,
-   "2533": null,
-   "2534": null,
-   "2535": null,
-   "2536": null,
-   "2537": null,
-   "2538": null,
-   "2539": null,
-   "2540": null,
-   "2541": null,
+   "2532": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "2533": {
+        ammo_type: "arrows",
+        ammo_tier : 3
+    },
+   "2534": {
+        ammo_type: "arrows",
+        ammo_tier : 4
+    },
+   "2535": {
+        ammo_type: "arrows",
+        ammo_tier : 4
+    },
+   "2536": {
+        ammo_type: "arrows",
+        ammo_tier : 5
+    },
+   "2537": {
+        ammo_type: "arrows",
+        ammo_tier : 5
+    },
+   "2538": {
+        ammo_type: "arrows",
+        ammo_tier : 6
+    },
+   "2539": {
+        ammo_type: "arrows",
+        ammo_tier : 6
+    },
+   "2540": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
+   "2541": {
+        ammo_type: "arrows",
+        ammo_tier : 7
+    },
    "2550": null,
    "2552": null,
    "2554": null,
@@ -940,12 +979,24 @@ var ammo_requirements = {
    "4755": null,
    "4757": null,
    "4759": null,
-   "4773": null,
-   "4778": null,
-   "4783": null,
-   "4788": null,
-   "4793": null,
-   "4798": null,
+   "4773": {
+        ammo_type: "brutals",
+    },
+   "4778": {
+        ammo_type: "brutals",
+    },
+   "4783": {
+        ammo_type: "brutals",
+    },
+   "4788": {
+        ammo_type: "brutals",
+    },
+   "4793": {
+        ammo_type: "brutals",
+    },
+   "4798": {
+        ammo_type: "brutals",
+    },
    "4803": {
         ammo_type: "brutals"
     },
@@ -2090,10 +2141,18 @@ var ammo_requirements = {
    "10085": null,
    "10129": null,
    "10132": null,
-   "10142": null,
-   "10143": null,
-   "10144": null,
-   "10145": null,
+   "10142": {
+        ammo_type: "tar",
+    },
+   "10143": {
+        ammo_type: "tar",
+    },
+   "10144": {
+        ammo_type: "tar",
+    },
+   "10145": {
+        ammo_type: "tar",
+    },
    "10146": {
         weapon_type: "Salamander",
         ammo_tier : 2
@@ -2408,10 +2467,22 @@ var ammo_requirements = {
    "11671": null,
    "11672": null,
    "11673": null,
-   "11700": null,
-   "11701": null,
-   "11702": null,
-   "11703": null,
+   "11700": {
+        ammo_type: "arrows",
+        ammo_tier: 3
+    },
+   "11701": {
+        ammo_type: "arrows",
+        ammo_tier: 3
+    },
+   "11702": {
+        ammo_type: "arrows",
+        ammo_tier: 4
+    },
+   "11703": {
+        ammo_type: "arrows",
+        ammo_tier: 5
+    },
    "11705": null,
    "11706": null,
    "11707": null,
@@ -3184,8 +3255,14 @@ var ammo_requirements = {
    "20370": null,
    "20372": null,
    "20374": null,
-   "20388": null,
-   "20389": null,
+   "20388": {
+        ammo_type: "arrows",
+        ammo_tier: 7
+    },
+   "20389": {
+        ammo_type: "arrows",
+        ammo_tier: 9
+    },
    "20397": null,
    "20401": null,
    "20402": null,
@@ -3251,7 +3328,10 @@ var ammo_requirements = {
    "20595": null,
    "20598": null,
    "20599": null,
-   "20600": null,
+   "20600": {
+        ammo_type: "arrows",
+        ammo_tier: 7
+    },
    "20655": null,
    "20657": null,
    "20704": null,
@@ -3393,8 +3473,14 @@ var ammo_requirements = {
         ammo_type: "arrows",
         ammo_tier : 8
     },
-   "21328": null,
-   "21330": null,
+   "21328": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
+   "21330": {
+        ammo_type: "arrows",
+        ammo_tier : 8
+    },
    "21332": {
         ammo_type: "arrows",
         ammo_tier : 8
