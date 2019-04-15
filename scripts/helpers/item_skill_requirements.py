@@ -44,6 +44,6 @@ if __name__ == "__main__":
             # Item ID is already done, skip to next
             continue
         if item.equipable_by_player:
-            # If item is equipable and not process, process it!
+            # If item is equipable and not processed... process it!
             print(item.name)
-            print('    "%s": {\n        "skill": level\n    }' % item.id)
+            print(f'    "{item.id}": {{\n        "skill": level\n    }}')
