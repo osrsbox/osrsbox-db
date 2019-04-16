@@ -129,10 +129,11 @@ class BuildItem:
 
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
-            print(">>> Cannot find wiki page...")
+            print(">>> Cannot find wiki page...", self.item_dict["name"])
             if self.item_dict["name"] == "":
                 self.item_dict["equipable_by_player"] = False
                 self.export()
+                return
             # print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
             # quit()
 
@@ -637,6 +638,9 @@ class BuildItem:
         try:
             existing_json = self.current_db[self.item_id]
         except KeyError:
+            print(f"+++ MISMATCH!: ITEM IS NEW! {itemDefinition.id}")
+            json_out = self.itemDefinition.construct_json()
+            print(json_out)
             return changed
 
         for prop in self.properties:
@@ -653,16 +657,17 @@ class BuildItem:
                                 changes[equipment_prop] = [current_json["equipment"][equipment_prop],
                                                            existing_json["equipment"][equipment_prop]]
                         except KeyError:
+                            print("    +++ MISMATCH!: ITEM CHANGED EQUIPMENT!")
                             pass  # This should be fixed, when old/new item has no equipment key
 
         # Print any item changes
         if changed:
             print(f">>>>>>>>>>> id: {itemDefinition.id}\tname: {itemDefinition.name}")
             for prop in changes:
-                print("+++ MISMATCH!:", prop)
-                print("TYPES:", type(changes[prop][1]), type(changes[prop][0]))
-                print("OLD: %r" % changes[prop][1])
-                print("NEW: %r" % changes[prop][0])
+                print("    +++ MISMATCH!:", prop)
+                print("    TYPES:", type(changes[prop][1]), type(changes[prop][0]))
+                print("    OLD: %r" % changes[prop][1])
+                print("    NEW: %r" % changes[prop][0])
             print()
 
         return changed

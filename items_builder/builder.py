@@ -72,7 +72,7 @@ if __name__ == "__main__":
         json_data = cache_items[item_id]
 
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 23000:
+        # if int(item_id) < 20000:
         #     continue
 
         # Initialize the BuildItem class
