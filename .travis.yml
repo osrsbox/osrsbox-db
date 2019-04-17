@@ -8,7 +8,6 @@ before_install:
   - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
 install:
   - pip install -r requirements.txt
-  - pip install -r requirements_dev.txt
 script:
   - flake8
   - pytest
