@@ -6,6 +6,10 @@ This folder contains a collection of useful data that is used in the osrsbox-db 
 
 The `attackable-npcs.json` file is a JSON file containing NPC definitions from the OSRS cache for NPCs that are attackable. The data is extracted from the OSRS Cache using the [`extract_attackable_npcs.py` script](../extraction_tools_cache/extract_attackable_npcs.py) which looks for the keyword _Attack_ in `options` array for each NPC definition. The use of the data in the osrsbox-db is when building the Monsters database contents.
 
+### DMM-Only Items
+
+The `dmm-only-items.json` file is a JSON file containing OSRS items (ID and name) that are only available in the Dead Man Mode game. The data is extracted manually using the [Ancient Warriors' equipment page](https://oldschoolrunescape.fandom.com/wiki/Ancient_Warriors%27_equipment) in conjunction with the [`populate_dmm_only_items.py` script](../scripts/helpers/populate_dmm_only_items.py). The use of the data in the osrsbox-db to help developers identify DMM-Only items.
+
 ### Grand Exchange Limits
 
 The `ge-limits-ids.json` and `ge-limits-names.json` files are both JSON files that contain buy limit information for items traded on the Grand Exchange. The `ge_limits.json` file is sourced from [the RuneLite client](https://github.com/runelite/runelite/blob/master/runelite-client/src/main/resources/net/runelite/client/plugins/grandexchange/ge_limits.json). The original RuneLite file maps item ID to buy limit. The `ge-limits-ids.json` is the same contents, while the `ge-limits-names.json` file is the same data transformed to map item names to item buy limits. The data is converted using the [`convert_buy_limits.py` script](../scripts/helpers/convert_buy_limits.py). The use of the data in the osrsbox-db is when building the Items database contents.
