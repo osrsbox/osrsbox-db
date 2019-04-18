@@ -104,6 +104,7 @@ Not all items in OSRS are equipable. Only items with the `equipable_by_player` p
 
 ## Changelog
 
+- `1.1.5`: Release for game update 2019/04/18.
 - `1.1.4`: Update for changes to new treasure trail items.
 - `1.1.3`: Release for game update 2019/04/11.
 - `1.1.2`: Converted ItemDefinition, ItemEquipment to dataclass.

@@ -21,6 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import logging
+
+from deepdiff import DeepDiff
 import mwparserfromhell
 
 from osrsbox.items_api.item_definition import ItemDefinition
@@ -603,33 +605,12 @@ class BuildItem:
         clean_value = clean_value.replace("]", "")
         return clean_value
 
-    def equipable_item_set_default(self):
-        """Set a default item_stats and item_equipment object."""
-        self.item_dict["equipment"]["attack_stab"] = 0
-        self.item_dict["equipment"]["attack_slash"] = 0
-        self.item_dict["equipment"]["attack_crush"] = 0
-        self.item_dict["equipment"]["attack_magic"] = 0
-        self.item_dict["equipment"]["attack_ranged"] = 0
-        self.item_dict["equipment"]["defence_stab"] = 0
-        self.item_dict["equipment"]["defence_slash"] = 0
-        self.item_dict["equipment"]["defence_crush"] = 0
-        self.item_dict["equipment"]["defence_magic"] = 0
-        self.item_dict["equipment"]["defence_ranged"] = 0
-        self.item_dict["equipment"]["melee_strength"] = 0
-        self.item_dict["equipment"]["ranged_strength"] = 0
-        self.item_dict["equipment"]["magic_damage"] = 0
-        self.item_dict["equipment"]["prayer"] = 0
-        self.item_dict["equipment"]["slot"] = None
-        self.item_dict["equipment"]["attack_speed"] = None
-        self.item_dict["equipment"]["requirements"] = None
-
     def compare_json_files(self, itemDefinition: ItemDefinition) -> bool:
         """Print the difference between this item object, and the item that exists in the database.
 
         :return changed: A boolean if the item is different, or not.
         """
         changed = False
-        changes = dict()
 
         # Create JSON out object to compare
         current_json = itemDefinition.construct_json()
@@ -638,36 +619,15 @@ class BuildItem:
         try:
             existing_json = self.current_db[self.item_id]
         except KeyError:
-            print(f"+++ MISMATCH!: ITEM IS NEW! {itemDefinition.id}")
-            json_out = self.itemDefinition.construct_json()
-            print(json_out)
+            print(f">>> compare_json_files: NEW ITEM: {itemDefinition.id}")
+            print(current_json)
             return changed
 
-        for prop in self.properties:
-            if current_json[prop] != existing_json[prop]:
-                changed = True
-                changes[prop] = [current_json[prop], existing_json[prop]]
+        if current_json == existing_json:
+            return changed
 
-                # Also check equipable
-                if itemDefinition.equipable_by_player:
-                    for equipment_prop in self.equipment_properties:
-                        try:
-                            if current_json["equipment"][equipment_prop] != existing_json["equipment"][equipment_prop]:
-                                changed = True
-                                changes[equipment_prop] = [current_json["equipment"][equipment_prop],
-                                                           existing_json["equipment"][equipment_prop]]
-                        except KeyError:
-                            print("    +++ MISMATCH!: ITEM CHANGED EQUIPMENT!")
-                            pass  # This should be fixed, when old/new item has no equipment key
-
-        # Print any item changes
-        if changed:
-            print(f">>>>>>>>>>> id: {itemDefinition.id}\tname: {itemDefinition.name}")
-            for prop in changes:
-                print("    +++ MISMATCH!:", prop)
-                print("    TYPES:", type(changes[prop][1]), type(changes[prop][0]))
-                print("    OLD: %r" % changes[prop][1])
-                print("    NEW: %r" % changes[prop][0])
-            print()
-
+        ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
+        print(f">>> compare_json_files: CHANGED ITEM: {itemDefinition.id}")
+        print(f"    {ddiff}")
+        changed = True
         return changed

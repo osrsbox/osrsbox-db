@@ -1,3 +1,8 @@
+### 2019/04/18: QoL and Treasure Trails Feedback Changes
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/04/11: Treasure Trails Expansion and Easter 2019
 - Added items: 334
     - 23124,Gilded dragonhide set
