@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 560000,
     "lowalch": 224000,
     "highalch": 336000,
@@ -36,10 +37,29 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "attack": 75,
             "defence": 75
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "bulwarks",
+        "stances": [
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "none",
+                "attack_style": "none",
+                "experience": "none",
+                "boosts": null
+            }
+        ]
     }
 }

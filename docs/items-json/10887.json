@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 230000,
     "lowalch": 92000,
     "highalch": 138000,
@@ -36,10 +37,43 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 6,
         "requirements": {
             "attack": 60,
             "strength": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "spiked_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

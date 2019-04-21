@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 990000,
     "lowalch": 396000,
     "highalch": 594000,
@@ -36,9 +37,35 @@
         "magic_damage": 0,
         "prayer": 1,
         "slot": "weapon",
-        "attack_speed": 6,
         "requirements": {
             "ranged": 70
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "crossbows",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }
