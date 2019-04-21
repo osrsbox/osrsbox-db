@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1920,
     "lowalch": 768,
     "highalch": 1152,
@@ -36,10 +37,36 @@
         "magic_damage": 0,
         "prayer": 1,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "attack": 10,
             "strength": 5
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "halberds",
+        "stances": [
+            {
+                "combat_style": "jab",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "fend",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

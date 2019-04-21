@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 150,
     "lowalch": 60,
     "highalch": 90,
@@ -36,7 +37,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "unarmed",
+        "stances": [
+            {
+                "combat_style": "punch",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "kick",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

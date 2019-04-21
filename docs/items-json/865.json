@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 11,
     "lowalch": 4,
     "highalch": 6,
@@ -36,9 +37,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 3,
         "requirements": {
             "ranged": 5
         }
+    },
+    "weapon": {
+        "attack_speed": 3,
+        "weapon_type": "thrown_weapons",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

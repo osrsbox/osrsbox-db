@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 26,
     "lowalch": 10,
     "highalch": 15,
@@ -36,7 +37,40 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stabbing_swords",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 500,
     "lowalch": 200,
     "highalch": 300,
@@ -36,10 +37,43 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "mining": 6,
             "attack": 5
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "pickaxes",
+        "stances": [
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "impale",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

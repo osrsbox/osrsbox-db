@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 45000,
     "lowalch": 18000,
     "highalch": 27000,
@@ -36,10 +37,50 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 40,
             "magic": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "staves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "focus",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

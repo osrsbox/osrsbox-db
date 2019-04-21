@@ -30,7 +30,8 @@ from items_builder import infobox_cleaner
 
 
 class BuildItem:
-    def __init__(self, item_id, item_json, wiki_text, normalized_names, buy_limits, skill_requirements, current_db):
+    def __init__(self, item_id, item_json, wiki_text, normalized_names, buy_limits, skill_requirements, current_db,
+                 weapon_types, weapon_stances):
         # Input item ID number
         self.item_id = item_id
         # Input JSON file (from RuneLite ItemScraper plugin)
@@ -42,6 +43,8 @@ class BuildItem:
         self.buy_limits = buy_limits  # Dictionary of item buy limits
         self.skill_requirements = skill_requirements  # Dictionary of item requirements
         self.current_db = current_db  # Dictionary dump of current database contents
+        self.weapon_types = weapon_types  # Weapon type dictionary
+        self.weapon_stances = weapon_stances  # Weapon stances dictionary
 
         # For this item, create dictionary for property storage
         self.item_dict = dict()
@@ -68,6 +71,7 @@ class BuildItem:
             "placeholder",
             "equipable",
             "equipable_by_player",
+            "equipable_weapon",
             "cost",
             "lowalch",
             "highalch",
@@ -93,9 +97,13 @@ class BuildItem:
             "ranged_strength",
             "magic_damage",
             "prayer",
-            "attack_speed",
             "slot",
             "requirements"]
+
+        self.weapon_properties = [
+            "attack_speed",
+            "weapon_type",
+            "stances"]
 
     def populate(self):
         """The primary entry and item object population function."""
@@ -109,7 +117,7 @@ class BuildItem:
         self.populate_from_scraper()
 
         self.logger.debug(f'id: {self.item_dict["id"]}|name: {self.item_dict["name"]}')
-        # print(f'>>> id: {self.item_dict["id"]}\tname: {self.item_dict["name"]}')
+        print(f'>>> id: {self.item_dict["id"]}\tname: {self.item_dict["name"]}')
 
         # STAGE TWO: DETERMINE WIKI PAGE
         self.logger.debug("STAGE TWO: Determining OSRS Wiki page...")
@@ -199,6 +207,8 @@ class BuildItem:
             del self.item_dict["store_price"]
         if "seller" in self.item_dict:
             del self.item_dict["seller"]
+        if "equipable_weapon" not in self.item_dict:
+            self.item_dict["equipable_weapon"] = False
 
         for prop in self.properties:
             try:
@@ -209,12 +219,12 @@ class BuildItem:
         if self.item_dict["url"] == "https://oldschool.runescape.wiki/w/None":
             self.item_dict["url"] = None
 
-        self.itemDefinition = ItemDefinition(**self.item_dict)
-        self.compare_json_files(self.itemDefinition)
-        json_out = self.itemDefinition.construct_json()
+        self.item_definition = ItemDefinition(**self.item_dict)
+        self.compare_json_files(self.item_definition)
+        json_out = self.item_definition.construct_json()
         # Actually output a JSON file, comment out for testing
         output_dir = os.path.join("..", "docs", "items-json")
-        self.itemDefinition.export_json(True, output_dir)
+        self.item_definition.export_json(True, output_dir)
         self.logger.debug(json_out)
         return
 
@@ -527,6 +537,7 @@ class BuildItem:
         self.item_dict["equipment"]["magic_damage"] = self.clean_bonuses_value(template, "mdmg")
         self.item_dict["equipment"]["prayer"] = self.clean_bonuses_value(template, "prayer")
 
+        # Determine the slot for the equipable item
         self.item_dict["equipment"]["slot"] = None
         try:
             self.item_dict["equipment"]["slot"] = self.strip_infobox(template.get("slot").value)
@@ -534,27 +545,60 @@ class BuildItem:
         except ValueError:
             self.item_dict["equipment"]["slot"] = None
             self.logger.critical("Could not determine equipable item slot")
+            quit()
 
-        # If item is weapon, two-handed, or 2h determine attack speed
-        self.item_dict["equipment"]["attack_speed"] = None
-        if (self.item_dict["equipment"]["slot"] == "weapon" or
-                self.item_dict["equipment"]["slot"] == "two-handed" or
-                self.item_dict["equipment"]["slot"] == "2h"):
-            try:
-                self.item_dict["equipment"]["attack_speed"] = int(self.strip_infobox(template.get("aspeed").value))
-            except ValueError:
-                self.item_dict["equipment"]["attack_speed"] = None
-                self.logger.critical("Could not determine equipable item attack speed")
-        if self.item_dict["equipment"]["attack_speed"] == 0:
-            self.item_dict["equipment"]["attack_speed"] = None
-
-        # Fetch item skill requirements
+        # Determine the skill requirements for the equipable item
         self.item_dict["equipment"]["requirements"] = None
         try:
             requirements = self.skill_requirements[str(self.item_id)]
             self.item_dict["equipment"]["requirements"] = requirements
         except KeyError:
             self.item_dict["equipment"]["requirements"] = None
+
+        # Start processing only weapons
+
+        # If item is weapon, two-handed, or 2h, start processing the weapon data
+        if (self.item_dict["equipment"]["slot"] == "weapon" or
+                self.item_dict["equipment"]["slot"] == "two-handed" or
+                self.item_dict["equipment"]["slot"] == "2h"):
+
+            self.item_dict["weapon"] = dict()
+
+            # Try set the attack speed of the weapon
+            try:
+                self.item_dict["weapon"]["attack_speed"] = int(self.strip_infobox(template.get("aspeed").value))
+            except ValueError:
+                self.item_dict["weapon"]["attack_speed"] = None
+                self.logger.critical("WEAPON: Could not determine weapon attack speed")
+
+                # Item IDs with no known attack speed, set to zero
+                if int(self.item_id) in [8871]:
+                    self.item_dict["weapon"]["attack_speed"] = 0
+                # Salamander fix, set to base attack speed of 5
+                elif int(self.item_id) in [10145, 10146, 10147, 10147, 10148, 10149]:
+                    self.item_dict["weapon"]["attack_speed"] = 5
+                else:
+                    quit()
+
+            # Try to set the weapon type of the weapon
+            try:
+                weapon_type = self.weapon_types[str(self.item_dict["id"])]["weapon_type"]
+                self.item_dict["weapon"]["weapon_type"] = weapon_type
+            except KeyError:
+                self.item_dict["weapon"]["weapon_type"] = None
+                self.logger.critical("WEAPON: Could not determine weapon type")
+                quit()
+
+            # Try to set stances available for the weapon
+            try:
+                self.item_dict["weapon"]["stances"] = self.weapon_stances[self.item_dict["weapon"]["weapon_type"]]
+            except KeyError:
+                self.item_dict["weapon"]["stances"] = None
+                self.logger.critical("WEAPON: Could not determine weapon stances")
+                quit()
+
+            # Finally, set the equipable_weapon property to true
+            self.item_dict["equipable_weapon"] = True
 
         return True
 
@@ -605,7 +649,7 @@ class BuildItem:
         clean_value = clean_value.replace("]", "")
         return clean_value
 
-    def compare_json_files(self, itemDefinition: ItemDefinition) -> bool:
+    def compare_json_files(self, item_definition: ItemDefinition) -> bool:
         """Print the difference between this item object, and the item that exists in the database.
 
         :return changed: A boolean if the item is different, or not.
@@ -613,13 +657,13 @@ class BuildItem:
         changed = False
 
         # Create JSON out object to compare
-        current_json = itemDefinition.construct_json()
+        current_json = item_definition.construct_json()
 
         # Try get existing entry (KeyError means it doesn't exist - aka a new item)
         try:
             existing_json = self.current_db[self.item_id]
         except KeyError:
-            print(f">>> compare_json_files: NEW ITEM: {itemDefinition.id}")
+            print(f">>> compare_json_files: NEW ITEM: {item_definition.id}")
             print(current_json)
             return changed
 
@@ -627,7 +671,7 @@ class BuildItem:
             return changed
 
         ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
-        print(f">>> compare_json_files: CHANGED ITEM: {itemDefinition.id}")
+        print(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}")
         print(f"    {ddiff}")
         changed = True
         return changed

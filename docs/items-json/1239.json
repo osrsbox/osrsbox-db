@@ -11,6 +11,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 91,
     "lowalch": 36,
     "highalch": 54,
@@ -36,9 +37,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": {
             "attack": 1
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "spears",
+        "stances": [
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

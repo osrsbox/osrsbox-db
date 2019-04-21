@@ -45,8 +45,7 @@ class ItemEquipment:
     ranged_strength: int
     magic_damage: int
     prayer: int
-    slot: Optional[str]
-    attack_speed: Optional[int]
+    slot: str
     requirements: Optional[Dict]
 
     def construct_json(self) -> Dict:
