@@ -67,6 +67,16 @@ if __name__ == "__main__":
     with open(skill_requirements_path) as f:
         skill_requirements = json.load(f)
 
+    # Load weapon_type data
+    weapon_type_path = Path(config.DATA_PATH / "weapon-types.json")
+    with open(weapon_type_path) as f:
+        weapon_types = json.load(f)
+
+    # Load stances data
+    weapon_stance_path = Path(config.DATA_PATH / "weapon-stances.json")
+    with open(weapon_stance_path) as f:
+        weapon_stances = json.load(f)
+
     # Start processing every item!
     for item_id in cache_items:
         json_data = cache_items[item_id]
@@ -82,7 +92,9 @@ if __name__ == "__main__":
                                          normalized_names,
                                          buy_limits,
                                          skill_requirements,
-                                         current_db)
+                                         current_db,
+                                         weapon_types,
+                                         weapon_stances)
         # Start the build item population function
         builder.populate()
     print("Done.")

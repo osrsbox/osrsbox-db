@@ -18,35 +18,22 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
+
 from dataclasses import dataclass, asdict
-from typing import Dict, Optional
+from typing import List, Dict
 
 
 @dataclass
-class ItemEquipment:
-    """This class defines the properties for an equipable OSRS item.
+class ItemWeapon:
+    """This class defines the properties for an equipable OSRS item that is a weapon.
 
-    The ItemEquipment class is the object that retains all items properties related
-    to equipable items. This includes item stats (attack, defence bonuses) and
-    additional properties about equipment slot, attack speed and skill requirements
-    for the item.
+    The ItemWeapon class is the object that retains all items properties related
+    to equipable items that are weapons. This includes weapon attack speed,
+    weapon type, stance, experience, and bonuses.
     """
-    attack_stab: int
-    attack_slash: int
-    attack_crush: int
-    attack_magic: int
-    attack_ranged: int
-    defence_stab: int
-    defence_slash: int
-    defence_crush: int
-    defence_magic: int
-    defence_ranged: int
-    melee_strength: int
-    ranged_strength: int
-    magic_damage: int
-    prayer: int
-    slot: str
-    requirements: Optional[Dict]
+    attack_speed: int
+    weapon_type: str
+    stances: List
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON of item_equipment property for exporting or printing.

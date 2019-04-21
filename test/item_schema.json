@@ -117,10 +117,7 @@
             "type": "integer"
           },
           "slot": {
-            "type": ["string", "null"]
-          },
-          "attack_speed": {
-            "type": ["integer", "null"]
+            "type": "string"
           },
           "requirements": {
             "type": ["object", "null"]
@@ -142,8 +139,30 @@
           "magic_damage",
           "prayer",
           "slot",
-          "attack_speed",
           "requirements"
+        ]
+      },
+      "weapon": {
+        "type": ["object", "null"]
+      },
+      "weapon": {
+        "title": "Item Weapon",
+        "type": ["object", "null"],
+        "properties": {
+          "attack_speed": {
+            "type": "integer"
+          },
+          "weapon_type": {
+            "type": "string"
+          },
+          "stances": {
+            "type": "array"
+          }
+        },
+        "required": [
+          "attack_speed",
+          "weapon_type",
+          "stances"
         ]
       }
     },
