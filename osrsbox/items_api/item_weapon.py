@@ -18,13 +18,14 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
+from osrsbox.items_api.item_equipment import ItemEquipment
+from osrsbox.items_api.stance import Stance
 from dataclasses import dataclass, asdict
 from typing import List, Dict
 
 
 @dataclass
-class ItemWeapon:
+class ItemWeapon(ItemEquipment):
     """This class defines the properties for an equipable OSRS item that is a weapon.
 
     The ItemWeapon class is the object that retains all items properties related
@@ -34,6 +35,18 @@ class ItemWeapon:
     attack_speed: int
     weapon_type: str
     stances: List
+
+    @classmethod
+    def from_json(cls, json_dict):
+        weapon = json_dict.pop("weapon")
+        stances_json = weapon.pop("stances")
+        item_equipment = json_dict.pop("equipment")
+        return cls(
+            **json_dict,
+            **item_equipment,
+            **weapon,
+            stances=[Stance.from_json(stance) for stance in stances_json],
+        )
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON of item_equipment property for exporting or printing.
