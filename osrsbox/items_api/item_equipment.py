@@ -18,13 +18,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-from osrsbox.items_api.item_definition import ItemDefinition
 from dataclasses import dataclass, asdict
 from typing import Dict, Optional
 
 
 @dataclass
-class ItemEquipment(ItemDefinition):
+class ItemEquipment:
     """This class defines the properties for an equipable OSRS item.
 
     The ItemEquipment class is the object that retains all items properties related
@@ -48,14 +47,6 @@ class ItemEquipment(ItemDefinition):
     prayer: int
     slot: str
     requirements: Optional[Dict]
-
-    @classmethod
-    def from_json(cls, json_dict):
-        equipment = json_dict.pop("equipment")
-        return cls(
-            **json_dict,
-            **equipment,
-        )
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON of item_equipment property for exporting or printing.

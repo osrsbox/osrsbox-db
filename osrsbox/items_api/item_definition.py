@@ -24,6 +24,9 @@ import json
 from dataclasses import dataclass, asdict
 from typing import Dict, Optional
 
+from osrsbox.items_api.item_equipment import ItemEquipment
+from osrsbox.items_api.item_weapon import ItemWeapon
+
 
 @dataclass
 class ItemDefinition:
@@ -56,12 +59,21 @@ class ItemDefinition:
     release_date: Optional[str]
     examine: Optional[str]
     url: Optional[str]
+    equipment: Optional[ItemEquipment] = None
+    weapon: Optional[ItemWeapon] = None
 
     @classmethod
-    def from_json(cls, json_dict):
-        return cls(
-            **json_dict
-        )
+    def from_json(cls, json_dict: Dict) -> "ItemDefinition":
+        """Convert the dictionary under the 'equipment' key into actual :class:`ItemEquipment`"""
+        if json_dict.get("equipable_by_player"):
+            equipment = json_dict.pop("equipment")
+            json_dict["equipment"] = ItemEquipment(**equipment)
+
+        if json_dict.get("weapon"):
+            weapon = json_dict.pop("weapon")
+            json_dict["weapon"] = ItemWeapon(**weapon)
+
+        return cls(**json_dict)
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON for exporting or printing.
