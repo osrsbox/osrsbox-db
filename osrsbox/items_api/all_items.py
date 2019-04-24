@@ -27,8 +27,6 @@ from typing import Union
 from typing import Generator
 
 from osrsbox.items_api.item_definition import ItemDefinition
-from osrsbox.items_api.item_weapon import ItemWeapon
-from osrsbox.items_api.item_equipment import ItemEquipment
 
 PATH_TO_ITEMS_COMPLETE_JSON = Path(__file__).absolute().parent / ".." / ".." / "docs" / "items-complete.json"
 if not PATH_TO_ITEMS_COMPLETE_JSON.is_file():
@@ -127,18 +125,8 @@ class AllItems:
         :raises ValueError: Cannot populate item.
         """
         # Load the item using the ItemDefinition class
-        if item_json["weapon"]:
-            constructor = ItemWeapon.from_json
-        elif item_json["equipable_by_player"]:
-            del item_json["weapon"]
-            constructor = ItemEquipment.from_json
-        else:
-            del item_json["weapon"]
-            del item_json["equipment"]
-            constructor = ItemDefinition.from_json
-
         try:
-            item_def = constructor(item_json)
+            item_def = ItemDefinition.from_json(item_json)
         except TypeError as e:
             raise ValueError("Error: Invalid JSON structure found, check supplied input. Exiting") from e
 
