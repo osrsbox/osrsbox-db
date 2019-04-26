@@ -1,3 +1,17 @@
+### 2019/04/25: QoL Changes and Warding Feedback
+- Added items: 0
+- Removed items: 0
+- Changed items: 9
+    - 22350,Kindling,name
+    - 23450,Dried cocoa,name
+    - 23451,Hosidius milk,name
+    - 23452,Special spices,name
+    - 23453,Crate of baskets,name
+    - 23454,Fine silk,name
+    - 23455,Fine red silk,name
+    - 23456,Chocolate mixture(u),name
+    - 23457,Choco serum,name
+
 ### 2019/04/18: QoL and Treasure Trails Feedback Changes
 - Added items: 0
 - Removed items: 0

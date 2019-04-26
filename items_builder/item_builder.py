@@ -117,7 +117,7 @@ class BuildItem:
         self.populate_from_scraper()
 
         self.logger.debug(f'id: {self.item_dict["id"]}|name: {self.item_dict["name"]}')
-        print(f'>>> id: {self.item_dict["id"]}\tname: {self.item_dict["name"]}')
+        # print(f'>>> id: {self.item_dict["id"]}\tname: {self.item_dict["name"]}')
 
         # STAGE TWO: DETERMINE WIKI PAGE
         self.logger.debug("STAGE TWO: Determining OSRS Wiki page...")
@@ -140,7 +140,7 @@ class BuildItem:
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
             print(">>> Cannot find wiki page...", self.item_dict["name"])
-            if self.item_dict["name"] == "":
+            if self.item_dict["name"] == "" or self.item_dict["name"] == "Null":
                 self.item_dict["equipable_by_player"] = False
                 self.export()
                 return
