@@ -139,13 +139,11 @@ class BuildItem:
 
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
-            print(">>> Cannot find wiki page...", self.item_dict["name"])
+            print(f">>> not has_wiki_page: {self.item_dict['id']}, {self.item_dict['name']}")
             if self.item_dict["name"] == "" or self.item_dict["name"] == "Null":
                 self.item_dict["equipable_by_player"] = False
                 self.export()
                 return
-            # print(f"{self.itemDefinition.id}|{self.itemDefinition.name}|{self.itemDefinition.name}|2")
-            # quit()
 
         # STAGE THREE: EXTRACT and PARSE INFOBOX
         self.logger.debug("STAGE THREE: Extracting the infobox...")
@@ -378,6 +376,7 @@ class BuildItem:
                         versioned_name = version_identifier + str(i)
                         if self.item_dict["name"] == template.get(versioned_name).value.strip():
                             self.current_version = i
+                            break
                         i += 1
                 except ValueError:
                     pass
@@ -671,7 +670,7 @@ class BuildItem:
             return changed
 
         ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
-        print(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}")
+        print(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}: {item_definition.name}")
         print(f"    {ddiff}")
         changed = True
         return changed

@@ -72,9 +72,6 @@ def clean_weight(value: str) -> float:
     # Strip the string again...
     weight = weight.strip()
 
-    # TEMPORARY MODIFIERS:
-    weight = weight.replace("😎😎", "")  # WTF: https://oldschool.runescape.wiki/w/Unidentified_rare_fossil
-
     # If weight string is empty, set to None
     if weight == "":
         weight = 0
