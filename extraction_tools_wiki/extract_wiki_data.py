@@ -59,14 +59,14 @@ def main(categories: List):
     # STAGE ZERO: SET SCRIPT CONFIGURATION
 
     # Specify the custom user agent for all requests
-    user_agent = "some-agent"
-    user_email = "name@domain.com"
+    user_agent = "osrsbox-agent"
+    user_email = "phoil@osrsbox.com"
 
     # Boolean to trigger load page titles from file, or run fresh page title extraction
     load_files = False
 
     # Set the revision date, extract wiki pages only after this date
-    last_extraction_date = datetime.datetime.strptime("2019-05-01T00:00:00Z",
+    last_extraction_date = datetime.datetime.strptime("2019-05-10T00:00:00Z",
                                                       '%Y-%m-%dT%H:%M:%SZ')
 
     # STAGE ONE: EXTRACT PAGE TITLES
