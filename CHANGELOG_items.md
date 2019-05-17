@@ -1,3 +1,8 @@
+### 2019/05/16: Farming Improvements and Rebalancing Existing Content
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/05/02: Automated Plank Make and In Game Clock
 - Added items: 0
 - Removed items: 0

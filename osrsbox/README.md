@@ -118,7 +118,9 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
-- `1.1.7`: Release for game update 2019/04/02.
+- `1.1.9`: Release for game update 2019/05/16.
+- `1.1.8`: Release for week 2019/05/09 (no actual game update).
+- `1.1.7`: Release for game update 2019/05/02.
 - `1.1.6`: Release for game update 2019/04/25, added ItemWeapon class.
 - `1.1.5`: Release for game update 2019/04/18.
 - `1.1.4`: Update for changes to new treasure trail items.
