@@ -1,3 +1,8 @@
+### 2019/05/23: Hosidius Rework and Deadman Beta
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/05/16: Farming Improvements and Rebalancing Existing Content
 - Added items: 0
 - Removed items: 0
