@@ -1,3 +1,74 @@
+### 2019/05/30: Updates and Hosidius Improvements
+- Added items: 29
+    - 23458,Enchanted lyre(i)
+    - 23459,Enchanted lyre(i)
+    - 23460,Attacker icon
+    - 23461,Attacker icon
+    - 23462,Attacker icon
+    - 23463,Attacker icon
+    - 23464,Attacker icon
+    - 23465,Attacker icon
+    - 23466,Defender icon
+    - 23467,Defender icon
+    - 23468,Defender icon
+    - 23469,Defender icon
+    - 23470,Defender icon
+    - 23471,Collector icon
+    - 23472,Collector icon
+    - 23473,Collector icon
+    - 23474,Collector icon
+    - 23475,Collector icon
+    - 23476,Collector icon
+    - 23477,Collector icon
+    - 23478,Healer icon
+    - 23479,Healer icon
+    - 23480,Healer icon
+    - 23481,Healer icon
+    - 23482,Healer icon
+    - 23483,Healer icon
+    - 23484,Healer icon
+    - 23485,Healer icon
+    - 23486,Healer icon
+- Removed items: 0
+- Changed items: 37
+    - 10556,Attacker icon,members
+    - 10557,Collector icon,members
+    - 10558,Defender icon,members
+    - 10559,Healer icon,members
+    - 10567,Null,equipable|name
+    - 20802,Null,equipable|name
+    - 22308,Null,equipable|name
+    - 22309,Null,equipable|name
+    - 22310,Null,equipable|name
+    - 22311,Null,equipable|name
+    - 22312,Null,equipable|name
+    - 22313,Null,equipable|name
+    - 22314,Null,equipable|name
+    - 22315,Null,highalch|lowalch|cost|equipable|name
+    - 22337,Null,equipable|name
+    - 22338,Null,equipable|name
+    - 22339,Null,equipable|name
+    - 22340,Null,equipable|name
+    - 22341,Null,equipable|name
+    - 22342,Null,equipable|name
+    - 22343,Null,equipable|name
+    - 22344,Null,equipable|name
+    - 22345,Null,highalch|lowalch|cost|equipable|name
+    - 22346,Null,equipable|name
+    - 22347,Null,highalch|lowalch|cost|equipable|name
+    - 22348,Null,equipable|name
+    - 22349,Null,equipable|name
+    - 22721,Null,equipable|name
+    - 22722,Null,equipable|name
+    - 22723,Null,equipable|name
+    - 22724,Null,equipable|name
+    - 22725,Null,equipable|name
+    - 22726,Null,equipable|name
+    - 22727,Null,cost|equipable|name
+    - 22728,Null,equipable|name
+    - 22729,Null,equipable|name
+    - 22730,Null,equipable|name
+
 ### 2019/05/23: Hosidius Rework and Deadman Beta
 - Added items: 0
 - Removed items: 0
