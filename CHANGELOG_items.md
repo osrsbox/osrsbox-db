@@ -1,3 +1,8 @@
+### 2019/05/30: PvP Changes and Deadman Beta
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/05/30: Updates and Hosidius Improvements
 - Added items: 29
     - 23458,Enchanted lyre(i)
