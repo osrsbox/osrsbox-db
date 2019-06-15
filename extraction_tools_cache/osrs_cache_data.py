@@ -30,8 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
-import glob
 import zlib
 import json
 import binascii
@@ -42,7 +40,6 @@ from typing import Tuple
 from typing import Generator
 from base64 import b64encode, b64decode
 
-import config
 from extraction_tools_cache import osrs_cache_constants
 
 
