@@ -42,6 +42,7 @@ from typing import Tuple
 from typing import Generator
 from base64 import b64encode, b64decode
 
+import config
 from extraction_tools_cache import osrs_cache_constants
 
 
@@ -152,7 +153,7 @@ def compress_definition_file(json_data: Dict) -> Tuple[str, str]:
     return id_number, json_out
 
 
-def compress_single_cache_type(path_to_definition_files: str, output_json_file: str):
+def compress_single_cache_type(path_to_definition_files: Union[Path, str], output_json_file: Union[Path, str]):
     """Compress a directory of OSRS cache definition files.
 
     :param path_to_definition_files: The path to the directory of cache definition files.
@@ -162,15 +163,17 @@ def compress_single_cache_type(path_to_definition_files: str, output_json_file: 
     # Setup dictionary for JSON export
     all_definitions = {}
 
-    # Get all files in cache dump directory
-    definition_files = glob.glob(path_to_definition_files + "*")
+    # Get all files in cache dump directory, and sort numerically
+    definition_files = Path(path_to_definition_files).glob("*.json")
+    definition_files = sorted((fi for fi in definition_files), key=lambda fi: int(fi.stem))
+
     for definition_file in definition_files:
         # Skip any generated Java class files used by RuneLite
-        if os.path.basename(definition_file) in osrs_cache_constants.JAVA_CLASS_FILES:
+        if definition_file.stem in osrs_cache_constants.JAVA_CLASS_FILES:
             continue
 
         # Open each definition file for processing and dump the JSON content
-        with open(definition_file) as input_json_file:
+        with open(str(definition_file)) as input_json_file:
             json_data = json.loads(input_json_file.read())
             id_number, json_out = compress_definition_file(json_data)
             all_definitions[id_number] = json_out
@@ -179,18 +182,14 @@ def compress_single_cache_type(path_to_definition_files: str, output_json_file: 
         json.dump(all_definitions, json_file)
 
 
-def compress_all_cache_types(root_path_of_cache_dump: str):
-    """Compress all OSRS cache definition files for items, npcs and objects.
-
-    :param root_path_of_cache_dump: The path for the items, npcs and objects cache dump folders.
-    """
-    print(f">>> Processing cache dump in the following root path: {root_path_of_cache_dump}")
+def compress_all_cache_types(cache_dump_path: Union[Path, str]):
+    """Compress all OSRS cache definition files for items, npcs and objects."""
+    print(f">>> Processing cache dump in the following root path: {cache_dump_path}")
     for cache_dump_type in osrs_cache_constants.CACHE_DUMP_TYPES:
-        full_path = os.path.join(root_path_of_cache_dump, cache_dump_type, "")
-        output_json_file_path = os.path.dirname(os.path.realpath(__file__))
+        cache_dump_full_path = Path(cache_dump_path) / cache_dump_type / ""
         output_json_file_name = f"{cache_dump_type}.json"
-        output_json_file = os.path.join(output_json_file_path, output_json_file_name)
-        compress_single_cache_type(full_path, output_json_file)
+        output_json_file_path = Path(cache_dump_path) / output_json_file_name
+        compress_single_cache_type(cache_dump_full_path, output_json_file_path)
 
 
 def main(cache_dump_path: Union[str, Path], process_all: bool):

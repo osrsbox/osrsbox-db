@@ -40,7 +40,7 @@ from extraction_tools_wiki.wiki_page_text import WikiPageText
 OSRS_WIKI_API_URL = "https://oldschool.runescape.wiki/api.php"
 
 
-def main(categories: List):
+def extract_wiki_data(categories: List):
     """The main function for extracting OSRS Wiki category page titles and page wiki text.
 
     :param categories: A List containing categories
@@ -150,4 +150,4 @@ if __name__ == "__main__":
 
     # List of categories to process from the OSRS Wiki
     target_categories = args["categories"]
-    main(target_categories)
+    extract_wiki_data(target_categories)

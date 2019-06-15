@@ -56,8 +56,8 @@ if __name__ == '__main__':
     extract_attackable_npcs.extract_attackable_npcs(compressed_cache_file_npcs)
 
     print(">>> ITEMS CACHE DATA: Extracting detailed item metadata...")
-    compressed_cache_file = Path(config.EXTRACTION_CACHE_PATH / "items.json")
-    extract_items_cache_data.extract_items_cache_data(compressed_cache_file)
+    compressed_cache_file_items = Path(config.EXTRACTION_CACHE_PATH / "items.json")
+    extract_items_cache_data.extract_items_cache_data(compressed_cache_file_items)
 
     # STAGE FOUR: Determine, then print any manual updates required (usually for tests)
 

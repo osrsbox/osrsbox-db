@@ -122,7 +122,10 @@ def parse_item_definition_fix_noted_item(item_data: Dict, definitions: CacheDefi
 
 
 def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
-    """The main function for generating the `data/items-cache-data.json` file"""
+    """The main function for generating the `data/items-cache-data.json` file.
+
+    :param compressed_json_file_path: The path to the compressed items.json file.
+    """
     all_items_new = dict()
 
     # Initialize the CacheDefinitionFiles object, and decompress
@@ -167,7 +170,7 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
         all_items_new[str(item_data["id"])] = item_data
 
     # Finally, dump the extracted data to the data dir
-    out_fi = Path(config.DATA_PATH / "items-cache-data.json")
+    out_fi = Path(config.EXTRACTION_CACHE_PATH / "items-cache-data.json")
     with open(out_fi, "w") as f:
         json.dump(all_items_new, f)
 

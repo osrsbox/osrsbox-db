@@ -25,10 +25,10 @@ from extraction_tools_wiki import extract_wiki_data
 if __name__ == '__main__':
     print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
     categories = ["Items", "Construction", "Furniture", "Pets"]
-    extract_wiki_data.main(categories)
+    extract_wiki_data.extract_wiki_data(categories)
     print(f">>> WIKI DATA MONSTERS: Extracting page titles and wiki text...")
     categories = ["Monsters"]
-    extract_wiki_data.main(categories)
+    extract_wiki_data.extract_wiki_data(categories)
     print(f">>> WIKI DATA QUESTS: Extracting page titles and wiki text...")
     categories = ["Quests", "Miniquests", "Special_quests"]
-    extract_wiki_data.main(categories)
+    extract_wiki_data.extract_wiki_data(categories)
