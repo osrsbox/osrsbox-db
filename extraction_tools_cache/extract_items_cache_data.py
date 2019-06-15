@@ -5,8 +5,8 @@ Website: https://www.osrsbox.com
 
 Description:
 Script to generate the items-cache-data.json file by parsing the items.json
-file dumped. The items.json file is the compressed, raw ItemDefinitions that
-are extracted from the OSRS cache. The resultant file will replace the current
+compressed cache dump. The items.json file is the compressed, raw ItemDefinitions
+that are extracted from the OSRS cache. The resultant file will replace the current
 items-scraper.json file that is produced by the itemsscraper RuneLite plugin.
 
 Copyright (c) 2019, PH01L

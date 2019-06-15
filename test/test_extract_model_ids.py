@@ -26,7 +26,7 @@ import pytest
 from pathlib import Path
 
 from extraction_tools_cache import osrs_cache_data
-from extraction_tools_cache import extract_model_ids
+from extraction_tools_cache import extract_summary_model_ids
 
 
 @pytest.mark.parametrize("definition_id,cache_type,expected", [
@@ -39,5 +39,5 @@ def test_osrs_cache_extract_model_ids(path_to_cache_dir: Path, definition_id, ca
     definitions = osrs_cache_data.CacheDefinitionFiles(path_to_cache_file)
     definitions.decompress_cache_file()
     json_data = definitions[definition_id]
-    model_data = extract_model_ids.extract_model_ids(json_data, cache_type)[0]
+    model_data = extract_summary_model_ids.extract_model_ids(json_data, cache_type)[0]
     assert model_data["model_id"] == expected

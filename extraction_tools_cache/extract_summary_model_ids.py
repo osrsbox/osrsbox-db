@@ -88,7 +88,7 @@ def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
     return all_models
 
 
-def main(path_to_cache_definitions: str):
+def main(path_to_cache_definitions: Path):
     """Main function for extracting OSRS model ID numbers.
 
     :param path_to_cache_definitions: File system location of compressed cache definition files.
@@ -127,12 +127,4 @@ def main(path_to_cache_definitions: str):
 
 
 if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-d",
-                    "--directory",
-                    required=True,
-                    help="Directory of compressed cache definitions dump.")
-    args = vars(ap.parse_args())
-    path_to_definitions = args["directory"]
-    main(path_to_definitions)
+    main(config.EXTRACTION_CACHE_PATH)

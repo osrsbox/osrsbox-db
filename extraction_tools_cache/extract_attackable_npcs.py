@@ -4,14 +4,10 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-extract_model_ids is a simple script to parse the output from the
-RuneLite Cache tool. The script parses the individual JSON files, one
-for each object, and extracts the object name, object id, and maps this
-to the model id numbers. You can use this information to easily find the
-name of a specific model id from the OSRS cache. Known keys for models:
-- items: inventoryModel
-- npcs: models, models_2 (version 2 does not seem to be used)
-- objects: objectModels
+extract_attackable_npcs.py is a script to process the compressed OSRS cache
+definition files maintained in this project and to extract the uncompressed NPC
+definition JSON files. The extracted and decompressed data are the raw NPC
+definition files for all attackable NPCs (monsters).
 
 Copyright (c) 2019, PH01L
 
@@ -31,12 +27,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import json
 from pathlib import Path
+from typing import Union
 
 import config
 from extraction_tools_cache import osrs_cache_data
 
 
-def main(compressed_json_file_path: str):
+def extract_attackable_npcs(compressed_json_file_path: Union[Path, str]):
     """Main function to extract attackble NPC definition files
 
     :param compressed_json_file_path: Compressed cache file
@@ -64,13 +61,6 @@ def main(compressed_json_file_path: str):
 
 
 if __name__ == "__main__":
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-c",
-                    "--cache",
-                    required=True,
-                    help="The compressed cache definitions file to process (npcs.json).")
-    args = vars(ap.parse_args())
-    path_to_compressed_json_file = args["cache"]
-
-    main(path_to_compressed_json_file)
+    # Set path to npcs.json compressed cache file
+    npcs_cache_file = Path(config.EXTRACTION_CACHE_PATH) / "npcs.json"
+    extract_attackable_npcs(npcs_cache_file)
