@@ -28,6 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import json
 from pathlib import Path
 from typing import Dict
+from typing import Union
 
 import config
 from extraction_tools_cache.osrs_cache_data import CacheDefinitionFiles
@@ -120,20 +121,17 @@ def parse_item_definition_fix_noted_item(item_data: Dict, definitions: CacheDefi
     return item_data
 
 
-def main():
+def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
     """The main function for generating the `data/items-cache-data.json` file"""
-    # Set the file for the items.json file, which should be in the same directory as this script
-    compressed_json_file = Path() / config.EXTRACTION_CACHE_PATH / "items.json"
-    # Initialize the CacheDefinitionFiles object, passing the items.json file as a parameter
-    definitions = CacheDefinitionFiles(compressed_json_file)
-    # Decompress the item.json cache file
+    all_items_new = dict()
+
+    # Initialize the CacheDefinitionFiles object, and decompress
+    definitions = CacheDefinitionFiles(compressed_json_file_path)
     definitions.decompress_cache_file()
 
-    # Use the class generator to loop the definition file ID numbers in the object
+    # Use the class generator to loop the definition file IDs
     for id_number in definitions:
-        # print(f">>> Processing: {id_number}")
-
-        # Initialize the dictionary to store item properties
+        # Initialize the dictionary to store each item properties
         item_data = dict()
 
         # Fetch the specific item definition being processed
@@ -166,26 +164,14 @@ def main():
             # This item needs a name set
             item_data["name"] = definitions[linked_id_number]["name"]
 
-        ALL_ITEMS_NEW[str(item_data["id"])] = item_data
-
-
-if __name__ == "__main__":
-    ALL_ITEMS_NEW = dict()
-
-    # Run the main function, then compare the two files
-    main()
+        all_items_new[str(item_data["id"])] = item_data
 
     # Finally, dump the extracted data to the data dir
     out_fi = Path(config.DATA_PATH / "items-cache-data.json")
     with open(out_fi, "w") as f:
-        json.dump(ALL_ITEMS_NEW, f)
+        json.dump(all_items_new, f)
 
-    # # Some commented code to compare the items-scraper and items-cache-date files
-    # ALL_ITEMS_OLD = dict()
-    # scraper_path = Path(config.DATA_PATH / "items-scraper.json")
-    # with open(scraper_path) as f:
-    #     ALL_ITEMS_OLD = json.load(f)
-    # from deepdiff import DeepDiff
-    # ddiff = DeepDiff(ALL_ITEMS_OLD, ALL_ITEMS_NEW, ignore_order=True)
-    # from pprint import pprint
-    # pprint(ddiff)
+
+if __name__ == "__main__":
+    path_to_definitions = Path() / config.EXTRACTION_CACHE_PATH / "items.json"
+    extract_items_cache_data(path_to_definitions)

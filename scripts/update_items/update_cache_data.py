@@ -27,6 +27,7 @@ from extraction_tools_cache import osrs_cache_data
 from extraction_tools_cache import extract_summary_cache_data
 from extraction_tools_cache import extract_summary_model_ids
 from extraction_tools_cache import extract_attackable_npcs
+from extraction_tools_cache import extract_items_cache_data
 
 
 if __name__ == '__main__':
@@ -53,6 +54,10 @@ if __name__ == '__main__':
     print(">>> ATTACKABLE NPCS: Extracting and merging OSRS attackable NPC definition files...")
     compressed_cache_file_npcs = Path(config.EXTRACTION_CACHE_PATH / "npcs.json")
     extract_attackable_npcs.extract_attackable_npcs(compressed_cache_file_npcs)
+
+    print(">>> ITEMS CACHE DATA: Extracting detailed item metadata...")
+    compressed_cache_file = Path(config.EXTRACTION_CACHE_PATH / "items.json")
+    extract_items_cache_data.extract_items_cache_data(compressed_cache_file)
 
     # STAGE FOUR: Determine, then print any manual updates required (usually for tests)
 
