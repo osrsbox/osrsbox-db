@@ -1,4 +1,24 @@
-### 2019/05/30: PvP Changes and Deadman Beta
+### 2019/06/20: Wilderness Updates and DMM Summer Finals
+- Added items: 6
+    - 23489,Wine of zamorak
+    - 23490,Larran's key
+    - 23491,Larran's key
+    - 23492,null
+    - 23493,null
+    - 23494,null
+- Removed items: 0
+- Changed items: 1
+    - 22329,Null,name|equipable
+
+### 2019/06/13: PvP Improvements and W45 Changes
+- Added items: 2
+    - 23487,Mysterious emblem (tier 10)
+    - 23488,Strange device
+- Removed items: 0
+- Changed items: 1
+    - 12756,Mysterious emblem (tier 10),tradeable_on_ge|linked_id|noteable
+
+### 2019/06/06: PvP Changes and Deadman Beta
 - Added items: 0
 - Removed items: 0
 - Changed items: 0

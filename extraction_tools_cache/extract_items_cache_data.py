@@ -167,6 +167,10 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
             # This item needs a name set
             item_data["name"] = definitions[linked_id_number]["name"]
 
+        elif item_definition["name"] == "null":
+            # Skip this item, it is not useful
+            continue
+
         all_items_new[str(item_data["id"])] = item_data
 
     # Finally, dump the extracted data to the data dir

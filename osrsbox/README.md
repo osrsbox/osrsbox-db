@@ -118,8 +118,9 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.13`: Release for game update : 2019/06/20.
 - `1.1.12`: Release for game update : 2019/05/30.
-- `1.1.11`: Release for game update 2019/05/30.
+- `1.1.11`: Release for game update 2019/06/06.
 - `1.1.10`: Release for game update 2019/05/23.
 - `1.1.9`: Release for game update 2019/05/16.
 - `1.1.8`: Release for week 2019/05/09 (no actual game update).
