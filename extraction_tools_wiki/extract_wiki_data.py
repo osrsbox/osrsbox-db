@@ -40,10 +40,11 @@ from extraction_tools_wiki.wiki_page_text import WikiPageText
 OSRS_WIKI_API_URL = "https://oldschool.runescape.wiki/api.php"
 
 
-def extract_wiki_data(categories: List):
+def extract_wiki_data(categories: List, last_extraction_date: str):
     """The main function for extracting OSRS Wiki category page titles and page wiki text.
 
-    :param categories: A List containing categories
+    :param categories: A List containing categories.
+    :param last_extraction_date: The date (as a string) of the last extraciton.
     """
     # The first category argument, used to build the output file name
     primary_category = categories[0].lower()
@@ -59,14 +60,14 @@ def extract_wiki_data(categories: List):
     # STAGE ZERO: SET SCRIPT CONFIGURATION
 
     # Specify the custom user agent for all requests
-    user_agent = "some-agent"
-    user_email = "name@domain.com"
+    user_agent = "osrsbox-agent"
+    user_email = "phoil@osrsbox.com"
 
     # Boolean to trigger load page titles from file, or run fresh page title extraction
     load_files = False
 
     # Set the revision date, extract wiki pages only after this date
-    last_extraction_date = datetime.datetime.strptime("2019-06-06T00:00:00Z",
+    last_extraction_date = datetime.datetime.strptime(last_extraction_date,
                                                       '%Y-%m-%dT%H:%M:%SZ')
 
     # STAGE ONE: EXTRACT PAGE TITLES
@@ -150,4 +151,4 @@ if __name__ == "__main__":
 
     # List of categories to process from the OSRS Wiki
     target_categories = args["categories"]
-    extract_wiki_data(target_categories)
+    extract_wiki_data(target_categories, "2019-06-14T00:00:00Z")
