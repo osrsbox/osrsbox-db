@@ -112,7 +112,7 @@ class BuildItem:
         self.logger.debug(f"item_id: {self.item_id}")
 
         # STAGE ONE: LOAD ITEM SCRAPER DATA
-        self.logger.debug("STAGE ONE: Loading item-scraper.json data to object...")
+        self.logger.debug("STAGE ONE: Loading item cache data data to object...")
 
         self.populate_from_scraper()
 
@@ -140,7 +140,7 @@ class BuildItem:
         if not has_wiki_page:
             # These will be items that cannot be processed and the program should exit
             print(f">>> not has_wiki_page: {self.item_dict['id']}, {self.item_dict['name']}")
-            if self.item_dict["name"] == "" or self.item_dict["name"] == "Null":
+            if self.item_dict["name"] == "" or self.item_dict["name"].lower() == "null":
                 self.item_dict["equipable_by_player"] = False
                 self.export()
                 return

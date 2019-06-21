@@ -75,15 +75,15 @@ class DetermineNewItems:
         return unchanged_items
 
 
-def main():
+def determine_new_items():
     """The main function for determining new items added to the game."""
-    # Read in the old item-scraper.json file
-    fi_name = Path(config.DATA_PATH / "items-scraper.json")
+    # Read in the old items-cache-data.json file
+    fi_name = Path(config.DATA_PATH / "items-cache-data.json")
     with open(fi_name) as f:
         old_items = json.load(f)
 
-    # Read in the new item-scraper.json file
-    fi_name = Path("items-scraper.json")
+    # Read in the new items-cache-data.json file
+    fi_name = Path(config.EXTRACTION_CACHE_PATH / "items-cache-data.json")
     with open(fi_name) as f:
         new_items = json.load(f)
 
@@ -127,5 +127,5 @@ def main():
 
 
 if __name__ == "__main__":
-    print("Determining new items using items-scraper.json files...")
-    main()
+    print("Determining new items using items-cache-data.json files...")
+    determine_new_items()

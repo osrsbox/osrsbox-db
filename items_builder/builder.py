@@ -33,7 +33,7 @@ if __name__ == "__main__":
         os.remove("builder.log")
 
     # Load the raw output from OSRS cache
-    scraper_path = Path(config.DATA_PATH / "items-scraper.json")
+    scraper_path = Path(config.DATA_PATH / "items-cache-data.json")
     with open(scraper_path) as f:
         cache_items = json.load(f)
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
         json_data = cache_items[item_id]
 
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 20000:
+        # if int(item_id) < 23000:
         #     continue
 
         # Initialize the BuildItem class
