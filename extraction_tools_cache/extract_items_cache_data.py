@@ -126,7 +126,8 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
 
     :param compressed_json_file_path: The path to the compressed items.json file.
     """
-    all_items_new = dict()
+    all_items = dict()
+    all_items_summary = dict()
 
     # Initialize the CacheDefinitionFiles object, and decompress
     definitions = CacheDefinitionFiles(compressed_json_file_path)
@@ -171,12 +172,24 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
             # Skip this item, it is not useful
             continue
 
-        all_items_new[str(item_data["id"])] = item_data
+        all_items[str(item_data["id"])] = item_data
 
-    # Finally, dump the extracted data to the data dir
+    # Finally, dump the extracted data to the items-cache-data.json file
     out_fi = Path(config.EXTRACTION_CACHE_PATH / "items-cache-data.json")
     with open(out_fi, "w") as f:
-        json.dump(all_items_new, f)
+        json.dump(all_items, f)
+
+    # Populate all_items_summary for items-summary.json file
+    for item_id, json_dict in all_items.items():
+        temp_dict = dict()
+        temp_dict["id"] = json_dict["id"]
+        temp_dict["name"] = json_dict["name"]
+        all_items_summary[str(item_id)] = temp_dict
+
+    # Finally, dump the extracted data to the items-cache-data.json file
+    out_fi = Path(config.DOCS_PATH / "items-summary.json")
+    with open(out_fi, "w") as f:
+        json.dump(all_items_summary, f)
 
 
 if __name__ == "__main__":

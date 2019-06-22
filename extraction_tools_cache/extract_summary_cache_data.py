@@ -55,15 +55,15 @@ def extract_summary_file(compressed_json_file_path: Union[Path, str], cache_name
         # Check if there is a non-valid name
         if "<col" in json_data["name"]:
             continue
+        if "null" in json_data["name"].lower():
+            continue
         summary_data[id] = {
             "id": id,
             "name": name
         }
 
     # Save all extracted entries to a JSON file
-    if cache_name == "items":
-        out_fi = Path(config.DOCS_PATH / "items-summary.json")
-    elif cache_name == "npcs":
+    if cache_name == "npcs":
         out_fi = Path(config.DOCS_PATH / "npcs-summary.json")
     elif cache_name == "objects":
         out_fi = Path(config.DOCS_PATH / "objects-summary.json")
@@ -75,6 +75,10 @@ def extract_summary_file(compressed_json_file_path: Union[Path, str], cache_name
 if __name__ == "__main__":
     # Loop the three cache types (items, npcs and objects), and extract summary JSON file
     for cache_type_name in osrs_cache_constants.CACHE_DUMP_TYPES:
+        # If cache type is "items", skip as null/linked items are difficult to correlate
+        # The items-summary.json is instead generated using the items_cache_data.py script
+        if cache_type_name is "items":
+            continue
         # Set path to compressed cache file, then extract file
         compressed_cache_file_name = cache_type_name + ".json"
         compressed_cache_file = Path(config.EXTRACTION_CACHE_PATH) / compressed_cache_file_name
