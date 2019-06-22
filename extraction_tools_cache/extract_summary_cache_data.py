@@ -77,7 +77,7 @@ if __name__ == "__main__":
     for cache_type_name in osrs_cache_constants.CACHE_DUMP_TYPES:
         # If cache type is "items", skip as null/linked items are difficult to correlate
         # The items-summary.json is instead generated using the items_cache_data.py script
-        if cache_type_name is "items":
+        if cache_type_name == "items":
             continue
         # Set path to compressed cache file, then extract file
         compressed_cache_file_name = cache_type_name + ".json"
