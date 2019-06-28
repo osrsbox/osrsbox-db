@@ -1,3 +1,8 @@
+### 2019/06/27: Changes to Teleblock and Extra Clan Wars Options
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/06/20: Wilderness Updates and DMM Summer Finals
 - Added items: 6
     - 23489,Wine of zamorak
