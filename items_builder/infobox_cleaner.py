@@ -190,6 +190,9 @@ def clean_examine(value: str, name: str) -> str:
     # Remove linked tags
     examine = examine.replace("{{*}}", "")
 
+    # Remove sic
+    examine = examine.replace("{{sic}}", "")
+
     # Remove triple/double quotes
     examine = examine.replace("'''", "")
     examine = examine.replace("''", "")

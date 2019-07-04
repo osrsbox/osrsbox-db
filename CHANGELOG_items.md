@@ -1,3 +1,44 @@
+### 2019/07/04: Forthos Dungeon
+- Added items: 36
+    - 23495,Sraracha
+    - 23496,Sraracha
+    - 23497,Temple coin
+    - 23498,Temple coin
+    - 23499,Grubby key
+    - 23500,Grubby key
+    - 23501,Grubby key
+    - 23502,Temple key
+    - 23503,Temple key
+    - 23504,Tome of the moon
+    - 23505,Tome of the moon
+    - 23506,Tome of the sun
+    - 23507,Tome of the sun
+    - 23508,Tome of the temple
+    - 23509,Tome of the temple
+    - 23510,Tattered moon page
+    - 23511,Tattered moon page
+    - 23512,Tattered sun page
+    - 23513,Tattered sun page
+    - 23514,Tattered temple page
+    - 23515,Tattered temple page
+    - 23516,Lamp of knowledge
+    - 23517,Giant egg sac(full)
+    - 23518,Giant egg sac(full)
+    - 23519,Giant egg sac(full)
+    - 23520,Giant egg sac
+    - 23521,Giant egg sac
+    - 23522,Mask of ranul
+    - 23523,Mask of ranul
+    - 23524,Mask of ranul
+    - 23525,Jar of eyes
+    - 23526,Jar of eyes
+    - 23527,Jar of eyes
+    - 23528,Sarachnis cudgel
+    - 23529,Sarachnis cudgel
+    - 23530,Sarachnis cudgel
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/06/27: Changes to Teleblock and Extra Clan Wars Options
 - Added items: 0
 - Removed items: 0
