@@ -69,7 +69,7 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Th
 | tradeable_on_ge     | boolean     | If the item is tradeable (only on GE)                | Yes      |
 | stackable           | boolean     | If the item is stackable (in inventory)              | Yes      |
 | noted               | boolean     | If the item is noted                                 | Yes      |
-| notable             | boolean     | If the item is notable                               | Yes      |
+| noteable            | boolean     | If the item is notable                               | Yes      |
 | linked_id           | integer     | The noted/unnoted equivalent of the item             | No       |
 | placeholder         | boolean     | If the item is a placeholder                         | Yes      |
 | equipable           | boolean     | If the item is equipable (based on menu entry)       | Yes      |
