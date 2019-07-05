@@ -159,13 +159,13 @@ def clean_release_date(value: str) -> str:
     release_date = release_date.replace("]", "")
     try:
         release_date = datetime.datetime.strptime(release_date, "%d %B %Y")
-        return release_date.strftime("%d %B %Y")
+        return release_date.date().isoformat()
     except ValueError:
         pass
 
     try:
         release_date = dateparser.parse(release_date)
-        release_date = release_date.strftime("%d %B %Y")
+        release_date = release_date.date().isoformat()
     except (ValueError, TypeError):
         return None
 

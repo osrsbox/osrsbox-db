@@ -39,7 +39,7 @@ if __name__ == "__main__":
     for item in all_db_items:
         if item.release_date:  # Check item has a release date (aka, not None)
             # Convert date string to a Python datetime object
-            datetime_object = datetime.datetime.strptime(item.release_date, '%d %B %Y')
+            datetime_object = datetime.datetime.strptime(item.release_date, '%Y-%m-%d')
             # Append item object to dictionary > list
             items_by_release_date[datetime_object].append(item)
 

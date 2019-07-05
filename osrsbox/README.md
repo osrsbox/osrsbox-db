@@ -69,7 +69,7 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Th
 | tradeable_on_ge     | boolean     | If the item is tradeable (only on GE)                | Yes      |
 | stackable           | boolean     | If the item is stackable (in inventory)              | Yes      |
 | noted               | boolean     | If the item is noted                                 | Yes      |
-| noteable            | boolean     | If the item is notable                               | Yes      |
+| noteable            | boolean     | If the item is noteable                              | Yes      |
 | linked_id           | integer     | The noted/unnoted equivalent of the item             | No       |
 | placeholder         | boolean     | If the item is a placeholder                         | Yes      |
 | equipable           | boolean     | If the item is equipable (based on menu entry)       | Yes      |
@@ -81,7 +81,7 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Th
 | weight              | float       | The weight (in kilograms) of the item                | No       |
 | buy_limit           | integer     | The Grand Exchange buy limit of the item             | No       |
 | quest_item          | boolean     | If the item is associated with a quest               | No       |
-| release_date        | string      | Date the item was released                           | No       |
+| release_date        | string      | Date the item was released in ISO8601 format         | No       |
 | examine             | string      | The examine text for the item                        | No       |
 | url                 | string      | OSRS Wiki URL link                                   | No       |
 | equipment           | object      | Object of item equipment properties (if equipable)   | No       |
@@ -118,6 +118,7 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.16`: Converted all `release_date` values to ISO8601 format.
 - `1.1.15`: Release for game update : 2019/07/04.
 - `1.1.14`: Release for game update : 2019/06/27.
 - `1.1.13`: Release for game update : 2019/06/20.
