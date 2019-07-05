@@ -394,7 +394,7 @@ class BuildItem:
         if weight is None:
             weight = self.extract_infobox_value(template, "weight")
         if weight is not None:
-            self.item_dict["weight"] = infobox_cleaner.clean_weight(weight)
+            self.item_dict["weight"] = infobox_cleaner.clean_weight(weight, self.item_id)
 
         # QUEST: Determine if item is associated with a quest ()
         quest = None
