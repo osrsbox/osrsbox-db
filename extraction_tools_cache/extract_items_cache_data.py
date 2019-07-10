@@ -172,6 +172,12 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
             # Skip this item, it is not useful
             continue
 
+        # Check extracted item name, if name is null or empty, skip it
+        item_name = item_data["name"].lower()
+        if item_name == "null" or item_name == "":
+            # Skip this item, it is not useful
+            continue
+
         all_items[str(item_data["id"])] = item_data
 
     # Finally, dump the extracted data to the items-cache-data.json file
