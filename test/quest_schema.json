@@ -78,7 +78,7 @@
         "type": "string"
       }
     },
-    "developer": {
+    "developers": {
       "type": "array",
       "items": {
         "type": "string"
@@ -96,6 +96,10 @@
     "description": {
       "type": "string"
     },
+    "url_quest_image": {
+      "type": "string",
+      "format": "uri"
+    },
     "url_quest_guide_full": {
       "type": "string",
       "format": "uri"
@@ -108,6 +112,12 @@
       "type": "array",
       "items": {
         "type": "number"
+      }
+    },
+    "quest_trivia": {
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     },
     "requirements": {
@@ -207,9 +217,11 @@
     "difficulty",
     "length",
     "description",
+    "url_quest_image",
     "url_quest_guide_full",
     "url_quest_guide_quick",
     "required_for_completing",
+    "quest_trivia",
     "requirements",
     "rewards"
   ]
