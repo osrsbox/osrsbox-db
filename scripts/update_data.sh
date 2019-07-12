@@ -53,33 +53,33 @@ git pull
 
 echo -e ">>> Building RuneLite..."
 # Build using mvn command
+mvn clean
 mvn install -DskipTests
 
 # Find the cache.jar file with current version and bundled with dependencies
 # For example: cache-1.5.27-SNAPSHOT-jar-with-dependencies.jar
 cd ~/repos/runelite/cache/target
-jar_file=$(ls | grep *jar-with-dependencies*)
+jar_file=$(ls | grep .jar-with-dependencies.)
 
 # Remove old cache dump
 echo -e ">>> Removing the old cache dump in osrsbox-db..."
-rm -r ~/repos/osrsbox-db/extraction_tools_cache/items
-rm -r ~/repos/osrsbox-db/extraction_tools_cache/npcs
-rm -r ~/repos/osrsbox-db/extraction_tools_cache/objects
+rm -r ~/repos/osrsbox-db/extraction_tools_cache/items/
+rm -r ~/repos/osrsbox-db/extraction_tools_cache/npcs/
+rm -r ~/repos/osrsbox-db/extraction_tools_cache/objects/
 
 # Dump the cache
 echo -e ">>> Dumping cache using RuneLite cache tool..."
-java -classpath $jar_file \
-      net.runelite.cache.Cache \
-     -cache ~/jagexcache/oldschool/LIVE \
-     -items ~/osrsbox-db/extraction_tools_cache/items
-java -classpath $jar_file \
-      net.runelite.cache.Cache \
-     -cache ~/jagexcache/oldschool/LIVE \
-     -npcs ~/osrsbox-db/extraction_tools_cache/npcs
-java -classpath $jar_file \
-      net.runelite.cache.Cache \
-     -cache ~/jagexcache/oldschool/LIVE \
-     -objects ~/osrsbox-db/extraction_tools_cache/objects
+java -classpath $jar_file net.runelite.cache.Cache \
+-cache ~/jagexcache/oldschool/LIVE \
+-items ~/repos/osrsbox-db/extraction_tools_cache/items
+
+java -classpath $jar_file net.runelite.cache.Cache \
+-cache ~/jagexcache/oldschool/LIVE \
+-npcs ~/repos/osrsbox-db/extraction_tools_cache/npcs
+
+java -classpath $jar_file net.runelite.cache.Cache \
+-cache ~/jagexcache/oldschool/LIVE \
+-objects ~/repos/osrsbox-db/extraction_tools_cache/objects
 
 
 # OSRSBOX
@@ -89,7 +89,7 @@ cd ~/repos/osrsbox-db
 git pull
 
 # Move to the scripts/update_items path and update all data
-cd ~/repos/osrsbox-db/scripts/
+cd ~/repos/osrsbox-db/scripts/update_items/
 
 echo -e ">>> Updating wiki data..."
 python3 update_wiki_data.py
@@ -98,7 +98,6 @@ echo -e ">>> Updating cache data..."
 python3 update_cache_data.py
 
 echo -e ">>> Determine any newly added items..."
-cd ~/repos/osrsbox-db/scripts/update_items
 python3 determine_new_items.py
 
 # Print remaining tasks to user...
@@ -107,3 +106,4 @@ echo -e ">>> 0) Update changelog"
 echo -e ">>> 1) Update tests"
 echo -e ">>> 2) Run pytests"
 echo -e ">>> 3) git push"
+echo -e ">>> 4) Update database"

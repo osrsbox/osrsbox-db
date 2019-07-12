@@ -80,7 +80,7 @@ class BuildItem:
             "quest_item",
             "release_date",
             "examine",
-            "url"]
+            "wiki_url"]
 
         self.equipment_properties = [
             "attack_stab",
@@ -157,7 +157,7 @@ class BuildItem:
             self.parse_primary_infobox()
         elif self.status_code in [1, 2, 3, 4, 5]:
             self.logger.debug("INFOBOX: Invalid item saved")
-            self.item_dict["url"] = None
+            self.item_dict["wiki_url"] = None
             self.item_dict["equipable_by_player"] = False
             self.export()
             return
@@ -214,8 +214,8 @@ class BuildItem:
             except KeyError:
                 self.item_dict[prop] = None
 
-        if self.item_dict["url"] == "https://oldschool.runescape.wiki/w/None":
-            self.item_dict["url"] = None
+        if self.item_dict["wiki_url"] == "https://oldschool.runescape.wiki/w/None":
+            self.item_dict["wiki_url"] = None
 
         self.item_definition = ItemDefinition(**self.item_dict)
         self.compare_json_files(self.item_definition)
@@ -259,7 +259,7 @@ class BuildItem:
             wiki_url = wiki_url.replace("'", "%27")
             wiki_url = wiki_url.replace("&", "%26")
             wiki_url = wiki_url.replace("+", "%2B")
-            self.item_dict["url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
+            self.item_dict["wiki_url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
             self.item_dict["wiki_name"] = normalized_name
             # Set item status code
             self.status_code = int(self.normalized_names[str(self.item_dict["id"])][2])
@@ -275,7 +275,7 @@ class BuildItem:
             wiki_url = wiki_url.replace("'", "%27")
             wiki_url = wiki_url.replace("&", "%26")
             wiki_url = wiki_url.replace("+", "%2B")
-            self.item_dict["url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
+            self.item_dict["wiki_url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
             self.item_dict["wiki_name"] = self.item_dict["name"]
             # Set item status code, try/except as it may not be in list
             try:

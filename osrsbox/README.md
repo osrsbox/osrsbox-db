@@ -83,7 +83,7 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Th
 | quest_item          | boolean     | If the item is associated with a quest               | No       |
 | release_date        | string      | Date the item was released in ISO8601 format         | No       |
 | examine             | string      | The examine text for the item                        | No       |
-| url                 | string      | OSRS Wiki URL link                                   | No       |
+| wiki_url            | string      | OSRS Wiki URL link                                   | No       |
 | equipment           | object      | Object of item equipment properties (if equipable)   | No       |
 | weapon              | object      | Object of item weapon properties (if a weapon)       | No       |
 
@@ -118,6 +118,7 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.17`: Release for game update : 2019/07/11.
 - `1.1.16`: Converted all `release_date` values to ISO8601 format.
 - `1.1.15`: Release for game update : 2019/07/04.
 - `1.1.14`: Release for game update : 2019/06/27.
