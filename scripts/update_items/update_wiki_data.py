@@ -23,7 +23,7 @@ from extraction_tools_wiki import extract_wiki_data
 
 
 if __name__ == '__main__':
-    last_extraction_date = "2019-06-26T00:00:00Z"
+    last_extraction_date = "2019-07-03T00:00:00Z"
     print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
     categories = ["Items", "Construction", "Furniture", "Pets"]
     extract_wiki_data.extract_wiki_data(categories, last_extraction_date)
