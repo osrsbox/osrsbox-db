@@ -21,11 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import json
+from dataclasses import dataclass, asdict
 from typing import Dict, Optional
 
 from osrsbox.items_api.item_equipment import ItemEquipment
+from osrsbox.items_api.item_weapon import ItemWeapon
 
 
+@dataclass
 class ItemDefinition:
     """This class defines the object structure and properties for an OSRS item.
 
@@ -34,54 +37,52 @@ class ItemDefinition:
     Equipable items have additional properties defined in the linked ItemEquipment
     class.
     """
+    id: int
+    name: str
+    members: bool
+    tradeable: Optional[bool]
+    tradeable_on_ge: bool
+    stackable: bool
+    noted: bool
+    noteable: bool
+    linked_id_item: Optional[int]
+    linked_id_noted: Optional[int]
+    linked_id_placeholder: Optional[int]
+    placeholder: bool
+    equipable: bool
+    equipable_by_player: bool
+    equipable_weapon: bool
+    cost: int
+    lowalch: int
+    highalch: int
+    weight: Optional[float]
+    buy_limit: Optional[int]
+    quest_item: Optional[bool]
+    release_date: Optional[str]
+    examine: Optional[str]
+    wiki_url: Optional[str]
+    equipment: Optional[ItemEquipment] = None
+    weapon: Optional[ItemWeapon] = None
 
-    def __init__(self, id=None, name=None, members=None, tradeable=None, tradeable_on_ge=None, stackable=None,
-                 noted=None, noteable=None, linked_id=None, placeholder=None, equipable=None, equipable_by_player=None,
-                 cost=None, lowalch=None, highalch=None, weight=None, buy_limit=None, quest_item=None,
-                 release_date=None, examine=None, url=None, equipment=None):
-        self.id = id
-        self.name = name
-        self.members = members
-        self.tradeable = tradeable
-        self.tradeable_on_ge = tradeable_on_ge
-        self.stackable = stackable
-        self.noted = noted
-        self.noteable = noteable
-        self.linked_id = linked_id
-        self.placeholder = placeholder
-        self.equipable = equipable
-        self.equipable_by_player = equipable_by_player
-        self.cost = cost
-        self.lowalch = lowalch
-        self.highalch = highalch
-        self.weight = weight
-        self.buy_limit = buy_limit
-        self.quest_item = quest_item
-        self.release_date = release_date
-        self.examine = examine
-        self.url = url
+    @classmethod
+    def from_json(cls, json_dict: Dict) -> "ItemDefinition":
+        """Convert the dictionary under the 'equipment' key into actual :class:`ItemEquipment`"""
+        if json_dict.get("equipable_by_player"):
+            equipment = json_dict.pop("equipment")
+            json_dict["equipment"] = ItemEquipment(**equipment)
 
-        self.equipment: Optional[ItemEquipment] = None
+        if json_dict.get("weapon"):
+            weapon = json_dict.pop("weapon")
+            json_dict["weapon"] = ItemWeapon(**weapon)
 
-        if self.equipable_by_player:
-            self.equipment = ItemEquipment(**equipment)
+        return cls(**json_dict)
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON for exporting or printing.
 
         :return json_out: All class attributes stored in a dictionary.
         """
-        json_out: Dict = dict()
-
-        for prop in self.__dict__:
-            if prop == "equipment":
-                continue
-            json_out[prop] = getattr(self, prop)
-
-        if self.equipable_by_player:
-            json_out["equipment"] = self.equipment.construct_json()
-
-        return json_out
+        return asdict(self)
 
     def export_json(self, pretty: bool, export_path: str):
         """Output Item to JSON file.

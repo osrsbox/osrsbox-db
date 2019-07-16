@@ -7,40 +7,69 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 279000,
     "lowalch": 111600,
     "highalch": 167400,
     "weight": 2.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "05 March 2015",
+    "release_date": "2015-03-05",
     "examine": "A nice sturdy pike.",
-    "url": "https://oldschool.runescape.wiki/w/Crystal_halberd",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_halberd",
     "equipment": {
-        "attack_stab": 85,
-        "attack_slash": 110,
-        "attack_crush": 5,
+        "attack_stab": 58,
+        "attack_slash": 74,
+        "attack_crush": 2,
         "attack_magic": -4,
         "attack_ranged": 0,
         "defence_stab": -1,
-        "defence_slash": 4,
-        "defence_crush": 5,
+        "defence_slash": 1,
+        "defence_crush": 2,
         "defence_magic": 0,
         "defence_ranged": 0,
-        "melee_strength": 118,
+        "melee_strength": 73,
         "ranged_strength": 0,
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "attack": 70,
             "strength": 35,
             "agility": 50
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "halberds",
+        "stances": [
+            {
+                "combat_style": "jab",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "fend",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

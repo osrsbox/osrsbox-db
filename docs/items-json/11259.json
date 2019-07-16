@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 15658,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1000,
     "lowalch": 400,
     "highalch": 600,
     "weight": 0.226,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "11 June 2007",
+    "release_date": "2007-06-11",
     "examine": "For catching butterflies.",
-    "url": "https://oldschool.runescape.wiki/w/Magic_butterfly_net",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Magic_butterfly_net",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 6,
         "requirements": {
             "hunter": 17
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "spears",
+        "stances": [
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

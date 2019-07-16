@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 16720,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 15,
     "lowalch": 6,
     "highalch": 9,
     "weight": 1.814,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "24 July 2006",
+    "release_date": "2006-07-24",
     "examine": "A staff enchanted by air, fire and water.",
-    "url": "https://oldschool.runescape.wiki/w/Lunar_staff_-_pt3",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Lunar_staff_-_pt3",
     "equipment": {
         "attack_stab": -1,
         "attack_slash": -1,
@@ -36,7 +39,47 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "staves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "focus",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 16933,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 2560,
     "lowalch": 1024,
     "highalch": 1536,
     "weight": 1.814,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "07 February 2006",
+    "release_date": "2006-02-07",
     "examine": "Feels quite lucky.",
-    "url": "https://oldschool.runescape.wiki/w/Lucky_cutlass",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Lucky_cutlass",
     "equipment": {
         "attack_stab": 5,
         "attack_slash": 20,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 30
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "slashing_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

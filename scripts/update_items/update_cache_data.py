@@ -24,25 +24,44 @@ from pathlib import Path
 import config
 from extraction_tools_cache import osrs_cache_constants
 from extraction_tools_cache import osrs_cache_data
-from extraction_tools_cache import extract_model_ids
+from extraction_tools_cache import extract_summary_cache_data
+from extraction_tools_cache import extract_summary_model_ids
 from extraction_tools_cache import extract_attackable_npcs
+from extraction_tools_cache import extract_items_cache_data
 
 
 if __name__ == '__main__':
-    # STAGE ONE: Handle all OSRS cache data updates
-    print(">>> CACHE COMPRESSION: Compressing OSRS Cache data for Items, NPCs and Objects...")
+    # STAGE ONE: Compress the raw item definitions files from the cache
+
+    print(">>> CACHE COMPRESSION: Compressing OSRS Cache data for items, npcs and objects...")
     osrs_cache_data.main(config.EXTRACTION_CACHE_PATH, True)
 
+    # STAGE TWO: Generate all the summary JSON files
+
+    print(">>> SUMMARY FILES: Extracting summary files for items, npcs and objects...")
+    # Loop the three cache types (items, npcs and objects), and extract summary JSON file
+    for cache_type_name in osrs_cache_constants.CACHE_DUMP_TYPES:
+        # Set path to compressed cache file, then extract file
+        compressed_cache_file_name = cache_type_name + ".json"
+        compressed_cache_file = Path(config.EXTRACTION_CACHE_PATH) / compressed_cache_file_name
+        extract_summary_cache_data.extract_summary_file(compressed_cache_file, cache_type_name)
+
+    # STAGE THREE: Generate additional cache-related JSON files
+
     print(">>> MODEL IDS: Extracting OSRS model ID numbers from cache definition files...")
-    extract_model_ids.main(config.EXTRACTION_CACHE_PATH)
+    extract_summary_model_ids.main(config.EXTRACTION_CACHE_PATH)
 
     print(">>> ATTACKABLE NPCS: Extracting and merging OSRS attackable NPC definition files...")
-    cache_dump_path_npcs = Path(config.EXTRACTION_CACHE_PATH / "npcs.json")
-    extract_attackable_npcs.main(cache_dump_path_npcs)
+    compressed_cache_file_npcs = Path(config.EXTRACTION_CACHE_PATH / "npcs.json")
+    extract_attackable_npcs.extract_attackable_npcs(compressed_cache_file_npcs)
 
-    # STAGE TWO: Determine, then print any manual updates required (usually for tests)
+    print(">>> ITEMS CACHE DATA: Extracting detailed item metadata...")
+    compressed_cache_file_items = Path(config.EXTRACTION_CACHE_PATH / "items.json")
+    extract_items_cache_data.extract_items_cache_data(compressed_cache_file_items)
+
+    # STAGE FOUR: Determine, then print any manual updates required (usually for tests)
+
     print(">>> Manual updates required:")
-
     # Check cache definition length for test.test_osrs_cache_data module
     for cache_type in osrs_cache_constants.CACHE_DUMP_TYPES:
         cache_data_path = Path(config.EXTRACTION_CACHE_PATH / cache_type)

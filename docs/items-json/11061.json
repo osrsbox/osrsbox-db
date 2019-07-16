@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 11064,
+    "linked_id_item": null,
+    "linked_id_noted": 11064,
+    "linked_id_placeholder": 17849,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1000,
     "lowalch": 400,
     "highalch": 600,
     "weight": 1.814,
     "buy_limit": 8,
     "quest_item": true,
-    "release_date": "24 April 2007",
+    "release_date": "2007-04-24",
     "examine": "It has ancient goblin symbols on it.",
-    "url": "https://oldschool.runescape.wiki/w/Ancient_mace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_mace",
     "equipment": {
         "attack_stab": 10,
         "attack_slash": -2,
@@ -36,10 +39,43 @@
         "magic_damage": 0,
         "prayer": 3,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 15,
             "prayer": 25
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "spiked_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 11038,
+    "linked_id_item": null,
+    "linked_id_noted": 11038,
+    "linked_id_placeholder": 17135,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 26000,
     "lowalch": 10400,
     "highalch": 15600,
     "weight": 1.814,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "10 April 2007",
+    "release_date": "2007-04-10",
     "examine": "A salty sword.",
-    "url": "https://oldschool.runescape.wiki/w/Brine_sabre",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Brine_sabre",
     "equipment": {
         "attack_stab": 7,
         "attack_slash": 47,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "slashing_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

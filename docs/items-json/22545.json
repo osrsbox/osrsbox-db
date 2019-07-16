@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 22546,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 120000,
     "lowalch": 48000,
     "highalch": 72000,
     "weight": 2.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "26 July 2018",
+    "release_date": "2018-07-26",
     "examine": "An ancient chainmace with a peculiar mechanism that allows for varying attack styles.",
-    "url": "https://oldschool.runescape.wiki/w/Viggora%27s_chainmace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Viggora%27s_chainmace",
     "equipment": {
         "attack_stab": 53,
         "attack_slash": -2,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 2,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "spiked_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

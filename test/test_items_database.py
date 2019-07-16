@@ -47,4 +47,5 @@ def test_item_database(path_to_docs_dir: Path):
     for json_file in fis:
         with open(json_file) as fi:
             item = json.load(fi)
+            # print(item["id"])
             jsonschema.validate(instance=item, schema=schema)

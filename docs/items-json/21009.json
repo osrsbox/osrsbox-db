@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 21010,
+    "linked_id_item": null,
+    "linked_id_noted": 21010,
+    "linked_id_placeholder": 21011,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 72001,
     "lowalch": 28800,
     "highalch": 43200,
     "weight": 1.0,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "05 January 2017",
+    "release_date": "2017-01-05",
     "examine": "A razor sharp sword.",
-    "url": "https://oldschool.runescape.wiki/w/Dragon_sword",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_sword",
     "equipment": {
         "attack_stab": 65,
         "attack_slash": 55,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stabbing_swords",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

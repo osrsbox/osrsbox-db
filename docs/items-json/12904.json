@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 14704,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1000006,
     "lowalch": 400002,
     "highalch": 600003,
     "weight": 1.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "08 January 2015",
+    "release_date": "2015-01-08",
     "examine": "A ghastly weapon with evil origins, with a toxic fang attached.",
-    "url": "https://oldschool.runescape.wiki/w/Toxic_staff_of_the_dead",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Toxic_staff_of_the_dead",
     "equipment": {
         "attack_stab": 55,
         "attack_slash": 70,
@@ -36,10 +39,50 @@
         "magic_damage": 15,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "magic": 75,
             "attack": 75
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "bladed_staves",
+        "stances": [
+            {
+                "combat_style": "jab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "fend",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

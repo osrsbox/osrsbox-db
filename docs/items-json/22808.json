@@ -7,19 +7,22 @@
     "stackable": true,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 22809,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 166,
     "lowalch": 66,
     "highalch": 99,
     "weight": 0.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "10 January 2019",
+    "release_date": "2019-01-10",
     "examine": "A finely balanced and powerful throwing knife.",
-    "url": "https://oldschool.runescape.wiki/w/Dragon_knife",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_knife",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 3,
         "requirements": {
             "ranged": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 3,
+        "weapon_type": "thrown_weapons",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

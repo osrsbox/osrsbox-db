@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 12440,
+    "linked_id_item": null,
+    "linked_id_noted": 12440,
+    "linked_id_placeholder": 15968,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 5000,
     "lowalch": 2000,
     "highalch": 3000,
     "weight": 4.0,
     "buy_limit": 4,
     "quest_item": false,
-    "release_date": "12 June 2014",
+    "release_date": "2014-06-12",
     "examine": "I dub thee...",
-    "url": "https://oldschool.runescape.wiki/w/Royal_sceptre",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Royal_sceptre",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,7 +39,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "polestaves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

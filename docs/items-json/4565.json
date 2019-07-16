@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 18113,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 0,
     "lowalch": 0,
     "highalch": 0,
     "weight": 0.1,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "10 April 2014",
+    "release_date": "2014-04-10",
     "examine": "A holiday gift from the Easter Bunny.",
-    "url": "https://oldschool.runescape.wiki/w/Easter_basket",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Easter_basket",
     "equipment": {
         "attack_stab": -100,
         "attack_slash": -100,
@@ -36,7 +39,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

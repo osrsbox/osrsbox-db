@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 17102,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 20,
     "lowalch": 8,
     "highalch": 12,
     "weight": 1.162,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "12 December 2006",
+    "release_date": "2006-12-12",
     "examine": "It radiates purity but can still lop off heads.",
-    "url": "https://oldschool.runescape.wiki/w/Blessed_axe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blessed_axe",
     "equipment": {
         "attack_stab": -2,
         "attack_slash": 12,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 2,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 20
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "axes",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "hack",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

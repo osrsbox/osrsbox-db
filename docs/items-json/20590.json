@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 20591,
+    "linked_id_item": null,
+    "linked_id_noted": 20591,
+    "linked_id_placeholder": 20592,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 225,
     "lowalch": 90,
     "highalch": 135,
     "weight": 2.0,
     "buy_limit": 5,
     "quest_item": false,
-    "release_date": "04 August 2016",
+    "release_date": "2016-08-04",
     "examine": "Baguette ready for pain.",
-    "url": "https://oldschool.runescape.wiki/w/Stale_baguette",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Stale_baguette",
     "equipment": {
         "attack_stab": -100,
         "attack_slash": -100,
@@ -36,7 +39,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

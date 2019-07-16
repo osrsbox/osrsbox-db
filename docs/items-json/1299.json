@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 1300,
+    "linked_id_item": null,
+    "linked_id_noted": 1300,
+    "linked_id_placeholder": 14741,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1300,
     "lowalch": 520,
     "highalch": 780,
     "weight": 1.587,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "04 January 2001",
+    "release_date": "2001-01-04",
     "examine": "A razor sharp longsword.",
-    "url": "https://oldschool.runescape.wiki/w/Mithril_longsword",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mithril_longsword",
     "equipment": {
         "attack_stab": 15,
         "attack_slash": 20,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 20
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "slashing_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

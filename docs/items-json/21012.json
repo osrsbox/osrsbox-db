@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 21013,
+    "linked_id_item": null,
+    "linked_id_noted": 21013,
+    "linked_id_placeholder": 21014,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 80000,
     "lowalch": 32000,
     "highalch": 48000,
     "weight": 7.0,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "05 January 2017",
+    "release_date": "2017-01-05",
     "examine": "A crossbow used for dragon hunting.",
-    "url": "https://oldschool.runescape.wiki/w/Dragon_hunter_crossbow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_hunter_crossbow",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 6,
         "requirements": {
             "ranged": 65
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "crossbows",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

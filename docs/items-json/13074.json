@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 16176,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 83334,
     "lowalch": 33333,
     "highalch": 50000,
     "weight": 2.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "17 July 2006",
+    "release_date": "2006-07-17",
     "examine": "This sceptre is fully charged.",
-    "url": "https://oldschool.runescape.wiki/w/Pharaoh%27s_sceptre",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pharaoh%27s_sceptre",
     "equipment": {
         "attack_stab": 7,
         "attack_slash": -1,
@@ -36,10 +39,36 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 4,
         "requirements": {
             "attack": 30,
             "magic": 30
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "polestaves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

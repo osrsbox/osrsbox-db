@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 15740,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 12000,
     "lowalch": 4800,
     "highalch": 7200,
     "weight": 1.814,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "17 July 2007",
+    "release_date": "2007-07-17",
     "examine": "A mace used by the order of the Void Knights.",
-    "url": "https://oldschool.runescape.wiki/w/Void_knight_mace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Void_knight_mace",
     "equipment": {
         "attack_stab": 22,
         "attack_slash": 0,
@@ -36,14 +39,55 @@
         "magic_damage": 0,
         "prayer": 6,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 42,
             "strength": 42,
             "hitpoints": 42,
             "ranged": 42,
             "magic": 42,
+            "defence": 42,
             "prayer": 22
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "staves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "focus",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

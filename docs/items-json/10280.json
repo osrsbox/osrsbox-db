@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 10281,
+    "linked_id_item": null,
+    "linked_id_noted": 10281,
+    "linked_id_placeholder": 16052,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 300,
     "lowalch": 120,
     "highalch": 180,
     "weight": 1.8,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "05 December 2006",
+    "release_date": "2006-12-05",
     "examine": "A powerful bow made from willow wood.",
-    "url": "https://oldschool.runescape.wiki/w/Willow_comp_bow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Willow_comp_bow",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": {
             "ranged": 20
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "bows",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

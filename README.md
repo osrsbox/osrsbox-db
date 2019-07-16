@@ -44,16 +44,10 @@ For the `osrsbox` package (see below) and any scripts in this repository you wil
 
 - Python 3.6 or above
 
-If using this repository (the development version), you will also need a variety of Python packages. These are split into the general requirements documented in the [`requirements.txt`](requirements.txt) file, and additional development requirements for testing and building located in the [`requirements_dev.txt`](requirements_dev.txt) file. It is recommended to use `virtualenv` to setup your environment, then install the specified requirements using:
+If using this repository (the development version), you will also need a variety of Python packages. These are split into the general requirements documented in the [`requirements.txt`](requirements.txt) file. It is recommended to use `virtualenv` to setup your environment, then install the specified requirements using:
 
 ```
 pip install -r requirements.txt
-```
-
-And, for the development tools, also use:
-
-```
-pip install -r requirements_dev.txt
 ```
 
 ## The `osrsbox` Package

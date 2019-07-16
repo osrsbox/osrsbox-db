@@ -28,7 +28,13 @@
       "noteable": {
         "type": "boolean"
       },
-      "linked_id": {
+      "linked_id_item": {
+        "type": ["integer", "null"]
+      },
+      "linked_id_noted": {
+        "type": ["integer", "null"]
+      },
+      "linked_id_placeholder": {
         "type": ["integer", "null"]
       },
       "placeholder": {
@@ -59,17 +65,21 @@
         "type": ["boolean", "null"]
       },
       "release_date": {
-        "type": ["string", "null"]
+        "type": ["string", "null"],
+        "format": "date"
       },
       "examine": {
         "type": ["string", "null"]
       },
-      "url": {
+      "wiki_url": {
         "type": ["string", "null"]
       },
       "equipment": {
+        "type": ["object", "null"]
+      },
+      "equipment": {
         "title": "Item Equipment",
-        "type": "object",
+        "type": ["object", "null"],
         "properties": {
           "attack_stab": {
             "type": "integer"
@@ -114,10 +124,7 @@
             "type": "integer"
           },
           "slot": {
-            "type": ["string", "null"]
-          },
-          "attack_speed": {
-            "type": ["integer", "null"]
+            "type": "string"
           },
           "requirements": {
             "type": ["object", "null"]
@@ -139,8 +146,30 @@
           "magic_damage",
           "prayer",
           "slot",
-          "attack_speed",
           "requirements"
+        ]
+      },
+      "weapon": {
+        "type": ["object", "null"]
+      },
+      "weapon": {
+        "title": "Item Weapon",
+        "type": ["object", "null"],
+        "properties": {
+          "attack_speed": {
+            "type": "integer"
+          },
+          "weapon_type": {
+            "type": "string"
+          },
+          "stances": {
+            "type": "array"
+          }
+        },
+        "required": [
+          "attack_speed",
+          "weapon_type",
+          "stances"
         ]
       }
     },
@@ -153,7 +182,9 @@
       "stackable",
       "noted",
       "noteable",
-      "linked_id",
+      "linked_id_item",
+      "linked_id_noted",
+      "linked_id_placeholder",
       "placeholder",
       "equipable",
       "equipable_by_player",
@@ -165,6 +196,7 @@
       "quest_item",
       "release_date",
       "examine",
-      "url"
+      "wiki_url",
+      "equipment"
     ]
 }

@@ -7,19 +7,22 @@
     "stackable": true,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 15365,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 240,
     "lowalch": 96,
     "highalch": 144,
     "weight": 0.0,
     "buy_limit": 11000,
     "quest_item": false,
-    "release_date": "27 March 2014",
+    "release_date": "2014-03-27",
     "examine": "Just plain nasty.",
-    "url": "https://oldschool.runescape.wiki/w/Black_chinchompa",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_chinchompa",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "ranged": 65
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "chinchompas",
+        "stances": [
+            {
+                "combat_style": "short fuse",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "medium fuse",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "long fuse",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

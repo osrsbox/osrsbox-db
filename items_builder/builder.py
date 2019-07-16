@@ -33,7 +33,7 @@ if __name__ == "__main__":
         os.remove("builder.log")
 
     # Load the raw output from OSRS cache
-    scraper_path = Path(config.DATA_PATH / "items-scraper.json")
+    scraper_path = Path(config.DATA_PATH / "items-cache-data.json")
     with open(scraper_path) as f:
         cache_items = json.load(f)
 
@@ -67,9 +67,24 @@ if __name__ == "__main__":
     with open(skill_requirements_path) as f:
         skill_requirements = json.load(f)
 
+    # Load weapon_type data
+    weapon_type_path = Path(config.DATA_PATH / "weapon-types.json")
+    with open(weapon_type_path) as f:
+        weapon_types = json.load(f)
+
+    # Load stances data
+    weapon_stance_path = Path(config.DATA_PATH / "weapon-stances.json")
+    with open(weapon_stance_path) as f:
+        weapon_stances = json.load(f)
+
     # Start processing every item!
     for item_id in cache_items:
         json_data = cache_items[item_id]
+
+        # Toggle to start, stop at a specific item ID
+        # if int(item_id) < 23000:
+        #     continue
+
         # Initialize the BuildItem class
         builder = item_builder.BuildItem(item_id,
                                          json_data,
@@ -77,7 +92,9 @@ if __name__ == "__main__":
                                          normalized_names,
                                          buy_limits,
                                          skill_requirements,
-                                         current_db)
+                                         current_db,
+                                         weapon_types,
+                                         weapon_stances)
         # Start the build item population function
         builder.populate()
     print("Done.")

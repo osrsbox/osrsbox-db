@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 11413,
+    "linked_id_item": null,
+    "linked_id_noted": 11413,
+    "linked_id_placeholder": 15579,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 2080,
     "lowalch": 832,
     "highalch": 1248,
     "weight": 2.721,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "03 July 2007",
+    "release_date": "2007-07-03",
     "examine": "A poison-tipped, one-handed adamantite hasta.",
-    "url": "https://oldschool.runescape.wiki/w/Adamant_hasta",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_hasta",
     "equipment": {
         "attack_stab": 24,
         "attack_slash": 24,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 30
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "spears",
+        "stances": [
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

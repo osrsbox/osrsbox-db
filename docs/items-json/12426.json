@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 12427,
+    "linked_id_item": null,
+    "linked_id_noted": 12427,
+    "linked_id_placeholder": 15961,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 150000,
     "lowalch": 60000,
     "highalch": 90000,
     "weight": 1.0,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "12 June 2014",
+    "release_date": "2014-06-12",
     "examine": "A beautifully crafted sword forged by ancient blacksmiths.",
-    "url": "https://oldschool.runescape.wiki/w/3rd_age_longsword",
+    "wiki_url": "https://oldschool.runescape.wiki/w/3rd_age_longsword",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 72,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 65
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "two-handed_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

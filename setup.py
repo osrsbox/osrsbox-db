@@ -11,10 +11,11 @@ URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.1.0"
+VERSION = "1.1.18"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [
+    'dataclasses;python_version<"3.7"'
 ]
 
 # Import the README and use it as the long-description.

@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 6540,
+    "linked_id_item": null,
+    "linked_id_noted": 6540,
+    "linked_id_placeholder": 18259,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 50001,
     "lowalch": 20000,
     "highalch": 30000,
     "weight": 3.628,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "19 September 2005",
+    "release_date": "2005-09-19",
     "examine": "A maul of obsidian.",
-    "url": "https://oldschool.runescape.wiki/w/Tzhaar-ket-om",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Tzhaar-ket-om",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "strength": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

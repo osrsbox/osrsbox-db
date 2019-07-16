@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 19919,
+    "linked_id_item": null,
+    "linked_id_noted": 19919,
+    "linked_id_placeholder": 19920,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 6000,
     "lowalch": 2400,
     "highalch": 3600,
     "weight": 1.0,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "06 July 2016",
+    "release_date": "2016-07-06",
     "examine": "A pair of Nunchaku, smells of pizza.",
-    "url": "https://oldschool.runescape.wiki/w/Nunchaku",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Nunchaku",
     "equipment": {
         "attack_stab": -4,
         "attack_slash": -4,
@@ -36,7 +39,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

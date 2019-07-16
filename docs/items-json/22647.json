@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 22648,
+    "linked_id_item": null,
+    "linked_id_noted": 22648,
+    "linked_id_placeholder": 22649,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 300000,
     "lowalch": 120000,
     "highalch": 180000,
     "weight": 2.2,
     "buy_limit": 10,
     "quest_item": false,
-    "release_date": "06 September 2018",
+    "release_date": "2018-09-06",
     "examine": "A powerful staff.",
-    "url": "https://oldschool.runescape.wiki/w/Zuriel%27s_staff",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zuriel%27s_staff",
     "equipment": {
         "attack_stab": 13,
         "attack_slash": -1,
@@ -36,9 +39,49 @@
         "magic_damage": 10,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "magic": 78
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "staves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "focus",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

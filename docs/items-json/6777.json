@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
     "weight": 2.2,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "28 November 2005",
-    "examine": "Empty: A pole for putting rats on.  With rats: A pole with rat(s) on it.",
-    "url": "https://oldschool.runescape.wiki/w/Rat_pole",
+    "release_date": "2005-11-28",
+    "examine": "A pole for putting rats on.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rat_pole",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": -1,
@@ -36,7 +39,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

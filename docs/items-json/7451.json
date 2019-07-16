@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 7452,
+    "linked_id_item": null,
+    "linked_id_noted": 7452,
+    "linked_id_placeholder": 14359,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 25600,
     "lowalch": 10240,
     "highalch": 15360,
     "weight": 1.814,
     "buy_limit": 50,
     "quest_item": false,
-    "release_date": "15 March 2006",
+    "release_date": "2006-03-15",
     "examine": "An effective tool for chopping tough meat.",
-    "url": "https://oldschool.runescape.wiki/w/Cleaver",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Cleaver",
     "equipment": {
         "attack_stab": 7,
         "attack_slash": 45,
@@ -36,7 +39,40 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "slashing_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

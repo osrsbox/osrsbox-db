@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 12374,
+    "linked_id_item": null,
+    "linked_id_noted": 12374,
+    "linked_id_placeholder": 15927,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 30000,
     "lowalch": 12000,
     "highalch": 18000,
     "weight": 1.0,
     "buy_limit": 4,
     "quest_item": false,
-    "release_date": "12 June 2014",
+    "release_date": "2014-06-12",
     "examine": "An onyx topped cane.",
-    "url": "https://oldschool.runescape.wiki/w/Dragon_cane",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_cane",
     "equipment": {
         "attack_stab": 42,
         "attack_slash": -2,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 5,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "polestaves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

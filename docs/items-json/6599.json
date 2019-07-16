@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 6600,
+    "linked_id_item": null,
+    "linked_id_noted": 6600,
+    "linked_id_placeholder": 14314,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1920,
     "lowalch": 768,
     "highalch": 1152,
     "weight": 3.175,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "17 October 2005",
+    "release_date": "2005-10-17",
     "examine": "A white halberd.",
-    "url": "https://oldschool.runescape.wiki/w/White_halberd",
+    "wiki_url": "https://oldschool.runescape.wiki/w/White_halberd",
     "equipment": {
         "attack_stab": 19,
         "attack_slash": 25,
@@ -36,10 +39,36 @@
         "magic_damage": 0,
         "prayer": 1,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "attack": 10,
             "strength": 5
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "halberds",
+        "stances": [
+            {
+                "combat_style": "jab",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "fend",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

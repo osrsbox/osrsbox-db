@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 16723,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 10000,
     "lowalch": 4000,
     "highalch": 6000,
     "weight": 0.453,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "10 January 2007",
+    "release_date": "2007-01-10",
     "examine": "A mystical-feeling dagger.",
-    "url": "https://oldschool.runescape.wiki/w/Keris",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Keris",
     "equipment": {
         "attack_stab": 40,
         "attack_slash": 20,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 2,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 50
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stabbing_swords",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 17956,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 500,
     "lowalch": 200,
     "highalch": 300,
     "weight": 1.814,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "18 May 2004",
+    "release_date": "2004-05-18",
     "examine": "More powerful than a normal bow, useful against large game birds.",
-    "url": "https://oldschool.runescape.wiki/w/Ogre_bow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ogre_bow",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 8,
         "requirements": {
             "ranged": 30
         }
+    },
+    "weapon": {
+        "attack_speed": 8,
+        "weapon_type": "bows",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

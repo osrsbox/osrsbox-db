@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 10130,
+    "linked_id_item": null,
+    "linked_id_noted": 10130,
+    "linked_id_placeholder": 15411,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 36,
     "lowalch": 14,
     "highalch": 21,
     "weight": 1.36,
     "buy_limit": 40,
     "quest_item": false,
-    "release_date": "21 November 2006",
+    "release_date": "2006-11-21",
     "examine": "A mighty Hunter weapon. One previous owner.",
-    "url": "https://oldschool.runescape.wiki/w/Barb-tail_harpoon",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Barb-tail_harpoon",
     "equipment": {
         "attack_stab": 9,
         "attack_slash": 4,
@@ -36,7 +39,40 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stabbing_swords",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

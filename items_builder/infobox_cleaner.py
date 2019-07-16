@@ -26,10 +26,11 @@ from typing import List
 import dateparser
 
 
-def clean_weight(value: str) -> float:
+def clean_weight(value: str, item_id: int) -> float:
     """A helper method to convert the weight entry from a OSRS Wiki infobox to a float.
 
     :param value: The extracted raw wiki text.
+    :param item_id: The item ID number.
     :return weight: The weight of an item.
     """
     weight = str(value)
@@ -72,12 +73,47 @@ def clean_weight(value: str) -> float:
     # Strip the string again...
     weight = weight.strip()
 
-    # TEMPORARY MODIFIERS:
-    weight = weight.replace("😎😎", "")  # WTF: https://oldschool.runescape.wiki/w/Unidentified_rare_fossil
-
     # If weight string is empty, set to None
     if weight == "":
         weight = 0
+
+    # Handle special weight reducing equipment. When worn, weight reducing items
+    # have a specific item ID number that changes
+    item_id = int(item_id)
+    # Boots of lightness
+    if item_id == 89:
+        weight = -4.5
+    # Penance gloves
+    elif item_id == 10554:
+        weight = -4.5
+    # Max cape
+    elif item_id == 13342:
+        weight = -4.0
+    # Spotted cape
+    elif item_id == 10073:
+        weight = -2.2
+    # Spottier cape
+    elif item_id == 10074:
+        weight = -4.5
+    # Agility cape (t)
+    elif item_id == 13341:
+        weight = -4.0
+    # Agility cape
+    elif item_id == 13340:
+        weight = -4.0
+    # Graceful
+    elif item_id in [11851, 13580, 13592, 13604, 13616, 13628, 13668, 21063]:  # hood
+        weight = -3
+    elif item_id in [11853, 13582, 13594, 13606, 13618, 13630, 13670, 21066]:  # cape
+        weight = -4
+    elif item_id in [11855, 13584, 13596, 13608, 13620, 13632, 13672, 21069]:  # top
+        weight = -5
+    elif item_id in [11857, 13586, 13598, 13610, 13622, 13634, 13674, 21072]:  # legs
+        weight = -6
+    elif item_id in [11859, 13588, 13600, 13612, 13624, 13636, 13676, 21075]:  # gloves
+        weight = -3
+    elif item_id in [11861, 13590, 13602, 13614, 13626, 13638, 13678, 21078]:  # boots
+        weight = -4
 
     # Cast to a float, and return
     weight = float(weight)
@@ -123,13 +159,13 @@ def clean_release_date(value: str) -> str:
     release_date = release_date.replace("]", "")
     try:
         release_date = datetime.datetime.strptime(release_date, "%d %B %Y")
-        return release_date.strftime("%d %B %Y")
+        return release_date.date().isoformat()
     except ValueError:
         pass
 
     try:
         release_date = dateparser.parse(release_date)
-        release_date = release_date.strftime("%d %B %Y")
+        release_date = release_date.date().isoformat()
     except (ValueError, TypeError):
         return None
 
@@ -192,6 +228,9 @@ def clean_examine(value: str, name: str) -> str:
 
     # Remove linked tags
     examine = examine.replace("{{*}}", "")
+
+    # Remove sic
+    examine = examine.replace("{{sic}}", "")
 
     # Remove triple/double quotes
     examine = examine.replace("'''", "")

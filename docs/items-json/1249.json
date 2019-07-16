@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 1250,
+    "linked_id_item": null,
+    "linked_id_noted": 1250,
+    "linked_id_placeholder": 14774,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 62400,
     "lowalch": 24960,
     "highalch": 37440,
     "weight": 2.267,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "29 March 2004",
+    "release_date": "2004-03-29",
     "examine": "A dragon tipped spear.",
-    "url": "https://oldschool.runescape.wiki/w/Dragon_spear",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_spear",
     "equipment": {
         "attack_stab": 55,
         "attack_slash": 55,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": {
             "attack": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "spears",
+        "stances": [
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

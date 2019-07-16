@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 22485,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 4000000,
     "lowalch": 1600000,
     "highalch": 2400000,
     "weight": 3.175,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "07 June 2018",
+    "release_date": "2018-06-07",
     "examine": "A powerful scythe.",
-    "url": "https://oldschool.runescape.wiki/w/Scythe_of_vitur",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Scythe_of_vitur",
     "equipment": {
         "attack_stab": 70,
         "attack_slash": 110,
@@ -36,10 +39,43 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": {
             "attack": 75,
             "strength": 75
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "scythes",
+        "stances": [
+            {
+                "combat_style": "reap",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "jab",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

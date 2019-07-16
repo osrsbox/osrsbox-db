@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 14767,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 97960,
     "lowalch": 39184,
     "highalch": 58776,
     "weight": 2.4,
     "buy_limit": 40,
     "quest_item": false,
-    "release_date": "13 March 2014",
+    "release_date": "2014-03-13",
     "examine": "If rocks could feel fear, they'd fear this.",
-    "url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe",
     "equipment": {
         "attack_stab": 38,
         "attack_slash": -2,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 60
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "pickaxes",
+        "stances": [
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "impale",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

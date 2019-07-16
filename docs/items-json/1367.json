@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 1368,
+    "linked_id_item": null,
+    "linked_id_noted": 1368,
+    "linked_id_placeholder": 14716,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1248,
     "lowalch": 499,
     "highalch": 748,
     "weight": 2.721,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "08 December 2001",
+    "release_date": "2001-12-08",
     "examine": "A vicious looking axe.",
-    "url": "https://oldschool.runescape.wiki/w/Black_battleaxe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_battleaxe",
     "equipment": {
         "attack_stab": -2,
         "attack_slash": 20,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 6,
         "requirements": {
             "attack": 10
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "axes",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "hack",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

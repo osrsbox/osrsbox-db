@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 22293,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 108500,
     "lowalch": 43400,
     "highalch": 65100,
     "weight": 1.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "08 February 2018",
+    "release_date": "2018-02-08",
     "examine": "An enhanced toxic weapon from the deep.",
-    "url": "https://oldschool.runescape.wiki/w/Trident_of_the_swamp_(e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Trident_of_the_swamp_(e)",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "magic": 75
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "trident-class_weapons",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

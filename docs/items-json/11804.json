@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 11805,
+    "linked_id_item": null,
+    "linked_id_noted": 11805,
+    "linked_id_placeholder": 18343,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1250000,
     "lowalch": 500000,
     "highalch": 750000,
     "weight": 10.0,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "17 October 2013",
+    "release_date": "2013-10-17",
     "examine": "A brutally heavy sword.",
-    "url": "https://oldschool.runescape.wiki/w/Bandos_godsword",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bandos_godsword",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 132,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 8,
         "slot": "2h",
-        "attack_speed": 6,
         "requirements": {
             "attack": 75
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "two-handed_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

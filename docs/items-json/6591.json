@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 6592,
+    "linked_id_item": null,
+    "linked_id_noted": 6592,
+    "linked_id_placeholder": 14310,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 240,
     "lowalch": 96,
     "highalch": 144,
     "weight": 0.453,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "17 October 2005",
+    "release_date": "2005-10-17",
     "examine": "A vicious white dagger.",
-    "url": "https://oldschool.runescape.wiki/w/White_dagger",
+    "wiki_url": "https://oldschool.runescape.wiki/w/White_dagger",
     "equipment": {
         "attack_stab": 10,
         "attack_slash": 5,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 1,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 10
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stabbing_swords",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

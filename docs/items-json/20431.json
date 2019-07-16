@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 400,
     "lowalch": 160,
     "highalch": 240,
     "weight": 2.267,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "18 April 2005",
+    "release_date": "2005-04-18",
     "examine": "A magical staff of ancient origin...",
-    "url": "https://oldschool.runescape.wiki/w/Ancient_staff",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_staff",
     "equipment": {
         "attack_stab": 10,
         "attack_slash": -1,
@@ -36,10 +39,50 @@
         "magic_damage": 0,
         "prayer": -1,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "magic": 50,
             "attack": 50
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "staves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "focus",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

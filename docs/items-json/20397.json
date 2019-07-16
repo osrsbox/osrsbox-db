@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
     "weight": 3.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "04 August 2016",
+    "release_date": "2016-08-04",
     "examine": "A large makeshift spear.",
-    "url": "https://oldschool.runescape.wiki/w/Spear_(Last_Man_Standing)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Spear_(Last_Man_Standing)",
     "equipment": {
         "attack_stab": 22,
         "attack_slash": 18,
@@ -36,7 +39,33 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "halberds",
+        "stances": [
+            {
+                "combat_style": "jab",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "fend",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

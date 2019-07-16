@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 1431,
+    "linked_id_item": null,
+    "linked_id_noted": 1431,
+    "linked_id_placeholder": 14673,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1440,
     "lowalch": 576,
     "highalch": 864,
     "weight": 2.041,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "04 January 2001",
+    "release_date": "2001-01-04",
     "examine": "A spiky mace.",
-    "url": "https://oldschool.runescape.wiki/w/Adamant_mace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_mace",
     "equipment": {
         "attack_stab": 13,
         "attack_slash": -2,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 3,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 30
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "spiked_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

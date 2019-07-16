@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 20138,
+    "linked_id_item": null,
+    "linked_id_noted": 20138,
+    "linked_id_placeholder": 20139,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": false,
     "cost": 80000,
     "lowalch": 32000,
     "highalch": 48000,
     "weight": 1.8,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "06 July 2016",
+    "release_date": "2016-07-06",
     "examine": "A dark power is woven into this robe bottom.",
-    "url": "https://oldschool.runescape.wiki/w/Robe_bottom_of_darkness",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Robe_bottom_of_darkness",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,7 +39,10 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "legs",
-        "attack_speed": null,
-        "requirements": null
-    }
+        "requirements": {
+            "magic": 40,
+            "defence": 20
+        }
+    },
+    "weapon": null
 }

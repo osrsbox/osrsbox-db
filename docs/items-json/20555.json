@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 200,
     "lowalch": 80,
     "highalch": 120,
     "weight": 3.628,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "examine": "A two handed sword.",
-    "url": "https://oldschool.runescape.wiki/w/Rune_2h_sword",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_2h_sword",
     "equipment": {
         "attack_stab": -4,
         "attack_slash": 69,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "attack": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "two-handed_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

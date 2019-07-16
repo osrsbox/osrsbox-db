@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 1230,
+    "linked_id_item": null,
+    "linked_id_noted": 1230,
+    "linked_id_placeholder": 14647,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 8000,
     "lowalch": 3200,
     "highalch": 4800,
     "weight": 0.453,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "examine": "The blade is covered with a nasty poison.",
-    "url": "https://oldschool.runescape.wiki/w/Rune_dagger",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_dagger",
     "equipment": {
         "attack_stab": 25,
         "attack_slash": 12,
@@ -36,9 +39,42 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "attack": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stabbing_swords",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

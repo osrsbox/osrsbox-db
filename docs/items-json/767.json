@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 768,
+    "linked_id_item": null,
+    "linked_id_noted": 768,
+    "linked_id_placeholder": 17871,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 4,
     "lowalch": 1,
     "highalch": 2,
     "weight": 3.628,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "04 January 2001",
+    "release_date": "2001-01-04",
     "examine": "Former property of the Phoenix Gang.",
-    "url": "https://oldschool.runescape.wiki/w/Phoenix_crossbow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Phoenix_crossbow",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 6,
         "requirements": {
             "ranged": 1
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "crossbows",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

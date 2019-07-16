@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 11906,
+    "linked_id_item": null,
+    "linked_id_noted": 11906,
+    "linked_id_placeholder": 14013,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 69000,
     "lowalch": 27600,
     "highalch": 41400,
     "weight": 1.0,
     "buy_limit": 8,
     "quest_item": false,
-    "release_date": "30 January 2014",
+    "release_date": "2014-01-30",
     "examine": "A weapon from the deep.",
-    "url": "https://oldschool.runescape.wiki/w/Trident_of_the_seas",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Trident_of_the_seas",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 4,
         "requirements": {
             "magic": 75
         }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "trident-class_weapons",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

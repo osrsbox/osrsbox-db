@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 16372,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 230000,
     "lowalch": 92000,
     "highalch": 138000,
     "weight": 30.0,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "06 March 2007",
+    "release_date": "2007-03-06",
     "examine": "This is likely to put my back out...",
-    "url": "https://oldschool.runescape.wiki/w/Barrelchest_anchor",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Barrelchest_anchor",
     "equipment": {
         "attack_stab": -2,
         "attack_slash": 10,
@@ -36,10 +39,43 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 6,
         "requirements": {
             "attack": 60,
             "strength": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "spiked_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "spike",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

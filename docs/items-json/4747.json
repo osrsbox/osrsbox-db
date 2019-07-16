@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 4748,
+    "linked_id_item": null,
+    "linked_id_noted": 4748,
+    "linked_id_placeholder": 15701,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 160000,
     "lowalch": 64000,
     "highalch": 96000,
     "weight": 3.628,
     "buy_limit": 15,
     "quest_item": false,
-    "release_date": "09 May 2005",
+    "release_date": "2005-05-09",
     "examine": "Torag the Corrupted's twin hammers.",
-    "url": "https://oldschool.runescape.wiki/w/Torag%27s_hammers",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torag%27s_hammers",
     "equipment": {
         "attack_stab": -4,
         "attack_slash": -4,
@@ -36,10 +39,36 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": {
             "attack": 70,
             "strength": 70
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

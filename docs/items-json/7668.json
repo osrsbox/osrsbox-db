@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 7669,
+    "linked_id_item": null,
+    "linked_id_noted": 7669,
+    "linked_id_placeholder": 17128,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 3000,
     "lowalch": 1200,
     "highalch": 1800,
     "weight": 1.814,
     "buy_limit": 8,
     "quest_item": true,
-    "release_date": "22 March 2006",
+    "release_date": "2006-03-22",
     "examine": "A specially crafted hammer with strange markings on it.",
-    "url": "https://oldschool.runescape.wiki/w/Gadderhammer",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Gadderhammer",
     "equipment": {
         "attack_stab": -4,
         "attack_slash": -4,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 5,
         "requirements": {
             "attack": 30
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

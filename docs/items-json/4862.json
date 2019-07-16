@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 85000,
     "lowalch": 34000,
     "highalch": 51000,
     "weight": 2.267,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": "09 May 2005",
+    "release_date": "2005-05-09",
     "examine": "Ahrim the Blighted's quarterstaff.",
-    "url": "https://oldschool.runescape.wiki/w/Ahrim%27s_staff",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ahrim%27s_staff",
     "equipment": {
         "attack_stab": 12,
         "attack_slash": -1,
@@ -36,10 +39,50 @@
         "magic_damage": 5,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 6,
         "requirements": {
             "magic": 70,
             "attack": 70
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "staves",
+        "stances": [
+            {
+                "combat_style": "bash",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "focus",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell",
+                "attack_type": "spellcasting",
+                "attack_style": "magic",
+                "experience": "magic",
+                "boosts": null
+            },
+            {
+                "combat_style": "spell (defensive)",
+                "attack_type": "defensive casting",
+                "attack_style": "magic",
+                "experience": "magic and defence",
+                "boosts": null
+            }
+        ]
     }
 }

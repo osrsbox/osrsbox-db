@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 20728,
+    "linked_id_item": null,
+    "linked_id_noted": 20728,
+    "linked_id_placeholder": 20729,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 96000,
     "lowalch": 38400,
     "highalch": 57600,
     "weight": 2.7,
     "buy_limit": 70,
     "quest_item": false,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "examine": "A razor-sharp battleaxe.",
-    "url": "https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe",
     "equipment": {
         "attack_stab": -2,
         "attack_slash": 72,
@@ -36,10 +39,43 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": {
             "attack": 65,
             "slayer": 55
         }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "axes",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "hack",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

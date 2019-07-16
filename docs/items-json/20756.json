@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": true,
-    "linked_id": 20757,
+    "linked_id_item": null,
+    "linked_id_noted": 20757,
+    "linked_id_placeholder": 20758,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 60000,
     "lowalch": 24000,
     "highalch": 36000,
     "weight": 3.6,
     "buy_limit": 125,
     "quest_item": false,
-    "release_date": "06 October 2016",
+    "release_date": "2016-10-06",
     "examine": "A brutal weapon popular among giants.",
-    "url": "https://oldschool.runescape.wiki/w/Hill_giant_club",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Hill_giant_club",
     "equipment": {
         "attack_stab": -4,
         "attack_slash": 50,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 7,
         "requirements": {
             "attack": 40
         }
+    },
+    "weapon": {
+        "attack_speed": 7,
+        "weapon_type": "blunt_weapons",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }

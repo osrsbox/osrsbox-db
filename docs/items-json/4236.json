@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 14562,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 160,
     "lowalch": 64,
     "highalch": 96,
     "weight": 2.267,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "15 February 2005",
+    "release_date": "2005-02-15",
     "examine": "This bow has been signed by Robin, Master Bowman.",
-    "url": "https://oldschool.runescape.wiki/w/Signed_oak_bow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Signed_oak_bow",
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -36,9 +39,35 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "2h",
-        "attack_speed": 6,
         "requirements": {
             "ranged": 5
         }
+    },
+    "weapon": {
+        "attack_speed": 6,
+        "weapon_type": "bows",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
     }
 }

@@ -7,19 +7,22 @@
     "stackable": false,
     "noted": false,
     "noteable": false,
-    "linked_id": null,
+    "linked_id_item": null,
+    "linked_id_noted": null,
+    "linked_id_placeholder": 16900,
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 50,
     "lowalch": 20,
     "highalch": 30,
     "weight": 1.814,
     "buy_limit": null,
     "quest_item": true,
-    "release_date": "04 January 2001",
+    "release_date": "2001-01-04",
     "examine": "The magical sword 'Silverlight'.",
-    "url": "https://oldschool.runescape.wiki/w/Silverlight",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Silverlight",
     "equipment": {
         "attack_stab": 9,
         "attack_slash": 14,
@@ -36,7 +39,40 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "weapon",
-        "attack_speed": 5,
         "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "slashing_swords",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
     }
 }
