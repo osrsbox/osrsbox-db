@@ -28,7 +28,13 @@
       "noteable": {
         "type": "boolean"
       },
-      "linked_id": {
+      "linked_id_item": {
+        "type": ["integer", "null"]
+      },
+      "linked_id_noted": {
+        "type": ["integer", "null"]
+      },
+      "linked_id_placeholder": {
         "type": ["integer", "null"]
       },
       "placeholder": {
@@ -176,7 +182,9 @@
       "stackable",
       "noted",
       "noteable",
-      "linked_id",
+      "linked_id_item",
+      "linked_id_noted",
+      "linked_id_placeholder",
       "placeholder",
       "equipable",
       "equipable_by_player",

@@ -67,7 +67,9 @@ class BuildItem:
             "stackable",
             "noted",
             "noteable",
-            "linked_id",
+            "linked_id_item",
+            "linked_id_noted",
+            "linked_id_placeholder",
             "placeholder",
             "equipable",
             "equipable_by_player",
@@ -235,7 +237,9 @@ class BuildItem:
         self.item_dict["stackable"] = self.item_json["stackable"]
         self.item_dict["noted"] = self.item_json["noted"]
         self.item_dict["noteable"] = self.item_json["noteable"]
-        self.item_dict["linked_id"] = self.item_json["linked_id"]
+        self.item_dict["linked_id_item"] = self.item_json["linked_id_item"]
+        self.item_dict["linked_id_noted"] = self.item_json["linked_id_noted"]
+        self.item_dict["linked_id_placeholder"] = self.item_json["linked_id_placeholder"]
         self.item_dict["placeholder"] = self.item_json["placeholder"]
         self.item_dict["equipable"] = self.item_json["equipable"]
         self.item_dict["cost"] = self.item_json["cost"]

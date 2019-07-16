@@ -45,7 +45,9 @@ class ItemDefinition:
     stackable: bool
     noted: bool
     noteable: bool
-    linked_id: Optional[int]
+    linked_id_item: Optional[int]
+    linked_id_noted: Optional[int]
+    linked_id_placeholder: Optional[int]
     placeholder: bool
     equipable: bool
     equipable_by_player: bool

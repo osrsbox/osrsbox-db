@@ -60,32 +60,34 @@ Each item is represented by Python objects, specifically using Python dataclasse
 
 Every item in the osrsbox-db project has a selection of mandatory properties. These mandaotry properties are represented in the `ItemDefinition` class - while the `ItemEquipment` and `ItemWeapon` classes also have these mandatory properties. Therefore, every item in the database has these properties. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
 
-| Property            | Data type   | Description                                          | Required |
-| ------------------- | ----------- | ---------------------------------------------------- | -------- |
-| id                  | integer     | Unique OSRS item ID number                           | Yes      |
-| name                | string      | Name of the item                                     | Yes      |
-| members             | boolean     | If the item is a members-only item                   | Yes      |
-| tradeable           | boolean     | If the item is tradeable (between players and GE)    | No       |
-| tradeable_on_ge     | boolean     | If the item is tradeable (only on GE)                | Yes      |
-| stackable           | boolean     | If the item is stackable (in inventory)              | Yes      |
-| noted               | boolean     | If the item is noted                                 | Yes      |
-| noteable            | boolean     | If the item is noteable                              | Yes      |
-| linked_id           | integer     | The noted/unnoted equivalent of the item             | No       |
-| placeholder         | boolean     | If the item is a placeholder                         | Yes      |
-| equipable           | boolean     | If the item is equipable (based on menu entry)       | Yes      |
-| equipable_by_player | boolean     | If the item is equipable by a player                 | Yes      |
-| equipable_weapon    | boolean     | If the item is an equipable weapon                   | Yes      |
-| cost                | integer     | The store price of an item                           | Yes      |
-| lowalch             | integer     | The low alchemy value of the item (cost * .4)        | Yes      |
-| highalch            | integer     | The high alchemy value of the item (cost * .6)       | Yes      |
-| weight              | float       | The weight (in kilograms) of the item                | No       |
-| buy_limit           | integer     | The Grand Exchange buy limit of the item             | No       |
-| quest_item          | boolean     | If the item is associated with a quest               | No       |
-| release_date        | string      | Date the item was released in ISO8601 format         | No       |
-| examine             | string      | The examine text for the item                        | No       |
-| wiki_url            | string      | OSRS Wiki URL link                                   | No       |
-| equipment           | object      | Object of item equipment properties (if equipable)   | No       |
-| weapon              | object      | Object of item weapon properties (if a weapon)       | No       |
+| Property              | Data type   | Description                                             | Required |
+| --------------------- | ----------- | ------------------------------------------------------- | -------- |
+| id                    | integer     | Unique OSRS item ID number                              | Yes      |
+| name                  | string      | Name of the item                                        | Yes      |
+| members               | boolean     | If the item is a members-only item                      | Yes      |
+| tradeable             | boolean     | If the item is tradeable (between players and GE)       | No       |
+| tradeable_on_ge       | boolean     | If the item is tradeable (only on GE)                   | Yes      |
+| stackable             | boolean     | If the item is stackable (in inventory)                 | Yes      |
+| noted                 | boolean     | If the item is noted                                    | Yes      |
+| noteable              | boolean     | If the item is noteable                                 | Yes      |
+| linked_id_item        | integer     | The linked ID of the actual item (if noted/placeholder) | No       |
+| linked_id_noted       | integer     | The linked ID of an item in noted form                  | No       |
+| linked_id_placeholder | integer     | The linked ID of an item in placeholder form            | No       |
+| placeholder           | boolean     | If the item is a placeholder                            | Yes      |
+| equipable             | boolean     | If the item is equipable (based on menu entry)          | Yes      |
+| equipable_by_player   | boolean     | If the item is equipable by a player                    | Yes      |
+| equipable_weapon      | boolean     | If the item is an equipable weapon                      | Yes      |
+| cost                  | integer     | The store price of an item                              | Yes      |
+| lowalch               | integer     | The low alchemy value of the item (cost * .4)           | Yes      |
+| highalch              | integer     | The high alchemy value of the item (cost * .6)          | Yes      |
+| weight                | float       | The weight (in kilograms) of the item                   | No       |
+| buy_limit             | integer     | The Grand Exchange buy limit of the item                | No       |
+| quest_item            | boolean     | If the item is associated with a quest                  | No       |
+| release_date          | string      | Date the item was released in ISO8601 format            | No       |
+| examine               | string      | The examine text for the item                           | No       |
+| wiki_url              | string      | OSRS Wiki URL link                                      | No       |
+| equipment             | object      | Object of item equipment properties (if equipable)      | No       |
+| weapon                | object      | Object of item weapon properties (if a weapon)          | No       |
 
 Not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are actually equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not actually equipable by a player). Any item that is deemed equipable by a player is stored in a `ItemEquipment` object, which has additional properties concerning equipable items, and also has all the mandatory properties specified in the `ItemDefinition` class.  All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
 
@@ -118,6 +120,7 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.18`: Fixed stackable property. Added improved item ID linking.
 - `1.1.17`: Release for game update : 2019/07/11.
 - `1.1.16`: Converted all `release_date` values to ISO8601 format.
 - `1.1.15`: Release for game update : 2019/07/04.

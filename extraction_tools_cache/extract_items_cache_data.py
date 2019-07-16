@@ -46,33 +46,44 @@ def parse_item_definition(item_data: Dict, definitions: CacheDefinitionFiles, id
     item_data["tradeable_on_ge"] = item_definition["isTradeable"]
     item_data["members"] = item_definition["members"]
 
-    # Get linked item ID
-    if item_definition["notedID"] == -1:
-        item_data["linked_id"] = None
-    else:
-        item_data["linked_id"] = item_definition["notedID"]
+    # Determine any linked IDs (item, placeholder, noted)
+    item_data["linked_id_item"] = None
 
-    # Get noted ID of item
+    if item_definition["notedID"] is not -1 and item_definition["notedTemplate"] != 799:
+        item_data["linked_id_noted"] = item_definition["notedID"]
+    else:
+        item_data["linked_id_noted"] = None
+
+    if item_definition["placeholderId"] is not -1 and item_definition["placeholderTemplateId"] != 14401:
+        item_data["linked_id_placeholder"] = item_definition["placeholderId"]
+    else:
+        item_data["linked_id_placeholder"] = None
+
+    # Determine if the item is noted
     if item_definition["notedTemplate"] == 799:
         item_data["noted"] = True
     else:
         item_data["noted"] = False
 
-    # Determine item notability
+    # Determine if the item is noteable
     if item_definition["notedTemplate"] == 799:
         # Item is noted, so it must be notable
         item_data["noteable"] = True
-    elif item_data["linked_id"] is not None:
-        if definitions[str(item_data["linked_id"])]["notedTemplate"] == 799:
+    elif item_data["linked_id_noted"] is not None:
+        if definitions[str(item_data["linked_id_noted"])]["notedTemplate"] == 799:
             # If linked item ID is noted, this item must also be noteable
             item_data["noteable"] = True
     else:
         item_data["noteable"] = False
 
+    # Determine if the item is a placeholder
+    if item_definition["placeholderTemplateId"] == 14401:
+        item_data["placeholder"] = True
+    else:
+        item_data["placeholder"] = False
+
     # Determine item stackability
     if item_definition["stackable"] == 1:
-        item_data["stackable"] = True
-    elif item_definition["notedTemplate"] == 799:
         item_data["stackable"] = True
     else:
         item_data["stackable"] = False
@@ -91,12 +102,6 @@ def parse_item_definition(item_data: Dict, definitions: CacheDefinitionFiles, id
     item_data["cost"] = item_definition["cost"]
     item_data["lowalch"] = int(item_data["cost"] * 0.4)
     item_data["highalch"] = int(item_data["cost"] * 0.6)
-
-    # Determine if the item is a placeholder
-    if item_definition["placeholderTemplateId"] == 14401:
-        item_data["placeholder"] = True
-    else:
-        item_data["placeholder"] = False
 
     return item_data
 
@@ -153,6 +158,7 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
             # The linked ID must be queried for name, members, cost, lowalch, highalch
             linked_id_number = str(item_definition["notedID"])
             item_data = parse_item_definition_fix_noted_item(item_data, definitions, linked_id_number)
+            item_data["linked_id_item"] = int(linked_id_number)
 
         elif (item_definition["name"] == "null" and
                 item_definition["placeholderTemplateId"] == 14401):
@@ -160,6 +166,7 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
             linked_id_number = str(item_definition["placeholderId"])
             # This item needs a name set
             item_data["name"] = definitions[linked_id_number]["name"]
+            item_data["linked_id_item"] = int(linked_id_number)
 
         elif (item_definition["name"] == "null" and
                 item_definition["boughtTemplateId"] == 13189):
@@ -167,6 +174,7 @@ def extract_items_cache_data(compressed_json_file_path: Union[Path, str]):
             linked_id_number = str(item_definition["boughtId"])
             # This item needs a name set
             item_data["name"] = definitions[linked_id_number]["name"]
+            item_data["linked_id_item"] = int(linked_id_number)
 
         elif item_definition["name"] == "null":
             # Skip this item, it is not useful
