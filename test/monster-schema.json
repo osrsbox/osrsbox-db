@@ -1,0 +1,277 @@
+{
+    "$schema":"http://json-schema.org/draft-07/schema#",
+    "description":"A representation of an Old School RuneScape (OSRS) monster.",
+    "definitions":{
+      "drop":{
+        "type":"object",
+        "required":[
+          "id",
+          "name",
+          "quantity",
+          "rarity"
+        ],
+        "properties":{
+          "id":{
+            "description":"The ID number of the item drop.",
+            "type":"integer"
+          },
+          "name":{
+            "description":"The name of the item drop.",
+            "type":"integer"
+          },
+          "quantity":{
+            "description":"The quantity of the item drop (can be an integer or range, and have notes).",
+            "type":"string"
+          },
+          "rarity":{
+            "description":"The rarity of the item drop (in fraction format).",
+            "type":"string",
+            "pattern":"^[0-9]+\/[0-9]+"
+          },
+          "drop_requirements":{
+            "description":"If there are any requirements to getting the specific drop.",
+            "type":["string", "null"],
+            "enum":[
+              "slayer-task-only",
+              "konar-task-only",
+              "krystilia-task-only",
+              "wilderness-only",
+              "catacombs-only",
+              "quest-only"
+            ]
+          }
+        }
+      }
+    },
+    "title":"Monster Properties",
+    "type":"object",
+    "properties":{
+      "id":{
+        "description":"The ID number of the monster.",
+        "type":"integer"
+      },
+      "name":{
+        "description":"The name of the monster.",
+        "type":"string"
+      },
+      "members":{
+        "description":"If the monster is members only, or not.",
+        "type":"boolean"
+      },
+      "release_date":{
+        "description":"The release date of the monster in ISO8601 date format.",
+        "type":"string",
+        "format":"date"
+      },
+      "combat_level":{
+        "description":"The combat level of the monster.",
+        "type":"integer"
+      },
+      "hitpoints":{
+        "description":"The number of hitpoints a monster has.",
+        "type":"integer"
+      },
+      "max_hit":{
+        "description":"The maximum hit of the monster.",
+        "type":"integer"
+      },
+      "attack_type":{
+        "description":"The attack style (melee, magic, range) of the monster.",
+        "type":"string"
+      },
+      "attack_speed":{
+        "description":"The attack speed (in game ticks) of the monster.",
+        "type":"integer"
+      },
+      "aggressive":{
+        "description":"If the monster is aggressive, or not.",
+        "type":"boolean"
+      },
+      "poisonous":{
+        "description":"If the monster poisons, or not",
+        "type":"boolean"
+      },
+      "immune_poison":{
+        "description":"If the monster is immune to poison, or not",
+        "type":"boolean"
+      },
+      "immune_venon":{
+        "description":"If the monster is immune to venon, or not",
+        "type":"boolean"
+      },
+      "weakness":{
+        "description":"An array of monster weaknesses.",
+        "type":"array",
+        "items":{
+          "type":"string"
+        }
+      },
+      "slayer_monster":{
+        "description":"If the monster is a potential slayer task.",
+        "type":"boolean"
+      },
+      "slayer_level":{
+        "description":"The slayer level required to kill the monster (if a slayer monster.",
+        "type":"integer"
+      },
+      "slayer_xp":{
+        "description":"The slayer XP rewarded for a monster kill.",
+        "type":"integer"
+      },
+      "slayer_masters":{
+        "description":"The slayer XP rewarded for a monster kill.",
+        "type":"array",
+        "items":{
+          "type":"string",
+          "enum":[
+            "Turael",
+            "Krystilia",
+            "Mazchna",
+            "Vannaka",
+            "Chaeldar",
+            "Konar",
+            "Neive/Steve",
+            "Duradel"
+          ]
+        }
+      },
+      "examine":{
+        "description":"The examine text of the monster.",
+        "type":"string"
+      },
+      "wiki_url":{
+        "description":"The OSRS Wiki URL for the monster.",
+        "type":"string",
+        "format":"uri"
+      },
+      "attack_level":{
+        "description":"The attack level of the monster.",
+        "type":"integer"
+      },
+      "strength_level":{
+        "description":"The strength level of the monster.",
+        "type":"integer"
+      },
+      "defence_level":{
+        "description":"The defence level of the monster.",
+        "type":"integer"
+      },
+      "magic_level":{
+        "description":"The magic level of the monster.",
+        "type":"integer"
+      },
+      "ranged_level":{
+        "description":"The ranged level of the monster.",
+        "type":"integer"
+      },
+      "attack_stab":{
+        "description":"The attack stab bonus of the monster.",
+        "type":"integer"
+      },
+      "attack_slash":{
+        "description":"The attack slash bonus of the monster.",
+        "type":"integer"
+      },
+      "attack_crush":{
+        "description":"The attack crush bonus of the monster.",
+        "type":"integer"
+      },
+      "attack_magic":{
+        "description":"The attack magic bonus of the monster.",
+        "type":"integer"
+      },
+      "attack_ranged":{
+        "description":"The attack ranged bonus of the monster.",
+        "type":"integer"
+      },
+      "defence_stab":{
+        "description":"The defence stab bonus of the monster.",
+        "type":"integer"
+      },
+      "defence_slash":{
+        "description":"The defence slash bonus of the monster.",
+        "type":"integer"
+      },
+      "defence_crush":{
+        "description":"The defence crush bonus of the monster.",
+        "type":"integer"
+      },
+      "defence_magic":{
+        "description":"The defence magic bonus of the monster.",
+        "type":"integer"
+      },
+      "defence_ranged":{
+        "description":"The defence ranged bonus of the monster.",
+        "type":"integer"
+      },
+      "attack_accuracy":{
+        "description":"The attack accuracy bonus of the monster.",
+        "type":"integer"
+      },
+      "melee_strength":{
+        "description":"The melee strength bonus of the monster.",
+        "type":"integer"
+      },
+      "ranged_strength":{
+        "description":"The ranged strength bonus of the monster.",
+        "type":"integer"
+      },
+      "magic_damage":{
+        "description":"The magic damage bonus of the monster.",
+        "type":"integer"
+      },
+      "drops":{
+        "description":"An array of monster drop objects.",
+        "type":"array",
+        "items":{
+          "$ref":"#/definitions/drop"
+        }
+      },
+      "rare_drop_table":{
+        "description":"If the monster has a chance of rolling on the rare drop table.",
+        "type":"boolean"
+      }
+    },
+    "required":[
+        "id",
+        "name",
+        "members",
+        "release_date",
+        "combat_level",
+        "hitpoints",
+        "max_hit",
+        "attack_type",
+        "attack_speed",
+        "aggressive",
+        "poisonous",
+        "immune_poison",
+        "immune_venon",
+        "weakness",
+        "slayer_monster",
+        "slayer_level",
+        "slayer_xp",
+        "slayer_masters",
+        "examine",
+        "wiki_url",
+        "attack_level",
+        "strength_level",
+        "defence_level",
+        "magic_level",
+        "ranged_level",
+        "attack_stab",
+        "attack_slash",
+        "attack_crush",
+        "attack_magic",
+        "attack_ranged",
+        "defence_stab",
+        "defence_slash",
+        "defence_crush",
+        "defence_magic",
+        "defence_ranged",
+        "attack_accuracy",
+        "melee_strength",
+        "ranged_strength",
+        "magic_damage",
+        "drops"  
+    ]
+  }
