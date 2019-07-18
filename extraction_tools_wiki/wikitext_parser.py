@@ -47,6 +47,49 @@ from typing import Union, List, Dict
 import mwparserfromhell
 
 
+def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool = True) -> List:
+    """Parse raw wikitext and extract a specified template.
+
+    The OSRS Wiki stores structured information in a variety of different
+    infobox templates structured using wikitext. This function parses the
+    raw wikitext and extracts a wikitext template/s based on the template name
+    provided as a paramater. Infobox example names include:
+
+    `infobox item`: An infobox for item properties.
+    `infobox bonuses`: An infobox for equipable item bonuses.
+
+    A full list of all OSRS Wiki templates is available from:
+    https://oldschool.runescape.wiki/w/RuneScape:Templates
+
+    :param wikitext: The raw wikitext.
+    :param template_type: The type of infobox to extract.
+    :param multiple: whether or not to extract multiple templates.
+    :return: A list of mwpaserfromhell templates.
+    """
+    templates = list()
+
+    try:
+        wikicode = mwparserfromhell.parse(wikitext)
+    except KeyError:
+        # The wiki_name was not found in the available dumped wikitext pages
+        # Return the empty list to indicate no templates were extracted
+        return templates
+
+    # Loop through templates in wikicode from wiki page...
+    templates = wikicode.filter_templates()
+    for template in templates:
+        template_name = template.name.strip()
+        template_name = template_name.lower()
+        if template_type in template_name:
+            templates.append(template)
+            if not multiple:
+                # Only find the first instance, so return now
+                return templates
+
+    # Return the list of extracted templates
+    return templates
+
+
 class WikitextTemplateParser:
     def __init__(self, wikitext):
         self.wikitext = wikitext  # the raw wikitext

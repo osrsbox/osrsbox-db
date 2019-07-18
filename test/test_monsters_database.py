@@ -35,8 +35,8 @@ def test_monsters_data(path_to_docs_dir: Path):
 
     :param path_to_docs_dir: The path to the `docs` folder.
     """
-    # Read in the monster-schema.json file
-    path_to_schema = Path("test/monster-schema.json")
+    # Read in the monster_schema.json file
+    path_to_schema = Path("test/monster_schema.json")
     with open(path_to_schema, 'r') as f:
         schema = json.loads(f.read())
 
