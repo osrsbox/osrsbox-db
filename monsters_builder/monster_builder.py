@@ -26,9 +26,11 @@ from pathlib import Path
 import mwparserfromhell
 
 import config
-from osrsbox.monsters_api.monster_definition import MonsterDefinition
 from monsters_builder import infobox_cleaner
-
+from osrsbox.monsters_api.monster_definition import MonsterDefinition
+from osrsbox.monsters_api.monster_drop import MonsterDrop
+from extraction_tools_wiki.wikitext_parser import WikitextTemplateParser
+from extraction_tools_wiki.wikitext_parser import WikitextTemplatesParser
 
 class BuildMonster:
     def __init__(self, monster_id, data):
@@ -45,6 +47,9 @@ class BuildMonster:
 
         # For this monster, create dictionary for property storage
         self.monster_dict = dict()
+
+        # For this monster, create a empty list for drops
+        self.drops = list()
 
         # Setup logging
         logging.basicConfig(filename="builder.log",
@@ -72,6 +77,9 @@ class BuildMonster:
         self.parse_monster_infobox_properties()
         self.parse_monster_infobox_stats()
 
+        # STAGE THREE: PARSE THE DROPS
+        self.parse_monster_drops()
+
         # This should not be here, but simplifies testing and passing flake8 check
         self.logger.debug(json.dumps(self.monster_dict, indent=4))
 
@@ -96,8 +104,11 @@ class BuildMonster:
         for template in templates:
             template_name = template.name.strip()
             template_name = template_name.lower()
+            print(template_name)
             if "infobox monster" in template_name:
                 self.templates.append(template)
+            if "dropsline" in template_name:
+                print("MEOWMEOWMEOW")
 
         # If no templates were found, return false
         if not self.templates:
@@ -246,30 +257,64 @@ class BuildMonster:
 
     def parse_monster_infobox_stats(self) -> bool:
         """Parse the wiki text template and extract item bonus values from it."""
-        self.monster_dict["attack_level"] = self.clean_stats_value(self.monster_template, "att")
-        self.monster_dict["strength_level"] = self.clean_stats_value(self.monster_template, "str")
-        self.monster_dict["defence_level"] = self.clean_stats_value(self.monster_template, "def")
-        self.monster_dict["magic_level"] = self.clean_stats_value(self.monster_template, "mage")
-        self.monster_dict["ranged_level"] = self.clean_stats_value(self.monster_template, "range")
+        self.monster_dict["attack_level"] = self.clean_stats_value("att")
+        self.monster_dict["strength_level"] = self.clean_stats_value("str")
+        self.monster_dict["defence_level"] = self.clean_stats_value("def")
+        self.monster_dict["magic_level"] = self.clean_stats_value("mage")
+        self.monster_dict["ranged_level"] = self.clean_stats_value("range")
 
-        self.monster_dict["attack_stab"] = self.clean_stats_value(self.monster_template, "astab")
-        self.monster_dict["attack_slash"] = self.clean_stats_value(self.monster_template, "aslash")
-        self.monster_dict["attack_crush"] = self.clean_stats_value(self.monster_template, "acrush")
-        self.monster_dict["attack_magic"] = self.clean_stats_value(self.monster_template, "amagic")
-        self.monster_dict["attack_ranged"] = self.clean_stats_value(self.monster_template, "arange")
+        self.monster_dict["attack_stab"] = self.clean_stats_value("astab")
+        self.monster_dict["attack_slash"] = self.clean_stats_value("aslash")
+        self.monster_dict["attack_crush"] = self.clean_stats_value("acrush")
+        self.monster_dict["attack_magic"] = self.clean_stats_value("amagic")
+        self.monster_dict["attack_ranged"] = self.clean_stats_value("arange")
 
-        self.monster_dict["defence_stab"] = self.clean_stats_value(self.monster_template, "dstab")
-        self.monster_dict["defence_slash"] = self.clean_stats_value(self.monster_template, "dslash")
-        self.monster_dict["defence_crush"] = self.clean_stats_value(self.monster_template, "dcrush")
-        self.monster_dict["defence_magic"] = self.clean_stats_value(self.monster_template, "dmagic")
-        self.monster_dict["defence_ranged"] = self.clean_stats_value(self.monster_template, "drange")
+        self.monster_dict["defence_stab"] = self.clean_stats_value("dstab")
+        self.monster_dict["defence_slash"] = self.clean_stats_value("dslash")
+        self.monster_dict["defence_crush"] = self.clean_stats_value("dcrush")
+        self.monster_dict["defence_magic"] = self.clean_stats_value("dmagic")
+        self.monster_dict["defence_ranged"] = self.clean_stats_value("drange")
 
-        self.monster_dict["attack_accuracy"] = self.clean_stats_value(self.monster_template, "attbns")
-        self.monster_dict["melee_strength"] = self.clean_stats_value(self.monster_template, "strbns")
-        self.monster_dict["ranged_strength"] = self.clean_stats_value(self.monster_template, "rngbns")
-        self.monster_dict["magic_damage"] = self.clean_stats_value(self.monster_template, "mbns")
+        self.monster_dict["attack_accuracy"] = self.clean_stats_value("attbns")
+        self.monster_dict["melee_strength"] = self.clean_stats_value("strbns")
+        self.monster_dict["ranged_strength"] = self.clean_stats_value("rngbns")
+        self.monster_dict["magic_damage"] = self.clean_stats_value("mbns")
 
         return True
+
+    def parse_monster_drops(self):
+        infobox_parser = WikitextTemplatesParser(self.wiki_text)
+        self.drops_templates = infobox_parser.extract_infoboxes("dropsline")
+
+        print(self.drops_templates)
+
+        for template in infobox_parser.templates:
+            print(template)
+
+        for template in infobox_parser.templates:
+            drop_dict = {
+                "id": None,
+                "name": None,
+                "quantity": None,
+                "rarity": None,
+                "drop_requirements": None
+            }
+            print(template)
+            name = str(template.get("Name").value)
+            quantity = str(template.get("Quantity").value)
+            rarity = str(template.get("Rarity").value)
+            # drop_requirements = template.get("Raritynotes").value
+            drop_dict = {
+                "id": None,
+                "name": name,
+                "quantity": quantity,
+                "rarity": rarity,
+                "drop_requirements": None
+            }
+            print(drop_dict)
+            self.drops.append(drop_dict)
+
+        self.monster_dict["drops"] = self.drops
 
     def clean_stats_value(self, prop: str):
         """Clean a item bonuses value extracted from a wiki template.

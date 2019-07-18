@@ -20,9 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import json
-from typing import Dict
+from typing import Dict, List, Optional
 from pathlib import Path
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
+
+from osrsbox.monsters_api.monster_drop import MonsterDrop
 
 
 @dataclass
@@ -35,23 +37,24 @@ class MonsterDefinition:
     """
     id: int = None
     name: str = None
-    wiki_name: str = None
     members: bool = None
     release_date: str = None
     combat_level: int = None
-    hit_points: int = None
+    hitpoints: int = None
     max_hit: int = None
     attack_type: str = None
     attack_speed: int = None
     aggressive: bool = None
     poisonous: bool = None
     immune_poison: bool = None
-    immune_venom: bool = None
-    weakness: str = None
+    immune_venon: bool = None
+    weakness: List = None
+    slayer_monster: bool = None
     slayer_level: int = None
     slayer_xp: int = None
+    slayer_masters: List = None
     examine: str = None
-    url: str = None
+    wiki_url: str = None
     attack_level: int = None
     strength_level: int = None
     defence_level: int = None
@@ -71,18 +74,24 @@ class MonsterDefinition:
     melee_strength: int = None
     ranged_strength: int = None
     magic_damage: int = None
+    drops: List[MonsterDrop] = None
+    rare_drop_table: bool = None
+
+    @classmethod
+    def from_json(cls, json_dict: Dict) -> List[MonsterDrop]:
+        """Convert the list under the 'drops' key into actual :class:`MonsterDrop`"""
+        if json_dict.get("drops"):
+            drops = json_dict.pop("drops")
+            json_dict["drops"] = list(**drops)
+
+        return cls(**json_dict)
 
     def construct_json(self) -> Dict:
         """Construct dictionary/JSON for exporting or printing.
 
         :return json_out: All class attributes stored in a dictionary.
         """
-        json_out: Dict = dict()
-
-        for prop in self.__dict__:
-            json_out[prop] = getattr(self, prop)
-
-        return json_out
+        return asdict(self)
 
     def export_json(self, pretty: bool, export_path: str):
         """Output Monster to JSON file.
