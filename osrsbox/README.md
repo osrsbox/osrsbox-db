@@ -120,6 +120,7 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.19`: Release for game update : 2019/07/18.
 - `1.1.18`: Fixed stackable property. Added improved item ID linking.
 - `1.1.17`: Release for game update : 2019/07/11.
 - `1.1.16`: Converted all `release_date` values to ISO8601 format.

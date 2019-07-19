@@ -19,11 +19,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
+import argparse
+
 from extraction_tools_wiki import extract_wiki_data
 
 
 if __name__ == '__main__':
-    last_extraction_date = "2019-07-03T00:00:00Z"
+    parser = argparse.ArgumentParser(description="Update OSRS Wiki data.")
+    parser.add_argument('timestamp',
+                        help='A timestamp to start data collection from')
+    args = parser.parse_args()
+
+    last_extraction_date = args.timestamp
     print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
     categories = ["Items", "Construction", "Furniture", "Pets"]
     extract_wiki_data.extract_wiki_data(categories, last_extraction_date)

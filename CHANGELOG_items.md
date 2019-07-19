@@ -1,3 +1,13 @@
+### 2019/07/18: Last Man Standing Beta Changes
+- Added items: 3
+    - 23652,Mage's book
+    - 23653,Ahrim's staff
+    - 23654,Occult necklace
+- Removed items: 0
+- Changed items: 2
+    - 23648,Dragon javelin,cost|lowalch|highalch
+    - 23649,Dragonstone bolts (e),name
+
 ### 2019/07/11: Last Man Standing Beta and Splashing Restrictions
 - Added items: 121
     - 23531,Shark
