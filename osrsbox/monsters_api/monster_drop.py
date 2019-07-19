@@ -27,7 +27,7 @@ class MonsterDrop:
     """This class defines the drops of an OSRS monster.
 
     The MonsterDrop class is the object that retains all drop properties related
-    to items dropped by a specific monster. This includes item properties (id, 
+    to items dropped by a specific monster. This includes item properties (id,
     name) and drop properties (quantity, rarity, and drop requirements).
     """
     id: int = None

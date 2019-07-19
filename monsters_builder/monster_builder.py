@@ -28,9 +28,9 @@ import mwparserfromhell
 import config
 from monsters_builder import infobox_cleaner
 from osrsbox.monsters_api.monster_definition import MonsterDefinition
-from osrsbox.monsters_api.monster_drop import MonsterDrop
+from extraction_tools_wiki import wikitext_parser
 from extraction_tools_wiki.wikitext_parser import WikitextTemplateParser
-from extraction_tools_wiki.wikitext_parser import WikitextTemplatesParser
+
 
 class BuildMonster:
     def __init__(self, monster_id, data):
@@ -68,6 +68,7 @@ class BuildMonster:
 
         # STAGE ONE: INSERT HARD CODES VARS
         self.monster_dict["id"] = self.monster_id
+        self.monster_dict["name"] = self.cache_name
         self.monster_dict["cache_name"] = self.cache_name
         self.monster_dict["wiki_name"] = self.wiki_name
 
@@ -107,8 +108,6 @@ class BuildMonster:
             print(template_name)
             if "infobox monster" in template_name:
                 self.templates.append(template)
-            if "dropsline" in template_name:
-                print("MEOWMEOWMEOW")
 
         # If no templates were found, return false
         if not self.templates:
@@ -283,15 +282,12 @@ class BuildMonster:
         return True
 
     def parse_monster_drops(self):
-        infobox_parser = WikitextTemplatesParser(self.wiki_text)
-        self.drops_templates = infobox_parser.extract_infoboxes("dropsline")
+        self.drops_templates = wikitext_parser.extract_wikitext_template(self.wiki_text, "dropsline")
 
-        print(self.drops_templates)
+        for template in self.drops_templates:
+            template_parser = WikitextTemplateParser(self.wiki_text)
+            template_parser.template = template
 
-        for template in infobox_parser.templates:
-            print(template)
-
-        for template in infobox_parser.templates:
             drop_dict = {
                 "id": None,
                 "name": None,
@@ -299,19 +295,19 @@ class BuildMonster:
                 "rarity": None,
                 "drop_requirements": None
             }
-            print(template)
-            name = str(template.get("Name").value)
-            quantity = str(template.get("Quantity").value)
-            rarity = str(template.get("Rarity").value)
-            # drop_requirements = template.get("Raritynotes").value
+
+            name = template_parser.extract_infobox_value("Name")
+            quantity = template_parser.extract_infobox_value("Quantity")
+            rarity = template_parser.extract_infobox_value("Rarity")
+            drop_requirements = template_parser.extract_infobox_value("Raritynotes")
             drop_dict = {
                 "id": None,
                 "name": name,
                 "quantity": quantity,
                 "rarity": rarity,
-                "drop_requirements": None
+                "drop_requirements": drop_requirements
             }
-            print(drop_dict)
+
             self.drops.append(drop_dict)
 
         self.monster_dict["drops"] = self.drops

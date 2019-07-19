@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import json
-from typing import Dict, List, Optional
+from typing import Dict, List
 from pathlib import Path
 from dataclasses import dataclass, asdict
 
@@ -82,7 +82,7 @@ class MonsterDefinition:
         """Convert the list under the 'drops' key into actual :class:`MonsterDrop`"""
         if json_dict.get("drops"):
             drops = json_dict.pop("drops")
-            json_dict["drops"] = list(**drops)
+            json_dict["drops"] = list(drops)
 
         return cls(**json_dict)
 
