@@ -4,25 +4,41 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-A module to ease parsing and extraction of data from an OSRS Wiki page that
-is in raw wikitext format. A simple summary is provided below:
+A module to ease parsing and extraction of data from a single OSRS Wiki page,
+or multiple wiki pages (e.g., an API data dump).
 
-# Initialize the WikitextTemplateParser object, only need to pass raw wikitext
-infobox_parser = WikitextTemplateParser(wikitext)
+This module has multiple helpers methods, as well as classes. A brief summary
+for each major task is provided below:
 
-# Try to extract an infobox template, will return a boolean of success/failure
-# You can pass:
-# infobox item, infobox bonuses, infobox pet, infobox npx etc.
-# The actual infobox template is stored in the object (infobox_parser.template)
-has_infobox = infobox_parser.extract_infobox("infobox item")
+1) extract_wikitext_template: A function to extract a template (usually an infobox)
+from raw wikitext. Example usage:
+    extracted_templates = extract_wikitext_template(wikitext, "infobox item")
+Returns a list of extracted templates, in mwparserfromhell format
 
-# Determine if the extracted infobox is versioned, returns boolean
-is_versioned = infobox_parser.determine_infobox_versions()
+2) WikitextIDParser: A class to parse in an OSRS Wiki data dump and extract the
+ID numbers from a user specified OSRS Wiki data dump. Example usage:
+    wiki_text_file_path = Path("extract_page_text_items.json")
+    template_names = ["infobox item", "infobox pet"]
+    wiki_data_ids = WikitextIDParser(wiki_text_file_path, template_names)
+Makes two accessible dictionaries:
+    wiki_data_ids.item_id_to_version_number
+    wiki_data_ids.item_id_to_wikitext
 
-# Extract the item IDs from an infobox, including version support
-# Returns a dictionary of item ID -> version number:
-# For example: {12647: '1', 12654: '2'}
-data = infobox_parser.extract_infobox_ids()
+3) WikitextTemplateParser: A class to ease processing of wikitext templates. You
+can have an already extracted mwparserfromhell template (most likely an infobox),
+or extract the template on the fly. Example usage to load:
+    infobox_parser = WikitextTemplateParser(wikitext)
+If you have an already extracted template, add it to the class:
+    infobox_parser.template = <some-template-object>
+Otherwise you can try to extract an infobox template, will return a boolean of
+success/failure. Make sure to pass a name (infobox item, infobox bonuses, infobox pet).
+Example usage:
+    has_infobox = infobox_parser.extract_infobox("infobox item")
+Determine if the extracted infobox is versioned, returns boolean:
+    is_versioned = infobox_parser.determine_infobox_versions()
+Extract the item IDs from an infobox, including version support. Returns a dictionary
+of item ID -> version number. For example: {12647: '1', 12654: '2'}
+    versioned_ids = infobox_parser.extract_infobox_ids()
 
 Copyright (c) 2019, PH01L
 
@@ -41,7 +57,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
+import json
 import logging
+from pathlib import Path
 from typing import Union, List, Dict
 
 import mwparserfromhell
@@ -63,7 +81,7 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
 
     :param wikitext: The raw wikitext.
     :param template_type: The type of infobox to extract.
-    :param multiple: whether or not to extract multiple templates.
+    :param multiple: whether or not to extract multiple templates, default is True.
     :return: A list of mwpaserfromhell templates.
     """
     templates = list()
@@ -76,8 +94,8 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
         return templates
 
     # Loop through templates in wikicode from wiki page...
-    templates = wikicode.filter_templates()
-    for template in templates:
+    filtered_templates = wikicode.filter_templates()
+    for template in filtered_templates:
         template_name = template.name.strip()
         template_name = template_name.lower()
         if template_type in template_name:
@@ -88,6 +106,44 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
 
     # Return the list of extracted templates
     return templates
+
+
+class WikitextIDParser:
+    def __init__(self, wikitext_file_path: Path, template_names: List):
+        self.wikitext_file_path = wikitext_file_path  # the raw wikitext dump
+        self.template_names = template_names
+        self.item_id_to_wikitext = dict()  # Maps ID to wikitext (instead of name)
+        self.item_id_to_version_number = dict()  # Maps ID to template version
+
+    def process_osrswiki_data_dump(self):
+        """Process a raw OSRS Wiki and map IDs.
+
+        The OSRS Wiki categorizes wiki pages using the page name. Sometimes
+        it is highly useful to extract the ID numbers on the OSRS Wiki page
+        dump and map the ID to the infobox/template version number and the
+        raw wikitext.
+        """
+        # Read in the wiki text data dump
+        with open(self.wikitext_file_path) as wikitext_file:
+            wikitext_dump = json.load(wikitext_file)
+
+        # Loop all items in the OSRS Wiki data dump
+        for item_name, wikitext in wikitext_dump.items():
+            if item_name.startswith("Category"):
+                # Skip category pages
+                continue
+
+            # Loop the list of proivided infobox template names
+            for template_name in self.template_names:
+                # Initialize the wikitext template parser
+                infobox_parser = WikitextTemplateParser(wikitext)
+                has_infobox = infobox_parser.extract_infobox(template_name)
+                if has_infobox:
+                    infobox_parser.determine_infobox_versions()
+                    versioned_ids = infobox_parser.extract_infobox_ids()
+                    for id, version_number in versioned_ids.items():
+                        self.item_id_to_version_number[id] = version_number
+                        self.item_id_to_wikitext[id] = wikitext
 
 
 class WikitextTemplateParser:
@@ -127,6 +183,10 @@ class WikitextTemplateParser:
         A full list of all OSRS Wiki templates is available from:
         https://oldschool.runescape.wiki/w/RuneScape:Templates
 
+        NOTE: This function will only extract the first occurance on the requested
+        template. If there are multiple templates, only the first is used. This is
+        usually fine, as there is only one infobox with a unique name per page.
+
         :param template_type: The type of infobox to extract.
         :return: A boolean representing sucessful processing.
         """
@@ -141,8 +201,8 @@ class WikitextTemplateParser:
 
         # Loop through templates in wikicode from wiki page
         # Then call Inforbox Item processing method
-        templates = wikicode.filter_templates()
-        for template in templates:
+        filtered_templates = wikicode.filter_templates()
+        for template in filtered_templates:
             template_name = template.name.strip()
             template_name = template_name.lower()
             if template_type in template_name:
