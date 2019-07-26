@@ -85,7 +85,8 @@ Every item in the osrsbox-db project has a selection of mandatory properties. Th
 | quest_item            | boolean     | If the item is associated with a quest                  | No       |
 | release_date          | string      | Date the item was released in ISO8601 format            | No       |
 | examine               | string      | The examine text for the item                           | No       |
-| wiki_url              | string      | OSRS Wiki URL link                                      | No       |
+| wiki_name             | string      | Name of the item using OSRS Wiki naming conventiond     | No       |
+| wiki_url              | string      | OSRS Wiki URL link including anchor link                | No       |
 | equipment             | object      | Object of item equipment properties (if equipable)      | No       |
 | weapon                | object      | Object of item weapon properties (if a weapon)          | No       |
 
@@ -120,6 +121,7 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.20`: Improved item data accuracy. Added wiki_name property and wiki_url anchor.
 - `1.1.19`: Release for game update : 2019/07/18.
 - `1.1.18`: Fixed stackable property. Added improved item ID linking.
 - `1.1.17`: Release for game update : 2019/07/11.
