@@ -26,37 +26,37 @@ from deepdiff import DeepDiff
 import mwparserfromhell
 
 from osrsbox.items_api.item_definition import ItemDefinition
-from items_builder import infobox_cleaner
+from extraction_tools_wiki import infobox_cleaner
+from extraction_tools_wiki.wikitext_parser import WikitextTemplateParser
+
+logger = logging.getLogger(__name__)
 
 
 class BuildItem:
-    def __init__(self, item_id, item_json, wiki_text, normalized_names, buy_limits, skill_requirements, current_db,
-                 weapon_types, weapon_stances):
-        # Input item ID number
+    def __init__(self, item_id, all_item_cache_data, all_wikitext_processed,
+                 all_wikitext_raw, all_db_items,
+                 buy_limits_data, skill_requirements_data,
+                 weapon_types_data, weapon_stances_data, invalid_items_data,
+                 export_item):
         self.item_id = item_id
-        # Input JSON file (from RuneLite ItemScraper plugin)
-        self.item_json = item_json
+        self.all_item_cache_data = all_item_cache_data  # Raw cache data for all items
+        self.all_wikitext_processed = all_wikitext_processed  # Processed wiki for all items
+        self.all_wikitext_raw = all_wikitext_raw  # Raw data dump from OSRS Wiki
+        self.all_db_items = all_db_items  # All current item database contents
+        self.buy_limits_data = buy_limits_data  # Dictionary of item buy limits
+        self.skill_requirements = skill_requirements_data  # Dictionary of item requirements
+        self.weapon_types_data = weapon_types_data  # Weapon type dictionary
+        self.weapon_stances_data = weapon_stances_data  # Weapon stances dictionary
+        self.invalid_items_data = invalid_items_data  # Dictionary of invalid items
+        self.export_item = export_item  # If the JSON should be exported/created
 
-        # Input data
-        self.wiki_text = wiki_text  # Dict of raw wiki text from OSRS Wiki
-        self.normalized_names = normalized_names  # Maps cache names to OSRS Wiki names
-        self.buy_limits = buy_limits  # Dictionary of item buy limits
-        self.skill_requirements = skill_requirements  # Dictionary of item requirements
-        self.current_db = current_db  # Dictionary dump of current database contents
-        self.weapon_types = weapon_types  # Weapon type dictionary
-        self.weapon_stances = weapon_stances  # Weapon stances dictionary
-
-        # For this item, create dictionary for property storage
+        # For this item instance, create dictionary for property storage
         self.item_dict = dict()
 
-        # Setup logging
-        logging.basicConfig(filename="builder.log",
-                            filemode='a',
-                            level=logging.DEBUG)
-        self.logger = logging.getLogger(__name__)
-
-        # If a page does not have a wiki page, it may be given a status number
-        self.status_code = None
+        # Set some important properties used for item building
+        self.wiki_page_name = None  # The page name the wikitext is from
+        self.infobox_version_number = None  # The version used on the wikitext page
+        self.status = None  # Used if the item is special (invalid, normalized etc.)
 
         self.properties = [
             "id",
@@ -82,6 +82,7 @@ class BuildItem:
             "quest_item",
             "release_date",
             "examine",
+            "wiki_name",
             "wiki_url"]
 
         self.equipment_properties = [
@@ -107,346 +108,315 @@ class BuildItem:
             "weapon_type",
             "stances"]
 
-    def populate(self):
-        """The primary entry and item object population function."""
-        # Start section in logger
-        self.logger.debug("============================================ START")
-        self.logger.debug(f"item_id: {self.item_id}")
+    def generate_item_object(self):
+        """Generate the `ItemDefinition` object from the item_dict dictiornary."""
+        self.item_definition = ItemDefinition(**self.item_dict)
 
-        # STAGE ONE: LOAD ITEM SCRAPER DATA
-        self.logger.debug("STAGE ONE: Loading item cache data data to object...")
+    def compare_new_vs_old_item(self):
+        """Compare the newly generated item to the existing item."""
+        self.compare_json_files(self.item_definition)
 
-        self.populate_from_scraper()
+    def export_item_to_json(self):
+        """Export item to JSON if requested."""
+        if self.export_item:
+            output_dir = os.path.join("..", "docs", "items-json")
+            self.item_definition.export_json(True, output_dir)
+        logging.debug(self.item_dict)
 
-        self.logger.debug(f'id: {self.item_dict["id"]}|name: {self.item_dict["name"]}')
-        # print(f'>>> id: {self.item_dict["id"]}\tname: {self.item_dict["name"]}')
+    def preprocessing(self):
+        """."""
+        # Set item ID variables
+        self.item_id_int = int(self.item_id)  # Item ID number as an integer
+        self.item_id_str = str(self.item_id)  # Item ID number as a string
 
-        # STAGE TWO: DETERMINE WIKI PAGE
-        self.logger.debug("STAGE TWO: Determining OSRS Wiki page...")
+        # Load item dictionary of cache data based on item ID
+        # This raw cache data is the baseline informaiton about the specific item
+        # and can be considered 100% correct
+        self.item_cache_data = self.all_item_cache_data[self.item_id_str]
 
-        has_wiki_page = self.determine_wiki_page()
+        # Set item name variable (directly from the cache dump)
+        self.item_name = self.item_cache_data["name"]
 
-        # # This commented code can be used to determine wiki page normalization
-        # # You must comment out the normalization lookup in determine_wiki_page
-        # # WARNING: Does not check equipable item infobox extraction errors!
-        # if not has_wiki_page:
-        #     if str(self.item_dict["id"]) in self.normalized_names:
-        #         normalized_name = self.normalized_names[str(self.item_dict["id"])][1]
-        #         if normalized_name == "" or not normalized_name:
-        #             normalized_name = self.item_dict["name"]
-        #         status = self.normalized_names[str(self.item_dict["id"])][2]
-        #         print(f"{self.item_dict["id"]}|{self.item_dict["name"]}|{normalized_name}|{status}")
-        #     else:
-        #         print(f"TODO:{self.item_dict["id"]}|{self.item_dict["name"]}|{self.item_dict["name"]}|X")
+        # Log and print item
+        logging.debug(f"======================= {self.item_id_str} {self.item_cache_data['name']}")
+        print(f"======================= {self.item_id_str} {self.item_cache_data['name']}")
+        logging.debug(f"preprocessing: using the following cache data:")
+        logging.debug(self.item_cache_data)
 
-        if not has_wiki_page:
-            # These will be items that cannot be processed and the program should exit
-            print(f">>> not has_wiki_page: {self.item_dict['id']}, {self.item_dict['name']}")
-            if self.item_dict["name"] == "" or self.item_dict["name"].lower() == "null":
-                self.item_dict["equipable_by_player"] = False
-                self.export()
-                return
+        # Get the linked ID item value, if available
+        self.linked_id_item_int = None
+        self.linked_id_item_str = None
+        if self.item_cache_data["linked_id_item"] is not None:
+            self.linked_id_item_int = int(self.item_cache_data["linked_id_item"])
+            self.linked_id_item_str = str(self.item_cache_data["linked_id_item"])
+        logging.debug(f"preprocessing: Linked item ID: {self.linked_id_item_str}")
 
-        # STAGE THREE: EXTRACT and PARSE INFOBOX
-        self.logger.debug("STAGE THREE: Extracting the infobox...")
-
-        # Extract the infobox for the item
-        has_infobox = self.extract_infobox()
-
-        # Handle the infobox extraction, depending on the item status code
-        if has_infobox:
-            self.logger.debug("INFOBOX: Success")
-            self.parse_primary_infobox()
-        elif self.status_code in [1, 2, 3, 4, 5]:
-            self.logger.debug("INFOBOX: Invalid item saved")
-            self.item_dict["wiki_url"] = None
-            self.item_dict["equipable_by_player"] = False
-            self.export()
-            return
-        elif self.status_code == 6:
-            self.parse_primary_infobox()
-            self.item_dict["equipable_by_player"] = False
-            self.export()
-            return
+        # Determine the ID number to extract
+        # Noted and placeholder items should use the linked_id_item property
+        # to fill in additional wiki data...
+        self.item_id_to_process_int = None
+        self.item_id_to_process_str = None
+        if self.item_cache_data["noted"] is True or self.item_cache_data["placeholder"] is True:
+            self.item_id_to_process_int = int(self.linked_id_item_int)
+            self.item_id_to_process_str = str(self.linked_id_item_str)
         else:
-            self.logger.critical("INFOBOX: Extraction error.")
-            if self.item_dict["name"] == "":
-                self.export()
-            quit()
+            self.item_id_to_process_int = int(self.item_id)
+            self.item_id_to_process_str = str(self.item_id)
+        logging.debug(f"preprocessing: ID to process: {self.item_id_to_process_str}")
 
-        # STAGE FOUR: PARSE INFOBOX FOR EQUIPABLE ITEMS
+        # Try to determine if the item is invalid
+        # This can include not being an actual item, has no wiki page etc.
+        self.is_invalid_item = False
+        try:
+            self.is_invalid_item = self.invalid_items_data[self.item_id_to_process_str]
+            self.is_invalid_item = True
+        except KeyError:
+            pass
 
-        if self.item_dict["equipable"] and has_wiki_page:
-            self.logger.debug("STAGE FIVE: Parsing the bonuses...")
+        # # Find the wiki page, all non-invalid items should have a wiki page
+        self.item_wikitext = None
+        self.wikitext_found_using = None
+        # Try to find the wiki data using direct ID number search
+        try:
+            self.item_wikitext = self.all_wikitext_processed[self.item_id_str]
+            self.wikitext_found_using = "id"
+        except KeyError:
+            # Try to find the wiki data using linked_id_item ID number search
+            try:
+                self.item_wikitext = self.all_wikitext_processed[self.linked_id_item_str]
+                self.wikitext_found_using = "linked_id"
+            except KeyError:
+                # Try to find the wiki data using direct name search
+                try:
+                    self.item_wikitext = self.all_wikitext_raw[self.item_name]
+                    self.wikitext_found_using = "name"
+                except KeyError:
+                    pass  # Nothing found, crap!
 
-            self.item_dict["equipment"] = dict()
-            # Continue processing... but only if the item is equipable
-            self.item_dict["equipable_by_player"] = True
-            has_infobox_bonuses = self.extract_bonuses()
-            if has_infobox_bonuses:
-                self.logger.debug("Item InfoBox Bonuses extracted successfully")
+        if not self.item_wikitext:
+            logging.error("ERROR: Could not find item_wikitext by id, linked_id_item or name...")
+
+        # Parse the infobox item
+        infobox_parser = WikitextTemplateParser(self.item_wikitext)
+
+        # Try extract infobox for item, or pet
+        has_infobox = infobox_parser.extract_infobox("infobox item")
+        if not has_infobox:
+            has_infobox = infobox_parser.extract_infobox("infobox pet")
+            if not has_infobox:
+                self.template = None
+                return
+                # LOG CRITICAL ERROR
+
+        self.is_versioned = infobox_parser.determine_infobox_versions()
+        logging.debug(f"preprocessing: Is the infobox versioned: {self.is_versioned}")
+        self.versioned_ids = infobox_parser.extract_infobox_ids()
+        logging.debug(f"preprocessing: Versioned IDs: {self.versioned_ids}")
+
+        # Set the infobox version number, default to empty string (no version number)
+        try:
+            if self.versioned_ids:
+                self.infobox_version_number = self.versioned_ids[self.item_id_to_process_int]
+        except KeyError:
+            if self.is_versioned:
+                self.infobox_version_number = "1"
             else:
-                self.logger.critical("Item InfoBox Bonuses extraction error.")
-                self.logger.critical("Status Code: %s" % self.status_code)
+                self.infobox_version_number = ""
+
+        # Set the template
+        self.template = infobox_parser.template
+
+    def populate_item(self):
+        # Start by populatng the item from the cache data
+        self.populate_from_cache_data()
+
+        # Process an invalid item
+        if self.is_invalid_item:
+            logging.warning("WARNING: Found and processing an invalid item...")
+            self.status = self.invalid_items_data[self.item_id_to_process_str]["status"]
+            self.normalized_name = self.invalid_items_data[self.item_id_to_process_str]["normalized_name"]
+
+            if self.status == "unequipable":
+                self.populate_item_properties_from_wiki_data()
                 self.item_dict["equipable_by_player"] = False
-                self.export()
-                # print(">>> ERROR: Could not determine equipable item bonuses...")
+                self.item_dict["equipable_weapon"] = False
                 return
-        else:
+
+            if self.status == "no_bonuses_available":
+                # Rings
+                self.populate_non_wiki_item()
+                self.item_dict["equipment"] = dict()
+                for equipment_property in self.equipment_properties:
+                    self.item_dict["equipment"][equipment_property] = 0
+                self.item_dict["equipment"]["slot"] = "ring"
+                self.item_dict["equipment"]["requirements"] = None
+                self.item_dict["equipable_by_player"] = True
+                self.item_dict["equipable_weapon"] = False
+                return
+
+            if self.status == "normalized":
+                self.item_wikitext = self.all_wikitext_raw[self.normalized_name]
+                self.wikitext_found_using = "normalized_name"
+                infobox_parser = WikitextTemplateParser(self.item_wikitext)
+                # has_infobox = infobox_parser.extract_infobox("infobox item")
+                infobox_parser.extract_infobox("infobox item")
+                self.template = infobox_parser.template
+                self.populate_item_properties_from_wiki_data()
+                self.item_dict["equipable_by_player"] = False
+                self.item_dict["equipable_weapon"] = False
+                return
+
+            if self.status == "unobtainable":
+                self.populate_non_wiki_item()
+                return
+
+            if self.status == "skill_guide_icon":
+                self.populate_non_wiki_item()
+                return
+
+            if self.status == "construction_icon":
+                self.populate_non_wiki_item()
+                return
+
+            if self.status == "unhandled":
+                self.populate_non_wiki_item()
+                return
+
+            if self.status == "new_item":
+                self.populate_non_wiki_item()
+                return
+
+        if not self.item_dict["equipable"]:
+            # Process a normal item
+            logging.debug("populate_item: Populating a normal item using wiki data...")
+            self.populate_item_properties_from_wiki_data()
             self.item_dict["equipable_by_player"] = False
-
-        # STAGE FIVE: COMPARE TO CURRENT DATABASE CONTENTS
-        self.logger.debug("STAGE FIVE: Compare object to existing database entry...")
-        self.export()
-
-    def export(self):
-        # Create ItemDefintion object
-        if "wiki_name" in self.item_dict:
-            del self.item_dict["wiki_name"]
-        if "store_price" in self.item_dict:
-            del self.item_dict["store_price"]
-        if "seller" in self.item_dict:
-            del self.item_dict["seller"]
-        if "equipable_weapon" not in self.item_dict:
             self.item_dict["equipable_weapon"] = False
+            return
 
+        if self.item_dict["equipable"]:
+            # Process an equipable item
+            logging.debug("populate_item: Populating an enquipable item using wiki data...")
+            self.populate_item_properties_from_wiki_data()
+            self.populate_equipable_properties_from_wiki_data()
+            return
+
+    def populate_non_wiki_item(self):
         for prop in self.properties:
             try:
                 self.item_dict[prop]
             except KeyError:
                 self.item_dict[prop] = None
 
-        if self.item_dict["wiki_url"] == "https://oldschool.runescape.wiki/w/None":
-            self.item_dict["wiki_url"] = None
+        self.item_dict["equipable_by_player"] = False
+        self.item_dict["equipable_weapon"] = False
 
-        self.item_definition = ItemDefinition(**self.item_dict)
-        self.compare_json_files(self.item_definition)
-        json_out = self.item_definition.construct_json()
-        # Actually output a JSON file, comment out for testing
-        output_dir = os.path.join("..", "docs", "items-json")
-        self.item_definition.export_json(True, output_dir)
-        self.logger.debug(json_out)
-        return
+    def populate_from_cache_data(self):
+        """Populate an item using raw cache data."""
+        logging.debug("populate_from_cache: Loading item cache data data to object...")
+        self.item_dict["id"] = self.item_cache_data["id"]
+        self.item_dict["name"] = self.item_cache_data["name"]
+        self.item_dict["members"] = self.item_cache_data["members"]
+        self.item_dict["tradeable_on_ge"] = self.item_cache_data["tradeable_on_ge"]
+        self.item_dict["stackable"] = self.item_cache_data["stackable"]
+        self.item_dict["noted"] = self.item_cache_data["noted"]
+        self.item_dict["noteable"] = self.item_cache_data["noteable"]
+        self.item_dict["linked_id_item"] = self.item_cache_data["linked_id_item"]
+        self.item_dict["linked_id_noted"] = self.item_cache_data["linked_id_noted"]
+        self.item_dict["linked_id_placeholder"] = self.item_cache_data["linked_id_placeholder"]
+        self.item_dict["placeholder"] = self.item_cache_data["placeholder"]
+        self.item_dict["equipable"] = self.item_cache_data["equipable"]
+        self.item_dict["cost"] = self.item_cache_data["cost"]
+        self.item_dict["lowalch"] = self.item_cache_data["lowalch"]
+        self.item_dict["highalch"] = self.item_cache_data["highalch"]
 
-    def populate_from_scraper(self):
-        """Populate the itemDefinition object from the item-scraper file content."""
-        self.item_dict["id"] = self.item_json["id"]
-        self.item_dict["name"] = self.item_json["name"]
-        self.item_dict["members"] = self.item_json["members"]
-        self.item_dict["tradeable_on_ge"] = self.item_json["tradeable_on_ge"]
-        self.item_dict["stackable"] = self.item_json["stackable"]
-        self.item_dict["noted"] = self.item_json["noted"]
-        self.item_dict["noteable"] = self.item_json["noteable"]
-        self.item_dict["linked_id_item"] = self.item_json["linked_id_item"]
-        self.item_dict["linked_id_noted"] = self.item_json["linked_id_noted"]
-        self.item_dict["linked_id_placeholder"] = self.item_json["linked_id_placeholder"]
-        self.item_dict["placeholder"] = self.item_json["placeholder"]
-        self.item_dict["equipable"] = self.item_json["equipable"]
-        self.item_dict["cost"] = self.item_json["cost"]
-        self.item_dict["lowalch"] = self.item_json["lowalch"]
-        self.item_dict["highalch"] = self.item_json["highalch"]
+    def populate_item_properties_from_wiki_data(self):
+        """Populate item data from a OSRS Wiki Infobox Item template."""
+        # Manually set OSRS Wiki name
+        if self.wikitext_found_using not in ["id", "linked_id"]:
+            wiki_page_name = self.item_name
+        elif self.wikitext_found_using == "normalized":
+            wiki_page_name = self.normalized_name
+        else:
+            wiki_page_name = self.item_wikitext[0]  # Fetch from list index 0
 
-    def determine_wiki_page(self):
-        """Determine the OSRS Wiki page/url/name using the item name."""
-        # Set the initial wiki_name property to the actual item name
-        # This may change depending on the item lookup success/failure
-        wiki_name = self.item_dict["name"]
+        wiki_versioned_name = None
+        wiki_name = None
 
-        # PHASE ONE: Check if the item name is in the OSRS Wiki item dump using normalized name
+        # Get the versioned, or non-versioned, name from the infobox
+        if self.infobox_version_number is not None:
+            key = "version" + str(self.infobox_version_number)
+            wiki_versioned_name = self.extract_infobox_value(self.template, key)
+        else:
+            wiki_versioned_name = self.extract_infobox_value(self.template, "version")
 
-        if str(self.item_dict["id"]) in self.normalized_names:
-            self.logger.debug(">>> ITEM FOUND IN NORMALIZED")
-            # Determine normalized wiki name using lookup
-            normalized_name = self.normalized_names[str(self.item_dict["id"])][1]
-            # Set wiki URL and name
-            wiki_url = normalized_name.replace(" ", "_")
-            wiki_url = wiki_url.replace("'", "%27")
-            wiki_url = wiki_url.replace("&", "%26")
-            wiki_url = wiki_url.replace("+", "%2B")
-            self.item_dict["wiki_url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
-            self.item_dict["wiki_name"] = normalized_name
-            # Set item status code
-            self.status_code = int(self.normalized_names[str(self.item_dict["id"])][2])
-            # Item name found in dump using normalization, return True
-            return True
+        # Set the wiki_name property
+        if wiki_versioned_name is not None:
+            if wiki_versioned_name.startswith("("):
+                wiki_name = wiki_page_name + " " + wiki_versioned_name
+            else:
+                wiki_name = wiki_page_name + " (" + wiki_versioned_name + ")"
+        else:
+            wiki_name = wiki_page_name
 
-        # PHASE TWO: Check if the item name is in the OSRS Wiki item dump (no normalization)
+        self.item_dict["wiki_name"] = wiki_name
 
-        if wiki_name in self.wiki_text:
-            self.logger.debug(">>> ITEM FOUND")
-            # Set wiki URL and name
-            wiki_url = self.item_dict["name"].replace(" ", "_")
-            wiki_url = wiki_url.replace("'", "%27")
-            wiki_url = wiki_url.replace("&", "%26")
-            wiki_url = wiki_url.replace("+", "%2B")
-            self.item_dict["wiki_url"] = f"https://oldschool.runescape.wiki/w/{wiki_url}"
-            self.item_dict["wiki_name"] = self.item_dict["name"]
-            # Set item status code, try/except as it may not be in list
-            try:
-                self.status_code = int(self.normalized_names[str(self.item_dict["name"])][2])
-            except KeyError:
-                self.status_code = 0  # Zero is no issue with item, direct lookup
-            # Item name found in dump without normalization, return True
-            return True
+        # Set the wiki_url property
+        if wiki_versioned_name is not None:
+            wiki_url = wiki_page_name + "#" + wiki_versioned_name
+        else:
+            wiki_url = wiki_page_name
 
-        # If we got this far, the wiki page was not found, return false
-        self.logger.debug(">>> ITEM NOT FOUND")
-        return False
-
-    def extract_infobox(self):
-        """Extract the primary properties and bonuses for the item."""
-        # Set templates
-        self.template_primary = None
-        self.template_bonuses = None
-
-        try:
-            wiki_text_entry = self.wiki_text[self.item_dict["wiki_name"]]
-            wikicode = mwparserfromhell.parse(wiki_text_entry)
-        except KeyError:
-            # The wiki_name was not found in the available dumped wikitext pages
-            # Return false to indicate no wikitext was extracted
-            self.logger.debug("extract_infobox: KeyError for self.wikitext")
-            return False
-
-        # Loop through templates in wikicode from wiki page
-        # Then call Inforbox Item processing method
-        templates = wikicode.filter_templates()
-        for template in templates:
-            template_name = template.name.strip()
-            template_name = template_name.lower()
-            if "infobox item" in template_name:
-                self.template_primary = template
-            if "infobox bonuses" in template_name:
-                self.template_bonuses = template
-            if "infobox construction" in template_name:
-                self.template_primary = template
-            if "infobox pet" in template_name:
-                self.template_primary = template
-
-        # If no template_primary was found, return false
-        if not self.template_primary:
-            self.logger.debug("extract_infobox: not self.template_primary")
-            return False
-
-        # If any equipable item, and no bonuses was found, return false
-        if self.item_dict["equipable"] and not self.template_bonuses:
-            self.logger.debug("extract_infobox: not self.template_bonuses")
-            return False
-
-        # If we got this far, return true
-        return True
-
-    def parse_primary_infobox(self):
-        """Parse an actual Infobox template."""
-        template = self.template_primary
-        # Set defaults for versioned infoboxes
-        is_versioned = False  # has multiple versions available
-        self.current_version = None  # The version that matches the item
-        version_count = 0  # the number of versions available
-
-        # STAGE ONE: Determine if we have a versioned infobox, and the version count
-
-        version_identifiers = ["version",
-                               "name",
-                               "itemname"]
-
-        for version_identifier in version_identifiers:
-            # Check if the infobox is versioned, and get a version count
-            if version_count == 0:
-                try:
-                    template.get(version_identifier + "1").value
-                    is_versioned = True
-                    # Now, try to determine how many versions are present
-                    i = 1
-                    while i <= 20:  # Guessing max version number is 20
-                        try:
-                            template.get(version_identifier + "1").value
-                            version_count += 1
-                        except ValueError:
-                            break
-                        i += 1
-                except ValueError:
-                    pass
-
-        # STAGE TWO: Match a versioned infobox to the item name
-
-        if is_versioned:
-            # Try determine
-            for version_identifier in version_identifiers:
-                try:
-                    template.get(version_identifier + "1").value
-                    i = 1
-                    while i <= version_count:
-                        versioned_name = version_identifier + str(i)
-                        if self.item_dict["name"] == template.get(versioned_name).value.strip():
-                            self.current_version = i
-                            break
-                        i += 1
-                except ValueError:
-                    pass
-
-            self.logger.debug("NOTE: versioned infobox: %s" % self.current_version)
-
-        if is_versioned and self.current_version is None:
-            self.current_version = 1
+        wiki_url = wiki_url.replace(" ", "_")
+        self.item_dict["wiki_url"] = "https://oldschool.runescape.wiki/w/" + wiki_url
 
         # WEIGHT: Determine the weight of an item ()
         weight = None
-        if self.current_version is not None:
-            key = "weight" + str(self.current_version)
-            weight = self.extract_infobox_value(template, key)
+        if self.infobox_version_number is not None:
+            key = "weight" + str(self.infobox_version_number)
+            weight = self.extract_infobox_value(self.template, key)
         if weight is None:
-            weight = self.extract_infobox_value(template, "weight")
+            weight = self.extract_infobox_value(self.template, "weight")
         if weight is not None:
             self.item_dict["weight"] = infobox_cleaner.clean_weight(weight, self.item_id)
+        else:
+            self.item_dict["weight"] = None
 
         # QUEST: Determine if item is associated with a quest ()
         quest = None
-        if self.current_version is not None:
-            key = "quest" + str(self.current_version)
-            quest = self.extract_infobox_value(template, key)
+        if self.infobox_version_number is not None:
+            key = "quest" + str(self.infobox_version_number)
+            quest = self.extract_infobox_value(self.template, key)
         if quest is None:
-            quest = self.extract_infobox_value(template, "quest")
+            quest = self.extract_infobox_value(self.template, "quest")
         if quest is not None:
             self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
+        else:
+            # Being here means the extraction for "quest" failed
+            key = "questrequired" + str(self.infobox_version_number)
+            quest = self.extract_infobox_value(self.template, key)
+            if quest is None:
+                quest = self.extract_infobox_value(self.template, "questrequired")
+            if quest is not None:
+                self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
 
         # Determine the release date of an item ()
         release_date = None
-        if self.current_version is not None:
-            key = "release" + str(self.current_version)
-            release_date = self.extract_infobox_value(template, key)
+        if self.infobox_version_number is not None:
+            key = "release" + str(self.infobox_version_number)
+            release_date = self.extract_infobox_value(self.template, key)
         if release_date is None:
-            release_date = self.extract_infobox_value(template, "release")
+            release_date = self.extract_infobox_value(self.template, "release")
         if release_date is not None:
             self.item_dict["release_date"] = infobox_cleaner.clean_release_date(release_date)
 
-        # Determine if item has a store price ()
-        store_price = None
-        if self.current_version is not None:
-            key = "store" + str(self.current_version)
-            store_price = self.extract_infobox_value(template, key)
-        if store_price is None:
-            store_price = self.extract_infobox_value(template, "store")
-        if store_price is not None:
-            self.item_dict["store_price"] = infobox_cleaner.clean_store_price(store_price)
-
-        # Determine if item has a store price ()
-        seller = None
-        if self.current_version is not None:
-            key = "seller" + str(self.current_version)
-            seller = self.extract_infobox_value(template, key)
-        if seller is None:
-            seller = self.extract_infobox_value(template, "seller")
-        if seller is not None:
-            self.item_dict["seller"] = infobox_cleaner.clean_seller(seller)
-
         # Determine the examine text of an item ()
         tradeable = None
-        if self.current_version is not None:
-            key = "tradeable" + str(self.current_version)
-            tradeable = self.extract_infobox_value(template, key)
+        if self.infobox_version_number is not None:
+            key = "tradeable" + str(self.infobox_version_number)
+            tradeable = self.extract_infobox_value(self.template, key)
         if tradeable is None:
-            tradeable = self.extract_infobox_value(template, "tradeable")
+            tradeable = self.extract_infobox_value(self.template, "tradeable")
         if tradeable is not None:
             self.item_dict["tradeable"] = infobox_cleaner.clean_tradeable(tradeable)
         else:
@@ -454,28 +424,30 @@ class BuildItem:
 
         # Determine the examine text of an item ()
         examine = None
-        if self.current_version is not None:
-            key = "examine" + str(self.current_version)
-            examine = self.extract_infobox_value(template, key)
+        if self.infobox_version_number is not None:
+            key = "examine" + str(self.infobox_version_number)
+            examine = self.extract_infobox_value(self.template, key)
         if examine is None:
-            examine = self.extract_infobox_value(template, "examine")
+            examine = self.extract_infobox_value(self.template, "examine")
         if examine is not None:
             self.item_dict["examine"] = infobox_cleaner.clean_examine(examine, self.item_dict["name"])
         else:
             # Being here means the extraction for "examine" failed
-            key = "itemexamine" + str(self.current_version)
-            examine = self.extract_infobox_value(template, key)
+            key = "itemexamine" + str(self.infobox_version_number)
+            examine = self.extract_infobox_value(self.template, key)
             if examine is None:
-                examine = self.extract_infobox_value(template, "itemexamine")
+                examine = self.extract_infobox_value(self.template, "itemexamine")
             if examine is not None:
                 self.item_dict["examine"] = infobox_cleaner.clean_examine(examine, self.item_dict["name"])
+            else:
+                self.item_dict["examine"] = None
 
         # Determine if item has a buy limit ()
         if not self.item_dict["tradeable"]:
             self.item_dict["buy_limit"] = None
         else:
             try:
-                self.item_dict["buy_limit"] = int(self.buy_limits[self.item_dict["name"]])
+                self.item_dict["buy_limit"] = int(self.buy_limits_data[self.item_dict["name"]])
                 if self.item_dict["noted"]:
                     self.item_dict["buy_limit"] = None
             except KeyError:
@@ -483,48 +455,22 @@ class BuildItem:
 
         return True
 
-    def extract_infobox_value(self, template: mwparserfromhell.nodes.template.Template, key: str) -> str:
-        """Helper method to extract a value from a template using a specified key.
-
-        This helper method is a simple solution to repeatedly try to fetch a specific
-        entry from a wiki text template (a mwparserfromhell template object).
-
-        :param template: A mediawiki wiki text template.
-        :param key: The key to query in the template.
-        :return value: The extracted template value based on supplied key.
-        """
-        value = None
-        try:
-            value = template.get(key).value
-            value = value.strip()
-            return value
-        except ValueError:
-            return value
-
-    def extract_bonuses(self) -> bool:
-        """Extract the infobox bonuses template from raw wikitext.
-
-        :return: If the infobox bonuses template was extracted successfully or not.
-        """
-        # Extract Infobox Bonuses from wikitext
-        try:
-            wikicode = mwparserfromhell.parse(self.wiki_text[self.item_dict["wiki_name"]])
-        except KeyError:
-            return False
-        templates = wikicode.filter_templates()
-        for template in templates:
-            if "infobox bonuses" in template.lower():
-                extracted_infobox = self.parse_bonuses(template)
-                if extracted_infobox:
-                    return True
-
-        return False
-
-    def parse_bonuses(self, template: mwparserfromhell.nodes.template.Template) -> bool:
+    def populate_equipable_properties_from_wiki_data(self) -> bool:
         """Parse the wiki text template and extract item bonus values from it.
 
         :param template: A mediawiki wiki text template.
         """
+        # Initialize empty equipment dictionary
+        self.item_dict["equipment"] = dict()
+        self.item_dict["equipable_by_player"] = True
+
+        # Extract the infobox bonuses template
+        infobox_parser = WikitextTemplateParser(self.item_wikitext)
+        has_infobox = infobox_parser.extract_infobox("infobox bonuses")
+        if not has_infobox:
+            has_infobox = infobox_parser.extract_infobox("infobox_bonuses")
+        template = infobox_parser.template
+
         self.item_dict["equipment"]["attack_stab"] = self.clean_bonuses_value(template, "astab")
         self.item_dict["equipment"]["attack_slash"] = self.clean_bonuses_value(template, "aslash")
         self.item_dict["equipment"]["attack_crush"] = self.clean_bonuses_value(template, "acrush")
@@ -547,7 +493,7 @@ class BuildItem:
             self.item_dict["equipment"]["slot"] = self.item_dict["equipment"]["slot"].lower()
         except ValueError:
             self.item_dict["equipment"]["slot"] = None
-            self.logger.critical("Could not determine equipable item slot")
+            logging.critical("Could not determine equipable item slot")
             quit()
 
         # Determine the skill requirements for the equipable item
@@ -572,7 +518,7 @@ class BuildItem:
                 self.item_dict["weapon"]["attack_speed"] = int(self.strip_infobox(template.get("aspeed").value))
             except ValueError:
                 self.item_dict["weapon"]["attack_speed"] = None
-                self.logger.critical("WEAPON: Could not determine weapon attack speed")
+                logging.critical("WEAPON: Could not determine weapon attack speed")
 
                 # Item IDs with no known attack speed, set to zero
                 if int(self.item_id) in [8871]:
@@ -581,29 +527,50 @@ class BuildItem:
                 elif int(self.item_id) in [10145, 10146, 10147, 10147, 10148, 10149]:
                     self.item_dict["weapon"]["attack_speed"] = 5
                 else:
-                    quit()
+                    pass
+                    # quit()
 
             # Try to set the weapon type of the weapon
             try:
-                weapon_type = self.weapon_types[str(self.item_dict["id"])]["weapon_type"]
+                weapon_type = self.weapon_types_data[str(self.item_dict["id"])]["weapon_type"]
                 self.item_dict["weapon"]["weapon_type"] = weapon_type
             except KeyError:
                 self.item_dict["weapon"]["weapon_type"] = None
-                self.logger.critical("WEAPON: Could not determine weapon type")
-                quit()
+                logging.critical("WEAPON: Could not determine weapon type")
+                # quit()
 
             # Try to set stances available for the weapon
             try:
-                self.item_dict["weapon"]["stances"] = self.weapon_stances[self.item_dict["weapon"]["weapon_type"]]
+                self.item_dict["weapon"]["stances"] = self.weapon_stances_data[self.item_dict["weapon"]["weapon_type"]]
             except KeyError:
                 self.item_dict["weapon"]["stances"] = None
-                self.logger.critical("WEAPON: Could not determine weapon stances")
-                quit()
+                logging.critical("WEAPON: Could not determine weapon stances")
+                # quit()
 
             # Finally, set the equipable_weapon property to true
             self.item_dict["equipable_weapon"] = True
+        else:
+            self.item_dict["equipable_weapon"] = False
 
         return True
+
+    def extract_infobox_value(self, template: mwparserfromhell.nodes.template.Template, key: str) -> str:
+        """Helper method to extract a value from a template using a specified key.
+
+        This helper method is a simple solution to repeatedly try to fetch a specific
+        entry from a wiki text template (a mwparserfromhell template object).
+
+        :param template: A mediawiki wiki text template.
+        :param key: The key to query in the template.
+        :return value: The extracted template value based on supplied key.
+        """
+        value = None
+        try:
+            value = template.get(key).value
+            value = value.strip()
+            return value
+        except ValueError:
+            return value
 
     def clean_bonuses_value(self, template: mwparserfromhell.nodes.template.Template, prop: str):
         """Clean a item bonuses value extracted from a wiki template.
@@ -615,8 +582,8 @@ class BuildItem:
         value = None
 
         # Try and get the versioned infobox value
-        if self.current_version is not None:
-            key = prop + str(self.current_version)
+        if self.infobox_version_number is not None:
+            key = prop + str(self.infobox_version_number)
             value = self.extract_infobox_value(template, key)
 
         # If unsuccessful, try and get the normal infoxbox value
@@ -664,7 +631,7 @@ class BuildItem:
 
         # Try get existing entry (KeyError means it doesn't exist - aka a new item)
         try:
-            existing_json = self.current_db[self.item_id]
+            existing_json = self.all_db_items[self.item_id]
         except KeyError:
             print(f">>> compare_json_files: NEW ITEM: {item_definition.id}")
             print(current_json)
@@ -674,7 +641,21 @@ class BuildItem:
             return changed
 
         ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
+        logging.debug(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}: {item_definition.name}, {item_definition.wiki_name}")
         print(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}: {item_definition.name}")
-        print(f"    {ddiff}")
+
+        try:
+            added_properties = ddiff["dictionary_item_added"]
+            print("   ", added_properties)
+        except KeyError:
+            pass
+
+        try:
+            changed_properties = ddiff["values_changed"]
+            for k, v in changed_properties.items():
+                print("   ", k, v["new_value"])
+        except KeyError:
+            pass
+
         changed = True
         return changed

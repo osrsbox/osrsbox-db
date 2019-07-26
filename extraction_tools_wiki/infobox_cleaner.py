@@ -21,13 +21,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import re
 import datetime
-from typing import List
 
 import dateparser
 
 
 def clean_weight(value: str, item_id: int) -> float:
-    """A helper method to convert the weight entry from a OSRS Wiki infobox to a float.
+    """Convert the weight entry from a OSRS Wiki infobox to a float.
 
     :param value: The extracted raw wiki text.
     :param item_id: The item ID number.
@@ -120,8 +119,8 @@ def clean_weight(value: str, item_id: int) -> float:
     return weight
 
 
-def clean_quest(value: str) -> List:
-    """A helper method to convert the quest entry from an OSRS Wiki infobox to a boolean.
+def clean_quest(value: str) -> bool:
+    """Convert the quest entry from an OSRS Wiki infobox to a boolean.
 
     :param value: The extracted raw wiki text.
     :return quest: A boolean to identify if an item is associated with a quest.
@@ -195,7 +194,7 @@ def clean_tradeable(value: str) -> bool:
 
 
 def clean_examine(value: str, name: str) -> str:
-    """A helper method to convert the examine text entry from an OSRS Wiki infobox.
+    """Convert the examine text entry from an OSRS Wiki infobox.
 
     :param value: The extracted raw wiki text.
     :param name: The name of the item being processed.
@@ -256,7 +255,7 @@ def clean_examine(value: str, name: str) -> str:
 
 
 def clean_store_price(value: str) -> str:
-    """"A helper method to convert the store price entry from an OSRS Wiki infobox.
+    """"Convert the store price entry from an OSRS Wiki infobox.
 
     :param value: The extracted raw wiki text.
     :return store_price: A cleaned store price property of an item.
@@ -301,35 +300,5 @@ def clean_seller(value: str) -> str:
 
     seller = seller.replace("{{l/c}}", "")
     seller = seller.replace("{{l/o}}", "")
-
-    # TODO: Still fixing this
-
-    # if seller == "" or seller.lower() == "no" or seller:
-    #     return None
-    #
-
-    # seller = seller.replace("{", "")
-    # seller = seller.replace("}", "")
-    # seller = seller.replace("[", "")
-    # seller = seller.replace("]", "")
-    #
-    # seller = seller.replace(" - Mystic Robes", "")
-    # seller = seller.replace("41,600", "")
-    #
-    # seller_list = list()
-    # if "!" in seller:
-    #     seller_list.append(seller.split("!")[0])
-    # elif " and " in seller:
-    #     seller_list = seller.split(" and ")
-    # elif " or " in seller:
-    #     seller_list = seller.split(" or ")
-    #
-    # seller_list_fin = list()
-    # if seller_list:
-    #     for seller_name in seller_list:
-    #         seller_name = seller_name.strip()
-    #         seller_list_fin.append(seller_name)
-    # else:
-    #     seller_list_fin.append(seller)
 
     return seller

@@ -21,80 +21,99 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import json
+import logging
 from pathlib import Path
 
 import config
 from items_builder import item_builder
 
+os.remove(Path(__file__).stem+".log")
+logging.basicConfig(filename=Path(__file__).stem+".log",
+                    level=logging.DEBUG)
+logging.info(">>> Starting invalid_items_parser.py...")
 
-if __name__ == "__main__":
-    # Delete old log file
-    if os.path.exists("builder.log"):
-        os.remove("builder.log")
 
-    # Load the raw output from OSRS cache
-    scraper_path = Path(config.DATA_PATH / "items-cache-data.json")
-    with open(scraper_path) as f:
-        cache_items = json.load(f)
-
+def main(export_item: bool = False):
     # Load the current database contents
-    items_complete_path = Path(config.DOCS_PATH / "items-complete.json")
-    with open(items_complete_path) as f:
-        current_db = json.load(f)
+    items_compltete_file_path = Path(config.DOCS_PATH / "items-complete.json")
+    with open(items_compltete_file_path) as f:
+        all_db_items = json.load(f)
 
-    # Load the wiki text file
+    # Load the item wikitext file
     wiki_text_file_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_items.json")
-    with open(wiki_text_file_path) as wiki_text_file:
-        wiki_text = json.load(wiki_text_file)
+    with open(wiki_text_file_path) as f:
+        all_wikitext_raw = json.load(f)
 
-    # Load all normalized names
-    normalized_names = dict()
-    with open("normalized_names.txt") as f:
-        for line in f:
-            line = line.strip()
-            if "#" in line or line.startswith("TODO"):
-                continue
-            line = line.split("|")
-            normalized_names[line[0]] = [line[1], line[2], line[3]]
+    # Load all wikitext, and map ID to version number and wikitext entry
+    # template_names = ["infobox item", "infobox pet"]
+    # wiki_text_data_ids = WikitextIDParser(wiki_text_file_path, template_names)
+    # wiki_text_data_ids.process_osrswiki_data_dump()
+
+    # Temp loading of item ID -> wikitext
+    processed_wikitextfile_path = Path(config.EXTRACTION_WIKI_PATH / "processed_wikitext_items.json")
+    with open(processed_wikitextfile_path) as f:
+        all_wikitext_processed = json.load(f)
+
+    # Load the invalid items file
+    invalid_items_file_path = Path(config.DATA_PATH / "invalid-items.json")
+    with open(invalid_items_file_path) as f:
+        invalid_items_data = json.load(f)
 
     # Load buy limit data
-    buy_limits_path = Path(config.DATA_PATH / "ge-limits-names.json")
-    with open(buy_limits_path) as f:
-        buy_limits = json.load(f)
+    buy_limits_file_path = Path(config.DATA_PATH / "ge-limits-names.json")
+    with open(buy_limits_file_path) as f:
+        buy_limits_data = json.load(f)
 
     # Load skill requirement data
-    skill_requirements_path = Path(config.DATA_PATH / "item-skill-requirements.json")
-    with open(skill_requirements_path) as f:
-        skill_requirements = json.load(f)
+    skill_requirements_file_path = Path(config.DATA_PATH / "item-skill-requirements.json")
+    with open(skill_requirements_file_path) as f:
+        skill_requirements_data = json.load(f)
 
     # Load weapon_type data
-    weapon_type_path = Path(config.DATA_PATH / "weapon-types.json")
-    with open(weapon_type_path) as f:
-        weapon_types = json.load(f)
+    weapon_type_file_path = Path(config.DATA_PATH / "weapon-types.json")
+    with open(weapon_type_file_path) as f:
+        weapon_types_data = json.load(f)
 
     # Load stances data
-    weapon_stance_path = Path(config.DATA_PATH / "weapon-stances.json")
-    with open(weapon_stance_path) as f:
-        weapon_stances = json.load(f)
+    weapon_stance_file_path = Path(config.DATA_PATH / "weapon-stances.json")
+    with open(weapon_stance_file_path) as f:
+        weapon_stances_data = json.load(f)
+
+    # Load the raw OSRS cache item data
+    # This is the final data load, and used as baseline data for database population
+    all_item_cache_data_path = Path(config.DATA_PATH / "items-cache-data.json")
+    with open(all_item_cache_data_path) as f:
+        all_item_cache_data = json.load(f)
 
     # Start processing every item!
-    for item_id in cache_items:
-        json_data = cache_items[item_id]
-
+    for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 23000:
+        # if int(item_id) < 22000:
         #     continue
 
-        # Initialize the BuildItem class
+        # Initialize the BuildItem class, used for all items
         builder = item_builder.BuildItem(item_id,
-                                         json_data,
-                                         wiki_text,
-                                         normalized_names,
-                                         buy_limits,
-                                         skill_requirements,
-                                         current_db,
-                                         weapon_types,
-                                         weapon_stances)
-        # Start the build item population function
-        builder.populate()
+                                         all_item_cache_data,
+                                         all_wikitext_processed,
+                                         all_wikitext_raw,
+                                         all_db_items,
+                                         buy_limits_data,
+                                         skill_requirements_data,
+                                         weapon_types_data,
+                                         weapon_stances_data,
+                                         invalid_items_data,
+                                         export_item)
+
+        builder.preprocessing()
+        builder.populate_item()
+        builder.generate_item_object()
+        builder.compare_new_vs_old_item()
+        builder.export_item_to_json()
+
+    # Done processing, rejoice!
     print("Done.")
+
+
+if __name__ == "__main__":
+    export_item = True
+    main(export_item)

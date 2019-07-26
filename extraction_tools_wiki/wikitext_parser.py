@@ -56,13 +56,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
 import logging
 from pathlib import Path
 from typing import Union, List, Dict
 
 import mwparserfromhell
+
+logger = logging.getLogger(__name__)
 
 
 def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool = True) -> List:
@@ -91,6 +92,7 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
     except KeyError:
         # The wiki_name was not found in the available dumped wikitext pages
         # Return the empty list to indicate no templates were extracted
+        logger.debug("extract_wikitext_template: Could not parse wikitext.")
         return templates
 
     # Loop through templates in wikicode from wiki page...
@@ -99,6 +101,7 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
         template_name = template.name.strip()
         template_name = template_name.lower()
         if template_type in template_name:
+            logger.debug("extract_wikitext_template: Found template...")
             templates.append(template)
             if not multiple:
                 # Only find the first instance, so return now
@@ -114,6 +117,7 @@ class WikitextIDParser:
         self.template_names = template_names
         self.item_id_to_wikitext = dict()  # Maps ID to wikitext (instead of name)
         self.item_id_to_version_number = dict()  # Maps ID to template version
+        self.item_id_to_wiki_name = dict()  # Maps ID to original wiki page name
 
     def process_osrswiki_data_dump(self):
         """Process a raw OSRS Wiki and map IDs.
@@ -128,22 +132,28 @@ class WikitextIDParser:
             wikitext_dump = json.load(wikitext_file)
 
         # Loop all items in the OSRS Wiki data dump
-        for item_name, wikitext in wikitext_dump.items():
-            if item_name.startswith("Category"):
-                # Skip category pages
-                continue
-
+        for name, wikitext in wikitext_dump.items():
+            logger.debug(f"process_osrswiki_data_dump: Processing: {name}")
             # Loop the list of proivided infobox template names
             for template_name in self.template_names:
                 # Initialize the wikitext template parser
+                logger.debug(f"process_osrswiki_data_dump: Template: {template_name}")
                 infobox_parser = WikitextTemplateParser(wikitext)
                 has_infobox = infobox_parser.extract_infobox(template_name)
                 if has_infobox:
+                    logger.debug("process_osrswiki_data_dump: Found infobox template...")
                     infobox_parser.determine_infobox_versions()
                     versioned_ids = infobox_parser.extract_infobox_ids()
+                    if not versioned_ids:
+                        logger.debug("process_osrswiki_data_dump: Could not find ID...")
+                        continue
                     for id, version_number in versioned_ids.items():
+                        logger.debug(f"process_osrswiki_data_dump: Adding ID: {id} {version_number}")
                         self.item_id_to_version_number[id] = version_number
                         self.item_id_to_wikitext[id] = wikitext
+                        self.item_id_to_wiki_name[id] = name
+                else:
+                    logger.debug("process_osrswiki_data_dump: Did NOT find infobox template...")
 
 
 class WikitextTemplateParser:
@@ -157,17 +167,6 @@ class WikitextTemplateParser:
                                     "version": 0,
                                     "name": 0,
                                     "itemid": 0}
-
-        # Remove log, if it exists
-        if os.path.exists("template_parser.log"):
-            os.remove("template_parser.log")
-
-        # Setup logging
-        logging.basicConfig(filename="template_parser.log",
-                            filemode='a',
-                            level=logging.DEBUG)
-        self.logger = logging.getLogger(__name__)
-        self.logger.debug("\n>>> Starting processing...")
 
     def extract_infobox(self, template_type: str) -> bool:
         """Parse raw wikitext and extract a specified infobox.
@@ -196,7 +195,7 @@ class WikitextTemplateParser:
             # The wiki_name was not found in the available dumped wikitext pages
             # Return false to indicate no wikitext was extracted
             # TODO: This should catch a different error
-            self.logger.debug("extract_infobox: KeyError for self.wikitext")
+            logger.debug("extract_infobox: KeyError for self.wikitext")
             return False
 
         # Loop through templates in wikicode from wiki page
@@ -212,12 +211,12 @@ class WikitextTemplateParser:
 
         # If no template_primary was found, return false
         if not self.template:
-            self.logger.debug("extract_infobox: Did not find a matching template.")
+            logger.debug("extract_infobox: Did not find a matching template.")
             return False
 
         # Print the raw wikitext template to the log
-        self.logger.debug("extract_infobox: Found the following template.")
-        self.logger.debug(f"\n{self.template}")
+        logger.debug("extract_infobox: Found the following template.")
+        logger.debug(f"\n{self.template}")
 
         # If we got this far, return true
         return True
@@ -232,10 +231,10 @@ class WikitextTemplateParser:
 
         :return: A boolean representing sucessful processing.
         """
-        self.logger.debug("determine_infobox_versions: Checking if the infobox is versioned")
+        logger.debug("determine_infobox_versions: Checking if the infobox is versioned")
         # Loop through the different version identifiers
         for version_identifier in self.version_identifiers:
-            self.logger.debug(f"determine_infobox_versions: Checking {version_identifier}")
+            logger.debug(f"determine_infobox_versions: Checking {version_identifier}")
             try:
                 self.template.get(version_identifier + "1").value
                 self.is_versioned = True
@@ -245,16 +244,16 @@ class WikitextTemplateParser:
 
         # If the infobox is not versioned, return False
         if not self.is_versioned:
-            self.logger.debug("determine_infobox_versions: Infobox is NOT versioned...")
+            logger.debug("determine_infobox_versions: Infobox is NOT versioned...")
             return False
         else:
-            self.logger.debug("determine_infobox_versions: Infobox is versioned...")
+            logger.debug("determine_infobox_versions: Infobox is versioned...")
 
         # The infobox is versioned... continue processing
         # Try to determine the version counts for each version identifier
-        self.logger.debug("determine_infobox_versions: Determine infobox version counts...")
+        logger.debug("determine_infobox_versions: Determine infobox version counts...")
         for version_identifier in self.version_identifiers:
-            self.logger.debug(f"determine_infobox_versions: Counting {version_identifier}")
+            logger.debug(f"determine_infobox_versions: Counting {version_identifier}")
             i = 1
             while i <= 50:
                 try:
@@ -265,8 +264,8 @@ class WikitextTemplateParser:
                 i += 1
 
         # Infobox versioning completed, log results
-        self.logger.debug("determine_infobox_versions: Infobox version results:")
-        self.logger.debug(f"    {self.version_identifiers}")
+        logger.debug("determine_infobox_versions: Infobox version results:")
+        logger.debug(f"    {self.version_identifiers}")
 
         # Processing finished
         return True
@@ -314,7 +313,13 @@ class WikitextTemplateParser:
                 value = value.strip()
                 return value
             except ValueError:
-                return value
+                version_key = "version" + version
+                try:
+                    value = self.template.get(version_key).value
+                    value = value.strip()
+                    return value
+                except ValueError:
+                    return value
 
     def split_infobox_id_string(self, id_string: str) -> List:
         """Helper method to split a comma-separated string of item IDs.
@@ -367,6 +372,8 @@ class WikitextTemplateParser:
             i = 1
             while i <= count:
                 id = self.extract_infobox_id(str(i))  # Pass string cast version number
+                if not id:
+                    return None
                 ids = self.split_infobox_id_string(id)
                 for id in ids:
                     id = self.try_int_cast(id)
@@ -375,10 +382,12 @@ class WikitextTemplateParser:
                 i += 1
         else:
             id = self.extract_infobox_id("")  # Pass empty string, not versioned
+            if not id:
+                return
             ids = self.split_infobox_id_string(id)
             for id in ids:
                 id = self.try_int_cast(id)
-                if id:
+                if id is not None:
                     item_id_to_version_number[id] = ""
 
         return item_id_to_version_number

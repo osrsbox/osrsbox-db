@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     last_extraction_date = args.timestamp
     print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
-    categories = ["Items", "Construction", "Furniture", "Pets"]
+    categories = ["Items", "Pets"]
     extract_wiki_data.extract_wiki_data(categories, last_extraction_date)
     print(f">>> WIKI DATA MONSTERS: Extracting page titles and wiki text...")
     categories = ["Monsters"]
