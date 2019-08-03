@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import logging
+import argparse
 from pathlib import Path
 
 import config
@@ -88,7 +89,7 @@ def main(export_item: bool = False):
     # Start processing every item!
     for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 22000:
+        # if int(item_id) < 23000:
         #     continue
 
         # Initialize the BuildItem class, used for all items
@@ -104,16 +105,32 @@ def main(export_item: bool = False):
                                          invalid_items_data,
                                          export_item)
 
-        builder.preprocessing()
-        builder.populate_item()
-        builder.generate_item_object()
-        builder.compare_new_vs_old_item()
-        builder.export_item_to_json()
+        status = builder.preprocessing()
+        if status:
+            builder.populate_item()
+            builder.generate_item_object()
+            builder.compare_new_vs_old_item()
+            builder.export_item_to_json()
+            builder.validate_item()
+        else:
+            builder.populate_from_cache_data()
+            builder.populate_non_wiki_item()
+            builder.generate_item_object()
+            builder.compare_new_vs_old_item()
+            builder.export_item_to_json()
+            builder.validate_item()
 
     # Done processing, rejoice!
     print("Done.")
 
 
 if __name__ == "__main__":
-    export_item = True
+    parser = argparse.ArgumentParser(description="Build item database.")
+    parser.add_argument('--export_item',
+                        default=False,
+                        required=False,
+                        help='A boolean of whether to export data.')
+    args = parser.parse_args()
+
+    export_item = args.export_item
     main(export_item)

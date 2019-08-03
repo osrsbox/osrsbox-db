@@ -20,11 +20,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
+import json
 import logging
+from pathlib import Path
 
-from deepdiff import DeepDiff
+import jsonschema
 import mwparserfromhell
+from deepdiff import DeepDiff
 
+import config
 from osrsbox.items_api.item_definition import ItemDefinition
 from extraction_tools_wiki import infobox_cleaner
 from extraction_tools_wiki.wikitext_parser import WikitextTemplateParser
@@ -40,7 +44,7 @@ class BuildItem:
                  export_item):
         self.item_id = item_id
         self.all_item_cache_data = all_item_cache_data  # Raw cache data for all items
-        self.all_wikitext_processed = all_wikitext_processed  # Processed wiki for all items
+        self.all_wikitext_processed = all_wikitext_processed  # Processed wikitext for all items
         self.all_wikitext_raw = all_wikitext_raw  # Raw data dump from OSRS Wiki
         self.all_db_items = all_db_items  # All current item database contents
         self.buy_limits_data = buy_limits_data  # Dictionary of item buy limits
@@ -58,6 +62,7 @@ class BuildItem:
         self.infobox_version_number = None  # The version used on the wikitext page
         self.status = None  # Used if the item is special (invalid, normalized etc.)
 
+        # All properties that are available for all items
         self.properties = [
             "id",
             "name",
@@ -85,6 +90,7 @@ class BuildItem:
             "wiki_name",
             "wiki_url"]
 
+        # Additional properties for all equipable items (weapons/armour)
         self.equipment_properties = [
             "attack_stab",
             "attack_slash",
@@ -103,6 +109,7 @@ class BuildItem:
             "slot",
             "requirements"]
 
+        # Additional properties for all equipable weapons
         self.weapon_properties = [
             "attack_speed",
             "weapon_type",
@@ -113,33 +120,41 @@ class BuildItem:
         self.item_definition = ItemDefinition(**self.item_dict)
 
     def compare_new_vs_old_item(self):
-        """Compare the newly generated item to the existing item."""
+        """Compare the newly generated item to the existing item in the database."""
         self.compare_json_files(self.item_definition)
 
     def export_item_to_json(self):
-        """Export item to JSON if requested."""
+        """Export item to JSON, if requested."""
         if self.export_item:
             output_dir = os.path.join("..", "docs", "items-json")
             self.item_definition.export_json(True, output_dir)
         logging.debug(self.item_dict)
 
     def preprocessing(self):
-        """."""
+        """Preprocess an item, and set important object variables.
+
+        This function preprocesses every item dumped from the OSRS cache. Various
+        properties are set to help further processing. Items are determined if
+        they are a linked item (noted/placeholder), or an actual item. The item
+        is checked if it is a valid item (has a wiki page, is an actual item etc.).
+        Finally, the wikitext (from the OSRS wiki) is found by looking up ID, linked
+        ID, name, and normalized name. The `Infobox Item` or `Infobox Pet` is then
+        extracted so that the wiki properties can be later processed and populated."""
         # Set item ID variables
         self.item_id_int = int(self.item_id)  # Item ID number as an integer
         self.item_id_str = str(self.item_id)  # Item ID number as a string
 
         # Load item dictionary of cache data based on item ID
         # This raw cache data is the baseline informaiton about the specific item
-        # and can be considered 100% correct
+        # and can be considered 100% correct and available for every item
         self.item_cache_data = self.all_item_cache_data[self.item_id_str]
 
         # Set item name variable (directly from the cache dump)
         self.item_name = self.item_cache_data["name"]
 
         # Log and print item
-        logging.debug(f"======================= {self.item_id_str} {self.item_cache_data['name']}")
-        print(f"======================= {self.item_id_str} {self.item_cache_data['name']}")
+        logging.debug(f"======================= {self.item_id_str} {self.item_name}")
+        # print(f"======================= {self.item_id_str} {self.item_name}")
         logging.debug(f"preprocessing: using the following cache data:")
         logging.debug(self.item_cache_data)
 
@@ -170,43 +185,57 @@ class BuildItem:
         try:
             self.is_invalid_item = self.invalid_items_data[self.item_id_to_process_str]
             self.is_invalid_item = True
+            self.status = self.invalid_items_data[self.item_id_to_process_str]["status"]
+            self.normalized_name = self.invalid_items_data[self.item_id_to_process_str]["normalized_name"]
         except KeyError:
-            pass
+            self.status = None
+            self.normalized_name = None
+        logging.debug(f"preprocessing: Invalid details: {self.is_invalid_item} {self.status} {self.normalized_name}")
 
-        # # Find the wiki page, all non-invalid items should have a wiki page
+        # Find the wiki page
+        # Set all variables to None (for invalid items)
         self.item_wikitext = None
         self.wikitext_found_using = None
-        # Try to find the wiki data using direct ID number search
-        try:
-            self.item_wikitext = self.all_wikitext_processed[self.item_id_str]
-            self.wikitext_found_using = "id"
-        except KeyError:
-            # Try to find the wiki data using linked_id_item ID number search
-            try:
-                self.item_wikitext = self.all_wikitext_processed[self.linked_id_item_str]
-                self.wikitext_found_using = "linked_id"
-            except KeyError:
-                # Try to find the wiki data using direct name search
-                try:
-                    self.item_wikitext = self.all_wikitext_raw[self.item_name]
-                    self.wikitext_found_using = "name"
-                except KeyError:
-                    pass  # Nothing found, crap!
+        self.has_infobox = False
 
-        if not self.item_wikitext:
-            logging.error("ERROR: Could not find item_wikitext by id, linked_id_item or name...")
+        # Try to find the wiki data using direct ID number search
+        if self.all_wikitext_processed.get(self.item_id_str, None):
+            self.item_wikitext = self.all_wikitext_processed.get(self.item_id_str, None)
+            self.wikitext_found_using = "id"
+
+        # Try to find the wiki data using linked_id_item ID number search
+        elif self.all_wikitext_processed.get(self.linked_id_item_str, None):
+            self.item_wikitext = self.all_wikitext_processed.get(self.linked_id_item_str, None)
+            self.wikitext_found_using = "linked_id"
+
+        # Try to find the wiki data using direct name search
+        elif self.all_wikitext_raw.get(self.item_name, None):
+            self.item_wikitext = self.all_wikitext_raw.get(self.item_name, None)
+            self.wikitext_found_using = "name"
+
+        # Try to find the wiki data using normalized_name search
+        elif self.all_wikitext_raw.get(self.normalized_name, None):
+            self.item_wikitext = self.all_wikitext_raw.get(self.normalized_name, None)
+            self.wikitext_found_using = "normalized_name"
+
+        logging.debug(f"preprocessing: self.item_wikitext found using: {self.wikitext_found_using}")
+
+        # If there is no wikitext, and the item is valid, raise a critical error
+        if not self.item_wikitext and not self.is_invalid_item:
+            logging.critical("CRITICAL: Could not find item_wikitext by id, linked_id_item or name...")
+            return False
 
         # Parse the infobox item
         infobox_parser = WikitextTemplateParser(self.item_wikitext)
 
-        # Try extract infobox for item, or pet
-        has_infobox = infobox_parser.extract_infobox("infobox item")
-        if not has_infobox:
-            has_infobox = infobox_parser.extract_infobox("infobox pet")
-            if not has_infobox:
+        # Try extract infobox for item, then pet
+        self.has_infobox = infobox_parser.extract_infobox("infobox item")
+        if not self.has_infobox:
+            self.has_infobox = infobox_parser.extract_infobox("infobox pet")
+            if not self.has_infobox:
                 self.template = None
-                return
-                # LOG CRITICAL ERROR
+                logging.critical("CRITICAL: Could not find template...")
+                return False
 
         self.is_versioned = infobox_parser.determine_infobox_versions()
         logging.debug(f"preprocessing: Is the infobox versioned: {self.is_versioned}")
@@ -222,28 +251,36 @@ class BuildItem:
                 self.infobox_version_number = "1"
             else:
                 self.infobox_version_number = ""
+        logging.debug(f"preprocessing: infobox_version_number: {self.infobox_version_number}")
 
         # Set the template
         self.template = infobox_parser.template
 
+        return True
+
     def populate_item(self):
+        """Populate an item after preprocessing it.
+
+        This is called for every item in the OSRS cache dump. Start by populating the
+        raw metadata from the cache. Then process invalid items, and """
         # Start by populatng the item from the cache data
         self.populate_from_cache_data()
 
         # Process an invalid item
         if self.is_invalid_item:
-            logging.warning("WARNING: Found and processing an invalid item...")
-            self.status = self.invalid_items_data[self.item_id_to_process_str]["status"]
-            self.normalized_name = self.invalid_items_data[self.item_id_to_process_str]["normalized_name"]
+            logging.debug("populate_item: Found and processing an invalid item...")
 
             if self.status == "unequipable":
+                # Cache thinks the item is equipable, but it is not
                 self.populate_item_properties_from_wiki_data()
                 self.item_dict["equipable_by_player"] = False
                 self.item_dict["equipable_weapon"] = False
-                return
+                return True
 
             if self.status == "no_bonuses_available":
-                # Rings
+                # Equipable item with wiki page, but does not have an Infobox Bonuses template
+                # This is only ever called on ring slot items, as they sometimes have a
+                # wiki page without an Infobox Bonuses template
                 self.populate_non_wiki_item()
                 self.item_dict["equipment"] = dict()
                 for equipment_property in self.equipment_properties:
@@ -252,67 +289,84 @@ class BuildItem:
                 self.item_dict["equipment"]["requirements"] = None
                 self.item_dict["equipable_by_player"] = True
                 self.item_dict["equipable_weapon"] = False
-                return
+                return True
 
             if self.status == "normalized":
+                # Some items have a wiki page, but lookup by ID, linked ID and item name
+                # fail. So use the normalized name from the invalid-items.json file
                 self.item_wikitext = self.all_wikitext_raw[self.normalized_name]
                 self.wikitext_found_using = "normalized_name"
                 infobox_parser = WikitextTemplateParser(self.item_wikitext)
-                # has_infobox = infobox_parser.extract_infobox("infobox item")
                 infobox_parser.extract_infobox("infobox item")
                 self.template = infobox_parser.template
                 self.populate_item_properties_from_wiki_data()
                 self.item_dict["equipable_by_player"] = False
                 self.item_dict["equipable_weapon"] = False
-                return
+                return True
 
             if self.status == "unobtainable":
+                # Some items are unobtainable, set defaults
                 self.populate_non_wiki_item()
-                return
+                return True
 
             if self.status == "skill_guide_icon":
+                # Some items are actually an icon in a skill guide, set defaults
                 self.populate_non_wiki_item()
-                return
+                return True
 
             if self.status == "construction_icon":
+                # Some items are actually an icon in the construction interface, set defaults
                 self.populate_non_wiki_item()
-                return
+                return True
 
             if self.status == "unhandled":
+                # Some items have not been classified, set defaults
                 self.populate_non_wiki_item()
-                return
+                return True
 
             if self.status == "new_item":
+                # Some items are new and have incomplete data, set defaults
                 self.populate_non_wiki_item()
-                return
+                return True
 
         if not self.item_dict["equipable"]:
-            # Process a normal item
+            # Process a normal, non-equipable item
             logging.debug("populate_item: Populating a normal item using wiki data...")
             self.populate_item_properties_from_wiki_data()
             self.item_dict["equipable_by_player"] = False
             self.item_dict["equipable_weapon"] = False
-            return
+            return True
 
         if self.item_dict["equipable"]:
             # Process an equipable item
-            logging.debug("populate_item: Populating an enquipable item using wiki data...")
+            logging.debug("populate_item: Populating an equipable item using wiki data...")
             self.populate_item_properties_from_wiki_data()
             self.populate_equipable_properties_from_wiki_data()
-            return
+            return True
+
+        # Return false by default, this means the item was not found or processed
+        logging.error("populate_item: Item was not processed...")
+        return False
 
     def populate_non_wiki_item(self):
+        """Populate an iem that has no wiki page."""
+        # Set all item properties to None if they have not been populated
         for prop in self.properties:
             try:
                 self.item_dict[prop]
             except KeyError:
                 self.item_dict[prop] = None
 
+        # Set equipable item/weapon properties to false
         self.item_dict["equipable_by_player"] = False
         self.item_dict["equipable_weapon"] = False
 
     def populate_from_cache_data(self):
-        """Populate an item using raw cache data."""
+        """Populate an item using raw cache data.
+
+        This function takes the raw OSRS cache data for the specific item and loads
+        all availavle properties (that are extracted from the cache)."""
+        # Log, then populate cache properties
         logging.debug("populate_from_cache: Loading item cache data data to object...")
         self.item_dict["id"] = self.item_cache_data["id"]
         self.item_dict["name"] = self.item_cache_data["name"]
@@ -332,13 +386,25 @@ class BuildItem:
 
     def populate_item_properties_from_wiki_data(self):
         """Populate item data from a OSRS Wiki Infobox Item template."""
+        if not self.has_infobox:
+            # Cannot populate if there is no infobox!
+            self.populate_non_wiki_item()
+            logging.error("populate_item_properties_from_wiki_data: No infobox for wiki item.")
+            return False
+
+        # STAGE ONE: Determine then set the wiki_name and wiki_url
+
         # Manually set OSRS Wiki name
         if self.wikitext_found_using not in ["id", "linked_id"]:
+            # Item found in wiki by ID, cache name is the best option
             wiki_page_name = self.item_name
         elif self.wikitext_found_using == "normalized":
+            # Item found in wiki by normalized name, normalize name is used
             wiki_page_name = self.normalized_name
         else:
-            wiki_page_name = self.item_wikitext[0]  # Fetch from list index 0
+            # Item found using direct cache name lookup on wiki page names,
+            # So use wiki page name in the item_wikitext array
+            wiki_page_name = self.item_wikitext[0]
 
         wiki_versioned_name = None
         wiki_name = None
@@ -370,6 +436,8 @@ class BuildItem:
         wiki_url = wiki_url.replace(" ", "_")
         self.item_dict["wiki_url"] = "https://oldschool.runescape.wiki/w/" + wiki_url
 
+        # STAGE TWO: Extract, process and set item properties from the infobox template
+
         # WEIGHT: Determine the weight of an item ()
         weight = None
         if self.infobox_version_number is not None:
@@ -399,6 +467,8 @@ class BuildItem:
                 quest = self.extract_infobox_value(self.template, "questrequired")
             if quest is not None:
                 self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
+            else:
+                self.item_dict["quest_item"] = None
 
         # Determine the release date of an item ()
         release_date = None
@@ -409,6 +479,8 @@ class BuildItem:
             release_date = self.extract_infobox_value(self.template, "release")
         if release_date is not None:
             self.item_dict["release_date"] = infobox_cleaner.clean_release_date(release_date)
+        else:
+            self.item_dict["release_date"] = None
 
         # Determine the examine text of an item ()
         tradeable = None
@@ -456,21 +528,30 @@ class BuildItem:
         return True
 
     def populate_equipable_properties_from_wiki_data(self) -> bool:
-        """Parse the wiki text template and extract item bonus values from it.
-
-        :param template: A mediawiki wiki text template.
-        """
+        """Parse the wiki text template and extract item bonus values from it."""
         # Initialize empty equipment dictionary
         self.item_dict["equipment"] = dict()
-        self.item_dict["equipable_by_player"] = True
 
         # Extract the infobox bonuses template
         infobox_parser = WikitextTemplateParser(self.item_wikitext)
         has_infobox = infobox_parser.extract_infobox("infobox bonuses")
         if not has_infobox:
             has_infobox = infobox_parser.extract_infobox("infobox_bonuses")
+            if not has_infobox:
+                # No infobox bonuses found for the item!
+                print("populate_equipable_properties: Item has no equipment infobox.")
+                logging.critical("populate_equipable_properties: Item has no equipment infobox.")
+                quit()
+
+        # Set the template
         template = infobox_parser.template
 
+        # STAGE ONE: EQUIPABLE ITEM
+
+        # This item must be equipable by a player, set to True
+        self.item_dict["equipable_by_player"] = True
+
+        # Extract equipable item properties
         self.item_dict["equipment"]["attack_stab"] = self.clean_bonuses_value(template, "astab")
         self.item_dict["equipment"]["attack_slash"] = self.clean_bonuses_value(template, "aslash")
         self.item_dict["equipment"]["attack_crush"] = self.clean_bonuses_value(template, "acrush")
@@ -493,7 +574,8 @@ class BuildItem:
             self.item_dict["equipment"]["slot"] = self.item_dict["equipment"]["slot"].lower()
         except ValueError:
             self.item_dict["equipment"]["slot"] = None
-            logging.critical("Could not determine equipable item slot")
+            print("populate_equipable_properties: Could not determine item slot...")
+            logging.critical("populate_equipable_properties: Could not determine item slot...")
             quit()
 
         # Determine the skill requirements for the equipable item
@@ -504,7 +586,7 @@ class BuildItem:
         except KeyError:
             self.item_dict["equipment"]["requirements"] = None
 
-        # Start processing only weapons
+        # STAGE TWO: WEAPONS
 
         # If item is weapon, two-handed, or 2h, start processing the weapon data
         if (self.item_dict["equipment"]["slot"] == "weapon" or
@@ -536,20 +618,24 @@ class BuildItem:
                 self.item_dict["weapon"]["weapon_type"] = weapon_type
             except KeyError:
                 self.item_dict["weapon"]["weapon_type"] = None
-                logging.critical("WEAPON: Could not determine weapon type")
-                # quit()
+                print("populate_equipable_properties: Could not determine weapon type...")
+                logging.critical("populate_equipable_properties: Could not determine weapon type...")
+                quit()
 
             # Try to set stances available for the weapon
             try:
                 self.item_dict["weapon"]["stances"] = self.weapon_stances_data[self.item_dict["weapon"]["weapon_type"]]
             except KeyError:
                 self.item_dict["weapon"]["stances"] = None
-                logging.critical("WEAPON: Could not determine weapon stances")
-                # quit()
+                print("populate_equipable_properties: Could not determine weapon stance...")
+                logging.critical("populate_equipable_properties: Could not determine weapon stance...")
+                quit()
 
             # Finally, set the equipable_weapon property to true
             self.item_dict["equipable_weapon"] = True
+
         else:
+            # If the item is not a weapon, two-handed or 2h it is not a weapon
             self.item_dict["equipable_weapon"] = False
 
         return True
@@ -572,7 +658,7 @@ class BuildItem:
         except ValueError:
             return value
 
-    def clean_bonuses_value(self, template: mwparserfromhell.nodes.template.Template, prop: str):
+    def clean_bonuses_value(self, template: mwparserfromhell.nodes.template.Template, prop: str) -> int:
         """Clean a item bonuses value extracted from a wiki template.
 
         :param template: A mediawiki wiki text template.
@@ -620,12 +706,7 @@ class BuildItem:
         return clean_value
 
     def compare_json_files(self, item_definition: ItemDefinition) -> bool:
-        """Print the difference between this item object, and the item that exists in the database.
-
-        :return changed: A boolean if the item is different, or not.
-        """
-        changed = False
-
+        """Print the difference between this item object, and the item that exists in the database."""
         # Create JSON out object to compare
         current_json = item_definition.construct_json()
 
@@ -635,27 +716,40 @@ class BuildItem:
         except KeyError:
             print(f">>> compare_json_files: NEW ITEM: {item_definition.id}")
             print(current_json)
-            return changed
+            return
 
         if current_json == existing_json:
-            return changed
+            return
 
         ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
         logging.debug(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}: {item_definition.name}, {item_definition.wiki_name}")
         print(f">>> compare_json_files: CHANGED ITEM: {item_definition.id}: {item_definition.name}")
 
-        try:
-            added_properties = ddiff["dictionary_item_added"]
-            print("   ", added_properties)
-        except KeyError:
-            pass
+        # try:
+        #     added_properties = ddiff["dictionary_item_added"]
+        #     print("   ", added_properties)
+        # except KeyError:
+        #     pass
 
-        try:
-            changed_properties = ddiff["values_changed"]
-            for k, v in changed_properties.items():
-                print("   ", k, v["new_value"])
-        except KeyError:
-            pass
+        # try:
+        #     changed_properties = ddiff["values_changed"]
+        #     for k, v in changed_properties.items():
+        #         print("   ", k, v["new_value"])
+        # except KeyError:
+        #     pass
 
-        changed = True
-        return changed
+        print(ddiff)
+        return
+
+    def validate_item(self):
+        """Use the items-schema.json file to validate the populated item."""
+        # Create JSON out object to validate
+        current_json = self.item_definition.construct_json()
+
+        # Open the JSON Schema for items
+        path_to_schema = Path(config.TEST_PATH / "item_schema.json")
+        with open(path_to_schema, 'r') as f:
+            schema = json.loads(f.read())
+
+        # Check the populate item object against the schema
+        jsonschema.validate(instance=current_json, schema=schema)
