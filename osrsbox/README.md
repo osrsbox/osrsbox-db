@@ -121,6 +121,7 @@ The final list of properties are for equipable weapon items. Only items with the
 
 ## Changelog
 
+- `1.1.21`: Release for game update : 2019/07/25 and 2019/08/01 (SOTE).
 - `1.1.20`: Improved item data accuracy. Added wiki_name property and wiki_url anchor.
 - `1.1.19`: Release for game update : 2019/07/18.
 - `1.1.18`: Fixed stackable property. Added improved item ID linking.
