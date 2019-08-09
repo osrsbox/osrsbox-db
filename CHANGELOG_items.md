@@ -1,3 +1,18 @@
+### 2019/08/08: Smithing and Silver Crafting Interfaces
+- Added items: 8
+    - 24123,Crystal bow
+    - 24124,Crystal bow
+    - 24125,Crystal halberd
+    - 24126,Crystal halberd
+    - 24127,Crystal shield
+    - 24128,Crystal shield
+    - 24130,Combat path starter kit
+    - 24131,Combat path voucher
+- Removed items: 0
+- Changed items: 2
+    - 17043,Doctors hat,name
+    - 6547,Doctors hat,name
+
 ### 2019/08/01: SOTE Changes and Small Game Updates
 - Added items: 0
 - Removed items: 0
