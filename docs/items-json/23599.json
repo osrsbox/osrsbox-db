@@ -22,6 +22,7 @@
     "quest_item": false,
     "release_date": "2014-10-16",
     "examine": "An ethereal shield.",
+    "wiki_name": "Spirit shield",
     "wiki_url": "https://oldschool.runescape.wiki/w/Spirit_shield",
     "equipment": {
         "attack_stab": 0,
@@ -39,7 +40,10 @@
         "magic_damage": 0,
         "prayer": 1,
         "slot": "shield",
-        "requirements": null
+        "requirements": {
+            "defence": 45,
+            "prayer": 55
+        }
     },
     "weapon": null
 }

@@ -1,3 +1,566 @@
+### 2019/08/08: Smithing and Silver Crafting Interfaces
+- Added items: 8
+    - 24123,Crystal bow
+    - 24124,Crystal bow
+    - 24125,Crystal halberd
+    - 24126,Crystal halberd
+    - 24127,Crystal shield
+    - 24128,Crystal shield
+    - 24130,Combat path starter kit
+    - 24131,Combat path voucher
+- Removed items: 0
+- Changed items: 2
+    - 17043,Doctors hat,name
+    - 6547,Doctors hat,name
+
+### 2019/08/01: SOTE Changes and Small Game Updates
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
+### 2019/07/25: Song of the Elves
+- Added items: 403
+    - 23655,Crystal seedling
+    - 23656,Crystal seedling
+    - 23657,Crystal seedling (w)
+    - 23658,Crystal seedling (w)
+    - 23659,Crystal sapling
+    - 23660,Crystal sapling
+    - 23661,Crystal acorn
+    - 23662,Crystal acorn
+    - 23667,Dragonstone armour set
+    - 23668,Dragonstone armour set
+    - 23669,Dragonstone armour set
+    - 23670,Flier
+    - 23671,Flier
+    - 23672,Flier
+    - 23673,Crystal axe
+    - 23674,Crystal axe
+    - 23675,Crystal axe (inactive)
+    - 23676,Crystal axe (inactive)
+    - 23677,Dragon pickaxe(or)
+    - 23678,Dragon pickaxe(or)
+    - 23680,Crystal pickaxe
+    - 23681,Crystal pickaxe
+    - 23682,Crystal pickaxe (inactive)
+    - 23683,Crystal pickaxe (inactive)
+    - 23685,Divine super combat potion(4)
+    - 23686,Divine super combat potion(4)
+    - 23687,Divine super combat potion(4)
+    - 23688,Divine super combat potion(3)
+    - 23689,Divine super combat potion(3)
+    - 23690,Divine super combat potion(3)
+    - 23691,Divine super combat potion(2)
+    - 23692,Divine super combat potion(2)
+    - 23693,Divine super combat potion(2)
+    - 23694,Divine super combat potion(1)
+    - 23695,Divine super combat potion(1)
+    - 23696,Divine super combat potion(1)
+    - 23697,Divine super attack potion(4)
+    - 23698,Divine super attack potion(4)
+    - 23699,Divine super attack potion(4)
+    - 23700,Divine super attack potion(3)
+    - 23701,Divine super attack potion(3)
+    - 23702,Divine super attack potion(3)
+    - 23703,Divine super attack potion(2)
+    - 23704,Divine super attack potion(2)
+    - 23705,Divine super attack potion(2)
+    - 23706,Divine super attack potion(1)
+    - 23707,Divine super attack potion(1)
+    - 23708,Divine super attack potion(1)
+    - 23709,Divine super strength potion(4)
+    - 23710,Divine super strength potion(4)
+    - 23711,Divine super strength potion(4)
+    - 23712,Divine super strength potion(3)
+    - 23713,Divine super strength potion(3)
+    - 23714,Divine super strength potion(3)
+    - 23715,Divine super strength potion(2)
+    - 23716,Divine super strength potion(2)
+    - 23717,Divine super strength potion(2)
+    - 23718,Divine super strength potion(1)
+    - 23719,Divine super strength potion(1)
+    - 23720,Divine super strength potion(1)
+    - 23721,Divine super defence potion(4)
+    - 23722,Divine super defence potion(4)
+    - 23723,Divine super defence potion(4)
+    - 23724,Divine super defence potion(3)
+    - 23725,Divine super defence potion(3)
+    - 23726,Divine super defence potion(3)
+    - 23727,Divine super defence potion(2)
+    - 23728,Divine super defence potion(2)
+    - 23729,Divine super defence potion(2)
+    - 23730,Divine super defence potion(1)
+    - 23731,Divine super defence potion(1)
+    - 23732,Divine super defence potion(1)
+    - 23733,Divine ranging potion(4)
+    - 23734,Divine ranging potion(4)
+    - 23735,Divine ranging potion(4)
+    - 23736,Divine ranging potion(3)
+    - 23737,Divine ranging potion(3)
+    - 23738,Divine ranging potion(3)
+    - 23739,Divine ranging potion(2)
+    - 23740,Divine ranging potion(2)
+    - 23741,Divine ranging potion(2)
+    - 23742,Divine ranging potion(1)
+    - 23743,Divine ranging potion(1)
+    - 23744,Divine ranging potion(1)
+    - 23745,Divine magic potion(4)
+    - 23746,Divine magic potion(4)
+    - 23747,Divine magic potion(4)
+    - 23748,Divine magic potion(3)
+    - 23749,Divine magic potion(3)
+    - 23750,Divine magic potion(3)
+    - 23751,Divine magic potion(2)
+    - 23752,Divine magic potion(2)
+    - 23753,Divine magic potion(2)
+    - 23754,Divine magic potion(1)
+    - 23755,Divine magic potion(1)
+    - 23756,Divine magic potion(1)
+    - 23757,Youngllef
+    - 23758,Youngllef
+    - 23759,Corrupted youngllef
+    - 23760,Smolcano
+    - 23761,Smolcano
+    - 23762,Crystal harpoon
+    - 23763,Crystal harpoon
+    - 23764,Crystal harpoon (inactive)
+    - 23765,Crystal harpoon (inactive)
+    - 23768,Crystal impling jar
+    - 23769,Crystal impling jar
+    - 23770,Clue scroll (elite)
+    - 23771,Prifddinas teleport
+    - 23772,Prifddinas teleport
+    - 23773,Scrawled notes
+    - 23774,Scrawled notes
+    - 23775,Hand mirror
+    - 23776,Red crystal
+    - 23777,Yellow crystal
+    - 23778,Green crystal
+    - 23779,Cyan crystal
+    - 23780,Blue crystal
+    - 23781,Magenta crystal
+    - 23782,Black crystal
+    - 23783,Green crystal
+    - 23784,Fractured crystal
+    - 23785,Ardougne knight helm
+    - 23786,Ardougne knight helm
+    - 23787,Ardougne knight platebody
+    - 23788,Ardougne knight platebody
+    - 23789,Ardougne knight platelegs
+    - 23790,Ardougne knight platelegs
+    - 23791,Ardougne knight tabard
+    - 23792,Blue liquid
+    - 23793,Green powder
+    - 23794,Clear liquid
+    - 23795,Red powder
+    - 23796,Ode to eternity
+    - 23797,Ode to eternity
+    - 23798,Elder cadantine
+    - 23799,Elder cadantine
+    - 23800,Elder cadantine potion (unf)
+    - 23801,Elder cadantine potion (unf)
+    - 23802,Crystal
+    - 23803,Crystal
+    - 23804,Crystal dust
+    - 23805,Crystal dust
+    - 23806,Inversion potion
+    - 23807,Inversion potion
+    - 23808,Crystal seed
+    - 23809,Crystal seed
+    - 23810,Crystal seed
+    - 23811,Crystal seed
+    - 23812,Orb of light
+    - 23813,Orb of light
+    - 23814,Clue scroll
+    - 23815,Clue scroll
+    - 23816,Clue scroll
+    - 23817,Clue scroll
+    - 23818,Explosive potion
+    - 23820,Corrupted sceptre
+    - 23821,Corrupted axe
+    - 23822,Corrupted pickaxe
+    - 23823,Corrupted harpoon
+    - 23824,Corrupted shards
+    - 23830,Corrupted dust
+    - 23831,Corrupted spike
+    - 23832,Corrupted bowstring
+    - 23833,Corrupted orb
+    - 23834,Weapon frame
+    - 23835,Grym leaf
+    - 23836,Linum tirinum
+    - 23837,Corrupted ore
+    - 23838,Phren bark
+    - 23839,Vial
+    - 23840,Corrupted helm (basic)
+    - 23841,Corrupted helm (attuned)
+    - 23842,Corrupted helm (perfected)
+    - 23843,Corrupted body (basic)
+    - 23844,Corrupted body (attuned)
+    - 23845,Corrupted body (perfected)
+    - 23846,Corrupted legs (basic)
+    - 23847,Corrupted legs (attuned)
+    - 23848,Corrupted legs (perfected)
+    - 23849,Corrupted halberd (basic)
+    - 23850,Corrupted halberd (attuned)
+    - 23851,Corrupted halberd (perfected)
+    - 23852,Corrupted staff (basic)
+    - 23853,Corrupted staff (attuned)
+    - 23854,Corrupted staff (perfected)
+    - 23855,Corrupted bow (basic)
+    - 23856,Corrupted bow (attuned)
+    - 23857,Corrupted bow (perfected)
+    - 23858,Corrupted teleport crystal
+    - 23859,Gauntlet cape
+    - 23860,Gauntlet cape
+    - 23861,Crystal sceptre
+    - 23862,Crystal axe
+    - 23863,Crystal pickaxe
+    - 23864,Crystal harpoon
+    - 23865,Pestle and mortar
+    - 23866,Crystal shards
+    - 23867,Crystal dust
+    - 23868,Crystal spike
+    - 23869,Crystalline bowstring
+    - 23870,Crystal orb
+    - 23871,Weapon frame
+    - 23872,Raw paddlefish
+    - 23873,Burnt fish
+    - 23874,Paddlefish
+    - 23875,Grym leaf
+    - 23876,Linum tirinum
+    - 23877,Crystal ore
+    - 23878,Phren bark
+    - 23879,Vial
+    - 23880,Water-filled vial
+    - 23881,Grym potion (unf)
+    - 23882,Egniol potion (1)
+    - 23883,Egniol potion (2)
+    - 23884,Egniol potion (3)
+    - 23885,Egniol potion (4)
+    - 23886,Crystal helm (basic)
+    - 23887,Crystal helm (attuned)
+    - 23888,Crystal helm (perfected)
+    - 23889,Crystal body (basic)
+    - 23890,Crystal body (attuned)
+    - 23891,Crystal body (perfected)
+    - 23892,Crystal legs (basic)
+    - 23893,Crystal legs (attuned)
+    - 23894,Crystal legs (perfected)
+    - 23895,Crystal halberd (basic)
+    - 23896,Crystal halberd (attuned)
+    - 23897,Crystal halberd (perfected)
+    - 23898,Crystal staff (basic)
+    - 23899,Crystal staff (attuned)
+    - 23900,Crystal staff (perfected)
+    - 23901,Crystal bow (basic)
+    - 23902,Crystal bow (attuned)
+    - 23903,Crystal bow (perfected)
+    - 23904,Teleport crystal
+    - 23905,Tephra
+    - 23906,Refined tephra
+    - 23907,Imbued tephra
+    - 23908,Zalcano shard
+    - 23909,Zalcano shard
+    - 23910,Zalcano shard
+    - 23911,Crystal crown
+    - 23912,Crystal crown
+    - 23913,Crystal crown
+    - 23914,Crystal crown
+    - 23915,Crystal crown
+    - 23916,Crystal crown
+    - 23917,Crystal crown
+    - 23918,Crystal crown
+    - 23919,Crystal crown
+    - 23920,Crystal crown
+    - 23921,Crystal crown
+    - 23922,Crystal crown
+    - 23923,Crystal crown
+    - 23924,Crystal crown
+    - 23925,Crystal crown
+    - 23926,Crystal crown
+    - 23927,Crystal of ithell
+    - 23928,Crystal of ithell
+    - 23929,Crystal of iorwerth
+    - 23930,Crystal of iorwerth
+    - 23931,Crystal of trahaearn
+    - 23932,Crystal of trahaearn
+    - 23933,Crystal of cadarn
+    - 23934,Crystal of cadarn
+    - 23935,Crystal of crwys
+    - 23936,Crystal of crwys
+    - 23937,Crystal of meilyr
+    - 23938,Crystal of meilyr
+    - 23939,Crystal of hefin
+    - 23940,Crystal of hefin
+    - 23941,Crystal of amlodd
+    - 23942,Crystal of amlodd
+    - 23943,Elven signet
+    - 23944,Elven signet
+    - 23945,Elven signet
+    - 23946,Eternal teleport crystal
+    - 23947,Eternal teleport crystal
+    - 23948,Elven dawn
+    - 23949,Elven dawn
+    - 23950,Elven dawn
+    - 23951,Enhanced crystal key
+    - 23952,Enhanced crystal key
+    - 23953,Crystal tool seed
+    - 23954,Crystal tool seed
+    - 23955,Crystal tool seed
+    - 23956,Crystal armour seed
+    - 23957,Crystal armour seed
+    - 23958,Crystal armour seed
+    - 23959,Enhanced crystal teleport seed
+    - 23960,Enhanced crystal teleport seed
+    - 23961,Enhanced crystal teleport seed
+    - 23962,Crystal shard
+    - 23963,Crystal shard
+    - 23964,Crystal dust
+    - 23965,Crystal dust
+    - 23971,Crystal helm
+    - 23972,Crystal helm
+    - 23973,Crystal helm (inactive)
+    - 23974,Crystal helm (inactive)
+    - 23975,Crystal body
+    - 23976,Crystal body
+    - 23977,Crystal body (inactive)
+    - 23978,Crystal body (inactive)
+    - 23979,Crystal legs
+    - 23980,Crystal legs
+    - 23981,Crystal legs (inactive)
+    - 23982,Crystal legs (inactive)
+    - 23983,Crystal bow
+    - 23984,Crystal bow
+    - 23985,Crystal bow (inactive)
+    - 23986,Crystal bow (inactive)
+    - 23987,Crystal halberd
+    - 23988,Crystal halberd
+    - 23989,Crystal halberd (inactive)
+    - 23990,Crystal halberd (inactive)
+    - 23991,Crystal shield
+    - 23992,Crystal shield
+    - 23993,Crystal shield (inactive)
+    - 23994,Crystal shield (inactive)
+    - 23995,Blade of saeldor
+    - 23996,Blade of saeldor
+    - 23997,Blade of saeldor (inactive)
+    - 23998,Blade of saeldor (inactive)
+    - 23999,Blade of saeldor (inactive)
+    - 24000,Crystal grail
+    - 24001,Crystal grail
+    - 24002,Crystal grail
+    - 24003,Elven boots
+    - 24004,Elven boots
+    - 24005,Elven boots
+    - 24006,Elven gloves
+    - 24007,Elven gloves
+    - 24008,Elven gloves
+    - 24009,Elven top
+    - 24010,Elven top
+    - 24011,Elven top
+    - 24012,Elven skirt
+    - 24013,Elven skirt
+    - 24014,Elven skirt
+    - 24015,Elven top
+    - 24016,Elven top
+    - 24017,Elven top
+    - 24018,Elven skirt
+    - 24019,Elven skirt
+    - 24020,Elven skirt
+    - 24021,Elven top
+    - 24022,Elven top
+    - 24023,Elven top
+    - 24024,Elven legwear
+    - 24025,Elven legwear
+    - 24026,Elven legwear
+    - 24027,Elven top
+    - 24028,Elven top
+    - 24029,Elven top
+    - 24030,Memoriam crystal (1)
+    - 24031,Memoriam crystal (2)
+    - 24032,Memoriam crystal (3)
+    - 24033,Memoriam crystal (4)
+    - 24034,Dragonstone full helm
+    - 24035,Dragonstone full helm
+    - 24036,Dragonstone full helm
+    - 24037,Dragonstone platebody
+    - 24038,Dragonstone platebody
+    - 24039,Dragonstone platebody
+    - 24040,Dragonstone platelegs
+    - 24041,Dragonstone platelegs
+    - 24042,Dragonstone platelegs
+    - 24043,Dragonstone boots
+    - 24044,Dragonstone boots
+    - 24045,Dragonstone boots
+    - 24046,Dragonstone gauntlets
+    - 24047,Dragonstone gauntlets
+    - 24048,Dragonstone gauntlets
+    - 24049,Crazed scribbles
+    - 24050,Crazed scribbles
+    - 24051,A dear friend
+    - 24052,A dear friend
+    - 24053,On leprechauns
+    - 24054,On leprechauns
+    - 24055,Bloody diary
+    - 24056,Bloody diary
+    - 24057,The eight clans
+    - 24058,The eight clans
+    - 24059,Gollwyn's final statement
+    - 24060,Gollwyn's final statement
+    - 24061,Niff & harry
+    - 24062,Niff & harry
+    - 24063,Soggy journal
+    - 24064,Soggy journal
+    - 24065,Ebrill's journal
+    - 24066,Ebrill's journal
+    - 24067,Stained journal
+    - 24068,Stained journal
+    - 24069,The truth behind the myth (excerpt)
+    - 24070,The truth behind the myth (excerpt)
+    - 24071,The living statues
+    - 24072,The living statues
+    - 24073,The spurned demon
+    - 24074,The spurned demon
+    - 24075,Legends of the mountain
+    - 24076,Legends of the mountain
+- Removed items: 0
+- Changed items: 135
+    - 11217,Dragon fire arrows,name
+    - 11222,Dragon fire arrows,name
+    - 11748,New crystal bow (i),members|linked_id_placeholder|cost|lowalch|highalch
+    - 11749,Crystal bow full (i),members|cost|lowalch|highalch
+    - 11750,Crystal bow 9/10 (i),members|cost|lowalch|highalch
+    - 11751,Crystal bow 8/10 (i),members|cost|lowalch|highalch
+    - 11752,Crystal bow 7/10 (i),members|cost|lowalch|highalch
+    - 11753,Crystal bow 6/10 (i),members|cost|lowalch|highalch
+    - 11754,Crystal bow 5/10 (i),members|cost|lowalch|highalch
+    - 11755,Crystal bow 4/10 (i),members|cost|lowalch|highalch
+    - 11756,Crystal bow 3/10 (i),members|cost|lowalch|highalch
+    - 11757,Crystal bow 2/10 (i),members|cost|lowalch|highalch
+    - 11758,Crystal bow 1/10 (i),members|cost|lowalch|highalch
+    - 11759,New crystal shield (i),members|linked_id_placeholder|cost|lowalch|highalch
+    - 11760,Crystal shield full (i),members|cost|lowalch|highalch
+    - 11761,Crystal shield 9/10 (i),members|cost|lowalch|highalch
+    - 11762,Crystal shield 8/10 (i),members|cost|lowalch|highalch
+    - 11763,Crystal shield 7/10 (i),members|cost|lowalch|highalch
+    - 11764,Crystal shield 6/10 (i),members|cost|lowalch|highalch
+    - 11765,Crystal shield 5/10 (i),members|cost|lowalch|highalch
+    - 11766,Crystal shield 4/10 (i),members|cost|lowalch|highalch
+    - 11767,Crystal shield 3/10 (i),members|cost|lowalch|highalch
+    - 11768,Crystal shield 2/10 (i),members|cost|lowalch|highalch
+    - 11769,Crystal shield 1/10 (i),members|cost|lowalch|highalch
+    - 12410,Elf camp teleport,name
+    - 13080,New crystal halberd full (i),members|linked_id_placeholder|cost|lowalch|highalch
+    - 13081,Crystal halberd full (i),members|cost|lowalch|highalch
+    - 13082,Crystal halberd 9/10 (i),members|cost|lowalch|highalch
+    - 13083,Crystal halberd 8/10 (i),members|cost|lowalch|highalch
+    - 13084,Crystal halberd 7/10 (i),members|cost|lowalch|highalch
+    - 13085,Crystal halberd 6/10 (i),members|cost|lowalch|highalch
+    - 13086,Crystal halberd 5/10 (i),members|cost|lowalch|highalch
+    - 13087,Crystal halberd 4/10 (i),members|cost|lowalch|highalch
+    - 13088,Crystal halberd 3/10 (i),members|cost|lowalch|highalch
+    - 13089,Crystal halberd 2/10 (i),members|cost|lowalch|highalch
+    - 13090,Crystal halberd 1/10 (i),members|cost|lowalch|highalch
+    - 13091,New crystal halberd full,members|linked_id_placeholder|cost|lowalch|highalch
+    - 13092,Crystal halberd full,members|cost|lowalch|highalch
+    - 13093,Crystal halberd 9/10,members|cost|lowalch|highalch
+    - 13094,Crystal halberd 8/10,members|cost|lowalch|highalch
+    - 13095,Crystal halberd 7/10,members|cost|lowalch|highalch
+    - 13096,Crystal halberd 6/10,members|cost|lowalch|highalch
+    - 13097,Crystal halberd 5/10,members|cost|lowalch|highalch
+    - 13098,Crystal halberd 4/10,members|cost|lowalch|highalch
+    - 13099,Crystal halberd 3/10,members|cost|lowalch|highalch
+    - 13100,Crystal halberd 2/10,members|cost|lowalch|highalch
+    - 13101,Crystal halberd 1/10,members|cost|lowalch|highalch
+    - 14579,Bronze fire arrows,name
+    - 14580,Bronze fire arrows,name
+    - 14581,Iron fire arrows,name
+    - 14582,Iron fire arrows,name
+    - 14583,Steel fire arrows,name
+    - 14584,Steel fire arrows,name
+    - 14585,Mithril fire arrows,name
+    - 14586,Mithril fire arrows,name
+    - 14587,Adamant fire arrows,name
+    - 14588,Adamant fire arrows,name
+    - 14589,Rune fire arrows,name
+    - 14590,Rune fire arrows,name
+    - 14591,Dragon fire arrows,name
+    - 14592,Dragon fire arrows,name
+    - 1485,Damp cloth,name
+    - 1505,A magic scroll,name
+    - 15947,Elf camp teleport,name
+    - 16398,Iorwerths message,name
+    - 16408,Barrel of coal-tar,name
+    - 16888,New crystal bow,linked_id_item|placeholder|equipable
+    - 16889,New crystal bow (i),linked_id_item|placeholder|equipable
+    - 16890,New crystal shield,linked_id_item|placeholder|equipable
+    - 16891,New crystal shield (i),linked_id_item|placeholder|equipable
+    - 16892,New crystal halberd full (i),linked_id_item|placeholder|equipable
+    - 16893,New crystal halberd full,linked_id_item|placeholder|equipable
+    - 16896,Crystal seed,name
+    - 16899,Crystal of seren,name
+    - 16973,A key,name
+    - 16977,Glarial's urn,name
+    - 16978,A key,name
+    - 17050,A magic scroll,name
+    - 17157,Damp cloth,name
+    - 17284,Doctors' gown,name
+    - 17449,Small crystal seed,name
+    - 21328,Amethyst fire arrows,name
+    - 21329,Amethyst fire arrows,name
+    - 21330,Amethyst fire arrows,name
+    - 21331,Amethyst fire arrows,name
+    - 21467,Tiny elf crystal,name
+    - 2532,Iron fire arrows,name
+    - 2533,Iron fire arrows,name
+    - 2534,Steel fire arrows,name
+    - 2535,Steel fire arrows,name
+    - 2536,Mithril fire arrows,name
+    - 2537,Mithril fire arrows,name
+    - 2538,Adamant fire arrows,name
+    - 2539,Adamant fire arrows,name
+    - 2540,Rune fire arrows,name
+    - 2541,Rune fire arrows,name
+    - 293,A key,name
+    - 297,Glarial's urn,name
+    - 298,A key,name
+    - 3207,Iorwerths message,name
+    - 3220,Barrel of coal-tar,name
+    - 4207,Crystal seed,name
+    - 4208,Crystal seed,name
+    - 4212,New crystal bow,tradeable_on_ge|members|linked_id_noted|linked_id_placeholder|noteable|cost|lowalch|highalch
+    - 4213,New crystal bow,members|linked_id_item|noted|noteable|equipable|cost|lowalch|highalch
+    - 4214,Crystal bow full,members|cost|lowalch|highalch
+    - 4215,Crystal bow 9/10,members|cost|lowalch|highalch
+    - 4216,Crystal bow 8/10,members|cost|lowalch|highalch
+    - 4217,Crystal bow 7/10,members|cost|lowalch|highalch
+    - 4218,Crystal bow 6/10,members|cost|lowalch|highalch
+    - 4219,Crystal bow 5/10,members|cost|lowalch|highalch
+    - 4220,Crystal bow 4/10,members|cost|lowalch|highalch
+    - 4221,Crystal bow 3/10,members|cost|lowalch|highalch
+    - 4222,Crystal bow 2/10,members|cost|lowalch|highalch
+    - 4223,Crystal bow 1/10,members|cost|lowalch|highalch
+    - 4224,New crystal shield,tradeable_on_ge|members|linked_id_noted|linked_id_placeholder|noteable|cost|lowalch|highalch
+    - 4225,Crystal shield full,members|cost|lowalch|highalch
+    - 4226,Crystal shield 9/10,members|cost|lowalch|highalch
+    - 4227,Crystal shield 8/10,members|cost|lowalch|highalch
+    - 4228,Crystal shield 7/10,members|cost|lowalch|highalch
+    - 4229,Crystal shield 6/10,members|cost|lowalch|highalch
+    - 4230,Crystal shield 5/10,members|cost|lowalch|highalch
+    - 4231,Crystal shield 4/10,members|cost|lowalch|highalch
+    - 4232,Crystal shield 3/10,members|cost|lowalch|highalch
+    - 4233,Crystal shield 2/10,members|cost|lowalch|highalch
+    - 4234,Crystal shield 1/10,members|cost|lowalch|highalch
+    - 4235,New crystal shield,members|linked_id_item|noted|noteable|equipable|cost|lowalch|highalch
+    - 430,Doctors' gown,name
+    - 4313,Crystal of seren,name
+    - 4314,Crystal of seren,name
+    - 598,Bronze fire arrows,name
+    - 6066,Mourner trousers,name
+    - 6103,Tiny elf crystal,name
+    - 942,Bronze fire arrows,name
+    - 9626,Small crystal seed,name
+
 ### 2019/07/18: Last Man Standing Beta Changes
 - Added items: 3
     - 23652,Mage's book

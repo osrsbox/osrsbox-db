@@ -26,7 +26,7 @@ import json
 from pathlib import Path
 
 import config
-from extraction_tools_wiki.wikitext_parser import WikitextTemplateParser
+from extraction_tools_wiki.wikitext_parser import WikitextIDParser
 from osrsbox import items_api
 
 # Delete old log file
@@ -48,28 +48,12 @@ invalid_items_file_path = Path(config.DATA_PATH / "invalid-items.json")
 with open(invalid_items_file_path) as invalid_items_file:
     invalid_items = json.load(invalid_items_file)
 
-# Output dictionaries
-item_id_to_wikitext = dict()
-item_id_to_version_number = dict()
-
-# Loop all items in the OSRS Wiki data dump
-for item_name, wikitext in wiki_text.items():
-    if item_name.startswith("Category"):
-        continue
-    infobox_parser = WikitextTemplateParser(wikitext)
-    has_infobox = infobox_parser.extract_infobox("infobox item")
-    if has_infobox:
-        is_versioned = infobox_parser.determine_infobox_versions()
-        data = infobox_parser.extract_infobox_ids()
-        for k, v in data.items():
-            item_id_to_version_number[k] = v
-    else:
-        has_infobox = infobox_parser.extract_infobox("infobox pet")
-        if has_infobox:
-            is_versioned = infobox_parser.determine_infobox_versions()
-            data = infobox_parser.extract_infobox_ids()
-            for k, v in data.items():
-                item_id_to_version_number[k] = v
+# Call WikitextID Parser to map:
+# 1. ID to infobox template version
+# 2. ID to wikitext entry
+template_names = ["infobox item", "infobox pet"]
+wiki_data_ids = WikitextIDParser(wiki_text_file_path, template_names)
+wiki_data_ids.process_osrswiki_data_dump()
 
 # Structures for counting specific items
 skipped_item = list()
@@ -80,35 +64,42 @@ missing_names = list()
 all_db_items = items_api.load()
 for item in all_db_items:
     # print("Processing:", item.id, item.name)
-    if item.noted or item.placeholder:
-        # print("  > SKIPPING NOTED/PLACEHOLDER ITEM:", item.id, item.name)
-        skipped_item.append(item)
-        continue
-    if str(item.id) in invalid_items:
+    # if item.noted or item.placeholder:
+    #     # print("  > SKIPPING NOTED/PLACEHOLDER ITEM:", item.id, item.name)
+    #     skipped_item.append(item)
+    #     continue
+    if str(item.id) in invalid_items or str(item.linked_id_item) in invalid_items:
         # print("  > SKIPPING INVALID ITEM:", item.id, item.name)
         skipped_item.append(item)
         continue
 
+    found = False
     try:
         # Try perform ID lookup on OSRS Wiki data
-        temp = item_id_to_version_number[item.id]
+        temp = wiki_data_ids.item_id_to_version_number[item.id]
+        found = True
         # print("  > FOUND ITEM: Direct ID lookup:", item.id, item.name)
     except KeyError:
         try:
             # Try perform lookup on linked_id (instead of direct ID)
-            temp = item_id_to_version_number[item.linked_id]
+            temp = wiki_data_ids.item_id_to_version_number[item.linked_id_item]
+            found = True
             # print("  > FOUND ITEM: Linked ID lookup:", item.id, item.name)
         except KeyError:
             missing_ids.append(item)
             try:
                 # Try perform lookup using name instead of item ID
                 temp = wiki_text[item.name]
+                found = True
                 # print("  > FOUND ITEM: Name lookup:", item.id, item.name)
             except KeyError:
-                # print("  > ITEM NOT FOUND:", item.id, item.name)
-                missing_names.append(item)
+                pass
 
-print("\n>>> RESULTS:")
+    if not found:
+        print("  > ITEM NOT FOUND:", item.id, item.name)
+        missing_names.append(item)
+
+print(">>> RESULTS:")
 print("  > skipped_item ids:", len(skipped_item))
 print("  > missing_ids:     ", len(missing_ids))
 print("  > missing_names:   ", len(missing_names))

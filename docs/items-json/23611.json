@@ -22,6 +22,7 @@
     "quest_item": false,
     "release_date": "2013-10-17",
     "examine": "A weapon originally developed for Armadyl's forces.",
+    "wiki_name": "Armadyl crossbow",
     "wiki_url": "https://oldschool.runescape.wiki/w/Armadyl_crossbow",
     "equipment": {
         "attack_stab": 0,
@@ -39,7 +40,9 @@
         "magic_damage": 0,
         "prayer": 1,
         "slot": "weapon",
-        "requirements": null
+        "requirements": {
+            "ranged": 70
+        }
     },
     "weapon": {
         "attack_speed": 6,

@@ -22,6 +22,7 @@
     "quest_item": false,
     "release_date": "2013-10-17",
     "examine": "A ghastly weapon with evil origins.",
+    "wiki_name": "Staff of the dead",
     "wiki_url": "https://oldschool.runescape.wiki/w/Staff_of_the_dead",
     "equipment": {
         "attack_stab": 55,
@@ -39,7 +40,10 @@
         "magic_damage": 15,
         "prayer": 0,
         "slot": "weapon",
-        "requirements": null
+        "requirements": {
+            "attack": 75,
+            "magic": 75
+        }
     },
     "weapon": {
         "attack_speed": 4,

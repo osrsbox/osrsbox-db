@@ -92,13 +92,17 @@ git pull
 cd ~/repos/osrsbox-db/scripts/update_items/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2019-07-10T00:00:00Z
+python3 update_wiki_data.py 2019-08-02T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py
 
 echo -e ">>> Determine any newly added items..."
 python3 determine_new_items.py
+
+# Move the new cache data
+cd ~/repos/osrsbox-db/
+mv extraction_tools_cache/items-cache-data.json data/ 
 
 # Print remaining tasks to user...
 echo -e ">>> REMEMBER YOU STILL NEED TO DO THE FOLLOWING..."

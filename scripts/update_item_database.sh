@@ -45,6 +45,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 '
 
+from items_builder import builder
+
+echo -e ">>> Generating processed_wikitext_items.json"
+cd ~/repos/osrsbox-db/extraction_tools_wiki
+python3 process_wikitext_items.py
+
 echo -e ">>> Updating item database"
 cd ~/repos/osrsbox-db/items_builder
 python3 builder.py

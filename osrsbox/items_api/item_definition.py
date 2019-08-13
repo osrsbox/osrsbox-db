@@ -60,6 +60,7 @@ class ItemDefinition:
     quest_item: Optional[bool]
     release_date: Optional[str]
     examine: Optional[str]
+    wiki_name: Optional[str]
     wiki_url: Optional[str]
     equipment: Optional[ItemEquipment] = None
     weapon: Optional[ItemWeapon] = None
