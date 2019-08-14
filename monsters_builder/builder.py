@@ -59,7 +59,7 @@ def main(export_monster: bool = False):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) < 8500:
+        # if int(monster_id) != 1:
         #     continue
 
         # Skip ununsed monsters

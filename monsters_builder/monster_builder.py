@@ -62,6 +62,7 @@ class BuildMonster:
         self.properties = [
             "id",
             "name",
+            "incomplete"
             "members",
             "release_date",
             "combat_level",
@@ -272,6 +273,7 @@ class BuildMonster:
             self.monster_dict["members"] = infobox_cleaner.clean_boolean(members)
         else:
             self.monster_dict["members"] = None
+            self.monster_dict["incomplete"] = True
 
         # RELEASE_DATE: Determine the release date of a monster
         release_date = None
@@ -284,6 +286,7 @@ class BuildMonster:
             self.monster_dict["release_date"] = infobox_cleaner.clean_release_date(release_date)
         else:
             self.monster_dict["release_date"] = None
+            self.monster_dict["incomplete"] = True
 
         # HITPOINTS: Determine the hitpoints of a monster
         hitpoints = None
@@ -296,6 +299,7 @@ class BuildMonster:
             self.monster_dict["hitpoints"] = infobox_cleaner.clean_integer(hitpoints)
         else:
             self.monster_dict["hitpoints"] = 0
+            self.monster_dict["incomplete"] = True
 
         # MAX HIT: Determine the max hit of a monster
         max_hit = None
@@ -308,6 +312,7 @@ class BuildMonster:
             self.monster_dict["max_hit"] = infobox_cleaner.clean_integer(max_hit)
         else:
             self.monster_dict["max_hit"] = 0
+            self.monster_dict["incomplete"] = True
 
         # ATTACK TYPE: Determine the attack type of a monster
         attack_type = None
@@ -320,6 +325,7 @@ class BuildMonster:
             self.monster_dict["attack_type"] = infobox_cleaner.clean_wikitext(attack_type)
         else:
             self.monster_dict["attack_type"] = None
+            self.monster_dict["incomplete"] = True
 
         # ATTACK SPEED: Determine the attack speed of a monster
         attack_speed = None
@@ -332,6 +338,7 @@ class BuildMonster:
             self.monster_dict["attack_speed"] = infobox_cleaner.clean_integer(attack_speed)
         else:
             self.monster_dict["attack_speed"] = None
+            self.monster_dict["incomplete"] = True
 
         # AGGRESSIVE: Determine the aggressive property of a monster
         aggressive = None
@@ -344,6 +351,7 @@ class BuildMonster:
             self.monster_dict["aggressive"] = infobox_cleaner.clean_boolean(aggressive)
         else:
             self.monster_dict["aggressive"] = False
+            self.monster_dict["incomplete"] = True
 
         # POISONOUS: Determine the poisonous property of a monster
         poisonous = None
@@ -356,6 +364,7 @@ class BuildMonster:
             self.monster_dict["poisonous"] = infobox_cleaner.clean_boolean(poisonous)
         else:
             self.monster_dict["poisonous"] = False
+            self.monster_dict["incomplete"] = True
 
         # IMMUNE POISON: Determine the immunity to poison property of a monster
         immune_poison = None
@@ -368,6 +377,7 @@ class BuildMonster:
             self.monster_dict["immune_poison"] = infobox_cleaner.clean_boolean(immune_poison)
         else:
             self.monster_dict["immune_poison"] = False
+            self.monster_dict["incomplete"] = True
 
         # IMMUNE VENOM: Determine the immunity to venon property of a monster
         immune_venom = None
@@ -380,6 +390,7 @@ class BuildMonster:
             self.monster_dict["immune_venom"] = infobox_cleaner.clean_boolean(immune_venom)
         else:
             self.monster_dict["immune_venom"] = False
+            self.monster_dict["incomplete"] = True
 
         # WEAKNESS: Determine any weaknesses of the monster
         weakness = None
@@ -395,6 +406,7 @@ class BuildMonster:
             self.monster_dict["weakness"] = weakness
         else:
             self.monster_dict["weakness"] = weakness_list
+            self.monster_dict["incomplete"] = True
 
         # SLAYER LEVEL: Determine the slayer level required
         slayer_level = None
@@ -407,6 +419,7 @@ class BuildMonster:
             self.monster_dict["slayer_level"] = infobox_cleaner.clean_integer(slayer_level)
         else:
             self.monster_dict["slayer_level"] = None
+            self.monster_dict["incomplete"] = True
 
         # SLAYER XP: Determine XP given from slayer monster kill
         slayer_xp = None
@@ -419,6 +432,7 @@ class BuildMonster:
             self.monster_dict["slayer_xp"] = infobox_cleaner.clean_integer(slayer_xp)
         else:
             self.monster_dict["slayer_xp"] = None
+            self.monster_dict["incomplete"] = True
 
         # SLAYER MONSTER: Determine if the monster can be a slayer task
         if self.monster_dict["slayer_level"]:
@@ -427,10 +441,34 @@ class BuildMonster:
             self.monster_dict["slayer_monster"] = False
 
         # SLAYER MASTERS: Determine the slayer masters
-        # TODO: Finish this lookup
         if self.monster_dict["slayer_monster"]:
-            self.monster_dict["slayer_masters"] = ["Vannaka"]
+            # Populate a list of slayer masters
+            # This name is used by this project and the OSRS Wiki
+            slayer_masters = ["turael",
+                              "krystilia",
+                              "mazchna",
+                              "vannaka",
+                              "chaeldar",
+                              "konar",
+                              "neive",
+                              "duradel"
+                              ]
 
+            # Loop through each slayer master and add to a list if the slayer
+            # master assigns this monster as a slayer task
+            value_list = list()
+            for slayer_master in slayer_masters:
+                value = None
+                if self.infobox_version_number is not None:
+                    key = slayer_master + str(self.infobox_version_number)
+                    value = self.extract_infobox_value(self.template, key)
+                if value is None:
+                    value = self.extract_infobox_value(self.template, slayer_master)
+                if value is not None:
+                    value_list.append(slayer_master)
+            self.monster_dict["slayer_masters"] = value_list
+
+        # EXAMINE: Determine the monster examine text
         examine = None
         if self.infobox_version_number is not None:
             key = "examine" + str(self.infobox_version_number)
@@ -441,7 +479,13 @@ class BuildMonster:
             self.monster_dict["examine"] = infobox_cleaner.clean_wikitext(examine)
         else:
             self.monster_dict["examine"] = None
+            self.monster_dict["incomplete"] = True
 
+        # MONSTER COMBAT BONUSES: Determine stats of the monster
+
+        # Initialize a dictionary that maps database_name -> infobox_name
+        # The database_name is used in this project
+        # The infobox_name is used by the OSRS Wiki
         combat_bonuses = {"attack_level": "att",
                           "strength_level": "str",
                           "defence_level": "def",
@@ -463,6 +507,7 @@ class BuildMonster:
                           "magic_damage": "mbns"
                           }
 
+        # Loop each of the combat bonuses and populate
         for database_name, property_name in combat_bonuses.items():
             value = None
             if self.infobox_version_number is not None:
@@ -474,14 +519,31 @@ class BuildMonster:
                 self.monster_dict[database_name] = infobox_cleaner.clean_stats_value(value)
             else:
                 self.monster_dict[database_name] = 0
+                self.monster_dict["incomplete"] = True
+
+        # We finished processing, set incomplete to false if not true
+        if not self.monster_dict.get("incomplete"):
+            self.monster_dict["incomplete"] = False
 
     def parse_monster_drops(self):
+        """Extract monster drop information.
+
+        This function parses the monsters wiki page (raw wikitext), and extracts
+        any MediaWiki template with the name "dropsline". Each template is processed
+        to determine the ID, name, quantity, rarity and and requirements of the
+        specific drop. Finally, the raw wikitext for the monster is parsed to
+        determine if the monster has access to the rare drop table.
+        """
+        # Extract "dropsline" templates
         self.drops_templates = wikitext_parser.extract_wikitext_template(self.monster_wikitext, "dropsline")
 
+        # Loop the found "dropsline" templates
         for template in self.drops_templates:
+            # Parse the template
             template_parser = WikitextTemplateParser(self.monster_wikitext)
             template_parser.template = template
 
+            # Initialize a null value dictionary for each item drop
             drop_dict = {
                 "id": None,
                 "name": None,
@@ -490,10 +552,40 @@ class BuildMonster:
                 "drop_requirements": None
             }
 
+            # Extract the drop information
             name = template_parser.extract_infobox_value("Name")
             quantity = template_parser.extract_infobox_value("Quantity")
             rarity = template_parser.extract_infobox_value("Rarity")
             drop_requirements = template_parser.extract_infobox_value("Raritynotes")
+
+            # Parse the drop requirements and try to classify
+            if not drop_requirements:
+                pass
+            elif "{{CiteTwitter" in drop_requirements:
+                pass
+            elif "{{CiteForum" in drop_requirements:
+                pass
+            elif "[[Wilderness" in drop_requirements:
+                drop_requirements = "wilderness-only"
+            elif "[[Konar quo Maten]]" in drop_requirements:
+                drop_requirements = "konar-task-only"
+            elif ("[[Catacombs of Kourend]]" in drop_requirements or
+                  "name=catacomb" in drop_requirements or
+                  'name="catacomb"' in drop_requirements):
+                drop_requirements = "catacombs-only"
+            elif "[[Krystilia]]" in drop_requirements:
+                drop_requirements = "krystilia-task-only"
+            elif "[[Treasure Trails" in drop_requirements:
+                drop_requirements = "treasure-trails-only"
+            elif "[[Iorwerth Dungeon]]" in drop_requirements:
+                drop_requirements = "iorwerth-dungeon-only"
+            elif "Forthos Dungeon" in drop_requirements:
+                drop_requirements = "forthos-dungeon-only"
+            elif ("[[Revenant Caves]]" in drop_requirements or
+                  'name="revcaves"' in drop_requirements):
+                drop_requirements = "revenants-only"
+
+            # Populate the dictionary
             drop_dict = {
                 "id": 1,
                 "name": name,
@@ -502,10 +594,17 @@ class BuildMonster:
                 "drop_requirements": drop_requirements
             }
 
+            # Attach drops dict to the drops list for this monster
             self.drops.append(drop_dict)
 
+        # Append the drops to the monster dictionary
         self.monster_dict["drops"] = self.drops
-        self.monster_dict["rare_drop_table"] = False
+
+        # Determine if monster has access to the rare drop table
+        if "{{RareDropTable}}" in self.monster_wikitext[2]:
+            self.monster_dict["rare_drop_table"] = True
+        else:
+            self.monster_dict["rare_drop_table"] = False
 
     def extract_infobox_value(self, template: mwparserfromhell.nodes.template.Template, key: str) -> str:
         """Helper method to extract a value from a template using a specified key.

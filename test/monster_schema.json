@@ -29,7 +29,20 @@
           },
           "drop_requirements":{
             "description":"If there are any requirements to getting the specific drop.",
-            "type":["array", "string", "null"]
+            "type":["string", "null"],
+            "items":{
+              "type":"string",
+              "enum":[
+                "wilderness-only",
+                "konar-task-only",
+                "catacombs-only",
+                "krystilia-task-only",
+                "treasure-trails-only",
+                "iorwerth-dungeon-only",
+                "forthos-dungeon-only",
+                "revenants-only"
+              ]
+            }
           }
         }
       }
@@ -44,6 +57,10 @@
       "name":{
         "description":"The name of the monster.",
         "type":"string"
+      },
+      "incomplete":{
+        "description":"If the monster has incomplete wiki data.",
+        "type":"boolean"
       },
       "members":{
         "description":"If the monster is members only, or not.",
@@ -119,14 +136,14 @@
         "items":{
           "type":"string",
           "enum":[
-            "Turael",
-            "Krystilia",
-            "Mazchna",
-            "Vannaka",
-            "Chaeldar",
-            "Konar",
-            "Neive/Steve",
-            "Duradel"
+            "turael",
+            "krystilia",
+            "mazchna",
+            "vannaka",
+            "chaeldar",
+            "konar",
+            "neive",
+            "duradel"
           ]
         }
       },
@@ -234,6 +251,7 @@
     "required":[
         "id",
         "name",
+        "incomplete",
         "members",
         "release_date",
         "combat_level",

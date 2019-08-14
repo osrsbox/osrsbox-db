@@ -37,6 +37,7 @@ class MonsterDefinition:
     """
     id: int = None
     name: str = None
+    incomplete: bool = None
     members: bool = None
     release_date: str = None
     combat_level: int = None
