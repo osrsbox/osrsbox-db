@@ -25,10 +25,106 @@ import datetime
 import dateparser
 
 
+def clean_wikitext(value: str) -> str:
+    """Generic infobox property cleaner.
+
+    This helper method is a generic cleaner for all infobox template properties.
+    The value is string cast, stipped of new line characters, then any square
+    brackets (wikitext links) are stripped, then anything in trailing brackets,
+    then any HTML line breaks are removed.
+
+    :param value: Template value extracted in raw wikitext format.
+    :return value: Template value with square brackets stripped.
+    """
+    value = str(value)
+    value = value.strip()
+    value = re.sub(r'[\[\]]+', '', value)  # Removes all "[" and "]"
+    value = re.sub(r' \([^()]*\)', '', value)  # Removes " (anything)"
+    value = re.sub(r'<!--(.*?)-->', '', value)  # Removes "<!--anything-->"
+    value = re.sub(r'<br(.*)', '', value)  # Removes "<br"
+    return value
+
+
+def clean_boolean(value: str) -> bool:
+    """Convert an infobox property to a boolean.
+
+    :param value: Template value extracted in raw wikitext format.
+    :return value: Template value converted into a boolean.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+
+    if value in ["True", "true", True, "Yes", "yes"]:
+        value = True
+    elif value in ["False", "false", False, "No", "no"]:
+        value = False
+    else:
+        # If unable to determine boolean, set to False
+        value = False
+
+    return value
+
+
+def clean_integer(value: str) -> bool:
+    """Convert an infobox property to a boolean.
+
+    :param value: Template value extracted in raw wikitext format.
+    :return value: Template value converted into a boolean.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return 0
+
+    if isinstance(value, int):
+        return value
+    elif isinstance(value, str):
+        try:
+            value = int(value)
+        except ValueError:
+            # If unable to cast value, set to 0
+            value = 0
+
+    return value
+
+
+def clean_stats_value(value: str) -> int:
+    """Clean a item/monster stats bonuses value extracted from a wiki template.
+
+    :param value: Template value extracted in raw wikitext format.
+    :return value: Template value converted into an integer.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return 0
+
+    if isinstance(value, int):
+        return value
+    elif isinstance(value, str):
+        if value[0] == "-":
+            if value[1:].isdigit():
+                value = int(value)
+        elif value[0] == "+":
+            if value[1:].isdigit():
+                value = int(value)
+        else:
+            if value.isdigit():
+                value = int(value)
+    else:
+        # If unable to process, set to 0
+        value = 0
+
+    return value
+
+
 def clean_weight(value: str, item_id: int) -> float:
     """Convert the weight entry from a OSRS Wiki infobox to a float.
 
-    :param value: The extracted raw wiki text.
+    :param value: Template value extracted in raw wikitext format.
     :param item_id: The item ID number.
     :return weight: The weight of an item.
     """
@@ -156,6 +252,10 @@ def clean_release_date(value: str) -> str:
     release_date = release_date.strip()
     release_date = release_date.replace("[", "")
     release_date = release_date.replace("]", "")
+
+    if release_date is None or release_date == "":
+        return None
+
     try:
         release_date = datetime.datetime.strptime(release_date, "%d %B %Y")
         return release_date.date().isoformat()
@@ -169,28 +269,6 @@ def clean_release_date(value: str) -> str:
         return None
 
     return release_date
-
-
-def clean_tradeable(value: str) -> bool:
-    """A helper method to convert the tradeable entry from an OSRS Wiki infobox.
-
-    :param value: The extracted raw wiki text.
-    :return tradeable: A cleaned tradeable property of an item.
-    """
-    tradeable = str(value)
-    tradeable = tradeable.strip()
-
-    tradeable = tradeable.replace("[", "")
-    tradeable = tradeable.replace("]", "")
-
-    if tradeable in ["True", "true", True, "Yes", "yes"]:
-        tradeable = True
-    elif tradeable in ["False", "false", False, "No", "no"]:
-        tradeable = False
-    else:
-        tradeable = False
-
-    return tradeable
 
 
 def clean_examine(value: str, name: str) -> str:
@@ -252,53 +330,3 @@ def clean_examine(value: str, name: str) -> str:
     examine = examine.strip()
 
     return examine
-
-
-def clean_store_price(value: str) -> str:
-    """"Convert the store price entry from an OSRS Wiki infobox.
-
-    :param value: The extracted raw wiki text.
-    :return store_price: A cleaned store price property of an item.
-    """
-    store_price = value
-    store_price = store_price.strip()
-
-    # Generic test for no store price value
-    if (store_price.lower() == "no" or
-            "not sold" in store_price.lower() or
-            store_price == "" or
-            store_price == "N/A"):
-        return None
-
-    # Remove thousand separator
-    store_price = store_price.replace(",", "")
-
-    # Try cast the value, if successful, return it
-    try:
-        return int(store_price)
-    except ValueError:
-        return None
-
-    return store_price
-
-
-def clean_seller(value: str) -> str:
-    """A helper method to convert the seller entry from an OSRS Wiki infobox.
-
-    :param value: The extracted raw wiki text.
-    :return seller: A cleaned seller property of an item.
-    """
-    seller = value
-    seller = seller.strip()
-
-    # Generic test for no store price value
-    if (seller.lower() == "no" or
-            "not sold" in seller.lower() or
-            seller == "" or
-            seller == "N/A"):
-        return None
-
-    seller = seller.replace("{{l/c}}", "")
-    seller = seller.replace("{{l/o}}", "")
-
-    return seller

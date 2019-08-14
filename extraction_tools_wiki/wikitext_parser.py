@@ -265,7 +265,7 @@ class WikitextTemplateParser:
 
         # Infobox versioning completed, log results
         logger.debug("determine_infobox_versions: Infobox version results:")
-        logger.debug(f"    {self.version_identifiers}")
+        logger.debug(f"{self.version_identifiers}")
 
         # Processing finished
         return True
@@ -373,7 +373,7 @@ class WikitextTemplateParser:
             while i <= count:
                 id = self.extract_infobox_id(str(i))  # Pass string cast version number
                 if not id:
-                    return None
+                    return item_id_to_version_number
                 ids = self.split_infobox_id_string(id)
                 for id in ids:
                     id = self.try_int_cast(id)
