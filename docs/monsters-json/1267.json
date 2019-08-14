@@ -1,24 +1,31 @@
 {
-    "id": "1267",
+    "id": 1267,
     "name": "Vulture",
+    "incomplete": false,
     "members": true,
-    "release_date": "10 April 2006",
+    "release_date": "2006-04-10",
     "combat_level": 31,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 31,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 10,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "If you see them circling: run.",
+    "wiki_name": "Vulture",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Vulture",
     "attack_level": 40,
     "strength_level": 40,
     "defence_level": 10,
@@ -40,19 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Vulture wing",
             "quantity": "1",
             "rarity": "1/4",
             "drop_requirements": "<ref group=\"d\">Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,32 @@
 {
-    "id": "2173",
+    "id": 2173,
     "name": "TzHaar-Ket",
+    "incomplete": false,
     "members": true,
-    "release_date": "19 September 2005",
+    "release_date": "2005-09-19",
     "combat_level": 149,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 149,
+    "max_hit": 15,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 140,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Must be a guard or something.",
+    "wiki_name": "TzHaar-Ket (Lv 149)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Ket#Lv_149",
     "attack_level": 120,
     "strength_level": 140,
     "defence_level": 120,
@@ -40,96 +48,96 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Tzhaar-ket-om",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toktz-ket-xil",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Obsidian cape",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Obsidian helmet",
             "quantity": "1",
             "rarity": "1/2000",
             "drop_requirements": "<ref name=221_only>Only dropped by the lv 221 TzHaar-Ket.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Obsidian platebody",
             "quantity": "1",
             "rarity": "1/2000",
             "drop_requirements": "<ref name=221_only />"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Obsidian platelegs",
             "quantity": "1",
             "rarity": "1/2000",
             "drop_requirements": "<ref name=221_only />"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tokkul",
             "quantity": "1-103",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled tzhaar head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut sapphire",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut emerald",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut diamond",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Onyx bolt tips",
             "quantity": "1-4 ; 20",
             "rarity": "Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

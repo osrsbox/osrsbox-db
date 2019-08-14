@@ -1,24 +1,33 @@
 {
-    "id": "6735",
+    "id": 6735,
     "name": "River troll",
+    "incomplete": false,
     "members": true,
-    "release_date": "02 February 2004",
+    "release_date": "2004-02-02",
     "combat_level": 79,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 79,
+    "max_hit": 10,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "Likes fish\u2026 hates people.",
+    "wiki_name": "River troll (Lv 79)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/River_troll#Lv_79",
     "attack_level": 65,
     "strength_level": 65,
     "defence_level": 65,
@@ -40,131 +49,131 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Raw tuna",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw salmon",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw trout",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw herring",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw pike",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw sardine",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw shrimps",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw anchovies",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw swordfish",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw shark",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing bait",
             "quantity": "1-50",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Feather",
             "quantity": "5-20",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Oyster",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing potion(3)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Casket",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Spinach roll",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": true
 }

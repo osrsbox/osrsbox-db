@@ -1,24 +1,29 @@
 {
-    "id": "7528",
+    "id": 7528,
     "name": "Vanguard",
+    "incomplete": true,
     "members": true,
-    "release_date": "17 May 2018",
+    "release_date": "2018-05-17",
     "combat_level": 0,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 0,
+    "max_hit": 22,
+    "attack_type": "Ranged",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": true,
+    "weakness": [
+        "Melee"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Formerly a member of Xeric's elite tactical unit.",
+    "wiki_name": "Vanguard (Ranged (Challenge Mode))",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Vanguard#Ranged_(Challenge_Mode)",
     "attack_level": 225,
     "strength_level": 225,
     "defence_level": 315,
@@ -40,61 +45,61 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Vanguard judgement",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Elder (+)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"A\" name=\"vanguard\">The Vanguard's combat style determines which potion is dropped.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Twisted (+)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"A\" name=\"vanguard\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Kodai (+)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"A\" name=\"vanguard\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Prayer enhance (+)",
             "quantity": "0-1",
             "rarity": "Varies",
             "drop_requirements": "<ref group=\"A\" name=\"pots1\">A random mixture of potions is given. Quantity depends on party size.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xeric's aid (+)",
             "quantity": "1-3",
             "rarity": "Varies",
             "drop_requirements": "<ref group=\"A\" name=\"pots1\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Revitalisation (+)",
             "quantity": "0-2",
             "rarity": "Varies",
             "drop_requirements": "<ref group=\"A\" name=\"pots1\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Overload (+)",
             "quantity": "0-1",
             "rarity": "Varies",
             "drop_requirements": "<ref group=\"A\" name=\"pots1\"/>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

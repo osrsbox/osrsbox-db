@@ -1,24 +1,29 @@
 {
-    "id": "3106",
+    "id": 3106,
     "name": "Hero",
+    "incomplete": true,
     "members": true,
-    "release_date": "30 April 2002",
+    "release_date": "2002-04-30",
     "combat_level": 69,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 69,
+    "max_hit": 9,
+    "attack_type": "Slash weapons|Slash",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Heroic!",
+    "wiki_name": "Hero",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Hero",
     "attack_level": 54,
     "strength_level": 55,
     "defence_level": 54,
@@ -40,68 +45,61 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
-            "quantity": "200",
+            "quantity": "200-300",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
-            "name": "Coins",
-            "quantity": "300",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Gold ore",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jug of wine",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire orb",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Diamond",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

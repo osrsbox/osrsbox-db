@@ -1,24 +1,32 @@
 {
-    "id": "2215",
+    "id": 2215,
     "name": "General Graardor",
+    "incomplete": false,
     "members": true,
-    "release_date": "17 October 2013",
+    "release_date": "2013-10-17",
     "combat_level": 624,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 4,
+    "hitpoints": 624,
+    "max_hit": 0,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 338,
+    "slayer_masters": [
+        "konar",
+        "duradel"
+    ],
+    "examine": "A huge war chief.",
+    "wiki_name": "General Graardor",
+    "wiki_url": "https://oldschool.runescape.wiki/w/General_Graardor",
     "attack_level": 280,
     "strength_level": 350,
     "defence_level": 250,
@@ -40,187 +48,187 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandos chestplate",
             "quantity": "1",
             "rarity": "1/381",
             "drop_requirements": "<ref group=\"d\" name=\"armourdrop\">The drop rate is 1/381 for a specific Bandos armour piece, or 1/127 for any piece.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandos tassets",
             "quantity": "1",
             "rarity": "1/381",
             "drop_requirements": "<ref group=\"d\" name=\"armourdrop\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandos boots",
             "quantity": "1",
             "rarity": "1/381",
             "drop_requirements": "<ref group=\"d\" name=\"armourdrop\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandos hilt",
             "quantity": "1",
             "rarity": "1/508",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/710459690090668032|archiveurl=http://archive.fo/RIxTT|archivedate=29 Mar 2019|quote=[does that mean SOTD/all other hilts are also 1/508?] Yeah, we kept them consistent.|date=17 Mar 2016|name=hilt}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 1",
             "quantity": "1",
             "rarity": "1/762",
             "drop_requirements": "<ref group=\"d\" name=\"sharddrop\">The drop rate is 1/762 for a specific Godsword Shard piece, or 1/254 for any piece.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/670676030022156288|date=28 Nov 2015|archiveurl=http://archive.fo/Q9d76|archivedate=26 Mar 2019|quote=There's a 1/254 chance of it deciding to give you a shard. So the chance of Shard 1 is 1/762, etc.|name=GS shard}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 2",
             "quantity": "1",
             "rarity": "1/762",
             "drop_requirements": "<ref group=\"d\" name=\"sharddrop\"/>{{NamedRef|GS shard}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 3",
             "quantity": "1",
             "rarity": "1/762",
             "drop_requirements": "<ref group=\"d\" name=\"sharddrop\"/>{{NamedRef|GS shard}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Super restore(4)",
             "quantity": "3",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy snapdragon",
             "quantity": "3 (noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snapdragon seed",
             "quantity": "1",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune longsword",
             "quantity": "1",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune 2h sword",
             "quantity": "1",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune platebody",
             "quantity": "1",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune pickaxe",
             "quantity": "1",
             "rarity": "6/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "19500-20000",
             "rarity": "31.7/127",
             "drop_requirements": "<ref group=\"d\">Coins come from rolls on multiple loot tables, including GDT and RDT.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "20100-20600",
             "rarity": "1.25/127",
             "drop_requirements": "<ref group=\"d\">Coins come from rolls on the unique tables, including the hilt table and the godsword shard table.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite ore",
             "quantity": "15-20 (noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coal",
             "quantity": "115-120 (noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Magic logs",
             "quantity": "15-20 (noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "65-70",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/50",
-            "drop_requirements": "<ref group=\"d\">Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/250",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pet general graardor",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/506398183178903552|date=1 Sep 2014|archiveurl=http://archive.fo/qulvf|archivedate=25 Mar 2019|quote=Godwars pet drop rates, all 4 are 1 in 5k. How (un)lucky have you been? Mole, KQ & KBD next week!}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

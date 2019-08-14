@@ -1,24 +1,29 @@
 {
-    "id": "5213",
+    "id": 5213,
     "name": "Jonny the beard",
+    "incomplete": true,
     "members": false,
-    "release_date": "04 January 2001",
+    "release_date": "2001-01-04",
     "combat_level": 2,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 2,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
-    "slayer_xp": null,
+    "slayer_xp": 0,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Looks kind of shifty...",
+    "wiki_name": "Jonny the beard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jonny_the_beard",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 1,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Intel report",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only during [[Shield of Arrav]]</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

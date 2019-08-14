@@ -1,24 +1,29 @@
 {
-    "id": "3549",
+    "id": 3549,
     "name": "Menaphite Thug",
+    "incomplete": true,
     "members": true,
-    "release_date": "04 April 2005",
+    "release_date": "2005-04-04",
     "combat_level": 55,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 55,
+    "max_hit": 7,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Menaphite thug.",
+    "wiki_name": "Menaphite Thug",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Menaphite_Thug",
     "attack_level": 60,
     "strength_level": 50,
     "defence_level": 20,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "60",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

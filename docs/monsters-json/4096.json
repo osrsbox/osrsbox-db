@@ -1,24 +1,29 @@
 {
-    "id": "4096",
+    "id": 4096,
     "name": "Archer",
+    "incomplete": true,
     "members": true,
-    "release_date": "09 August 2004",
+    "release_date": "2004-08-09",
     "combat_level": 42,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 42,
+    "max_hit": 6,
+    "attack_type": "Ranged",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A Burthorpe Castle Archer.",
+    "wiki_name": "Archer (Burthorpe)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Archer_(Burthorpe)",
     "attack_level": 0,
     "strength_level": 0,
     "defence_level": 40,
@@ -40,117 +45,117 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Willow longbow",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Studded chaps",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Green d'hide chaps",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Maple shortbow",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "18",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze arrow",
             "quantity": "14",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel arrow",
             "quantity": "14",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "17",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "29",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "6",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "2",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "5, 12, 15, 27, 42",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth talisman",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril ore",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

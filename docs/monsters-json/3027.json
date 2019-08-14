@@ -1,24 +1,33 @@
 {
-    "id": "3027",
+    "id": 3027,
     "name": "King Scorpion",
+    "incomplete": false,
     "members": false,
-    "release_date": "06 April 2001",
+    "release_date": "2001-04-06",
     "combat_level": 32,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 32,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 30,
+    "slayer_masters": [
+        "turael",
+        "krystilia",
+        "mazchna"
+    ],
+    "examine": "Wow! Scorpions shouldn't grow that big.",
+    "wiki_name": "King Scorpion",
+    "wiki_url": "https://oldschool.runescape.wiki/w/King_Scorpion",
     "attack_level": 30,
     "strength_level": 29,
     "defence_level": 23,
@@ -40,33 +49,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled scorpion head",
             "quantity": "1",
             "rarity": "1/25",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "<ref group=d>Only dropped by those found in the [[Wilderness]]</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mysterious emblem",
             "quantity": "1",
             "rarity": "1/140",
             "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Slayer's enchantment",
             "quantity": "1",
             "rarity": "1/296",
             "drop_requirements": "<ref group=d name=wildytask />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

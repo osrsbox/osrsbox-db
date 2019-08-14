@@ -1,24 +1,33 @@
 {
-    "id": "5343",
+    "id": 5343,
     "name": "Undead one",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 January 2003",
+    "release_date": "2003-01-27",
     "combat_level": 68,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 68,
+    "max_hit": 7,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Crumble Undead",
+        " Salve amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "A minion of Rashiliyia.",
+    "wiki_name": "Undead one (Lv 68 (Skeletal))",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Undead_one#Lv_68_(Skeletal)",
     "attack_level": 63,
     "strength_level": 63,
     "defence_level": 63,
@@ -40,26 +49,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name=\"skeletal\">Only dropped by the skeletal variant.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Skeleton champion scroll",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": "<small>(1/5,000)</small><ref name=\"skeletal\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zombie champion scroll",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": "<small>(1/5,000)</small><ref>Only dropped by the zombie variant.</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,34 @@
 {
-    "id": "7869",
+    "id": 7869,
     "name": "Green dragon",
+    "incomplete": false,
     "members": true,
-    "release_date": "23 November 2017",
+    "release_date": "2017-11-23",
     "combat_level": 88,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 4,
+    "hitpoints": 88,
+    "max_hit": 8,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Ranged",
+        " dragonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 100,
+    "slayer_masters": [
+        "krystilia",
+        "vannaka"
+    ],
+    "examine": "Must be related to Elvarg.",
+    "wiki_name": "Green dragon (Level 88)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Green_dragon#Level_88",
     "attack_level": 68,
     "strength_level": 75,
     "defence_level": 68,
@@ -40,327 +50,327 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Green dragonhide",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant full helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy irit leaf",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy harralander",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy guam leaf",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy avantoe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy cadantine",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy marrentill",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy tarromin",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy lantadyme",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy dwarf weed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
+            "drop_requirements": "<ref group=d>Looting bags are only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled dragon head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Larran's key",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>"
+            "rarity": "1/100",
+            "drop_requirements": "<ref group=d>Larran's keys are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref> {{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 1-80: 1 in (100 + ((3 / 10) x (80 - level) x (80 - level))).}}{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 81-350+: 1 in (50 + number scaled linearly between 99 at level 81 and 50 at level 350)}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mysterious emblem",
             "quantity": "1",
             "rarity": "1/118",
-            "drop_requirements": "<ref group=d name=wildytask />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": "<ref group=d>Mysterious emblems are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}<ref group=d>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>"
+            "drop_requirements": "<ref group=d>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Slayer's enchantment",
             "quantity": "1",
             "rarity": "1/260",
-            "drop_requirements": "<ref group=d name=wildytask />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
+            "drop_requirements": "<ref group=d>Slayer's enchantments are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel battleaxe",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel platelegs",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril axe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<small>(3/128)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril spear",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune dagger",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "11-440",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "75",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "37",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "15",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "3",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bass",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite ore",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril battleaxe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril 2h sword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril platelegs",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant dagger",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant sword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant kiteshield",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "105-734",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkfish",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril ore",
             "quantity": "2 (Noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "9",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "15",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "10",
             "rarity": "Uncommon",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,34 @@
 {
-    "id": "6355",
+    "id": 6355,
     "name": "Bouncer",
+    "incomplete": false,
     "members": true,
-    "release_date": "23 July 2002",
+    "release_date": "2002-07-23",
     "combat_level": 137,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 137,
+    "max_hit": 13,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 116,
+    "slayer_masters": [
+        "krystilia",
+        "vannaka",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Postie Pete's worst nightmare.",
+    "wiki_name": "Bouncer (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bouncer#Normal",
     "attack_level": 120,
     "strength_level": 120,
     "defence_level": 120,
@@ -40,12 +50,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

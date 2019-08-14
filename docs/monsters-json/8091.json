@@ -1,24 +1,33 @@
 {
-    "id": "8091",
+    "id": 8091,
     "name": "Rune dragon",
+    "incomplete": false,
     "members": true,
-    "release_date": "04 January 2018",
+    "release_date": "2018-01-04",
     "combat_level": 380,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 5,
+    "hitpoints": 380,
+    "max_hit": 38,
+    "attack_type": "Melee, Ranged, Magic, Dragonfire",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Stab weapons|Stab",
+        " dragonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 363,
+    "slayer_masters": [
+        "konar",
+        "duradel"
+    ],
+    "examine": "Its scales seem to be made of runite.",
+    "wiki_name": "Rune dragon",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
     "attack_level": 284,
     "strength_level": 284,
     "defence_level": 276,
@@ -40,222 +49,222 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite bar",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune platebody",
             "quantity": "1",
             "rarity": "9/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune longsword",
             "quantity": "1",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune mace",
             "quantity": "1",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune scimitar",
             "quantity": "1",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune warhammer",
             "quantity": "1",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune platelegs",
             "quantity": "1",
             "rarity": "6/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon platelegs",
             "quantity": "1",
             "rarity": "1/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon plateskirt",
             "quantity": "1",
             "rarity": "1/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon med helm",
             "quantity": "1",
             "rarity": "1/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wrath rune",
             "quantity": "30-50",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "75-150",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "50-100",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite bolts (unf)",
             "quantity": "20-30",
             "rarity": "11/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune javelin heads",
             "quantity": "20-30",
             "rarity": "10/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune arrow",
             "quantity": "30-40",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon javelin heads",
             "quantity": "30-40",
             "rarity": "5/127",
             "drop_requirements": "<ref group=\"d\">Only dropped after completion of [[Monkey Madness II]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bolts (unf)",
             "quantity": "20-40",
             "rarity": "1/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy avantoe",
             "quantity": "1 (noted)",
             "rarity": "1/{{#expr:1/(10*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1 (noted)",
             "rarity": "1/{{#expr:1/(8*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy snapdragon",
             "quantity": "1 (noted)",
             "rarity": "1/{{#expr:1/(8*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy torstol",
             "quantity": "1 (noted)",
             "rarity": "1/{{#expr:1/(6*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragonstone",
             "quantity": "1 (noted)",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite ore",
             "quantity": "2-5 (noted)",
             "rarity": "6/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wrath talisman",
             "quantity": "1",
             "rarity": "1/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/50",
-            "drop_requirements": "<ref group=\"d\">The [[brimstone key]] is only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/300",
             "drop_requirements": "{{CiteGeneral|url=https://www.youtube.com/watch?v=4mhLLJQyDQ4&feature=youtu.be&t=3444|title=Vorki/Rune/Addy Dragon Drop Rates Revealed! - OSRS Q&A|author=Old School RuneScape|date=10 Jan 2018|name=droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon limbs",
             "quantity": "1",
             "rarity": "1/800",
             "drop_requirements": "{{NamedRef|droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon metal lump",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Draconic visage",
             "quantity": "1",
             "rarity": "1/8000",
             "drop_requirements": "{{NamedRef|droprates}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

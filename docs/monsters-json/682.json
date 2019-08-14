@@ -1,24 +1,29 @@
 {
-    "id": "682",
+    "id": 682,
     "name": "Damis",
+    "incomplete": true,
     "members": true,
-    "release_date": "18 April 2005",
+    "release_date": "2005-04-18",
     "combat_level": 103,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 103,
+    "max_hit": 22,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "The warrior of darkness.",
+    "wiki_name": "Damis (First form)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Damis#First_form",
     "attack_level": 90,
     "strength_level": 90,
     "defence_level": 90,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Shadow diamond",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped when fought in the [[Shadow Dungeon]] during [[Desert Treasure]].</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

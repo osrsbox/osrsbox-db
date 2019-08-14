@@ -1,24 +1,33 @@
 {
-    "id": "6824",
+    "id": 6824,
     "name": "Giant bat",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 27,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 27,
+    "max_hit": 3,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 32,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "{{*}} An annoying flappy thing.",
+    "wiki_name": "Giant bat",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_bat",
     "attack_level": 22,
     "strength_level": 22,
     "defence_level": 22,
@@ -40,26 +49,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bat bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Giant bat wing",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped during the [[Rag and Bone Man]]. The giant bats located in the [[Brine Rat Cavern]] or at [[Arceuus]] do not drop this.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "<ref group=d>Only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

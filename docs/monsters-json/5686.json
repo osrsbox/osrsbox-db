@@ -1,24 +1,33 @@
 {
-    "id": "5686",
+    "id": 5686,
     "name": "Undead Lumberjack",
+    "incomplete": false,
     "members": true,
-    "release_date": "13 March 2007",
+    "release_date": "2007-03-13",
     "combat_level": 50,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 50,
+    "max_hit": 3,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet",
+        " Crumble Undead"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 14,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "He is one, but he's not alright.",
+    "wiki_name": "Undead Lumberjack (Lv 50)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Undead_Lumberjack#Lv_50",
     "attack_level": 117,
     "strength_level": 16,
     "defence_level": 14,
@@ -40,124 +49,124 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Plank",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lumberjack top",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<small>(1/4)</small><ref name=\"Envision Drops V2\">[https://archive.fo/5P5mn Envision \"Drop Rates V2\" RuneScape Forums]</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lumberjack legs",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<small>(1/4)</small><ref name=\"Envision Drops V2\"></ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lumberjack hat",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<small>(1/4)</small><ref name=\"Envision Drops V2\"></ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lumberjack boots",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<small>(1/4)</small><ref name=\"Envision Drops V2\"></ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zombie bone",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<ref>Only dropped during [[Rag and Bone Man II]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Guthix balance(1)",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Thin snail",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lean snail",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fat snail",
             "quantity": "3",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron arrow",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel arrow",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze med helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze longsword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mind rune",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zombie champion scroll",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": "<small>(1/5,000)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

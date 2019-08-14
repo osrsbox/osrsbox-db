@@ -1,24 +1,31 @@
 {
-    "id": "1683",
+    "id": 1683,
     "name": "Crypt spider",
+    "incomplete": false,
     "members": true,
-    "release_date": "09 May 2005",
+    "release_date": "2005-05-09",
     "combat_level": 56,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 56,
+    "max_hit": 6,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 45,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "Incey wincey.",
+    "wiki_name": "Crypt spider",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crypt_spider",
     "attack_level": 45,
     "strength_level": 47,
     "defence_level": 45,
@@ -39,5 +46,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

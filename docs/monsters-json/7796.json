@@ -1,24 +1,32 @@
 {
-    "id": "7796",
+    "id": 7796,
     "name": "Lobstrosity",
+    "incomplete": false,
     "members": true,
-    "release_date": "07 September 2017",
+    "release_date": "2017-09-07",
     "combat_level": 68,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 68,
+    "max_hit": 9,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "An extremely vicious lobster type thing.",
+    "wiki_name": "Lobstrosity",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Lobstrosity",
     "attack_level": 60,
     "strength_level": 80,
     "defence_level": 40,
@@ -40,390 +48,390 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Raw lobster",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "100",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "20",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "10",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "10",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Seaweed spore",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Limpwurt seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Strawberry seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Marrentill seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jangerberry seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tarromin seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wildblood seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Watermelon seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Harralander seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ranarr seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Whiteberry seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mushroom spore",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toadflax seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Irit seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Belladonna seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Poison ivy seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cactus seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Avantoe seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Kwuarm seed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snapdragon seed",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cadantine seed",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lantadyme seed",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dwarf weed seed",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Torstol seed",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snape grass seed",
             "quantity": "3",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Potato cactus seed",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy guam leaf",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy marrentill",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy tarromin",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy harralander",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy irit leaf",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy avantoe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy cadantine",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy lantadyme",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy dwarf weed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Numulite",
             "quantity": "5-14",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1000",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pufferfish",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Seaweed",
             "quantity": "6 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Giant seaweed",
             "quantity": "6 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toad's legs",
             "quantity": "2 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Caviar",
             "quantity": "2 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Oyster pearls",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified small fossil",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified medium fossil",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified large fossil",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified rare fossil",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,31 @@
 {
-    "id": "6388",
+    "id": 6388,
     "name": "Agrith Naar",
+    "incomplete": true,
     "members": true,
-    "release_date": "14 November 2005",
+    "release_date": "2005-11-14",
     "combat_level": 100,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 100,
+    "max_hit": 11,
+    "attack_type": "Melee, Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Silverlight",
+        " Ranged",
+        " Melee"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A summoned demon.",
+    "wiki_name": "Agrith Naar (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Agrith_Naar#Normal",
     "attack_level": 83,
     "strength_level": 90,
     "defence_level": 82,
@@ -40,12 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

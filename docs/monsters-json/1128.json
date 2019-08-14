@@ -1,24 +1,31 @@
 {
-    "id": "1128",
+    "id": 1128,
     "name": "Dessous (hard)",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 217,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 217,
+    "max_hit": 37,
+    "attack_type": "Melee, Magic, and Ranged",
+    "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": true,
+    "weakness": [
+        "Stab",
+        " Magic",
+        " Ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Vampyre warrior of Zamorak.",
+    "wiki_name": "Dessous (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dessous#Hard",
     "attack_level": 198,
     "strength_level": 198,
     "defence_level": 99,
@@ -40,12 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Vampyre dust",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

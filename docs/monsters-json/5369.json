@@ -1,24 +1,29 @@
 {
-    "id": "5369",
+    "id": 5369,
     "name": "Goblin guard",
+    "incomplete": true,
     "members": true,
-    "release_date": "17 March 2003",
+    "release_date": "2003-03-17",
     "combat_level": 42,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 42,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "'''Asleep:''' Sleeping like an ugly baby. ",
+    "wiki_name": "Goblin guard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Goblin_guard",
     "attack_level": 32,
     "strength_level": 37,
     "defence_level": 37,
@@ -40,96 +45,96 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze sq shield",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze spear",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze bolts",
             "quantity": "8",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Body rune",
             "quantity": "7",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "6",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "5",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Hammer",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chef's hat",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Goblin mail",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Beer",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled goblin head",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

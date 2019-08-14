@@ -1,24 +1,30 @@
 {
-    "id": "2207",
+    "id": 2207,
     "name": "Growler",
+    "incomplete": true,
     "members": true,
-    "release_date": "17 October 2013",
+    "release_date": "2013-10-17",
     "combat_level": 139,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 139,
+    "max_hit": 16,
+    "attack_type": "Magic",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged",
+        " stab"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Defender of the faithful.",
+    "wiki_name": "Growler",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Growler",
     "attack_level": 100,
     "strength_level": 101,
     "defence_level": 120,
@@ -40,124 +46,124 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Saradomin sword",
             "quantity": "1",
             "rarity": "3/16129",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1400-1500",
             "rarity": "124/16129",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 1",
             "quantity": "1",
             "rarity": "1/1524",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/689556758856122368|quote=It's 1/508 for any shard, 1/1524 for a specific one of the three.|date=19 Jan 2016|name=sharddrop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 2",
             "quantity": "1",
             "rarity": "1/1524",
             "drop_requirements": "{{NamedRef|sharddrop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 3",
             "quantity": "1",
             "rarity": "1/1524",
             "drop_requirements": "{{NamedRef|sharddrop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1300-1400",
             "rarity": "9/1524",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel arrow",
             "quantity": "95-100",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel dart",
             "quantity": "95-100",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "5-10",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkfish",
             "quantity": "3",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Summer pie",
             "quantity": "1",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1300-1400",
             "rarity": "62/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1 (noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snape grass",
             "quantity": "5 (Noted)",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unicorn horn",
             "quantity": "6 (Noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/597479427489067008|quote=The bodyguards drop hards at 1/128.|date=10 May 2015}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

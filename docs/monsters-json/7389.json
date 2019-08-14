@@ -1,24 +1,35 @@
 {
-    "id": "7389",
+    "id": 7389,
     "name": "Chasm Crawler",
+    "incomplete": false,
     "members": true,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "combat_level": 68,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 68,
+    "max_hit": 7,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Crush weapons|Crush",
+        " Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 10,
+    "slayer_xp": 600,
+    "slayer_masters": [
+        "turael",
+        "mazchna",
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "A dangerous looking beast.",
+    "wiki_name": "Chasm Crawler",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Chasm_Crawler",
     "attack_level": 22,
     "strength_level": 18,
     "defence_level": 18,
@@ -40,138 +51,138 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dust battlestaff",
             "quantity": "1",
             "rarity": "1/443.2",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mist battlestaff",
             "quantity": "1",
             "rarity": "1/443.2",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Imbued heart",
             "quantity": "1",
             "rarity": "1/1329.6",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Eternal gem",
             "quantity": "1",
             "rarity": "1/1329.6",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze boots",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "3",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "12",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "9",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "3",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "8",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "29",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "10",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Vial of water",
             "quantity": "1",
             "rarity": "13/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "White berries",
             "quantity": "1",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unicorn horn dust",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Eye of newt",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Red spiders' eggs",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Limpwurt root",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snape grass",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

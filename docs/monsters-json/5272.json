@@ -1,24 +1,31 @@
 {
-    "id": "5272",
+    "id": 5272,
     "name": "Monkey Archer",
+    "incomplete": false,
     "members": true,
-    "release_date": "06 December 2004",
+    "release_date": "2004-12-06",
     "combat_level": 86,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
-    "aggressive": false,
+    "size": 1,
+    "hitpoints": 86,
+    "max_hit": 20,
+    "attack_type": "Ranged",
+    "attack_speed": 4,
+    "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A bow-wielding ninja monkey.",
+    "wiki_name": "Monkey Archer",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Monkey_Archer",
     "attack_level": 80,
     "strength_level": 80,
     "defence_level": 80,
@@ -40,19 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey bones (small ninja)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled monkey head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

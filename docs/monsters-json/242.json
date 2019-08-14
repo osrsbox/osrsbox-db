@@ -1,24 +1,36 @@
 {
-    "id": "242",
+    "id": 242,
     "name": "Baby dragon",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 48,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 48,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Ranged",
+        " dragonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "Young but still dangerous.",
+    "wiki_name": "Baby dragon (blue) (2)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Baby_dragon_(blue)#2",
     "attack_level": 40,
     "strength_level": 40,
     "defence_level": 40,
@@ -40,26 +52,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Babydragon bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Baby dragon bone",
             "quantity": "1",
             "rarity": "1/4",
             "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man II]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/640.8",
             "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083783815141707781|author=Mod Kieren|date=16 January 2019|quote=0.2*(CBLEVEL - 100)^2 + 100}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

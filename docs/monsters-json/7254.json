@@ -1,24 +1,35 @@
 {
-    "id": "7254",
+    "id": 7254,
     "name": "Iron dragon",
+    "incomplete": false,
     "members": true,
-    "release_date": "09 June 2016",
+    "release_date": "2016-06-09",
     "combat_level": 215,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 4,
+    "hitpoints": 215,
+    "max_hit": 19,
+    "attack_type": "Melee, Dragonfire",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Magic",
+        " dragonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "Its scales seem to be made of iron.",
+    "wiki_name": "Iron dragon (Catacombs of Kourend)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Iron_dragon#Catacombs_of_Kourend",
     "attack_level": 185,
     "strength_level": 185,
     "defence_level": 185,
@@ -40,215 +51,215 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron bar",
             "quantity": "5",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon plateskirt",
             "quantity": "1",
             "rarity": "1/1024",
             "drop_requirements": "<ref group=d name=dragon>The drop rate is 1/1,024 for a specific legging, or 1/512 for any leggings.</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=DV2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon platelegs",
             "quantity": "1",
             "rarity": "1/1024",
             "drop_requirements": "<ref group=d name=dragon />{{NamedRef|DV2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant axe",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant battleaxe",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant 2h sword",
             "quantity": "1",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant sq shield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune battleaxe",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune knife",
             "quantity": "5",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune med helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "15",
             "rarity": "19/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune javelin",
             "quantity": "4",
             "rarity": "20/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant bolts",
             "quantity": "2-12",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune dart(p)",
             "quantity": "9",
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Soul rune",
             "quantity": "3",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "270",
             "rarity": "20/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "550",
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "990",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "2",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curry",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite limbs",
             "quantity": "1",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Super strength(1)",
             "quantity": "1",
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/82.2",
             "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{NamedRef|DV2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ancient shard",
             "quantity": "1",
             "rarity": "1/203.33",
-            "drop_requirements": "<ref group=d name=catacomb>Only dropped by those found within the [[Catacombs of Kourend]].</ref>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem base",
             "quantity": "1",
             "rarity": "1/305",
-            "drop_requirements": "<ref group=d name=catacomb />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem middle",
             "quantity": "1",
             "rarity": "1/305",
-            "drop_requirements": "<ref group=d name=catacomb />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem top",
             "quantity": "1",
             "rarity": "1/305",
-            "drop_requirements": "<ref group=d name=catacomb />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Draconic visage",
             "quantity": "1",
             "rarity": "1/10000",
             "drop_requirements": "{{NamedRef|DV2}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

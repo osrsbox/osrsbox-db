@@ -1,24 +1,29 @@
 {
-    "id": "7622",
+    "id": 7622,
     "name": "Khazard warlord",
+    "incomplete": true,
     "members": true,
-    "release_date": "23 July 2002",
+    "release_date": "2002-07-23",
     "combat_level": 112,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 112,
+    "max_hit": 10,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "He looks real nasty, smells bad too.",
+    "wiki_name": "Khazard warlord (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Khazard_warlord#Normal",
     "attack_level": 75,
     "strength_level": 78,
     "defence_level": 80,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Orbs of protection",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"d\">Only during [[Tree Gnome Village]]</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,32 @@
 {
-    "id": "1674",
+    "id": 1674,
     "name": "Guthan the Infested",
+    "incomplete": false,
     "members": true,
-    "release_date": "09 May 2005",
+    "release_date": "2005-05-09",
     "combat_level": 115,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 115,
+    "max_hit": 24,
+    "attack_type": "Melee",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 115,
+    "slayer_masters": [
+        "konar",
+        "duradel"
+    ],
+    "examine": "A vengeful spirit corrupted by dark magic.",
+    "wiki_name": "Guthan the Infested",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guthan_the_Infested",
     "attack_level": 100,
     "strength_level": 100,
     "defence_level": 100,
@@ -40,12 +48,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/97",
-            "drop_requirements": "<ref>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

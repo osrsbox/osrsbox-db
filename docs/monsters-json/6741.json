@@ -1,24 +1,34 @@
 {
-    "id": "6741",
+    "id": 6741,
     "name": "Zombie",
+    "incomplete": false,
     "members": false,
-    "release_date": "02 February 2004",
+    "release_date": "2004-02-02",
     "combat_level": 159,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 159,
+    "max_hit": 14,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet",
+        " Crumble Undead",
+        " Slash"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "The walking dead.",
+    "wiki_name": "Zombie (Sepulcher of Death)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zombie_(Sepulcher_of_Death)",
     "attack_level": 130,
     "strength_level": 130,
     "defence_level": 130,
@@ -40,61 +50,61 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1-7,10",
             "rarity": "Always",
             "drop_requirements": "<ref name=\"Bones\">Big bones are always dropped in varying quantities, but regular bones or dragon bones in members can be dropped with them.\n</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "40",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic rune",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "35,50",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing bait",
             "quantity": "27,50",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "26",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "3,9,10",
             "rarity": "Varies",
             "drop_requirements": "<ref name=\"Bones\"/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bones",
             "quantity": "1-3",
             "rarity": "Varies",
             "drop_requirements": "<ref name=\"Bones\"/>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": true
 }

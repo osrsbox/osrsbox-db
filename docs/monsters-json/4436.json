@@ -1,24 +1,32 @@
 {
-    "id": "4436",
+    "id": 4436,
     "name": "Vampyre Juvenile",
+    "incomplete": false,
     "members": true,
-    "release_date": "22 March 2006",
+    "release_date": "2006-03-22",
     "combat_level": 45,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 45,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Silver weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 60,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "A juvenile vampyre. It looks really hungry!",
+    "wiki_name": "Vampyre Juvenile (Burgh de Rott)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Vampyre_Juvenile#Burgh_de_Rott",
     "attack_level": 40,
     "strength_level": 30,
     "defence_level": 30,
@@ -40,12 +48,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Vampyre dust",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

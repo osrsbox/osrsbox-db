@@ -1,24 +1,35 @@
 {
-    "id": "430",
+    "id": 430,
     "name": "Turoth",
+    "incomplete": false,
     "members": true,
-    "release_date": "26 January 2005",
+    "release_date": "2005-01-26",
     "combat_level": 83,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 83,
+    "max_hit": 10,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Leaf-bladed weapons",
+        " Broad bolts/Broad arrows|arrows",
+        " Magic Dart"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 55,
+    "slayer_xp": 76,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar"
+    ],
+    "examine": "It's one small leg short!",
+    "wiki_name": "Turoth (Level 83)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Turoth#Level_83",
     "attack_level": 53,
     "strength_level": 83,
     "defence_level": 83,
@@ -40,124 +51,124 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Leaf-bladed sword",
             "quantity": "1",
             "rarity": "1/500",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=DV2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic robe bottom (light)",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": "{{NamedRef|DV2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel platelegs",
             "quantity": "1",
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril axe",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant full helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune dagger",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "3",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "15",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "37",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "44",
             "rarity": "29/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "132",
             "rarity": "12/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "440",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Limpwurt root",
             "quantity": "1",
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "~1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/124.2",
-            "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref><ref group=d>Brimstone key rarities for levels 83, 85, 87, and 89 are 1/157.8, 1/145, 1/133.8, and 1/124.2 respectively.</ref>"
+            "drop_requirements": "konar-task-only"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

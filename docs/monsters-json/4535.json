@@ -1,24 +1,31 @@
 {
-    "id": "4535",
+    "id": 4535,
     "name": "Blessed giant rat",
+    "incomplete": false,
     "members": true,
-    "release_date": "03 March 2003",
+    "release_date": "2003-03-03",
     "combat_level": 9,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 9,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 30,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "It's one of Iban's pet vermin.",
+    "wiki_name": "Blessed giant rat",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blessed_giant_rat",
     "attack_level": 5,
     "strength_level": 1,
     "defence_level": 1,
@@ -40,12 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

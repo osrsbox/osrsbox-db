@@ -1,24 +1,33 @@
 {
-    "id": "2158",
+    "id": 2158,
     "name": "TzHaar-Mej",
+    "incomplete": false,
     "members": true,
-    "release_date": "19 September 2005",
+    "release_date": "2005-09-19",
     "combat_level": 103,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 103,
+    "max_hit": 13,
+    "attack_type": "Magic, Melee",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee",
+        " Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 100,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Looks like some kind of mystic.",
+    "wiki_name": "TzHaar-Mej (monster)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Mej_(monster)",
     "attack_level": 80,
     "strength_level": 80,
     "defence_level": 80,
@@ -40,89 +49,89 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Obsidian cape",
             "quantity": "1",
             "rarity": "1/4096",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toktz-mej-tal",
             "quantity": "1",
             "rarity": "1/4096",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "25",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "25",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "25",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "25",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "2",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "2",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tokkul",
             "quantity": "1-71",
             "rarity": "Common",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

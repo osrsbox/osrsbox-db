@@ -1,24 +1,30 @@
 {
-    "id": "4210",
+    "id": 4210,
     "name": "Possessed Priest",
+    "incomplete": true,
     "members": true,
-    "release_date": "26 April 2005",
+    "release_date": "2005-04-26",
     "combat_level": 91,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 91,
+    "max_hit": 6,
+    "attack_type": "Magic, melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Slash",
+        " ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "He has a dangerous glint in his eye.",
+    "wiki_name": "Possessed Priest",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Possessed_Priest",
     "attack_level": 90,
     "strength_level": 90,
     "defence_level": 40,
@@ -40,54 +46,54 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Agility potion(4)",
             "quantity": "1",
             "rarity": "Random",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Attack potion(4)",
             "quantity": "1",
             "rarity": "Random",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Defence potion(4)",
             "quantity": "1",
             "rarity": "Random",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Magic potion(4)",
             "quantity": "1",
             "rarity": "Random",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Strength potion(4)",
             "quantity": "1",
             "rarity": "Random",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1 - 1260",
             "rarity": "Uncommon",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

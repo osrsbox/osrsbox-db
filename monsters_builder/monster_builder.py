@@ -19,7 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 
-import os
 import json
 import logging
 from pathlib import Path
@@ -115,7 +114,7 @@ class BuildMonster:
     def export_monster_to_json(self):
         """Export monster to JSON, if requested."""
         if self.export_monster:
-            output_dir = os.path.join("..", "docs", "monsters-json")
+            output_dir = Path(config.DOCS_PATH, "monsters-json")
             self.monster_definition.export_json(True, output_dir)
         logging.debug(self.monster_dict)
 

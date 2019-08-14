@@ -1,24 +1,33 @@
 {
-    "id": "5054",
+    "id": 5054,
     "name": "Skeleton Hellhound",
+    "incomplete": false,
     "members": true,
-    "release_date": "10 January 2005",
+    "release_date": "2005-01-10",
     "combat_level": 97,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 97,
+    "max_hit": 12,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 55,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "A creature summoned by Vanstrom to kill the remaining Myreque.",
+    "wiki_name": "Skeleton Hellhound (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Skeleton_Hellhound#Normal",
     "attack_level": 70,
     "strength_level": 110,
     "defence_level": 100,
@@ -40,40 +49,40 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "4",
             "rarity": "Always",
             "drop_requirements": "<ref group=d name=quest>Only dropped when fought during [[In Search of the Myreque]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped in the [[Nightmare Zone]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "2",
             "rarity": "Always",
             "drop_requirements": "<ref group=d name=quest />"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|special bones}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

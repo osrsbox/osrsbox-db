@@ -1,24 +1,36 @@
 {
-    "id": "8614",
+    "id": 8614,
     "name": "Sulphur Lizard",
+    "incomplete": false,
     "members": true,
-    "release_date": "10 January 2019",
+    "release_date": "2019-01-10",
     "combat_level": 50,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 50,
+    "max_hit": 5,
+    "attack_type": "Crush",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab",
+        " ranged",
+        " magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 44,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "turael",
+        "mazchna",
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "A cold-blooded creature, partial to warmth.",
+    "wiki_name": "Sulphur Lizard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sulphur_Lizard",
     "attack_level": 50,
     "strength_level": 45,
     "defence_level": 30,
@@ -40,117 +52,117 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic gloves (light)",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "10-25",
             "rarity": "26/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "40-60",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "5-10",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron ore",
             "quantity": "5-10 (noted)",
             "rarity": "21.5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coal",
             "quantity": "5-10 (noted)",
             "rarity": "13/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron bar",
             "quantity": "6-10 (noted)",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel bar",
             "quantity": "3-5 (noted)",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tin ore",
             "quantity": "10-15 (noted)",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Copper ore",
             "quantity": "10-15 (noted)",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Silver ore",
             "quantity": "5-10 (noted)",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Silver bar",
             "quantity": "3-5 (noted)",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril ore",
             "quantity": "3-5 (noted)",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rainbow fish",
             "quantity": "1",
             "rarity": "13/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (medium)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1105938529320878086|quote=[What is the droprate of a medium clue from a suplhur lizard?] 1/128.|date=13 March 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,33 @@
 {
-    "id": "626",
+    "id": 626,
     "name": "Fever spider",
+    "incomplete": false,
     "members": true,
-    "release_date": "31 October 2005",
+    "release_date": "2005-10-31",
     "combat_level": 49,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 49,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " Crush"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 42,
+    "slayer_xp": 40,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "A bunch of legs, eyes and teeth.",
+    "wiki_name": "Fever spider",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fever_spider",
     "attack_level": 60,
     "strength_level": 30,
     "defence_level": 40,
@@ -40,19 +49,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Fever spider body",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref>Only dropped during [[Rum Deal]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

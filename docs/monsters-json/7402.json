@@ -1,24 +1,35 @@
 {
-    "id": "7402",
+    "id": 7402,
     "name": "Abhorrent spectre",
+    "incomplete": false,
     "members": true,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "combat_level": 253,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 253,
+    "max_hit": 31,
+    "attack_type": "Magic",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged",
+        " Salve amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 60,
+    "slayer_xp": 2500,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "I'd smell better after completing 3145 laps of an agility course dressed as a monkey.",
+    "wiki_name": "Abhorrent spectre",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Abhorrent_spectre",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 180,
@@ -40,68 +51,68 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic robe bottom (dark)",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel axe",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lava battlestaff",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant platelegs",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune full helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "460",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=\nhttps://twitter.com/JagexAsh/status/845257642859790337|quote=1/128.|date=24 March 2017}}{{CiteGeneral|url=http://services.runescape.com/m=news/superior-slayer-encounters?oldschool=1|title=Update: Superior Slayer Encounters|author=Jagex|accessdate=2019-03-10|name=drop2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/69.4",
-            "drop_requirements": "<ref group='d'>Only dropped if killed as a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

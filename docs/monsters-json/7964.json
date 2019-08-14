@@ -1,24 +1,29 @@
 {
-    "id": "7964",
+    "id": 7964,
     "name": "Ithoi the Navigator",
+    "incomplete": true,
     "members": false,
-    "release_date": "07 December 2017",
+    "release_date": "2017-12-07",
     "combat_level": 35,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 35,
+    "max_hit": 6,
+    "attack_type": "Magic",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "He's so fired.",
+    "wiki_name": "Ithoi the Navigator",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ithoi_the_Navigator",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 30,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

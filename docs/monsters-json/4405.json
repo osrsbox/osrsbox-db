@@ -1,24 +1,30 @@
 {
-    "id": "4405",
+    "id": 4405,
     "name": "Tower guard",
+    "incomplete": true,
     "members": true,
-    "release_date": "23 October 2002",
+    "release_date": "2002-10-23",
     "combat_level": 28,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 28,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " Stab"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Tries to keep the peace.",
+    "wiki_name": "Tower guard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Tower_guard",
     "attack_level": 26,
     "strength_level": 26,
     "defence_level": 26,
@@ -40,96 +46,96 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "8",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "2",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "3",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "4",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "6",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze arrow",
             "quantity": "4",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel arrow",
             "quantity": "2",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel longsword",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel med helm",
             "quantity": "1",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "6-35",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron ore",
             "quantity": "",
             "rarity": "",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mind talisman",
             "quantity": "",
             "rarity": "",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

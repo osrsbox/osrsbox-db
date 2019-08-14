@@ -1,24 +1,35 @@
 {
-    "id": "6357",
+    "id": 6357,
     "name": "Black demon",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 172,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 172,
+    "max_hit": 18,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " demonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 157,
+    "slayer_masters": [
+        "krystilia",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "A big, scary, jet-black demon.",
+    "wiki_name": "Black demon (Level 172)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_demon#Level_172",
     "attack_level": 145,
     "strength_level": 152,
     "defence_level": 148,
@@ -40,292 +51,292 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune med helm",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune chainbody",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
-            "drop_requirements": "<ref>Only dropped by those found in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled demon head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Larran's key",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>"
+            "drop_requirements": "krystilia-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mysterious emblem",
             "quantity": "1",
             "rarity": "1/77",
             "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref><ref group=d name=task>Rarities listed for level 172 and 188 respectively</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Slayer's enchantment",
             "quantity": "1",
             "rarity": "1/195",
             "drop_requirements": "<ref group=d name=wildytask /><ref group=d name=task />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
-            "drop_requirements": "<ref>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "Varies",
-            "drop_requirements": "<ref>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel battleaxe",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black sword",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black axe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "50",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "37",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "5,10,12",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "7",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "3-4",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "30,44,132,200,220,460",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lobster",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Defence potion(3)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ancient shard",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref  group=d name=\"catacomb\">Only dropped by those found within the [[Catacombs of Kourend]].</ref><br/><small>Lv 178: (1/226.66)<br/>Lv 184: (1/220)</small>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem base",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=\"catacomb\" /><br/><small>Lv 178: (1/340)<br/>Lv 184: (1/330)</small>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem middle",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=\"catacomb\" /><br/><small>Lv 178: (1/340)<br/>Lv 184: (1/330)</small>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem top",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=\"catacomb\" /><br/><small>Lv 178: (1/340)<br/>Lv 184: (1/330)</small>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant dagger",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant battleaxe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant platebody",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune full helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune dagger",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune sword",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "25",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "5",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "7",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "15",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "250-899",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shark",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite ore",
             "quantity": "2 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "2 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

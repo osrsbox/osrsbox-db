@@ -1,24 +1,33 @@
 {
-    "id": "6917",
+    "id": 6917,
     "name": "Lizardman",
+    "incomplete": false,
     "members": true,
-    "release_date": "07 January 2016",
+    "release_date": "2016-01-07",
     "combat_level": 62,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 62,
+    "max_hit": 9,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 4,
     "aggressive": true,
-    "poisonous": false,
+    "poisonous": true,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Stab"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 60,
+    "slayer_masters": [
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "'''Normal:''' From a race created during the darker days of Kourend.",
+    "wiki_name": "Lizardman (Level 62)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Lizardman#Level_62",
     "attack_level": 53,
     "strength_level": 53,
     "defence_level": 52,
@@ -40,75 +49,75 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xeric's talisman (inert)",
             "quantity": "1",
             "rarity": "1/250",
             "drop_requirements": "<ref group=d>Reduced to 1/125 with the completion of the [[Easy Kourend & Kebos Diary]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lizardman fang",
             "quantity": "1",
             "rarity": "10/87",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xerician fabric",
             "quantity": "1",
             "rarity": "6/87",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/461.8",
             "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083783815141707781|author=Mod Kieren|date=16 January 2019|quote=0.2*(CBLEVEL - 100)^2 + 100|name=key}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xeric's talisman (inert)",
             "quantity": "1",
             "rarity": "1/250",
             "drop_requirements": "<ref group=d>Reduced to 1/125 with the completion of the [[Easy Kourend & Kebos Diary]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lizardman fang",
             "quantity": "1",
             "rarity": "14/78",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xerician fabric",
             "quantity": "1",
             "rarity": "8/78",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/308.8",
-            "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{NamedRef|key}}"
+            "drop_requirements": "konar-task-only"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

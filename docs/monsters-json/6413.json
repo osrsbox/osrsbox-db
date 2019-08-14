@@ -1,24 +1,29 @@
 {
-    "id": "6413",
+    "id": 6413,
     "name": "Broodoo victim",
+    "incomplete": true,
     "members": true,
-    "release_date": "09 August 2005",
+    "release_date": "2005-08-09",
     "combat_level": 60,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 60,
+    "max_hit": 7,
+    "attack_type": "Magic",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Food"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "An undead victim of some ancient murderous ritual; his skin is pale and drawn.",
+    "wiki_name": "Broodoo victim (White)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Broodoo_victim#White",
     "attack_level": 0,
     "strength_level": 0,
     "defence_level": 26,
@@ -40,26 +45,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Tribal mask (green)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group='d' name='mask'>The victim will always drop the colour of the mask they are wearing.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tribal mask (orange)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group='d' name='mask'/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tribal mask (blue)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group='d' name='mask'/>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

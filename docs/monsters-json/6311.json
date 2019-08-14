@@ -1,24 +1,29 @@
 {
-    "id": "6311",
+    "id": 6311,
     "name": "Dessourt (hard)",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 217,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 217,
+    "max_hit": 37,
+    "attack_type": "Melee, Magic, Magical Ranged",
+    "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Bad for your teeth... and the rest of your body too.",
+    "wiki_name": "Dessourt (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dessourt#Hard",
     "attack_level": 198,
     "strength_level": 198,
     "defence_level": 198,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Chocolate dust",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,32 @@
 {
-    "id": "2172",
+    "id": 2172,
     "name": "TzHaar-Xil",
+    "incomplete": false,
     "members": true,
-    "release_date": "19 September 2005",
+    "release_date": "2005-09-19",
     "combat_level": 133,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 133,
+    "max_hit": 0,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 120,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Doesn't look very social.",
+    "wiki_name": "TzHaar-Xil",
+    "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Xil",
     "attack_level": 140,
     "strength_level": 100,
     "defence_level": 100,
@@ -40,68 +48,68 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Toktz-xil-ul",
             "quantity": "9-29",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/512)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toktz-xil-ak",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/512)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toktz-xil-ek",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/512)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Obsidian cape",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/512)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tokkul",
             "quantity": "1-59",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut sapphire",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut emerald",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut diamond",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

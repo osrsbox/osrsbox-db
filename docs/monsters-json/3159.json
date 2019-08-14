@@ -1,24 +1,34 @@
 {
-    "id": "3159",
+    "id": 3159,
     "name": "Spiritual warrior",
+    "incomplete": false,
     "members": true,
-    "release_date": "17 October 2013",
+    "release_date": "2013-10-17",
     "combat_level": 115,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 115,
+    "max_hit": 11,
+    "attack_type": "Melee",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 68,
+    "slayer_xp": 100,
+    "slayer_masters": [
+        "krystilia",
+        "vannaka",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Warrior of Zamorak.",
+    "wiki_name": "Spiritual warrior (Zamorak)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Spiritual_warrior#Zamorak",
     "attack_level": 100,
     "strength_level": 100,
     "defence_level": 100,
@@ -40,187 +50,187 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Leather gloves",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron sword",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron scimitar",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril platelegs",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel longsword",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel chainbody",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant full helm",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel sword",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black kiteshield",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black warhammer",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril mace",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black dagger",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril spear(p)",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant battleaxe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril axe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron plateskirt",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant 2h sword",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune longsword",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune kiteshield",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune halberd",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Only dropped by those found in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ecumenical key",
             "quantity": "1",
             "rarity": "1/60",
-            "drop_requirements": "<ref group=d>Only dropped by those located in the [[Wilderness God Wars Dungeon]]. Drop rate decreases to 1/70 if one key is owned, and 1/80 if two are owned. If the medium or hard [[Wilderness Diary]] is completed the drop rate of 1/60 still applies until a player owns two or three keys, respectively.</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Larran's key",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>"
+            "drop_requirements": "krystilia-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mysterious emblem",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}<br/><small>Armadyl: (1/106)<br/>Zamorak: (1/105)<br/>Saradomin: (1/100)<br/>Bandos: (1/90)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}<ref group=d>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Slayer's enchantment",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<ref group=d name=wildytask />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}<br/><small>Armadyl: (1/106)<br/>Zamorak: (1/105)<br/>Saradomin: (1/100)<br/>Bandos: (1/90)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": true
 }

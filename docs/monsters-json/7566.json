@@ -1,29 +1,35 @@
 {
-    "id": "7566",
+    "id": 7566,
     "name": "Vasa Nistirio",
+    "incomplete": true,
     "members": true,
     "release_date": null,
     "combat_level": 0,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 5,
+    "hitpoints": 0,
+    "max_hit": 0,
+    "attack_type": "Magic, Ranged",
+    "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": true,
+    "weakness": [
+        "Crush",
+        " ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A former High Priest, fused with the rock and bound to the dark crystals.",
+    "wiki_name": "Vasa Nistirio",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Vasa_Nistirio",
     "attack_level": 1,
     "strength_level": 1,
-    "defence_level": null,
-    "magic_level": null,
-    "ranged_level": null,
+    "defence_level": 0,
+    "magic_level": 0,
+    "ranged_level": 0,
     "attack_stab": 0,
     "attack_slash": 0,
     "attack_crush": 0,
@@ -40,33 +46,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Nistirio's manifesto",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Endarkened juice",
             "quantity": "5",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xeric's aid (+)",
             "quantity": "2",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Twisted (+)",
             "quantity": "2",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

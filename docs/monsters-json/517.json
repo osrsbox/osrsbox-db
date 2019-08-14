@@ -1,24 +1,29 @@
 {
-    "id": "517",
+    "id": 517,
     "name": "Thug",
+    "incomplete": true,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 10,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 10,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Low on brains, high on aggression.",
+    "wiki_name": "Thug",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Thug",
     "attack_level": 7,
     "strength_level": 5,
     "defence_level": 9,
@@ -40,131 +45,131 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron med helm",
             "quantity": "1",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron battleaxe",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel axe",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "2",
             "rarity": "13/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "2",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "2",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "2",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic rune",
             "quantity": "2",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron ore",
             "quantity": "1",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron bar",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coal",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "8",
             "rarity": "24/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "15",
             "rarity": "12/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "30",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "20",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "<ref group=\"d\">1/64 if a [[Ring of wealth (i)]] is worn.</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

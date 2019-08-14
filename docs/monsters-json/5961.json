@@ -1,24 +1,29 @@
 {
-    "id": "5961",
+    "id": 5961,
     "name": "Spinolyp",
+    "incomplete": true,
     "members": true,
-    "release_date": "07 November 2005",
+    "release_date": "2005-11-07",
     "combat_level": 76,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 0,
+    "max_hit": 10,
+    "attack_type": "{{*}} Ranged, Ranged magic",
+    "attack_speed": 4,
     "aggressive": true,
-    "poisonous": false,
+    "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A sneaky, spiny, subterranean sea-dwelling scamp.",
+    "wiki_name": "Spinolyp",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Spinolyp",
     "attack_level": 10,
     "strength_level": 10,
     "defence_level": 10,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

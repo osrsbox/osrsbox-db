@@ -1,24 +1,29 @@
 {
-    "id": "6056",
+    "id": 6056,
     "name": "Guard",
+    "incomplete": false,
     "members": true,
-    "release_date": "21 January 2004",
+    "release_date": "2004-01-21",
     "combat_level": 37,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 37,
+    "max_hit": 4,
+    "attack_type": "Ranged",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
+    "slayer_xp": 0,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Keeps order in the ranging guild.",
+    "wiki_name": "Guard (Ranging Guild)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guard_(Ranging_Guild)",
     "attack_level": 20,
     "strength_level": 20,
     "defence_level": 20,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

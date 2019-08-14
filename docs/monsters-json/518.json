@@ -1,24 +1,31 @@
 {
-    "id": "518",
+    "id": 518,
     "name": "Rogue",
+    "incomplete": false,
     "members": true,
-    "release_date": "10 May 2002",
+    "release_date": "2002-05-10",
     "combat_level": 15,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 15,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 17,
+    "slayer_masters": [
+        "krystilia"
+    ],
+    "examine": "Rogueish.",
+    "wiki_name": "Rogue (Lv 15)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rogue#Lv_15",
     "attack_level": 13,
     "strength_level": 13,
     "defence_level": 13,
@@ -40,285 +47,285 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze med helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron dagger",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron platebody",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze bolts",
             "quantity": "2-12",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze arrow",
             "quantity": "7",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "3",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "4",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "8",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mind rune",
             "quantity": "6",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "1-2",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy guam leaf",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy marrentill",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy tarromin",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy harralander",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy irit leaf",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy avantoe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy cadantine",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy lantadyme",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy dwarf weed",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1-5, 25",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth talisman",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing bait",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cabbage",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Copper ore",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jug of wine",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lockpick",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
+            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<ref group=d>Twice as common if a [[Ring of wealth (i)]] is worn.</ref>"
         },
         {
-            "id": null,
-            "name": "Larran's key",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>"
-        },
-        {
-            "id": null,
+            "id": 1,
             "name": "Mysterious emblem",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref name=wildytask group=d>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}<br/><small>Lv 15: (1/147)<br/>Lv 135: (1/91)</small>"
+            "rarity": "1/147",
+            "drop_requirements": "<ref group=d>Mysterious emblems are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Slayer's enchantment",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref name=wildytask group=d />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}<br/><small>Lv 15: (1/307)<br/>Lv 135: (1/220)</small>"
+            "rarity": "1/307",
+            "drop_requirements": "<ref group=d>Slayer's enchantments are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
         },
         {
-            "id": null,
+            "id": 1,
+            "name": "Larran's key",
+            "quantity": "1",
+            "rarity": "1/1367",
+            "drop_requirements": "<ref group=d>Larran's keys are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 1-80: 1 in (100 + ((3 / 10) x (80 - level) x (80 - level))).}}{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 81-350+: 1 in (50 + number scaled linearly between 99 at level 81 and 50 at level 350)}}"
+        },
+        {
+            "id": 1,
             "name": "Iron dagger(p)",
             "quantity": "1",
             "rarity": "~1/71",
             "drop_requirements": "<ref group=t>Pickpocket rate of [[Iron dagger(p)]] is approximately 1 in 71 (based on 1000 pickpockets).</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "25-40",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "8",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jug of wine",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lockpick",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

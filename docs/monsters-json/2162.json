@@ -1,24 +1,33 @@
 {
-    "id": "2162",
+    "id": 2162,
     "name": "TzHaar-Hur",
+    "incomplete": false,
     "members": true,
-    "release_date": "19 September 2005",
+    "release_date": "2005-09-19",
     "combat_level": 74,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 74,
+    "max_hit": 9,
+    "attack_type": "Melee",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee",
+        " Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 80,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Looks like a craftsman of some kind.",
+    "wiki_name": "TzHaar-Hur",
+    "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Hur",
     "attack_level": 60,
     "strength_level": 60,
     "defence_level": 60,
@@ -40,96 +49,96 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Chisel",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Hammer",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jug",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Knife",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pot",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tokkul",
             "quantity": "1-16",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut sapphire",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tokkul",
             "quantity": "3-14",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut sapphire",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut emerald",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut diamond",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

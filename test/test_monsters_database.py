@@ -25,11 +25,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import json
 from pathlib import Path
 
-import pytest
 import jsonschema
 
 
-@pytest.mark.skip(reason="Skipped: The monster data is not currently populated.")
 def test_monsters_data(path_to_docs_dir: Path):
     """Unit test to check monsters database contents against JSON schema
 
@@ -48,6 +46,6 @@ def test_monsters_data(path_to_docs_dir: Path):
     # Validate each file
     for json_file in fis:
         with open(json_file) as fi:
-            item = json.load(fi)
-            # print(item["id"])
-            jsonschema.validate(instance=item, schema=schema)
+            monster = json.load(fi)
+            # print(monster["id"])
+            jsonschema.validate(instance=monster, schema=schema)

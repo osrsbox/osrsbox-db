@@ -1,24 +1,29 @@
 {
-    "id": "6588",
+    "id": 6588,
     "name": "Bandosian guard",
+    "incomplete": true,
     "members": true,
-    "release_date": "12 June 2014",
+    "release_date": "2014-06-12",
     "combat_level": 125,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 125,
+    "max_hit": 13,
+    "attack_type": "Melee",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A follower of Bandos.",
+    "wiki_name": "Bandosian guard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bandosian_guard",
     "attack_level": 110,
     "strength_level": 115,
     "defence_level": 80,
@@ -40,117 +45,117 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune spear",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune thrownaxe",
             "quantity": "6",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Armadyl helmet",
             "quantity": "1",
             "rarity": "1/1000000",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandos boots",
             "quantity": "1",
             "rarity": "1/1000000",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "35-350",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy guam leaf",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Hammer",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Headless arrow",
             "quantity": "30",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy tarromin",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic rune",
             "quantity": "20",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "5 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shark",
             "quantity": "1-4",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "20",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "20",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
-            "drop_requirements": "<ref>Only dropped by those found in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

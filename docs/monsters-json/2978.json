@@ -1,24 +1,29 @@
 {
-    "id": "2978",
+    "id": 2978,
     "name": "Big Snake",
+    "incomplete": true,
     "members": true,
-    "release_date": "15 March 2006",
+    "release_date": "2006-03-15",
     "combat_level": 84,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 84,
+    "max_hit": 14,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": true,
-    "poisonous": false,
+    "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A big snake.",
+    "wiki_name": "Big Snake",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Big_Snake",
     "attack_level": 60,
     "strength_level": 60,
     "defence_level": 60,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snake corpse",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

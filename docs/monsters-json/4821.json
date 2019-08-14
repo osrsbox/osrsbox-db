@@ -1,24 +1,29 @@
 {
-    "id": "4821",
+    "id": 4821,
     "name": "Mudskipper",
+    "incomplete": true,
     "members": true,
-    "release_date": "15 March 2006",
+    "release_date": "2006-03-15",
     "combat_level": 31,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 31,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Not the most beautiful fish in the sea.",
+    "wiki_name": "Mudskipper (Lv 31)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mudskipper#Lv_31",
     "attack_level": 30,
     "strength_level": 30,
     "defence_level": 29,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Mudskipper hide",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Oyster",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

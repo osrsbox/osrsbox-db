@@ -1,24 +1,35 @@
 {
-    "id": "416",
+    "id": 416,
     "name": "Abyssal demon",
+    "incomplete": false,
     "members": true,
-    "release_date": "26 January 2005",
+    "release_date": "2005-01-26",
     "combat_level": 124,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 124,
+    "max_hit": 8,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " demonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 85,
+    "slayer_xp": 150,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "A denizen of the Abyss!",
+    "wiki_name": "Abyssal demon (Standard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_demon#Standard",
     "attack_level": 97,
     "strength_level": 67,
     "defence_level": 135,
@@ -40,236 +51,236 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Abyssal whip",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Abyssal dagger",
             "quantity": "1",
             "rarity": "1/32768",
             "drop_requirements": "{{CiteGeneral|url=http://services.runescape.com/m=news/item-incinerator?oldschool=1|title=Update: Item Incinerator|author=Jagex|accessdate=2019-03-10}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black sword",
             "quantity": "1",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel battleaxe",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black axe",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune chainbody",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune med helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "132",
             "rarity": "35/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "220",
             "rarity": "9/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "30",
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "44",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "460",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "50",
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "10",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pure essence",
             "quantity": "60 (noted)",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "7",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lobster",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "3",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic talisman",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos talisman",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Defence potion(3)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled abyssal head",
             "quantity": "1",
             "rarity": "1/25",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/95.2",
-            "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ancient shard",
             "quantity": "1",
             "rarity": "1/233.33",
-            "drop_requirements": "<ref name=catacomb group=d>Only dropped by those found within the [[Catacombs of Kourend]].</ref>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem base",
             "quantity": "1",
             "rarity": "1/350",
-            "drop_requirements": "<ref name=catacomb group=d />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem middle",
             "quantity": "1",
             "rarity": "1/350",
-            "drop_requirements": "<ref name=catacomb group=d />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem top",
             "quantity": "1",
             "rarity": "1/350",
-            "drop_requirements": "<ref name=catacomb group=d />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/1200",
             "drop_requirements": "{{NamedRef|drop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Abyssal head",
             "quantity": "1",
             "rarity": "1/6000",
             "drop_requirements": "{{NamedRef|drop}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,32 @@
 {
-    "id": "232",
+    "id": 232,
     "name": "Jungle Wolf",
+    "incomplete": false,
     "members": true,
-    "release_date": "20 August 2003",
+    "release_date": "2003-08-20",
     "combat_level": 64,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 64,
+    "max_hit": 6,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 70,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "A rare jungle wolf - specific to the Kharazi jungle.",
+    "wiki_name": "Jungle wolf",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_wolf",
     "attack_level": 50,
     "strength_level": 55,
     "defence_level": 52,
@@ -40,19 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Wolf bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wolf bone",
             "quantity": "1",
             "rarity": "1/4",
             "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,29 @@
 {
-    "id": "4308",
+    "id": 4308,
     "name": "Sea troll",
+    "incomplete": true,
     "members": true,
-    "release_date": "02 May 2006",
+    "release_date": "2006-05-02",
     "combat_level": 79,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 79,
+    "max_hit": 7,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "An aquatic troll.",
+    "wiki_name": "Sea troll (Lv 79)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sea_troll#Lv_79",
     "attack_level": 60,
     "strength_level": 60,
     "defence_level": 60,
@@ -40,33 +45,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"d\" name=\"low\">Only by the level 65/79 variant</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"d\" name=\"high\">Only by the level 87/101 variant</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "<ref group=\"d\" name=\"high\">Only by the level 87/101 variant</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "<ref group=\"d\" name=\"high\" />{{NamedRef|special bones}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

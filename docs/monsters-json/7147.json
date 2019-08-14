@@ -1,24 +1,33 @@
 {
-    "id": "7147",
+    "id": 7147,
     "name": "Demonic gorilla",
+    "incomplete": false,
     "members": true,
-    "release_date": "06 May 2016",
+    "release_date": "2016-05-06",
     "combat_level": 275,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 275,
+    "max_hit": 0,
+    "attack_type": "Melee, Ranged, Magic",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Demonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "turael",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "One of Glough's demonic creations.",
+    "wiki_name": "Demonic gorilla",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
     "attack_level": 205,
     "strength_level": 195,
     "defence_level": 200,
@@ -40,215 +49,215 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zenyte shard",
             "quantity": "1",
             "rarity": "1/300",
             "drop_requirements": "{{NamedRef|Uniques}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ballista limbs",
             "quantity": "1",
             "rarity": "1/500",
             "drop_requirements": "{{NamedRef|Uniques}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ballista spring",
             "quantity": "1",
             "rarity": "1/500",
             "drop_requirements": "{{NamedRef|Uniques}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Light frame",
             "quantity": "1",
             "rarity": "1/750",
             "drop_requirements": "{{NamedRef|Uniques}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Heavy frame",
             "quantity": "1",
             "rarity": "1/1500",
             "drop_requirements": "{{NamedRef|Uniques}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey tail",
             "quantity": "1",
             "rarity": "1/1500",
             "drop_requirements": "{{NamedRef|Uniques}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune platelegs",
             "quantity": "1",
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune plateskirt",
             "quantity": "1",
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune chainbody",
             "quantity": "1",
             "rarity": "20/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon scimitar",
             "quantity": "1",
             "rarity": "10/500",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1115648914869444609|date=9 Apr 2019|archiveurl=http://archive.fo/V4gpX|archivedate=10 Apr 2019|quote=10/500, actually, but that's equivalent :)|name=D scimi}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "50-75",
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "50-75",
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite bolts",
             "quantity": "100-150",
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Javelin shaft",
             "quantity": "750-1250",
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune javelin heads",
             "quantity": "45-55",
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon javelin heads",
             "quantity": "27-33",
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "7-13 (noted)",
             "rarity": "1/{{#expr:1/(40*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy cadantine",
             "quantity": "7-13 (noted)",
             "rarity": "1/{{#expr:1/(32*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy lantadyme",
             "quantity": "7-13 (noted)",
             "rarity": "1/{{#expr:1/(24*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy dwarf weed",
             "quantity": "7-13 (noted)",
             "rarity": "1/{{#expr:1/(32*{{#var:herbbase}}) round 1}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Diamond",
             "quantity": "4-6 (noted)",
             "rarity": "17/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "6 (noted)",
             "rarity": "20/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite bar",
             "quantity": "3 (noted)",
             "rarity": "15/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "5000-10000",
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shark",
             "quantity": "2-3",
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Prayer potion(3)",
             "quantity": "2",
             "rarity": "40/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Saradomin brew(2)",
             "quantity": "1",
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/100",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/738053715458985984|date=1 Jun 2016|archiveurl=http://archive.fo/lOi9Q|archivedate=10 Apr 2019|quote=1/100 for hard, 1/500 for elite. I'm sorry Kieren didn't get a chance to reply, but he has many calls on his time.|name=clue scroll}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/500",
             "drop_requirements": "{{NamedRef|clue scroll}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

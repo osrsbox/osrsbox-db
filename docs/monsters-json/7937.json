@@ -1,24 +1,32 @@
 {
-    "id": "7937",
+    "id": 7937,
     "name": "Revenant ork",
+    "incomplete": false,
     "members": true,
-    "release_date": "23 November 2017",
+    "release_date": "2017-11-23",
     "combat_level": 105,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 105,
+    "max_hit": 20,
+    "attack_type": "Melee, Ranged, Magic",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet",
+        " Crush"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 115,
+    "slayer_masters": [
+        "krystilia"
+    ],
+    "examine": "The ghost of an ork slain long ago.",
+    "wiki_name": "Revenant ork",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Revenant_ork",
     "attack_level": 99,
     "strength_level": 100,
     "defence_level": 60,
@@ -39,5 +47,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

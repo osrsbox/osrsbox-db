@@ -1,24 +1,29 @@
 {
-    "id": "6323",
+    "id": 6323,
     "name": "Giant Roc (hard)",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 257,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 5,
+    "hitpoints": 257,
+    "max_hit": 27,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A very, very large mountain-dwelling bird.",
+    "wiki_name": "Giant Roc (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_Roc#Hard",
     "attack_level": 260,
     "strength_level": 260,
     "defence_level": 100,
@@ -40,26 +45,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|special bones}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

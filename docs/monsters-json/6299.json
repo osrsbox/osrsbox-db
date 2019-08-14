@@ -1,24 +1,30 @@
 {
-    "id": "6299",
+    "id": 6299,
     "name": "Black Knight Titan (hard)",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 210,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 210,
+    "max_hit": 28,
+    "attack_type": "Melee",
+    "attack_speed": 7,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Crush weapons|crush"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "He looks mean and powerful.",
+    "wiki_name": "Black Knight Titan (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_Knight_Titan#Hard",
     "attack_level": 182,
     "strength_level": 200,
     "defence_level": 91,
@@ -40,152 +46,152 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
-            "name": "Bones",
+            "id": 1,
+            "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel longsword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron kiteshield",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron full helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "7",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "6",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "15",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron arrow",
             "quantity": "3",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cabbage seed",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Redberry seed",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Onion seed",
             "quantity": "4",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cadavaberry seed",
             "quantity": "1",
             "rarity": "Unknown",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled giant head",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "8",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Limpwurt root",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Beer",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Giant key",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|special bones}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

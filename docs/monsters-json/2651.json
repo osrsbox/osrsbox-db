@@ -1,24 +1,29 @@
 {
-    "id": "2651",
+    "id": 2651,
     "name": "Ochre Blamish Snail",
+    "incomplete": true,
     "members": true,
-    "release_date": "14 October 2004",
+    "release_date": "2004-10-14",
     "combat_level": 15,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 15,
+    "max_hit": 2,
+    "attack_type": "Ranged",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
-    "slayer_xp": null,
+    "slayer_xp": 0,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A muddy coloured blamish snail, these types are said to spit acid.",
+    "wiki_name": "Ochre Blamish Snail (Pointed)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ochre_Blamish_Snail#Pointed",
     "attack_level": 0,
     "strength_level": 0,
     "defence_level": 25,
@@ -40,26 +45,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Blamish ochre shell (round)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only by the Rounded variety.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blamish ochre shell (pointed)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only by the Pointed variety.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Thin snail",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

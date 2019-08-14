@@ -1,24 +1,29 @@
 {
-    "id": "320",
+    "id": 320,
     "name": "Dark energy core",
+    "incomplete": true,
     "members": true,
-    "release_date": "16 October 2014",
+    "release_date": "2014-10-16",
     "combat_level": 75,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 75,
+    "max_hit": 13,
+    "attack_type": "N/A",
+    "attack_speed": 2,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
-    "slayer_xp": null,
+    "slayer_xp": 0,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A small being of dark energy.",
+    "wiki_name": "Dark energy core",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dark_energy_core",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 20,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,30 @@
 {
-    "id": "6369",
+    "id": 6369,
     "name": "Agrith-Na-Na",
+    "incomplete": true,
     "members": true,
-    "release_date": "15 March 2006",
+    "release_date": "2006-03-15",
     "combat_level": 146,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 146,
+    "max_hit": 16,
+    "attack_type": "Melee, magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee",
+        " Ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Big, scary, angry, and a good source of energy.",
+    "wiki_name": "Agrith-Na-Na (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Agrith-Na-Na#Normal",
     "attack_level": 83,
     "strength_level": 150,
     "defence_level": 82,
@@ -40,19 +46,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name='nmz' group='d'>Only dropped when killing Agrith-Na-Na in [[Nightmare Zone]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Banana",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name='rfd' group='d'>Only dropped when defeating Agrith-Na-Na during the [[Recipe for Disaster]] quest.</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

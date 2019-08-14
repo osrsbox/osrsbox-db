@@ -1,24 +1,30 @@
 {
-    "id": "6739",
+    "id": 6739,
     "name": "Evil Chicken",
+    "incomplete": true,
     "members": false,
-    "release_date": "01 August 2005",
+    "release_date": "2005-08-01",
     "combat_level": 159,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 159,
+    "max_hit": 5,
+    "attack_type": "Magic",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee",
+        " ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A fowl beast.",
+    "wiki_name": "Evil Chicken (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Evil_Chicken#Normal",
     "attack_level": 0,
     "strength_level": 0,
     "defence_level": 126,
@@ -40,33 +46,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw chicken",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Feather",
             "quantity": "100-200; 150-250",
             "rarity": "Always",
             "drop_requirements": "<ref>The quantity of feathers dropped is increased to 150-250 if a [[Ring of wealth]] is equipped.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/608017217750319105|quote=Although it will get you more feathers from the evil chicken if you want that.|date=8 Jun 2015}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Evil chicken's egg",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref>During the quest [[Recipe for Disaster]]</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

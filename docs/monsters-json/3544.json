@@ -1,24 +1,29 @@
 {
-    "id": "3544",
+    "id": 3544,
     "name": "Desert snake",
+    "incomplete": true,
     "members": true,
-    "release_date": "04 April 2005",
+    "release_date": "2005-04-04",
     "combat_level": 5,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 5,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Slash"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A slithering serpent.",
+    "wiki_name": "Desert snake",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Desert_snake",
     "attack_level": 4,
     "strength_level": 5,
     "defence_level": 3,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snake spine",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref>Only dropped during [[Rag and Bone Man II]].</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,31 @@
 {
-    "id": "2062",
+    "id": 2062,
     "name": "Oomlie bird",
+    "incomplete": false,
     "members": true,
-    "release_date": "20 August 2003",
+    "release_date": "2003-08-20",
     "combat_level": 46,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 46,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 90,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A jungle version of the chicken, but more vicious.",
+    "wiki_name": "Oomlie bird",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Oomlie_bird",
     "attack_level": 40,
     "strength_level": 40,
     "defence_level": 40,
@@ -40,19 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw oomlie",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

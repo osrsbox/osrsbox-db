@@ -1,24 +1,32 @@
 {
-    "id": "3425",
+    "id": 3425,
     "name": "Grizzly bear cub",
+    "incomplete": false,
     "members": true,
-    "release_date": "20 September 2004",
+    "release_date": "2004-09-20",
     "combat_level": 36,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 36,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 35,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "Eek! A bear cub!",
+    "wiki_name": "Grizzly bear cub (Level 36)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Grizzly_bear_cub#Level_36",
     "attack_level": 32,
     "strength_level": 32,
     "defence_level": 28,
@@ -40,33 +48,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bear fur",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw bear meat",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled bear head",
             "quantity": "1",
             "rarity": "1/25",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,34 @@
 {
-    "id": "6391",
+    "id": 6391,
     "name": "Dad",
+    "incomplete": false,
     "members": true,
-    "release_date": "24 August 2004",
+    "release_date": "2004-08-24",
     "combat_level": 101,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 101,
+    "max_hit": 27,
+    "attack_type": "Melee",
+    "attack_speed": 8,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab",
+        " slash"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 126,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "An unusually large troll.",
+    "wiki_name": "Dad (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dad#Normal",
     "attack_level": 60,
     "strength_level": 120,
     "defence_level": 50,
@@ -40,26 +50,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "<ref name='special bones' />"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

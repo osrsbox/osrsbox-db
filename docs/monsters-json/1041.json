@@ -1,24 +1,29 @@
 {
-    "id": "1041",
+    "id": 1041,
     "name": "Giant mosquito",
+    "incomplete": true,
     "members": true,
-    "release_date": "07 February 2006",
+    "release_date": "2006-02-07",
     "combat_level": 13,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 13,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 12,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A flying blood sucker.",
+    "wiki_name": "Giant mosquito",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_mosquito",
     "attack_level": 5,
     "strength_level": 1,
     "defence_level": 45,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Proboscis",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

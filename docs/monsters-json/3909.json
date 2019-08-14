@@ -1,24 +1,32 @@
 {
-    "id": "3909",
+    "id": 3909,
     "name": "Bear Cub",
+    "incomplete": false,
     "members": true,
-    "release_date": "20 September 2004",
+    "release_date": "2004-09-20",
     "combat_level": 15,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 15,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 20,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "Cute. But deadly.",
+    "wiki_name": "Bear Cub (2)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bear_Cub#2",
     "attack_level": 10,
     "strength_level": 15,
     "defence_level": 10,
@@ -40,33 +48,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bear fur",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw bear meat",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled bear head",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<small>(1/25)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,34 @@
 {
-    "id": "2266",
+    "id": 2266,
     "name": "Dagannoth Prime",
+    "incomplete": false,
     "members": true,
-    "release_date": "07 November 2005",
+    "release_date": "2005-11-07",
     "combat_level": 303,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 303,
+    "max_hit": 50,
+    "attack_type": "Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "A legendary Dagannoth King, rumoured to fly on the North winds.",
+    "wiki_name": "Dagannoth Prime",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dagannoth_Prime",
     "attack_level": 255,
     "strength_level": 255,
     "defence_level": 255,
@@ -40,250 +50,250 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dagannoth bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dagannoth hide",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth battlestaff",
             "quantity": "1",
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water battlestaff",
             "quantity": "1",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air battlestaff",
             "quantity": "1",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Battlestaff",
             "quantity": "1-10 (noted)",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fremennik blade",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fremennik shield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fremennik helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mud battlestaff",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{NamedRef|Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon axe",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/648561290034683904|date=28 Sep 2015|archiveurl=http://archive.fo/knrWr|archivedate=15 Apr 2019|quote=1/42 for a hard clue, 1/750 for elite, 1/128 for a d axe and 1/128 for a ring.|name=Ash tweet unique rates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Farseer helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Skeletal top",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1016722619100487681|accessdate=01:24, May 24, 2018 (UTC)|date=10 Jul 2018|archiveurl=http://archive.fo/5HeVi|archivedate=15 Apr 2019|quote=Each of those items is 1/128.|name=Armour+Rings}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Skeletal bottoms",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{NamedRef|Armour+Rings}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Seers ring",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{NamedRef|Drop Rates V2}}{{NamedRef|Ash tweet unique rates}}{{NamedRef|Armour+Rings}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "100-200",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "50-100",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "25-75",
             "rarity": "2/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/859442262123700226|date=2 May 2017|archiveurl=http://archive.fo/alVGx|archivedate=15 Apr 2019|quote=Prime has a 1/64 chance of blood runes.|name=}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "10-75",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "25-50",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mud rune",
             "quantity": "25-75",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "25-85",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth talisman",
             "quantity": "25-75 (noted)",
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air talisman",
             "quantity": "25-75 (noted)",
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water talisman",
             "quantity": "1-76 (noted)",
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shark",
             "quantity": "5",
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "500-1109",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Oyster pearls",
             "quantity": "1",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pure essence",
             "quantity": "150 (noted)",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled dagannoth head",
             "quantity": "1",
             "rarity": "1/20",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/42",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/648561290034683904|date=28 Sep 2015|archiveurl=http://archive.fo/knrWr|archivedate=15 Apr 2019|quote=1/42 for a hard clue, 1/750 for elite, 1/128 for a d axe and 1/128 for a ring.|name=Ash tweet unique rates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/59.4",
-            "drop_requirements": "<ref group=\"d\">Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/750",
             "drop_requirements": "{{NamedRef|Drop Rates V2}}{{NamedRef|Ash tweet unique rates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pet dagannoth prime",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/514022931790565376|date=22 Sep 2014|archiveurl=http://archive.fo/ZqF9p|archivedate=25 Mar 2019|quote=Almost forgot the final week of boss pet drop rates! DKS Pets are all 1 in 5000|name=Confirmed droprates}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

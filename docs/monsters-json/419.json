@@ -1,24 +1,34 @@
 {
-    "id": "419",
+    "id": 419,
     "name": "Cockatrice",
+    "incomplete": false,
     "members": true,
-    "release_date": "26 January 2005",
+    "release_date": "2005-01-26",
     "combat_level": 37,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 37,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Crush",
+        " Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 25,
+    "slayer_xp": 37,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "The winged reptile.",
+    "wiki_name": "Cockatrice",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Cockatrice",
     "attack_level": 22,
     "strength_level": 37,
     "defence_level": 37,
@@ -40,159 +50,145 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron boots",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic boots (light)",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=DV2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron sword",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel dagger",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel longsword",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron javelin",
             "quantity": "5",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
-            "quantity": "2",
+            "quantity": "2-6",
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": null,
-            "name": "Nature rune",
-            "quantity": "4",
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "2",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "2",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "7",
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": null,
-            "name": "Nature rune",
-            "quantity": "6",
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "15",
             "rarity": "16/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "5",
             "rarity": "12/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "28",
             "rarity": "12/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "62",
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "42",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Limpwurt root",
             "quantity": "1",
             "rarity": "21/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (medium)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cockatrice head",
             "quantity": "1",
             "rarity": "1/1000",
             "drop_requirements": "{{NamedRef|DV2}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

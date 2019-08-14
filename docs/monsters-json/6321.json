@@ -1,24 +1,32 @@
 {
-    "id": "6321",
+    "id": 6321,
     "name": "Jungle Demon (hard)",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 327,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 327,
+    "max_hit": 62,
+    "attack_type": "Melee, Magic",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged",
+        " stab",
+        " crush",
+        " demonbane weapons"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A Greater Jungle demon. A magical aura emanates from its hide.",
+    "wiki_name": "Jungle Demon (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_Demon#Hard",
     "attack_level": 340,
     "strength_level": 340,
     "defence_level": 170,
@@ -40,12 +48,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

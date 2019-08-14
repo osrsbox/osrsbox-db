@@ -1,24 +1,29 @@
 {
-    "id": "6322",
+    "id": 6322,
     "name": "The Kendal (hard)",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 210,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 210,
+    "max_hit": 24,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Is that a bear...or a man?",
+    "wiki_name": "The Kendal (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/The_Kendal#Hard",
     "attack_level": 195,
     "strength_level": 195,
     "defence_level": 60,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bearhead",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=\"d\">Only during [[Mountain Daughter]]</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

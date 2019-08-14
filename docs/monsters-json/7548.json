@@ -1,24 +1,29 @@
 {
-    "id": "7548",
+    "id": 7548,
     "name": "Scavenger beast",
+    "incomplete": true,
     "members": true,
-    "release_date": "05 January 2017",
+    "release_date": "2017-01-05",
     "combat_level": 0,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 0,
+    "max_hit": 13,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A feral denizen of the caves.",
+    "wiki_name": "Scavenger beast (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Scavenger_beast#Normal",
     "attack_level": 120,
     "strength_level": 120,
     "defence_level": 45,
@@ -40,89 +45,89 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing rod",
             "quantity": "1",
             "rarity": "1/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron pickaxe",
             "quantity": "1",
             "rarity": "1/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron axe",
             "quantity": "1",
             "rarity": "1/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Butterfly net",
             "quantity": "1",
             "rarity": "1/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Hammer",
             "quantity": "1",
             "rarity": "1/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tinderbox",
             "quantity": "1",
             "rarity": "1/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cave worms",
             "quantity": "30-50",
             "rarity": "4/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Endarkened juice",
             "quantity": "6-16",
             "rarity": "2/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Stinkhorn mushroom",
             "quantity": "6-16",
             "rarity": "2/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cicely",
             "quantity": "6-16",
             "rarity": "2/18",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mallignum root plank",
             "quantity": "2",
             "rarity": "2/18",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,31 @@
 {
-    "id": "5243",
+    "id": 5243,
     "name": "Jungle spider",
+    "incomplete": false,
     "members": true,
-    "release_date": "06 December 2004",
+    "release_date": "2004-12-06",
     "combat_level": 37,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 37,
+    "max_hit": 10,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A very dangerous looking spider, with its fangs unsheathed.",
+    "wiki_name": "Jungle spider (Ape Atoll)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_spider_(Ape_Atoll)",
     "attack_level": 50,
     "strength_level": 30,
     "defence_level": 10,
@@ -39,5 +46,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

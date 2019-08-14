@@ -1,24 +1,34 @@
 {
-    "id": "1277",
+    "id": 1277,
     "name": "Loar Shade",
+    "incomplete": false,
     "members": true,
-    "release_date": "18 October 2004",
+    "release_date": "2004-10-18",
     "combat_level": 40,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 40,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet",
+        " Gadderhammer",
+        " Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 38,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "{{*}} The shadowy remains of a long departed soul.",
+    "wiki_name": "Loar Shade",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Loar_Shade",
     "attack_level": 45,
     "strength_level": 30,
     "defence_level": 26,
@@ -40,12 +50,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Loar remains",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

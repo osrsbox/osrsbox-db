@@ -1,24 +1,30 @@
 {
-    "id": "3517",
+    "id": 3517,
     "name": "Renegade Knight",
+    "incomplete": true,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 37,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 37,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " crush"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "He isn't very friendly.",
+    "wiki_name": "Renegade knight",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Renegade_knight",
     "attack_level": 28,
     "strength_level": 28,
     "defence_level": 28,
@@ -40,12 +46,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

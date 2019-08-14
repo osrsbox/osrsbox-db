@@ -1,24 +1,29 @@
 {
-    "id": "3112",
+    "id": 3112,
     "name": "Archer",
+    "incomplete": true,
     "members": true,
-    "release_date": "30 April 2002",
+    "release_date": "2002-04-30",
     "combat_level": 37,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 37,
+    "max_hit": 5,
+    "attack_type": "Ranged",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Good with arrows.",
+    "wiki_name": "Archer (Ardougne)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Archer_(Ardougne)",
     "attack_level": 20,
     "strength_level": 20,
     "defence_level": 20,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

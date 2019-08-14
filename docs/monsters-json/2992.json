@@ -1,24 +1,33 @@
 {
-    "id": "2992",
+    "id": 2992,
     "name": "Undead cow",
+    "incomplete": false,
     "members": true,
-    "release_date": "15 February 2005",
+    "release_date": "2005-02-15",
     "combat_level": 2,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 2,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee",
+        " Salve Amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 8,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "It's an undead cow.",
+    "wiki_name": "Undead cow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Undead_cow",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 1,
@@ -40,33 +49,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Cowhide",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw beef (undead)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Undead cow ribs",
             "quantity": "1",
             "rarity": "1/4",
             "drop_requirements": "<ref group=\"d\">Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

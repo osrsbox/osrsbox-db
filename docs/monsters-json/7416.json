@@ -1,24 +1,32 @@
 {
-    "id": "7416",
+    "id": 7416,
     "name": "Obor",
+    "incomplete": false,
     "members": false,
-    "release_date": "06 October 2016",
+    "release_date": "2016-10-06",
     "combat_level": 106,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 106,
+    "max_hit": 0,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 129,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "He looks very dangerous.",
+    "wiki_name": "Obor",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Obor",
     "attack_level": 90,
     "strength_level": 100,
     "defence_level": 60,
@@ -40,194 +48,194 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled giant head",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune battleaxe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune longsword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune 2h sword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Hill giant club",
             "quantity": "1",
             "rarity": "1/118",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/836949215158890496|quote=1 / 118.|date=1 Mar 2017}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "50-99",
             "rarity": "12/118",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/826835915020570624|quote=7, 10, 10 and 12 / 118 respectively [for nature, chaos, death, and law runes].|date=1 February 2017|name=oborrateash}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic rune",
             "quantity": "58-119",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "66-200",
             "rarity": "10/118",
             "drop_requirements": "{{NamedRef|oborrateash}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "40-79",
             "rarity": "10/118",
             "drop_requirements": "{{NamedRef|oborrateash}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "40-93",
             "rarity": "7/118",
             "drop_requirements": "{{NamedRef|oborrateash}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune full helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune med helm",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune chainbody",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune kiteshield",
             "quantity": "1",
             "rarity": "3/118",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1002111464482705408|quote=3/118|date=31 May 2018}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune platelegs",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune plateskirt",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "10000-25000",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Giant key",
             "quantity": "1",
             "rarity": "1/16",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/857953447525699584|quote=It's got a 1/16 chance for Obor to drop another one.|date=31 May 2018}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Limpwurt root",
             "quantity": "20 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Big bones",
             "quantity": "50 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "5 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut diamond",
             "quantity": "5 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Giant champion scroll",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

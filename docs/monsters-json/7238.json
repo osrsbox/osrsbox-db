@@ -1,24 +1,29 @@
 {
-    "id": "7238",
+    "id": 7238,
     "name": "Forester",
+    "incomplete": true,
     "members": true,
-    "release_date": "28 May 2002",
+    "release_date": "2002-05-28",
     "combat_level": 15,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 15,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "They love the forests.",
+    "wiki_name": "Forester",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Forester",
     "attack_level": 14,
     "strength_level": 13,
     "defence_level": 8,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

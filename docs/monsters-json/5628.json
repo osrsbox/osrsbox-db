@@ -1,24 +1,29 @@
 {
-    "id": "5628",
+    "id": 5628,
     "name": "Giant snail",
+    "incomplete": true,
     "members": true,
-    "release_date": "28 March 2006",
+    "release_date": "2006-03-28",
     "combat_level": 80,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 80,
+    "max_hit": 8,
+    "attack_type": "Ranged",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Crush weapons|Crush"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Euew.",
+    "wiki_name": "Giant snail (Lv 80)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_snail#Lv_80",
     "attack_level": 30,
     "strength_level": 30,
     "defence_level": 60,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Snail shell",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Perfect snail shell",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<small>(1/50)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

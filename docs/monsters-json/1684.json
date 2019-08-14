@@ -1,24 +1,31 @@
 {
-    "id": "1684",
+    "id": 1684,
     "name": "Giant crypt spider",
+    "incomplete": false,
     "members": true,
-    "release_date": "09 May 2005",
+    "release_date": "2005-05-09",
     "combat_level": 79,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 79,
+    "max_hit": 8,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 80,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "Not very incey wincey.",
+    "wiki_name": "Giant crypt spider",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_crypt_spider",
     "attack_level": 65,
     "strength_level": 67,
     "defence_level": 65,
@@ -39,5 +46,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

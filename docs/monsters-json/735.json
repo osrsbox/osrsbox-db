@@ -1,24 +1,29 @@
 {
-    "id": "735",
+    "id": 735,
     "name": "Bandit",
+    "incomplete": true,
     "members": true,
-    "release_date": "18 April 2005",
+    "release_date": "2005-04-18",
     "combat_level": 56,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 56,
+    "max_hit": 9,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Tough-looking.",
+    "wiki_name": "Bandit (Pollnivneach) (No beard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bandit_(Pollnivneach)#No_beard",
     "attack_level": 59,
     "strength_level": 70,
     "defence_level": 30,
@@ -40,33 +45,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "10-300",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "40",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "50",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

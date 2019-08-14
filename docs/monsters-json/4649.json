@@ -1,24 +1,32 @@
 {
-    "id": "4649",
+    "id": 4649,
     "name": "Desert Wolf",
+    "incomplete": false,
     "members": true,
-    "release_date": "14 April 2003",
+    "release_date": "2003-04-14",
     "combat_level": 27,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 27,
+    "max_hit": 3,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 34,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "A vicious desert wolf.",
+    "wiki_name": "Desert Wolf",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Desert_Wolf",
     "attack_level": 20,
     "strength_level": 21,
     "defence_level": 22,
@@ -40,19 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Wolf bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wolf bone",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<ref>Only during [[Rag and Bone Man II]].</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

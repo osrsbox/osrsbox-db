@@ -1,24 +1,34 @@
 {
-    "id": "3025",
+    "id": 3025,
     "name": "Poison Scorpion",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 20,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 20,
+    "max_hit": 3,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
-    "poisonous": false,
+    "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " stab",
+        " ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 23,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "It has a very vicious looking tail.",
+    "wiki_name": "Poison Scorpion",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Poison_Scorpion",
     "attack_level": 16,
     "strength_level": 17,
     "defence_level": 15,
@@ -40,12 +50,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled scorpion head",
             "quantity": "1",
             "rarity": "1/25",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

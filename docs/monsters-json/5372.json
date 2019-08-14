@@ -1,24 +1,33 @@
 {
-    "id": "5372",
+    "id": 5372,
     "name": "Grave scorpion",
+    "incomplete": false,
     "members": true,
-    "release_date": "17 March 2003",
+    "release_date": "2003-03-17",
     "combat_level": 12,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 12,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab",
+        " Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 7,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "A vicious, little, stinging thing.",
+    "wiki_name": "Grave scorpion",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Grave_scorpion",
     "attack_level": 11,
     "strength_level": 12,
     "defence_level": 14,
@@ -40,19 +49,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled scorpion head",
             "quantity": "1",
             "rarity": "1/25",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
             "rarity": "",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

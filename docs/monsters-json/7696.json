@@ -1,24 +1,32 @@
 {
-    "id": "7696",
+    "id": 7696,
     "name": "Jal-AkRek-Ket",
+    "incomplete": false,
     "members": true,
-    "release_date": "01 June 2017",
+    "release_date": "2017-06-01",
     "combat_level": 70,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 70,
+    "max_hit": 18,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 15,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "It might be smaller, but I still don't want to be near that thing.",
+    "wiki_name": "Jal-AkRek-Ket",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jal-AkRek-Ket",
     "attack_level": 120,
     "strength_level": 120,
     "defence_level": 95,
@@ -39,5 +47,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

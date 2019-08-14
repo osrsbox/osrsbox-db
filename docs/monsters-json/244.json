@@ -1,24 +1,34 @@
 {
-    "id": "244",
+    "id": 244,
     "name": "Baby dragon",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 February 2002",
+    "release_date": "2002-02-27",
     "combat_level": 48,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 48,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Ranged",
+        " dragonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "konar",
+        "duradel"
+    ],
+    "examine": "Young but still dangerous.",
+    "wiki_name": "Baby dragon (red) (1)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Baby_dragon_(red)#1",
     "attack_level": 40,
     "strength_level": 40,
     "defence_level": 40,
@@ -40,47 +50,47 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Babydragon bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
+            "name": "Tattered moon page",
+            "quantity": "1",
+            "rarity": "1/25",
+            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156844944369377286|date=1 August 2019|archiveurl=http://archive.fo/h8aa9|archivedate=1 August 2019|quote=For those interested, here are the drop-rates for the unique items within the Forthos Dungeon.[https://pbs.twimg.com/media/EA3wV4DW4AAVtos?format=jpg&name=small]|name=Forthos Dungeon Droprates}} <ref name=\"forthos\" group=\"d\">Tattered pages and grubby keys are only dropped by those found in the [[Forthos Dungeon]].</ref> <ref name=\"page\" group=\"d\">The drop rate to receive any tattered page is 1/25. When rolled, the player will receive the page they have the fewest of.</ref>"
+        },
+        {
+            "id": 1,
+            "name": "Tattered sun page",
+            "quantity": "1",
+            "rarity": "1/25",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        {
+            "id": 1,
+            "name": "Tattered temple page",
+            "quantity": "1",
+            "rarity": "1/25",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        {
+            "id": 1,
+            "name": "Grubby key",
+            "quantity": "1",
+            "rarity": "1/80",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        {
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/641",
             "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083783815141707781|author=Mod Kieren|date=16 January 2019|quote=0.2*(CBLEVEL - 100)^2 + 100}}"
-        },
-        {
-            "id": null,
-            "name": "Tattered moon page",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref name=\"forthos\">Only dropped by those found in the [[Forthos Dungeon]].</ref>"
-        },
-        {
-            "id": null,
-            "name": "Tattered sun page",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref name=\"forthos\"></ref>"
-        },
-        {
-            "id": null,
-            "name": "Tattered temple page",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref name=\"forthos\"></ref>"
-        },
-        {
-            "id": null,
-            "name": "Grubby key",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref name=\"forthos\"></ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

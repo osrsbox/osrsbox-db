@@ -1,24 +1,33 @@
 {
-    "id": "7396",
+    "id": 7396,
     "name": "Malevolent Mage",
+    "incomplete": false,
     "members": true,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "combat_level": 162,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 162,
+    "max_hit": 20,
+    "attack_type": "Magic",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee",
+        " Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 45,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "The evil that men do lives on and on.",
+    "wiki_name": "Malevolent Mage",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Malevolent_Mage",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 135,
@@ -32,7 +41,7 @@
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
-    "defence_magic": "",
+    "defence_magic": 0,
     "defence_ranged": 0,
     "attack_accuracy": 0,
     "melee_strength": 0,
@@ -40,138 +49,138 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dust battlestaff",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/320)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mist battlestaff",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/320)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Imbued heart",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/960)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Eternal gem",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/960)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Staff",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Staff of fire",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic hat (dark)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/512)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic boots (dark)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/512)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lava battlestaff",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": "<small>(1/1,000)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "5, 10, 18, 36",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "10, 18",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "7",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "10, 18",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "10, 18",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "4",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mind rune",
             "quantity": "18",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Body rune",
             "quantity": "18, 57",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1-15, 29",
             "rarity": "Common",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

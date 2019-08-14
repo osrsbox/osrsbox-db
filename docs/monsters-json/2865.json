@@ -1,24 +1,31 @@
 {
-    "id": "2865",
+    "id": 2865,
     "name": "Dungeon rat",
+    "incomplete": false,
     "members": true,
-    "release_date": "17 June 2002",
+    "release_date": "2002-06-17",
     "combat_level": 12,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 12,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 2,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A dirty rat.",
+    "wiki_name": "Dungeon rat",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dungeon_rat",
     "attack_level": 10,
     "strength_level": 10,
     "defence_level": 10,
@@ -39,5 +46,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

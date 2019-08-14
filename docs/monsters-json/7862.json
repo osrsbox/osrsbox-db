@@ -1,24 +1,35 @@
 {
-    "id": "7862",
+    "id": 7862,
     "name": "Black dragon",
+    "incomplete": false,
     "members": true,
-    "release_date": "23 November 2017",
+    "release_date": "2017-11-23",
     "combat_level": 247,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 4,
+    "hitpoints": 247,
+    "max_hit": 22,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Stab weapons|Stab",
+        " Ranged",
+        " dragonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 262,
+    "slayer_masters": [
+        "krystilia",
+        "konar",
+        "duradel"
+    ],
+    "examine": "A fierce dragon with black scales!",
+    "wiki_name": "Black dragon (Level 247)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_dragon#Level_247",
     "attack_level": 200,
     "strength_level": 215,
     "defence_level": 200,
@@ -40,208 +51,208 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black dragonhide",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon token",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref>Only dropped during the [[Recipe for Disaster#Sir Amik Varze|Sir Amik Varze subquest]] of [[Recipe for Disaster]] if the player doesn't have one already.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril axe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril battleaxe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril 2h sword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant platebody",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune longsword",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant dart(p)",
             "quantity": "16",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant javelin",
             "quantity": "30,60",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "50",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune knife",
             "quantity": "2; 15",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "75",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "10",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "15",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon javelin heads",
             "quantity": "10-25",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=\"dragonjavelin\">Only dropped after completion of [[Monkey Madness II]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
-            "quantity": "196, 330, 690",
+            "quantity": "196, 330, 699",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "1, 2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chocolate cake",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
-            "drop_requirements": "<ref>Only dropped by those found in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled dragon head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Larran's key",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>"
+            "drop_requirements": "krystilia-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mysterious emblem",
             "quantity": "1",
             "rarity": "1/60",
             "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref> {{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/74.6",
             "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Slayer's enchantment",
             "quantity": "1",
             "rarity": "1/168",
             "drop_requirements": "<ref group=d name=wildytask />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
-            "drop_requirements": "<ref>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/500",
-            "drop_requirements": "<ref>1/250 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Draconic visage",
             "quantity": "1",
             "rarity": "1/10000",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": true
 }

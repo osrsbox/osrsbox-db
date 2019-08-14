@@ -1,24 +1,32 @@
 {
-    "id": "7996",
+    "id": 7996,
     "name": "Corrupt Lizardman (hard)",
+    "incomplete": false,
     "members": true,
-    "release_date": "19 April 2018",
+    "release_date": "2018-04-19",
     "combat_level": 152,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 152,
+    "max_hit": 22,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 150,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Looks like there's something wrong with it.",
+    "wiki_name": "Corrupt Lizardman (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Corrupt_Lizardman#Hard",
     "attack_level": 162,
     "strength_level": 162,
     "defence_level": 38,
@@ -40,19 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Xerician fabric",
             "quantity": "3",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

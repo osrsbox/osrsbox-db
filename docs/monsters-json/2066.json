@@ -1,24 +1,31 @@
 {
-    "id": "2066",
+    "id": 2066,
     "name": "Terrorbird",
+    "incomplete": false,
     "members": true,
-    "release_date": "12 December 2002",
+    "release_date": "2002-12-12",
     "combat_level": 28,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 28,
+    "max_hit": 3,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Slash weapons/Magic Spells"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 34,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A giant raptor.",
+    "wiki_name": "Terrorbird",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Terrorbird",
     "attack_level": 23,
     "strength_level": 23,
     "defence_level": 19,
@@ -40,19 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Terrorbird wing",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<ref>Only during [[Rag and Bone Man II]].</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

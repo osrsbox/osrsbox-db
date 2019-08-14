@@ -1,24 +1,29 @@
 {
-    "id": "6956",
+    "id": 6956,
     "name": "Monk",
+    "incomplete": true,
     "members": true,
-    "release_date": "28 May 2002",
-    "combat_level": 3,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "release_date": "2002-05-28",
+    "combat_level": 5,
+    "size": 1,
+    "hitpoints": 3,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "An Ardougne Monk.",
+    "wiki_name": "Monk (Lv 3)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Monk#Lv_3",
     "attack_level": 2,
     "strength_level": 2,
     "defence_level": 3,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Key (medium)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped when completing a medium clue scroll asking you to kill a Monk</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

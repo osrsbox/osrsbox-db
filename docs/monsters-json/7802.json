@@ -1,24 +1,29 @@
 {
-    "id": "7802",
+    "id": 7802,
     "name": "Hoop Snake",
+    "incomplete": true,
     "members": true,
-    "release_date": "07 September 2017",
+    "release_date": "2017-09-07",
     "combat_level": 19,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 19,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Must catch the tail.",
+    "wiki_name": "Hoop Snake",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Hoop_Snake",
     "attack_level": 15,
     "strength_level": 10,
     "defence_level": 20,
@@ -40,47 +45,47 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Snake hide",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Numulite",
             "quantity": "1-14",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified small fossil",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified medium fossil",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified large fossil",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unidentified rare fossil",
             "quantity": "1",
             "rarity": "Very Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

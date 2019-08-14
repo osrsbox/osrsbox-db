@@ -1,24 +1,29 @@
 {
-    "id": "2452",
+    "id": 2452,
     "name": "Animated Steel Armour",
+    "incomplete": true,
     "members": true,
-    "release_date": "12 June 2006",
+    "release_date": "2006-06-12",
     "combat_level": 46,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 46,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": true,
+    "weakness": [
+        "No"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Animated steel armour.",
+    "wiki_name": "Animated Steel Armour",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Animated_Steel_Armour",
     "attack_level": 40,
     "strength_level": 40,
     "defence_level": 40,
@@ -40,33 +45,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Warrior guild token",
             "quantity": "15",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel full helm",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel platebody",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel platelegs",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,29 @@
 {
-    "id": "2849",
+    "id": 2849,
     "name": "Black unicorn",
+    "incomplete": true,
     "members": true,
-    "release_date": "18 March 2002",
+    "release_date": "2002-03-18",
     "combat_level": 27,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 27,
+    "max_hit": 3,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A unicorn with a blackened heart.",
+    "wiki_name": "Black unicorn",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_unicorn",
     "attack_level": 21,
     "strength_level": 23,
     "defence_level": 23,
@@ -40,40 +45,40 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unicorn horn",
             "quantity": "1",
             "rarity": "always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Unicorn bone",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group='d'>Only during [[Rag and Bone Man]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "<ref group='d'>Only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled unicorn head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

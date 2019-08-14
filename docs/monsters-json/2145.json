@@ -1,24 +1,30 @@
 {
-    "id": "2145",
+    "id": 2145,
     "name": "Undead Druid",
+    "incomplete": false,
     "members": true,
-    "release_date": "04 July 2019",
+    "release_date": "2019-07-04",
     "combat_level": 105,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 105,
+    "max_hit": 22,
+    "attack_type": "Melee, Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
+    "immune_venom": false,
+    "weakness": [
+        "Slash",
+        " Salve amulet"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
+    "slayer_xp": 140,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A fallen worshipper of a forgotten religion.",
+    "wiki_name": "Undead Druid",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Undead_Druid",
     "attack_level": 60,
     "strength_level": 50,
     "defence_level": 60,
@@ -40,278 +46,278 @@
     "magic_damage": 50,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air battlestaff",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth battlestaff",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air rune",
             "quantity": "200-300",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "200-300",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mud rune",
             "quantity": "30-70",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic rune",
             "quantity": "20-30",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "50-80",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "20-30",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "10-20",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "20-30",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "20-30",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy guam leaf",
             "quantity": "1-3",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy marrentill",
             "quantity": "1-3",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy tarromin",
             "quantity": "1-3",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy harralander",
             "quantity": "1-3",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "1-3",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy irit leaf",
             "quantity": "1-3",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy avantoe",
             "quantity": "1-3",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "1-3",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy cadantine",
             "quantity": "1-3",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy lantadyme",
             "quantity": "1-3",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy dwarf weed",
             "quantity": "1-3",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wine of zamorak",
             "quantity": "5-8 (noted)",
             "rarity": "1/50",
-            "drop_requirements": "{{CiteForum|author = Mod Husky|url = http://archive.fo/edpK3|title = Mod Husky - Forthos Dungeon FAQ|forum = Reddit|postdate = 8 July 2019}}"
+            "drop_requirements": "{{CiteForum|author=Mod Husky|url=http://archive.fo/edpK3|title=Mod Husky - Forthos Dungeon FAQ|forum=Reddit|postdate=8 July 2019}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Eye of newt",
             "quantity": "25-30 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Potato cactus",
             "quantity": "10-15 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Red spiders' eggs",
             "quantity": "10-15 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "White berries",
             "quantity": "10-15 (noted)",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Amulet of magic",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Amulet of defence",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Amulet of strength",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1000-5000",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mask of ranul",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
+            "rarity": "1/1000",
+            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156844944369377286|date=1 August 2019|archiveurl=http://archive.fo/h8aa9|archivedate=1 August 2019|quote=For those interested, here are the drop-rates for the unique items within the Forthos Dungeon.[https://pbs.twimg.com/media/EA3wV4DW4AAVtos?format=jpg&name=small]|name=Forthos Dungeon Droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tattered moon page",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
+            "rarity": "1/20",
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tattered sun page",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
+            "rarity": "1/20",
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tattered temple page",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
+            "rarity": "1/20",
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grubby key",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
+            "rarity": "1/75",
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
+            "rarity": "1/100",
+            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156849996987359233|date=1 August 2019|arhiveurl=http://archive.fo/GyAi5|archivedate=1 August 2019|quote=Clue drops from Forthos are as follows:|name=Forthos Dungeon clue scroll Droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zombie champion scroll",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

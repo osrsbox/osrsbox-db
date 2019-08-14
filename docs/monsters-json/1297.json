@@ -1,24 +1,29 @@
 {
-    "id": "1297",
+    "id": 1297,
     "name": "Afflicted",
+    "incomplete": true,
     "members": true,
-    "release_date": "18 October 2004",
+    "release_date": "2004-10-18",
     "combat_level": 32,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 32,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A local villager of Mort'ton.",
+    "wiki_name": "Afflicted (Level 32)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Afflicted#Level_32",
     "attack_level": 26,
     "strength_level": 26,
     "defence_level": 36,
@@ -40,131 +45,131 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze med helm",
             "quantity": "1",
             "rarity": "~1/56.846",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron dagger",
             "quantity": "1",
             "rarity": "~1/86.941",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze bolts",
             "quantity": "2-12",
             "rarity": "~1/6.057",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze arrow",
             "quantity": "7",
             "rarity": "~1/37.897",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "6",
             "rarity": "~1/56.846",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mind rune",
             "quantity": "9",
             "rarity": "~1/82.111",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "4",
             "rarity": "~1/61.583",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "2",
             "rarity": "~1/123.167",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "3",
             "rarity": "~1/4.412",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "5",
             "rarity": "~1/15.082",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "15",
             "rarity": "~1/54.741",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "25",
             "rarity": "~1/211.143",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing bait",
             "quantity": "1",
             "rarity": "~1/30.163",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth talisman",
             "quantity": "1",
             "rarity": "~1/44.788",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cabbage",
             "quantity": "1",
             "rarity": "~1/73.9",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Copper ore",
             "quantity": "1",
             "rarity": "~1/77.789",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

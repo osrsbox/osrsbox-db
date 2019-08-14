@@ -1,24 +1,31 @@
 {
-    "id": "6271",
+    "id": 6271,
     "name": "Jungle spider",
+    "incomplete": false,
     "members": true,
-    "release_date": "27 January 2003",
+    "release_date": "2003-01-27",
     "combat_level": 44,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 44,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A barely visible, deadly jungle spider.",
+    "wiki_name": "Jungle spider",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_spider",
     "attack_level": 35,
     "strength_level": 37,
     "defence_level": 35,
@@ -40,12 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Spider carcass",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

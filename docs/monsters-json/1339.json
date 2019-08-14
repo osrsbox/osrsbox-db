@@ -1,24 +1,31 @@
 {
-    "id": "1339",
+    "id": 1339,
     "name": "Seagull",
+    "incomplete": false,
     "members": false,
-    "release_date": "26 September 2005",
+    "release_date": "2005-09-26",
     "combat_level": 3,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 3,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 5,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "{{*}} A messy bird. ",
+    "wiki_name": "Seagull (Lv 3)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Seagull#Lv_3",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 1,
@@ -40,19 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Seagull wing",
             "quantity": "1",
             "rarity": "1/4",
             "drop_requirements": "<ref group=\"d\">Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

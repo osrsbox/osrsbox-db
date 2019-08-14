@@ -1,24 +1,29 @@
 {
-    "id": "6911",
+    "id": 6911,
     "name": "Soldier (tier 4)",
+    "incomplete": true,
     "members": true,
-    "release_date": "07 January 2016",
+    "release_date": "2016-01-07",
     "combat_level": 70,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 70,
+    "max_hit": 8,
+    "attack_type": "Melee",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Crush"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Highly ranked.",
+    "wiki_name": "Soldier (tier 4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Soldier_(tier_4)",
     "attack_level": 60,
     "strength_level": 60,
     "defence_level": 60,
@@ -40,40 +45,40 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Shayzien helm (4)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shayzien platebody (4)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shayzien greaves (4)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shayzien gloves (4)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shayzien boots (4)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

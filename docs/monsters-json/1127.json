@@ -1,24 +1,30 @@
 {
-    "id": "1127",
+    "id": 1127,
     "name": "Giant scarab (hard)",
+    "incomplete": false,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 316,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 316,
+    "max_hit": 35,
+    "attack_type": "Melee, Ranged",
+    "attack_speed": 4,
     "aggressive": true,
-    "poisonous": false,
+    "poisonous": true,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Keris",
+        " Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [],
+    "examine": "A huge scarab beast.",
+    "wiki_name": "Giant scarab (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_scarab#Hard",
     "attack_level": 305,
     "strength_level": 342,
     "defence_level": 169,
@@ -40,12 +46,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Keris",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

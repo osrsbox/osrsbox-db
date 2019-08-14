@@ -1,24 +1,29 @@
 {
-    "id": "4878",
+    "id": 4878,
     "name": "Culinaromancer",
+    "incomplete": true,
     "members": true,
-    "release_date": "15 March 2006",
+    "release_date": "2006-03-15",
     "combat_level": 75,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 75,
+    "max_hit": 25,
+    "attack_type": "Melee and Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A demented evil wizard who specialises in food spells.",
+    "wiki_name": "Culinaromancer (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Culinaromancer#Normal",
     "attack_level": 10,
     "strength_level": 100,
     "defence_level": 10,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Cake",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

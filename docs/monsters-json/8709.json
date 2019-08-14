@@ -1,24 +1,30 @@
 {
-    "id": "8709",
+    "id": 8709,
     "name": "Shaeded Beast",
+    "incomplete": true,
     "members": true,
-    "release_date": "04 July 2019",
+    "release_date": "2019-07-04",
     "combat_level": 186,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 186,
+    "max_hit": 30,
+    "attack_type": "Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
+    "immune_venom": false,
+    "weakness": [
+        "Slash",
+        " Ranged"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A terrible creature manipulating the powers of the dark altar.",
+    "wiki_name": "Shaeded Beast",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Shaeded_Beast",
     "attack_level": 50,
     "strength_level": 80,
     "defence_level": 50,
@@ -40,12 +46,12 @@
     "magic_damage": 10,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Temple coin",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,31 @@
 {
-    "id": "4533",
+    "id": 4533,
     "name": "Blessed spider",
+    "incomplete": false,
     "members": true,
-    "release_date": "03 March 2003",
+    "release_date": "2003-03-03",
     "combat_level": 39,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 39,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Crush"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 32,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "It's one of Iban's pets.",
+    "wiki_name": "Blessed spider",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blessed_spider",
     "attack_level": 35,
     "strength_level": 35,
     "defence_level": 35,
@@ -39,5 +46,5 @@
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,33 @@
 {
-    "id": "5295",
-    "name": "Elf warrior",
+    "id": 5295,
+    "name": "Elf Archer",
+    "incomplete": false,
     "members": true,
-    "release_date": "20 September 2004",
+    "release_date": "2004-09-20",
     "combat_level": 90,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 90,
+    "max_hit": 11,
+    "attack_type": "Ranged",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Melee/Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 105,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "He looks pretty handy with that bow.",
+    "wiki_name": "Elf Archer (1)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Elf_Archer#1",
     "attack_level": 10,
     "strength_level": 10,
     "defence_level": 80,
@@ -40,299 +49,145 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "70",
             "rarity": "8/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "12",
             "rarity": "5/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "2",
             "rarity": "3/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "37",
             "rarity": "2/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Green d'hide chaps",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Green d'hide body",
             "quantity": "1",
             "rarity": "4/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril spear",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant full helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune dagger",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "20",
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "44",
             "rarity": "29/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "180",
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": null,
-            "name": "Tiny elf crystal",
+            "id": 1,
+            "name": "Crystal teleport seed",
             "quantity": "1",
             "rarity": "25/128",
             "drop_requirements": "<ref name=\"lletya\" group=\"d\">In order to obtain this item as a drop, players must be killing the Elf warriors located in [[Lletya]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bass",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shark",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite ore",
             "quantity": "1",
             "rarity": "2/128",
             "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled elf head",
             "quantity": "1",
-            "rarity": "1/40",
-            "drop_requirements": "<ref group=\"d>Lvl 108 elves drop the ensouled head at a rate of 1/40, while lv 90 elves drop it at a rate of 1/50. Not dropped by lvl 108 mourners.</ref>"
+            "rarity": "1/50",
+            "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
-        },
-        {
-            "id": null,
-            "name": "Bones",
-            "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Water rune",
-            "quantity": "70",
-            "rarity": "8/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Nature rune",
-            "quantity": "12",
-            "rarity": "5/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Law rune",
-            "quantity": "2",
-            "rarity": "3/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Fire rune",
-            "quantity": "37",
-            "rarity": "2/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Green d'hide chaps",
-            "quantity": "1",
-            "rarity": "3/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Green d'hide body",
-            "quantity": "1",
-            "rarity": "4/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Mithril spear",
-            "quantity": "1",
-            "rarity": "2/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Mithril kiteshield",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Adamant full helm",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Rune dagger",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Coins",
-            "quantity": "20",
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Coins",
-            "quantity": "44",
-            "rarity": "29/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Coins",
-            "quantity": "132",
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Coins",
-            "quantity": "180",
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Coins",
-            "quantity": "440",
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Teleport crystal (1)",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": "<ref name=\"Elf camp\" group=\"d\">In order to obtain this item as a drop, players must be killing the Elf warriors located in [[Elf Camp]].</ref>{{NamedRef|Drop Rates V2}}"
-        },
-        {
-            "id": null,
-            "name": "Bass",
-            "quantity": "1",
-            "rarity": "3/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Shark",
-            "quantity": "1",
-            "rarity": "3/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Adamantite ore",
-            "quantity": "1",
-            "rarity": "2/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": null,
-            "name": "Ensouled elf head",
-            "quantity": "1",
-            "rarity": "1/40",
-            "drop_requirements": "<ref group=\"d>Lv 108 elves drop the ensouled head at a rate of 1/40, while lv 90 elves drop it at a rate of 1/50. Not dropped by lvl 108 mourners.</ref>"
-        },
-        {
-            "id": null,
-            "name": "Clue scroll (hard)",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|Clue rates tweet}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

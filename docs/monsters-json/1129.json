@@ -1,24 +1,32 @@
 {
-    "id": "1129",
+    "id": 1129,
     "name": "Kamil (hard)",
+    "incomplete": false,
     "members": true,
-    "release_date": "05 September 2013",
+    "release_date": "2013-09-05",
     "combat_level": 273,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 273,
+    "max_hit": 0,
+    "attack_type": "Melee, Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Fire spells"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "Ice warrior.",
+    "wiki_name": "Kamil (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Kamil#Hard",
     "attack_level": 380,
     "strength_level": 160,
     "defence_level": 135,
@@ -40,19 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Chocolate cake",
             "quantity": "1,2",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Super restore(4)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped when fought during [[Desert Treasure]]</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

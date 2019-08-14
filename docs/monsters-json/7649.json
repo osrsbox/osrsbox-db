@@ -1,24 +1,29 @@
 {
-    "id": "7649",
+    "id": 7649,
     "name": "Chaotic death spawn",
+    "incomplete": true,
     "members": true,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "combat_level": 215,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 215,
+    "max_hit": 7,
+    "attack_type": "Magic",
+    "attack_speed": 3,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Demonbane weapons"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A chaotic death spawn.",
+    "wiki_name": "Chaotic death spawn (Magic)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Chaotic_death_spawn#Magic",
     "attack_level": 380,
     "strength_level": 1,
     "defence_level": 70,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

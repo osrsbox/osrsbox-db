@@ -1,24 +1,31 @@
 {
-    "id": "3042",
+    "id": 3042,
     "name": "Goblin",
+    "incomplete": false,
     "members": false,
-    "release_date": "04 January 2001",
+    "release_date": "2001-01-04",
     "combat_level": 2,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 2,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 5,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "An ugly green creature.",
+    "wiki_name": "Goblin (Lv 2)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Goblin#Lv_2",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 1,
@@ -40,257 +47,257 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze sq shield",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<ref name=nolvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze bolts",
             "quantity": "2,4",
             "rarity": "Common",
             "drop_requirements": "<ref name=nolvl5village>Not dropped by level 5 goblins in Goblin Village.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze bolts",
             "quantity": "8",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=nolvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze arrow",
             "quantity": "14",
             "rarity": "rare",
             "drop_requirements": "<ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze scimitar",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl2goblin>Not dropped by standard level 2 goblins.</ref><ref name=lvl5village>Dropped by goblins in Goblin Village</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze spear",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze javelin",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl2goblin/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brass necklace",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=nolvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze kiteshield",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<ref name=lvl25goblin/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "6",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mind rune",
             "quantity": "1-2",
             "rarity": "Common",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Body rune",
             "quantity": "2,7",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "4",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1-24",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Goblin skull",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<ref>Only during [[Rag and Bone Man]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Hammer",
             "quantity": "1",
             "rarity": "1/10",
             "drop_requirements": "<ref name=3k-kills>[https://prnt.sc/lgsqa4 Estimated droprate based off 3000 Lvl 2 Goblin kills]</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze axe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Air talisman",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<small>(~1/100)</small><ref name=3k-kills>[https://prnt.sc/lgsqa4 Estimated droprate based off 3000 Lvl 2 Goblin kills]</ref><ref name=nolvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bucket",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl25goblin>Not dropped by level 2 or 5 goblins.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Red cape",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chef's hat",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=nolvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grapes",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tin ore",
             "quantity": "1",
             "rarity": "rare",
             "drop_requirements": "<ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Beer",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Herb",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<ref name=lvl2goblin/><ref name=lvl5village/>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Goblin mail",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Goblin book",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "<ref>Only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled goblin head",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": "<small>(1/35)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ecumenical key",
             "quantity": "1",
             "rarity": "1/60",
-            "drop_requirements": "<ref>Only dropped by those located in the [[Wilderness God Wars Dungeon]]. Drop rate decreases to 1/70 if one key is owned, and 1/80 if two are owned. If the medium or hard [[Wilderness Diary]] is completed the drop rate of 1/60 still applies until a player owns two or three keys, respectively.</ref>"
+            "drop_requirements": "wilderness-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "<ref>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Goblin champion scroll",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

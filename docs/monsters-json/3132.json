@@ -1,24 +1,32 @@
 {
-    "id": "3132",
+    "id": 3132,
     "name": "Balfrug Kreeyath",
+    "incomplete": false,
     "members": true,
-    "release_date": "17 October 2013",
+    "release_date": "2013-10-17",
     "combat_level": 151,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 151,
+    "max_hit": 16,
+    "attack_type": "Magic",
+    "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Demonbane weapons"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 161,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "Despoiler of Ullek.",
+    "wiki_name": "Balfrug Kreeyath",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Balfrug_Kreeyath",
     "attack_level": 115,
     "strength_level": 60,
     "defence_level": 153,
@@ -40,131 +48,131 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zamorakian spear",
             "quantity": "1",
             "rarity": "3/16129",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1300-1400",
             "rarity": "124/16129",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 1",
             "quantity": "1",
             "rarity": "1/1524",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/689556758856122368|quote=It's 1/508 for any shard, 1/1524 for a specific one of the three.|date=19 Jan 2016|name=sharddrop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 2",
             "quantity": "1",
             "rarity": "1/1524",
             "drop_requirements": "{{NamedRef|sharddrop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Godsword shard 3",
             "quantity": "1",
             "rarity": "1/1524",
             "drop_requirements": "{{NamedRef|sharddrop}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1300-1400",
             "rarity": "9/1524",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel arrow",
             "quantity": "95-100",
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel dart",
             "quantity": "95-100",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "5-10",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "5-10",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shark",
             "quantity": "3",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tuna potato",
             "quantity": "2",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "1300-1400",
             "rarity": "66/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wine of zamorak",
             "quantity": "5-10 (noted)",
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Super attack(3)",
             "quantity": "1",
             "rarity": "2/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Super strength(3)",
             "quantity": "1",
             "rarity": "2/127",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/597479427489067008|quote=The bodyguards drop hards at 1/128.|date=10 May 2015}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

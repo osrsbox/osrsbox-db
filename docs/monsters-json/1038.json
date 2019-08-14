@@ -1,24 +1,31 @@
 {
-    "id": "1038",
+    "id": 1038,
     "name": "Monkey",
+    "incomplete": false,
     "members": true,
-    "release_date": "07 February 2006",
+    "release_date": "2006-02-07",
     "combat_level": 3,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 3,
+    "max_hit": 2,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 6,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "",
+    "wiki_name": "Monkey (monster) (Mos Le'Harmless)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Monkey_(monster)#Mos_Le'Harmless",
     "attack_level": 2,
     "strength_level": 3,
     "defence_level": 2,
@@ -40,33 +47,33 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Before [[Tai Bwo Wannai Trio]]</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey corpse",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>During and after [[Tai Bwo Wannai Trio]]</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey paw",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ensouled monkey head",
             "quantity": "1",
             "rarity": "1/35",
             "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

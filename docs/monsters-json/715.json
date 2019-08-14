@@ -1,24 +1,32 @@
 {
-    "id": "715",
+    "id": 715,
     "name": "Ice wolf",
+    "incomplete": false,
     "members": true,
-    "release_date": "18 April 2005",
+    "release_date": "2005-04-18",
     "combat_level": 132,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 132,
+    "max_hit": 16,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 70,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "Not a man's best friend.",
+    "wiki_name": "Ice wolf (Lv 132)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ice_wolf#Lv_132",
     "attack_level": 150,
     "strength_level": 150,
     "defence_level": 70,
@@ -40,19 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Wolf bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Wolf bone",
             "quantity": "1",
             "rarity": "1/4",
             "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

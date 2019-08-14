@@ -1,29 +1,34 @@
 {
-    "id": "6727",
+    "id": 6727,
     "name": "Rock Golem",
+    "incomplete": true,
     "members": true,
-    "release_date": "02 February 2004",
+    "release_date": "2004-02-02",
     "combat_level": 49,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 49,
+    "max_hit": 0,
+    "attack_type": "Ranged, Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
-    "attack_level": "",
-    "strength_level": "",
-    "defence_level": "",
-    "magic_level": "",
-    "ranged_level": "",
+    "examine": "Rock with attitude.",
+    "wiki_name": "Rock golem (monster) (Lv 49)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rock_golem_(monster)#Lv_49",
+    "attack_level": 0,
+    "strength_level": 0,
+    "defence_level": 0,
+    "magic_level": 0,
+    "ranged_level": 0,
     "attack_stab": 0,
     "attack_slash": 0,
     "attack_crush": 0,
@@ -40,103 +45,103 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Hammer",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dwarven stout",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "5,42",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bronze bar",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tin ore",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Copper ore",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coal",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Iron ore",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite ore",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut sapphire",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut emerald",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant pickaxe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune pickaxe",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/128)</small>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/933323165446672384|quote=1/128 mostly.|date=22 Nov 2017}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

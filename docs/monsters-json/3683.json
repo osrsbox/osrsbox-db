@@ -1,24 +1,29 @@
 {
-    "id": "3683",
+    "id": 3683,
     "name": "Valgerd",
+    "incomplete": true,
     "members": true,
-    "release_date": "29 November 2004",
+    "release_date": "2004-11-29",
     "combat_level": 2,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 2,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
-    "slayer_xp": null,
+    "slayer_xp": 0,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "A subject of Miscellania.",
+    "wiki_name": "Valgerd",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Valgerd",
     "attack_level": 3,
     "strength_level": 3,
     "defence_level": 3,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

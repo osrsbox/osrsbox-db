@@ -1,24 +1,33 @@
 {
-    "id": "561",
+    "id": 561,
     "name": "Sorebones",
+    "incomplete": false,
     "members": true,
-    "release_date": "06 March 2007",
+    "release_date": "2007-03-06",
     "combat_level": 57,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 57,
+    "max_hit": 6,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " Salve amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 22,
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
+    "examine": "*I hope his hands don't shake.\n*Bedside manner is a little lacking, I think.",
+    "wiki_name": "Sorebones",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sorebones",
     "attack_level": 49,
     "strength_level": 50,
     "defence_level": 50,
@@ -40,180 +49,208 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel bolts",
             "quantity": "2-6",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril dagger",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandana eyepatch (blue)",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bandana eyepatch (red)",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril scimitar",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy guam leaf",
             "quantity": "",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy marrentill",
             "quantity": "",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy tarromin",
             "quantity": "",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy harralander",
             "quantity": "",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy ranarr weed",
             "quantity": "",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy avantoe",
             "quantity": "",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy kwuarm",
             "quantity": "",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grimy lantadyme",
             "quantity": "",
             "rarity": "Very rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Water rune",
             "quantity": "23",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Body rune",
             "quantity": "6",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "7",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Cosmic rune",
             "quantity": "5",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "2",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "30-65",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fishing bait",
             "quantity": "10",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
-            "name": "Zombie bone",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
+            "id": 1,
             "name": "Braindeath 'rum'",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Right eye patch",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
+            "name": "Brain tongs",
+            "quantity": "1",
+            "rarity": "Always",
+            "drop_requirements": "<ref>Dropped during [[The Great Brain Robbery]]</ref>"
+        },
+        {
+            "id": 1,
+            "name": "Cranial clamp",
+            "quantity": "1",
+            "rarity": "Always",
+            "drop_requirements": "<ref>Dropped during [[The Great Brain Robbery]]</ref>"
+        },
+        {
+            "id": 1,
+            "name": "Bell jar",
+            "quantity": "3",
+            "rarity": "Always",
+            "drop_requirements": "<ref>Dropped during [[The Great Brain Robbery]]</ref>"
+        },
+        {
+            "id": 1,
+            "name": "Skull staple",
+            "quantity": "30",
+            "rarity": "Always",
+            "drop_requirements": "<ref>Dropped during [[The Great Brain Robbery]]</ref>"
+        },
+        {
+            "id": 1,
+            "name": "Zombie bone",
+            "quantity": "1",
+            "rarity": "1/4",
+            "drop_requirements": null
+        },
+        {
+            "id": 1,
             "name": "Zombie champion scroll",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/5,000)</small>"
+            "rarity": "1/5000",
+            "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": true
 }

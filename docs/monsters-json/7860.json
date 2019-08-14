@@ -1,24 +1,33 @@
 {
-    "id": "7860",
+    "id": 7860,
     "name": "Porazdir",
+    "incomplete": false,
     "members": true,
-    "release_date": "08 February 2018",
+    "release_date": "2018-02-08",
     "combat_level": 235,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 235,
+    "max_hit": 0,
+    "attack_type": "Magic, melee",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Flames of Zamorak"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 376,
+    "slayer_masters": [
+        "krystilia",
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "A rage-filled Zamorakian demon.",
+    "wiki_name": "Porazdir",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Porazdir",
     "attack_level": 250,
     "strength_level": 150,
     "defence_level": 100,
@@ -40,19 +49,19 @@
     "magic_damage": 80,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Demon's heart",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

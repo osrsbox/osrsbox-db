@@ -1,24 +1,36 @@
 {
-    "id": "5",
+    "id": 5,
     "name": "Aberrant spectre",
+    "incomplete": false,
     "members": true,
-    "release_date": "26 January 2005",
+    "release_date": "2005-01-26",
     "combat_level": 96,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 96,
+    "max_hit": 11,
+    "attack_type": "Magic",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic",
+        " Ranged",
+        " Salve amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 60,
+    "slayer_xp": 90,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "A very smelly ghost.",
+    "wiki_name": "Aberrant spectre",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 90,
@@ -40,82 +52,82 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Mystic robe bottom (dark)",
             "quantity": "1",
             "rarity": "1/512",
             "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel axe",
             "quantity": "1",
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril kiteshield",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lava battlestaff",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant platelegs",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune full helm",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "460",
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "Always",
-            "drop_requirements": "<ref name=elite group=d>Only dropped when completing a [[Treasure Trails/Full guide/Elite#Cryptic clues|elite cryptic clue]] asking you to kill an Aberrant spectre</ref>"
+            "drop_requirements": "treasure-trails-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Reward casket (elite)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name=elite group=d />"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/103.2",
-            "drop_requirements": "<ref group=d>Only dropped if killed as a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=\nhttps://twitter.com/JagexAsh/status/845257642859790337|quote=1/128.|date=24 March 2017}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

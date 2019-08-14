@@ -1,24 +1,29 @@
 {
-    "id": "625",
+    "id": 625,
     "name": "Evil spirit",
+    "incomplete": true,
     "members": true,
-    "release_date": "31 October 2005",
+    "release_date": "2005-10-31",
     "combat_level": 150,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 150,
+    "max_hit": 28,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "The pun was intended.",
+    "wiki_name": "Evil spirit",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Evil_spirit",
     "attack_level": 170,
     "strength_level": 146,
     "defence_level": 100,
@@ -40,12 +45,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

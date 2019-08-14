@@ -1,24 +1,30 @@
 {
-    "id": "4987",
+    "id": 4987,
     "name": "Chronozon",
+    "incomplete": true,
     "members": true,
-    "release_date": "09 April 2002",
+    "release_date": "2002-04-09",
     "combat_level": 170,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 170,
+    "max_hit": 18,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Demonbane weapons",
+        " Blast Spells."
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "Chronozon the blood demon.",
+    "wiki_name": "Chronozon (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Chronozon#Normal",
     "attack_level": 173,
     "strength_level": 172,
     "defence_level": 173,
@@ -40,26 +46,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ashes",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Crest part",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Looting bag",
             "quantity": "1",
             "rarity": "1/30",
             "drop_requirements": "<ref>Only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

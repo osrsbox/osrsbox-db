@@ -1,24 +1,32 @@
 {
-    "id": "1282",
+    "id": 1282,
     "name": "Riyl Shade",
+    "incomplete": false,
     "members": true,
-    "release_date": "18 October 2004",
+    "release_date": "2004-10-18",
     "combat_level": 80,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 80,
+    "max_hit": 6,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 76,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "{{*}} The shadowy remains of a long departed soul.",
+    "wiki_name": "Riyl Shade",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Riyl_Shade",
     "attack_level": 88,
     "strength_level": 55,
     "defence_level": 60,
@@ -40,12 +48,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Riyl remains",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

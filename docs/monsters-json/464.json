@@ -1,24 +1,33 @@
 {
-    "id": "464",
+    "id": 464,
     "name": "Harpie Bug Swarm",
+    "incomplete": false,
     "members": true,
-    "release_date": "30 January 2006",
+    "release_date": "2006-01-30",
     "combat_level": 46,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 46,
+    "max_hit": 6,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Slash weapons|Slash",
+        " Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 33,
+    "slayer_xp": 25,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar"
+    ],
+    "examine": "A swarm of bugs.",
+    "wiki_name": "Harpie Bug Swarm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Harpie_Bug_Swarm",
     "attack_level": 54,
     "strength_level": 46,
     "defence_level": 32,
@@ -40,103 +49,103 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Steel axe",
             "quantity": "1",
             "rarity": "{{Rarity|4/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel full helm",
             "quantity": "1",
             "rarity": "{{Rarity|4/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Staff of fire",
             "quantity": "1",
             "rarity": "{{Rarity|4/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril chainbody",
             "quantity": "1",
             "rarity": "{{Rarity|2/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Steel boots",
             "quantity": "1",
             "rarity": "{{Rarity|1/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant med helm",
             "quantity": "1",
             "rarity": "{{Rarity|1/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Fire rune",
             "quantity": "30,60",
             "rarity": "{{Rarity|29/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "15",
             "rarity": "{{Rarity|5/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "3",
             "rarity": "{{Rarity|3/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "30,40,160,230,490",
             "rarity": "{{Rarity|66/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Gold ore",
             "quantity": "1",
             "rarity": "{{Rarity|8/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jug of wine",
             "quantity": "1",
             "rarity": "{{Rarity|2/128}}",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Gem drop table",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (medium)",
             "quantity": "1",
             "rarity": "1/128",
             "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

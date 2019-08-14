@@ -1,24 +1,34 @@
 {
-    "id": "1286",
+    "id": 1286,
     "name": "Fiyr Shade",
+    "incomplete": false,
     "members": true,
-    "release_date": "18 October 2004",
+    "release_date": "2004-10-18",
     "combat_level": 120,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 120,
+    "max_hit": 11,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Gadderhammer",
+        " Crumble Undead",
+        " Salve amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 110,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "{{*}} The shadowy remains of a long departed soul.",
+    "wiki_name": "Fiyr Shade (Lv 120)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fiyr_Shade#Lv_120",
     "attack_level": 120,
     "strength_level": 100,
     "defence_level": 85,
@@ -40,12 +50,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Fiyr remains",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

@@ -1,24 +1,30 @@
 {
-    "id": "6385",
+    "id": 6385,
     "name": "Slagilith",
+    "incomplete": true,
     "members": true,
-    "release_date": "28 February 2005",
+    "release_date": "2005-02-28",
     "combat_level": 92,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 92,
+    "max_hit": 13,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Pickaxes",
+        " Crush attacks and magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "This monster totally rocks!",
+    "wiki_name": "Slagilith (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Slagilith#Normal",
     "attack_level": 60,
     "strength_level": 120,
     "defence_level": 75,
@@ -40,26 +46,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite ore",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name=quest group=d>Only during [[One Small Favour]]</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut diamond",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name=quest group=d />"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut ruby",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref name=quest group=d />"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

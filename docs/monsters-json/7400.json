@@ -1,24 +1,33 @@
 {
-    "id": "7400",
+    "id": 7400,
     "name": "Vitreous warped Jelly",
+    "incomplete": false,
     "members": true,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "combat_level": 241,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 241,
+    "max_hit": 19,
+    "attack_type": "Magical melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 52,
+    "slayer_xp": 2200,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar"
+    ],
+    "examine": "I don't think you're ready for this jelly.",
+    "wiki_name": "Vitreous warped Jelly",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Vitreous_warped_Jelly",
     "attack_level": 200,
     "strength_level": 180,
     "defence_level": 250,
@@ -40,166 +49,166 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem base",
             "quantity": "1",
             "rarity": "Always",
-            "drop_requirements": "<ref name=\"catacomb\">One totem piece per kill.</ref>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem middle",
             "quantity": "1",
             "rarity": "Always",
-            "drop_requirements": "<ref name=\"catacomb\"/>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem top",
             "quantity": "1",
             "rarity": "Always",
-            "drop_requirements": "<ref name=\"catacomb\"/>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mist battlestaff",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/289.1)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dust battlestaff",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/289.1)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Imbued heart",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/867.2)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Eternal gem",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/867.2)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Black 2h sword",
             "quantity": "1",
             "rarity": "common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant battleaxe",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant axe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamant 2h sword",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mithril boots",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune kiteshield",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rune full helm",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "11,44,102,220,504",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (hard)",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<small>(5/64)</small>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "45",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "15",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Lobster",
             "quantity": "2",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Gold bar",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "Uncommon",
-            "drop_requirements": "<small>(1/71.8)</small><ref>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Thread",
             "quantity": "10",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ancient shard",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/186.66)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

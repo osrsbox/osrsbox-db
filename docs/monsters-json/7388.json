@@ -1,24 +1,33 @@
 {
-    "id": "7388",
+    "id": 7388,
     "name": "Crushing hand",
+    "incomplete": false,
     "members": true,
-    "release_date": "15 September 2016",
+    "release_date": "2016-09-15",
     "combat_level": 45,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 3,
+    "hitpoints": 45,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 5,
+    "slayer_xp": 605,
+    "slayer_masters": [
+        "turael",
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "That is quite some-thing.",
+    "wiki_name": "Crushing hand",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crushing_hand",
     "attack_level": 45,
     "strength_level": 42,
     "defence_level": 14,
@@ -40,110 +49,110 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dust battlestaff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/456.5)</small>"
+            "rarity": "1/456.5",
+            "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mist battlestaff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/456.5)</small>"
+            "rarity": "1/456.5",
+            "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Imbued heart",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/1369.6)</small>"
+            "rarity": "1/1369.6",
+            "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Eternal gem",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/1369.6)</small>"
+            "rarity": "1/1369.6",
+            "drop_requirements": ""
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Leather gloves",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Yellow gloves",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Red gloves",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Teal gloves",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Purple gloves",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Gold ring",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Sapphire ring",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Emerald ring",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "5; 8",
             "rarity": "Common",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Crawling hand",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/500)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

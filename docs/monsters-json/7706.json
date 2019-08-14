@@ -1,24 +1,32 @@
 {
-    "id": "7706",
+    "id": 7706,
     "name": "TzKal-Zuk",
+    "incomplete": false,
     "members": true,
-    "release_date": "01 June 2017",
+    "release_date": "2017-06-01",
     "combat_level": 1400,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 7,
+    "hitpoints": 1400,
+    "max_hit": 251,
+    "attack_type": "Typeless Magic, Typeless Ranged",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": true,
+    "weakness": [
+        "Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0,
+    "slayer_masters": [
+        "chaeldar",
+        "duradel"
+    ],
+    "examine": "An ancient adversary to the TzHaar.",
+    "wiki_name": "TzKal-Zuk",
+    "wiki_url": "https://oldschool.runescape.wiki/w/TzKal-Zuk",
     "attack_level": 350,
     "strength_level": 600,
     "defence_level": 260,
@@ -40,12 +48,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Jal-nib-rek",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": "<small>(1/100)</small><ref>Jal-nib-rek drop rate is 1/75 if TzKal-Zuk is killed while on a TzHaar slayer task.</ref>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

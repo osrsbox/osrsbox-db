@@ -1,24 +1,34 @@
 {
-    "id": "6740",
+    "id": 6740,
     "name": "Shade",
+    "incomplete": false,
     "members": false,
-    "release_date": "02 February 2004",
+    "release_date": "2004-02-02",
     "combat_level": 159,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 159,
+    "max_hit": 14,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet",
+        " Crumble Undead",
+        " Gadderhammer"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 5,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
+    "examine": "The angry dead.",
+    "wiki_name": "Shade (monster) (Stronghold of Security)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Shade_(monster)#Stronghold_of_Security",
     "attack_level": 130,
     "strength_level": 130,
     "defence_level": 130,
@@ -40,47 +50,47 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Shade robe top",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Shade robe",
             "quantity": "1",
             "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Ancient shard",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<small>(1/256.66)</small><ref name=\"catacomb\">Only dropped by those found within the [[Catacombs of Kourend]].</ref>"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem base",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<small>(1/385)</small><ref name=\"catacomb\" />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem middle",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<small>(1/385)</small><ref name=\"catacomb\" />"
+            "drop_requirements": "catacombs-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dark totem top",
             "quantity": "1",
             "rarity": "Rare",
-            "drop_requirements": "<small>(1/385)</small><ref name=\"catacomb\" />"
+            "drop_requirements": "catacombs-only"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

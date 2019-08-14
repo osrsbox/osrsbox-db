@@ -1,24 +1,31 @@
 {
-    "id": "874",
+    "id": 874,
     "name": "Zogre",
+    "incomplete": false,
     "members": true,
-    "release_date": "17 May 2005",
+    "release_date": "2005-05-17",
     "combat_level": 44,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 44,
+    "max_hit": 5,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Brutal arrows"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 71,
+    "slayer_masters": [
+        "vannaka"
+    ],
+    "examine": "A partially decomposing zombie ogre.",
+    "wiki_name": "Zogre",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zogre",
     "attack_level": 20,
     "strength_level": 36,
     "defence_level": 35,
@@ -40,40 +47,40 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Ogre coffin key",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zogre bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zogre bone",
             "quantity": "1",
             "rarity": "Common",
             "drop_requirements": "<ref>Only dropped during [[Rag and Bone Man II]].</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (easy)",
             "quantity": "1",
             "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zombie champion scroll",
             "quantity": "1",
             "rarity": "Very rare",
             "drop_requirements": "<small>(1/5,000)</small>"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

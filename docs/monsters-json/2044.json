@@ -1,24 +1,32 @@
 {
-    "id": "2044",
+    "id": 2044,
     "name": "Zulrah",
+    "incomplete": false,
     "members": true,
-    "release_date": "08 January 2015",
+    "release_date": "2015-01-08",
     "combat_level": 725,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 5,
+    "hitpoints": 725,
+    "max_hit": 41,
+    "attack_type": "Ranged, Magic",
+    "attack_speed": 3,
     "aggressive": true,
-    "poisonous": false,
+    "poisonous": true,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Ranged"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 500,
+    "slayer_masters": [
+        "konar",
+        "duradel"
+    ],
+    "examine": "The turquoise hooded serpent of the poison waste.",
+    "wiki_name": "Zulrah (Tanzanite)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zulrah#Tanzanite",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 300,
@@ -40,341 +48,334 @@
     "magic_damage": 20,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Zulrah's scales",
             "quantity": "100-299",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tanzanite fang",
             "quantity": "1",
             "rarity": "1/1024",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Magic fang",
             "quantity": "1",
             "rarity": "1/1024",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Serpentine visage",
             "quantity": "1",
             "rarity": "1/1024",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Uncut onyx",
             "quantity": "1",
             "rarity": "1/1024",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Tanzanite mutagen",
             "quantity": "1",
             "rarity": "~1/13159",
-            "drop_requirements": "<ref group=\"d\" name=\"mutagen\">The drop rate per kill is ~1/6,579 for a specific mutagen or ~1/3,290 for either mutagen. See the individual mutagen pages for an in-depth explanation.</ref>"
+            "drop_requirements": "<ref group=\"d\" name=\"mutagen\">The drop rate per kill is ~1/6,580 for a specific mutagen or ~1/3,290 for either mutagen. See the individual mutagen pages for an in-depth explanation.</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Magma mutagen",
             "quantity": "1",
             "rarity": "~1/13159",
             "drop_requirements": "<ref group=\"d\" name=\"mutagen\" />"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon med helm",
             "quantity": "1",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon halberd",
             "quantity": "1",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "200",
-            "rarity": "12/249",
+            "rarity": "12/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "500",
-            "rarity": "12/249",
+            "rarity": "12/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pure essence",
             "quantity": "1500 (noted)",
-            "rarity": "10/249",
+            "rarity": "10/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "300",
-            "rarity": "12/249",
+            "rarity": "12/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snapdragon",
             "quantity": "10 (noted)",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dwarf weed",
             "quantity": "30 (noted)",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toadflax",
             "quantity": "25 (noted)",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Torstol",
             "quantity": "10 (noted)",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snakeskin",
             "quantity": "35 (noted)",
-            "rarity": "11/249",
+            "rarity": "11/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Runite ore",
             "quantity": "2 (noted)",
-            "rarity": "11/249",
+            "rarity": "11/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Flax",
             "quantity": "1000 (noted)",
-            "rarity": "10/249",
+            "rarity": "10/248",
             "drop_requirements": "{{CiteTwitter|author=Mod Wolf|date=30 March 2019|url=https://twitter.com/JagexWolf/status/1111946035604176897}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Yew logs",
             "quantity": "35 (noted)",
-            "rarity": "10/249",
+            "rarity": "10/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Mahogany logs",
             "quantity": "50 (noted)",
-            "rarity": "8/249",
+            "rarity": "8/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coal",
             "quantity": "200 (noted)",
-            "rarity": "8/249",
+            "rarity": "8/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragonstone bolt tips",
             "quantity": "12",
-            "rarity": "8/249",
+            "rarity": "8/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Palm tree seed",
             "quantity": "1",
-            "rarity": "6/249",
+            "rarity": "6/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Papaya tree seed",
             "quantity": "3",
-            "rarity": "6/249",
+            "rarity": "6/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Calquat tree seed",
             "quantity": "2",
-            "rarity": "6/249",
+            "rarity": "6/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Magic seed",
             "quantity": "1",
-            "rarity": "4/249",
+            "rarity": "4/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Toadflax seed",
             "quantity": "2",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Snapdragon seed",
             "quantity": "1",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dwarf weed seed",
             "quantity": "2",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Torstol seed",
             "quantity": "1",
-            "rarity": "2/249",
+            "rarity": "2/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Spirit seed",
             "quantity": "1",
-            "rarity": "1/249",
+            "rarity": "1/248",
             "drop_requirements": null
         },
         {
-            "id": null,
-            "name": "Crystal seed",
-            "quantity": "1",
-            "rarity": "1/249",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
+            "id": 1,
             "name": "Zul-andra teleport",
             "quantity": "4",
-            "rarity": "15/249",
+            "rarity": "15/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Battlestaff",
             "quantity": "10 (noted)",
-            "rarity": "10/249",
+            "rarity": "10/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Manta ray",
             "quantity": "35 (noted)",
-            "rarity": "12/249",
+            "rarity": "12/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Dragon bones",
             "quantity": "12 (noted)",
-            "rarity": "8/249",
+            "rarity": "8/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Adamantite bar",
             "quantity": "20 (noted)",
-            "rarity": "8/249",
+            "rarity": "8/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coconut",
             "quantity": "20 (noted)",
-            "rarity": "5/249",
+            "rarity": "5/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Grapes",
             "quantity": "250 (noted)",
-            "rarity": "6/249",
+            "rarity": "6/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Zulrah's scales",
             "quantity": "500",
-            "rarity": "5/249",
+            "rarity": "5/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Antidote++(4)",
             "quantity": "10 (noted)",
-            "rarity": "9/249",
+            "rarity": "9/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Swamp tar",
             "quantity": "1000",
-            "rarity": "5/249",
+            "rarity": "5/248",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Brimstone key",
             "quantity": "1",
             "rarity": "1/50",
-            "drop_requirements": "<ref group=\"d\">Brimstone keys are only dropped while on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>"
+            "drop_requirements": "konar-task-only"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Clue scroll (elite)",
             "quantity": "1",
             "rarity": "1/75",
             "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/561123213451984896|date=30 Jan 2015|archiveurl=http://archive.fo/czPTx|archivedate=25 Mar 2019|quote=If you missed the community stream on Wednesday here are Zulrah's drop rates!|name=Confirmed droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Jar of swamp",
             "quantity": "1",
             "rarity": "1/3000",
             "drop_requirements": "{{NamedRef|Confirmed droprates}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Pet snakeling",
             "quantity": "1",
             "rarity": "1/4000",
             "drop_requirements": "{{NamedRef|Confirmed droprates}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

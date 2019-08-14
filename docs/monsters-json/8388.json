@@ -1,24 +1,29 @@
 {
-    "id": "8388",
+    "id": 8388,
     "name": "Sotetseg",
+    "incomplete": true,
     "members": true,
-    "release_date": "07 June 2018",
+    "release_date": "2018-06-07",
     "combat_level": 995,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 5,
+    "hitpoints": 995,
+    "max_hit": 50,
+    "attack_type": "Crush",
+    "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": false,
+    "slayer_level": 0,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "An intruder from the Shadow Realm, corrupted through Haemalchemy.",
+    "wiki_name": "Sotetseg",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sotetseg",
     "attack_level": 250,
     "strength_level": 250,
     "defence_level": 200,
@@ -40,19 +45,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Long bone",
             "quantity": "1",
             "rarity": "1/400",
             "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Curved bone",
             "quantity": "1",
             "rarity": "1/5000",
             "drop_requirements": "{{NamedRef|special bones}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

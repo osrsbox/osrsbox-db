@@ -1,24 +1,31 @@
 {
-    "id": "2792",
+    "id": 2792,
     "name": "Cow calf",
+    "incomplete": false,
     "members": false,
-    "release_date": "11 July 2005",
+    "release_date": "2005-07-11",
     "combat_level": 2,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 2,
+    "hitpoints": 2,
+    "max_hit": 1,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "None"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 6,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "Young, but still beefy.",
+    "wiki_name": "Cow calf",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Cow_calf",
     "attack_level": 1,
     "strength_level": 1,
     "defence_level": 1,
@@ -40,26 +47,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Cowhide",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Raw beef",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Bones",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

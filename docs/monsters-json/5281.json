@@ -1,24 +1,32 @@
 {
-    "id": "5281",
+    "id": 5281,
     "name": "Monkey Zombie",
+    "incomplete": false,
     "members": true,
-    "release_date": "06 December 2004",
+    "release_date": "2004-12-06",
     "combat_level": 98,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 98,
+    "max_hit": 7,
+    "attack_type": "Melee",
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "immune_venom": false,
+    "weakness": [
+        "Salve amulet",
+        " Crumble Undead"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 90,
+    "slayer_masters": [
+        "turael"
+    ],
+    "examine": "A large and lumbering undead monkey.",
+    "wiki_name": "Monkey Zombie (Lv 98)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Monkey_Zombie#Lv_98",
     "attack_level": 150,
     "strength_level": 60,
     "defence_level": 60,
@@ -40,26 +48,26 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey bones (small zombie)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped by the level 82 variant</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey bones (large zombie)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only dropped by the level 98 and 129 variants</ref>"
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Monkey paw",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }

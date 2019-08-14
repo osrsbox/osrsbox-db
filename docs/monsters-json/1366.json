@@ -1,24 +1,29 @@
 {
-    "id": "1366",
+    "id": 1366,
     "name": "Earth elemental",
+    "incomplete": true,
     "members": true,
-    "release_date": "02 June 2004",
+    "release_date": "2004-06-02",
     "combat_level": 35,
-    "hitpoints": null,
-    "max_hit": null,
-    "attack_type": null,
-    "attack_speed": null,
+    "size": 1,
+    "hitpoints": 35,
+    "max_hit": 4,
+    "attack_type": "Melee",
+    "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
-    "immune_venon": null,
-    "weakness": null,
-    "slayer_monster": null,
+    "immune_venom": false,
+    "weakness": [
+        "Magic"
+    ],
+    "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": null,
-    "examine": null,
-    "wiki_url": null,
+    "examine": "An earth elemental.",
+    "wiki_name": "Earth elemental (Normal)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Earth_elemental#Normal",
     "attack_level": 20,
     "strength_level": 35,
     "defence_level": 35,
@@ -40,96 +45,96 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": null,
+            "id": 1,
             "name": "Rock (elemental)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Staff of earth",
             "quantity": "1",
             "rarity": "~1/66.761",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "15",
             "rarity": "~1/9.294",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Nature rune",
             "quantity": "2",
             "rarity": "~1/13.203",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Chaos rune",
             "quantity": "2",
             "rarity": "~1/18.884",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Law rune",
             "quantity": "1",
             "rarity": "~1/20.973",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Death rune",
             "quantity": "1",
             "rarity": "~1/36.744",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Earth rune",
             "quantity": "20",
             "rarity": "~1/46.931",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Blood rune",
             "quantity": "1",
             "rarity": "~1/91.154",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "12",
             "rarity": "~1/3.893",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Coins",
             "quantity": "42",
             "rarity": "~1/47.879",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Rock (elemental)",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         },
         {
-            "id": null,
+            "id": 1,
             "name": "Elemental ore",
             "quantity": "1",
             "rarity": "Always",
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": null
+    "rare_drop_table": false
 }
