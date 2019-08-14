@@ -17,28 +17,19 @@
           },
           "name":{
             "description":"The name of the item drop.",
-            "type":"integer"
+            "type":"string"
           },
           "quantity":{
             "description":"The quantity of the item drop (can be an integer or range, and have notes).",
-            "type":"string"
+            "type":["string", "null"]
           },
           "rarity":{
             "description":"The rarity of the item drop (in fraction format).",
-            "type":"string",
-            "pattern":"^[0-9]+\/[0-9]+"
+            "type":["string", "null"]
           },
           "drop_requirements":{
             "description":"If there are any requirements to getting the specific drop.",
-            "type":["string", "null"],
-            "enum":[
-              "slayer-task-only",
-              "konar-task-only",
-              "krystilia-task-only",
-              "wilderness-only",
-              "catacombs-only",
-              "quest-only"
-            ]
+            "type":["array", "string", "null"]
           }
         }
       }
@@ -60,11 +51,15 @@
       },
       "release_date":{
         "description":"The release date of the monster in ISO8601 date format.",
-        "type":"string",
+        "type":["string", "null"],
         "format":"date"
       },
       "combat_level":{
         "description":"The combat level of the monster.",
+        "type":"integer"
+      },
+      "size":{
+        "description":"The size, in tiles, of the monster.",
         "type":"integer"
       },
       "hitpoints":{
@@ -77,11 +72,11 @@
       },
       "attack_type":{
         "description":"The attack style (melee, magic, range) of the monster.",
-        "type":"string"
+        "type":["string", "null"]
       },
       "attack_speed":{
         "description":"The attack speed (in game ticks) of the monster.",
-        "type":"integer"
+        "type":["integer", "null"]
       },
       "aggressive":{
         "description":"If the monster is aggressive, or not.",
@@ -95,8 +90,8 @@
         "description":"If the monster is immune to poison, or not",
         "type":"boolean"
       },
-      "immune_venon":{
-        "description":"If the monster is immune to venon, or not",
+      "immune_venom":{
+        "description":"If the monster is immune to venom, or not",
         "type":"boolean"
       },
       "weakness":{
@@ -112,15 +107,15 @@
       },
       "slayer_level":{
         "description":"The slayer level required to kill the monster (if a slayer monster.",
-        "type":"integer"
+        "type":["integer", "null"]
       },
       "slayer_xp":{
         "description":"The slayer XP rewarded for a monster kill.",
-        "type":"integer"
+        "type":["integer", "null"]
       },
       "slayer_masters":{
         "description":"The slayer XP rewarded for a monster kill.",
-        "type":"array",
+        "type":["array", "null"],
         "items":{
           "type":"string",
           "enum":[
@@ -137,6 +132,10 @@
       },
       "examine":{
         "description":"The examine text of the monster.",
+        "type":"string"
+      },
+      "wiki_name":{
+        "description":"The OSRS Wiki name for the monster.",
         "type":"string"
       },
       "wiki_url":{
@@ -238,6 +237,7 @@
         "members",
         "release_date",
         "combat_level",
+        "size",
         "hitpoints",
         "max_hit",
         "attack_type",
@@ -245,13 +245,14 @@
         "aggressive",
         "poisonous",
         "immune_poison",
-        "immune_venon",
+        "immune_venom",
         "weakness",
         "slayer_monster",
         "slayer_level",
         "slayer_xp",
         "slayer_masters",
         "examine",
+        "wiki_name",
         "wiki_url",
         "attack_level",
         "strength_level",

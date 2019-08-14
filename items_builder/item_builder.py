@@ -490,7 +490,7 @@ class BuildItem:
         if tradeable is None:
             tradeable = self.extract_infobox_value(self.template, "tradeable")
         if tradeable is not None:
-            self.item_dict["tradeable"] = infobox_cleaner.clean_tradeable(tradeable)
+            self.item_dict["tradeable"] = infobox_cleaner.clean_boolean(tradeable)
         else:
             self.item_dict["tradeable"] = False
 

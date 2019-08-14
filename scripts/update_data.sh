@@ -102,12 +102,13 @@ python3 determine_new_items.py
 
 # Move the new cache data
 cd ~/repos/osrsbox-db/
-mv extraction_tools_cache/items-cache-data.json data/ 
+mv extraction_tools_cache/items-cache-data.json data/
 
-# Print remaining tasks to user...
-echo -e ">>> REMEMBER YOU STILL NEED TO DO THE FOLLOWING..."
-echo -e ">>> 0) Update changelog"
-echo -e ">>> 1) Update tests"
-echo -e ">>> 2) Run pytests"
-echo -e ">>> 3) git push"
-echo -e ">>> 4) Update database"
+# Generate the processed wikitext files
+echo -e ">>> Process raw wikitext..."
+cd ~/repos/osrsbox-db/extraction_tools_wiki/
+python process_wikitext.py
+
+echo -e ">>> FINISHED DATA UPDATE... MAKE SURE TO..."
+echo -e ">>> Update changelog"
+echo -e ">>> Update tests"

@@ -47,10 +47,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from items_builder import builder
 
-echo -e ">>> Generating processed_wikitext_items.json"
-cd ~/repos/osrsbox-db/extraction_tools_wiki
-python3 process_wikitext_items.py
-
 echo -e ">>> Updating item database"
 cd ~/repos/osrsbox-db/items_builder
 python3 builder.py
@@ -62,7 +58,7 @@ python3 generate_items_slot_files.py
 
 # Print remaining tasks to user...
 echo -e ">>> REMEMBER YOU STILL NEED TO DO THE FOLLOWING..."
-echo -e ">>> 0) Run pytests"
-echo -e ">>> 1) Increment PyPi package (if required)"
-echo -e ">>> 2) Update PyPi README.md"
-echo -e ">>> 3) git push"
+echo -e ">>> Run pytests"
+echo -e ">>> Increment PyPi package (if required)"
+echo -e ">>> Update PyPi README.md"
+echo -e ">>> git push"
