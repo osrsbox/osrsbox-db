@@ -22,141 +22,78 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import logging
+import argparse
 from pathlib import Path
-
-import mwparserfromhell
 
 import config
 from monsters_builder import monster_builder
 
+os.remove(Path(__file__).stem+".log")
+logging.basicConfig(filename=Path(__file__).stem+".log",
+                    level=logging.DEBUG)
+logging.info(">>> Starting builder.py to build monster database...")
 
-def map_npcs_from_cache_to_wiki(monster_name, wiki_text, attackable_npcs):
-    monster_ids = dict()
-    monster_template = None  # Current template
-    monster_templates = list()  # List of all templates
 
-    # Parse wiki text and get "Infoxbox Monster" templates
-    wiki_code = mwparserfromhell.parse(wiki_text)
-    templates = wiki_code.filter_templates()
-    for template in templates:
-        template_name = template.name.strip()
-        template_name = template_name.lower()
-        if "infobox monster" in template_name:  # There can be two of these
-            monster_template = True
-            monster_templates.append(template)
+def main(export_monster: bool = False):
+    # Load the current database contents
+    # monsters_compltete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
+    # with open(monsters_compltete_file_path) as f:
+    #     all_db_monsters = json.load(f)
 
-    # Couldn't find template an "Infoxbox Monster"
-    if monster_template is None:
-        return
+    # Load the item wikitext file
+    wiki_text_file_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_monsters.json")
+    with open(wiki_text_file_path) as f:
+        all_wikitext_raw = json.load(f)
 
-    # Loop the "Infoxbox Monster" templates, determine number of versions
-    # This uses "id", "id1", "id2", "id3" etc as a key
-    for monster_template in monster_templates:
-        version_count = 0
-        try:
-            monster_template.get("id" + "1").value
-            # Try to determine how many versions are present
-            i = 1
-            while i <= 20:  # Guessing max version number is 20
-                try:
-                    monster_template.get("id" + str(i)).value
-                    version_count += 1
-                except ValueError:
-                    break
-                i += 1
-        except ValueError:
-            pass
+    # Temp loading of monster ID -> wikitext
+    processed_wikitextfile_path = Path(config.EXTRACTION_WIKI_PATH / "processed_wikitext_monsters.json")
+    with open(processed_wikitextfile_path) as f:
+        all_wikitext_processed = json.load(f)
 
-        # Process single, or versioned "Infoxbox Monster" template/s
-        if version_count == 0:
-            try:
-                ids = monster_template.get("id").value
-                ids = ids.strip()
-                ids = ids.split(",")
-                for id in ids:
-                    monster_ids[id] = [monster_name, wiki_text, monster_template, version_count]
-            except ValueError:
-                logger.debug(f"NO ID: NAME: {monster_name}")
-        else:
-            i = 1
-            while i <= version_count:
-                try:
-                    ids = monster_template.get("id" + str(i)).value
-                    ids = ids.strip()
-                    ids = ids.split(",")
-                    for id in ids:
-                        monster_ids[id] = [monster_name, wiki_text, monster_template, i]
-                    i += 1
-                except ValueError:
-                    logger.debug(f"NO ID: NAME: {monster_name}")
-                    i += 1
+    # Load the raw OSRS cache monster data
+    # This is the final data load, and used as baseline data for database population
+    all_monster_cache_data_path = Path(config.DATA_PATH / "attackable-npcs.json")
+    with open(all_monster_cache_data_path) as f:
+        all_monster_cache_data = json.load(f)
 
-    return monster_ids
+    # Start processing every monster!
+    for monster_id in all_monster_cache_data:
+        # Toggle to start, stop at a specific monster ID
+        # if int(monster_id) < 8500:
+        #     continue
+
+        # Skip ununsed monsters
+        if int(monster_id) in [3096, 4095]:
+            continue
+
+        # Initialize the BuildMonster class, used for all monster
+        builder = monster_builder.BuildMonster(monster_id,
+                                               all_monster_cache_data,
+                                               all_wikitext_processed,
+                                               all_wikitext_raw,
+                                               # all_db_items,
+                                               export_monster)
+
+        status = builder.preprocessing()
+        if status:
+            builder.populate_monster()
+            builder.parse_monster_drops()
+            builder.generate_monster_object()
+            builder.compare_new_vs_old_monster()
+            builder.export_monster_to_json()
+            builder.validate_monster()
+
+    # Done processing, rejoice!
+    print("Done.")
 
 
 if __name__ == "__main__":
-    # Delete old log file
-    if os.path.exists("builder.log"):
-        os.remove("builder.log")
+    parser = argparse.ArgumentParser(description="Build monster database.")
+    parser.add_argument('--export_monster',
+                        default=False,
+                        required=False,
+                        help='A boolean of whether to export data.')
+    args = parser.parse_args()
 
-    # Setup logging
-    logging.basicConfig(filename="builder.log",
-                        filemode='a',
-                        level=logging.DEBUG)
-    logger = logging.getLogger(__name__)
-
-    # Load the raw output from OSRS cache
-    attackable_npcs_path = Path(config.DATA_PATH / "attackable-npcs.json")
-    with open(attackable_npcs_path) as f:
-        attackable_npcs = json.load(f)
-
-    # Load the wiki text file
-    wiki_text_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_monsters.json")
-    with open(wiki_text_path) as wiki_text_file:
-        wiki_text = json.load(wiki_text_file)
-
-    # STAGE ONE: Start correlation between the OSRS cache data, and OSRS Wiki data
-
-    found_ids = dict()
-    logger.debug(">>> Starting ID correlation...")
-    # Loop OSRS Wiki entries from monster category
-    for monster_name, wiki_text in wiki_text.items():
-        monster_ids = map_npcs_from_cache_to_wiki(monster_name, wiki_text, attackable_npcs)
-        if monster_ids:
-            for monster_id, data in monster_ids.items():
-                found_ids[monster_id] = data
-
-    to_process = dict()  # monster id : cache_name, wiki_name, wiki_text,
-
-    logger.debug(">>> Populating attackable NPCs data...")
-    # Match attackable NPCs with wiki data
-    attackable_npcs_list = sorted(attackable_npcs, key=lambda x: int(x))
-    for monster_def_id in attackable_npcs_list:
-        cache_def = attackable_npcs[monster_def_id]
-        try:
-            cache_name = cache_def["name"]
-            cache_combat_level = cache_def["combatLevel"]
-            wiki_name = found_ids[monster_def_id][0]
-            wiki_text_data = found_ids[monster_def_id][1]
-            monster_template = found_ids[monster_def_id][2]
-            infobox_version = found_ids[monster_def_id][3]
-            to_process[monster_def_id] = {
-                "cache_name": cache_name,
-                "wiki_name": wiki_name,
-                "wiki_text": wiki_text_data,
-                "template": monster_template,
-                "infobox_version": infobox_version,
-                "cache_combat_level": cache_combat_level
-            }
-        except KeyError:
-            logger.debug(f'NO WIKI: ID: {monster_def_id} NAME: {cache_def["name"]} CMB: {cache_def["combatLevel"]}')
-
-    logger.debug(">>> Starting to build the monster database...")
-    # Start processing every monster!
-    for monster_id in to_process:
-        # Initialize the BuildMonster class
-        logger.debug(f">>> {monster_id}")
-        builder = monster_builder.BuildMonster(monster_id,
-                                               to_process[monster_id])
-        # Start the build monster population function
-        builder.populate()
+    export_monster = args.export_monster
+    main(export_monster)

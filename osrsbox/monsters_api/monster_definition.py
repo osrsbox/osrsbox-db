@@ -40,6 +40,7 @@ class MonsterDefinition:
     members: bool = None
     release_date: str = None
     combat_level: int = None
+    size: int = None
     hitpoints: int = None
     max_hit: int = None
     attack_type: str = None
@@ -47,13 +48,14 @@ class MonsterDefinition:
     aggressive: bool = None
     poisonous: bool = None
     immune_poison: bool = None
-    immune_venon: bool = None
+    immune_venom: bool = None
     weakness: List = None
     slayer_monster: bool = None
     slayer_level: int = None
     slayer_xp: int = None
     slayer_masters: List = None
     examine: str = None
+    wiki_name: str = None
     wiki_url: str = None
     attack_level: int = None
     strength_level: int = None
