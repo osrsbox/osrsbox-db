@@ -92,7 +92,7 @@ git pull
 cd ~/repos/osrsbox-db/scripts/update_items/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2019-08-02T00:00:00Z
+python3 update_wiki_data.py 2019-08-10T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py
@@ -107,7 +107,7 @@ mv extraction_tools_cache/items-cache-data.json data/
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."
 cd ~/repos/osrsbox-db/extraction_tools_wiki/
-python process_wikitext.py
+python3 process_wikitext.py
 
 echo -e ">>> FINISHED DATA UPDATE... MAKE SURE TO..."
 echo -e ">>> Update changelog"
