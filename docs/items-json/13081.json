@@ -12,8 +12,8 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": true,
-    "equipable_weapon": true,
+    "equipable_by_player": false,
+    "equipable_weapon": false,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
@@ -25,53 +25,6 @@
     "examine": "A nice sturdy pike.",
     "wiki_name": "Crystal halberd (i) (Full)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_halberd_(i)#Full",
-    "equipment": {
-        "attack_stab": 85,
-        "attack_slash": 110,
-        "attack_crush": 5,
-        "attack_magic": -4,
-        "attack_ranged": 0,
-        "defence_stab": -1,
-        "defence_slash": 4,
-        "defence_crush": 5,
-        "defence_magic": 0,
-        "defence_ranged": 0,
-        "melee_strength": 118,
-        "ranged_strength": 0,
-        "magic_damage": 0,
-        "prayer": 0,
-        "slot": "2h",
-        "requirements": {
-            "attack": 70,
-            "strength": 35,
-            "agility": 50
-        }
-    },
-    "weapon": {
-        "attack_speed": 7,
-        "weapon_type": "halberds",
-        "stances": [
-            {
-                "combat_style": "jab",
-                "attack_type": "stab",
-                "attack_style": "controlled",
-                "experience": "shared",
-                "boosts": null
-            },
-            {
-                "combat_style": "swipe",
-                "attack_type": "slash",
-                "attack_style": "aggressive",
-                "experience": "strength",
-                "boosts": null
-            },
-            {
-                "combat_style": "fend",
-                "attack_type": "stab",
-                "attack_style": "defensive",
-                "experience": "defence",
-                "boosts": null
-            }
-        ]
-    }
+    "equipment": null,
+    "weapon": null
 }

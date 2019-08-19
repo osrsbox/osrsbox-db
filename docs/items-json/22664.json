@@ -12,8 +12,8 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": true,
-    "equipable_weapon": true,
+    "equipable_by_player": false,
+    "equipable_weapon": false,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
@@ -25,59 +25,6 @@
     "examine": "A powerful scythe. It is currently uncharged.",
     "wiki_name": "Scythe of vitur (Uncharged)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Scythe_of_vitur#Uncharged",
-    "equipment": {
-        "attack_stab": 50,
-        "attack_slash": 75,
-        "attack_crush": 10,
-        "attack_magic": -6,
-        "attack_ranged": 0,
-        "defence_stab": -2,
-        "defence_slash": 6,
-        "defence_crush": 0,
-        "defence_magic": 0,
-        "defence_ranged": 0,
-        "melee_strength": 50,
-        "ranged_strength": 0,
-        "magic_damage": 0,
-        "prayer": 0,
-        "slot": "2h",
-        "requirements": {
-            "attack": 75,
-            "strength": 75
-        }
-    },
-    "weapon": {
-        "attack_speed": 5,
-        "weapon_type": "scythes",
-        "stances": [
-            {
-                "combat_style": "reap",
-                "attack_type": "slash",
-                "attack_style": "accurate",
-                "experience": "attack",
-                "boosts": null
-            },
-            {
-                "combat_style": "chop",
-                "attack_type": "slash",
-                "attack_style": "aggressive",
-                "experience": "strength",
-                "boosts": null
-            },
-            {
-                "combat_style": "jab",
-                "attack_type": "crush",
-                "attack_style": "aggressive",
-                "experience": "strength",
-                "boosts": null
-            },
-            {
-                "combat_style": "block",
-                "attack_type": "slash",
-                "attack_style": "defensive",
-                "experience": "defence",
-                "boosts": null
-            }
-        ]
-    }
+    "equipment": null,
+    "weapon": null
 }
