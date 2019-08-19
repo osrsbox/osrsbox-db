@@ -41,7 +41,7 @@ class BuildItem:
                  all_wikitext_raw, all_db_items,
                  buy_limits_data, skill_requirements_data,
                  weapon_types_data, weapon_stances_data, invalid_items_data,
-                 export_item):
+                 known_item_names, export_item):
         self.item_id = item_id
         self.all_item_cache_data = all_item_cache_data  # Raw cache data for all items
         self.all_wikitext_processed = all_wikitext_processed  # Processed wikitext for all items
@@ -52,6 +52,7 @@ class BuildItem:
         self.weapon_types_data = weapon_types_data  # Weapon type dictionary
         self.weapon_stances_data = weapon_stances_data  # Weapon stances dictionary
         self.invalid_items_data = invalid_items_data  # Dictionary of invalid items
+        self.known_item_names = known_item_names  # A list of already known (processed) items
         self.export_item = export_item  # If the JSON should be exported/created
 
         # For this item instance, create dictionary for property storage
@@ -115,6 +116,44 @@ class BuildItem:
             "weapon_type",
             "stances"]
 
+    def check_duplicate_item(self) -> ItemDefinition:
+        """Determine if this is a duplicate item.
+
+        :return: An ItemDeinition object.
+        """
+        # Start by setting the duplicate property to False
+        self.item_dict["duplicate"] = False
+        # Create an ItemDefinition object
+        item_definition = ItemDefinition(**self.item_dict)
+
+        # Set the item properties that we want to compare
+        correlation_properties = {
+            "wiki_name": False,
+            "noted": False,
+            "placeholder": False,
+            "equipable": False,
+            "equipable_by_player": False,
+            "equipable_weapon": False
+        }
+
+        # Loop the list of currently (already processed) items
+        for known_item in self.known_item_names:
+            # Do a quick name check before deeper inspection
+            if item_definition.name != known_item.name:
+                continue
+
+            # If the cache names are equal, do further inspection
+            for cprop in correlation_properties:
+                if getattr(item_definition, cprop) == getattr(known_item, cprop):
+                    correlation_properties[cprop] = True
+
+            # Check is all values in correlation properties are True
+            correlation_result = all(value is True for value in correlation_properties.values())
+            if correlation_result:
+                self.item_dict["duplicate"] = True
+
+        return item_definition
+
     def generate_item_object(self):
         """Generate the `ItemDefinition` object from the item_dict dictiornary."""
         self.item_definition = ItemDefinition(**self.item_dict)
@@ -154,7 +193,7 @@ class BuildItem:
 
         # Log and print item
         logging.debug(f"======================= {self.item_id_str} {self.item_name}")
-        # print(f"======================= {self.item_id_str} {self.item_name}")
+        print(f"======================= {self.item_id_str} {self.item_name}")
         logging.debug(f"preprocessing: using the following cache data:")
         logging.debug(self.item_cache_data)
 
@@ -357,6 +396,8 @@ class BuildItem:
             except KeyError:
                 self.item_dict[prop] = None
 
+        self.item_dict["tradeable"] = False
+        self.item_dict["quest_item"] = False
         # Set equipable item/weapon properties to false
         self.item_dict["equipable_by_player"] = False
         self.item_dict["equipable_weapon"] = False
@@ -438,7 +479,7 @@ class BuildItem:
 
         # STAGE TWO: Extract, process and set item properties from the infobox template
 
-        # WEIGHT: Determine the weight of an item ()
+        # WEIGHT: Determine the weight of an item
         weight = None
         if self.infobox_version_number is not None:
             key = "weight" + str(self.infobox_version_number)
@@ -450,7 +491,7 @@ class BuildItem:
         else:
             self.item_dict["weight"] = None
 
-        # QUEST: Determine if item is associated with a quest ()
+        # QUEST: Determine if item is associated with a quest
         quest = None
         if self.infobox_version_number is not None:
             key = "quest" + str(self.infobox_version_number)
@@ -468,9 +509,9 @@ class BuildItem:
             if quest is not None:
                 self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
             else:
-                self.item_dict["quest_item"] = None
+                self.item_dict["quest_item"] = False
 
-        # Determine the release date of an item ()
+        # Determine the release date of an item
         release_date = None
         if self.infobox_version_number is not None:
             key = "release" + str(self.infobox_version_number)
@@ -482,7 +523,7 @@ class BuildItem:
         else:
             self.item_dict["release_date"] = None
 
-        # Determine the examine text of an item ()
+        # Determine if an item is tradeable
         tradeable = None
         if self.infobox_version_number is not None:
             key = "tradeable" + str(self.infobox_version_number)
@@ -494,7 +535,7 @@ class BuildItem:
         else:
             self.item_dict["tradeable"] = False
 
-        # Determine the examine text of an item ()
+        # Determine the examine text of an item
         examine = None
         if self.infobox_version_number is not None:
             key = "examine" + str(self.infobox_version_number)
@@ -514,7 +555,7 @@ class BuildItem:
             else:
                 self.item_dict["examine"] = None
 
-        # Determine if item has a buy limit ()
+        # Determine if item has a buy limit
         if not self.item_dict["tradeable"]:
             self.item_dict["buy_limit"] = None
         else:

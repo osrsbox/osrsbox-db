@@ -86,6 +86,9 @@ def main(export_item: bool = False):
     with open(all_item_cache_data_path) as f:
         all_item_cache_data = json.load(f)
 
+    # Initialize a list of known items
+    known_items = list()
+
     # Start processing every item!
     for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
@@ -103,11 +106,14 @@ def main(export_item: bool = False):
                                          weapon_types_data,
                                          weapon_stances_data,
                                          invalid_items_data,
+                                         known_items,
                                          export_item)
 
         status = builder.preprocessing()
         if status:
             builder.populate_item()
+            known_item = builder.check_duplicate_item()
+            known_items.append(known_item)
             builder.generate_item_object()
             builder.compare_new_vs_old_item()
             builder.export_item_to_json()
@@ -115,6 +121,8 @@ def main(export_item: bool = False):
         else:
             builder.populate_from_cache_data()
             builder.populate_non_wiki_item()
+            known_item = builder.check_duplicate_item()
+            known_items.append(known_item)
             builder.generate_item_object()
             builder.compare_new_vs_old_item()
             builder.export_item_to_json()

@@ -21,10 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import json
 from pathlib import Path
-from typing import Dict
-from typing import List
-from typing import Union
-from typing import Generator
+from typing import Dict, List, Union, Generator
 
 from osrsbox.items_api.item_definition import ItemDefinition
 
