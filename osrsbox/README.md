@@ -1,162 +1,163 @@
-# osrsbox
+# osrsbox
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
 
-## A complete and up-to-date database of Old School Runescape (OSRS) items accessible using a Python API
+## A complete and up-to-date database of Old School Runescape (OSRS) items accessible using a Python API
 
-The `osrsbox` package is a complete and up-to-date database of OSRS items that is accessible via a Python API. **Complete** means it holds every single item in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. This package contains just the Python API and the actual item database - the tools and data used to build the item database are available from the [`osrsbox-db` GitHub repository](https://github.com/osrsbox/osrsbox-db).
+The `osrsbox` package is a complete and up-to-date database of OSRS items that is accessible via a Python API. **Complete** means it holds every single item in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. This package contains just the Python API and the actual item database - the tools and data used to build the item database are available from the [`osrsbox-db` GitHub repository](https://github.com/osrsbox/osrsbox-db).
 
 ## Table of Contents
 
 - [Quick Start](#quick-start)
-- [OSRS Items API](#osrs-items-api)
+- [OSRS Items API](#osrs-items-api)
 - [Changelog](#changelog)
 
-# Quick Start
+# Quick Start
 
-- Make sure you have >= Python 3.6
-- Install package using: `pip install osrsbox`
-- Import items API using: `from osrsbox import items_api`
-- Load all items using: `all_db_items = items_api.load()`
-- Loop items using: `for item in all_db_items: print(item.name)`
+- Make sure you have >= Python 3.6
+- Install package using: `pip install osrsbox`
+- Import items API using: `from osrsbox import items_api`
+- Load all items using: `all_db_items = items_api.load()`
+- Loop items using: `for item in all_db_items: print(item.name)`
 
-### Package Requirements
+### Package Requirements
 
-- Python 3.6 or above
-- Dataclasses package (if Python is below 3.7)
+- Python 3.6 or above
+- Dataclasses package (if Python is below 3.7)
 
-### Installation
+### Installation
 
-The easiest way to install the osrsbox package is through the [Python Package Index](http://pypi.python.org/) using the `pip` command. You need to have `pip` installed - and make sure it is updated (especially on Windows). Then you can install the `osrsbox` package using the following `pip` command:
-
-```
-pip install osrsbox
-```
-
-This package is consistently updated - usually after each weekly in-game update. This is because the in-game update usually introduces additional items into the game or changes existing items. Therefore, you should regularly check and update the `osrsbox` package. To achieve this, run `pip` with the `upgrade` flag.
+The easiest way to install the osrsbox package is through the [Python Package Index](http://pypi.python.org/) using the `pip` command. You need to have `pip` installed - and make sure it is updated (especially on Windows). Then you can install the `osrsbox` package using the following `pip` command:
 
 ```
-pip install --upgrade osrsbox
+pip install osrsbox
 ```
 
-### Usage 
-
-The key use of the `osrsbox` package is to load and automate the processing of OSRS items and their associated metadata. 
-
-You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module. A simple example of using the package to `load` all the items, then loop and print out the item ID and name of every item in OSRS is provided below:
+This package is consistently updated - usually after each weekly in-game update. This is because the in-game update usually introduces additional items into the game or changes existing items. Therefore, you should regularly check and update the `osrsbox` package. To achieve this, run `pip` with the `upgrade` flag.
 
 ```
->>> from osrsbox import items_api
->>> all_db_items = items_api.load()
->>> for item in all_db_items:
-...     print(item.id, item.name)
+pip install --upgrade osrsbox
 ```
 
-# OSRS Items API
+### Usage 
 
-Each item is represented by Python objects, specifically using Python dataclasses. There are three types of objects that can be used to represent part of an in-game OSRS item, each outlined in the following subsections.
+The key use of the `osrsbox` package is to load and automate the processing of OSRS items and their associated metadata. 
 
-### Item Definition
+You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module. A simple example of using the package to `load` all the items, then loop and print out the item ID and name of every item in OSRS is provided below:
 
-An `ItemDefinition` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest_item` association. Every item object in the item database. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+```
+>>> from osrsbox import items_api
+>>> all_db_items = items_api.load()
+>>> for item in all_db_items:
+...     print(item.id, item.name)
+```
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| id | integer | Unique OSRS item ID number. | Yes |
-| name | string | Name of the item. | Yes |
-| members | boolean | If the item is a members-only. | Yes |
-| tradeable | boolean | If the item is tradeable (between players and on the GE). | Yes |
-| tradeable_on_ge | boolean | If the item is tradeable (only on GE). | Yes |
-| stackable | boolean | If the item is stackable (in inventory). | Yes |
-| noted | boolean | If the item is noted. | Yes |
-| noteable | boolean | If the item is noteable. | Yes |
-| linked_id_item | integer | The linked ID of the actual item (if noted/placeholder). | No |
-| linked_id_noted | integer | The linked ID of an item in noted form. | No |
-| linked_id_placeholder | integer | The linked ID of an item in placeholder form. | No |
-| placeholder | boolean | If the item is a placeholder. | Yes |
-| equipable | boolean | If the item is equipable (based on right-click menu entry). | Yes |
-| equipable_by_player | boolean | If the item is equipable by a player and is equipable in-game. | Yes |
-| cost | integer | The store price of an item. | Yes |
-| lowalch | integer | The low alchemy value of the item (cost * .4). | Yes |
-| highalch | integer | The high alchemy value of the item (cost * .6). | Yes |
-| weight | number | The weight (in kilograms) of the item. | No |
-| buy_limit | integer | The GE buy limit of the item. | No |
-| quest_item | boolean | If the item is associated with a quest. | Yes |
-| release_date | string | Date the item was released (in ISO8601 format). | No |
+# OSRS Items API
+
+Each item is represented by Python objects, specifically using Python dataclasses. There are three types of objects that can be used to represent part of an in-game OSRS item, each outlined in the following subsections.
+
+### Item Definition
+
+An `ItemDefinition` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest_item` association. Every item object in the item database. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+
+| Property | Data type | Description | Required |
+| -------- | --------- | ----------- | -------- |
+| id | integer | Unique OSRS item ID number. | Yes |
+| name | string | Name of the item. | Yes |
+| members | boolean | If the item is a members-only. | Yes |
+| tradeable | boolean | If the item is tradeable (between players and on the GE). | Yes |
+| tradeable_on_ge | boolean | If the item is tradeable (only on GE). | Yes |
+| stackable | boolean | If the item is stackable (in inventory). | Yes |
+| noted | boolean | If the item is noted. | Yes |
+| noteable | boolean | If the item is noteable. | Yes |
+| linked_id_item | integer | The linked ID of the actual item (if noted/placeholder). | No |
+| linked_id_noted | integer | The linked ID of an item in noted form. | No |
+| linked_id_placeholder | integer | The linked ID of an item in placeholder form. | No |
+| placeholder | boolean | If the item is a placeholder. | Yes |
+| equipable | boolean | If the item is equipable (based on right-click menu entry). | Yes |
+| equipable_by_player | boolean | If the item is equipable by a player and is equipable in-game. | Yes |
+| cost | integer | The store price of an item. | Yes |
+| lowalch | integer | The low alchemy value of the item (cost * .4). | Yes |
+| highalch | integer | The high alchemy value of the item (cost * .6). | Yes |
+| weight | number | The weight (in kilograms) of the item. | No |
+| buy_limit | integer | The GE buy limit of the item. | No |
+| quest_item | boolean | If the item is associated with a quest. | Yes |
+| release_date | string | Date the item was released (in ISO8601 format). | No |
 | duplicate | boolean | If the item is a duplicate. | Yes |
-| examine | string | The examine text for the item. | No |
-| wiki_name | string | The OSRS Wiki name for the item. | No |
-| wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | No |
-| equipment | object | The equipment bonuses of equipable armor/weapons. | No |
-| weapon | object | The information about weapon properties. | No |
+| examine | string | The examine text for the item. | No |
+| wiki_name | string | The OSRS Wiki name for the item. | No |
+| wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | No |
+| equipment | object | The equipment bonuses of equipable armor/weapons. | No |
+| weapon | object | The information about weapon properties. | No |
 
-### Item Equipment
+### Item Equipment
 
-Many items in OSRS are equipable, this includes armor, weapons, and other _wearable_ items. Any equipable item has additional properties stored as an `ItemEquipment` object including attributes such as `attack_slash`, `defence_crush` and `melee_strength` values. The `ItemEquipment` object is nested within an `ItemDefinition` under the `equipment` key. It is very important to note that not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not equipable by a player). All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
+Many items in OSRS are equipable, this includes armor, weapons, and other _wearable_ items. Any equipable item has additional properties stored as an `ItemEquipment` object including attributes such as `attack_slash`, `defence_crush` and `melee_strength` values. The `ItemEquipment` object is nested within an `ItemDefinition` under the `equipment` key. It is very important to note that not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not equipable by a player). All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| attack_stab | integer | The attack stab bonus of the item. | Yes |
-| attack_slash | integer | The attack slash bonus of the item. | Yes |
-| attack_crush | integer | The attack crush bonus of the item. | Yes |
-| attack_magic | integer | The attack magic bonus of the item. | Yes |
-| attack_ranged | integer | The attack ranged bonus of the item. | Yes |
-| defence_stab | integer | The defence stab bonus of the item. | Yes |
-| defence_slash | integer | The defence slash bonus of the item. | Yes |
-| defence_crush | integer | The defence crush bonus of the item. | Yes |
-| defence_magic | integer | The defence magic bonus of the item. | Yes |
-| defence_ranged | integer | The defence ranged bonus of the item. | Yes |
-| melee_strength | integer | The melee strength bonus of the item. | Yes |
-| ranged_strength | integer | The ranged strength bonus of the item. | Yes |
-| magic_damage | integer | The magic damage bonus of the item. | Yes |
-| prayer | integer | The prayer bonus of the item. | Yes |
-| slot | string | The equipment slot associated with the item (e.g., head). | Yes |
-| requirements | object, null | An object of requirements {skill: level}. | Yes |
+| Property | Data type | Description | Required |
+| -------- | --------- | ----------- | -------- |
+| attack_stab | integer | The attack stab bonus of the item. | Yes |
+| attack_slash | integer | The attack slash bonus of the item. | Yes |
+| attack_crush | integer | The attack crush bonus of the item. | Yes |
+| attack_magic | integer | The attack magic bonus of the item. | Yes |
+| attack_ranged | integer | The attack ranged bonus of the item. | Yes |
+| defence_stab | integer | The defence stab bonus of the item. | Yes |
+| defence_slash | integer | The defence slash bonus of the item. | Yes |
+| defence_crush | integer | The defence crush bonus of the item. | Yes |
+| defence_magic | integer | The defence magic bonus of the item. | Yes |
+| defence_ranged | integer | The defence ranged bonus of the item. | Yes |
+| melee_strength | integer | The melee strength bonus of the item. | Yes |
+| ranged_strength | integer | The ranged strength bonus of the item. | Yes |
+| magic_damage | integer | The magic damage bonus of the item. | Yes |
+| prayer | integer | The prayer bonus of the item. | Yes |
+| slot | string | The equipment slot associated with the item (e.g., head). | Yes |
+| requirements | object, null | An object of requirements {skill: level}. | Yes |
 
-### Item Weapon
+### Item Weapon
 
-A select number of items in OSRS are equipable weapons. Any equipable item that is a weapon has additional properties stored as an `ItemWeapon` object including attributes such as `attack_speed` and `weapon_types` values. The `ItemWeapon` object is nested within an `ItemDefinition` under the `weapon` key. Additionally, each weapon has an array of combat stances associated with it to determine the `combat_style`, `attack_type`, `attack_style` and any `bonuses` or combat `experience` association. It is very important to note that not all items in OSRS are equipable weapons. Only items with the `equipable_weapon` property set to `true` are equipable. All of the properties available for equipable weapons are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`
+A select number of items in OSRS are equipable weapons. Any equipable item that is a weapon has additional properties stored as an `ItemWeapon` object including attributes such as `attack_speed` and `weapon_types` values. The `ItemWeapon` object is nested within an `ItemDefinition` under the `weapon` key. Additionally, each weapon has an array of combat stances associated with it to determine the `combat_style`, `attack_type`, `attack_style` and any `bonuses` or combat `experience` association. It is very important to note that not all items in OSRS are equipable weapons. Only items with the `equipable_weapon` property set to `true` are equipable. All of the properties available for equipable weapons are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| attack_speed | integer | The attack speed of a weapon. | Yes |
-| weapon_type | string | The weapon classification (e.g., axe) | Yes |
-| stances | array | An array of weapon stance information | Yes |
+| Property | Data type | Description | Required |
+| -------- | --------- | ----------- | -------- |
+| attack_speed | integer | The attack speed of a weapon. | Yes |
+| weapon_type | string | The weapon classification (e.g., axe) | Yes |
+| stances | array | An array of weapon stance information | Yes |
 
-# Changelog
+# Changelog
 
-- `1.1.24`: Updated JSON schema and added duplicate property.
-- `1.1.23`: Release for game update: 2019/08/15.
-- `1.1.22`: Release for game update: 2019/08/08.
-- `1.1.21`: Release for game update: 2019/07/25 and 2019/08/01 (SOTE).
-- `1.1.20`: Improved item data accuracy. Added wiki_name property and wiki_url anchor.
-- `1.1.19`: Release for game update: 2019/07/18.
-- `1.1.18`: Fixed stackable property. Added improved item ID linking.
-- `1.1.17`: Release for game update: 2019/07/11.
-- `1.1.16`: Converted all `release_date` values to ISO8601 format.
-- `1.1.15`: Release for game update: 2019/07/04.
-- `1.1.14`: Release for game update: 2019/06/27.
-- `1.1.13`: Release for game update: 2019/06/20.
-- `1.1.12`: Release for game update: 2019/05/30.
-- `1.1.11`: Release for game update 2019/06/06.
-- `1.1.10`: Release for game update 2019/05/23.
-- `1.1.9`: Release for game update 2019/05/16.
-- `1.1.8`: Release for week 2019/05/09 (no actual game update).
-- `1.1.7`: Release for game update 2019/05/02.
-- `1.1.6`: Release for game update 2019/04/25, added ItemWeapon class.
-- `1.1.5`: Release for game update 2019/04/18.
-- `1.1.4`: Update for changes to new treasure trail items.
-- `1.1.3`: Release for game update 2019/04/11.
-- `1.1.2`: Converted ItemDefinition, ItemEquipment to dataclass.
-- `1.1.1`: Release for game update 2019/04/04.
-- `1.1.0`: Changed equipable item requirements to an object.
-- `1.0.9`: Release for game update 2019/03/28.
-- `1.0.8`: Fixed packaging issue.
-- `1.0.7`: Updated project documentation.
-- `1.0.6`: Fixed package install bug.
-- `1.0.5`: Release for game update 2019/03/21.
-- `1.0.4`: Configured Travis CI for automated deployment.
-- `1.0.3`: Release for game update 2019/03/14.
-- `1.0.2`: Release for game update 2019/03/07.
-- `1.0.1`: Release for game update 2019/02/14.
-- `1.0.0`: Initial release.
+- `1.1.25`: Updated project documentation.
+- `1.1.24`: Updated JSON schema and added duplicate item property.
+- `1.1.23`: Release for game update: 2019/08/15.
+- `1.1.22`: Release for game update: 2019/08/08.
+- `1.1.21`: Release for game update: 2019/07/25 and 2019/08/01 (SOTE).
+- `1.1.20`: Improved item data accuracy. Added wiki_name property and wiki_url anchor.
+- `1.1.19`: Release for game update: 2019/07/18.
+- `1.1.18`: Fixed stackable property. Added improved item ID linking.
+- `1.1.17`: Release for game update: 2019/07/11.
+- `1.1.16`: Converted all `release_date` values to ISO8601 format.
+- `1.1.15`: Release for game update: 2019/07/04.
+- `1.1.14`: Release for game update: 2019/06/27.
+- `1.1.13`: Release for game update: 2019/06/20.
+- `1.1.12`: Release for game update: 2019/05/30.
+- `1.1.11`: Release for game update 2019/06/06.
+- `1.1.10`: Release for game update 2019/05/23.
+- `1.1.9`: Release for game update 2019/05/16.
+- `1.1.8`: Release for week 2019/05/09 (no actual game update).
+- `1.1.7`: Release for game update 2019/05/02.
+- `1.1.6`: Release for game update 2019/04/25, added ItemWeapon class.
+- `1.1.5`: Release for game update 2019/04/18.
+- `1.1.4`: Update for changes to new treasure trail items.
+- `1.1.3`: Release for game update 2019/04/11.
+- `1.1.2`: Converted ItemDefinition, ItemEquipment to dataclass.
+- `1.1.1`: Release for game update 2019/04/04.
+- `1.1.0`: Changed equipable item requirements to an object.
+- `1.0.9`: Release for game update 2019/03/28.
+- `1.0.8`: Fixed packaging issue.
+- `1.0.7`: Updated project documentation.
+- `1.0.6`: Fixed package install bug.
+- `1.0.5`: Release for game update 2019/03/21.
+- `1.0.4`: Configured Travis CI for automated deployment.
+- `1.0.3`: Release for game update 2019/03/14.
+- `1.0.2`: Release for game update 2019/03/07.
+- `1.0.1`: Release for game update 2019/02/14.
+- `1.0.0`: Initial release.
