@@ -12,8 +12,8 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": true,
-    "equipable_weapon": true,
+    "equipable_by_player": false,
+    "equipable_weapon": false,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
@@ -21,55 +21,10 @@
     "buy_limit": null,
     "quest_item": true,
     "release_date": "2013-09-26",
+    "duplicate": false,
     "examine": "A nice sturdy magical bow.",
     "wiki_name": "Crystal bow (i) (6/10)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_bow_(i)#6/10",
-    "equipment": {
-        "attack_stab": 0,
-        "attack_slash": 0,
-        "attack_crush": 0,
-        "attack_magic": 0,
-        "attack_ranged": 100,
-        "defence_stab": 0,
-        "defence_slash": 0,
-        "defence_crush": 0,
-        "defence_magic": 0,
-        "defence_ranged": 0,
-        "melee_strength": 0,
-        "ranged_strength": 70,
-        "magic_damage": 0,
-        "prayer": 0,
-        "slot": "2h",
-        "requirements": {
-            "agility": 50,
-            "ranged": 70
-        }
-    },
-    "weapon": {
-        "attack_speed": 5,
-        "weapon_type": "bows",
-        "stances": [
-            {
-                "combat_style": "accurate",
-                "attack_type": null,
-                "attack_style": null,
-                "experience": "ranged",
-                "boosts": "accuracy and damage"
-            },
-            {
-                "combat_style": "rapid",
-                "attack_type": null,
-                "attack_style": null,
-                "experience": "ranged",
-                "boosts": "attack speed by 1 tick"
-            },
-            {
-                "combat_style": "longrange",
-                "attack_type": null,
-                "attack_style": null,
-                "experience": "ranged and defence",
-                "boosts": "attack range by 2 squares"
-            }
-        ]
-    }
+    "equipment": null,
+    "weapon": null
 }

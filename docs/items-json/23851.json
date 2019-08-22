@@ -2,7 +2,7 @@
     "id": 23851,
     "name": "Corrupted halberd (perfected)",
     "members": true,
-    "tradeable": null,
+    "tradeable": false,
     "tradeable_on_ge": false,
     "stackable": false,
     "noted": false,
@@ -12,18 +12,62 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
-    "equipable_weapon": false,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
-    "weight": null,
+    "weight": 2.0,
     "buy_limit": null,
-    "quest_item": null,
-    "release_date": null,
-    "examine": null,
-    "wiki_name": null,
-    "wiki_url": null,
-    "equipment": null,
-    "weapon": null
+    "quest_item": false,
+    "release_date": "2019-07-25",
+    "duplicate": false,
+    "examine": "A wooden stick with a lot of corrupted on the end.",
+    "wiki_name": "Corrupted halberd (perfected)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Corrupted_halberd_(perfected)",
+    "equipment": {
+        "attack_stab": 166,
+        "attack_slash": 166,
+        "attack_crush": 28,
+        "attack_magic": 0,
+        "attack_ranged": 0,
+        "defence_stab": 0,
+        "defence_slash": 0,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": 138,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 3,
+        "slot": "2h",
+        "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "halberds",
+        "stances": [
+            {
+                "combat_style": "jab",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "swipe",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "fend",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

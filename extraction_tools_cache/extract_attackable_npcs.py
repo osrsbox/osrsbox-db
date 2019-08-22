@@ -51,6 +51,8 @@ def extract_attackable_npcs(compressed_json_file_path: Union[Path, str]):
             # Skip entries with variable menu list color in name
             if "<col" in json_data["name"]:
                 continue
+            if json_data["name"] in ["Null", "null", ""]:
+                continue
             # Save the attackable NPC
             attackable_npcs[id_number] = json_data
 

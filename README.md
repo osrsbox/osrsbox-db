@@ -43,8 +43,9 @@ For detailed information about the project see the [OSRSBox](https://www.osrsbox
 For the `osrsbox` package (see below) and any scripts in this repository you will need:
 
 - Python 3.6 or above
+- Dataclasses package (if Python is below 3.7)
 
-If using this repository (the development version), you will also need a variety of Python packages. These are split into the general requirements documented in the [`requirements.txt`](requirements.txt) file. It is recommended to use `virtualenv` to setup your environment, then install the specified requirements using:
+If using this repository (the development version), you will also need a variety of Python packages in addition to the mandatory dataclasses package. These are documented in the [`requirements.txt`](requirements.txt) file. It is recommended to use `virtualenv` to setup your environment, then install the specified requirements using:
 
 ```
 pip install -r requirements.txt
@@ -89,11 +90,10 @@ This section contains additional information about the `osrsbox-db` project.
 - `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools used in other parts in this project.
 - `extraction_tools_wiki`: Collection of Python modules to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data (category page titles and raw wiki text) for items, quests, and monsters that are somewhat-regularly updated.
 - `items_builder`: Collection of Python scripts to build the item database. The `builder.py` script is the primary entry point.
-    - `update_tools`: Scripts used to update all data files after each weekly game update. 
 - `osrsbox`: The Python package:
     - `items_api`: The Python API for interacting with the items database. Has modules to load all items in the database, iterate through items and access the different item properties.
-    - `items_tools`: A collection of simple Python scripts that use the `items_api` to provide an example of what can be achieved and how to use the items database.
-- `scripts`: A selection of scripts (using Python) to help automate common tasks.
+    - `items_api_examples`: A collection of simple Python scripts that use the `items_api` to provide an example of what can be achieved and how to use the items database.
+- `scripts`: A selection of scripts (using Python and BASH) to help automate common tasks.
 - `test`: A collection of unit tests.
 - `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update that has been added to the database.
  
@@ -103,7 +103,7 @@ I would thoroughly appreciate any feedback regarding the osrsbox-db project, esp
 
 ### Project Contribution
 
-This project would thoroughly benefit from a contribution from additional developers. Please feel free to submit a pull request if you have code that you wish to contribute - I would thoroughly appreciate the helping hand. For any code contributions, the best method is to [open a new GitHub pull request](https://github.com/osrsbox/osrsbox-db/pulls) in the project repository. Also, feel free to contact me (e.g., email) if you wish to discuss contribution before making a pull request.
+This project would thoroughly benefit from a contribution from additional developers. Please feel free to submit a pull request if you have code that you wish to contribute - I would thoroughly appreciate the helping hand. For any code contributions, the best method is to [open a new GitHub pull request](https://github.com/osrsbox/osrsbox-db/pulls) in the project repository. Also, feel free to contact me (e.g., email) if you wish to discuss contribution before making a pull request. If you are not a software developer and want to contribute, even something as small as _Staring_ this repository really makes my day and keeps me motivated!
 
 ### Project License
 

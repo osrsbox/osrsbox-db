@@ -57,8 +57,9 @@ class ItemDefinition:
     highalch: int
     weight: Optional[float]
     buy_limit: Optional[int]
-    quest_item: Optional[bool]
+    quest_item: bool
     release_date: Optional[str]
+    duplicate: bool
     examine: Optional[str]
     wiki_name: Optional[str]
     wiki_url: Optional[str]
