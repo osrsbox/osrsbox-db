@@ -1,3 +1,8 @@
+### 2019/08/22: Kill Death Ratios and Web Slashing
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/08/15: Small Game Updates and Betas
 - Added items: 1
     - 24132,Marble lectern

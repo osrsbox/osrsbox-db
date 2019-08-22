@@ -193,7 +193,7 @@ class BuildItem:
 
         # Log and print item
         logging.debug(f"======================= {self.item_id_str} {self.item_name}")
-        # print(f"======================= {self.item_id_str} {self.item_name}")
+        print(f"======================= {self.item_id_str} {self.item_name}")
         logging.debug(f"preprocessing: using the following cache data:")
         logging.debug(self.item_cache_data)
 
