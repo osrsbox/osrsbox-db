@@ -6,21 +6,21 @@
     "release_date": "2006-06-12",
     "combat_level": 69,
     "size": 1,
-    "hitpoints": 69,
+    "hitpoints": 60,
     "max_hit": 7,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": true,
-    "weakness": [
-        "No"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Animated black armour.",
     "wiki_name": "Animated Black Armour",
     "wiki_url": "https://oldschool.runescape.wiki/w/Animated_Black_Armour",
@@ -45,31 +45,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 8851,
             "name": "Warrior guild token",
             "quantity": "20",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1165,
             "name": "Black full helm",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1125,
             "name": "Black platebody",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1077,
             "name": "Black platelegs",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

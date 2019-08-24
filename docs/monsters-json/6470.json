@@ -6,22 +6,24 @@
     "release_date": "2004-12-21",
     "combat_level": 50,
     "size": 1,
-    "hitpoints": 50,
+    "hitpoints": 40,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " crush"
+        "crush",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "How does it move of its own accord?",
     "wiki_name": "Animated spade",
     "wiki_url": "https://oldschool.runescape.wiki/w/Animated_spade",
@@ -46,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 952,
             "name": "Spade",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

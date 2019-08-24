@@ -6,22 +6,24 @@
     "release_date": "2006-10-18",
     "combat_level": 33,
     "size": 1,
-    "hitpoints": 33,
+    "hitpoints": 28,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " crush"
+        "crush",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "They'll eat anything!",
     "wiki_name": "Billy Goat (Tan)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Billy_Goat#Tan",
@@ -46,17 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9735,
             "name": "Desert goat horn",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

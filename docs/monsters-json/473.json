@@ -6,22 +6,25 @@
     "release_date": "2002-02-27",
     "combat_level": 20,
     "size": 1,
-    "hitpoints": 20,
+    "hitpoints": 24,
     "max_hit": 3,
-    "attack_type": "Magic, Melee",
+    "attack_type": [
+        "melee",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush weapons|Crush"
+        "crush"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": "An evil user of Magic powers{{sic}}",
+    "slayer_masters": [],
+    "examine": "An evil user of Magic powerssic",
     "wiki_name": "Invrigar the Necromancer",
     "wiki_url": "https://oldschool.runescape.wiki/w/Invrigar_the_Necromancer",
     "attack_level": 17,
@@ -45,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

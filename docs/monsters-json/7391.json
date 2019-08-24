@@ -6,17 +6,19 @@
     "release_date": "2016-09-15",
     "combat_level": 144,
     "size": 3,
-    "hitpoints": 144,
+    "hitpoints": 220,
     "max_hit": 12,
-    "attack_type": "Magical melee",
+    "attack_type": [
+        "melee",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " Salve amulet"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 15,
@@ -51,242 +53,276 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 20736,
             "name": "Dust battlestaff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/428.8)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20730,
             "name": "Mist battlestaff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/428.8)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20724,
             "name": "Imbued heart",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/1286.4)</small>"
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21270,
             "name": "Eternal gem",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/1286.4)</small>"
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1313,
             "name": "Black 2h sword",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1371,
             "name": "Adamant battleaxe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1357,
             "name": "Adamant axe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1317,
             "name": "Adamant 2h sword",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4127,
             "name": "Mithril boots",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1201,
             "name": "Rune kiteshield",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1163,
             "name": "Rune full helm",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5296,
             "name": "Toadflax seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5297,
             "name": "Irit seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5281,
             "name": "Belladonna seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5106,
             "name": "Poison ivy seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5280,
             "name": "Cactus seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5298,
             "name": "Avantoe seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5299,
             "name": "Kwuarm seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5300,
             "name": "Snapdragon seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5301,
             "name": "Cadantine seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5302,
             "name": "Lantadyme seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5303,
             "name": "Dwarf weed seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5304,
             "name": "Torstol seed",
             "quantity": "1",
-            "rarity": "Very Rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "11,44,102,220,504",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<small>(5/64)</small>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "45",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "15",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 379,
             "name": "Lobster",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2357,
             "name": "Gold bar",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1734,
             "name": "Thread",
             "quantity": "10",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/186.66)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

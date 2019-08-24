@@ -6,21 +6,24 @@
     "release_date": "2002-09-24",
     "combat_level": 84,
     "size": 2,
-    "hitpoints": 84,
+    "hitpoints": 120,
     "max_hit": 14,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "melee",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 120,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Bigger than your average moss giant.",
     "wiki_name": "Moss Guardian (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Moss_Guardian#Normal",

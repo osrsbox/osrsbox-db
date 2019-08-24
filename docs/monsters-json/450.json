@@ -6,17 +6,17 @@
     "release_date": "2005-01-26",
     "combat_level": 7,
     "size": 1,
-    "hitpoints": 8,
+    "hitpoints": 16,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Salve amulet"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 5,
     "slayer_xp": 16,
@@ -49,88 +49,100 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1059,
             "name": "Leather gloves",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<small>(~20/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Purple gloves",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~2/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Yellow gloves",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~2/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Red gloves",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~2/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Teal gloves",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~2/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Gold ring",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~3/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Sapphire ring",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~2/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Emerald ring",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(~2/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Coins",
-            "quantity": "5;8;10",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Gem drop table",
+            "id": 2942,
+            "name": "Purple gloves",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(4/128)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2922,
+            "name": "Yellow gloves",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2912,
+            "name": "Red gloves",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2932,
+            "name": "Teal gloves",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 1635,
+            "name": "Gold ring",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 1637,
+            "name": "Sapphire ring",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 1639,
+            "name": "Emerald ring",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "quantity": "5,8,10",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": null,
+            "name": "Gem drop table",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 4133,
             "name": "Crawling hand",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/500)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

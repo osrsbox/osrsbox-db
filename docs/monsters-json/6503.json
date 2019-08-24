@@ -6,16 +6,18 @@
     "release_date": "2014-03-13",
     "combat_level": 470,
     "size": 5,
-    "hitpoints": 470,
+    "hitpoints": 255,
     "max_hit": 50,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash"
+        "slash"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -51,284 +53,324 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1275,
             "name": "Rune pickaxe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1319,
             "name": "Rune 2h sword",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11920,
             "name": "Dragon pickaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/171",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/873140559971586048|quote=I've re-run the numbers. Looks like 1/171 for all three of them. But the dragon 2h is 1/256 from them all.|archiveurl=http://archive.fo/EgPPq|archivedate=2019-02-19|date=9 Jun 2017|name=Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7158,
             "name": "Dragon 2h sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/873140559971586048|quote=I've re-run the numbers. Looks like 1/171 for all three of them. But the dragon 2h is 1/256 from them all.|archiveurl=http://archive.fo/EgPPq|archivedate=2019-02-19|date=9 Jun 2017|name=Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12603,
             "name": "Tyrannical ring",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "250",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "300",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "400",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "200",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1619,
             "name": "Uncut ruby",
-            "quantity": "20 (noted)",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref group=d name=gem>20 uncut [[rubies]] are dropped along 10 uncut [[diamond]]s.</ref>"
+            "quantity": "20",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1617,
             "name": "Uncut diamond",
-            "quantity": "10 (noted)",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref group=d name=gem />"
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5974,
             "name": "Coconut",
-            "quantity": "60 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "60",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1513,
             "name": "Magic logs",
-            "quantity": "100 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "100",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 225,
             "name": "Limpwurt root",
-            "quantity": "25 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "25",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1749,
             "name": "Red dragonhide",
-            "quantity": "75 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "75",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6332,
             "name": "Mahogany logs",
-            "quantity": "400 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "400",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1631,
             "name": "Uncut dragonstone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3049,
             "name": "Grimy toadflax",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5300,
             "name": "Snapdragon seed",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5295,
             "name": "Ranarr seed",
             "quantity": "5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5315,
             "name": "Yew seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5316,
             "name": "Magic seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5289,
             "name": "Palm tree seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11936,
             "name": "Dark crab",
             "quantity": "8",
-            "rarity": "Common",
-            "drop_requirements": "<ref group=d name=rest>8 [[dark crab]]s are dropped along with 3 [[Super restore (4)]].</ref>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3024,
             "name": "Super restore(4)",
             "quantity": "3",
-            "rarity": "Common",
-            "drop_requirements": "<ref group=d name=rest />"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "12000-20000",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6034,
             "name": "Supercompost",
-            "quantity": "100 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "100",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Cannonball",
             "quantity": "250",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 536,
             "name": "Dragon bones",
-            "quantity": "30 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "30",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11940,
             "name": "Dark fishing bait",
             "quantity": "375",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12746,
             "name": "Mysterious emblem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/28",
-            "drop_requirements": "<ref group=d>Only dropped while on a [[slayer assignment]] given by [[Krystilia]], unless the kill was done on the official [[Bounty Hunter]] world. Killing Callisto on the [[Bounty Hunter]] also increases the drop rate from 1/28 to 1/5.</ref> {{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21257,
             "name": "Slayer's enchantment",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23490,
             "name": "Larran's key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "<ref group=d name=wildytask>Larran's keys are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref> {{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 81-350+: 1 in (50 + number scaled linearly between 99 at level 81 and 50 at level 350)}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100",
-            "drop_requirements": "<ref group=d>1/50 if a [[Ring of wealth (i)]] is worn.</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13178,
             "name": "Callisto cub",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2000",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|special bones}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

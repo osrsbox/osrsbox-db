@@ -6,23 +6,24 @@
     "release_date": "2014-10-16",
     "combat_level": 785,
     "size": 5,
-    "hitpoints": 785,
+    "hitpoints": 2000,
     "max_hit": 0,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "crush",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "(Stab)",
-        " spears",
-        " halberds"
+        "stab"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 0,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A vision of supernatural horror.",
     "wiki_name": "Corporeal Beast",
     "wiki_url": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
@@ -47,263 +48,300 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 12823,
             "name": "Spectral sigil",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1365",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12827,
             "name": "Arcane sigil",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1365",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12819,
             "name": "Elysian sigil",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4095",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 890,
             "name": "Adamant arrow",
             "quantity": "750",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9144,
             "name": "Runite bolts",
             "quantity": "250",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1405,
             "name": "Mystic air staff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1403,
             "name": "Mystic water staff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1407,
             "name": "Mystic earth staff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1401,
             "name": "Mystic fire staff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4091,
             "name": "Mystic robe top",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4093,
             "name": "Mystic robe bottom",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9245,
             "name": "Onyx bolts (e)",
             "quantity": "175",
+            "noted": false,
             "rarity": "20/512",
-            "drop_requirements": "{{NamedRef|corprateash}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Cannonball",
             "quantity": "2000",
+            "noted": false,
             "rarity": "17/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12829,
             "name": "Spirit shield",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/512",
-            "drop_requirements": "{{NamedRef|corprateash}}"
-        },
-        {
-            "id": 1,
-            "name": "Pure essence",
-            "quantity": "2500 (noted)",
-            "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
+            "name": "Pure essence",
+            "quantity": "2500",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
             "name": "Law rune",
             "quantity": "250",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "500",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "300",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "250",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
             "name": "Adamantite ore",
-            "quantity": "125 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "125",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 451,
             "name": "Runite ore",
-            "quantity": "20 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "20",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2361,
             "name": "Adamantite bar",
-            "quantity": "35 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "35",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 8780,
             "name": "Teak plank",
-            "quantity": "100 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "100",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6332,
             "name": "Mahogany logs",
-            "quantity": "150 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "150",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1513,
             "name": "Magic logs",
-            "quantity": "75 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "75",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1753,
             "name": "Green dragonhide",
-            "quantity": "100 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "100",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "20000-50000",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5321,
             "name": "Watermelon seed",
             "quantity": "24",
+            "noted": false,
             "rarity": "15/512",
-            "drop_requirements": "{{NamedRef|corprateash}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 383,
             "name": "Raw shark",
-            "quantity": "70 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "70",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 239,
             "name": "White berries",
-            "quantity": "120 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "120",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9735,
             "name": "Desert goat horn",
-            "quantity": "120 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "120",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7060,
             "name": "Tuna potato",
             "quantity": "30",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5952,
             "name": "Antidote++(4)",
-            "quantity": "40 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "40",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5295,
             "name": "Ranarr seed",
             "quantity": "10",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12833,
             "name": "Holy elixir",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/512",
-            "drop_requirements": "{{NamedRef|corprateash}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/200",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12816,
             "name": "Pet dark core",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|corprateash}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

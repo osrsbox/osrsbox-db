@@ -6,21 +6,21 @@
     "release_date": "2014-10-16",
     "combat_level": 75,
     "size": 1,
-    "hitpoints": 75,
+    "hitpoints": 25,
     "max_hit": 13,
-    "attack_type": "N/A",
+    "attack_type": [],
     "attack_speed": 2,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 0,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A small being of dark energy.",
     "wiki_name": "Dark energy core",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dark_energy_core",
@@ -45,10 +45,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

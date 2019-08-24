@@ -6,21 +6,22 @@
     "release_date": "2004-10-14",
     "combat_level": 20,
     "size": 1,
-    "hitpoints": 20,
+    "hitpoints": 10,
     "max_hit": 3,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 0,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A blood coloured blamish snail, these types are said to spit acid.",
     "wiki_name": "Blood Blamish Snail (Pointed)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Blood_Blamish_Snail#Pointed",
@@ -45,24 +46,27 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3347,
             "name": "Blamish red shell (round)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group='d'>Only by the Rounded variety.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3357,
             "name": "Blamish red shell (pointed)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group='d'>Only by the Pointed variety.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3367,
             "name": "Fat snail",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

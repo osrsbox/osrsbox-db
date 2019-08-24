@@ -6,21 +6,24 @@
     "release_date": "2007-07-24",
     "combat_level": 115,
     "size": 1,
-    "hitpoints": 115,
+    "hitpoints": 105,
     "max_hit": 15,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": true,
     "weakness": [
-        "Stab or slash"
+        "slash",
+        "stab"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "One of the Knights of the Round Table.",
     "wiki_name": "Sir Tristram",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sir_Tristram",

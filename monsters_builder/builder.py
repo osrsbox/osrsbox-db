@@ -27,6 +27,7 @@ from pathlib import Path
 
 import config
 from monsters_builder import monster_builder
+from osrsbox import items_api
 
 os.remove(Path(__file__).stem+".log")
 logging.basicConfig(filename=Path(__file__).stem+".log",
@@ -36,9 +37,12 @@ logging.info(">>> Starting builder.py to build monster database...")
 
 def main(export_monster: bool = False):
     # Load the current database contents
-    # monsters_compltete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
-    # with open(monsters_compltete_file_path) as f:
-    #     all_db_monsters = json.load(f)
+    monsters_compltete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
+    with open(monsters_compltete_file_path) as f:
+        all_db_monsters = json.load(f)
+
+    # Load the current item database contents
+    all_db_items = items_api.load()
 
     # Load the item wikitext file
     wiki_text_file_path = Path(config.EXTRACTION_WIKI_PATH / "extract_page_text_monsters.json")
@@ -59,19 +63,16 @@ def main(export_monster: bool = False):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) != 1:
+        # if int(monster_id) < 231:
         #     continue
-
-        # Skip ununsed monsters
-        if int(monster_id) in [3096, 4095]:
-            continue
 
         # Initialize the BuildMonster class, used for all monster
         builder = monster_builder.BuildMonster(monster_id,
                                                all_monster_cache_data,
                                                all_wikitext_processed,
                                                all_wikitext_raw,
-                                               # all_db_items,
+                                               all_db_monsters,
+                                               all_db_items,
                                                export_monster)
 
         status = builder.preprocessing()

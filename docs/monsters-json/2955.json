@@ -6,22 +6,25 @@
     "release_date": "2006-12-05",
     "combat_level": 108,
     "size": 1,
-    "hitpoints": 108,
+    "hitpoints": 120,
     "max_hit": 0,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "stab",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " Melee"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 0,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Follower of Saradomin.",
     "wiki_name": "Saradomin wizard",
     "wiki_url": "https://oldschool.runescape.wiki/w/Saradomin_wizard",
@@ -46,108 +49,123 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1397,
             "name": "Air battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1395,
             "name": "Water battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1399,
             "name": "Earth battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1393,
             "name": "Fire battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "189,196",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
-            "quantity": "42, 126, 145, 146",
-            "rarity": "Uncommon",
+            "quantity": "42,126,145,146",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
-            "quantity": "79, 86, 107",
-            "rarity": "Uncommon",
+            "quantity": "79,86,107",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
-            "quantity": "51, 180, 188",
-            "rarity": "Uncommon",
+            "quantity": "51,180,188",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "25",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
-            "quantity": "28, 30",
-            "rarity": "Uncommon",
+            "quantity": "28,30",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
-            "quantity": "9, 10",
-            "rarity": "Uncommon",
+            "quantity": "9,10",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "45",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
-            "quantity": "8, 40",
-            "rarity": "Uncommon",
+            "quantity": "8,40",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "77,89",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

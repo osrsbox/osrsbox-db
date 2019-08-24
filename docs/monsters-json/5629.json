@@ -6,21 +6,24 @@
     "release_date": "2006-03-28",
     "combat_level": 109,
     "size": 3,
-    "hitpoints": 109,
+    "hitpoints": 150,
     "max_hit": 12,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush weapons|Crush"
+        "crush"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Euew.",
     "wiki_name": "Giant snail (Lv 109)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Giant_snail#Lv_109",
@@ -45,18 +48,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 7800,
             "name": "Snail shell",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10996,
             "name": "Perfect snail shell",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(1/50)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

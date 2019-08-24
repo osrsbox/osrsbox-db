@@ -6,17 +6,21 @@
     "release_date": "2014-04-10",
     "combat_level": 301,
     "size": 4,
-    "hitpoints": 301,
+    "hitpoints": 240,
     "max_hit": 8,
-    "attack_type": "Typeless magical ranged",
+    "attack_type": [
+        "typeless",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 2,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash",
-        " Magic"
+        "slash",
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 93,
@@ -49,319 +53,364 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12002,
             "name": "Occult necklace",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/350",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11998,
             "name": "Smoke battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2513,
             "name": "Dragon chainbody",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2000",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1213,
             "name": "Rune dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1113,
             "name": "Rune chainbody",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2501,
             "name": "Red d'hide body",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1373,
             "name": "Rune battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1405,
             "name": "Mystic air staff",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1401,
             "name": "Mystic fire staff",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1333,
             "name": "Rune scimitar",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4587,
             "name": "Dragon scimitar",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4675,
             "name": "Ancient staff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4697,
             "name": "Smoke rune",
             "quantity": "100",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "300",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "60",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 892,
             "name": "Rune arrow",
             "quantity": "100",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5667,
             "name": "Rune knife(p++)",
             "quantity": "50",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1883,
             "name": "Ugthanki kebab",
             "quantity": "3",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7060,
             "name": "Tuna potato",
             "quantity": "3",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10925,
             "name": "Sanfew serum(4)",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2434,
             "name": "Prayer potion(4)",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3049,
             "name": "Grimy toadflax",
-            "quantity": "15 (noted)",
+            "quantity": "15",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5300,
             "name": "Snapdragon seed",
             "quantity": "2",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5316,
             "name": "Magic seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "300 (noted)",
+            "quantity": "300",
+            "noted": true,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9735,
             "name": "Desert goat horn",
-            "quantity": "50 (noted)",
+            "quantity": "50",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1775,
             "name": "Molten glass",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2359,
             "name": "Mithril bar",
-            "quantity": "20 (noted)",
+            "quantity": "20",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 453,
             "name": "Coal",
-            "quantity": "150 (noted)",
+            "quantity": "150",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
             "name": "Onyx bolt tips",
             "quantity": "12",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1513,
             "name": "Magic logs",
-            "quantity": "20 (noted)",
+            "quantity": "20",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 444,
             "name": "Gold ore",
-            "quantity": "200 (noted)",
+            "quantity": "200",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1987,
             "name": "Grapes",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1601,
             "name": "Diamond",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "10000-20000",
+            "noted": false,
             "rarity": "15/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 590,
             "name": "Tinderbox",
             "quantity": "1",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1442,
             "name": "Fire talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4548,
             "name": "Bullseye lantern",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1645,
             "name": "Dragonstone ring",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 989,
             "name": "Crystal key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/707585888566558720|date=9 Mar 2016|quote=1/128. I hope you got some other decent stuff while that was going on.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/59.8",
-            "drop_requirements": "<ref group=d>A Brimstone key is only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/96",
-            "drop_requirements": "{{CiteGeneral|author=Jagex|url=https://secure.runescape.com/m=news/the-kebos-lowlands?oldschool=1|archiveurl=http://archive.fo/JbsNE|title=The Kebos Lowlands|date=10 Jan 2019|archivedate=15 Mar 2019}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/500",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12648,
             "name": "Pet smoke devil",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/3000",
-            "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/511476391901003777|date=15 Sep 2014|archiveurl=http://archive.fo/ZqF9p|archivedate=15 Sep 2014|quote=Kraken, Thermy & Penance Queen pet drop rates - DKS for the final reveal next week!|name=Confirmed droprates}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

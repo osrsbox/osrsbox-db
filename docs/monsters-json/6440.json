@@ -6,18 +6,19 @@
     "release_date": "2005-04-18",
     "combat_level": 100,
     "size": 2,
-    "hitpoints": 80,
+    "hitpoints": 70,
     "max_hit": 8,
-    "attack_type": "Melee, Crush",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Crumble Undead",
-        " Crush"
+        "crush",
+        "crumble undead"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -51,214 +52,244 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
             "name": "Grimy tarromin",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 205,
             "name": "Grimy harralander",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 209,
             "name": "Grimy irit leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 211,
             "name": "Grimy avantoe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2485,
             "name": "Grimy lantadyme",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1141,
             "name": "Steel med helm",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1281,
             "name": "Steel sword",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1325,
             "name": "Steel scimitar",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1335,
             "name": "Iron warhammer",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1353,
             "name": "Steel axe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1323,
             "name": "Iron scimitar",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 884,
             "name": "Iron arrow",
             "quantity": "24",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "30",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "18",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "8",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "4",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "4",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "2-427",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2351,
             "name": "Iron bar",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2801,
             "name": "Clue scroll (medium)",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6806,
             "name": "Skeleton champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "<ref>Only dropped if access to [[Champions' Guild]] is available, and the [[Skeleton Champion]] hasn't been previously killed in the [[Champions' Challenge]].</ref>"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": true

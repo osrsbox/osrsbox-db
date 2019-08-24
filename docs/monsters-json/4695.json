@@ -8,19 +8,21 @@
     "size": 2,
     "hitpoints": 71,
     "max_hit": 7,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A hopeless poor creature.",
     "wiki_name": "Hopeless creature (Lv 71)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Hopeless_creature#Lv_71",

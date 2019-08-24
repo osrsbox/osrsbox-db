@@ -6,17 +6,17 @@
     "release_date": "2006-05-22",
     "combat_level": 62,
     "size": 1,
-    "hitpoints": 62,
+    "hitpoints": 50,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 40,
     "slayer_xp": 50,
@@ -47,116 +47,132 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
-            "quantity": "23, 24, 44",
-            "rarity": "Common",
+            "quantity": "23,24,44",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 313,
             "name": "Fishing bait",
             "quantity": "50",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 363,
             "name": "Raw bass",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 377,
             "name": "Raw lobster",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 401,
             "name": "Seaweed",
             "quantity": "5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 403,
             "name": "Edible seaweed",
             "quantity": "5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 823,
             "name": "Adamant dart tip",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Broad arrow",
             "quantity": "4",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4695,
             "name": "Mist rune",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 46,
             "name": "Pearl bolt tips",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 411,
             "name": "Oyster pearl",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 413,
             "name": "Oyster pearls",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 571,
             "name": "Water orb",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 405,
             "name": "Casket",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2801,
             "name": "Clue scroll (medium)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

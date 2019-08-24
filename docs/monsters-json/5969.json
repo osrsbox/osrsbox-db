@@ -6,22 +6,26 @@
     "release_date": "2002-07-23",
     "combat_level": 1,
     "size": 1,
-    "hitpoints": 1,
+    "hitpoints": 3,
     "max_hit": 1,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "melee",
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush weapons|Crush",
-        " Stab weapons|Stab"
+        "crush",
+        "stab"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Like a mini man!",
     "wiki_name": "Gnome (monster) (Lv 1)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Gnome_(monster)#Lv_1",
@@ -46,52 +50,59 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "300",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 444,
             "name": "Gold ore",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2150,
             "name": "Swamp toad",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2162,
             "name": "King worm",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 569,
             "name": "Fire orb",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

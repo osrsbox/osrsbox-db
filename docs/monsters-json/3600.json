@@ -6,21 +6,21 @@
     "release_date": "2007-02-19",
     "combat_level": 103,
     "size": 2,
-    "hitpoints": 103,
+    "hitpoints": 90,
     "max_hit": 10,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Is it a frog, or is it an eel?",
     "wiki_name": "Frogeel",
     "wiki_url": "https://oldschool.runescape.wiki/w/Frogeel",
@@ -45,46 +45,52 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5001,
             "name": "Raw cave eel",
             "quantity": "5-10",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10877,
             "name": "Plain satchel",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10859,
             "name": "Tea flask",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|special bones}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

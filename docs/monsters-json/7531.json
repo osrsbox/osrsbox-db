@@ -8,19 +8,22 @@
     "size": 5,
     "hitpoints": 0,
     "max_hit": 0,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "melee",
+        "ranged"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Melee"
+        "melee"
     ],
     "slayer_monster": false,
     "slayer_level": 0,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Queen of the Abyssal Vespine. Her lifeforce is sustained by her connection to the Abyss.",
     "wiki_name": "Vespula",
     "wiki_url": "https://oldschool.runescape.wiki/w/Vespula",

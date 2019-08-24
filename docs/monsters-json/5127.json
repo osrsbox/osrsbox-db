@@ -6,21 +6,23 @@
     "release_date": "2007-06-04",
     "combat_level": 95,
     "size": 4,
-    "hitpoints": 95,
+    "hitpoints": 70,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab attacks"
+        "stab"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A huge mouse. It looks hungry...",
     "wiki_name": "Mouse",
     "wiki_url": "https://oldschool.runescape.wiki/w/Mouse",
@@ -45,17 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1985,
             "name": "Cheese",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "3-237",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         }
     ],

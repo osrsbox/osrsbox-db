@@ -6,21 +6,23 @@
     "release_date": "2006-03-15",
     "combat_level": 23,
     "size": 2,
-    "hitpoints": 23,
+    "hitpoints": 19,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Nice claw!",
     "wiki_name": "Crab (Level 23)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Crab#Level_23",
@@ -45,31 +47,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 7518,
             "name": "Crab meat",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7536,
             "name": "Fresh crab claw",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<ref name=\"crab\">[https://twitter.com/JagexAsh/status/1102308581402206209]For getting on the table of those two items, it's 1/8 on small ones or 1/4 on big ones, with equal chance of either item.</ref><small><br/>Lv 21: (1/8)<br/>Lv 23: (1/4)</small>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7538,
             "name": "Fresh crab shell",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<ref name=\"crab\"></ref><small><br/>Lv 21: (1/8)<br/>Lv 23: (1/4)</small>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 407,
             "name": "Oyster",
             "quantity": "1-2",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         }
     ],

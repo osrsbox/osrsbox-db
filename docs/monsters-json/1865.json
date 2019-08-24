@@ -8,21 +8,22 @@
     "size": 1,
     "hitpoints": 120,
     "max_hit": 11,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Axes",
-        " Magic",
-        " Ranged"
+        "ranged",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A very angry nymph.",
     "wiki_name": "Tree spirit (Level 120)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Tree_spirit#Level_120",
@@ -47,213 +48,243 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1353,
             "name": "Steel axe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1355,
             "name": "Mithril axe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1357,
             "name": "Adamant axe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1359,
             "name": "Rune axe",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "2,5,10,22",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3051,
             "name": "Grimy snapdragon",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 211,
             "name": "Grimy avantoe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 209,
             "name": "Grimy irit leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 205,
             "name": "Grimy harralander",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3049,
             "name": "Grimy toadflax",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
             "name": "Grimy tarromin",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5296,
             "name": "Toadflax seed",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5280,
             "name": "Cactus seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5106,
             "name": "Poison ivy seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5297,
             "name": "Irit seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5281,
             "name": "Belladonna seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5298,
             "name": "Avantoe seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5299,
             "name": "Kwuarm seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5300,
             "name": "Snapdragon seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5304,
             "name": "Torstol seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5321,
             "name": "Watermelon seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5302,
             "name": "Lantadyme seed",
             "quantity": "1",
-            "rarity": "Very rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5303,
             "name": "Dwarf weed seed",
             "quantity": "1",
-            "rarity": "Very rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5301,
             "name": "Cadantine seed",
             "quantity": "1",
-            "rarity": "Very rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 946,
             "name": "Knife",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

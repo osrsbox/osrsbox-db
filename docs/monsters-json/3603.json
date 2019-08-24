@@ -6,21 +6,21 @@
     "release_date": "2007-02-19",
     "combat_level": 46,
     "size": 1,
-    "hitpoints": 46,
+    "hitpoints": 35,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Definitely not a chicken or swordfish.",
     "wiki_name": "Swordchick",
     "wiki_url": "https://oldschool.runescape.wiki/w/Swordchick",
@@ -45,38 +45,43 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 314,
             "name": "Feather",
-            "quantity": "10-40, 100",
-            "rarity": "Always",
+            "quantity": "10-40,100",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10859,
             "name": "Tea flask",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10880,
             "name": "Black satchel",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2138,
             "name": "Raw chicken",
-            "quantity": "4, 8, 12, 16",
-            "rarity": "Rare",
+            "quantity": "4,8,12,16",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         }
     ],

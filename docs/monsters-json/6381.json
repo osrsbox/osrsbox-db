@@ -6,21 +6,23 @@
     "release_date": "2006-07-24",
     "combat_level": 79,
     "size": 1,
-    "hitpoints": 79,
+    "hitpoints": 45,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "It's like looking into the mirror.",
     "wiki_name": "Me (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Me#Normal",
@@ -45,10 +47,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

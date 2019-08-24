@@ -6,21 +6,25 @@
     "release_date": "2006-03-15",
     "combat_level": 121,
     "size": 1,
-    "hitpoints": 121,
+    "hitpoints": 130,
     "max_hit": 19,
-    "attack_type": "Melee, Magic, Magical Ranged",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Bad for your teeth... and the rest of your body too.",
     "wiki_name": "Dessourt (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dessourt#Normal",
@@ -45,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1975,
             "name": "Chocolate dust",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

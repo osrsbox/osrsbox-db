@@ -6,17 +6,19 @@
     "release_date": "2005-09-19",
     "combat_level": 74,
     "size": 1,
-    "hitpoints": 74,
+    "hitpoints": 80,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee",
-        " Ranged"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,94 +51,107 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1755,
             "name": "Chisel",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2347,
             "name": "Hammer",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1935,
             "name": "Jug",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 946,
             "name": "Knife",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1931,
             "name": "Pot",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6529,
             "name": "Tokkul",
             "quantity": "1-16",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1623,
             "name": "Uncut sapphire",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1619,
             "name": "Uncut ruby",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6529,
             "name": "Tokkul",
             "quantity": "3-14",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1623,
             "name": "Uncut sapphire",
             "quantity": "1",
-            "rarity": "Unknown",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1621,
             "name": "Uncut emerald",
             "quantity": "1",
-            "rarity": "Unknown",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1619,
             "name": "Uncut ruby",
             "quantity": "1",
-            "rarity": "Unknown",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1617,
             "name": "Uncut diamond",
             "quantity": "1",
-            "rarity": "Unknown",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         }
     ],

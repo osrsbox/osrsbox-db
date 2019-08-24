@@ -6,18 +6,18 @@
     "release_date": "2004-12-06",
     "combat_level": 142,
     "size": 1,
-    "hitpoints": 142,
+    "hitpoints": 110,
     "max_hit": 12,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Salve amulet(e)",
-        " Crumble Undead"
+        "crumble undead"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,18 +50,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3187,
             "name": "Bones (Ape Atoll)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6806,
             "name": "Skeleton champion scroll",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/5,000)</small>"
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

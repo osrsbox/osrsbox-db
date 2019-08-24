@@ -6,16 +6,19 @@
     "release_date": "2006-03-07",
     "combat_level": 230,
     "size": 3,
-    "hitpoints": 230,
+    "hitpoints": 200,
     "max_hit": 21,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab and ranged"
+        "stab",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,179 +51,204 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7416,
             "name": "Mole claw",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7418,
             "name": "Mole skin",
             "quantity": "1-3",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1301,
             "name": "Adamant longsword",
             "quantity": "1",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1121,
             "name": "Mithril platebody",
             "quantity": "1",
+            "noted": false,
             "rarity": "9/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1725,
             "name": "Amulet of strength",
             "quantity": "1",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1355,
             "name": "Mithril axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1369,
             "name": "Mithril battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1147,
             "name": "Rune med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "105",
+            "noted": false,
             "rarity": "20/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "19/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "105",
+            "noted": false,
             "rarity": "11/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 884,
             "name": "Iron arrow",
             "quantity": "690",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "7",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1515,
             "name": "Yew logs",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 385,
             "name": "Shark",
             "quantity": "4",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2359,
             "name": "Mithril bar",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 440,
             "name": "Iron ore",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 413,
             "name": "Oyster pearls",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/74",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/500",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12646,
             "name": "Baby mole",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/3000",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1110181846665609216|date=25 Mar 2019|archiveurl=http://archive.fo/KO6bF|archivedate=25 Mar 2019|quote=1/3k confirmed.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|special bones}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

@@ -6,21 +6,23 @@
     "release_date": "2001-01-21",
     "combat_level": 5,
     "size": 1,
-    "hitpoints": 5,
-    "max_hit": 4,
-    "attack_type": "Melee",
-    "attack_speed": 0,
+    "hitpoints": 13,
+    "max_hit": 1,
+    "attack_type": [
+        "stab"
+    ],
+    "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "He holds up passers by.",
     "wiki_name": "Highwayman",
     "wiki_url": "https://oldschool.runescape.wiki/w/Highwayman",
@@ -45,24 +47,27 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1019,
             "name": "Black cape",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref>Only dropped by the hoodless variant.</ref>"
-        },
-        {
-            "id": 1,
-            "name": "Bones",
-            "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 526,
+            "name": "Bones",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        {
+            "id": 9140,
             "name": "Iron bolts",
-            "quantity": "3 - 11",
-            "rarity": "Rare",
+            "quantity": "3-11",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         }
     ],

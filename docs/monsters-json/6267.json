@@ -6,16 +6,18 @@
     "release_date": "2003-01-27",
     "combat_level": 44,
     "size": 1,
-    "hitpoints": 44,
+    "hitpoints": 50,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -47,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 6291,
             "name": "Spider carcass",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

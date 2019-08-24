@@ -6,18 +6,18 @@
     "release_date": "2006-03-28",
     "combat_level": 140,
     "size": 1,
-    "hitpoints": 140,
+    "hitpoints": 115,
     "max_hit": 15,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Gadderhammer",
-        " Crumble Undead",
-        " Salve amulet"
+        "crumble undead"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,10 +50,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3404,
             "name": "Fiyr remains",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

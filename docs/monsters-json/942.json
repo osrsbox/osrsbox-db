@@ -6,17 +6,19 @@
     "release_date": "2004-08-09",
     "combat_level": 69,
     "size": 1,
-    "hitpoints": 69,
+    "hitpoints": 90,
     "max_hit": 11,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash weapons|Slash",
-        " Stab weapons|Stab"
+        "slash",
+        "stab"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -51,172 +53,196 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1141,
             "name": "Steel med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1339,
             "name": "Steel warhammer",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1341,
             "name": "Black warhammer",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1181,
             "name": "Mithril sq shield",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1345,
             "name": "Adamant warhammer",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1145,
             "name": "Adamant med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "25",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "45",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "60",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "7",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "8",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "35",
+            "noted": false,
             "rarity": "29/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "50",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "100",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "250",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 453,
             "name": "Coal",
-            "quantity": "3 (noted)",
+            "quantity": "3",
+            "noted": true,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 353,
             "name": "Raw mackerel",
-            "quantity": "3 (noted)",
+            "quantity": "3",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7884,
             "name": "Troll bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group='d'>Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13483,
             "name": "Ensouled troll head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/45",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/269.2",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|special bones}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

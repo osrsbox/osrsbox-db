@@ -6,23 +6,27 @@
     "release_date": "2005-04-18",
     "combat_level": 139,
     "size": 1,
-    "hitpoints": 139,
+    "hitpoints": 200,
     "max_hit": 19,
-    "attack_type": "Melee, Magic, and Ranged",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Stab",
-        " Magic",
-        " Ranged"
+        "stab",
+        "ranged",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Vampyre warrior of Zamorak.",
     "wiki_name": "Dessous (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dessous#Normal",
@@ -47,10 +51,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3325,
             "name": "Vampyre dust",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

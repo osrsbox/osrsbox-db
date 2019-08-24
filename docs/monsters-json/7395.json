@@ -6,17 +6,17 @@
     "release_date": "2016-09-15",
     "combat_level": 135,
     "size": 3,
-    "hitpoints": 135,
+    "hitpoints": 170,
     "max_hit": 11,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 40,
     "slayer_xp": 1700,
@@ -48,212 +48,242 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20736,
             "name": "Dust battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/340.8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20730,
             "name": "Mist battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/340.8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20724,
             "name": "Imbued heart",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1022.4",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21270,
             "name": "Eternal gem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1022.4",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "75",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
-            "quantity": "3, 15, 37",
-            "rarity": "Uncommon",
+            "quantity": "3,15,37",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
-            "quantity": "3 ; 7",
-            "rarity": "Rare",
+            "quantity": "3,7",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1365,
             "name": "Steel battleaxe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1243,
             "name": "Mithril spear",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1355,
             "name": "Mithril axe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1197,
             "name": "Mithril kiteshield",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1161,
             "name": "Adamant full helm",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1213,
             "name": "Rune dagger",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4109,
             "name": "Mystic hat (light)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
             "name": "Grimy tarromin",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 205,
             "name": "Grimy harralander",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 209,
             "name": "Grimy irit leaf",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 211,
             "name": "Grimy avantoe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2485,
             "name": "Grimy lantadyme",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
-            "quantity": "11,44, 132, 200, 440",
-            "rarity": "Common",
+            "quantity": "11,44,132,200,440",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7899,
             "name": "Basilisk bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref>Only during [[Rag and Bone Man II]].</ref>"
-        },
-        {
-            "id": 1,
-            "name": "Adamantite ore",
-            "quantity": "1",
-            "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
+            "name": "Adamantite ore",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 7977,
             "name": "Basilisk head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2000",
             "drop_requirements": null
         }

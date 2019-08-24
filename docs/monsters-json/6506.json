@@ -6,17 +6,22 @@
     "release_date": "2005-10-04",
     "combat_level": 702,
     "size": 5,
-    "hitpoints": 702,
+    "hitpoints": 250,
     "max_hit": 97,
-    "attack_type": "Melee, Magic, Ranged",
+    "attack_type": [
+        "stab",
+        "ranged",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 8,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " Melee"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,11 +54,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 13225,
             "name": "Tzrek-jad",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/200",
-            "drop_requirements": "<ref group=d>Drop rate is 1/200 for completing the cave off-task and for sacrificing the [[Fire cape]].</ref><ref group=d>Drop rate is 1/100 if TzTok-Jad is killed while on a TzHaar slayer task.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/632248480497541124|quote=Confirmed. And the mole is 1/3k.|date=14 Aug 2015}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

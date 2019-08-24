@@ -6,21 +6,24 @@
     "release_date": "2019-07-04",
     "combat_level": 318,
     "size": 5,
-    "hitpoints": 318,
+    "hitpoints": 400,
     "max_hit": 31,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "melee",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Crush"
+        "crush"
     ],
     "slayer_monster": false,
     "slayer_level": 0,
     "slayer_xp": 430,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "I'm going to need a really big newspaper...",
     "wiki_name": "Sarachnis",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sarachnis",
@@ -45,450 +48,514 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
-            "quantity": "8-10 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "8-10",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1127,
             "name": "Rune platebody",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1147,
             "name": "Rune med helm",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1319,
             "name": "Rune 2h sword",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1149,
             "name": "Dragon med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/384",
-            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156844944369377286|date=1 August 2019|archiveurl=http://archive.fo/h8aa9|archivedate=1 August 2019|quote=For those interested, here are the drop-rates for the unique items within the Forthos Dungeon.[https://pbs.twimg.com/media/EA3wV4DW4AAVtos?format=jpg&name=small]|name=Forthos Dungeon Droprates}}"
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23528,
             "name": "Sarachnis cudgel",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/384",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "178-199",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "82-100",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "127-198",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "82-100",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "80-100",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 888,
             "name": "Mithril arrow",
-            "quantity": "457-588",
-            "rarity": "Uncommon",
+            "quantity": "457-600",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9142,
             "name": "Mithril bolts",
             "quantity": "168-223",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5314,
             "name": "Maple seed",
             "quantity": "1-2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5288,
             "name": "Papaya tree seed",
             "quantity": "2-3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5296,
             "name": "Toadflax seed",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5315,
             "name": "Yew seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5297,
             "name": "Irit seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5281,
             "name": "Belladonna seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5106,
             "name": "Poison ivy seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5298,
             "name": "Avantoe seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5280,
             "name": "Cactus seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22873,
             "name": "Potato cactus seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5299,
             "name": "Kwuarm seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5300,
             "name": "Snapdragon seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5301,
             "name": "Cadantine seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5302,
             "name": "Lantadyme seed",
             "quantity": "3",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22879,
             "name": "Snape grass seed",
             "quantity": "3",
-            "rarity": "Very rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5303,
             "name": "Dwarf weed seed",
             "quantity": "3",
-            "rarity": "Very rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5304,
             "name": "Torstol seed",
             "quantity": "3",
-            "rarity": "Very rare",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 205,
             "name": "Grimy harralander",
-            "quantity": "10 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
-            "quantity": "5-7 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "5-7",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 211,
             "name": "Grimy avantoe",
-            "quantity": "10 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
-            "quantity": "13-14 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "13-14",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3051,
             "name": "Grimy snapdragon",
-            "quantity": "9-10 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "7-10",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
-            "quantity": "10-15 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "10-15",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2485,
             "name": "Grimy lantadyme",
-            "quantity": "12-13 (noted)",
-            "rarity": "Rare",
+            "quantity": "12-13",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
-            "quantity": "11-14 (noted)",
-            "rarity": "Rare",
+            "quantity": "11-14",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 219,
             "name": "Grimy torstol",
-            "quantity": "6-7 (noted)",
-            "rarity": "Rare",
+            "quantity": "6-7",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 447,
             "name": "Mithril ore",
-            "quantity": "61-90 (noted)",
-            "rarity": "Common",
+            "quantity": "61-90",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1749,
             "name": "Red dragonhide",
-            "quantity": "15-25 (noted)",
-            "rarity": "Common",
+            "quantity": "15-25",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1623,
             "name": "Uncut sapphire",
-            "quantity": "20-28 (noted)",
-            "rarity": "Common",
+            "quantity": "20-28",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
             "name": "Adamantite ore",
-            "quantity": "31-40 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "31-40",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1621,
             "name": "Uncut emerald",
-            "quantity": "20-30 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "20-30",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1619,
             "name": "Uncut ruby",
-            "quantity": "20-29 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "20-29",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 451,
             "name": "Runite ore",
-            "quantity": "4-6 (noted)",
-            "rarity": "Rare",
+            "quantity": "4-6",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1617,
             "name": "Uncut diamond",
-            "quantity": "23-29 (noted)",
-            "rarity": "Rare",
+            "quantity": "23-30",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
             "name": "Onyx bolt tips",
             "quantity": "8-10",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7056,
             "name": "Egg potato",
             "quantity": "5-8",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 536,
             "name": "Dragon bones",
-            "quantity": "10-15 (noted)",
-            "rarity": "Common",
+            "quantity": "10-15",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "17265-24958",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 989,
             "name": "Crystal key",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5940,
             "name": "Weapon poison(++)",
-            "quantity": "4-6 (noted)",
-            "rarity": "Rare",
+            "quantity": "4-6",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6291,
             "name": "Spider carcass",
-            "quantity": "10 (noted)",
-            "rarity": "Rare",
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23510,
             "name": "Tattered moon page",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23512,
             "name": "Tattered sun page",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23514,
             "name": "Tattered temple page",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23517,
             "name": "Giant egg sac(full)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/20",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23499,
             "name": "Grubby key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/15",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/40",
-            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156849996987359233|title=Forthos Dungeon Droprates|postdate = 1 August 2019}}"
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/56.4",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/60",
-            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156849996987359233|date=1 August 2019|arhiveurl=http://archive.fo/GyAi5|archivedate=1 August 2019|quote=Clue drops from Forthos are as follows:|name=Forthos Dungeon clue scroll Droprates}}"
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23525,
             "name": "Jar of eyes",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2000",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23495,
             "name": "Sraracha",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/3000",
             "drop_requirements": "forthos-dungeon-only"
         }

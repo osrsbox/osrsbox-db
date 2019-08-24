@@ -6,16 +6,18 @@
     "release_date": "2016-06-09",
     "combat_level": 109,
     "size": 2,
-    "hitpoints": 109,
+    "hitpoints": 150,
     "max_hit": 13,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -51,235 +53,268 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1353,
             "name": "Steel axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1181,
             "name": "Mithril sq shield",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1393,
             "name": "Fire battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1333,
             "name": "Rune scimitar",
             "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
-        },
-        {
-            "id": 1,
-            "name": "Fire rune",
-            "quantity": "37",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
+            "name": "Fire rune",
+            "quantity": "37",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
             "name": "Fire rune",
             "quantity": "150",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "5",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "5",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 892,
             "name": "Rune arrow",
             "quantity": "12",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "15",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "25",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "50",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "60",
+            "noted": false,
             "rarity": "40/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "300",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2353,
             "name": "Steel bar",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 379,
             "name": "Lobster",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 117,
             "name": "Strength potion(2)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7872,
             "name": "Fire giant bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group='d'>Only during [[Rag and Bone Man II]]. Cannot be dropped by fire giants in the [[Stronghold Slayer Cave]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13474,
             "name": "Ensouled giant head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/20",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=\nhttps://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23490,
             "name": "Larran's key",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "krystilia-task-only"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12746,
             "name": "Mysterious emblem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100",
-            "drop_requirements": "<ref name=wildytask group='d'>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref> {{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21257,
             "name": "Slayer's enchantment",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/232",
-            "drop_requirements": "<ref name=wildytask group='d' />{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/139.2",
-            "drop_requirements": "<ref group='d'>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083783815141707781|author=Mod Kieren|date=16 January 2019|quote=0.2*(CBLEVEL - 100)^2 + 100}}{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/246.66",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/370",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/370",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/370",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "<ref name='special bones' />"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6800,
             "name": "Giant champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|name=Drop Rates V2}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

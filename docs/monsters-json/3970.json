@@ -6,17 +6,17 @@
     "release_date": "2001-09-23",
     "combat_level": 3,
     "size": 2,
-    "hitpoints": 3,
+    "hitpoints": 5,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 2,
@@ -47,17 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Key (Melzar's Maze)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

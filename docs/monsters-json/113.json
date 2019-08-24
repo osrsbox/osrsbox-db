@@ -6,16 +6,18 @@
     "release_date": "2005-01-17",
     "combat_level": 63,
     "size": 1,
-    "hitpoints": 63,
+    "hitpoints": 62,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -24,7 +26,7 @@
         "turael",
         "mazchna"
     ],
-    "examine": "* An unsuitable pet.\n* Looks like it's got Rabies!",
+    "examine": "An unsuitable pet.",
     "wiki_name": "Wild dog",
     "wiki_url": "https://oldschool.runescape.wiki/w/Wild_dog",
     "attack_level": 53,
@@ -48,18 +50,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13468,
             "name": "Ensouled dog head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

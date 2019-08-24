@@ -6,21 +6,23 @@
     "release_date": "2015-02-19",
     "combat_level": 10,
     "size": 1,
-    "hitpoints": 10,
+    "hitpoints": 18,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash"
+        "slash"
     ],
     "slayer_monster": false,
     "slayer_level": 0,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "It didn't get that big eating flies.",
     "wiki_name": "Big frog (Level 10)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Big_frog#Level_10",
@@ -45,67 +47,76 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
-            "quantity": "1, 2",
-            "rarity": "Always",
+            "quantity": "1,2",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "12",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "12",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "4",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1440,
             "name": "Earth talisman",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1444,
             "name": "Water talisman",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
-            "quantity": "5, 15",
-            "rarity": "Common",
+            "quantity": "5,15",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7908,
             "name": "Big frog leg",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<ref>Only during [[Rag and Bone Man]]. Cannot be dropped by big frogs on the surface of Lumbridge Swamp.</ref>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

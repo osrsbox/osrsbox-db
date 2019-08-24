@@ -6,21 +6,25 @@
     "release_date": "2007-06-04",
     "combat_level": 109,
     "size": 2,
-    "hitpoints": 109,
+    "hitpoints": 95,
     "max_hit": 11,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash"
+        "slash"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A very odd looking creature.",
     "wiki_name": "Experiment No.2",
     "wiki_url": "https://oldschool.runescape.wiki/w/Experiment_No.2",
@@ -45,137 +49,156 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11205,
             "name": "Shrunk ogleroot",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
             "name": "Grimy tarromin",
             "quantity": "1-3",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 209,
             "name": "Grimy irit leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "11",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "11",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "1-4",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "57",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1385,
             "name": "Staff of earth",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7416,
             "name": "Mole claw",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1407,
             "name": "Mystic earth staff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/128)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7893,
             "name": "Experiment bone",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref>Only during [[Rag and Bone Man II]].</ref>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

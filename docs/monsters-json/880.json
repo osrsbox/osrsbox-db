@@ -6,21 +6,24 @@
     "release_date": "2005-05-17",
     "combat_level": 39,
     "size": 1,
-    "hitpoints": 39,
+    "hitpoints": 50,
     "max_hit": 4,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic",
+        "crumble undead"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A human zombie.",
     "wiki_name": "Zombie (Zogre Flesh Eaters)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Zombie_(Zogre_Flesh_Eaters)",
@@ -45,17 +48,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4810,
             "name": "Ruined backpack",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

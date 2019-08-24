@@ -6,16 +6,19 @@
     "release_date": "2016-09-15",
     "combat_level": 278,
     "size": 3,
-    "hitpoints": 278,
+    "hitpoints": 410,
     "max_hit": 20,
-    "attack_type": "Magic-based melee",
+    "attack_type": [
+        "melee",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 50,
@@ -50,235 +53,276 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13495,
             "name": "Ensouled bloodveld head",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "{{CiteGeneral|url=http://services.runescape.com/m=news/superior-slayer-encounters?oldschool=1|archiveurl=http://archive.fo/CoaCy|archivedate=6 Apr 2019|title=Update: Superior Slayer Encounters|author=Jagex|quote=Superior slayer encounters also offer a 100% drop rate for totem pieces (when killed within the Catacombs of Kourend), 100% ensouled head drop rate and a 10x higher clue scroll drop rate.|accessdate=2019-03-10|name=drop2}}"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 4125,
             "name": "Black boots",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1151,
             "name": "Black med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1355,
             "name": "Mithril axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1369,
             "name": "Mithril battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1121,
             "name": "Mithril platebody",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 867,
             "name": "Adamant knife",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1111,
             "name": "Adamant chainbody",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1159,
             "name": "Mithril full helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1301,
             "name": "Adamant longsword",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1331,
             "name": "Adamant scimitar",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1147,
             "name": "Rune med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1213,
             "name": "Rune dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1373,
             "name": "Rune battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "105",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "75",
+            "noted": false,
             "rarity": "9/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "30",
+            "noted": false,
             "rarity": "13/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "7",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "4",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "350",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "11",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1777,
             "name": "Bow string",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 444,
             "name": "Gold ore",
             "quantity": "1",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2327,
             "name": "Meat pie",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2359,
             "name": "Mithril bar",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1698,
             "name": "Ruby amulet",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/64.4",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23962,
+            "name": "Crystal shard",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "10/128",
-            "drop_requirements": "{{NamedRef|drop2}}{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1104000231765622784|date=8 Mar 2019|archiveurl=|archivedate=http://archive.fo/Bd630|quote= That's rather odd, since they're only 1/128. You presumably can't pick them all up, right?}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/66.6",
-            "drop_requirements": ""
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

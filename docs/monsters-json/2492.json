@@ -6,17 +6,17 @@
     "release_date": "2001-01-04",
     "combat_level": 1,
     "size": 1,
-    "hitpoints": 1,
+    "hitpoints": 2,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Nothing"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 2,
@@ -47,32 +47,36 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only in [[Stronghold of Security]].</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 300,
             "name": "Rat's tail",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Witch's Potion]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7836,
             "name": "Rat bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Only dropped by those found in the [[Wilderness]]</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

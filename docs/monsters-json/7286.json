@@ -6,17 +6,18 @@
     "release_date": "2016-06-16",
     "combat_level": 321,
     "size": 5,
-    "hitpoints": 321,
+    "hitpoints": 450,
     "max_hit": 38,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "slash",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Arclight"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 0,
@@ -49,226 +50,258 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "500",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "450",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "450",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1127,
             "name": "Rune platebody",
-            "quantity": "3 (noted)",
-            "rarity": "Common",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1201,
             "name": "Rune kiteshield",
-            "quantity": "3 (noted)",
-            "rarity": "Common",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1079,
             "name": "Rune platelegs",
-            "quantity": "3 (noted)",
-            "rarity": "Common",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1093,
             "name": "Rune plateskirt",
-            "quantity": "3 (noted)",
-            "rarity": "Common",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
-            "quantity": "40 (noted)",
-            "rarity": "Common",
+            "quantity": "40",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3051,
             "name": "Grimy snapdragon",
-            "quantity": "20 (noted)",
-            "rarity": "Common",
+            "quantity": "20",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 219,
             "name": "Grimy torstol",
-            "quantity": "20 (noted)",
-            "rarity": "Common",
+            "quantity": "20",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1631,
             "name": "Uncut dragonstone",
-            "quantity": "10 (noted)",
-            "rarity": "Common",
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
-            "quantity": "25 (noted)",
-            "rarity": "Common",
+            "quantity": "25",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
             "name": "Onyx bolt tips",
             "quantity": "40",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
             "name": "Adamantite ore",
-            "quantity": "75 (noted)",
-            "rarity": "Common",
+            "quantity": "75",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2363,
             "name": "Runite bar",
-            "quantity": "20 (noted)",
-            "rarity": "Common",
+            "quantity": "20",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13439,
             "name": "Raw anglerfish",
-            "quantity": "60 (noted)",
-            "rarity": "Common",
+            "quantity": "60",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 8782,
             "name": "Mahogany plank",
-            "quantity": "150 (noted)",
-            "rarity": "Common",
+            "quantity": "150",
+            "noted": true,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6571,
             "name": "Uncut onyx",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1000",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
-            "quantity": "1-4<!-- This is extra shard drops; you can get 5 total, including the guaranteed 1. The extra shards are max 4. -->",
-            "rarity": "Uncommon",
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19685,
             "name": "Dark totem",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21275,
             "name": "Dark claw",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/55.8",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21273,
             "name": "Skotos",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/65",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2366,
             "name": "Shield left half",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19701,
             "name": "Jar of darkness",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2500",
             "drop_requirements": null
         }

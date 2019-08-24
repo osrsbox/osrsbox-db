@@ -6,21 +6,24 @@
     "release_date": "2005-06-13",
     "combat_level": 59,
     "size": 1,
-    "hitpoints": 59,
+    "hitpoints": 55,
     "max_hit": 11,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "stab",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "It seems to have eyes in the back of its head...",
     "wiki_name": "Abyssal guardian",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_guardian",
@@ -45,156 +48,178 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1438,
             "name": "Air talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1444,
             "name": "Water talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1440,
             "name": "Earth talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1442,
             "name": "Fire talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1448,
             "name": "Mind talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1446,
             "name": "Body talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1454,
             "name": "Cosmic talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1452,
             "name": "Chaos talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1462,
             "name": "Nature talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5516,
             "name": "Elemental talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/981567261361262592|quote=1/256 from all three types.|date=4 Apr 2018}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5509,
             "name": "Small pouch",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/42",
-            "drop_requirements": "<ref name=\"pouch\" group=d>Players will only get a pouch if they have all the smaller pouches, and if a player has them all, they will no longer get them as a drop, unless one was lost.</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5510,
             "name": "Medium pouch",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/42",
-            "drop_requirements": "<ref name=\"pouch\" group=d/>{{NamedRef|drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5512,
             "name": "Large pouch",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/42",
-            "drop_requirements": "<ref name=\"pouch\" group=d/>{{NamedRef|drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5514,
             "name": "Giant pouch",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/42",
-            "drop_requirements": "<ref name=\"pouch\" group=d/>{{NamedRef|drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "1 (noted)",
+            "quantity": "1",
+            "noted": true,
             "rarity": "36/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
             "quantity": "1",
+            "noted": false,
             "rarity": "34/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "5 (noted)",
+            "quantity": "5",
+            "noted": true,
             "rarity": "4/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "4/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "15 (noted)",
+            "quantity": "15",
+            "noted": true,
             "rarity": "4/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5521,
             "name": "Binding necklace",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/256",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2801,
             "name": "Clue scroll (medium)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
             "drop_requirements": null
         }

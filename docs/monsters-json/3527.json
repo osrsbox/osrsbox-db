@@ -6,22 +6,24 @@
     "release_date": "2002-02-27",
     "combat_level": 39,
     "size": 1,
-    "hitpoints": 39,
+    "hitpoints": 38,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " crush"
+        "crush",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Leader of the Renegade Knights.",
     "wiki_name": "Sir Mordred",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sir_Mordred",
@@ -46,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,21 +6,23 @@
     "release_date": "2016-01-07",
     "combat_level": 70,
     "size": 1,
-    "hitpoints": 70,
+    "hitpoints": 65,
     "max_hit": 8,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush"
+        "crush"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Highly ranked.",
     "wiki_name": "Soldier (tier 4)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Soldier_(tier_4)",
@@ -45,38 +47,43 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 13374,
             "name": "Shayzien helm (4)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13376,
             "name": "Shayzien platebody (4)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13375,
             "name": "Shayzien greaves (4)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13372,
             "name": "Shayzien gloves (4)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13373,
             "name": "Shayzien boots (4)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

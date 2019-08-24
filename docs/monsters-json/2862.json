@@ -6,16 +6,18 @@
     "release_date": "2001-01-04",
     "combat_level": 6,
     "size": 2,
-    "hitpoints": 6,
+    "hitpoints": 10,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -47,32 +49,36 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2134,
             "name": "Raw rat meat",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7824,
             "name": "Giant rat bone",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

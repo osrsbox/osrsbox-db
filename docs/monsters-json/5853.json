@@ -6,21 +6,23 @@
     "release_date": "2006-02-27",
     "combat_level": 45,
     "size": 1,
-    "hitpoints": 45,
+    "hitpoints": 40,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic secateurs"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "An animated shrub.",
     "wiki_name": "Baby tanglefoot (Tan)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Baby_tanglefoot#Tan",
@@ -45,10 +47,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 6020,
             "name": "Leaves",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

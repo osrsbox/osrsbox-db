@@ -6,22 +6,24 @@
     "release_date": "2014-03-13",
     "combat_level": 178,
     "size": 1,
-    "hitpoints": 178,
+    "hitpoints": 170,
     "max_hit": 16,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Pickaxe",
-        " Magic"
+        "magic",
+        "pickaxe"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Runite that's come alive!",
     "wiki_name": "Runite Golem",
     "wiki_url": "https://oldschool.runescape.wiki/w/Runite_Golem",

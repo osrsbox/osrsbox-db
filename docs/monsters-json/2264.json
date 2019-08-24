@@ -6,16 +6,18 @@
     "release_date": "2005-08-01",
     "combat_level": 70,
     "size": 2,
-    "hitpoints": 70,
+    "hitpoints": 100,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,18 +52,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/280",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

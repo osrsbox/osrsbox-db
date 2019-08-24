@@ -6,22 +6,24 @@
     "release_date": "2006-05-31",
     "combat_level": 91,
     "size": 1,
-    "hitpoints": 91,
+    "hitpoints": 120,
     "max_hit": 23,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab",
-        " Slash"
+        "slash",
+        "stab"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Young, but still dangerous.",
     "wiki_name": "Troll (Construction)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Troll_(Construction)",

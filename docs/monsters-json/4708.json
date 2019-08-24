@@ -6,21 +6,21 @@
     "release_date": "2004-09-14",
     "combat_level": 83,
     "size": 3,
-    "hitpoints": 83,
+    "hitpoints": 100,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Karambwan paste|Karambwan-poisoned spears or hastae"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A huge beast, resembling in some ways a lion, but mostly a twisted nightmare.",
     "wiki_name": "The Shaikahan",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Shaikahan",
@@ -45,10 +45,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3123,
             "name": "Shaikahan bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

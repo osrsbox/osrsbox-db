@@ -6,21 +6,23 @@
     "release_date": "2013-09-05",
     "combat_level": 272,
     "size": 1,
-    "hitpoints": 272,
+    "hitpoints": 255,
     "max_hit": 54,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "The warrior of darkness.",
     "wiki_name": "Damis (Second form (hard))",
     "wiki_url": "https://oldschool.runescape.wiki/w/Damis#Second_form_(hard)",
@@ -45,11 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 4673,
             "name": "Shadow diamond",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only dropped when fought in the [[Shadow Dungeon]] during [[Desert Treasure]].</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

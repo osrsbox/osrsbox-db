@@ -6,24 +6,24 @@
     "release_date": "2019-07-25",
     "combat_level": 336,
     "size": 5,
-    "hitpoints": 64,
-    "max_hit": 0,
-    "attack_type": "None",
-    "attack_speed": 0,
-    "aggressive": false,
+    "hitpoints": 1000,
+    "max_hit": 53,
+    "attack_type": [],
+    "attack_speed": 5,
+    "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Imbued tephra"
+        "pickaxe"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
-    "examine": "A golem made of tephra.",
-    "wiki_name": "Golem",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Golem",
+    "slayer_masters": [],
+    "examine": "A former demon of Zamorak that has been turned to stone.",
+    "wiki_name": "Zalcano",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zalcano",
     "attack_level": 0,
     "strength_level": 0,
     "defence_level": 0,
@@ -45,10 +45,267 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
-            "name": "Imbued tephra",
-            "quantity": "16-24",
-            "rarity": "Always",
+            "id": 592,
+            "name": "Ashes",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        {
+            "id": 23962,
+            "name": "Crystal shard",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        {
+            "id": 2351,
+            "name": "Iron bar",
+            "quantity": "10-300",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 2353,
+            "name": "Steel bar",
+            "quantity": "10-500",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 2359,
+            "name": "Mithril bar",
+            "quantity": "20-412",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "quantity": "5-130",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 2363,
+            "name": "Runite bar",
+            "quantity": "1-38",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "quantity": "100-400",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 442,
+            "name": "Silver ore",
+            "quantity": "50-250",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "quantity": "100-783",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 444,
+            "name": "Gold ore",
+            "quantity": "10-653",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 447,
+            "name": "Mithril ore",
+            "quantity": "10-1017",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 449,
+            "name": "Adamantite ore",
+            "quantity": "10-249",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
+            "quantity": "1-37",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "quantity": "5-100",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "quantity": "1000-3000",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 4699,
+            "name": "Lava rune",
+            "quantity": "271-496",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "quantity": "100-775",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "quantity": "163-1352",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "quantity": "75-752",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "quantity": "77-729",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "quantity": "56-1149",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "quantity": "301-418",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 566,
+            "name": "Soul rune",
+            "quantity": "50-332",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "quantity": "18-22",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "quantity": "15-20",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "quantity": "13-16",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "quantity": "8-12",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 1631,
+            "name": "Uncut dragonstone",
+            "quantity": "1-8",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 6571,
+            "name": "Uncut onyx",
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 23953,
+            "name": "Crystal tool seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 23908,
+            "name": "Zalcano shard",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 23760,
+            "name": "Smolcano",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/512",
             "drop_requirements": null
         }
     ],

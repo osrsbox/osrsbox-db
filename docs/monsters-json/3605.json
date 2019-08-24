@@ -6,21 +6,21 @@
     "release_date": "2007-02-19",
     "combat_level": 19,
     "size": 1,
-    "hitpoints": 19,
+    "hitpoints": 18,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Since when did newts have beaks?",
     "wiki_name": "Newtroost",
     "wiki_url": "https://oldschool.runescape.wiki/w/Newtroost",
@@ -45,31 +45,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 221,
             "name": "Eye of newt",
-            "quantity": "4, 6, 8, 12",
-            "rarity": "Always",
+            "quantity": "4,6,8,12",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10859,
             "name": "Tea flask",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10882,
             "name": "Rune satchel",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

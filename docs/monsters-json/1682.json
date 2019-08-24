@@ -6,16 +6,18 @@
     "release_date": "2005-05-09",
     "combat_level": 76,
     "size": 2,
-    "hitpoints": 76,
+    "hitpoints": 70,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -47,18 +49,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7824,
             "name": "Giant rat bone",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

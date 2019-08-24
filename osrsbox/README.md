@@ -125,6 +125,7 @@ A select number of items in OSRS are equipable weapons. Any equipable item that 
 
 # Changelog
 
+- `1.2.1`: Added monster database (beta).
 - `1.1.26`: Release for game update: 2019/08/22.
 - `1.1.25`: Updated project documentation.
 - `1.1.24`: Updated JSON schema and added duplicate item property.

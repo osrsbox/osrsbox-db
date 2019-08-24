@@ -6,18 +6,20 @@
     "release_date": "2015-09-10",
     "combat_level": 48,
     "size": 2,
-    "hitpoints": 48,
+    "hitpoints": 52,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab",
-        " Ranged",
-        " dragonbane weapons"
+        "stab",
+        "ranged",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,10 +52,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 534,
             "name": "Babydragon bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

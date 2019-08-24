@@ -33,6 +33,7 @@ class MonsterDrop:
     id: int = None
     name: str = None
     quantity: str = None
+    noted: bool = None
     rarity: str = None
     drop_requirements: Optional[str] = None
 

@@ -6,17 +6,19 @@
     "release_date": "2005-01-26",
     "combat_level": 61,
     "size": 2,
-    "hitpoints": 61,
+    "hitpoints": 75,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush",
-        " Ranged"
+        "crush",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 40,
@@ -49,158 +51,180 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4109,
             "name": "Mystic hat (light)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1355,
             "name": "Mithril axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1243,
             "name": "Mithril spear",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1365,
             "name": "Steel battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1161,
             "name": "Adamant full helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1197,
             "name": "Mithril kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1213,
             "name": "Rune dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "75",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "3",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "37",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "44",
+            "noted": false,
             "rarity": "29/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "200",
+            "noted": false,
             "rarity": "17/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "132",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "11",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "440",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
             "name": "Adamantite ore",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "treasure-trails-only"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20543,
             "name": "Reward casket (elite)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref name='elite' group='d'/>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7899,
             "name": "Basilisk bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group='d'>Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7977,
             "name": "Basilisk head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2000",
-            "drop_requirements": "<ref name='Drop Rates V2'/>"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

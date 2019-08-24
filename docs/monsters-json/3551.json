@@ -8,19 +8,21 @@
     "size": 1,
     "hitpoints": 75,
     "max_hit": 7,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Tough looking Menaphite.",
     "wiki_name": "Tough Guy",
     "wiki_url": "https://oldschool.runescape.wiki/w/Tough_Guy",

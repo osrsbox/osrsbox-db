@@ -6,21 +6,23 @@
     "release_date": "2005-02-22",
     "combat_level": 12,
     "size": 1,
-    "hitpoints": 12,
+    "hitpoints": 15,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 7,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A guard for the humans against monster group.",
     "wiki_name": "H.A.M. Guard (Lv 12)",
     "wiki_url": "https://oldschool.runescape.wiki/w/H.A.M._Guard#Lv_12",
@@ -45,291 +47,332 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1129,
             "name": "Leather body",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4308,
             "name": "Ham gloves",
             "quantity": "1",
+            "noted": false,
             "rarity": "2.5/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4310,
             "name": "Ham boots",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4298,
             "name": "Ham shirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "1.33/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4300,
             "name": "Ham robe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1.33/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4306,
             "name": "Ham logo",
             "quantity": "1",
+            "noted": false,
             "rarity": "1.33/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4302,
             "name": "Ham hood",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4304,
             "name": "Ham cloak",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1625,
             "name": "Uncut opal",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1627,
             "name": "Uncut jade",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
+            "noted": false,
             "rarity": "0.5/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
             "name": "Grimy tarromin",
             "quantity": "1",
+            "noted": false,
             "rarity": "0.33/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 440,
             "name": "Iron ore",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 453,
             "name": "Coal",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1351,
             "name": "Bronze axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1205,
             "name": "Bronze dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1265,
             "name": "Bronze pickaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1349,
             "name": "Iron axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1267,
             "name": "Iron pickaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1203,
             "name": "Iron dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 882,
             "name": "Bronze arrow",
             "quantity": "1-12",
+            "noted": false,
             "rarity": "2.66/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 886,
             "name": "Steel arrow",
             "quantity": "1-6",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1207,
             "name": "Steel dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1353,
             "name": "Steel axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1269,
             "name": "Steel pickaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1-20",
+            "noted": false,
             "rarity": "13.5/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 688,
             "name": "Buttons",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 697,
             "name": "Damaged armour",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 686,
             "name": "Rusty sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1739,
             "name": "Cowhide",
             "quantity": "1-3",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1511,
             "name": "Logs",
             "quantity": "1-3",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 314,
             "name": "Feather",
             "quantity": "1-6",
+            "noted": false,
             "rarity": "3/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 321,
             "name": "Raw anchovies",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2138,
             "name": "Raw chicken",
             "quantity": "1-3",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1734,
             "name": "Thread",
-            "quantity": "1-4",
+            "quantity": "1-10",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 946,
             "name": "Knife",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1733,
             "name": "Needle",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 590,
             "name": "Tinderbox",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2677,
             "name": "Clue scroll (easy)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/55",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

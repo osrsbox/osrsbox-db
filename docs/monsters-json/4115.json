@@ -6,22 +6,25 @@
     "release_date": "2013-09-05",
     "combat_level": 299,
     "size": 1,
-    "hitpoints": 299,
+    "hitpoints": 255,
     "max_hit": 72,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "slash",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Water spells",
-        " Ice arrows"
+        "water spells"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Zamorak's warrior of fire.",
     "wiki_name": "Fareed (Hard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Fareed#Hard",
@@ -46,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

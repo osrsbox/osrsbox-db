@@ -6,18 +6,21 @@
     "release_date": "2019-01-10",
     "combat_level": 99,
     "size": 3,
-    "hitpoints": 99,
+    "hitpoints": 130,
     "max_hit": 13,
-    "attack_type": "Magic, melee",
+    "attack_type": [
+        "slash",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Dragonbane weapons",
-        " stab",
-        " ranged"
+        "stab",
+        "ranged",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 62,
@@ -51,179 +54,204 @@
     "magic_damage": 30,
     "drops": [
         {
-            "id": 1,
+            "id": 22780,
             "name": "Wyrm bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21009,
             "name": "Dragon sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "<ref name=wyrmunique group=d>The rarity changes to 1/2,000 while on a wyrm [[slayer assignment]].</ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|date=13 February 2019|name=mun}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21028,
             "name": "Dragon harpoon",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "<ref name=wyrmunique group=d />{{NamedRef|mun}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22804,
             "name": "Dragon knife",
             "quantity": "75-150",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "<ref name=wyrmunique group=d />{{NamedRef|mun}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20849,
             "name": "Dragon thrownaxe",
             "quantity": "75-150",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "<ref name=wyrmunique group=d />{{NamedRef|mun}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "200",
+            "noted": false,
             "rarity": "10/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 557,
             "name": "Earth rune",
             "quantity": "75-150",
+            "noted": false,
             "rarity": "10/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "15-20",
+            "noted": false,
             "rarity": "5/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "5/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1357,
             "name": "Adamant axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2495,
             "name": "Red d'hide chaps",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1183,
             "name": "Adamant sq shield",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1371,
             "name": "Adamant battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1317,
             "name": "Adamant 2h sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1399,
             "name": "Earth battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1147,
             "name": "Rune med helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1373,
             "name": "Rune battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1215,
             "name": "Dragon dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "950-1450",
+            "noted": false,
             "rarity": "8/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 365,
             "name": "Bass",
             "quantity": "1",
+            "noted": false,
             "rarity": "7/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "200-300 (noted)",
+            "quantity": "200-300",
+            "noted": true,
             "rarity": "3/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 44,
             "name": "Rune arrowtips",
             "quantity": "8-12",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 43,
             "name": "Adamant arrowtips",
             "quantity": "8-12",
+            "noted": false,
             "rarity": "2/76",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100.2",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
-            "drop_requirements": "{{NamedRef|mun}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

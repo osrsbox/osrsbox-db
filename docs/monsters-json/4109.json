@@ -6,21 +6,21 @@
     "release_date": "2004-08-09",
     "combat_level": 5,
     "size": 1,
-    "hitpoints": 5,
+    "hitpoints": 10,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A citizen of Burthorpe.",
     "wiki_name": "Penda",
     "wiki_url": "https://oldschool.runescape.wiki/w/Penda",
@@ -45,66 +45,75 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "3,5,10,15",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 877,
             "name": "Bronze bolts",
             "quantity": "2,8,12",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 313,
             "name": "Fishing bait",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23182,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
-            "rarity": "Unknown",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2677,
             "name": "Clue scroll (easy)",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1440,
             "name": "Earth talisman",
             "quantity": "1",
-            "rarity": "Unknown",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         }
     ],

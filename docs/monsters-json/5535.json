@@ -6,16 +6,20 @@
     "release_date": "2014-04-10",
     "combat_level": 112,
     "size": 2,
-    "hitpoints": 112,
+    "hitpoints": 120,
     "max_hit": 2,
-    "attack_type": "Typeless magical ranged",
+    "attack_type": [
+        "typeless",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 87,

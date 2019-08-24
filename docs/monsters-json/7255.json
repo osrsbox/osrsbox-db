@@ -6,18 +6,22 @@
     "release_date": "2016-06-09",
     "combat_level": 274,
     "size": 4,
-    "hitpoints": 274,
+    "hitpoints": 250,
     "max_hit": 24,
-    "attack_type": "Melee, Dragonfire",
+    "attack_type": [
+        "slash",
+        "dragonfire",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab",
-        " Magic",
-        " dragonbane weapons"
+        "stab",
+        "magic",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -51,214 +55,244 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 536,
             "name": "Dragon bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2353,
             "name": "Steel bar",
             "quantity": "5",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4585,
             "name": "Dragon plateskirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
-            "drop_requirements": "<ref group=d name=dragon>The drop rate is 1/512 for a specific legging, or 1/256 for any leggings</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4087,
             "name": "Dragon platelegs",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
-            "drop_requirements": "<ref group=d name=dragon />{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1432,
             "name": "Rune mace",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1199,
             "name": "Adamant kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 868,
             "name": "Rune knife",
             "quantity": "7",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1359,
             "name": "Rune axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1163,
             "name": "Rune full helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "20",
+            "noted": false,
             "rarity": "19/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 830,
             "name": "Rune javelin",
             "quantity": "7",
+            "noted": false,
             "rarity": "20/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19582,
             "name": "Dragon javelin heads",
             "quantity": "12",
+            "noted": false,
             "rarity": "5/128",
-            "drop_requirements": "<ref group=d>Only dropped after completion of [[Monkey Madness II]]</ref>{{NamedRef|MM2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9144,
             "name": "Runite bolts",
             "quantity": "2-12",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 817,
             "name": "Rune dart(p)",
             "quantity": "12",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "5",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "470",
+            "noted": false,
             "rarity": "17/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "650",
+            "noted": false,
             "rarity": "5/128",
-            "drop_requirements": "<ref group=d>Only dropped if [[Monkey Madness II]] isn't completed</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1019216104030384128|date=17 Jul 2018|archiveurl=http://archive.fo/5ETd3|archivedate=6 Apr 2019|quote=No, they replace a 2200 coin drop with the dragon javelin tip drop.|name=MM2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9431,
             "name": "Runite limbs",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 145,
             "name": "Super attack(3)",
             "quantity": "1",
+            "noted": false,
             "rarity": "13/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2011,
             "name": "Curry",
             "quantity": "1-2",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2363,
             "name": "Runite bar",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 165,
             "name": "Super defence(2)",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/70.8",
-            "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]]</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/166.66",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/290",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/290",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/290",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/500",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11286,
             "name": "Draconic visage",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/64",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

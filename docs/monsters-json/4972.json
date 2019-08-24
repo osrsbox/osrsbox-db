@@ -6,21 +6,23 @@
     "release_date": "2002-07-23",
     "combat_level": 48,
     "size": 1,
-    "hitpoints": 48,
+    "hitpoints": 22,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "It is one of General Khazard's commanders.",
     "wiki_name": "Khazard commander",
     "wiki_url": "https://oldschool.runescape.wiki/w/Khazard_commander",
@@ -45,18 +47,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 587,
             "name": "Orb of protection",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Tree Gnome Village]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

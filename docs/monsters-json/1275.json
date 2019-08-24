@@ -6,21 +6,21 @@
     "release_date": "2005-01-31",
     "combat_level": 25,
     "size": 1,
-    "hitpoints": 25,
+    "hitpoints": 100,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "One of Fenkenstrain's failed experiments.",
     "wiki_name": "Experiment (Lv 25 (sheep))",
     "wiki_url": "https://oldschool.runescape.wiki/w/Experiment#Lv_25_(sheep)",
@@ -45,18 +45,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7893,
             "name": "Experiment bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

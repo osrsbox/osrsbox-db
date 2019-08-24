@@ -6,17 +6,17 @@
     "release_date": "2001-09-23",
     "combat_level": 2,
     "size": 1,
-    "hitpoints": 2,
+    "hitpoints": 5,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 5,
@@ -47,11 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
-            "name": "Map part",
+            "id": null,
+            "name": "Map part#Lozar",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref name=DS/>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

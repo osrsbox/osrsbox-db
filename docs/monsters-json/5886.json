@@ -6,18 +6,20 @@
     "release_date": "2015-10-01",
     "combat_level": 350,
     "size": 6,
-    "hitpoints": 350,
+    "hitpoints": 400,
     "max_hit": 66,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 7,
     "aggressive": false,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " Stab",
-        " demonbane weapons"
+        "stab",
+        "magic",
+        "demonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 85,
@@ -28,7 +30,7 @@
         "konar",
         "duradel"
     ],
-    "examine": "{{*}} A higher order of abyssal demon.",
+    "examine": "A higher order of abyssal demon.",
     "wiki_name": "Abyssal Sire (Phase 1)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_Sire#Phase_1",
     "attack_level": 180,
@@ -52,256 +54,292 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13273,
             "name": "Unsired",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/665177260698288128|quote=Here are the Abyssal Sire drop rates in case you didn't catch them on @JagexRonan's stream.|date=13 Nov 2015}}<ref group='d'>This is not considered a tertiary drop.</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "6/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1163,
             "name": "Rune full helm",
-            "quantity": "3 (noted)",
+            "quantity": "3",
+            "noted": true,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3054,
             "name": "Mystic lava staff",
-            "quantity": "2 (noted)",
+            "quantity": "2",
+            "noted": true,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1289,
             "name": "Rune sword",
-            "quantity": "3 (noted)",
+            "quantity": "3",
+            "noted": true,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1127,
             "name": "Rune platebody",
-            "quantity": "2 (noted)",
+            "quantity": "2",
+            "noted": true,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1201,
             "name": "Rune kiteshield",
-            "quantity": "2 (noted)",
+            "quantity": "2",
+            "noted": true,
             "rarity": "3/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1405,
             "name": "Mystic air staff",
-            "quantity": "2 (noted)",
+            "quantity": "2",
+            "noted": true,
             "rarity": "2/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1397,
             "name": "Air battlestaff",
-            "quantity": "6 (noted)",
+            "quantity": "6",
+            "noted": true,
             "rarity": "2/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "1/97.3",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "1/108.1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "1/108.1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2485,
             "name": "Grimy lantadyme",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "1/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7054,
             "name": "Chilli potato",
             "quantity": "10",
+            "noted": false,
             "rarity": "7/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3024,
             "name": "Super restore(4)",
             "quantity": "4",
+            "noted": false,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6687,
             "name": "Saradomin brew(3)",
             "quantity": "6",
+            "noted": false,
             "rarity": "2/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "330-370",
+            "noted": false,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "190-210",
+            "noted": false,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "250",
+            "noted": false,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 566,
             "name": "Soul rune",
             "quantity": "225-275",
+            "noted": false,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "350",
+            "noted": false,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "48000-52000",
+            "noted": false,
             "rarity": "11/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 453,
             "name": "Coal",
-            "quantity": "380-420 (noted)",
+            "quantity": "380-420",
+            "noted": true,
             "rarity": "6/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "600 (noted)",
+            "quantity": "600",
+            "noted": true,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 575,
             "name": "Earth orb",
-            "quantity": "47-53 (noted)",
+            "quantity": "47-53",
+            "noted": true,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1513,
             "name": "Magic logs",
-            "quantity": "50-70 (noted)",
+            "quantity": "50-70",
+            "noted": true,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1617,
             "name": "Uncut diamond",
-            "quantity": "15 (noted)",
+            "quantity": "15",
+            "noted": true,
             "rarity": "5/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5521,
             "name": "Binding necklace",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Cannonball",
             "quantity": "300",
+            "noted": false,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 451,
             "name": "Runite ore",
-            "quantity": "6 (noted)",
+            "quantity": "6",
+            "noted": true,
             "rarity": "4/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
             "name": "Onyx bolt tips",
             "quantity": "10",
+            "noted": false,
             "rarity": "3/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1937,
             "name": "Jug of water",
-            "quantity": "250-350 (noted)",
+            "quantity": "250-350",
+            "noted": true,
             "rarity": "2/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2363,
             "name": "Runite bar",
-            "quantity": "5 (noted)",
+            "quantity": "5",
+            "noted": true,
             "rarity": "2/139",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/180",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/686623282368540672|quote=1/180.|date=11 Jan 2016}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

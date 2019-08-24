@@ -6,21 +6,24 @@
     "release_date": "2019-01-10",
     "combat_level": 284,
     "size": 3,
-    "hitpoints": 284,
+    "hitpoints": 300,
     "max_hit": 0,
-    "attack_type": "Ranged, Magic",
+    "attack_type": [
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Slash"
+        "slash"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A big angry plant.",
     "wiki_name": "Hespori",
     "wiki_url": "https://oldschool.runescape.wiki/w/Hespori",
@@ -45,263 +48,300 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 22881,
             "name": "Attas seed",
             "quantity": "1-2",
-            "rarity": "Common",
-            "drop_requirements": "<ref name=\"anima\" group=\"a\">One type of anima seed is always awarded per kill.</ref>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22883,
             "name": "Iasor seed",
             "quantity": "1-2",
-            "rarity": "Common",
-            "drop_requirements": "<ref name=\"anima\" group=\"a\" />"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22885,
             "name": "Kronos seed",
             "quantity": "1-2",
-            "rarity": "Common",
-            "drop_requirements": "<ref name=\"anima\" group=\"a\" />"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5321,
             "name": "Watermelon seed",
             "quantity": "10-20",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22879,
             "name": "Snape grass seed",
             "quantity": "6-16",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22887,
             "name": "White lily seed",
             "quantity": "8-18",
+            "noted": false,
             "rarity": "1/20",
-            "drop_requirements": "{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5100,
             "name": "Limpwurt seed",
             "quantity": "7-13",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5311,
             "name": "Wildblood seed",
             "quantity": "10-20",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5105,
             "name": "Whiteberry seed",
             "quantity": "14",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5106,
             "name": "Poison ivy seed",
             "quantity": "11-15",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5297,
             "name": "Irit seed",
             "quantity": "1-8",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5295,
             "name": "Ranarr seed",
             "quantity": "1-2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5300,
             "name": "Snapdragon seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5298,
             "name": "Avantoe seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5299,
             "name": "Kwuarm seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5296,
             "name": "Toadflax seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5301,
             "name": "Cadantine seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5302,
             "name": "Lantadyme seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5303,
             "name": "Dwarf weed seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5304,
             "name": "Torstol seed",
             "quantity": "1-4",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5313,
             "name": "Willow seed",
             "quantity": "1-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5314,
             "name": "Maple seed",
             "quantity": "1-4",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5315,
             "name": "Yew seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5316,
             "name": "Magic seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5287,
             "name": "Pineapple seed",
             "quantity": "3-6",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5288,
             "name": "Papaya tree seed",
             "quantity": "1-3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5289,
             "name": "Palm tree seed",
             "quantity": "1-3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22877,
             "name": "Dragonfruit tree seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5280,
             "name": "Cactus seed",
             "quantity": "4-13",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22873,
             "name": "Potato cactus seed",
             "quantity": "6-20",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21486,
             "name": "Teak seed",
             "quantity": "2-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21488,
             "name": "Mahogany seed",
             "quantity": "1-3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22869,
             "name": "Celastrus seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5317,
             "name": "Spirit seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22871,
             "name": "Redwood tree seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22994,
             "name": "Bottomless compost bucket",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/35",
-            "drop_requirements": "{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20661,
             "name": "Tangleroot",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5375",
-            "drop_requirements": "<ref group=\"d\">Range is the chance from 65 to 99. The chance increases with the player's Farming level, and is calculated with the formula '''1 in ''B'' - (''Lvl'' * 25)''', where ''B'' is the base chance (7000 for Hespori) and ''Lvl'' is the player's Farming level. For more information, see: [[Tangleroot]].</ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

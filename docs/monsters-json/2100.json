@@ -6,16 +6,18 @@
     "release_date": "2001-01-04",
     "combat_level": 28,
     "size": 2,
-    "hitpoints": 28,
+    "hitpoints": 35,
     "max_hit": 4,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,256 +50,292 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 886,
             "name": "Steel arrow",
             "quantity": "10",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 884,
             "name": "Iron arrow",
             "quantity": "3",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1203,
             "name": "Iron dagger",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1153,
             "name": "Iron full helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1191,
             "name": "Iron kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1295,
             "name": "Steel longsword",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/826405858523373570|quote=2/128, 3/128, 1/128 and 1/128.|date=31 January 2017|name=runed}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "7",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 558,
             "name": "Mind rune",
             "quantity": "3",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "6",
+            "noted": false,
             "rarity": "2/128",
-            "drop_requirements": "{{NamedRef|runed}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "2",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|runed}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|runed}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "88",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "52",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "38",
+            "noted": false,
             "rarity": "14/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "15",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "10",
+            "noted": false,
             "rarity": "7/128",
-            "drop_requirements": "<ref group=\"d\" name=\"f2\">Only dropped in [[Free-to-play]]</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "8",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "5",
+            "noted": false,
             "rarity": "18/128",
-            "drop_requirements": "<ref group=\"d\" name=\"f2\"/>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 225,
             "name": "Limpwurt root",
             "quantity": "1",
+            "noted": false,
             "rarity": "12/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1917,
             "name": "Beer",
             "quantity": "1",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1446,
             "name": "Body talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23182,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "{{CiteTwitter|url=https://twitter.com/JagexAsh/status/1126043622456070145|quote=1/50 there. You're welcome.|author=Mod Ash|date=8 May 2019}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20754,
             "name": "Giant key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13474,
             "name": "Ensouled giant head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=\nhttps://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/310",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/465",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/465",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/465",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "<ref name='special bones' />"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6800,
             "name": "Giant champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

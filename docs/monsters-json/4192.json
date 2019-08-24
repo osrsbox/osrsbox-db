@@ -6,17 +6,19 @@
     "release_date": "2005-04-26",
     "combat_level": 98,
     "size": 1,
-    "hitpoints": 98,
+    "hitpoints": 25,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 1,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Keris",
-        " Crush weapons|Crush"
+        "crush",
+        "keris"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

@@ -6,17 +6,17 @@
     "release_date": "2006-03-22",
     "combat_level": 45,
     "size": 1,
-    "hitpoints": 45,
+    "hitpoints": 60,
     "max_hit": 4,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Silver weapons"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 60,
@@ -48,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3325,
             "name": "Vampyre dust",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

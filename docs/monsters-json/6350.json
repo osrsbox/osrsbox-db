@@ -6,21 +6,25 @@
     "release_date": "2007-05-15",
     "combat_level": 343,
     "size": 5,
-    "hitpoints": 343,
+    "hitpoints": 180,
     "max_hit": 0,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Are you good enough to fight?",
     "wiki_name": "The Inadequacy (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Inadequacy#Normal",

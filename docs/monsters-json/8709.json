@@ -6,22 +6,24 @@
     "release_date": "2019-07-04",
     "combat_level": 186,
     "size": 3,
-    "hitpoints": 186,
+    "hitpoints": 210,
     "max_hit": 30,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash",
-        " Ranged"
+        "slash",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": 0,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A terrible creature manipulating the powers of the dark altar.",
     "wiki_name": "Shaeded Beast",
     "wiki_url": "https://oldschool.runescape.wiki/w/Shaeded_Beast",
@@ -46,10 +48,11 @@
     "magic_damage": 10,
     "drops": [
         {
-            "id": 1,
+            "id": 23497,
             "name": "Temple coin",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

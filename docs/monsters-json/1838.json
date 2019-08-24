@@ -6,16 +6,18 @@
     "release_date": "2001-01-04",
     "combat_level": 1,
     "size": 1,
-    "hitpoints": 1,
+    "hitpoints": 3,
     "max_hit": 0,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Earth spells"
+        "earth spells"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -23,7 +25,7 @@
     "slayer_masters": [
         "turael"
     ],
-    "examine": "'''Male''' - Quackers.",
+    "examine": "- Quackers.",
     "wiki_name": "Duck",
     "wiki_url": "https://oldschool.runescape.wiki/w/Duck",
     "attack_level": 1,
@@ -47,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

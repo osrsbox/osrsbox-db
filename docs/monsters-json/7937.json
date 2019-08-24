@@ -8,15 +8,18 @@
     "size": 3,
     "hitpoints": 105,
     "max_hit": 20,
-    "attack_type": "Melee, Ranged, Magic",
+    "attack_type": [
+        "slash",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Crush"
+        "crush"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

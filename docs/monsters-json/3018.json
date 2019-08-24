@@ -6,16 +6,18 @@
     "release_date": "2001-01-04",
     "combat_level": 27,
     "size": 1,
-    "hitpoints": 27,
+    "hitpoints": 32,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,39 +50,44 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Looting bags are only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
-        },
-        {
-            "id": 1,
-            "name": "Mysterious emblem",
-            "quantity": "1",
-            "rarity": "1/153",
-            "drop_requirements": "<ref group=d>Mysterious emblems are only dropped while on a [[slayer assignment]] given by [[Krystilia]]. Rarity values are for the level 2 and level 27 variants.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
-        },
-        {
-            "id": 1,
-            "name": "Slayer's enchantment",
-            "quantity": "1",
-            "rarity": "1/319",
-            "drop_requirements": "<ref group=d>Slayer's enchantments are only dropped while on a [[slayer assignment]] given by [[Krystilia]]. Rarity values are for the level 2 and level 27 variants.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
-        },
-        {
-            "id": 1,
-            "name": "Clue scroll (beginner)",
-            "quantity": "1",
-            "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12746,
+            "name": "Mysterious emblem",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/153",
+            "drop_requirements": null
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/319",
+            "drop_requirements": null
+        },
+        {
+            "id": 23182,
+            "name": "Clue scroll (beginner)",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 23490,
             "name": "Larran's key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1925",
-            "drop_requirements": "<ref group=d>Larran's keys are only dropped while on a [[slayer assignment]] given by [[Krystilia]]. Rarity values are for the level 2 and level 27 variants.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 1-80: 1 in (100 + ((3 / 10) x (80 - level) x (80 - level))).}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

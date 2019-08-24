@@ -6,17 +6,19 @@
     "release_date": "2005-01-26",
     "combat_level": 115,
     "size": 1,
-    "hitpoints": 115,
+    "hitpoints": 105,
     "max_hit": 11,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " demonbane weapons"
+        "magic",
+        "demonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 80,
@@ -51,165 +53,180 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4131,
             "name": "Rune boots",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1073,
             "name": "Adamant platelegs",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1319,
             "name": "Rune 2h sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1163,
             "name": "Rune full helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1199,
             "name": "Adamant kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "37",
+            "noted": false,
             "rarity": "8/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "5",
+            "noted": false,
             "rarity": "6/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "10",
+            "noted": false,
             "rarity": "6/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "25-35",
+            "noted": false,
             "rarity": "5/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "15-20",
+            "noted": false,
             "rarity": "4/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5100,
             "name": "Limpwurt seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "6/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1000-1499",
+            "noted": false,
             "rarity": "13/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1500-2000",
+            "noted": false,
             "rarity": "10.5/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "2500-2999",
+            "noted": false,
             "rarity": "6/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "3000-3500",
+            "noted": false,
             "rarity": "3/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "500-999",
+            "noted": false,
             "rarity": "2.5/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "5000",
+            "noted": false,
             "rarity": "1/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1761,
             "name": "Soft clay",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "4/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 361,
             "name": "Tuna",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/116",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Crystal shard",
-            "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "iorwerth-dungeon-only"
-        },
-        {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/97",
-            "drop_requirements": "<ref group=\"d\">Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

@@ -6,18 +6,20 @@
     "release_date": "2002-02-27",
     "combat_level": 48,
     "size": 2,
-    "hitpoints": 48,
+    "hitpoints": 50,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab",
-        " Ranged",
-        " dragonbane weapons"
+        "stab",
+        "ranged",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,46 +52,52 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 534,
             "name": "Babydragon bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23510,
             "name": "Tattered moon page",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
-            "drop_requirements": "{{CiteTwitter|author=Mod Husky|url=https://twitter.com/JagexHusky/status/1156844944369377286|date=1 August 2019|archiveurl=http://archive.fo/h8aa9|archivedate=1 August 2019|quote=For those interested, here are the drop-rates for the unique items within the Forthos Dungeon.[https://pbs.twimg.com/media/EA3wV4DW4AAVtos?format=jpg&name=small]|name=Forthos Dungeon Droprates}} <ref name=\"forthos\" group=\"d\">Tattered pages and grubby keys are only dropped by those found in the [[Forthos Dungeon]].</ref> <ref name=\"page\" group=\"d\">The drop rate to receive any tattered page is 1/25. When rolled, the player will receive the page they have the fewest of.</ref>"
+            "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23512,
             "name": "Tattered sun page",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23514,
             "name": "Tattered temple page",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23499,
             "name": "Grubby key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/80",
             "drop_requirements": "forthos-dungeon-only"
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/641",
-            "drop_requirements": "<ref group=d>Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083783815141707781|author=Mod Kieren|date=16 January 2019|quote=0.2*(CBLEVEL - 100)^2 + 100}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

@@ -6,21 +6,23 @@
     "release_date": "2006-03-28",
     "combat_level": 80,
     "size": 3,
-    "hitpoints": 80,
+    "hitpoints": 120,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A large snake that thrives in swamps.",
     "wiki_name": "Swamp snake (Lv 80)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Swamp_snake#Lv_80",

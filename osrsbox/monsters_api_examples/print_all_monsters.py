@@ -4,8 +4,8 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-A very simple example script of how to load the osrsbox-db item database,
-loop through the loaded items, and print the item name to the console.
+A very simple example script of how to load the osrsbox-db monster database,
+loop through the loaded monsters, and print the monster name to the console.
 
 Copyright (c) 2019, PH01L
 

@@ -6,17 +6,17 @@
     "release_date": "2005-05-17",
     "combat_level": 44,
     "size": 2,
-    "hitpoints": 44,
+    "hitpoints": 71,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Brutal arrows"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 71,
@@ -47,39 +47,44 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 4850,
             "name": "Ogre coffin key",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4812,
             "name": "Zogre bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7848,
             "name": "Zogre bone",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<ref>Only dropped during [[Rag and Bone Man II]].</ref>"
-        },
-        {
-            "id": 1,
-            "name": "Clue scroll (easy)",
-            "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 6807,
             "name": "Zombie champion scroll",
             "quantity": "1",
-            "rarity": "Very rare",
-            "drop_requirements": "<small>(1/5,000)</small>"
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

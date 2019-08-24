@@ -6,16 +6,18 @@
     "release_date": "2001-06-11",
     "combat_level": 3,
     "size": 1,
-    "hitpoints": 3,
+    "hitpoints": 6,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -47,32 +49,36 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3179,
             "name": "Monkey bones",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Before [[Tai Bwo Wannai Trio]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3166,
             "name": "Monkey corpse",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>During and after [[Tai Bwo Wannai Trio]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7854,
             "name": "Monkey paw",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13450,
             "name": "Ensouled monkey head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/35",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

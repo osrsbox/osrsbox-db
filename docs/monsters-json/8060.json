@@ -6,19 +6,23 @@
     "release_date": "2018-01-04",
     "combat_level": 392,
     "size": 7,
-    "hitpoints": 392,
+    "hitpoints": 460,
     "max_hit": 0,
-    "attack_type": "Melee, Magic, Ranged, Dragonfire",
+    "attack_type": [
+        "slash",
+        "dragonfire",
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": true,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Stab",
-        " Ranged",
-        " dragonbane weapons",
-        " Salve amulet"
+        "stab",
+        "ranged",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -27,7 +31,7 @@
         "konar",
         "duradel"
     ],
-    "examine": "'''Sleeping:''' Let sleeping dragons lie.",
+    "examine": "Let sleeping dragons lie.",
     "wiki_name": "Vorkath (Dragon Slayer II)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Vorkath#Dragon_Slayer_II",
     "attack_level": 560,
@@ -51,319 +55,364 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 22124,
             "name": "Superior dragon bones",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1751,
             "name": "Blue dragonhide",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1303,
             "name": "Rune longsword",
             "quantity": "2-3",
+            "noted": false,
             "rarity": "5/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1201,
             "name": "Rune kiteshield",
             "quantity": "2-3",
+            "noted": false,
             "rarity": "5/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1377,
             "name": "Dragon battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1305,
             "name": "Dragon longsword",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4087,
             "name": "Dragon platelegs",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4585,
             "name": "Dragon plateskirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
-            "quantity": "5-15 (noted)",
+            "quantity": "5-15",
+            "noted": true,
             "rarity": "4/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "650-1000",
+            "noted": false,
             "rarity": "6/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "300-500",
+            "noted": false,
             "rarity": "6/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21880,
             "name": "Wrath rune",
             "quantity": "30-60",
+            "noted": false,
             "rarity": "3/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1753,
             "name": "Green dragonhide",
-            "quantity": "25-30 (noted)",
+            "quantity": "25-30",
+            "noted": true,
             "rarity": "7/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1751,
             "name": "Blue dragonhide",
-            "quantity": "25-30 (noted)",
+            "quantity": "25-30",
+            "noted": true,
             "rarity": "8/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1749,
             "name": "Red dragonhide",
-            "quantity": "20-25 (noted)",
+            "quantity": "20-25",
+            "noted": true,
             "rarity": "7/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1747,
             "name": "Black dragonhide",
-            "quantity": "15-25 (noted)",
+            "quantity": "15-25",
+            "noted": true,
             "rarity": "7/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9189,
             "name": "Sapphire bolt tips",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "2/1110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9190,
             "name": "Emerald bolt tips",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "8/1110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9191,
             "name": "Ruby bolt tips",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "8/1110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9192,
             "name": "Diamond bolt tips",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "10/1110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9193,
             "name": "Dragonstone bolt tips",
             "quantity": "11-25",
+            "noted": false,
             "rarity": "5/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9193,
             "name": "Dragonstone bolt tips",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "6/1110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
             "name": "Onyx bolt tips",
             "quantity": "5-10",
+            "noted": false,
             "rarity": "4/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
             "name": "Onyx bolt tips",
             "quantity": "25-30",
+            "noted": false,
             "rarity": "3/1110",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 824,
             "name": "Rune dart tip",
             "quantity": "75-100",
+            "noted": false,
             "rarity": "3/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11232,
             "name": "Dragon dart tip",
             "quantity": "10-50",
+            "noted": false,
             "rarity": "6/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11237,
             "name": "Dragon arrowtips",
             "quantity": "25-50",
+            "noted": false,
             "rarity": "3/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
             "name": "Adamantite ore",
-            "quantity": "10-30 (noted)",
+            "quantity": "10-30",
+            "noted": true,
             "rarity": "7/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1601,
             "name": "Diamond",
-            "quantity": "10-20 (noted)",
+            "quantity": "10-20",
+            "noted": true,
             "rarity": "4/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1987,
             "name": "Grapes",
-            "quantity": "250-300 (noted)",
+            "quantity": "250-300",
+            "noted": true,
             "rarity": "5/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1513,
             "name": "Magic logs",
-            "quantity": "50 (noted)",
+            "quantity": "50",
+            "noted": true,
             "rarity": "5/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1615,
             "name": "Dragonstone",
-            "quantity": "2-3 (noted)",
+            "quantity": "2-3",
+            "noted": true,
             "rarity": "3/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21930,
             "name": "Dragon bolts (unf)",
             "quantity": "50-100",
+            "noted": false,
             "rarity": "8/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "20000-81000",
+            "noted": false,
             "rarity": "5/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 391,
             "name": "Manta ray",
-            "quantity": "35-55 (noted)",
+            "quantity": "35-55",
+            "noted": true,
             "rarity": "4/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22118,
             "name": "Wrath talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 536,
             "name": "Dragon bones",
-            "quantity": "15-20 (noted)",
+            "quantity": "15-20",
+            "noted": true,
             "rarity": "4/150",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2425,
             "name": "Vorkath's head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "<ref group=\"d\">Players will '''always''' receive Vorkath's head on their 50th Vorkath kill.</ref>{{CiteGeneral|url=https://www.youtube.com/watch?v=4mhLLJQyDQ4&feature=youtu.be&t=3462|title=Vorki/Rune/Addy Dragon Drop Rates Revealed! - OSRS Q&A|author=Old School RuneScape|date=10 Jan 2018|name=droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22111,
             "name": "Dragonbone necklace",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1000",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/65",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22106,
             "name": "Jar of decay",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/3000",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21992,
             "name": "Vorki",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/3000",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11286,
             "name": "Draconic visage",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22006,
             "name": "Skeletal visage",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

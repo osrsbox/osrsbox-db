@@ -6,17 +6,20 @@
     "release_date": "2017-11-23",
     "combat_level": 126,
     "size": 1,
-    "hitpoints": 126,
+    "hitpoints": 143,
     "max_hit": 27,
-    "attack_type": "Melee, Ranged, Magic",
+    "attack_type": [
+        "slash",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Crush"
+        "crush"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

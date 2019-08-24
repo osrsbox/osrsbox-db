@@ -6,16 +6,18 @@
     "release_date": "2006-09-20",
     "combat_level": 45,
     "size": 2,
-    "hitpoints": 45,
+    "hitpoints": 50,
     "max_hit": 4,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush weapons|Crush"
+        "crush"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,94 +50,107 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "4,8,36",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13459,
             "name": "Ensouled scorpion head",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<small>(1/25)</small>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 403,
             "name": "Edible seaweed",
             "quantity": "2",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 407,
             "name": "Oyster",
             "quantity": "1,2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 313,
             "name": "Fishing bait",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 401,
             "name": "Seaweed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9683,
             "name": "Dead sea slug",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1265,
             "name": "Bronze pickaxe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1267,
             "name": "Iron pickaxe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 436,
             "name": "Copper ore",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 438,
             "name": "Tin ore",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 440,
             "name": "Iron ore",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 405,
             "name": "Casket",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         }
     ],

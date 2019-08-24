@@ -6,21 +6,22 @@
     "release_date": "2016-05-06",
     "combat_level": 132,
     "size": 1,
-    "hitpoints": 132,
+    "hitpoints": 60,
     "max_hit": 21,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A crazy bow wielding ninja monkey.",
     "wiki_name": "Maniacal Monkey Archer",
     "wiki_url": "https://oldschool.runescape.wiki/w/Maniacal_Monkey_Archer",
@@ -45,80 +46,91 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3179,
             "name": "Monkey bones (small ninja)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1963,
             "name": "Banana",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 8778,
             "name": "Oak plank",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Adamant arrows",
             "quantity": "5",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 177,
             "name": "Antipoison(2)",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1325,
             "name": "Steel scimitar",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 365,
             "name": "Bass",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 143,
             "name": "Prayer potion(1)",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<small>(3/50)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Rope",
-            "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 954,
+            "name": "Rope",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 853,
             "name": "Maple shortbow",
             "quantity": "1",
-            "rarity": "uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

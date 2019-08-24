@@ -6,21 +6,25 @@
     "release_date": "2016-05-06",
     "combat_level": 378,
     "size": 2,
-    "hitpoints": 378,
+    "hitpoints": 575,
     "max_hit": 61,
-    "attack_type": "Melee, Ranged, Magic",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Melee"
+        "melee"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A gnome consumed by his own wrath.",
     "wiki_name": "Glough",
     "wiki_url": "https://oldschool.runescape.wiki/w/Glough",

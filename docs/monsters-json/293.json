@@ -6,16 +6,18 @@
     "release_date": "2001-04-06",
     "combat_level": 9,
     "size": 1,
-    "hitpoints": 10,
+    "hitpoints": 16,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -23,7 +25,7 @@
     "slayer_masters": [
         "turael"
     ],
-    "examine": "{{*}} A dwarven worker.",
+    "examine": "A dwarven worker.",
     "wiki_name": "Dwarf (Level 9)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dwarf#Level_9",
     "attack_level": 0,
@@ -47,129 +49,147 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1265,
             "name": "Bronze pickaxe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 438,
             "name": "Tin ore",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2349,
             "name": "Bronze bar",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 436,
             "name": "Copper ore",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 440,
             "name": "Iron ore",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(4/128)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 453,
             "name": "Coal",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(2/128)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2351,
             "name": "Iron bar",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(3/128)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "2",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1139,
             "name": "Bronze med helm",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1375,
             "name": "Bronze battleaxe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1363,
             "name": "Iron battleaxe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 877,
             "name": "Bronze bolts",
-            "quantity": "2, 11",
-            "rarity": "Uncommon",
+            "quantity": "2,11",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "4,10,30",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2347,
             "name": "Hammer",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1913,
             "name": "Dwarven stout",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23182,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

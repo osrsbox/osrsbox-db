@@ -6,16 +6,18 @@
     "release_date": "2013-10-17",
     "combat_level": 143,
     "size": 2,
-    "hitpoints": 143,
+    "hitpoints": 121,
     "max_hit": 16,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,144 +51,164 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 314,
             "name": "Feather",
             "quantity": "1-11",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11826,
             "name": "Armadyl helmet",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/16129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11828,
             "name": "Armadyl chestplate",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/16129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11830,
             "name": "Armadyl chainskirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/16129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1000-1100",
+            "noted": false,
             "rarity": "124/16129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11818,
             "name": "Godsword shard 1",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1524",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/689556758856122368|quote=It's 1/508 for any shard, 1/1524 for a specific one of the three.|date=19 Jan 2016|name=sharddrop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11820,
             "name": "Godsword shard 2",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1524",
-            "drop_requirements": "{{NamedRef|sharddrop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11822,
             "name": "Godsword shard 3",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1524",
-            "drop_requirements": "{{NamedRef|sharddrop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1000-1100",
+            "noted": false,
             "rarity": "9/1524",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 886,
             "name": "Steel arrow",
             "quantity": "91-101",
+            "noted": false,
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 808,
             "name": "Steel dart",
             "quantity": "91-101",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4697,
             "name": "Smoke rune",
             "quantity": "10-15",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 391,
             "name": "Manta ray",
             "quantity": "2",
+            "noted": false,
             "rarity": "8/127",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1081114862212788224|quote=That'd be 8/125 of the fish option and 8/125 of the potato option, assuming you didn't get onto the unique / shard loot table.|date=4 Jan 2019|name=food}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7058,
             "name": "Mushroom potato",
             "quantity": "3",
+            "noted": false,
             "rarity": "8/127",
-            "drop_requirements": "{{NamedRef|food}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1000-1100",
+            "noted": false,
             "rarity": "70/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6693,
             "name": "Crushed nest",
-            "quantity": "2 (noted)",
+            "quantity": "2",
+            "noted": true,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
-            "quantity": "1 (noted)",
+            "quantity": "1",
+            "noted": true,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/91.4",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/597479427489067008|quote=The bodyguards drop hards at 1/128.|date=10 May 2015}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

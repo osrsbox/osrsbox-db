@@ -6,18 +6,22 @@
     "release_date": "2016-06-09",
     "combat_level": 143,
     "size": 4,
-    "hitpoints": 143,
+    "hitpoints": 122,
     "max_hit": 14,
-    "attack_type": "Melee, Dragonfire",
+    "attack_type": [
+        "slash",
+        "dragonfire",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab",
-        " Magic",
-        " dragonbane weapons"
+        "stab",
+        "magic",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -51,212 +55,242 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 536,
             "name": "Dragon bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2349,
             "name": "Bronze bar",
             "quantity": "5",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4585,
             "name": "Dragon plateskirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2048",
-            "drop_requirements": "<ref group=\"d\" name=\"dragon\">The drop rate is 1/2,048 for a specific legging, or 1/1,024 for any leggings.</ref>{{NamedRef|gamecode}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4087,
             "name": "Dragon platelegs",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/2048",
-            "drop_requirements": "<ref group=\"d\" name=\"dragon\" />{{NamedRef|gamecode}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1315,
             "name": "Mithril 2h sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1355,
             "name": "Mithril axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1369,
             "name": "Mithril battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 868,
             "name": "Rune knife",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1197,
             "name": "Mithril kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1123,
             "name": "Adamant platebody",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1303,
             "name": "Rune longsword",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|gamecode}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 829,
             "name": "Adamant javelin",
             "quantity": "30",
+            "noted": false,
             "rarity": "20/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "50",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 816,
             "name": "Adamant dart(p)",
             "quantity": "16",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9142,
             "name": "Mithril bolts",
             "quantity": "2-12",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "10",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "25",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "196",
+            "noted": false,
             "rarity": "40/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "330",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2361,
             "name": "Adamantite bar",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 373,
             "name": "Swordfish",
             "quantity": "2",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 373,
             "name": "Swordfish",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "690",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/91.4",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/700337167697055744|date=18 Feb 2016|archiveurl=http://archive.fo/AGPE0|archivedate=8 Apr 2019|quote=Zulrah's not a representative example due to the very custom behaviour. Here's a bronze dragon. [https://pbs.twimg.com/media/CbgY8UqWwAEmai2.png]|name=gamecode}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/252",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/378",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/378",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/378",
             "drop_requirements": "catacombs-only"
         }

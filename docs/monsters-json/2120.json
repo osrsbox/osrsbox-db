@@ -6,22 +6,24 @@
     "release_date": "2005-06-06",
     "combat_level": 20,
     "size": 1,
-    "hitpoints": 20,
+    "hitpoints": 22,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " Slash weapons|slash"
+        "slash",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "He guards the Draynor Market stalls from thieves.",
     "wiki_name": "Market Guard (Draynor)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Market_Guard_(Draynor)",
@@ -46,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

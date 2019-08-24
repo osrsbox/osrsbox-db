@@ -6,21 +6,21 @@
     "release_date": "2013-10-17",
     "combat_level": 113,
     "size": 1,
-    "hitpoints": 113,
+    "hitpoints": 89,
     "max_hit": 20,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A holy man wearing ancient clothing.",
     "wiki_name": "Saradomin priest",
     "wiki_url": "https://oldschool.runescape.wiki/w/Saradomin_priest",
@@ -45,32 +45,36 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11942,
             "name": "Ecumenical key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/60",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}<ref group=d>1/64 if a [[Ring of wealth (i)]] is worn and fought in the [[Wilderness]].</ref>"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

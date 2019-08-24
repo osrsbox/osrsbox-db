@@ -6,16 +6,19 @@
     "release_date": "2004-12-06",
     "combat_level": 86,
     "size": 1,
-    "hitpoints": 86,
+    "hitpoints": 50,
     "max_hit": 20,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -47,18 +50,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3179,
             "name": "Monkey bones (small ninja)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13450,
             "name": "Ensouled monkey head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/35",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

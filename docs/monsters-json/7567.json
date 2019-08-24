@@ -8,20 +8,23 @@
     "size": 5,
     "hitpoints": 0,
     "max_hit": 0,
-    "attack_type": "Magic, Ranged",
+    "attack_type": [
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Crush",
-        " ranged"
+        "crush",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A former High Priest, fused with the rock and bound to the dark crystals.",
     "wiki_name": "Vasa Nistirio",
     "wiki_url": "https://oldschool.runescape.wiki/w/Vasa_Nistirio",
@@ -46,31 +49,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 20888,
             "name": "Nistirio's manifesto",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20911,
             "name": "Endarkened juice",
             "quantity": "5",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Xeric's aid (+)",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Twisted (+)",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

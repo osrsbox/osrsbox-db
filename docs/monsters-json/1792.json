@@ -6,21 +6,23 @@
     "release_date": "2006-10-18",
     "combat_level": 23,
     "size": 1,
-    "hitpoints": 23,
+    "hitpoints": 21,
     "max_hit": 4,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "They'll eat anything!",
     "wiki_name": "Goat (Brown)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Goat#Brown",
@@ -45,17 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9735,
             "name": "Desert goat horn",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

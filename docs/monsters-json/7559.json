@@ -8,19 +8,19 @@
     "size": 1,
     "hitpoints": 0,
     "max_hit": 0,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": 0,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "They wouldn't enjoy the circus.",
     "wiki_name": "Deathly ranger",
     "wiki_url": "https://oldschool.runescape.wiki/w/Deathly_ranger",
@@ -45,10 +45,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,17 +6,19 @@
     "release_date": "2018-01-04",
     "combat_level": 35,
     "size": 1,
-    "hitpoints": 35,
+    "hitpoints": 4,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush",
-        " Magic"
+        "crush",
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

@@ -8,21 +8,23 @@
     "size": 3,
     "hitpoints": 100,
     "max_hit": 11,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "crush",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Silverlight",
-        " Ranged",
-        " Melee"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A summoned demon.",
     "wiki_name": "Agrith Naar (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Agrith_Naar#Normal",
@@ -47,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,17 +6,19 @@
     "release_date": "2016-06-16",
     "combat_level": 87,
     "size": 1,
-    "hitpoints": 87,
+    "hitpoints": 85,
     "max_hit": 8,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Magic",
-        " demonbane weapons"
+        "magic",
+        "demonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

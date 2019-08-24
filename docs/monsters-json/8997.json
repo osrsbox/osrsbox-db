@@ -6,21 +6,21 @@
     "release_date": "2003-03-03",
     "combat_level": 13,
     "size": 1,
-    "hitpoints": 13,
+    "hitpoints": 20,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Range"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A dark magic user.",
     "wiki_name": "Disciple of Iban",
     "wiki_url": "https://oldschool.runescape.wiki/w/Disciple_of_Iban",
@@ -45,32 +45,36 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1035,
             "name": "Zamorak monk top",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1033,
             "name": "Zamorak monk bottom",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1409,
             "name": "Iban's staff",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"d\">Unless one is already owned (broken or not).</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

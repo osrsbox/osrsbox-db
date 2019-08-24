@@ -6,21 +6,25 @@
     "release_date": "2018-05-24",
     "combat_level": 149,
     "size": 2,
-    "hitpoints": 149,
+    "hitpoints": 200,
     "max_hit": 22,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "slash",
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Some of its features are worryingly human.",
     "wiki_name": "Abomination",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abomination",

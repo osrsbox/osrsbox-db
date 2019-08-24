@@ -6,17 +6,18 @@
     "release_date": "2014-03-13",
     "combat_level": 281,
     "size": 2,
-    "hitpoints": 281,
+    "hitpoints": 190,
     "max_hit": 32,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Crush",
-        " Salve amulet"
+        "crush"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -53,46 +54,52 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "{{NamedRef|droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21257,
             "name": "Slayer's enchantment",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/168",
-            "drop_requirements": "<ref group=d name=\"wildytask\">Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23490,
             "name": "Larran's key",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<ref group=d name=wildytask></ref>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12746,
             "name": "Mysterious emblem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/60",
-            "drop_requirements": "<ref group=d name=\"wildytask\"/>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6806,
             "name": "Skeleton champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "<ref group=d>Only dropped if access to [[Champions' Guild]] is available and the [[Skeleton Champion]] hasn't been previously killed in the [[Champions' Challenge]]</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=droprates}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

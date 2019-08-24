@@ -6,21 +6,23 @@
     "release_date": "2004-10-14",
     "combat_level": 15,
     "size": 1,
-    "hitpoints": 15,
+    "hitpoints": 22,
     "max_hit": 2,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 0,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A branch bark coloured blamish snail, these types are said to spit acid.",
     "wiki_name": "Bark Blamish Snail",
     "wiki_url": "https://oldschool.runescape.wiki/w/Bark_Blamish_Snail",
@@ -45,17 +47,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3353,
             "name": "Blamish bark shell",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3365,
             "name": "Lean snail",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

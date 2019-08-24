@@ -6,21 +6,23 @@
     "release_date": "2005-09-26",
     "combat_level": 13,
     "size": 1,
-    "hitpoints": 13,
+    "hitpoints": 25,
     "max_hit": 6,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Caution: HOT!",
     "wiki_name": "Fire wizard",
     "wiki_url": "https://oldschool.runescape.wiki/w/Fire_wizard",
@@ -45,25 +47,28 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "4-10",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1442,
             "name": "Fire talisman",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(1/20)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

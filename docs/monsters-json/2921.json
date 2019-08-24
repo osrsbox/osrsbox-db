@@ -6,21 +6,23 @@
     "release_date": "2007-07-03",
     "combat_level": 132,
     "size": 1,
-    "hitpoints": 132,
+    "hitpoints": 124,
     "max_hit": 12,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "His face is expressionless.",
     "wiki_name": "Lost barbarian",
     "wiki_url": "https://oldschool.runescape.wiki/w/Lost_barbarian",
@@ -45,10 +47,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 11337,
             "name": "Mangled bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,17 +6,18 @@
     "release_date": "2016-09-15",
     "combat_level": 335,
     "size": 3,
-    "hitpoints": 335,
+    "hitpoints": 390,
     "max_hit": 39,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " Salve amulet"
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 60,
@@ -51,310 +52,354 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": "catacombs-only"
         },
         {
-            "id": 1,
+            "id": 20736,
             "name": "Dust battlestaff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/251.2)</small>"
+            "noted": false,
+            "rarity": "1/251.2",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20730,
             "name": "Mist battlestaff",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/251.2)</small>"
+            "noted": false,
+            "rarity": "1/251.2",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20724,
             "name": "Imbued heart",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/753.6)</small>"
+            "noted": false,
+            "rarity": "1/753.6",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21270,
             "name": "Eternal gem",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/753.6)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Limpwurt seed",
-            "quantity": "3-11",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/753.6",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Snape grass seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Potato cactus seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Toadflax seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Irit seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Belladonna seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Poison ivy seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Cactus seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Avantoe seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Kwuarm seed",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Snapdragon seed",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Cadantine seed",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Lantadyme seed",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Dwarf weed seed",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Torstol seed",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy guam leaf",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy marrentill",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy tarromin",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy harralander",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy ranarr weed",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy irit leaf",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy avantoe",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy kwuarm",
-            "quantity": "1-3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy cadantine",
-            "quantity": "1-3",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy lantadyme",
-            "quantity": "1-3",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy dwarf weed",
-            "quantity": "1-3",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
+            "id": 1369,
             "name": "Mithril battleaxe",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3053,
             "name": "Lava battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1077,
             "name": "Black platelegs",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1163,
             "name": "Rune full helm",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1113,
             "name": "Rune chainbody",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4103,
             "name": "Mystic robe bottom (dark)",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/512)</small>"
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5100,
+            "name": "Limpwurt seed",
+            "quantity": "3-11",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5297,
+            "name": "Irit seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5280,
+            "name": "Cactus seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5304,
+            "name": "Torstol seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 449,
+            "name": "Adamantite ore",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/53",
-            "drop_requirements": "konar-task-only"
-        },
-        {
-            "id": 1,
-            "name": "Adamantite ore",
-            "quantity": "1",
-            "rarity": "Uncommon",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/73.33",
             "drop_requirements": null
         }

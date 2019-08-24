@@ -6,18 +6,20 @@
     "release_date": "2016-09-15",
     "combat_level": 295,
     "size": 5,
-    "hitpoints": 295,
+    "hitpoints": 420,
     "max_hit": 36,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Leaf-bladed weapons",
-        " Broad bolts/Broad arrows|arrows",
-        " Magic Dart"
+        "magic",
+        "leaf-bladed",
+        "broad-ammunition"
     ],
     "slayer_monster": true,
     "slayer_level": 70,
@@ -52,193 +54,220 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20736,
             "name": "Dust battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/200",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20730,
             "name": "Mist battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/200",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20724,
             "name": "Imbued heart",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/600",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21270,
             "name": "Eternal gem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/600",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11902,
             "name": "Leaf-bladed sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/384",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4111,
             "name": "Mystic robe top (light)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20727,
             "name": "Leaf-bladed battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1026",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/790477579316789248|archiveurl=http://archive.fo/YpdjS|archivedate=May 15 2019|quote=1/1026.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1197,
             "name": "Mithril kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1303,
             "name": "Rune longsword",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1123,
             "name": "Adamant platebody",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1359,
             "name": "Rune axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5100,
             "name": "Limpwurt seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "6/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "10",
+            "noted": false,
             "rarity": "10/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "7/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "30",
+            "noted": false,
             "rarity": "4/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "2000-5000",
+            "noted": false,
             "rarity": "16/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "10000",
+            "noted": false,
             "rarity": "5/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1779,
             "name": "Flax",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "6/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 239,
             "name": "White berries",
-            "quantity": "12 (noted)",
+            "quantity": "12",
+            "noted": true,
             "rarity": "6/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
-            "quantity": "20 (noted)",
+            "quantity": "20",
+            "noted": true,
             "rarity": "5/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5972,
             "name": "Papaya fruit",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "4/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5974,
             "name": "Coconut",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "4/124",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23962,
             "name": "Crystal shard",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "iorwerth-dungeon-only"
-        },
-        {
-            "id": 1,
-            "name": "Brimstone key",
-            "quantity": "1",
-            "rarity": "1/61",
-            "drop_requirements": "<ref group=\"d\">Only dropped if killed on a [[slayer assignment]] given by [[Konar quo Maten]].</ref>{{CiteTwitter|url=https://twitter.com/JagexKieren/status/1083781544135847936|author=Mod Kieren|date=16 January 2019|quote=It follows a curve up until level 100 then scales linearly between those 2 values upto level 350 combat. Creatures over thsi{{sic}} will cap at 1/50. [https://pbs.twimg.com/media/DwpdLK2W0AEynZy.jpg]}}"
-        },
-        {
-            "id": 1,
-            "name": "Clue scroll (hard)",
-            "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
+            "name": "Brimstone key",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/61",
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 7978,
             "name": "Kurask head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/3000",
-            "drop_requirements": "{{NamedRef|DV2}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

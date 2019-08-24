@@ -6,16 +6,21 @@
     "release_date": "2016-05-06",
     "combat_level": 275,
     "size": 2,
-    "hitpoints": 275,
+    "hitpoints": 380,
     "max_hit": 0,
-    "attack_type": "Melee, Ranged, Magic",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Demonbane weapons"
+        "demonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,214 +54,244 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19529,
             "name": "Zenyte shard",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/300",
-            "drop_requirements": "{{NamedRef|Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19592,
             "name": "Ballista limbs",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/500",
-            "drop_requirements": "{{NamedRef|Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19601,
             "name": "Ballista spring",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/500",
-            "drop_requirements": "{{NamedRef|Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19586,
             "name": "Light frame",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/750",
-            "drop_requirements": "{{NamedRef|Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19589,
             "name": "Heavy frame",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1500",
-            "drop_requirements": "{{NamedRef|Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19610,
             "name": "Monkey tail",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1500",
-            "drop_requirements": "{{NamedRef|Uniques}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1079,
             "name": "Rune platelegs",
             "quantity": "1",
+            "noted": false,
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1093,
             "name": "Rune plateskirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1113,
             "name": "Rune chainbody",
             "quantity": "1",
+            "noted": false,
             "rarity": "20/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4587,
             "name": "Dragon scimitar",
             "quantity": "1",
+            "noted": false,
             "rarity": "10/500",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1115648914869444609|date=9 Apr 2019|archiveurl=http://archive.fo/V4gpX|archivedate=10 Apr 2019|quote=10/500, actually, but that's equivalent :)|name=D scimi}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "50-75",
+            "noted": false,
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "50-75",
+            "noted": false,
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9144,
             "name": "Runite bolts",
             "quantity": "100-150",
+            "noted": false,
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19584,
             "name": "Javelin shaft",
             "quantity": "750-1250",
+            "noted": false,
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19580,
             "name": "Rune javelin heads",
             "quantity": "45-55",
+            "noted": false,
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19582,
             "name": "Dragon javelin heads",
             "quantity": "27-33",
+            "noted": false,
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 213,
             "name": "Grimy kwuarm",
-            "quantity": "7-13 (noted)",
-            "rarity": "1/{{#expr:1/(40*{{#var:herbbase}}) round 1}}",
+            "quantity": "7-13",
+            "noted": true,
+            "rarity": "1/0.0",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
-            "quantity": "7-13 (noted)",
-            "rarity": "1/{{#expr:1/(32*{{#var:herbbase}}) round 1}}",
+            "quantity": "7-13",
+            "noted": true,
+            "rarity": "1/0.0",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2485,
             "name": "Grimy lantadyme",
-            "quantity": "7-13 (noted)",
-            "rarity": "1/{{#expr:1/(24*{{#var:herbbase}}) round 1}}",
+            "quantity": "7-13",
+            "noted": true,
+            "rarity": "1/0.0",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 217,
             "name": "Grimy dwarf weed",
-            "quantity": "7-13 (noted)",
-            "rarity": "1/{{#expr:1/(32*{{#var:herbbase}}) round 1}}",
+            "quantity": "7-13",
+            "noted": true,
+            "rarity": "1/0.0",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1601,
             "name": "Diamond",
-            "quantity": "4-6 (noted)",
+            "quantity": "4-6",
+            "noted": true,
             "rarity": "17/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2361,
             "name": "Adamantite bar",
-            "quantity": "6 (noted)",
+            "quantity": "6",
+            "noted": true,
             "rarity": "20/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2363,
             "name": "Runite bar",
-            "quantity": "3 (noted)",
+            "quantity": "3",
+            "noted": true,
             "rarity": "15/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "5000-10000",
+            "noted": false,
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 385,
             "name": "Shark",
             "quantity": "2-3",
+            "noted": false,
             "rarity": "35/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 139,
             "name": "Prayer potion(3)",
             "quantity": "2",
+            "noted": false,
             "rarity": "40/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6689,
             "name": "Saradomin brew(2)",
             "quantity": "1",
+            "noted": false,
             "rarity": "25/500",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/738053715458985984|date=1 Jun 2016|archiveurl=http://archive.fo/lOi9Q|archivedate=10 Apr 2019|quote=1/100 for hard, 1/500 for elite. I'm sorry Kieren didn't get a chance to reply, but he has many calls on his time.|name=clue scroll}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/500",
-            "drop_requirements": "{{NamedRef|clue scroll}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

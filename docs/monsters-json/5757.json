@@ -6,21 +6,21 @@
     "release_date": "2007-01-04",
     "combat_level": 21,
     "size": 1,
-    "hitpoints": 21,
+    "hitpoints": 20,
     "max_hit": 3,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Varies"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Shooty-shooty.",
     "wiki_name": "Penance Ranger (Wave 1)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Penance_Ranger#Wave_1",
@@ -45,24 +45,27 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 10533,
             "name": "Blue egg",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10531,
             "name": "Green egg",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10532,
             "name": "Red egg",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,21 +6,24 @@
     "release_date": "2007-01-22",
     "combat_level": 53,
     "size": 1,
-    "hitpoints": 53,
+    "hitpoints": 50,
     "max_hit": 5,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Slash/crush attacks"
+        "slash",
+        "crush"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Animated steel armour.",
     "wiki_name": "Animated steel armour",
     "wiki_url": "https://oldschool.runescape.wiki/w/Animated_steel_armour",
@@ -45,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1115,
             "name": "Iron platebody",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

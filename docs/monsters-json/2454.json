@@ -6,21 +6,23 @@
     "release_date": "2006-06-12",
     "combat_level": 92,
     "size": 1,
-    "hitpoints": 92,
+    "hitpoints": 80,
     "max_hit": 10,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": true,
     "weakness": [
-        "Crush weapons|Crush"
+        "crush"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Animated mithril armour.",
     "wiki_name": "Animated Mithril Armour",
     "wiki_url": "https://oldschool.runescape.wiki/w/Animated_Mithril_Armour",
@@ -45,31 +47,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 8851,
             "name": "Warrior guild token",
             "quantity": "25",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1159,
             "name": "Mithril full helm",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1121,
             "name": "Mithril platebody",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1071,
             "name": "Mithril platelegs",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

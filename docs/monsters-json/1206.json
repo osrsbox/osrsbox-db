@@ -6,21 +6,21 @@
     "release_date": "2002-08-15",
     "combat_level": 13,
     "size": 1,
-    "hitpoints": 13,
+    "hitpoints": 25,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A member of the Hazeel cult.",
     "wiki_name": "Clivet",
     "wiki_url": "https://oldschool.runescape.wiki/w/Clivet",
@@ -45,10 +45,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,21 +6,24 @@
     "release_date": "2005-04-26",
     "combat_level": 75,
     "size": 1,
-    "hitpoints": 75,
+    "hitpoints": 70,
     "max_hit": 8,
-    "attack_type": "Magic, Melee",
+    "attack_type": [
+        "slash",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Body of a woman, face of a monkey.",
     "wiki_name": "Apmeken (monster)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Apmeken_(monster)",
@@ -45,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

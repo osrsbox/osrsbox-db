@@ -6,21 +6,23 @@
     "release_date": "2018-05-17",
     "combat_level": 0,
     "size": 3,
-    "hitpoints": 0,
+    "hitpoints": 225,
     "max_hit": 22,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Melee"
+        "melee"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Formerly a member of Xeric's elite tactical unit.",
     "wiki_name": "Vanguard (Ranged (Challenge Mode))",
     "wiki_url": "https://oldschool.runescape.wiki/w/Vanguard#Ranged_(Challenge_Mode)",
@@ -45,60 +47,68 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 20895,
             "name": "Vanguard judgement",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Elder (+)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"A\" name=\"vanguard\">The Vanguard's combat style determines which potion is dropped.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Twisted (+)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"A\" name=\"vanguard\"/>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Kodai (+)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"A\" name=\"vanguard\"/>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Prayer enhance (+)",
             "quantity": "0-1",
-            "rarity": "Varies",
-            "drop_requirements": "<ref group=\"A\" name=\"pots1\">A random mixture of potions is given. Quantity depends on party size.</ref>"
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Xeric's aid (+)",
             "quantity": "1-3",
-            "rarity": "Varies",
-            "drop_requirements": "<ref group=\"A\" name=\"pots1\"/>"
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Revitalisation (+)",
             "quantity": "0-2",
-            "rarity": "Varies",
-            "drop_requirements": "<ref group=\"A\" name=\"pots1\"/>"
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Overload (+)",
             "quantity": "0-1",
-            "rarity": "Varies",
-            "drop_requirements": "<ref group=\"A\" name=\"pots1\"/>"
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

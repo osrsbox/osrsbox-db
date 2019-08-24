@@ -6,17 +6,19 @@
     "release_date": "2013-10-17",
     "combat_level": 121,
     "size": 1,
-    "hitpoints": 121,
+    "hitpoints": 106,
     "max_hit": 15,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " Melee"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 83,
@@ -51,200 +53,228 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 11840,
             "name": "Dragon boots",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "30",
+            "noted": false,
             "rarity": "9/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "50",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
             "name": "Air rune",
             "quantity": "50",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "65",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "10",
+            "noted": false,
             "rarity": "18/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9075,
             "name": "Astral rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "9/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "25",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 558,
             "name": "Mind rune",
             "quantity": "50",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "18",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 559,
             "name": "Body rune",
             "quantity": "35",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 559,
             "name": "Body rune",
             "quantity": "25",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "10",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "25",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4696,
             "name": "Dust rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "11/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4698,
             "name": "Mud rune",
             "quantity": "20",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4695,
             "name": "Mist rune",
             "quantity": "20",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7936,
             "name": "Pure essence",
-            "quantity": "90 (noted)",
+            "quantity": "90",
+            "noted": true,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 175,
             "name": "Antipoison(3)",
-            "quantity": "5 (noted)",
+            "quantity": "5",
+            "noted": true,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11942,
             "name": "Ecumenical key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/60",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23490,
             "name": "Larran's key",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "krystilia-task-only"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12746,
             "name": "Mysterious emblem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/102",
-            "drop_requirements": "<ref group=d name=wildytask>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref><ref group=d>Emblem drop rates for Bandos, Saradomin, Zamorak, and Armadyl are 1/102, 1/113, 1/118, and 1/118 respectively.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21257,
             "name": "Slayer's enchantment",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/236",
-            "drop_requirements": "<ref group=d name=wildytask /><ref group=d>Enchantment drop rates for Bandos, Saradomin, Zamorak, and Armadyl are 1/236, 1/252, 1/260, and 1/260 respectively.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

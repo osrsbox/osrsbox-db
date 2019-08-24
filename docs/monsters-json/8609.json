@@ -6,17 +6,20 @@
     "release_date": "2019-01-10",
     "combat_level": 194,
     "size": 3,
-    "hitpoints": 194,
+    "hitpoints": 300,
     "max_hit": 22,
-    "attack_type": "Magic, Ranged",
+    "attack_type": [
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Dragonbane weapons",
-        " Ranged"
+        "ranged",
+        "dragonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 95,
@@ -48,333 +51,380 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 22786,
             "name": "Hydra bones",
-            "quantity": "1<!-- Regular hydras only drop one set of bones. If you are changing this to 2, you might be confusing this page with Alchemical Hydra.-->",
-            "rarity": "Always",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2497,
             "name": "Black d'hide chaps",
             "quantity": "1",
-            "rarity": "common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
             "quantity": "2-3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1393,
             "name": "Fire battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1395,
             "name": "Water battlestaff",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1201,
             "name": "Rune kiteshield",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1127,
             "name": "Rune platebody",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4093,
             "name": "Mystic robe bottom",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1305,
             "name": "Dragon longsword",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 20849,
             "name": "Dragon thrownaxe",
             "quantity": "200-645",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "<ref group=\"d\" name=\"hydradragon\">1/2,000 while on a hydra [[slayer assignment]].</ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22804,
             "name": "Dragon knife",
             "quantity": "200-400",
+            "noted": false,
             "rarity": "1/10000",
-            "drop_requirements": "<ref group=\"d\" name=\"hydradragon\"></ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "71-89",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 554,
             "name": "Fire rune",
             "quantity": "56-86",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "30-60",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "32-59",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "15-44",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "22-50",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5297,
             "name": "Irit seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5296,
             "name": "Toadflax seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5298,
             "name": "Avantoe seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22873,
             "name": "Potato cactus seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5281,
             "name": "Belladonna seed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 205,
             "name": "Grimy harralander",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
             "name": "Grimy tarromin",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 209,
             "name": "Grimy irit leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
-            "quantity": "3 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 219,
             "name": "Grimy torstol",
-            "quantity": "3 (noted)",
-            "rarity": "Uncommon",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "510-4338",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7946,
             "name": "Monkfish",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12701,
             "name": "Super combat potion(1)",
             "quantity": "1",
-            "rarity": "uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 536,
             "name": "Dragon bones",
-            "quantity": "3-5 (noted)",
-            "rarity": "uncommon",
+            "quantity": "3-5",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3030,
             "name": "Super restore(1)",
             "quantity": "1-2",
-            "rarity": "uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9190,
             "name": "Emerald bolt tips",
             "quantity": "20",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9191,
             "name": "Ruby bolt tips",
             "quantity": "20",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9192,
             "name": "Diamond bolt tips",
             "quantity": "20",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/81.2",
-            "drop_requirements": "konar-task-only"
-        },
-        {
-            "id": 1,
-            "name": "Onyx bolt tips",
-            "quantity": "8-30",
-            "rarity": "Rare",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "quantity": "8-30",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/512",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22973,
             "name": "Hydra's eye",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1800",
-            "drop_requirements": "<ref group=\"d\" name=\"hydraring\">1/360 while on a hydra [[slayer assignment]].</ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22969,
             "name": "Hydra's heart",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1800",
-            "drop_requirements": "<ref group=\"d\" name=\"hydraring\"></ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22971,
             "name": "Hydra's fang",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1800",
-            "drop_requirements": "<ref group=\"d\" name=\"hydraring\"></ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22988,
             "name": "Hydra tail",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "<ref group=\"d\">1/1,000 while on a hydra [[slayer assignment]].</ref>{{CiteTwitter|author=Mod Munro|url=https://twitter.com/JagexMunro/status/1095752074099339264|date=13 Feb 2019|archiveurl=http://archive.fo/bc5mT|archivedate=25 Mar 2019|quote=As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.|name=Alchemical Hydra}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

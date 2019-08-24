@@ -6,22 +6,24 @@
     "release_date": "2006-05-31",
     "combat_level": 246,
     "size": 3,
-    "hitpoints": 246,
+    "hitpoints": 210,
     "max_hit": 0,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " Stab"
+        "stab",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Its scales seem to be made of steel.",
     "wiki_name": "Steel dragon (Construction)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Steel_dragon_(Construction)",

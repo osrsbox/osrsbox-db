@@ -6,16 +6,19 @@
     "release_date": "2007-01-22",
     "combat_level": 69,
     "size": 3,
-    "hitpoints": 69,
+    "hitpoints": 80,
     "max_hit": 9,
-    "attack_type": "Melee and magic",
+    "attack_type": [
+        "crush",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 40,

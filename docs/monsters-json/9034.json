@@ -6,21 +6,21 @@
     "release_date": "2019-07-25",
     "combat_level": 172,
     "size": 3,
-    "hitpoints": 172,
+    "hitpoints": 0,
     "max_hit": 0,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        ""
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "",
     "wiki_name": "Crystalline Dark Beast",
     "wiki_url": "https://oldschool.runescape.wiki/w/Crystalline_Dark_Beast",
@@ -45,52 +45,59 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 23866,
             "name": "Crystal shards",
-            "quantity": "",
-            "rarity": "Always",
+            "quantity": null,
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23872,
             "name": "Raw paddlefish",
             "quantity": "5",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23834,
             "name": "Weapon frame",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23904,
             "name": "Teleport crystal",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23869,
             "name": "Crystalline bowstring",
             "quantity": "1",
-            "rarity": "Varies",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23868,
             "name": "Crystal spike",
             "quantity": "1",
-            "rarity": "Varies",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23870,
             "name": "Crystal orb",
             "quantity": "1",
-            "rarity": "Varies",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         }
     ],

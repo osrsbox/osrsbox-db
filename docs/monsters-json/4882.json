@@ -6,21 +6,25 @@
     "release_date": "2006-03-15",
     "combat_level": 136,
     "size": 1,
-    "hitpoints": 136,
+    "hitpoints": 250,
     "max_hit": 0,
-    "attack_type": "Magic and Ranged",
+    "attack_type": [
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Magic"
+        "magic",
+        "fire spells"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Pure evil lightly whipped with a juicy cherry on top.",
     "wiki_name": "Karamel (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Karamel#Normal",
@@ -45,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 6794,
             "name": "Choc-ice",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

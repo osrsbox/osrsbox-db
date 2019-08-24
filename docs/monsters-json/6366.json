@@ -6,21 +6,22 @@
     "release_date": "2004-11-17",
     "combat_level": 100,
     "size": 3,
-    "hitpoints": 100,
+    "hitpoints": 120,
     "max_hit": 0,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "melee",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
-    "weakness": [
-        "Depends on her colour"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A horror from the ocean depths.",
     "wiki_name": "Dagannoth mother (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dagannoth_mother#Normal",
@@ -45,18 +46,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3849,
             "name": "Rusty casket",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Horror from the Deep]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

@@ -6,17 +6,15 @@
     "release_date": "2004-05-18",
     "combat_level": 6,
     "size": 1,
-    "hitpoints": 6,
+    "hitpoints": 10,
     "max_hit": 0,
-    "attack_type": "None",
+    "attack_type": [],
     "attack_speed": 0,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
-    "weakness": [
-        "Arrows"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 10,
@@ -47,25 +45,28 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2876,
             "name": "Raw chompy",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13071,
             "name": "Chompy chick",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/500)</small><ref>Only players who have completed the [[Western Provinces Diary]] are eligible to receive this drop.</ref>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

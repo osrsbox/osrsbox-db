@@ -6,21 +6,21 @@
     "release_date": "2006-07-04",
     "combat_level": 35,
     "size": 1,
-    "hitpoints": 35,
+    "hitpoints": 25,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Nothing"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Snake! Snaaaaake!",
     "wiki_name": "Snake (Level 35)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Snake#Level_35",
@@ -45,25 +45,28 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref name=\"always\" group=\"d\">Level 5 snakes drops bones whereas the level 35 variant drops snake hide.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6287,
             "name": "Snake hide",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref name=\"always\" group=\"d\"/>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7860,
             "name": "Snake spine",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group=\"d\">Only during [[Rag and Bone Man II]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|archiveurl=http://archive.fo/A1bcg|archivedate=May 18 2019|quote=The initial quest ones are guaranteed drops. The longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

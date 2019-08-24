@@ -6,17 +6,18 @@
     "release_date": "2004-12-06",
     "combat_level": 129,
     "size": 1,
-    "hitpoints": 129,
+    "hitpoints": 90,
     "max_hit": 12,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Crumble Undead"
+        "crumble undead"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,25 +49,28 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3185,
             "name": "Monkey bones (small zombie)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only dropped by the level 82 variant</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3186,
             "name": "Monkey bones (large zombie)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only dropped by the level 98 and 129 variants</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7854,
             "name": "Monkey paw",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only during [[Rag and Bone Man]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

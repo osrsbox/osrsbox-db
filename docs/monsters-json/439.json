@@ -6,16 +6,19 @@
     "release_date": "2005-01-26",
     "combat_level": 78,
     "size": 1,
-    "hitpoints": 78,
+    "hitpoints": 75,
     "max_hit": 6,
-    "attack_type": "Magical melee",
+    "attack_type": [
+        "melee",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 52,
@@ -25,7 +28,7 @@
         "chaeldar",
         "konar"
     ],
-    "examine": "{{*}} Looks scared to see me.",
+    "examine": "Looks scared to see me.",
     "wiki_name": "Jelly",
     "wiki_url": "https://oldschool.runescape.wiki/w/Jelly",
     "attack_level": 45,
@@ -49,123 +52,140 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 4127,
             "name": "Mithril boots",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1365,
             "name": "Steel battleaxe",
             "quantity": "1",
+            "noted": false,
             "rarity": "11/129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1311,
             "name": "Steel 2h sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1353,
             "name": "Steel axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1197,
             "name": "Mithril kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1163,
             "name": "Rune full helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/686843730532372480|quote=It's 1/128, so that's quite unlucky.|date=12 January 2016}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "102",
+            "noted": false,
             "rarity": "39/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "44",
+            "noted": false,
             "rarity": "30/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "220",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "11",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "460",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "15",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "5",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2357,
             "name": "Gold bar",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1734,
             "name": "Thread",
             "quantity": "10",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/196.8",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

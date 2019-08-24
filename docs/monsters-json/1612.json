@@ -6,21 +6,21 @@
     "release_date": "2003-09-22",
     "combat_level": 54,
     "size": 1,
-    "hitpoints": 54,
+    "hitpoints": 120,
     "max_hit": 20,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "God spells"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Kills in the name of Guthix.",
     "wiki_name": "Battle mage (Guthix)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Battle_mage#Guthix",
@@ -45,18 +45,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

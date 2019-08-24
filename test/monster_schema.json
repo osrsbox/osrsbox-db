@@ -8,12 +8,14 @@
           "id",
           "name",
           "quantity",
-          "rarity"
+          "noted",
+          "rarity",
+          "drop_requirements"
         ],
         "properties":{
           "id":{
             "description":"The ID number of the item drop.",
-            "type":"integer"
+            "type":["integer", "null"]
           },
           "name":{
             "description":"The name of the item drop.",
@@ -21,11 +23,17 @@
           },
           "quantity":{
             "description":"The quantity of the item drop (can be an integer or range, and have notes).",
-            "type":["string", "null"]
+            "type":["string", "null"],
+            "regex":"^[0-9]*([-,][0-9]*)?"
+          },
+          "noted":{
+            "description":"If the item drop is noted, or not.",
+            "type":"boolean"
           },
           "rarity":{
             "description":"The rarity of the item drop (in fraction format).",
-            "type":["string", "null"]
+            "type":["string", "null"],
+            "regex": "^[0-9]*(.[0-9]*)?\/([0-9]*)(.[0-9]*)?"
           },
           "drop_requirements":{
             "description":"If there are any requirements to getting the specific drop.",
@@ -89,7 +97,7 @@
       },
       "attack_type":{
         "description":"The attack style (melee, magic, range) of the monster.",
-        "type":["string", "null"]
+        "type":["array"]
       },
       "attack_speed":{
         "description":"The attack speed (in game ticks) of the monster.",
@@ -132,7 +140,7 @@
       },
       "slayer_masters":{
         "description":"The slayer XP rewarded for a monster kill.",
-        "type":["array", "null"],
+        "type":"array",
         "items":{
           "type":"string",
           "enum":[

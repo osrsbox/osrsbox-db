@@ -6,16 +6,19 @@
     "release_date": "2018-05-03",
     "combat_level": 128,
     "size": 3,
-    "hitpoints": 128,
+    "hitpoints": 115,
     "max_hit": 16,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "crush",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -47,289 +50,354 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23182,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1303,
             "name": "Rune longsword",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1289,
             "name": "Rune sword",
             "quantity": "2",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1147,
+            "name": "Rune med helm",
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1113,
             "name": "Rune chainbody",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1093,
             "name": "Rune plateskirt",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1079,
             "name": "Rune platelegs",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Adamant kiteshield",
-            "quantity": "3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Adamant platebody",
-            "quantity": "5 (noted)",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
+            "id": 1185,
             "name": "Rune sq shield",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1199,
+            "name": "Adamant kiteshield",
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1123,
+            "name": "Adamant platebody",
+            "quantity": "5",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1391,
             "name": "Battlestaff",
             "quantity": "3",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 564,
             "name": "Cosmic rune",
             "quantity": "100",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "100",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "100",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "100",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 562,
             "name": "Chaos rune",
             "quantity": "100,200",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "100",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 890,
             "name": "Adamant arrow",
             "quantity": "100",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 205,
             "name": "Grimy harralander",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 215,
             "name": "Grimy cadantine",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 203,
+            "name": "Grimy tarromin",
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 5293,
             "name": "Tarromin seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5311,
             "name": "Wildblood seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5281,
             "name": "Belladonna seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5100,
             "name": "Limpwurt seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5301,
             "name": "Cadantine seed",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5321,
+            "name": "Watermelon seed",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 22879,
             "name": "Snape grass seed",
             "quantity": "1",
-            "rarity": "uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5104,
             "name": "Jangerberry seed",
             "quantity": "1",
-            "rarity": "uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "8000-10000",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22374,
             "name": "Mossy key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/16",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kira|url=https://twitter.com/JagexKira/status/1005037658404507648|date=8 Jun 2018|archiveurl=http://archive.fo/CwDWB|archivedate=25 Mar 2019|quote=#Bryophyta and Mossy Key rates are as follows: Mossy Key from: a Moss Giant 1/150 Mossy Key from: a Moss Giant on task 1/75 Mossy Key from: Bryophyta 1/16 Bryophyta's Essence: 1/118 (same as Obor's Club) And there you have it! :-)|name=Mossy key droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2353,
             "name": "Steel bar",
             "quantity": "25",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2363,
             "name": "Runite bar",
             "quantity": "2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1619,
             "name": "Uncut ruby",
-            "quantity": "5 (noted)",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref group=\"d\" name=\"gem\">Always dropped together.</ref>"
+            "quantity": "5",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1617,
             "name": "Uncut diamond",
-            "quantity": "5 (noted)",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref group=\"d\" name=\"gem\"/>"
+            "quantity": "5",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 113,
             "name": "Strength potion(4)",
             "quantity": "15",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 22372,
             "name": "Bryophyta's essence",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/118",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kira|url=https://twitter.com/JagexKira/status/1005037658404507648|date=8 Jun 2018|archiveurl=http://archive.fo/CwDWB|archivedate=25 Mar 2019|quote=#Bryophyta and Mossy Key rates are as follows: Mossy Key from: a Moss Giant 1/150 Mossy Key from: a Moss Giant on task 1/75 Mossy Key from: Bryophyta 1/16 Bryophyta's Essence: 1/118 (same as Obor's Club) And there you have it! :-)|name=Mossy key droprates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6800,
             "name": "Giant champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
             "drop_requirements": null
         }

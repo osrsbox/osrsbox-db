@@ -6,16 +6,20 @@
     "release_date": "2018-04-19",
     "combat_level": 152,
     "size": 1,
-    "hitpoints": 152,
+    "hitpoints": 150,
     "max_hit": 22,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee"
+        "stab"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,17 +52,19 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13383,
             "name": "Xerician fabric",
             "quantity": "3",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

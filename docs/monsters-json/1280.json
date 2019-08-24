@@ -6,16 +6,18 @@
     "release_date": "2004-10-18",
     "combat_level": 60,
     "size": 1,
-    "hitpoints": 60,
+    "hitpoints": 56,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -24,7 +26,7 @@
         "mazchna",
         "vannaka"
     ],
-    "examine": "{{*}} The shadowy remains of a long departed soul.",
+    "examine": "The shadowy remains of a long departed soul.",
     "wiki_name": "Phrin Shade",
     "wiki_url": "https://oldschool.runescape.wiki/w/Phrin_Shade",
     "attack_level": 64,
@@ -48,10 +50,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3398,
             "name": "Phrin remains",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

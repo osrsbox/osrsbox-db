@@ -6,17 +6,20 @@
     "release_date": "2006-07-24",
     "combat_level": 111,
     "size": 2,
-    "hitpoints": 111,
+    "hitpoints": 106,
     "max_hit": 10,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "stab",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab",
-        " Ranged"
+        "stab",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,67 +51,76 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 532,
             "name": "Big bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9080,
             "name": "Suqah hide",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9103,
             "name": "A special tiara",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<ref group=d>Only during [[Lunar Diplomacy]].</ref><ref group=d>Reduces the chance of obtaining a tooth/herb drop.</ref>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9079,
             "name": "Suqah tooth",
             "quantity": "1",
+            "noted": false,
             "rarity": "69/129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
+            "noted": false,
             "rarity": "30/129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 201,
             "name": "Grimy marrentill",
             "quantity": "1",
+            "noted": false,
             "rarity": "25/129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/129",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1117783235193442307|date=15 Apr 2019|quote=1/129 by the way :) I've no idea why the dev didn't use the usual multiples of 128.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10976,
             "name": "Long bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/400",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/704316647708950528|date=29 Feb 2016|archiveurl=http://archive.fo/FSnrM|archivedate=25 Mar 2019|quote=All creatures with big bones use the same rates: 1/400 for the long bone, 1/5k for the curvy one.|name=special bones}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10977,
             "name": "Curved bone",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|special bones}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

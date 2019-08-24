@@ -6,16 +6,20 @@
     "release_date": "2004-09-20",
     "combat_level": 90,
     "size": 1,
-    "hitpoints": 90,
+    "hitpoints": 105,
     "max_hit": 11,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee/Magic"
+        "melee",
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,144 +53,164 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 555,
             "name": "Water rune",
             "quantity": "70",
+            "noted": false,
             "rarity": "8/128",
-            "drop_requirements": ""
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 561,
             "name": "Nature rune",
             "quantity": "12",
-            "rarity": "5/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Law rune",
-            "quantity": "2",
-            "rarity": "3/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Fire rune",
-            "quantity": "37",
-            "rarity": "2/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Green d'hide chaps",
-            "quantity": "1",
-            "rarity": "3/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Green d'hide body",
-            "quantity": "1",
-            "rarity": "4/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Mithril spear",
-            "quantity": "1",
-            "rarity": "2/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Mithril kiteshield",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Adamant full helm",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Rune dagger",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": ""
-        },
-        {
-            "id": 1,
-            "name": "Coins",
-            "quantity": "20",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
+            "name": "Law rune",
+            "quantity": "2",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "quantity": "37",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1099,
+            "name": "Green d'hide chaps",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1135,
+            "name": "Green d'hide body",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1243,
+            "name": "Mithril spear",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1197,
+            "name": "Mithril kiteshield",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1161,
+            "name": "Adamant full helm",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1213,
+            "name": "Rune dagger",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "quantity": "20",
+            "noted": false,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
             "name": "Coins",
             "quantity": "44",
+            "noted": false,
             "rarity": "29/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "180",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6103,
             "name": "Crystal teleport seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "25/128",
-            "drop_requirements": "<ref name=\"lletya\" group=\"d\">In order to obtain this item as a drop, players must be killing the Elf warriors located in [[Lletya]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 365,
             "name": "Bass",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
-            "drop_requirements": ""
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 385,
             "name": "Shark",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
-            "drop_requirements": ""
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 449,
             "name": "Adamantite ore",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
-            "drop_requirements": ""
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13480,
             "name": "Ensouled elf head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

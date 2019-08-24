@@ -6,17 +6,19 @@
     "release_date": "2013-10-17",
     "combat_level": 596,
     "size": 2,
-    "hitpoints": 596,
+    "hitpoints": 255,
     "max_hit": 0,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 2,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 350,
@@ -48,186 +50,212 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11838,
             "name": "Saradomin sword",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/127",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/900362626009530369|date=23 August 2017|archiveurl=http://archive.fo/L6alm|archivedate=26 Mar 2019|quote=Here are some numbers! Hilt=1/508, Light=1/254, Sword=1/127, ACB=1/508|name=sara}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13256,
             "name": "Saradomin's light",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/254",
-            "drop_requirements": "{{NamedRef|sara}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11785,
             "name": "Armadyl crossbow",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/508",
-            "drop_requirements": "{{NamedRef|sara}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11814,
             "name": "Saradomin hilt",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/508",
-            "drop_requirements": "{{NamedRef|sara}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11818,
             "name": "Godsword shard 1",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/762",
-            "drop_requirements": "<ref group=\"d\" name=\"sharddrop\">The drop rate is 1/762 for a specific Godsword Shard piece, or 1/254 for any piece.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/670676030022156288|date=28 Nov 2015|archiveurl=http://archive.fo/Q9d76|archivedate=26 Mar 2019|quote=There's a 1/254 chance of it deciding to give you a shard. So the chance of Shard 1 is 1/762, etc.|name=GS shard}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11820,
             "name": "Godsword shard 2",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/762",
-            "drop_requirements": "<ref group=\"d\" name=\"sharddrop\"/>{{NamedRef|GS shard}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11822,
             "name": "Godsword shard 3",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/762",
-            "drop_requirements": "<ref group=\"d\" name=\"sharddrop\"/>{{NamedRef|GS shard}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2434,
             "name": "Prayer potion(4)",
             "quantity": "3",
+            "noted": false,
             "rarity": "8/127",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/954349664056369153|date=19 January 2018|archiveurl=http://archive.fo/nKG4R|archivedate=26 Mar 2019|quote=8/127 [prayer potions] and 6/127 [saradomin brews+super restore potions].|name=potions rate}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6687,
             "name": "Saradomin brew(3)",
             "quantity": "3",
+            "noted": false,
             "rarity": "6/127",
-            "drop_requirements": "<ref group=\"d\" name=\"pots1\">Saradomin brews and Super restore potions are dropped together</ref>{{NamedRef|potions rate}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3024,
             "name": "Super restore(4)",
             "quantity": "3",
+            "noted": false,
             "rarity": "6/127",
-            "drop_requirements": "<ref group=\"d\" name=\"pots1\"/>{{NamedRef|potions rate}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 163,
             "name": "Super defence(3)",
             "quantity": "3",
+            "noted": false,
             "rarity": "8/127",
-            "drop_requirements": "<ref group=\"d\" name=\"pots2\">Super defence potions and magic potions are dropped together</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3042,
             "name": "Magic potion(3)",
             "quantity": "3",
-            "rarity": "8/127",
-            "drop_requirements": "<ref group=\"d\" name=\"pots2\"/>"
-        },
-        {
-            "id": 1,
-            "name": "Grimy ranarr weed",
-            "quantity": "5 (Noted)",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "quantity": "5",
+            "noted": true,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        {
+            "id": 5295,
             "name": "Ranarr seed",
             "quantity": "2",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5316,
             "name": "Magic seed",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/127",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|archivedate=29 Mar 2019|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1123,
             "name": "Adamant platebody",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 811,
             "name": "Rune dart",
             "quantity": "35-40",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1201,
             "name": "Rune kiteshield",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1093,
             "name": "Rune plateskirt",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "19500-20000",
+            "noted": false,
             "rarity": "31.2/127",
-            "drop_requirements": "<ref group=\"d\">Coins come from rolls on all loot tables, including the unique table, GDT and RDT.</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1601,
             "name": "Diamond",
-            "quantity": "6 (noted)",
+            "quantity": "6",
+            "noted": true,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 563,
             "name": "Law rune",
             "quantity": "95-100",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/50",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/250",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12651,
             "name": "Pet zilyana",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/506398183178903552|date=1 Sep 2014|archiveurl=http://archive.fo/qulvf|archivedate=25 Mar 2019|quote=Godwars pet drop rates, all 4 are 1 in 5k.}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

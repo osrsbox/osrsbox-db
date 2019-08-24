@@ -6,21 +6,24 @@
     "release_date": "2001-04-06",
     "combat_level": 17,
     "size": 1,
-    "hitpoints": 17,
+    "hitpoints": 10,
     "max_hit": 3,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "crush",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "An evil human cleric.",
     "wiki_name": "Monk of Zamorak (Lv 17)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Monk_of_Zamorak#Lv_17",
@@ -45,39 +48,44 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1033,
             "name": "Zamorak monk bottom",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1035,
             "name": "Zamorak monk top",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "<ref group=\"d\">Only dropped by those found in the [[Wilderness]]</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2944,
             "name": "Golden key",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"d\">Only dropped by the level 30 Monks of Zamorak in the [[Paterdomus]] during [[Priest in Peril]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

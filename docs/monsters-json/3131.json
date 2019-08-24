@@ -6,17 +6,20 @@
     "release_date": "2013-10-17",
     "combat_level": 142,
     "size": 2,
-    "hitpoints": 142,
+    "hitpoints": 150,
     "max_hit": 21,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Demonbane weapons",
-        " Magic"
+        "magic",
+        "demonbane"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,137 +53,156 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11824,
             "name": "Zamorakian spear",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/16129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1300-1400",
+            "noted": false,
             "rarity": "124/16129",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11818,
             "name": "Godsword shard 1",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1524",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/689556758856122368|quote=It's 1/508 for any shard, 1/1524 for a specific one of the three.|date=19 Jan 2016|name=sharddrop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11820,
             "name": "Godsword shard 2",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1524",
-            "drop_requirements": "{{NamedRef|sharddrop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11822,
             "name": "Godsword shard 3",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1524",
-            "drop_requirements": "{{NamedRef|sharddrop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1300-1400",
+            "noted": false,
             "rarity": "9/1524",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 886,
             "name": "Steel arrow",
             "quantity": "95-100",
+            "noted": false,
             "rarity": "7/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 808,
             "name": "Steel dart",
             "quantity": "95-100",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "5-10",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "5-10",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 385,
             "name": "Shark",
             "quantity": "3",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7060,
             "name": "Tuna potato",
             "quantity": "2",
+            "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "1300-1400",
+            "noted": false,
             "rarity": "66/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 245,
             "name": "Wine of zamorak",
-            "quantity": "5-10 (noted)",
+            "quantity": "5-10",
+            "noted": true,
             "rarity": "8/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 145,
             "name": "Super attack(3)",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 157,
             "name": "Super strength(3)",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/127",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/597479427489067008|quote=The bodyguards drop hards at 1/128.|date=10 May 2015}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6805,
             "name": "Lesser demon champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "<ref>Only dropped if access to [[Champions' Guild]] is available, and the [[Lesser Demon Champion]] hasn't been previously killed in the [[Champions' Challenge]].</ref>"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

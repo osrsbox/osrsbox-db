@@ -6,9 +6,11 @@
     "release_date": "2004-12-06",
     "combat_level": 149,
     "size": 1,
-    "hitpoints": 149,
+    "hitpoints": 130,
     "max_hit": 0,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
@@ -18,7 +20,7 @@
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 0,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A scimitar wielding ninja monkey. He looks like he is guarding something.",
     "wiki_name": "Padulah",
     "wiki_url": "https://oldschool.runescape.wiki/w/Padulah",
@@ -43,10 +45,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3179,
             "name": "Monkey bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

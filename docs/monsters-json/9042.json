@@ -6,21 +6,21 @@
     "release_date": "2019-07-25",
     "combat_level": 48,
     "size": 2,
-    "hitpoints": 48,
+    "hitpoints": 0,
     "max_hit": 0,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        ""
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "They\u2019ll be gone when the morning comes.",
     "wiki_name": "Corrupted Bat",
     "wiki_url": "https://oldschool.runescape.wiki/w/Corrupted_Bat",
@@ -45,38 +45,43 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 23824,
             "name": "Corrupted shards",
             "quantity": "10-30",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23872,
             "name": "Raw paddlefish",
             "quantity": "1,3",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": null,
             "name": "Grym leaf (corrupted)",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23834,
             "name": "Weapon frame (corrupted)",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23858,
             "name": "Corrupted teleport crystal",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

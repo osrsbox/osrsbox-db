@@ -6,17 +6,18 @@
     "release_date": "2005-02-15",
     "combat_level": 2,
     "size": 2,
-    "hitpoints": 2,
+    "hitpoints": 8,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee",
-        " Salve Amulet"
+        "melee"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,32 +50,36 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1739,
             "name": "Cowhide",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4287,
             "name": "Raw beef (undead)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7890,
             "name": "Undead cow ribs",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/4",
-            "drop_requirements": "<ref group=\"d\">Only during [[Rag and Bone Man II]]</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1108655941006835713|quote=The initial quest ones are guaranteed drops.\nThe longer wish-list is 1/4.|date=21 Mar 2019}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

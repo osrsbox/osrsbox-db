@@ -6,18 +6,18 @@
     "release_date": "2004-10-18",
     "combat_level": 40,
     "size": 1,
-    "hitpoints": 40,
+    "hitpoints": 38,
     "max_hit": 4,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Gadderhammer",
-        " Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -26,7 +26,7 @@
         "mazchna",
         "vannaka"
     ],
-    "examine": "{{*}} The shadowy remains of a long departed soul.",
+    "examine": "The shadowy remains of a long departed soul.",
     "wiki_name": "Loar Shade",
     "wiki_url": "https://oldschool.runescape.wiki/w/Loar_Shade",
     "attack_level": 45,
@@ -50,10 +50,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3396,
             "name": "Loar remains",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,21 +6,23 @@
     "release_date": "2016-05-06",
     "combat_level": 48,
     "size": 1,
-    "hitpoints": 140,
+    "hitpoints": 65,
     "max_hit": 18,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "It looks like someone has tampered with its mind.",
     "wiki_name": "Maniacal monkey",
     "wiki_url": "https://oldschool.runescape.wiki/w/Maniacal_monkey",
@@ -45,79 +47,90 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3185,
             "name": "Monkey bones (small zombie)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 365,
             "name": "Bass",
             "quantity": "2",
+            "noted": false,
             "rarity": "4/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 8778,
             "name": "Oak plank",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1963,
             "name": "Banana",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5626,
             "name": "Adamant arrow(p++)",
             "quantity": "5",
+            "noted": false,
             "rarity": "1/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 177,
             "name": "Antipoison(2)",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1325,
             "name": "Steel scimitar",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 199,
             "name": "Grimy guam leaf",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 143,
             "name": "Prayer potion(1)",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 954,
             "name": "Rope",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/20",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 853,
             "name": "Maple shortbow",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/20",
             "drop_requirements": null
         }

@@ -6,16 +6,18 @@
     "release_date": "2014-03-13",
     "combat_level": 202,
     "size": 1,
-    "hitpoints": 202,
+    "hitpoints": 225,
     "max_hit": 31,
-    "attack_type": "Magic",
+    "attack_type": [
+        "magic"
+    ],
     "attack_speed": 2,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,240 +51,274 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1035,
             "name": "Zamorak monk top",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref group=d name=\"robes\">Zamorak robe top and bottom are dropped together.</ref>"
-        },
-        {
-            "id": 1,
-            "name": "Zamorak monk bottom",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<ref group=d name=\"robes\"/>"
-        },
-        {
-            "id": 1,
-            "name": "Battlestaff",
-            "quantity": "5 (noted)",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Ring of life",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Splitbark body",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Splitbark legs",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Ancient staff",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/128)</small>"
-        },
-        {
-            "id": 1,
-            "name": "Smoke rune",
-            "quantity": "30",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Fire rune",
-            "quantity": "250",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Chaos rune",
-            "quantity": "175",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Blood rune",
-            "quantity": "50",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grimy lantadyme",
-            "quantity": "4 (noted)",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Anchovy pizza",
-            "quantity": "8 (noted)",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Monkfish",
-            "quantity": "3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Shark",
-            "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Prayer potion(4)",
-            "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Coins",
-            "quantity": "600-4000",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Uncut sapphire",
-            "quantity": "4 (noted)",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Uncut emerald",
-            "quantity": "6 (noted)",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Chaos talisman",
-            "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Nature talisman",
-            "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Pure essence",
-            "quantity": "250 (noted)",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Wine of zamorak",
-            "quantity": "10 (noted)",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Looting bag",
-            "quantity": "1",
-            "rarity": "1/30",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Larran's key",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "krystilia-task-only"
-        },
-        {
-            "id": 1,
-            "name": "Slayer's enchantment",
-            "quantity": "1",
-            "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
-        },
-        {
-            "id": 1,
-            "name": "Sinister key",
-            "quantity": "1",
+            "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1033,
+            "name": "Zamorak monk bottom",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 1391,
+            "name": "Battlestaff",
+            "quantity": "5",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2570,
+            "name": "Ring of life",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 3387,
+            "name": "Splitbark body",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 3389,
+            "name": "Splitbark legs",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 4675,
+            "name": "Ancient staff",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 4697,
+            "name": "Smoke rune",
+            "quantity": "30",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "quantity": "250",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "quantity": "175",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "quantity": "50",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "quantity": "4",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 2297,
+            "name": "Anchovy pizza",
+            "quantity": "8",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 7946,
+            "name": "Monkfish",
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 2434,
+            "name": "Prayer potion(4)",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "quantity": "600-4000",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "quantity": "4",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "quantity": "6",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "quantity": "250",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 245,
+            "name": "Wine of zamorak",
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/30",
+            "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/30",
+            "drop_requirements": null
+        },
+        {
+            "id": 993,
+            "name": "Sinister key",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 12746,
             "name": "Mysterious emblem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/43",
-            "drop_requirements": "<ref group=d>Only dropped while on a [[slayer assignment]] given by [[Krystilia]], unless the kill was done on the official [[Bounty Hunter]] world. Killing the Chaos Fanatic on the [[Bounty Hunter]] also increases the drop rate from 1/43 to 1/5.</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/79.6",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "<ref group=d>1/64 if a [[Ring of wealth (i)]] is worn.</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11928,
             "name": "Odium shard 1",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
-            "drop_requirements": "<ref group=d name=\"shard\">The drop rate is 1/256 for a specific shard, or 1/128 for any shard.</ref>"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11931,
             "name": "Malediction shard 1",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
-            "drop_requirements": "<ref group=d name=\"shard\" />"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11995,
             "name": "Pet chaos elemental",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1000",
             "drop_requirements": null
         }

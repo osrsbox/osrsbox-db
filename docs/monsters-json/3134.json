@@ -6,21 +6,21 @@
     "release_date": "2013-10-17",
     "combat_level": 7,
     "size": 1,
-    "hitpoints": 7,
+    "hitpoints": 10,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Have you checked your pockets lately?",
     "wiki_name": "Imp (GWD)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Imp#GWD",
@@ -45,263 +45,300 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1474,
             "name": "Black bead",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/890130115295948800|date=26 Jul 2017|archiveurl=http://archive.fo/EZTV2|archivedate=29 Mar 2019|quote=they're all a 5/128 chance.|name=Imp beads}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1470,
             "name": "Red bead",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
-            "drop_requirements": "{{NamedRef|Imp beads}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1476,
             "name": "White bead",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
-            "drop_requirements": "{{NamedRef|Imp beads}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1472,
             "name": "Yellow bead",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
-            "drop_requirements": "{{NamedRef|Imp beads}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 877,
             "name": "Bronze bolts",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 579,
             "name": "Blue wizard hat",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1949,
             "name": "Chef's hat",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2309,
             "name": "Bread",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2307,
             "name": "Bread dough",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2146,
             "name": "Burnt meat",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2311,
             "name": "Burnt bread",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1965,
             "name": "Cabbage",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2142,
             "name": "Cooked meat",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1944,
             "name": "Egg",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2138,
             "name": "Raw chicken",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1925,
             "name": "Bucket",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2347,
             "name": "Hammer",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1935,
             "name": "Jug",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1931,
             "name": "Pot",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1735,
             "name": "Shears",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 590,
             "name": "Tinderbox",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 592,
             "name": "Ashes",
             "quantity": "1",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1759,
             "name": "Ball of wool",
             "quantity": "1",
+            "noted": false,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1929,
             "name": "Bucket of water",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 753,
             "name": "Cadava berries",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 434,
             "name": "Clay",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 956,
             "name": "Flier",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1947,
             "name": "Grain",
             "quantity": "1",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1937,
             "name": "Jug of water",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1448,
             "name": "Mind talisman",
             "quantity": "1",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1933,
             "name": "Pot of flour",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 195,
             "name": "Potion",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13453,
             "name": "Ensouled imp head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "<ref group=\"d\">Only dropped by imps in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11942,
             "name": "Ecumenical key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/60",
-            "drop_requirements": "wilderness-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6803,
             "name": "Imp champion scroll",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{NamedRef|Drop Rates V2}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

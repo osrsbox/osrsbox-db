@@ -6,21 +6,23 @@
     "release_date": "2018-01-04",
     "combat_level": 100,
     "size": 1,
-    "hitpoints": 100,
+    "hitpoints": 80,
     "max_hit": 11,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "What on earth is that?",
     "wiki_name": "Spawn (Dragon Slayer II)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Spawn_(Dragon_Slayer_II)",

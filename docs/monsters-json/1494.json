@@ -6,21 +6,21 @@
     "release_date": "2006-11-28",
     "combat_level": 13,
     "size": 1,
-    "hitpoints": 13,
+    "hitpoints": 50,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A little bigger than usual...",
     "wiki_name": "Kebbit",
     "wiki_url": "https://oldschool.runescape.wiki/w/Kebbit",
@@ -45,18 +45,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10176,
             "name": "Silver feather",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"d\">Only during [[Eagles' Peak]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

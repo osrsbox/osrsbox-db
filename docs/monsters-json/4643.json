@@ -6,21 +6,23 @@
     "release_date": "2003-04-14",
     "combat_level": 22,
     "size": 1,
-    "hitpoints": 22,
+    "hitpoints": 32,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "He patrols the Shantay Pass.",
     "wiki_name": "Shantay Guard",
     "wiki_url": "https://oldschool.runescape.wiki/w/Shantay_Guard",
@@ -45,10 +47,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

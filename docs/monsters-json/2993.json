@@ -6,17 +6,18 @@
     "release_date": "2005-02-15",
     "combat_level": 1,
     "size": 1,
-    "hitpoints": 1,
+    "hitpoints": 3,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee",
-        " Salve Amulet"
+        "melee"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -49,30 +50,34 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4289,
             "name": "Raw chicken (undead)",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 314,
             "name": "Feather",
             "quantity": "5",
+            "noted": false,
             "rarity": "2/4",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 314,
             "name": "Feather",
             "quantity": "15",
+            "noted": false,
             "rarity": "1/4",
             "drop_requirements": null
         }

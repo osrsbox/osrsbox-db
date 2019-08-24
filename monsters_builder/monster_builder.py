@@ -25,7 +25,7 @@ from pathlib import Path
 
 import jsonschema
 import mwparserfromhell
-# from deepdiff import DeepDiff
+from deepdiff import DeepDiff
 
 import config
 from extraction_tools_wiki import infobox_cleaner
@@ -38,12 +38,14 @@ logger = logging.getLogger(__name__)
 
 class BuildMonster:
     def __init__(self, monster_id, all_monster_cache_data, all_wikitext_processed,
-                 all_wikitext_raw,  # all_db_monster,
+                 all_wikitext_raw,  all_db_monster, all_db_items,
                  export_monster):
         self.monster_id = monster_id
         self.all_monster_cache_data = all_monster_cache_data  # Raw cache data for all monsters
         self.all_wikitext_processed = all_wikitext_processed  # Processed wikitext for all monsters
         self.all_wikitext_raw = all_wikitext_raw  # Raw data dump from OSRS Wiki
+        self.all_db_monster = all_db_monster  # The existing monster database contents
+        self.all_db_items = all_db_items  # The existing item database contents
         self.export_monster = export_monster  # If the JSON should be exported/created
 
         # For this monster instance, create dictionary for property storage
@@ -290,10 +292,10 @@ class BuildMonster:
         # HITPOINTS: Determine the hitpoints of a monster
         hitpoints = None
         if self.infobox_version_number is not None:
-            key = "combat" + str(self.infobox_version_number)
+            key = "hitpoints" + str(self.infobox_version_number)
             hitpoints = self.extract_infobox_value(self.template, key)
         if hitpoints is None:
-            hitpoints = self.extract_infobox_value(self.template, "combat")
+            hitpoints = self.extract_infobox_value(self.template, "hitpoints")
         if hitpoints is not None:
             self.monster_dict["hitpoints"] = infobox_cleaner.clean_integer(hitpoints)
         else:
@@ -321,9 +323,9 @@ class BuildMonster:
         if attack_type is None:
             attack_type = self.extract_infobox_value(self.template, "attack style")
         if attack_type is not None:
-            self.monster_dict["attack_type"] = infobox_cleaner.clean_wikitext(attack_type)
+            self.monster_dict["attack_type"] = infobox_cleaner.clean_attack_type(attack_type)
         else:
-            self.monster_dict["attack_type"] = None
+            self.monster_dict["attack_type"] = list()
             self.monster_dict["incomplete"] = True
 
         # ATTACK SPEED: Determine the attack speed of a monster
@@ -398,13 +400,11 @@ class BuildMonster:
             weakness = self.extract_infobox_value(self.template, key)
         if weakness is None:
             weakness = self.extract_infobox_value(self.template, "weakness")
-        weakness_list = list()
         if weakness is not None:
-            weakness = infobox_cleaner.clean_wikitext(weakness)
-            weakness = weakness.split(",")
+            weakness = infobox_cleaner.clean_weaknesses(weakness)
             self.monster_dict["weakness"] = weakness
         else:
-            self.monster_dict["weakness"] = weakness_list
+            self.monster_dict["weakness"] = list()
             self.monster_dict["incomplete"] = True
 
         # SLAYER LEVEL: Determine the slayer level required
@@ -465,7 +465,14 @@ class BuildMonster:
                     value = self.extract_infobox_value(self.template, slayer_master)
                 if value is not None:
                     value_list.append(slayer_master)
-            self.monster_dict["slayer_masters"] = value_list
+                self.monster_dict["slayer_masters"] = value_list
+
+        # Set the slayer_masters property to an empty list if not populated
+        try:
+            if not self.monster_dict["slayer_masters"]:
+                self.monster_dict["slayer_masters"] = list()
+        except KeyError:
+            self.monster_dict["slayer_masters"] = list()
 
         # EXAMINE: Determine the monster examine text
         examine = None
@@ -475,7 +482,7 @@ class BuildMonster:
         if examine is None:
             examine = self.extract_infobox_value(self.template, "examine")
         if examine is not None:
-            self.monster_dict["examine"] = infobox_cleaner.clean_wikitext(examine)
+            self.monster_dict["examine"] = infobox_cleaner.clean_monster_examine(examine)
         else:
             self.monster_dict["examine"] = None
             self.monster_dict["incomplete"] = True
@@ -524,6 +531,31 @@ class BuildMonster:
         if not self.monster_dict.get("incomplete"):
             self.monster_dict["incomplete"] = False
 
+    def extract_dropsline_header(self, table_head_type: str) -> float:
+        """Parse the dropstablehead template for variable drop rarity values.
+
+        :param table_head_type: Specify a seed, or herb table head search.
+        :return: A float of the drop rarity multiplier.
+        """
+        # Extract "dropstablehead" templates
+        # This is used for extracting "herbbase" and "seedbase" values
+        self.drops_templates = wikitext_parser.extract_wikitext_template(self.monster_wikitext, "dropstablehead")
+
+        table_head_value = None
+
+        # Loop the found "dropstablehead" templates
+        for template in self.drops_templates:
+            # Parse the template
+            template_parser = WikitextTemplateParser(self.monster_wikitext)
+            template_parser.template = template
+            if "vardefine:" + table_head_type in template:
+                # Example:
+                # {{DropsTableHead{{#vardefine:herbbase|{{#expr:9/123/128}}}}}}
+                table_head_value = template.split("#expr:")[1]
+                table_head_value = table_head_value.replace("}", "")
+                table_head_value = eval(table_head_value)
+                return table_head_value
+
     def parse_monster_drops(self):
         """Extract monster drop information.
 
@@ -551,44 +583,55 @@ class BuildMonster:
                 "drop_requirements": None
             }
 
-            # Extract the drop information
-            name = template_parser.extract_infobox_value("Name")
-            quantity = template_parser.extract_infobox_value("Quantity")
-            rarity = template_parser.extract_infobox_value("Rarity")
-            drop_requirements = template_parser.extract_infobox_value("Raritynotes")
+            # Extract the drop information...
 
-            # Parse the drop requirements and try to classify
-            if not drop_requirements:
-                pass
-            elif "{{CiteTwitter" in drop_requirements:
-                pass
-            elif "{{CiteForum" in drop_requirements:
-                pass
-            elif "[[Wilderness" in drop_requirements:
-                drop_requirements = "wilderness-only"
-            elif "[[Konar quo Maten]]" in drop_requirements:
-                drop_requirements = "konar-task-only"
-            elif ("[[Catacombs of Kourend]]" in drop_requirements or
-                  "name=catacomb" in drop_requirements or
-                  'name="catacomb"' in drop_requirements):
-                drop_requirements = "catacombs-only"
-            elif "[[Krystilia]]" in drop_requirements:
-                drop_requirements = "krystilia-task-only"
-            elif "[[Treasure Trails" in drop_requirements:
-                drop_requirements = "treasure-trails-only"
-            elif "[[Iorwerth Dungeon]]" in drop_requirements:
-                drop_requirements = "iorwerth-dungeon-only"
-            elif "Forthos Dungeon" in drop_requirements:
-                drop_requirements = "forthos-dungeon-only"
-            elif ("[[Revenant Caves]]" in drop_requirements or
-                  'name="revcaves"' in drop_requirements):
-                drop_requirements = "revenants-only"
+            # Extract the item drop name
+            name = template_parser.extract_infobox_value("Name")
+
+            # Skip any drop line with rare drop table
+            if name.lower() == "rare drop table":
+                continue
+
+            # Determine the drop ID
+            id = None
+            found = False
+            for item in self.all_db_items:
+                if item.name == name or item.wiki_name == name:
+                    found = True
+                    id = item.id
+                    break
+            if not found:
+                id = None
+
+            # Extract the item drop quantity and if the drop is noted
+            quantity = template_parser.extract_infobox_value("Quantity")
+            noted = False
+            if quantity:
+                if "noted" in quantity.lower():
+                    noted = True
+            quantity = infobox_cleaner.clean_drop_quantity(quantity)
+
+            # Extract the item drop rarity
+            rarity = template_parser.extract_infobox_value("Rarity")
+            base_value = None
+            # If the item drop has a drop variable, fetch it
+            if rarity:
+                if "var:herbbase" in rarity:
+                    base_value = self.extract_dropsline_header("herbbase")
+                elif "var:seedbase" in rarity:
+                    base_value = self.extract_dropsline_header("seedbase")
+            rarity = infobox_cleaner.clean_drop_rarity(rarity, base_value)
+
+            # Extract the rarity notes
+            drop_requirements = template_parser.extract_infobox_value("Raritynotes")
+            drop_requirements = infobox_cleaner.clean_drop_requirements(drop_requirements)
 
             # Populate the dictionary
             drop_dict = {
-                "id": 1,
+                "id": id,
                 "name": name,
                 "quantity": quantity,
+                "noted": noted,
                 "rarity": rarity,
                 "drop_requirements": drop_requirements
             }
@@ -625,39 +668,39 @@ class BuildMonster:
 
     def compare_json_files(self, monster_definition: MonsterDefinition) -> bool:
         """Print the difference between this monster object, and the monster that exists in the database."""
-        # # Create JSON out object to compare
-        # current_json = monster_definition.construct_json()
+        # Create JSON out object to compare
+        current_json = monster_definition.construct_json()
 
-        # # Try get existing entry (KeyError means it doesn't exist - aka a new monster)
+        # Try get existing entry (KeyError means it doesn't exist - aka a new monster)
+        try:
+            existing_json = self.all_db_monster[self.monster_id]
+        except KeyError:
+            print(f">>> compare_json_files: NEW MONSTER: {monster_definition.id}")
+            print(current_json)
+            return
+
+        if current_json == existing_json:
+            return
+
+        ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
+        logging.debug(f">>> compare_json_files: CHANGED MONSTER: {monster_definition.id}: {monster_definition.name}, {monster_definition.wiki_name}")
+        print(f">>> compare_json_files: CHANGED MONSTER: {monster_definition.id}: {monster_definition.name}")
+
         # try:
-        #     existing_json = self.all_db_monster[self.monster_id]
+        #     added_properties = ddiff["dictionary_monster_added"]
+        #     print("   ", added_properties)
         # except KeyError:
-        #     print(f">>> compare_json_files: NEW MONSTER: {monster_definition.id}")
-        #     print(current_json)
-        #     return
+        #     pass
 
-        # if current_json == existing_json:
-        #     return
+        # try:
+        #     changed_properties = ddiff["values_changed"]
+        #     for k, v in changed_properties.items():
+        #         print("   ", k, v["new_value"])
+        # except KeyError:
+        #     pass
 
-        # ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
-        # logging.debug(f">>> compare_json_files: CHANGED MONSTER: {monster_definition.id}: {monster_definition.name}, {monster_definition.wiki_name}")
-        # print(f">>> compare_json_files: CHANGED MONSTER: {monster_definition.id}: {monster_definition.name}")
-
-        # # try:
-        # #     added_properties = ddiff["dictionary_monster_added"]
-        # #     print("   ", added_properties)
-        # # except KeyError:
-        # #     pass
-
-        # # try:
-        # #     changed_properties = ddiff["values_changed"]
-        # #     for k, v in changed_properties.items():
-        # #         print("   ", k, v["new_value"])
-        # # except KeyError:
-        # #     pass
-
-        # print(ddiff)
-        # return
+        print(ddiff)
+        return
 
     def validate_monster(self):
         """Use the monsters-schema.json file to validate the populated monster."""

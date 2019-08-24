@@ -6,22 +6,23 @@
     "release_date": "2004-08-24",
     "combat_level": 71,
     "size": 2,
-    "hitpoints": 71,
+    "hitpoints": 90,
     "max_hit": 13,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab",
-        " Range"
+        "stab"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": 90,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "He's guarding the cells.",
     "wiki_name": "Twig (Awake)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Twig#Awake",
@@ -46,10 +47,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3136,
             "name": "Cell key 1",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,16 +6,21 @@
     "release_date": "2007-02-06",
     "combat_level": 122,
     "size": 2,
-    "hitpoints": 122,
+    "hitpoints": 150,
     "max_hit": 25,
-    "attack_type": "Melee, Ranged, Magic",
+    "attack_type": [
+        "melee",
+        "ranged",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee"
+        "melee"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -25,7 +30,7 @@
         "chaeldar",
         "duradel"
     ],
-    "examine": "'''Normal:''' An impressive looking troll.",
+    "examine": "An impressive looking troll.",
     "wiki_name": "Ice Troll King (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Ice_Troll_King#Normal",
     "attack_level": 100,

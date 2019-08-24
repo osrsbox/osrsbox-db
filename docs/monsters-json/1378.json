@@ -6,21 +6,23 @@
     "release_date": "2005-03-07",
     "combat_level": 70,
     "size": 2,
-    "hitpoints": 70,
+    "hitpoints": 50,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Is that a bear...or a man?",
     "wiki_name": "The Kendal (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Kendal#Normal",
@@ -45,18 +47,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 4502,
             "name": "Bearhead",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"d\">Only during [[Mountain Daughter]]</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

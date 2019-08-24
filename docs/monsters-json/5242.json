@@ -6,17 +6,19 @@
     "release_date": "2004-12-06",
     "combat_level": 38,
     "size": 1,
-    "hitpoints": 38,
+    "hitpoints": 15,
     "max_hit": 14,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab weapons|Stab",
-        " Magic"
+        "stab",
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,45 +52,51 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 13459,
             "name": "Ensouled scorpion head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "<ref group=d>Looting bags are only dropped by those found in the [[Wilderness]].</ref>{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12746,
             "name": "Mysterious emblem",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/147",
-            "drop_requirements": "<ref group=d>Mysterious emblems are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/872520473749356549|date=7 June 2017|archiveurl=http://archive.fo/swS9N|archivedate=25 Mar 2019|quote=It's calculated off the HP: 1 in (155 - (HP/2)) There's none with HP over 300, but it'd disregard values higher than that.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 21257,
             "name": "Slayer's enchantment",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/307",
-            "drop_requirements": "<ref group=d>Slayer's enchantments are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref>{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/973892117675298816|date=14 March 2018|archiveurl=http://archive.fo/CWYhV|archivedate=5 June 2019|quote=For nastier bosses (e.g. Callisto) it's 1/30. For other things it scales between 1/320 and 1/80 as the NPC's HP scales from 0 to 300.}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23490,
             "name": "Larran's key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/1406",
-            "drop_requirements": "<ref group=d>Larran's keys are only dropped while on a [[slayer assignment]] given by [[Krystilia]].</ref> {{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1152237123778555904|date=19 July 2019|archiveurl=https://archive.fo/lPWEG|archivedate=19 July 2019|quote=NPC combat levels 1-80: 1 in (100 + ((3 / 10) x (80 - level) x (80 - level))).}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23182,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
-            "rarity": "",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         }
     ],

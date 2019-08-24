@@ -6,17 +6,18 @@
     "release_date": "2018-02-08",
     "combat_level": 235,
     "size": 3,
-    "hitpoints": 235,
+    "hitpoints": 320,
     "max_hit": 0,
-    "attack_type": "Magic, melee",
+    "attack_type": [
+        "slash",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Flames of Zamorak"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 376,
@@ -49,18 +50,20 @@
     "magic_damage": 80,
     "drops": [
         {
-            "id": 1,
+            "id": 21799,
             "name": "Demon's heart",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/30",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=drop}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

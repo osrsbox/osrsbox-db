@@ -6,17 +6,17 @@
     "release_date": "2002-06-17",
     "combat_level": 13,
     "size": 1,
-    "hitpoints": 13,
+    "hitpoints": 22,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Salve amulet"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 22,
@@ -48,18 +48,20 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6807,
             "name": "Zombie champion scroll",
             "quantity": "1",
-            "rarity": "1/5,000",
-            "drop_requirements": "<ref>Only dropped if access to [[Champions' Guild]] is available, and the [[Zombies Champion]] hasn't been previously killed in the [[Champions' Challenge]].</ref>"
+            "noted": false,
+            "rarity": "1/5000",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

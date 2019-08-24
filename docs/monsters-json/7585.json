@@ -6,22 +6,25 @@
     "release_date": "2018-05-17",
     "combat_level": 0,
     "size": 2,
-    "hitpoints": 0,
+    "hitpoints": 210,
     "max_hit": 0,
-    "attack_type": "Ranged, Magic",
+    "attack_type": [
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 3,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Fire spells",
-        " demonbane weapons"
+        "demonbane",
+        "fire spells"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Lord of the Icefiends.",
     "wiki_name": "Ice demon (Challenge Mode)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Ice_demon#Challenge_Mode",

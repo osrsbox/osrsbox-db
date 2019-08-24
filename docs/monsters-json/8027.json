@@ -6,22 +6,26 @@
     "release_date": "2018-01-04",
     "combat_level": 380,
     "size": 4,
-    "hitpoints": 380,
+    "hitpoints": 330,
     "max_hit": 38,
-    "attack_type": "Melee, Ranged, Magic, Dragonfire",
+    "attack_type": [
+        "crush",
+        "dragonfire",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab",
-        " Magic"
+        "stab",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Its scales seem to be made of runite.",
     "wiki_name": "Rune dragon (Construction)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Rune_dragon_(Construction)",

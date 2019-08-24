@@ -6,22 +6,25 @@
     "release_date": "2017-01-05",
     "combat_level": 750,
     "size": 5,
-    "hitpoints": 0,
+    "hitpoints": 600,
     "max_hit": 0,
-    "attack_type": "Magic, Ranged",
+    "attack_type": [
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee",
-        " dragonbane weapons"
+        "melee",
+        "dragonbane"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "The Great Olm's great manicure.",
     "wiki_name": "Great Olm (Left claw)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Great_Olm#Left_claw",

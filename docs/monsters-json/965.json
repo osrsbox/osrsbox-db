@@ -6,17 +6,21 @@
     "release_date": "2004-09-07",
     "combat_level": 333,
     "size": 5,
-    "hitpoints": 333,
+    "hitpoints": 255,
     "max_hit": 31,
-    "attack_type": "Melee, Ranged, Magic",
+    "attack_type": [
+        "stab",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " Keris"
+        "ranged",
+        "keris"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -53,347 +57,396 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
-            "name": "Dragon chainbody",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name='Drop Rates V2'}}"
-        },
-        {
-            "id": 1,
-            "name": "Dragon 2h sword",
-            "quantity": "1",
-            "rarity": "1/256",
-            "drop_requirements": "{{NamedRef|Drop Rates V2}}"
-        },
-        {
-            "id": 1,
+            "id": 1391,
             "name": "Battlestaff",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1113,
             "name": "Rune chainbody",
             "quantity": "1",
+            "noted": false,
             "rarity": "4.5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2501,
             "name": "Red d'hide body",
             "quantity": "1",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5667,
             "name": "Rune knife(p++)",
             "quantity": "25",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3053,
             "name": "Lava battlestaff",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2513,
+            "name": "Dragon chainbody",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 7158,
+            "name": "Dragon 2h sword",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/256",
+            "drop_requirements": null
+        },
+        {
+            "id": 3049,
             "name": "Grimy toadflax",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3051,
             "name": "Grimy snapdragon",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 219,
             "name": "Grimy torstol",
-            "quantity": "25 (noted)",
+            "quantity": "25",
+            "noted": true,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5304,
             "name": "Torstol seed",
             "quantity": "2",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5321,
             "name": "Watermelon seed",
             "quantity": "25",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5288,
             "name": "Papaya tree seed",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5289,
             "name": "Palm tree seed",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 5316,
             "name": "Magic seed",
             "quantity": "2",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 560,
             "name": "Death rune",
             "quantity": "150",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 565,
             "name": "Blood rune",
             "quantity": "100",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 888,
             "name": "Mithril arrow",
             "quantity": "500",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 892,
             "name": "Rune arrow",
             "quantity": "250",
+            "noted": false,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Uncut emerald",
-            "quantity": "25 (noted)",
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Uncut ruby",
-            "quantity": "25 (noted)",
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Uncut diamond",
-            "quantity": "25 (noted)",
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
+            "id": 245,
             "name": "Wine of zamorak",
-            "quantity": "60 (noted)",
+            "quantity": "60",
+            "noted": true,
             "rarity": "10/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=\nhttps://twitter.com/JagexAsh/status/705711530751500289|quote=10/128 for the wine, 8/128 for a herb.|date=4 March 2016}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3138,
             "name": "Potato cactus",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "8/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Coins",
-            "quantity": "15000-20000",
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
+            "id": 1987,
             "name": "Grapes",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Runite bar",
-            "quantity": "3 (noted)",
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Weapon poison(++)",
-            "quantity": "5 (noted)",
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
+            "id": 1783,
             "name": "Bucket of sand",
-            "quantity": "100 (noted)",
+            "quantity": "100",
+            "noted": true,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 444,
             "name": "Gold ore",
-            "quantity": "250 (noted)",
+            "quantity": "250",
+            "noted": true,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1513,
             "name": "Magic logs",
-            "quantity": "60 (noted)",
+            "quantity": "60",
+            "noted": true,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6016,
             "name": "Cactus spine",
-            "quantity": "10 (noted)",
+            "quantity": "10",
+            "noted": true,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1621,
+            "name": "Uncut emerald",
+            "quantity": "25",
+            "noted": true,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "quantity": "25",
+            "noted": true,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "quantity": "25",
+            "noted": true,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 7946,
             "name": "Monkfish",
             "quantity": "3",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 385,
             "name": "Shark",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11936,
             "name": "Dark crab",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6685,
             "name": "Saradomin brew(4)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2434,
             "name": "Prayer potion(4)",
             "quantity": "2",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3024,
             "name": "Super restore(4)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12699,
             "name": "Super combat potion(2)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 169,
             "name": "Ranging potion(3)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 183,
             "name": "Superantipoison(2)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/9",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
+            "name": "Coins",
+            "quantity": "15000-20000",
+            "noted": false,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 2363,
+            "name": "Runite bar",
+            "quantity": "3",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5940,
+            "name": "Weapon poison(++)",
+            "quantity": "5",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 22671,
             "name": "Kq head (tattered)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=\"d\">Players will always receive a Kq head (tattered) '''only''' on their 256th Kalphite Queen kill, or the first kill after its release if their kill count is above 256.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13489,
             "name": "Ensouled kalphite head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/20",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=\nhttps://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/53.4",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Kq head",
-            "quantity": "1",
-            "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|Drop Rates V2}}"
-        },
-        {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/100",
             "drop_requirements": null
         },
         {
-            "id": 1,
-            "name": "Jar of sand",
+            "id": 7981,
+            "name": "Kq head",
             "quantity": "1",
-            "rarity": "1/2000",
-            "drop_requirements": ""
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12885,
+            "name": "Jar of sand",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/2000",
+            "drop_requirements": null
+        },
+        {
+            "id": 12647,
             "name": "Kalphite princess",
             "quantity": "1",
-            "rarity": "1/3,000",
-            "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/508932905163579392|date=8 Sep 2014|archiveurl=http://archive.fo/Elp9N|archivedate=8 Sep 2014|quote=Batch 2 of the Boss Pet Drop Rates! How (un)lucky have you been? Kraken, Thermy & Penance queen next week!}}"
+            "noted": false,
+            "rarity": "1/3000",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

@@ -6,21 +6,24 @@
     "release_date": "2005-12-12",
     "combat_level": 162,
     "size": 2,
-    "hitpoints": 162,
+    "hitpoints": 148,
     "max_hit": 0,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "slash",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Champion of the lesser demons.",
     "wiki_name": "Lesser Demon Champion",
     "wiki_url": "https://oldschool.runescape.wiki/w/Lesser_Demon_Champion",

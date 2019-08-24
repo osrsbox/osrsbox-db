@@ -6,16 +6,18 @@
     "release_date": "2006-07-04",
     "combat_level": 14,
     "size": 2,
-    "hitpoints": 14,
+    "hitpoints": 15,
     "max_hit": 2,
-    "attack_type": "Melee|Stab",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,31 +50,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 2859,
             "name": "Wolf bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7830,
             "name": "Wolf bone",
             "quantity": "1",
-            "rarity": "Common",
-            "drop_requirements": "<ref>Only during [[Rag and Bone Man II]].</ref>"
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 11941,
             "name": "Looting bag",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "wilderness-only"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23182,
             "name": "Clue scroll (beginner)",
             "quantity": "1",
-            "rarity": "Rare",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         }
     ],

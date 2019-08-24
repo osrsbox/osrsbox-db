@@ -6,22 +6,24 @@
     "release_date": "2005-04-18",
     "combat_level": 92,
     "size": 1,
-    "hitpoints": 92,
+    "hitpoints": 25,
     "max_hit": 1,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 1,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Keris",
-        " magic"
+        "magic",
+        "keris"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "I think they're some kind of beetle...",
     "wiki_name": "Scarabs",
     "wiki_url": "https://oldschool.runescape.wiki/w/Scarabs",

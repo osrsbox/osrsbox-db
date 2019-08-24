@@ -6,22 +6,24 @@
     "release_date": "2004-12-21",
     "combat_level": 50,
     "size": 1,
-    "hitpoints": 50,
+    "hitpoints": 40,
     "max_hit": 6,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " crush"
+        "crush",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "How does it move of its own accord?",
     "wiki_name": "Possessed pickaxe",
     "wiki_url": "https://oldschool.runescape.wiki/w/Possessed_pickaxe",
@@ -46,81 +48,92 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 1267,
             "name": "Iron pickaxe",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1267,
             "name": "Iron pickaxe",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1269,
             "name": "Steel pickaxe",
             "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": "<small>(1/50)</small>"
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1273,
             "name": "Mithril pickaxe",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/100)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1271,
             "name": "Adamant pickaxe",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/250)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19677,
             "name": "Ancient shard",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/306.66)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19679,
             "name": "Dark totem base",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/460)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19681,
             "name": "Dark totem middle",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/460)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 19683,
             "name": "Dark totem top",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/460)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1275,
             "name": "Rune pickaxe",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/500)</small>"
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2801,
             "name": "Clue scroll (medium)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/256",
-            "drop_requirements": "{{CiteTwitter|author=Mod Tide|url=https://twitter.com/JagexTide/status/1131933683714330624|date=24 May 2019|archiveurl=http://archive.fo/WUqwD|archivedate=24 May 2019|quote=I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.|name=Clue rates tweet}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

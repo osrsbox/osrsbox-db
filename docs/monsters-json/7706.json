@@ -6,16 +6,21 @@
     "release_date": "2017-06-01",
     "combat_level": 1400,
     "size": 7,
-    "hitpoints": 1400,
+    "hitpoints": 1200,
     "max_hit": 251,
-    "attack_type": "Typeless Magic, Typeless Ranged",
+    "attack_type": [
+        "typeless",
+        "ranged",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Ranged"
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,11 +53,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 21291,
             "name": "Jal-nib-rek",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": "<small>(1/100)</small><ref>Jal-nib-rek drop rate is 1/75 if TzKal-Zuk is killed while on a TzHaar slayer task.</ref>"
+            "noted": false,
+            "rarity": "1/100",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

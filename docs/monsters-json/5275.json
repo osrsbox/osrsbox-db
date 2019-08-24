@@ -6,17 +6,17 @@
     "release_date": "2004-12-06",
     "combat_level": 167,
     "size": 2,
-    "hitpoints": 167,
+    "hitpoints": 130,
     "max_hit": 14,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": true,
     "slayer_level": 1,
     "slayer_xp": 130,
@@ -47,25 +47,28 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 3181,
             "name": "Monkey bones (gorilla)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only dropped by beardless Monkey Guards.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3182,
             "name": "Monkey bones (bearded gorilla)",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref group=d>Only dropped by bearded Monkey Guards.</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13450,
             "name": "Ensouled monkey head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/35",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

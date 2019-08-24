@@ -6,22 +6,24 @@
     "release_date": "2005-10-17",
     "combat_level": 73,
     "size": 1,
-    "hitpoints": 73,
+    "hitpoints": 15,
     "max_hit": 13,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " melee"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A shadow.",
     "wiki_name": "Shadow",
     "wiki_url": "https://oldschool.runescape.wiki/w/Shadow",

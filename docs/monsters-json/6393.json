@@ -6,22 +6,24 @@
     "release_date": "2001-01-28",
     "combat_level": 34,
     "size": 1,
-    "hitpoints": 34,
+    "hitpoints": 35,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " Ranged"
+        "ranged",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Stop looking and run for your life!",
     "wiki_name": "Count Draynor (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Count_Draynor#Normal",

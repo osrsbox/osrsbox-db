@@ -6,22 +6,25 @@
     "release_date": "2006-05-02",
     "combat_level": 170,
     "size": 5,
-    "hitpoints": 170,
+    "hitpoints": 200,
     "max_hit": 0,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "crush",
+        "magic"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " stab"
+        "stab",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "The mother of all sea trolls!",
     "wiki_name": "Sea Troll Queen",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sea_Troll_Queen",

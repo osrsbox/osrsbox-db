@@ -6,17 +6,20 @@
     "release_date": "2007-01-10",
     "combat_level": 191,
     "size": 3,
-    "hitpoints": 191,
+    "hitpoints": 130,
     "max_hit": 20,
-    "attack_type": "Melee, Ranged",
+    "attack_type": [
+        "crush",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Keris",
-        " Magic"
+        "magic",
+        "keris"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -46,10 +49,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 10581,
             "name": "Keris",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

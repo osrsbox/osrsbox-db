@@ -6,17 +6,22 @@
     "release_date": "2017-06-01",
     "combat_level": 165,
     "size": 3,
-    "hitpoints": 165,
+    "hitpoints": 40,
     "max_hit": 29,
-    "attack_type": "Ranged, Magic, Melee",
+    "attack_type": [
+        "crush",
+        "ranged",
+        "ranged",
+        "magic"
+    ],
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": true,
     "weakness": [
-        "Melee",
-        " ranged"
+        "melee",
+        "ranged"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

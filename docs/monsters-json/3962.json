@@ -6,22 +6,25 @@
     "release_date": "2003-08-20",
     "combat_level": 187,
     "size": 3,
-    "hitpoints": 187,
+    "hitpoints": 150,
     "max_hit": 18,
-    "attack_type": "Melee, Magic",
+    "attack_type": [
+        "slash",
+        "magic"
+    ],
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee",
-        " demonbane weapons"
+        "melee",
+        "demonbane"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "An ancient, powerful demon of the underworld.",
     "wiki_name": "Nezikchened",
     "wiki_url": "https://oldschool.runescape.wiki/w/Nezikchened",

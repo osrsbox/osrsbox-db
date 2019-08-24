@@ -6,18 +6,19 @@
     "release_date": "2001-01-04",
     "combat_level": 13,
     "size": 1,
-    "hitpoints": 13,
+    "hitpoints": 18,
     "max_hit": 2,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Salve amulet",
-        " Crumble Undead",
-        " Crush"
+        "crush",
+        "crumble undead"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

@@ -6,16 +6,18 @@
     "release_date": "2003-05-07",
     "combat_level": 68,
     "size": 2,
-    "hitpoints": 68,
+    "hitpoints": 80,
     "max_hit": 7,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -45,6 +47,55 @@
     "melee_strength": 8,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [],
+    "drops": [
+        {
+            "id": 532,
+            "name": "Big bones",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        {
+            "id": 2377,
+            "name": "Ogre tooth",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        {
+            "id": 7842,
+            "name": "Ogre ribs",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/4",
+            "drop_requirements": null
+        },
+        {
+            "id": 13477,
+            "name": "Ensouled ogre head",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/30",
+            "drop_requirements": null
+        },
+        {
+            "id": 10976,
+            "name": "Long bone",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/400",
+            "drop_requirements": null
+        },
+        {
+            "id": 10977,
+            "name": "Curved bone",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5000",
+            "drop_requirements": null
+        }
+    ],
     "rare_drop_table": false
 }

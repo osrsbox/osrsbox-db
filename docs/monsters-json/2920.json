@@ -6,22 +6,24 @@
     "release_date": "2007-07-03",
     "combat_level": 132,
     "size": 1,
-    "hitpoints": 132,
+    "hitpoints": 124,
     "max_hit": 15,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Stab",
-        " Magic"
+        "stab",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "He looks about, blankly.",
     "wiki_name": "Confused barbarian",
     "wiki_url": "https://oldschool.runescape.wiki/w/Confused_barbarian",
@@ -46,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 11337,
             "name": "Mangled bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,22 +6,24 @@
     "release_date": "2006-05-31",
     "combat_level": 85,
     "size": 3,
-    "hitpoints": 85,
+    "hitpoints": 90,
     "max_hit": 8,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " Crush"
+        "crush",
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "I don't think insect repellent will work...",
     "wiki_name": "Kalphite soldier (Construction)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Kalphite_soldier_(Construction)",

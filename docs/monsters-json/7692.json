@@ -6,16 +6,19 @@
     "release_date": "2017-06-01",
     "combat_level": 85,
     "size": 2,
-    "hitpoints": 85,
+    "hitpoints": 25,
     "max_hit": 19,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": true,
     "weakness": [
-        "Melee"
+        "melee"
     ],
     "slayer_monster": true,
     "slayer_level": 1,

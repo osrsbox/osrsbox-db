@@ -6,21 +6,21 @@
     "release_date": "2007-02-19",
     "combat_level": 87,
     "size": 3,
-    "hitpoints": 87,
+    "hitpoints": 60,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "crush"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "None"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "A jubbly bird with claws.",
     "wiki_name": "Jubster",
     "wiki_url": "https://oldschool.runescape.wiki/w/Jubster",
@@ -45,31 +45,35 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 7566,
             "name": "Raw jubbly",
-            "quantity": "3-7 (noted)",
-            "rarity": "Always",
+            "quantity": "3-7",
+            "noted": true,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10881,
             "name": "Gold satchel",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10859,
             "name": "Tea flask",
             "quantity": "1",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         }
     ],

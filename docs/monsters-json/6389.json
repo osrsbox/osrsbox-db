@@ -6,21 +6,23 @@
     "release_date": "2007-03-27",
     "combat_level": 47,
     "size": 1,
-    "hitpoints": 47,
+    "hitpoints": 75,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": true,
     "immune_venom": true,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "Varrock's resident monarch. He looks strangely evil!",
     "wiki_name": "King Roald",
     "wiki_url": "https://oldschool.runescape.wiki/w/King_Roald",
@@ -45,11 +47,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
-            "drop_requirements": "<ref>Only in the [[Nightmare Zone]].</ref>"
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

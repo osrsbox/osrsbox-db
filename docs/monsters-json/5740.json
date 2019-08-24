@@ -6,21 +6,21 @@
     "release_date": "2007-01-04",
     "combat_level": 32,
     "size": 1,
-    "hitpoints": 32,
+    "hitpoints": 29,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "slash"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "Varies"
-    ],
+    "weakness": [],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "What on Gielinor is that?",
     "wiki_name": "Penance Fighter (Wave 2)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Penance_Fighter#Wave_2",
@@ -45,24 +45,27 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 10533,
             "name": "Blue egg",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10531,
             "name": "Green egg",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 10532,
             "name": "Red egg",
             "quantity": "2",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

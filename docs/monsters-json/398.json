@@ -8,19 +8,22 @@
     "size": 1,
     "hitpoints": 22,
     "max_hit": 3,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "He tries to keep order around here.",
     "wiki_name": "Town Guard (Hosidius) (Bow)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Town_Guard_(Hosidius)#Bow",
@@ -45,192 +48,219 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1203,
             "name": "Iron dagger",
             "quantity": "1",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9140,
             "name": "Iron bolts",
             "quantity": "1-12",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 882,
             "name": "Bronze arrow",
             "quantity": "1-2",
-            "rarity": "Common",
+            "noted": false,
+            "rarity": "1/8",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 886,
             "name": "Steel arrow",
             "quantity": "1-5",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 884,
             "name": "Iron arrow",
             "quantity": "1-2",
-            "rarity": "Uncommon",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 440,
             "name": "Iron ore",
             "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Air rune",
-            "quantity": "6",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Earth rune",
-            "quantity": "3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Fire rune",
-            "quantity": "2",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Body talisman",
-            "quantity": "1",
-            "rarity": "Uncommon",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Mind talisman",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Chaos rune",
-            "quantity": "1-2",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Nature rune",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Blood rune",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Potato seed",
-            "quantity": "4",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Onion seed",
-            "quantity": "4",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Cabbage seed",
-            "quantity": "4",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Tomato seed",
-            "quantity": "3",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Sweetcorn seed",
-            "quantity": "3",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Strawberry seed",
-            "quantity": "1-2",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Watermelon seed",
-            "quantity": "2",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Snape grass seed",
-            "quantity": "2",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Coins",
-            "quantity": "1-30",
-            "rarity": "Common",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Grain",
-            "quantity": "1",
-            "rarity": "Rare",
-            "drop_requirements": null
-        },
-        {
-            "id": 1,
-            "name": "Clue scroll (medium)",
-            "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 556,
+            "name": "Air rune",
+            "quantity": "6",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1446,
+            "name": "Body talisman",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        {
+            "id": 1448,
+            "name": "Mind talisman",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5318,
+            "name": "Potato seed",
+            "quantity": "4",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 5319,
+            "name": "Onion seed",
+            "quantity": "4",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "quantity": "4",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 5322,
+            "name": "Tomato seed",
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "quantity": "1-30",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        {
+            "id": 1947,
+            "name": "Grain",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
             "name": "Coins",
             "quantity": "30",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

@@ -6,22 +6,24 @@
     "release_date": "2004-12-06",
     "combat_level": 24,
     "size": 1,
-    "hitpoints": 24,
+    "hitpoints": 36,
     "max_hit": 9,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Ranged",
-        " Slash weapons|slash"
+        "slash",
+        "ranged"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
-    "slayer_masters": null,
+    "slayer_masters": [],
     "examine": "It's a camouflaged jungle snake",
     "wiki_name": "Jungle snake",
     "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_snake",
@@ -46,10 +48,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 526,
             "name": "Bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

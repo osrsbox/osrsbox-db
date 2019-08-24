@@ -6,18 +6,20 @@
     "release_date": "2002-02-27",
     "combat_level": 20,
     "size": 2,
-    "hitpoints": 20,
+    "hitpoints": 23,
     "max_hit": 3,
-    "attack_type": "Melee",
+    "attack_type": [
+        "stab"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic",
-        " stab",
-        " ranged"
+        "stab",
+        "ranged",
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,11 +52,12 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 13459,
             "name": "Ensouled scorpion head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/25",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]|date=18 January 2016}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

@@ -6,16 +6,19 @@
     "release_date": "2005-11-07",
     "combat_level": 303,
     "size": 3,
-    "hitpoints": 303,
+    "hitpoints": 255,
     "max_hit": 30,
-    "attack_type": "Ranged",
+    "attack_type": [
+        "ranged",
+        "ranged"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Melee"
+        "melee"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -50,242 +53,276 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 6729,
             "name": "Dagannoth bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6155,
             "name": "Dagannoth hide",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2489,
             "name": "Red d'hide vamb",
             "quantity": "1",
+            "noted": false,
             "rarity": "7/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3757,
             "name": "Fremennik blade",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3758,
             "name": "Fremennik shield",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3748,
             "name": "Fremennik helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6724,
             "name": "Seercull",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|Drop Rates V2}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6739,
             "name": "Dragon axe",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteForum|author=Envision|url=https://archive.fo/5P5mn|title=Drop Rates V2|name=Drop Rates V2}}{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/648561290034683904|date=28 Sep 2015|archiveurl=http://archive.fo/knrWr|archivedate=15 Apr 2019|quote=1/42 for a hard clue, 1/750 for elite, 1/128 for a d axe and 1/128 for a ring.|name=Ash tweet unique rates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 3749,
             "name": "Archer helm",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": ""
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6133,
             "name": "Spined body",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/1016722619100487681|accessdate=01:24, May 24, 2018 (UTC)|date=10 Jul 2018|archiveurl=http://archive.fo/5HeVi|archivedate=15 Apr 2019|quote=Each of those items is 1/128.|name=Armour+Rings}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6135,
             "name": "Spined chaps",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|Armour+Rings}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 6733,
             "name": "Archers ring",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": "{{NamedRef|Drop Rates V2}}{{NamedRef|Ash tweet unique rates}}{{NamedRef|Armour+Rings}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 866,
             "name": "Mithril knife",
             "quantity": "25-50",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 805,
             "name": "Rune thrownaxe",
             "quantity": "5-10",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 810,
             "name": "Adamant dart",
             "quantity": "10-25",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 886,
             "name": "Steel arrow",
             "quantity": "50-250",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 45,
             "name": "Opal bolt tips",
             "quantity": "10-30",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9144,
             "name": "Runite bolts",
             "quantity": "2-12",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 863,
             "name": "Iron knife",
             "quantity": "200-500",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 865,
             "name": "Steel knife",
             "quantity": "50-150",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 884,
             "name": "Iron arrow",
             "quantity": "200-700",
+            "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 617,
             "name": "Coins",
             "quantity": "500-1109",
+            "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 413,
             "name": "Oyster pearls",
             "quantity": "1",
+            "noted": false,
             "rarity": "6/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 385,
             "name": "Shark",
             "quantity": "5",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1515,
             "name": "Yew logs",
-            "quantity": "50-150 (noted)",
+            "quantity": "50-150",
+            "noted": true,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 207,
             "name": "Grimy ranarr weed",
             "quantity": "1",
+            "noted": false,
             "rarity": "5/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 1517,
             "name": "Maple logs",
-            "quantity": "15-65 (noted)",
+            "quantity": "15-65",
+            "noted": true,
             "rarity": "3/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 9431,
             "name": "Runite limbs",
             "quantity": "1",
+            "noted": false,
             "rarity": "2/128",
             "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 314,
             "name": "Feather",
             "quantity": "250-500",
+            "noted": false,
             "rarity": "1/128",
-            "drop_requirements": ""
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 13492,
             "name": "Ensouled dagannoth head",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/20",
-            "drop_requirements": "{{CiteTwitter|author=Mod Kieren|url=https://twitter.com/JagexKieren/status/689153404288004097|date=18 Jan 2016|Archiveurl=http://archive.fo/gl8ED|Archivedate=25 Mar 2019|quote=Fair few people asking about ensouled head drop rates... Here you go! [https://pbs.twimg.com/media/CZBdXm_WUAIRceC.png:large]}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 2722,
             "name": "Clue scroll (hard)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/42",
-            "drop_requirements": "{{CiteTwitter|author=Mod Ash|url=https://twitter.com/JagexAsh/status/648561290034683904|date=28 Sep 2015|archiveurl=http://archive.fo/knrWr|archivedate=15 Apr 2019|quote=1/42 for a hard clue, 1/750 for elite, 1/128 for a d axe and 1/128 for a ring.|name=Ash tweet unique rates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 23083,
             "name": "Brimstone key",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/59.4",
-            "drop_requirements": "konar-task-only"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12073,
             "name": "Clue scroll (elite)",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/750",
-            "drop_requirements": "{{NamedRef|Drop Rates V2}}{{NamedRef|Ash tweet unique rates}}"
+            "drop_requirements": null
         },
         {
-            "id": 1,
+            "id": 12643,
             "name": "Pet dagannoth supreme",
             "quantity": "1",
+            "noted": false,
             "rarity": "1/5000",
-            "drop_requirements": "{{CiteTwitter|author=Mod JohnC|url=https://twitter.com/JagexJohnC/status/514022931790565376|date=22 Sep 2014|archiveurl=http://archive.fo/ZqF9p|archivedate=25 Mar 2019|quote=1/128. I hope you got some other decent stuff while that was going on.|name=}}"
+            "drop_requirements": null
         }
     ],
     "rare_drop_table": false

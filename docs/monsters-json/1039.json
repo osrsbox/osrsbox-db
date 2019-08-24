@@ -6,16 +6,18 @@
     "release_date": "2006-07-04",
     "combat_level": 52,
     "size": 2,
-    "hitpoints": 52,
+    "hitpoints": 33,
     "max_hit": 7,
-    "attack_type": "Melee",
+    "attack_type": [
+        "melee"
+    ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "Magic"
+        "magic"
     ],
     "slayer_monster": true,
     "slayer_level": 1,
@@ -48,10 +50,11 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 1,
+            "id": 530,
             "name": "Bat bones",
             "quantity": "1",
-            "rarity": "Always",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
     ],

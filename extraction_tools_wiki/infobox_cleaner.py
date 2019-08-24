@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import re
 import datetime
+from typing import List
 
 import dateparser
 
@@ -330,3 +331,293 @@ def clean_examine(value: str, name: str) -> str:
     examine = examine.strip()
 
     return examine
+
+
+def clean_drop_quantity(value: str) -> str:
+    """Convert the drop quantity text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned drop quantity property value.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return None
+
+    # Replace spaces, then remove "(noted)"
+    value = value.replace(" ", "")
+    value = re.sub(r" *\(noted\) *", '', value)
+
+    # Change semi-colon seperated list of numbers to commas
+    value = re.sub(r"[; ]", ',', value)
+
+    # Check the extracted and processed value against the supplied regex
+    # Potenital format: "1-10", "1", "2,4,5"
+    pattern = re.compile(r"^[0-9]*([-,][0-9]*)?")
+    if value and not pattern.match(value):
+        print(f"Drop quantity regex failed: {value}")
+        quit()
+
+    return value
+
+
+def clean_drop_rarity(value: str, base_value: str = None) -> str:
+    """Convert the drop rartiy text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :param base_value: Used for special drop rartiy rates.
+    :return: A cleaned drop rarity property value.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return None
+
+    # Clean the original value
+    # Remove: brackets, curly braces, spaces, tidle, plus
+    value = re.sub(r"[\(\){}, ~\+]", '', value)
+    # Remove "Rarity|" from value
+    value = value.replace("Rarity|", "")
+
+    # Convert raw value into fraction
+    if not value:
+        value = None
+    elif value.lower() in ["unknown", "varies", "unsure", "random"]:
+        value = None
+    elif value.lower() == "always":
+        value = "1/1"
+    elif value.lower() == "common":
+        value = "1/8"
+    elif value.lower() == "uncommon":
+        value = "1/32"
+    elif value.lower() == "rare":
+        value = "1/128"
+    elif value.lower() == "veryrare":
+        value = "1/512"
+    elif "var:herbbase" in value:
+        # 1/#expr:1/(40*#var:herbbase) round 1
+        numerator = value.split("/")[0]
+        denominator = value.split("#expr:")[1]
+        denominator = re.sub("round[1 ]", "", denominator)
+        denominator = denominator.replace("#var:herbbase", str(base_value))
+        denominator = eval(denominator)
+        denominator = round(denominator, 1)
+        value = str(numerator) + "/" + str(denominator)
+    elif "var:seedbase" in value:
+        # 1/#expr:1/(40*#var:seedbase) round 1
+        numerator = value.split("/")[0]
+        denominator = value.split("#expr:")[1]
+        denominator = re.sub("round[1 ]", "", denominator)
+        denominator = denominator.replace("#var:seedbase", str(base_value))
+        denominator = eval(denominator)
+        denominator = round(denominator, 1)
+        value = str(numerator) + "/" + str(denominator)
+    elif "#expr:" in value:
+        # 1/#expr:1/(1800 / 3500) round 1
+        numerator = value.split("/")[0]
+        denominator = value.split("#expr:")[1]
+        denominator = re.sub("round[1 ]", "", denominator)
+        denominator = eval(denominator)
+        denominator = round(denominator, 1)
+        value = str(numerator) + "/" + str(denominator)
+    else:
+        value = value
+
+    # Check the extracted and processed value against the supplied regex
+    # Potenital format: "1/1", "1/2.3", "3.5/4", "9.5/5.6"
+    pattern = re.compile(r"^[0-9]*(\.[0-9]*)?\/([0-9]*)(\.[0-9]*)?")
+    if value and not pattern.match(value):
+        print(f"Drop rarity regex failed: {value}")
+        quit()
+
+    return value
+
+
+def clean_drop_requirements(value: str) -> str:
+    """Convert the drop requirements text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned drop requirements property value.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return None
+
+    # Parse the drop requirements and try to classify
+    if not value:
+        value = None
+    elif "[[Wilderness" in value:
+        value = "wilderness-only"
+    elif "[[Konar quo Maten]]" in value:
+        value = "konar-task-only"
+    elif ("[[Catacombs of Kourend]]" in value or
+          "name=catacomb" in value or
+          'name="catacomb"' in value):
+        value = "catacombs-only"
+    elif "[[Krystilia]]" in value:
+        value = "krystilia-task-only"
+    elif "[[Treasure Trails" in value:
+        value = "treasure-trails-only"
+    elif "[[Iorwerth Dungeon]]" in value:
+        value = "iorwerth-dungeon-only"
+    elif "Forthos Dungeon" in value:
+        value = "forthos-dungeon-only"
+    elif ("[[Revenant Caves]]" in value or
+            'name="revcaves"' in value):
+        value = "revenants-only"
+    else:
+        value = None
+
+    return value
+
+
+def clean_monster_examine(value: str) -> bool:
+    """Convert the an examine text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned examine property value.
+    """
+    if value is None:
+        return ""
+    value = clean_wikitext(value)
+    if value == "":
+        return ""
+
+    # Quick fix for multiline examine texts
+    value = value.split("\n")[0]
+
+    # Clean the original value
+    # Remove: brackets, curly braces, spaces, tidle, plus
+    value = re.sub(r'[{}\*"]', '', value)
+
+    # Fix three periods style
+    value = value.replace("…", "...")
+
+    # Remove versioned examine text markers
+    value = re.sub(r"'{2,}[^']+[']*", '', value)
+
+    # Finally, strip any remaining whitespace
+    value = value.strip()
+
+    return value
+
+
+def clean_attack_type(value: str) -> List:
+    """Convert the attack type text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned attack type property value.
+    """
+    attack_type_list = list()
+
+    if value is None or value == "":
+        return attack_type_list
+
+    value = value.lower()
+
+    # Check for specific melee attack types
+    if "slash" in value:
+        attack_type_list.append("slash")
+    if "crush" in value:
+        attack_type_list.append("crush")
+    if "stab" in value:
+        attack_type_list.append("stab")
+
+    # Check for generic melee attack type
+    # Do not add if specific melee attack type found
+    if "melee" in value:
+        if ("slash" not in value and "crush" not in value and "stab" not in value):
+            attack_type_list.append("melee")
+
+    if "typeless" in value:
+        attack_type_list.append("typeless")
+
+    if "dragonfire" in value:
+        attack_type_list.append("dragonfire")
+
+    if "range" in value:
+        if "long-range" not in value or "short-range" not in value:
+            attack_type_list.append("ranged")
+        if "[[ranged]]" in value:
+            attack_type_list.append("ranged")
+
+    if "magic" in value and "dragonfire" not in value:
+        attack_type_list.append("magic")
+
+    if "curse" in value:
+        attack_type_list.append("curse")
+
+    return attack_type_list
+
+
+def clean_weaknesses(value: str) -> str:
+    """Convert the weaknesses text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned weaknesses property value.
+    """
+    weaknesses_list = list()
+
+    if value is None or value == "":
+        return weaknesses_list
+
+    value = value.lower()
+
+    # Check for specific melee attack types
+    if "slash" in value:
+        weaknesses_list.append("slash")
+    if "crush" in value:
+        weaknesses_list.append("crush")
+    if "stab" in value:
+        weaknesses_list.append("stab")
+
+    # Check for generic melee attack type
+    # Do not add if specific melee attack type found
+    if "melee" in value:
+        if ("slash" not in value and "crush" not in value and "stab" not in value):
+            weaknesses_list.append("melee")
+
+    if "ranged" in value:
+        weaknesses_list.append("ranged")
+
+    if "magic" in value and "dragonfire" not in value:
+        weaknesses_list.append("magic")
+
+    if "keris" in value:
+        weaknesses_list.append("keris")
+
+    if "wolfbane" in value:
+        weaknesses_list.append("wolfbane")
+
+    if "crumble" in value:
+        weaknesses_list.append("crumble undead")
+
+    if "dragonbane" in value:
+        weaknesses_list.append("dragonbane")
+
+    if "pickaxe" in value:
+        weaknesses_list.append("pickaxe")
+
+    if "demonbane" in value:
+        weaknesses_list.append("demonbane")
+
+    if "water" in value:
+        weaknesses_list.append("water spells")
+    if "fire" in value:
+        weaknesses_list.append("fire spells")
+    if "earth" in value:
+        weaknesses_list.append("earth spells")
+    if "air" in value:
+        weaknesses_list.append("air spells")
+
+    if "leaf" in value:
+        weaknesses_list.append("leaf-bladed")
+
+    if "broad" in value:
+        weaknesses_list.append("broad-ammunition")
+
+    return weaknesses_list
