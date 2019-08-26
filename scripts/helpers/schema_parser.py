@@ -72,3 +72,7 @@ with open(path_to_schema, 'r') as f:
 # Process the base monster properties
 properties_dict = schema["properties"]
 parse_json_schema(properties_dict)
+
+# Process the base monster properties
+properties_dict = schema["definitions"]["drop"]["properties"]
+parse_json_schema(properties_dict)
