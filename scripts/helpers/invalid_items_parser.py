@@ -27,7 +27,6 @@ from pathlib import Path
 
 import config
 from extraction_tools_wiki.wikitext_parser import WikitextIDParser
-from osrsbox import items_api
 
 # Delete old log file
 if os.path.exists("template_parser.log"):
@@ -60,44 +59,56 @@ skipped_item = list()
 missing_ids = list()
 missing_names = list()
 
-# Load current item database
-all_db_items = items_api.load()
-for item in all_db_items:
-    # print("Processing:", item.id, item.name)
-    # if item.noted or item.placeholder:
-    #     # print("  > SKIPPING NOTED/PLACEHOLDER ITEM:", item.id, item.name)
+# Load current item data from the cache
+for item_id, item in cache_items.items():
+    # print("Processing:", item["id"], item["name"])
+    # if item["noted"] or item["placeholder"]:
+    #     # print("  > SKIPPING NOTED/PLACEHOLDER ITEM:", item["id"], item["name"])
     #     skipped_item.append(item)
     #     continue
-    if str(item.id) in invalid_items or str(item.linked_id_item) in invalid_items:
-        # print("  > SKIPPING INVALID ITEM:", item.id, item.name)
+    invalid_item = False
+    if str(item["id"]) in invalid_items or str(item["linked_id_item"]) in invalid_items:
+        # print("  > SKIPPING INVALID ITEM:", item["id, item["name)
         skipped_item.append(item)
+        invalid_item = True
         continue
 
     found = False
     try:
         # Try perform ID lookup on OSRS Wiki data
-        temp = wiki_data_ids.item_id_to_version_number[item.id]
+        temp = wiki_data_ids.item_id_to_version_number[item["id"]]
         found = True
-        # print("  > FOUND ITEM: Direct ID lookup:", item.id, item.name)
+        # print("  > FOUND ITEM: Direct ID lookup:", item["id"], item["name"])
     except KeyError:
         try:
             # Try perform lookup on linked_id (instead of direct ID)
-            temp = wiki_data_ids.item_id_to_version_number[item.linked_id_item]
+            temp = wiki_data_ids.item_id_to_version_number[item["linked_id_item"]]
             found = True
-            # print("  > FOUND ITEM: Linked ID lookup:", item.id, item.name)
+            # print("  > FOUND ITEM: Linked ID lookup:", item["id"], item["name"])
         except KeyError:
             missing_ids.append(item)
             try:
                 # Try perform lookup using name instead of item ID
-                temp = wiki_text[item.name]
+                temp = wiki_text[item["name"]]
                 found = True
-                # print("  > FOUND ITEM: Name lookup:", item.id, item.name)
+                # print("  > FOUND ITEM: Name lookup:", item["id"], item["name"])
             except KeyError:
                 pass
 
+    if found and invalid_item:
+        print("  > INVALID ITEM FOUND:", item["id"], item["name"])
+
     if not found:
-        print("  > ITEM NOT FOUND:", item.id, item.name)
+        # print("  > ITEM NOT FOUND:", item["id"], item["name"])
         missing_names.append(item)
+
+        # Print out the JSON for invalid items
+        print('''    "%s": {
+        "id": %d,
+        "name": "%s",
+        "status": "normalized",
+        "normalized_name": "%s"
+    },''' % (item["id"], int(item["id"]), item["name"], item["name"]))
 
 print(">>> RESULTS:")
 print("  > skipped_item ids:", len(skipped_item))

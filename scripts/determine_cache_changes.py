@@ -4,7 +4,7 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-A simple script to determine new items and monsters added after a game 
+A simple script to determine new items and monsters added after a game
 update. This is used to help update the CHANGELOG in the repository.
 This script takes two different files inputs for items and monsters:
 
@@ -47,7 +47,7 @@ class DetermineCacheChanges:
     """A simple class to determine added, removed, changed and unchanged entries.
 
     Every OSRS weekly update has the potential to add, remove or change item
-    and monster properties. This class analyzes the OSRS cache dump of the 
+    and monster properties. This class analyzes the OSRS cache dump of the
     existing entries and compares to a new database dump.
 
     :param current_dict: A dictionary of the new items_scraper.json file
@@ -56,7 +56,7 @@ class DetermineCacheChanges:
     def __init__(self, current_dict: Dict, past_dict: Dict):
         self.current_dict = current_dict
         self.past_dict = past_dict
-        self.set_current = set(current_dict.keys()) 
+        self.set_current = set(current_dict.keys())
         self.set_past = set(past_dict.keys())
         self.intersect = self.set_current.intersection(self.set_past)
 
@@ -185,6 +185,7 @@ def determine_cache_changes_monsters():
     # for monsterID in unchanged:
     #     print("    - %s,%s" % (monsterID,
     #                            new_monsters[monsterID]["name"]))
+
 
 if __name__ == "__main__":
     print("Determining item changes using items-cache-data.json files...")

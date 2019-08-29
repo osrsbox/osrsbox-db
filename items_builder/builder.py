@@ -92,7 +92,7 @@ def main(export_item: bool = False):
     # Start processing every item!
     for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 23000:
+        # if int(item_id) < 24000:
         #     continue
 
         # Initialize the BuildItem class, used for all items

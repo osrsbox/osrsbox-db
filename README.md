@@ -21,7 +21,6 @@ The monster database also has extensive properties: a total of 44 unique propert
 - [The `osrsbox-db` Static JSON API](#the-osrsbox-db-static-json-api)
 - [The `osrsbox-db` GitHub Repository](#the-osrsbox-db-github-repository)
 - [Additional Project Information](#additional-project-information)
-    - [Project Structure](#summary-of-project-structure)
     - [Project Feedback](#project-feedback)
     - [Project Contribution](#project-contribution)
     - [Project License](#project-license)
@@ -219,8 +218,6 @@ The package is consistently updated - usually after each weekly in-game update. 
 ```
 pip install --upgrade osrsbox
 ```
-
-More detailed information regarding using the `osrsbox` Python package can be found in the [`osrsbox` package README file](osrsbox/README.md).
 
 ### Package Usage 
 

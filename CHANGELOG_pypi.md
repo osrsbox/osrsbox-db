@@ -1,0 +1,39 @@
+- `1.2.2`: Release for game update: 2019/08/29.
+- `1.2.1`: Added monster database (beta).
+- `1.1.26`: Release for game update: 2019/08/22.
+- `1.1.25`: Updated project documentation.
+- `1.1.24`: Updated JSON schema and added `duplicate` item property.
+- `1.1.23`: Release for game update: 2019/08/15.
+- `1.1.22`: Release for game update: 2019/08/08.
+- `1.1.21`: Release for game update: 2019/07/25 and 2019/08/01 (SOTE).
+- `1.1.20`: Improved item data accuracy. Added `wiki_name` property and `wiki_url` anchor.
+- `1.1.19`: Release for game update: 2019/07/18.
+- `1.1.18`: Fixed stackable property. Added improved item ID linking.
+- `1.1.17`: Release for game update: 2019/07/11.
+- `1.1.16`: Converted all `release_date` values to ISO8601 format.
+- `1.1.15`: Release for game update: 2019/07/04.
+- `1.1.14`: Release for game update: 2019/06/27.
+- `1.1.13`: Release for game update: 2019/06/20.
+- `1.1.12`: Release for game update: 2019/05/30.
+- `1.1.11`: Release for game update 2019/06/06.
+- `1.1.10`: Release for game update 2019/05/23.
+- `1.1.9`: Release for game update 2019/05/16.
+- `1.1.8`: Release for week 2019/05/09 (no actual game update).
+- `1.1.7`: Release for game update 2019/05/02.
+- `1.1.6`: Release for game update 2019/04/25, added `ItemWeapon` class.
+- `1.1.5`: Release for game update 2019/04/18.
+- `1.1.4`: Update for changes to new treasure trail items.
+- `1.1.3`: Release for game update 2019/04/11.
+- `1.1.2`: Converted `ItemDefinition`, `ItemEquipment` to dataclass.
+- `1.1.1`: Release for game update 2019/04/04.
+- `1.1.0`: Changed equipable item requirements to an object.
+- `1.0.9`: Release for game update 2019/03/28.
+- `1.0.8`: Fixed packaging issue.
+- `1.0.7`: Updated project documentation.
+- `1.0.6`: Fixed package install bug.
+- `1.0.5`: Release for game update 2019/03/21.
+- `1.0.4`: Configured Travis CI for automated deployment.
+- `1.0.3`: Release for game update 2019/03/14.
+- `1.0.2`: Release for game update 2019/03/07.
+- `1.0.1`: Release for game update 2019/02/14.
+- `1.0.0`: Initial release.

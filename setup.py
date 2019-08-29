@@ -11,7 +11,7 @@ URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.2.1"
+VERSION = "1.2.2"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [
@@ -20,7 +20,7 @@ REQUIRED = [
 
 # Import the README and use it as the long-description.
 readme_location = Path(__file__).parent
-readme_location = Path(readme_location / "osrsbox" / "README.md")
+readme_location = Path(readme_location / "README.md")
 
 with open(readme_location, encoding='utf-8') as f:
     long_description = '\n' + f.read()

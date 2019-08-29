@@ -56,7 +56,7 @@ def main(export_monster: bool = False):
 
     # Load the raw OSRS cache monster data
     # This is the final data load, and used as baseline data for database population
-    all_monster_cache_data_path = Path(config.DATA_PATH / "attackable-npcs.json")
+    all_monster_cache_data_path = Path(config.DATA_PATH / "monsters-cache-data.json")
     with open(all_monster_cache_data_path) as f:
         all_monster_cache_data = json.load(f)
 

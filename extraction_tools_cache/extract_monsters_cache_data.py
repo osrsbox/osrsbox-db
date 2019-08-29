@@ -65,4 +65,4 @@ def extract_monsters_cache_data(compressed_json_file_path: Union[Path, str]):
 if __name__ == "__main__":
     # Set path to npcs.json compressed cache file
     npcs_cache_file = Path(config.EXTRACTION_CACHE_PATH) / "npcs.json"
-    extract_attackable_npcs(npcs_cache_file)
+    extract_monsters_cache_data(npcs_cache_file)

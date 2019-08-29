@@ -2,9 +2,9 @@
 
 This folder contains a collection of useful data that is used in the osrsbox-db project. A summary of the data files, their contents and uses are provided in the sections below.
 
-### Attackable NPCs
+### Monsters Cache Data (Attackable NPCs)
 
-The `attackable-npcs.json` file is a JSON file containing NPC definitions from the OSRS cache for NPCs that are attackable. The data is extracted from the OSRS Cache using the [`extract_attackable_npcs.py` script](../extraction_tools_cache/extract_attackable_npcs.py) which looks for the keyword _Attack_ in `options` array for each NPC definition. The use of the data in the osrsbox-db is when building the Monsters database contents.
+The `monsters-cache-data.json` file is a JSON file containing NPC definitions from the OSRS cache for NPCs that are attackable. The data is extracted from the OSRS Cache using the [`extract_monsters_cache_data.py` script](../extraction_tools_cache/extract_monsters_cache_data.py) which looks for the keyword _Attack_ in `options` array for each NPC definition. The use of the data in the osrsbox-db is when building the Monsters database contents.
 
 ### DMM-Only Items
 
