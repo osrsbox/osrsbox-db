@@ -88,21 +88,22 @@ echo -e ">>> Updating osrsbox-db..."
 cd ~/repos/osrsbox-db
 git pull
 
-# Move to the scripts/update_items path and update all data
-cd ~/repos/osrsbox-db/scripts/update_items/
+# Move to the scripts/ path and update all data
+cd ~/repos/osrsbox-db/scripts/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2019-08-15T00:00:00Z
+python3 update_wiki_data.py 2019-08-22T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py
 
-echo -e ">>> Determine any newly added items..."
-python3 determine_new_items.py
+echo -e ">>> Determine any cache changes..."
+python3 determine_cache_changes.py
 
 # Move the new cache data
 cd ~/repos/osrsbox-db/
 mv extraction_tools_cache/items-cache-data.json data/
+mv extraction_tools_cache/monsters-cache-data.json data/
 
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."

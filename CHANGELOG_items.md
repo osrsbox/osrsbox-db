@@ -1,3 +1,107 @@
+### 2019/08/29: Last Man Standing
+- Added items: 92
+    - 24133,Infernal max cape (l)
+    - 24134,Fire max cape (l)
+    - 24135,Assembler max cape (l)
+    - 24136,Bronze defender (l)
+    - 24137,Iron defender (l)
+    - 24138,Steel defender (l)
+    - 24139,Black defender (l)
+    - 24140,Mithril defender (l)
+    - 24141,Adamant defender (l)
+    - 24142,Rune defender (l)
+    - 24143,Dragon defender (l)
+    - 24144,Staff of balance
+    - 24145,Staff of balance
+    - 24146,Staff of balance
+    - 24147,Armadyl halo (broken)
+    - 24148,Armadyl halo (broken)
+    - 24149,Bandos halo (broken)
+    - 24150,Bandos halo (broken)
+    - 24151,Seren halo (broken)
+    - 24152,Seren halo (broken)
+    - 24153,Ancient halo (broken)
+    - 24154,Ancient halo (broken)
+    - 24155,Brassica halo (broken)
+    - 24156,Brassica halo (broken)
+    - 24157,Decorative sword (l)
+    - 24158,Decorative armour (l)
+    - 24159,Decorative armour (l)
+    - 24160,Decorative helm (l)
+    - 24161,Decorative shield (l)
+    - 24162,Decorative armour (l)
+    - 24163,Decorative armour (l)
+    - 24164,Decorative armour (l)
+    - 24165,Decorative armour (l)
+    - 24166,Decorative armour (l)
+    - 24167,Decorative armour (l)
+    - 24168,Decorative armour (l)
+    - 24169,Saradomin halo (l)
+    - 24170,Zamorak halo (l)
+    - 24171,Guthix halo (l)
+    - 24172,Healer hat (l)
+    - 24173,Fighter hat (l)
+    - 24174,Ranger hat (l)
+    - 24175,Fighter torso (l)
+    - 24176,Penance skirt (l)
+    - 24177,Void knight top (l)
+    - 24178,Elite void top (l)
+    - 24179,Void knight robe (l)
+    - 24180,Elite void robe (l)
+    - 24181,Void knight mace (l)
+    - 24182,Void knight gloves (l)
+    - 24183,Void mage helm (l)
+    - 24184,Void ranger helm (l)
+    - 24185,Void melee helm (l)
+    - 24186,Avernic defender (l)
+    - 24187,Trouver parchment
+    - 24188,Trouver parchment
+    - 24189,Deadman's chest
+    - 24190,Deadman's legs
+    - 24191,Deadman's cape
+    - 24192,Armadyl halo
+    - 24193,Armadyl halo
+    - 24194,Armadyl halo (l)
+    - 24195,Bandos halo
+    - 24196,Bandos halo
+    - 24197,Bandos halo (l)
+    - 24198,Seren halo
+    - 24199,Seren halo
+    - 24200,Seren halo (l)
+    - 24201,Ancient halo
+    - 24202,Ancient halo
+    - 24203,Ancient halo (l)
+    - 24204,Brassica halo
+    - 24205,Brassica halo
+    - 24206,Brassica halo (l)
+    - 24207,Victor's cape (1)
+    - 24208,Victor's cape (1)
+    - 24209,Victor's cape (10)
+    - 24210,Victor's cape (10)
+    - 24211,Victor's cape (50)
+    - 24212,Victor's cape (50)
+    - 24213,Victor's cape (100)
+    - 24214,Victor's cape (100)
+    - 24215,Victor's cape (500)
+    - 24216,Victor's cape (500)
+    - 24217,Guthixian icon
+    - 24218,Guthixian icon
+    - 24219,Swift blade
+    - 24220,Swift blade
+    - 24221,Swift blade
+    - 24222,Ava's assembler (l)
+    - 24223,Fire cape (l)
+    - 24224,Infernal cape (l)
+- Removed items: 0
+- Changed items: 7
+    - 20483,Decorative sword (broken),members
+    - 20485,Decorative armour (broken),members
+    - 20487,Decorative armour (broken),members
+    - 20489,Decorative helm (broken),members
+    - 20491,Decorative shield (broken),members
+    - 20493,Decorative armour (broken),members
+    - 23081,Alchemical hydra head.,name
+
 ### 2019/08/22: Kill Death Ratios and Web Slashing
 - Added items: 0
 - Removed items: 0
