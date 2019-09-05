@@ -1,3 +1,21 @@
+### 2019/09/05: PvP Balancing, LMS, and Elf Graphics
+- Added items: 7
+    - 24225,Granite maul
+    - 24226,Granite maul
+    - 24227,Granite maul
+    - 24228,Granite maul
+    - 24229,Ornate maul handle
+    - 24230,Ornate maul handle
+    - 24231,Ornate maul handle
+- Removed items: 0
+- Changed items: 6
+    - 14227,Runecrafting hood,name
+    - 23619,Morrigan's javelin,members
+    - 23620,Statius's warhammer,members
+    - 23621,Statius's warhammer,members
+    - 7414,Paddle,equipable
+    - 9767,Runecrafting hood,name
+
 ### 2019/08/29: Last Man Standing
 - Added items: 92
     - 24133,Infernal max cape (l)

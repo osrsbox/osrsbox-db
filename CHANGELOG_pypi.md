@@ -1,3 +1,4 @@
+- `1.2.3`: Release for game update: 2019/09/05.
 - `1.2.2`: Release for game update: 2019/08/29.
 - `1.2.1`: Added monster database (beta).
 - `1.1.26`: Release for game update: 2019/08/22.

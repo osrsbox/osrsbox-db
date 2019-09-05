@@ -22,7 +22,7 @@
     "quest_item": false,
     "release_date": "2019-08-29",
     "duplicate": false,
-    "examine": "",
+    "examine": "A ghastly weapon with evil origins combined with an icon of balance.",
     "wiki_name": "Staff of balance",
     "wiki_url": "https://oldschool.runescape.wiki/w/Staff_of_balance",
     "equipment": {
@@ -41,7 +41,10 @@
         "magic_damage": 15,
         "prayer": 0,
         "slot": "weapon",
-        "requirements": null
+        "requirements": {
+            "attack": 75,
+            "magic": 75
+        }
     },
     "weapon": {
         "attack_speed": 4,
