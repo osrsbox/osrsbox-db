@@ -22,7 +22,7 @@
             "type":"string"
           },
           "quantity":{
-            "description":"The quantity of the item drop (can be an integer or range, and have notes).",
+            "description":"The quantity of the item drop (integer, comma-seperated or range).",
             "type":["string", "null"],
             "regex":"^[0-9]*([-,][0-9]*)?"
           },
@@ -75,7 +75,7 @@
         "type":"boolean"
       },
       "release_date":{
-        "description":"The release date of the monster in ISO8601 date format.",
+        "description":"The release date of the monster (in ISO8601 format).",
         "type":["string", "null"],
         "format":"date"
       },
@@ -131,7 +131,7 @@
         "type":"boolean"
       },
       "slayer_level":{
-        "description":"The slayer level required to kill the monster (if a slayer monster.",
+        "description":"The slayer level required to kill the monster.",
         "type":["integer", "null"]
       },
       "slayer_xp":{

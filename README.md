@@ -6,7 +6,7 @@
 
 ## A complete and up-to-date database of Old School Runescape (OSRS) items and monsters
 
-This repository hosts a complete and up-to-date database of every item and every monster in OSRS. **Complete** means it holds every single item and monster in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
+This project hosts a complete and up-to-date database of every item and every monster in OSRS. **Complete** means it holds every single item and monster in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
 
 The item database has extensive properties for each item: a total of 27 properties for every item, an additional 16 properties for equipable items, and an additional 3 properties for equipable weapons. These properties include the item ID and name, whether an item is tradeable, stackable, or equipable or if the item is members only or associated with a quest. For any equipable item, there are additional properties about combat stats the item has; for example, what slash attack bonus, magic defence bonus or prayer bonus that an item provides. For weapons, additional properties are added which include attack speed and combat stance/weapon type information.
 
@@ -64,8 +64,8 @@ An `ItemDefinition` object type includes basic item metadata such as `id`, `name
 | equipable | boolean | If the item is equipable (based on right-click menu entry). | Yes |
 | equipable_by_player | boolean | If the item is equipable by a player and is equipable in-game. | Yes |
 | cost | integer | The store price of an item. | Yes |
-| lowalch | integer | The low alchemy value of the item (cost * .4). | Yes |
-| highalch | integer | The high alchemy value of the item (cost * .6). | Yes |
+| lowalch | integer | The low alchemy value of the item (cost * 0.4). | Yes |
+| highalch | integer | The high alchemy value of the item (cost * 0.6). | Yes |
 | weight | number | The weight (in kilograms) of the item. | No |
 | buy_limit | integer | The GE buy limit of the item. | No |
 | quest_item | boolean | If the item is associated with a quest. | Yes |
@@ -74,7 +74,7 @@ An `ItemDefinition` object type includes basic item metadata such as `id`, `name
 | examine | string | The examine text for the item. | No |
 | wiki_name | string | The OSRS Wiki name for the item. | No |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | No |
-| equipment | object | The equipment bonuses of equipable armor/weapons. | No |
+| equipment | object | The equipment bonuses of equipable armour/weapons. | No |
 | weapon | object | The information about weapon properties. | No |
 
 ### Item Equipment
@@ -110,6 +110,88 @@ A select number of items in OSRS are equipable weapons. Any equipable item that 
 | weapon_type | string | The weapon classification (e.g., axe) | Yes |
 | stances | array | An array of weapon stance information | Yes |
 
+### Item JSON Example
+
+A description of the properties that each item in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of an item, specifically the _Abyssal whip_ item. Since this item is a type of equipment, there is an `equipment` key with combat bonuses. Additionally, this item is also a weapon, so there is a `weapon` key with extra information. If the item was not equipable, the `equipment` key would be `null` and the `equipable_by_player` would be `false`. If the item was not a weapon, the `weapon` key would be `null` and the `equipable_weapon` would be `false`.
+
+```
+{
+    "id": 4151,
+    "name": "Abyssal whip",
+    "members": true,
+    "tradeable": true,
+    "tradeable_on_ge": true,
+    "stackable": false,
+    "noted": false,
+    "noteable": true,
+    "linked_id_item": null,
+    "linked_id_noted": 4152,
+    "linked_id_placeholder": 14032,
+    "placeholder": false,
+    "equipable": true,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
+    "cost": 120001,
+    "lowalch": 48000,
+    "highalch": 72000,
+    "weight": 0.453,
+    "buy_limit": 70,
+    "quest_item": false,
+    "release_date": "2005-01-26",
+    "duplicate": false,
+    "examine": "A weapon from the abyss.",
+    "wiki_name": "Abyssal whip",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_whip",
+    "equipment": {
+        "attack_stab": 0,
+        "attack_slash": 82,
+        "attack_crush": 0,
+        "attack_magic": 0,
+        "attack_ranged": 0,
+        "defence_stab": 0,
+        "defence_slash": 0,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": 82,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "weapon",
+        "requirements": {
+            "attack": 70
+        }
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "whips",
+        "stances": [
+            {
+                "combat_style": "flick",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lash",
+                "attack_type": "slash",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
+                "combat_style": "deflect",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
+}
+```
+
 ## The Monster Database
 
 Each monster is represented by Python objects, specifically using Python dataclasses - or accessible directly by parsing the raw JSON files. There are two types of objects that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections.
@@ -120,10 +202,11 @@ A `MonsterDefinition` object type includes basic item metadata such as `id`, `na
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
+| id | integer | The ID number of the monster. | Yes |
 | name | string | The name of the monster. | Yes |
 | incomplete | boolean | If the monster has incomplete wiki data. | Yes |
 | members | boolean | If the monster is members only, or not. | Yes |
-| release_date | string | The release date of the monster in ISO8601 date format. | No |
+| release_date | string | The release date of the monster (in ISO8601 format). | No |
 | combat_level | integer | The combat level of the monster. | Yes |
 | size | integer | The size, in tiles, of the monster. | Yes |
 | hitpoints | integer | The number of hitpoints a monster has. | Yes |
@@ -136,7 +219,7 @@ A `MonsterDefinition` object type includes basic item metadata such as `id`, `na
 | immune_venom | boolean | If the monster is immune to venom, or not | Yes |
 | weakness | array | An array of monster weaknesses. | Yes |
 | slayer_monster | boolean | If the monster is a potential slayer task. | Yes |
-| slayer_level | integer | The slayer level required to kill the monster (if a slayer monster. | No |
+| slayer_level | integer | The slayer level required to kill the monster. | No |
 | slayer_xp | integer | The slayer XP rewarded for a monster kill. | No |
 | slayer_masters | array | The slayer XP rewarded for a monster kill. | Yes |
 | examine | string | The examine text of the monster. | Yes |
@@ -172,10 +255,122 @@ Most monsters in OSRS drop items when they have been defeated (killed). All mons
 | -------- | --------- | ----------- | -------- |
 | id | integer | The ID number of the item drop. | No |
 | name | string | The name of the item drop. | Yes |
-| quantity | string | The quantity of the item drop (can be an integer or range, and have notes). | No |
+| quantity | string | The quantity of the item drop (integer, comma-seperated or range). | No |
 | noted | boolean | If the item drop is noted, or not. | Yes |
 | rarity | string | The rarity of the item drop (in fraction format). | No |
 | drop_requirements | string | If there are any requirements to getting the specific drop. | No |
+
+### Monster JSON Example
+
+A description of the properties that each monster in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a monster, specifically the _Abyssal demon_ monster. 
+
+```
+{
+    "id": 415,
+    "name": "Abyssal demon",
+    "incomplete": false,
+    "members": true,
+    "release_date": "2005-01-26",
+    "combat_level": 124,
+    "size": 1,
+    "hitpoints": 150,
+    "max_hit": 8,
+    "attack_type": [
+        "stab"
+    ],
+    "attack_speed": 4,
+    "aggressive": false,
+    "poisonous": false,
+    "immune_poison": false,
+    "immune_venom": false,
+    "weakness": [
+        "magic",
+        "demonbane"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 85,
+    "slayer_xp": 150,
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "duradel"
+    ],
+    "examine": "A denizen of the Abyss!",
+    "wiki_name": "Abyssal demon (Standard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_demon#Standard",
+    "attack_level": 97,
+    "strength_level": 67,
+    "defence_level": 135,
+    "magic_level": 1,
+    "ranged_level": 1,
+    "attack_stab": 0,
+    "attack_slash": 0,
+    "attack_crush": 0,
+    "attack_magic": 0,
+    "attack_ranged": 0,
+    "defence_stab": 20,
+    "defence_slash": 20,
+    "defence_crush": 20,
+    "defence_magic": 0,
+    "defence_ranged": 20,
+    "attack_accuracy": 0,
+    "melee_strength": 0,
+    "ranged_strength": 0,
+    "magic_damage": 0,
+    "drops": [
+        {
+            "id": 592,
+            "name": "Ashes",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        {
+            "id": 4151,
+            "name": "Abyssal whip",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
+        },
+        {
+            "id": 13265,
+            "name": "Abyssal dagger",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32768",
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "quantity": "7",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 19683,
+            "name": "Dark totem top",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/350",
+            "drop_requirements": "catacombs-only"
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1200",
+            "drop_requirements": null
+        }
+    ],
+    "rare_drop_table": false
+}
+```
 
 ## The `osrsbox` Python PyPi Package
 
@@ -190,9 +385,9 @@ If you want to access the item and monster database programmatically using Pytho
     - Load all items using: `all_db_items = items_api.load()`
     - Loop items using: `for item in all_db_items: print(item.name)`
 - Monster database quickstart:
-    - Import items API using: `from osrsbox import monsters_api`
-    - Load all items using: `all_db_monsters = monsters_api.load()`
-    - Loop items using: `for monster in all_db_monsters: print(monster.name)`
+    - Import monsters API using: `from osrsbox import monsters_api`
+    - Load all monsters using: `all_db_monsters = monsters_api.load()`
+    - Loop monsters using: `for monster in all_db_monsters: print(monster.name)`
 
 ### Package Requirements
 
@@ -254,7 +449,7 @@ This project also includes an Internet-accessible, static JSON API for all items
 
 ### Static JSON API Files
 
-The JSON API is available in the [`docs` folder](github.com/osrsbox/osrsbox-db/tree/master/docs/) in the osrsbox-db project repository. This folder contains the publicly available database and somewhat-RESTful API of osrsbox-db (read: not RESTful at all, as it only supports HTTP GET requests). Every file inside this specific folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any name of any file from the `docs` folder to the base URL, and you can fetch this data. You can also clone the entire osrsbox-db project repository and access the files provided in this folder, or download a single file for offline processing. A summary of the folders/files provided in the JSON API are listed below with descriptions:
+The JSON API is available in the [`docs` folder](https://github.com/osrsbox/osrsbox-db/tree/master/docs/) in the osrsbox-db project repository. This folder contains the publicly available database and somewhat-RESTful API of osrsbox-db (read: not RESTful at all, as it only supports HTTP GET requests). Every file inside this specific folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any name of any file from the `docs` folder to the base URL, and you can fetch this data. You can also clone the entire osrsbox-db project repository and access the files provided in this folder, or download a single file for offline processing. A summary of the folders/files provided in the JSON API are listed below with descriptions:
 
 - `items-complete.json`: A single JSON file that combines all single JSON files from `items-json` folder. This file contains the entire osrsbox-db items database in one file. This is useful if you want to get the data for every single item.
 - `items-icons`: Collection of PNG files (20K+) for every item inventory icon in OSRS. Each inventory icon is named using the unique item ID number.
