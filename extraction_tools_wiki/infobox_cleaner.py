@@ -371,13 +371,18 @@ def clean_drop_rarity(value: str, base_value: str = None) -> str:
     """
     if value is None:
         return None
-    value = clean_wikitext(value)
+    if "#expr" not in value:
+        value = clean_wikitext(value)
     if value == "":
         return None
 
     # Clean the original value
     # Remove: brackets, curly braces, spaces, tidle, plus
-    value = re.sub(r"[\(\){}, ~\+]", '', value)
+    # Remove (if expr): curly braces, spaces
+    if "#expr" not in value:
+        value = re.sub(r"[\(\){}, ~\+]", '', value)
+    else:
+        value = re.sub(r"[{} ]", '', value)
     # Remove "Rarity|" from value
     value = value.replace("Rarity|", "")
 

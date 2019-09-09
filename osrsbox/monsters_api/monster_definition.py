@@ -83,9 +83,12 @@ class MonsterDefinition:
     @classmethod
     def from_json(cls, json_dict: Dict) -> List[MonsterDrop]:
         """Convert the list under the 'drops' key into actual :class:`MonsterDrop`"""
+        monster_drops = list()
         if json_dict.get("drops"):
-            drops = json_dict.pop("drops")
-            json_dict["drops"] = list(drops)
+            for drop in json_dict["drops"]:
+                monster_drops.append(MonsterDrop(**drop))
+
+        json_dict["drops"] = monster_drops
 
         return cls(**json_dict)
 

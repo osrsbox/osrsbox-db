@@ -139,7 +139,7 @@ class BuildMonster:
 
         # Log and print monster
         logging.debug(f"======================= {self.monster_id_str} {self.monster_name}")
-        # print(f"======================= {self.monster_id_str} {self.monster_name}")
+        print(f"======================= {self.monster_id_str} {self.monster_name}")
         logging.debug(f"preprocessing: using the following cache data:")
         logging.debug(self.monster_cache_data)
 
