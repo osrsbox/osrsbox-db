@@ -32,6 +32,7 @@ class MonsterDrop:
     """
     id: int = None
     name: str = None
+    members: str = None
     quantity: str = None
     noted: bool = None
     rarity: str = None

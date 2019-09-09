@@ -255,6 +255,7 @@ Most monsters in OSRS drop items when they have been defeated (killed). All mons
 | -------- | --------- | ----------- | -------- |
 | id | integer | The ID number of the item drop. | No |
 | name | string | The name of the item drop. | Yes |
+| members | boolean | If the drop is a members-only item. | Yes |
 | quantity | string | The quantity of the item drop (integer, comma-seperated or range). | No |
 | noted | boolean | If the item drop is noted, or not. | Yes |
 | rarity | string | The rarity of the item drop (in fraction format). | No |
@@ -322,6 +323,7 @@ A description of the properties that each monster in the database can have is us
         {
             "id": 592,
             "name": "Ashes",
+            "members": True,
             "quantity": "1",
             "noted": false,
             "rarity": "1/1",
@@ -330,6 +332,7 @@ A description of the properties that each monster in the database can have is us
         {
             "id": 4151,
             "name": "Abyssal whip",
+            "members": True,
             "quantity": "1",
             "noted": false,
             "rarity": "1/512",
@@ -338,6 +341,7 @@ A description of the properties that each monster in the database can have is us
         {
             "id": 13265,
             "name": "Abyssal dagger",
+            "members": True,
             "quantity": "1",
             "noted": false,
             "rarity": "1/32768",
@@ -346,6 +350,7 @@ A description of the properties that each monster in the database can have is us
         {
             "id": 565,
             "name": "Blood rune",
+            "members": True,
             "quantity": "7",
             "noted": false,
             "rarity": "4/128",
@@ -354,6 +359,7 @@ A description of the properties that each monster in the database can have is us
         {
             "id": 19683,
             "name": "Dark totem top",
+            "members": True,
             "quantity": "1",
             "noted": false,
             "rarity": "1/350",
@@ -362,6 +368,7 @@ A description of the properties that each monster in the database can have is us
         {
             "id": 12073,
             "name": "Clue scroll (elite)",
+            "members": True,
             "quantity": "1",
             "noted": false,
             "rarity": "1/1200",

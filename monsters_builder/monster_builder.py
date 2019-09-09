@@ -578,6 +578,7 @@ class BuildMonster:
             drop_dict = {
                 "id": None,
                 "name": None,
+                "members": None,
                 "quantity": None,
                 "rarity": None,
                 "drop_requirements": None
@@ -611,6 +612,18 @@ class BuildMonster:
                     noted = True
             quantity = infobox_cleaner.clean_drop_quantity(quantity)
 
+            # Extract, or determine, if the item is members-only
+            members = False
+            name_notes = template_parser.extract_infobox_value("Namenotes")
+            if self.monster_dict["members"]:
+                members = True
+            elif id:
+                if self.all_db_items[id].members:
+                    members = True
+            elif name_notes:
+                if "{{m}}" in name_notes:
+                    members = True
+
             # Extract the item drop rarity
             rarity = template_parser.extract_infobox_value("Rarity")
             base_value = None
@@ -630,6 +643,7 @@ class BuildMonster:
             drop_dict = {
                 "id": id,
                 "name": name,
+                "members": members,
                 "quantity": quantity,
                 "noted": noted,
                 "rarity": rarity,

@@ -7,6 +7,7 @@
         "required":[
           "id",
           "name",
+          "members",
           "quantity",
           "noted",
           "rarity",
@@ -20,6 +21,10 @@
           "name":{
             "description":"The name of the item drop.",
             "type":"string"
+          },
+          "members":{
+            "description":"If the drop is a members-only item.",
+            "type":"boolean"
           },
           "quantity":{
             "description":"The quantity of the item drop (integer, comma-seperated or range).",
