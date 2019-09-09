@@ -449,7 +449,7 @@ class BuildMonster:
                               "vannaka",
                               "chaeldar",
                               "konar",
-                              "neive",
+                              "nieve",
                               "duradel"
                               ]
 
