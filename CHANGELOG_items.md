@@ -1,3 +1,27 @@
+### 2019/09/12: POH Board and PvP Balancing
+- Added items: 19
+    - 24232,Imbued saradomin max cape (l)
+    - 24233,Imbued zamorak max cape (l)
+    - 24234,Imbued guthix max cape (l)
+    - 24235,House advertisement
+    - 24236,Imbued saradomin cape (broken)
+    - 24237,Imbued saradomin cape (broken)
+    - 24238,Imbued saradomin max cape (broken)
+    - 24239,Imbued saradomin max cape (broken)
+    - 24240,Imbued guthix cape (broken)
+    - 24241,Imbued guthix cape (broken)
+    - 24242,Imbued guthix max cape (broken)
+    - 24243,Imbued guthix max cape (broken)
+    - 24244,Imbued zamorak cape (broken)
+    - 24245,Imbued zamorak cape (broken)
+    - 24246,Imbued zamorak max cape (broken)
+    - 24247,Imbued zamorak max cape (broken)
+    - 24248,Imbued saradomin cape (l)
+    - 24249,Imbued guthix cape (l)
+    - 24250,Imbued zamorak cape (l)
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/09/05: PvP Balancing, LMS, and Elf Graphics
 - Added items: 7
     - 24225,Granite maul

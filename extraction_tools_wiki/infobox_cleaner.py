@@ -427,6 +427,8 @@ def clean_drop_rarity(value: str, base_value: str = None) -> str:
         denominator = eval(denominator)
         denominator = round(denominator, 1)
         value = str(numerator) + "/" + str(denominator)
+    elif ":" in value:
+        value = value.split(":")[0]
     else:
         value = value
 

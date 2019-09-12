@@ -1,3 +1,4 @@
+- `1.2.5`: Release for game update: 2019/09/12.
 - `1.2.4`: Fixed bugs in monster drops.
 - `1.2.3`: Release for game update: 2019/09/05.
 - `1.2.2`: Release for game update: 2019/08/29.
