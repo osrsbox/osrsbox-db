@@ -1,3 +1,12 @@
+# Monster Database Changelog
+
+A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
+
+### 2019/09/19: Small Changes and Bugfixes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2019/09/12: POH Board and PvP Balancing
 - Added monsters: 0
 - Removed monsters: 0

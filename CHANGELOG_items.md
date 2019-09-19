@@ -1,3 +1,15 @@
+# Item Database Changelog
+
+A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
+
+### 2019/09/19: Small Changes and Bugfixes
+- Added items: 2
+    - 24251,Wilderness crabs teleport
+    - 24252,Wilderness crabs teleport
+- Removed items: 0
+- Changed items: 1
+    - 21268,Slayer ring (eternal),cost|lowalch|highalch
+
 ### 2019/09/12: POH Board and PvP Balancing
 - Added items: 19
     - 24232,Imbued saradomin max cape (l)

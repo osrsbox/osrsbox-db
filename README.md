@@ -41,11 +41,11 @@ The osrsbox-db project code and data is accessible using three primary methods:
 
 ## The Item Database
 
-Each item is represented by Python objects, specifically using Python dataclasses - or accessible directly by parsing the raw JSON files. There are three types of objects that can be used to represent part of an in-game OSRS item, each outlined in the following subsections.
+Each item is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects. Additionally, the data is accessible directly by parsing the raw JSON files. There are three types of objects, or classifications of data, that can be used to represent part of an in-game OSRS item, each outlined in the following subsections.
 
 ### Item Definition
 
-An `ItemDefinition` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest_item` association. Every item object in the item database. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+An `ItemDefinition` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest_item` association. Every item object in the item database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
@@ -79,7 +79,7 @@ An `ItemDefinition` object type includes basic item metadata such as `id`, `name
 
 ### Item Equipment
 
-Many items in OSRS are equipable, this includes armor, weapons, and other _wearable_ items. Any equipable item has additional properties stored as an `ItemEquipment` object including attributes such as `attack_slash`, `defence_crush` and `melee_strength` values. The `ItemEquipment` object is nested within an `ItemDefinition` under the `equipment` key. It is very important to note that not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not equipable by a player). All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
+Many items in OSRS are equipable, this includes armor, weapons, and other _wearable_ items. Any equipable item has additional properties stored as an `ItemEquipment` object type - including attributes such as `attack_slash`, `defence_crush` and `melee_strength` values. The `ItemEquipment` object is nested within an `ItemDefinition`. If you are parsing the raw JSON files, this data is nested under the `equipment` key. It is very important to note that not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not equipable by a player). All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
@@ -102,7 +102,7 @@ Many items in OSRS are equipable, this includes armor, weapons, and other _weara
 
 ### Item Weapon
 
-A select number of items in OSRS are equipable weapons. Any equipable item that is a weapon has additional properties stored as an `ItemWeapon` object including attributes such as `attack_speed` and `weapon_types` values. The `ItemWeapon` object is nested within an `ItemDefinition` under the `weapon` key. Additionally, each weapon has an array of combat stances associated with it to determine the `combat_style`, `attack_type`, `attack_style` and any `bonuses` or combat `experience` association. It is very important to note that not all items in OSRS are equipable weapons. Only items with the `equipable_weapon` property set to `true` are equipable. All of the properties available for equipable weapons are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`
+A select number of items in OSRS are equipable weapons. Any equipable item that is a weapon has additional properties stored as an `ItemWeapon` type object including attributes such as `attack_speed` and `weapon_types` values. Additionally, each weapon has an array of combat stances associated with it to determine the `combat_style`, `attack_type`, `attack_style` and any `bonuses` or combat `experience` association. The `ItemWeapon` object is nested within an `ItemDefinition` object when using the Python API. If you are parsing the raw JSON files, this data is nested under the `weapon` key.  It is very important to note that not all items in OSRS are equipable weapons. Only items with the `equipable_weapon` property set to `true` are equipable. All of the properties available for equipable weapons are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
@@ -194,11 +194,11 @@ A description of the properties that each item in the database can have is usefu
 
 ## The Monster Database
 
-Each monster is represented by Python objects, specifically using Python dataclasses - or accessible directly by parsing the raw JSON files. There are two types of objects that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections.
+Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects. - or accessible directly by parsing the raw JSON files. Additionally, the data is accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
 
 ### Monster Definition
 
-A `MonsterDefinition` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest_item` association. Every item object in the item database. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+An `MonsterDefinition` object type includes basic monster metadata such as `id`, `name`, `examine` text, `combat_level`, `attack_speed` and `hitpoints` values and slayer association such as `slayer_masters` who give this monster as a task. Every monster object in the monster database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
@@ -249,7 +249,7 @@ A `MonsterDefinition` object type includes basic item metadata such as `id`, `na
 
 ### Monster Drops
 
-Most monsters in OSRS drop items when they have been defeated (killed). All monster drops are stored in the `drops` property in an array containing properties about the item drop. This includes the item `id`, item `name`, the drop `rarity`, whether the drop is `noted` and any `drop_requirements`. This is stored as an `MonsterDrops` object. The `MonsterDrops` object is nested within an `MonsterDefintion` under the `drops` key. All of the properties available for item drops are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
+Most monsters in OSRS drop items when they have been defeated (killed). All monster drops are stored in the `drops` property in an array containing properties about the item drop. When using the PyPi `osrsbox` package, these drops are represented by a list of `MonsterDrops` object type. When parsing the raw JSON files, the drops are stored in an array, that are nested under the `drops` key. The data included with the monster drops are the item `id`, item `name`, the drop `rarity`, whether the drop is `noted` and any `drop_requirements`. All of the properties available for item drops are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
@@ -263,7 +263,7 @@ Most monsters in OSRS drop items when they have been defeated (killed). All mons
 
 ### Monster JSON Example
 
-A description of the properties that each monster in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a monster, specifically the _Abyssal demon_ monster. 
+A description of the properties that each monster in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a monster, specifically the _Abyssal demon_ monster. Please note that the number of item `drops` key data has been reduced to make the data more readable.
 
 ```
 {
@@ -489,7 +489,8 @@ As displayed by the links above, each item or monster is stored in the `osrsbox-
 - [`https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json`](https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json)
 - [`https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json`](https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json)
 
-So how can you get and use these JSON files about OSRS items? It is pretty easy but depends on what you are trying to accomplish and what programming language you are using. Some examples are provided in the following subsections.
+So how can you get and use these JSON files about OSRS items? It is pretty easy but depends on what you are t- Python 3.6 or above
+- Dataclasses package (if Python is below 3.7)rying to accomplish and what programming language you are using. Some examples are provided in the following subsections.
 
 ### Accessing the JSON API using Command Line Tools
 
@@ -562,18 +563,40 @@ Finally, let's have a look at JavaScript (specifically jQuery) example to fetch 
 
 The [official osrsbox-db GitHub repository](https://github.com/osrsbox/osrsbox-db) hosts the source code for the entire osrsbox-db project. The Python PyPi package is located in the `osrsbox` folder of the official development repository, while the other folders in this repository are used to store essential data and Python modules to build the item database. 
 
-If using this repository (the development version), you will also need a variety of Python packages in addition to the mandatory `dataclasses` package. These are documented in the [`requirements.txt`](https://github.com/osrsbox/osrsbox-db/tree/master/requirements.txt) file. It is recommended to use `virtualenv` tool to set up your environment, then install the specified requirements. As an example, the following workflow is provided for Linux-based environments (make sure `virtualenv`, and `python3` are available first):
+### Using the Development Repostory
+
+If using this repository (the development version), you will need to fulfil some specific requirements. This includes having the following tools available on your system:
+
+- Python 3.6 or above
+- Pip - the standard package manager for Python
+- Virtualenv - a tool to create isloated virtual environments
+- A selection of additional Python packages
+
+As a short example, I configured my Ubuntu 18.04 system to run the development repository code using the following steps:
 
 ```
-virtualenv osrsbox-venv
-cd osrsbox-venv/bin
-source activate
+sudo apt update
+sudo apt install python3-pip
+pip3 insatll virtualenv
+```
+
+These three commands will install the `pip3` command, allowing the installation of Python package. Then you can use `pip3` to install the `virtualenv` tool, allowing the creation of a virtualized and isolated Python development environment. Then we can install more Python packages that are used in this project. The PyPi `osrsbox` package requires a variety of Python packages in addition to the mandatory `dataclasses` package. These package requirements are documented in the [`requirements.txt`](https://github.com/osrsbox/osrsbox-db/tree/master/requirements.txt) file. It is recommended to use `virtualenv` tool to set up your environment, then install the specified requirements. As an example, the following workflow is provided for Linux-based environments (make sure `virtualenv`, and `python3` are available first):
+
+```
 git clone https://github.com/osrsbox/osrsbox-db.git
 cd osrsbox-db
-pip install requirements.txt
+virtualenv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
-### Summary of Project Structure
+When you have finished with working in the `osrsbox-db` repository, make sure to deactivate the current `virtualenv` environment using:
+
+```
+deactivate
+```
+
+### Summary of Respository Structure
 
 - `data`: Collection of useful data files used in the osrsbox-db project. The [`README.md`](github.com/osrsbox/osrsbox-db/tree/master/data/README.md) file has additional information on the purpose of each file in this folder.
 - `docs`: The publicly accessible item database available through this repo or by using the static JSON API. This folder contains the actual item database that is publicly available, or browsable within this repository.
@@ -623,7 +646,7 @@ This project would thoroughly benefit from a contribution from additional develo
 
 ### Project License
 
-The osrsbox-db project is released under the GNU General Public License version 3 as published by the Free Software Foundation. You can read the [LICENSE](LICENSE) file for the full license, check the [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) page for additional information, or check the [tl;drLegal](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3) documentation for the license explained in simple English. The GPL license is specified for all source code contained in this project. Other content is specified under GPL if not listed in the **Exceptions to GPL** below.
+The osrsbox-db project is released under the GNU General Public License version 3 as published by the Free Software Foundation. You can read the [LICENSE](LICENSE) file for the full license, check the [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) page for additional information, or check the [tl;drLegal](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)) documentation for the license explained in simple English. The GPL license is specified for all source code contained in this project. Other content is specified under GPL if not listed in the **Exceptions to GPL** below.
 
 #### Exceptions to GPL
 

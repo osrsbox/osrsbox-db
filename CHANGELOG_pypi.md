@@ -1,3 +1,8 @@
+# PyPi `osrsbox` Package Changelog
+
+A document that specifies the changes to the PyPi `osrsbox` package.
+
+- `1.2.6`: Release for game update: 2019/09/19.
 - `1.2.5`: Release for game update: 2019/09/12.
 - `1.2.4`: Fixed bugs in monster drops.
 - `1.2.3`: Release for game update: 2019/09/05.
