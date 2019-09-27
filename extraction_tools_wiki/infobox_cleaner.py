@@ -383,6 +383,9 @@ def clean_drop_rarity(value: str, base_value: str = None) -> str:
         value = re.sub(r"[\(\){}, ~\+]", '', value)
     else:
         value = re.sub(r"[{} ]", '', value)
+    # Quick fix, remove <small></small>
+    if "<small>" in value:
+        value = re.sub(r"<.*?>", '', value)
     # Remove "Rarity|" from value
     value = value.replace("Rarity|", "")
 
@@ -437,7 +440,7 @@ def clean_drop_rarity(value: str, base_value: str = None) -> str:
     pattern = re.compile(r"^[0-9]*(\.[0-9]*)?\/([0-9]*)(\.[0-9]*)?")
     if value and not pattern.match(value):
         print(f"Drop rarity regex failed: {value}")
-        quit()
+        value = None
 
     return value
 

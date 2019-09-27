@@ -92,7 +92,7 @@ git pull
 cd ~/repos/osrsbox-db/scripts/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2019-09-10T00:00:00Z
+python3 update_wiki_data.py 2019-09-19T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py

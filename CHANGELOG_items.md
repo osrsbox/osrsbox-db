@@ -2,6 +2,31 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/09/26: The Fremennik Exiles
+- Added items: 20
+    - 24253,Clue scroll (elite)
+    - 24254,Fang
+    - 24255,Venom gland
+    - 24256,Unsealed letter
+    - 24257,Unsealed letter
+    - 24258,V sigil
+    - 24259,V sigil (e)
+    - 24260,Molten glass (i)
+    - 24261,Lunar glass
+    - 24262,Polishing rock
+    - 24263,Ballad of the basilisk
+    - 24264,Ballad of the basilisk
+    - 24265,V's shield
+    - 24266,V's shield
+    - 24267,V's shield
+    - 24268,Basilisk jaw
+    - 24269,Basilisk jaw
+    - 24270,Basilisk jaw
+    - 24271,Neitiznot faceguard
+    - 24272,Neitiznot faceguard
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/09/19: Small Changes and Bugfixes
 - Added items: 2
     - 24251,Wilderness crabs teleport

@@ -684,36 +684,44 @@ class BuildMonster:
         """Print the difference between this monster object, and the monster that exists in the database."""
         # Create JSON out object to compare
         current_json = monster_definition.construct_json()
+        current_drops = current_json["drops"]
+        del current_json["drops"]
 
         # Try get existing entry (KeyError means it doesn't exist - aka a new monster)
         try:
             existing_json = self.all_db_monster[self.monster_id]
+            existing_drops = existing_json["drops"]
+            del existing_json["drops"]
         except KeyError:
             print(f">>> compare_json_files: NEW MONSTER: {monster_definition.id}")
             print(current_json)
             return
 
+        # Quick check of eqaulity, return if properties and drops are the same
         if current_json == existing_json:
-            return
+            if current_drops == existing_drops:
+                return
 
-        ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
+        # Print a header for the changed monster
         logging.debug(f">>> compare_json_files: CHANGED MONSTER: {monster_definition.id}: {monster_definition.name}, {monster_definition.wiki_name}")
         print(f">>> compare_json_files: CHANGED MONSTER: {monster_definition.id}: {monster_definition.name}")
 
-        # try:
-        #     added_properties = ddiff["dictionary_monster_added"]
-        #     print("   ", added_properties)
-        # except KeyError:
-        #     pass
+        # First check the base properties
+        ddiff_props = DeepDiff(existing_json, current_json, ignore_order=True)
+        if ddiff_props:
+            print("  > CHANGED BASE PROPERTIES...")
+            print(ddiff_props)
 
-        # try:
-        #     changed_properties = ddiff["values_changed"]
-        #     for k, v in changed_properties.items():
-        #         print("   ", k, v["new_value"])
-        # except KeyError:
-        #     pass
+        ddiff_drops = DeepDiff(existing_drops, current_drops, ignore_order=True)
+        if ddiff_drops:
+            print("  > CHANGED DROP PROPERTIES...")
+            if ddiff_drops.get("iterable_item_added"):
+                del ddiff_drops["iterable_item_added"]
+            if ddiff_drops.get("iterable_item_removed"):
+                del ddiff_drops["iterable_item_removed"]
+            if ddiff_drops:
+                print(ddiff_drops)
 
-        print(ddiff)
         return
 
     def validate_monster(self):

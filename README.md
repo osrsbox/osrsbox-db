@@ -194,7 +194,7 @@ A description of the properties that each item in the database can have is usefu
 
 ## The Monster Database
 
-Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects. - or accessible directly by parsing the raw JSON files. Additionally, the data is accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
+Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects. - or accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
 
 ### Monster Definition
 
