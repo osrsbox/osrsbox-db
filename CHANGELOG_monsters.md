@@ -2,6 +2,14 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/02: The Fremennik Exiles Feedback Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 3
+    - 9258,Basilisk Sentinel,combatLevel
+    - 9293,Basilisk Knight,combatLevel
+    - 9296,Typhor,combatLevel
+
 ### 2019/09/26: The Fremennik Exiles
 - Added monsters: 11
     - 9258,Basilisk Sentinel

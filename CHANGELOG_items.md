@@ -2,6 +2,15 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/02: The Fremennik Exiles Feedback Changes
+- Added items: 1
+    - 24276,Basilisk knight
+- Removed items: 0
+- Changed items: 3
+    - 10826,Fremennik shield,name
+    - 10827,Fremennik shield,name
+    - 17667,Fremennik shield,name
+
 ### 2019/09/26: The Fremennik Exiles
 - Added items: 20
     - 24253,Clue scroll (elite)
