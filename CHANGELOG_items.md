@@ -2,6 +2,44 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/17: Bounty Hunter Rework Beta
+- Added items: 11
+    - 24277,Mysterious emblem (tier 1)
+    - 24278,Mysterious emblem (tier 1)
+    - 24279,Mysterious emblem (tier 2)
+    - 24280,Mysterious emblem (tier 2)
+    - 24281,Mysterious emblem (tier 3)
+    - 24282,Mysterious emblem (tier 3)
+    - 24283,Mysterious emblem (tier 4)
+    - 24284,Mysterious emblem (tier 4)
+    - 24285,Mysterious emblem (tier 5)
+    - 24286,Mysterious emblem (tier 5)
+    - 24287,Decorative emblem
+- Removed items: 0
+- Changed items: 22
+    - 12746,Mysterious emblem,name|tradeable_on_ge|linked_id_noted|noteable
+    - 12747,Mysterious emblem,name|linked_id_item|noted|noteable|stackable
+    - 12748,Mysterious emblem (tier 2),name
+    - 12749,Mysterious emblem (tier 3),name
+    - 12750,Mysterious emblem (tier 4),name
+    - 12751,Mysterious emblem (tier 5),name
+    - 12752,Mysterious emblem (tier 6),name
+    - 12753,Mysterious emblem (tier 7),name
+    - 12754,Mysterious emblem (tier 8),name
+    - 12755,Mysterious emblem (tier 9),name
+    - 12756,Mysterious emblem (tier 10),name|tradeable_on_ge|linked_id_noted|noteable
+    - 15058,Mysterious emblem,name
+    - 15059,Mysterious emblem (tier 2),name
+    - 15060,Mysterious emblem (tier 3),name
+    - 15061,Mysterious emblem (tier 4),name
+    - 15062,Mysterious emblem (tier 5),name
+    - 15063,Mysterious emblem (tier 6),name
+    - 15064,Mysterious emblem (tier 7),name
+    - 15065,Mysterious emblem (tier 8),name
+    - 15066,Mysterious emblem (tier 9),name
+    - 15067,Mysterious emblem (tier 10),name
+    - 23487,Mysterious emblem (tier 10),name|linked_id_item|noted|noteable|stackable
+
 ### 2019/10/02: The Fremennik Exiles Feedback Changes
 - Added items: 1
     - 24276,Basilisk knight

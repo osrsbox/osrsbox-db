@@ -2,6 +2,13 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/17: Bounty Hunter Rework Beta
+- Added monsters: 0
+- Removed monsters: 1
+    - 293,Dwarf
+- Changed monsters: 1
+    - 8610,Wyrm,models
+
 ### 2019/10/02: The Fremennik Exiles Feedback Changes
 - Added monsters: 0
 - Removed monsters: 0
