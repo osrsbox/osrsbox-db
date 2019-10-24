@@ -1,7 +1,7 @@
 {
     "id": 8713,
     "name": "Sarachnis",
-    "incomplete": true,
+    "incomplete": false,
     "members": true,
     "release_date": "2019-07-04",
     "combat_level": 318,
@@ -20,10 +20,15 @@
     "weakness": [
         "crush"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 430,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "turael",
+        "konar",
+        "nieve",
+        "duradel"
+    ],
     "examine": "I'm going to need a really big newspaper...",
     "wiki_name": "Sarachnis",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sarachnis",
@@ -105,7 +110,7 @@
             "id": 562,
             "name": "Chaos rune",
             "members": true,
-            "quantity": "178-199",
+            "quantity": "178-200",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
@@ -348,7 +353,7 @@
             "id": 213,
             "name": "Grimy kwuarm",
             "members": true,
-            "quantity": "13-14",
+            "quantity": "13-15",
             "noted": true,
             "rarity": "1/32",
             "drop_requirements": null
@@ -429,7 +434,7 @@
             "id": 449,
             "name": "Adamantite ore",
             "members": true,
-            "quantity": "31-40",
+            "quantity": "30-40",
             "noted": true,
             "rarity": "1/32",
             "drop_requirements": null
@@ -501,7 +506,7 @@
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "17265-24958",
+            "quantity": "17265-25000",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
@@ -624,5 +629,5 @@
             "drop_requirements": "forthos-dungeon-only"
         }
     ],
-    "rare_drop_table": false
+    "rare_drop_table": true
 }

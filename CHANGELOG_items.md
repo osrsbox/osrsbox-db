@@ -2,6 +2,52 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/24: The Halloween 2019 Event and BH Beta Changes
+- Added items: 41
+    - 24288,Dagon'hai hat
+    - 24289,Dagon'hai hat
+    - 24290,Dagon'hai hat
+    - 24291,Dagon'hai robe top
+    - 24292,Dagon'hai robe top
+    - 24293,Dagon'hai robe top
+    - 24294,Dagon'hai robe bottom
+    - 24295,Dagon'hai robe bottom
+    - 24296,Dagon'hai robe bottom
+    - 24297,White bed sheets
+    - 24298,Smoke powder
+    - 24299,Shiny glass
+    - 24300,Spooky hood
+    - 24301,Spooky robe
+    - 24302,Spooky skirt
+    - 24303,Spooky gloves
+    - 24304,Spooky boots
+    - 24305,Spooky hood
+    - 24306,Spooky hood
+    - 24307,Spooky robe
+    - 24308,Spooky robe
+    - 24309,Spooky skirt
+    - 24310,Spooky skirt
+    - 24311,Spooky gloves
+    - 24312,Spooky gloves
+    - 24313,Spooky boots
+    - 24314,Spooky boots
+    - 24315,Spookier hood
+    - 24316,Spookier hood
+    - 24317,Spookier robe
+    - 24318,Spookier robe
+    - 24319,Spookier skirt
+    - 24320,Spookier skirt
+    - 24321,Spookier gloves
+    - 24322,Spookier gloves
+    - 24323,Spookier boots
+    - 24324,Spookier boots
+    - 24325,Pumpkin lantern
+    - 24326,Pumpkin lantern
+    - 24327,Skeleton lantern
+    - 24328,Skeleton lantern
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/10/17: Bounty Hunter Rework Beta
 - Added items: 11
     - 24277,Mysterious emblem (tier 1)

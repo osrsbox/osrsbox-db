@@ -160,33 +160,6 @@
             "drop_requirements": null
         },
         {
-            "id": 2361,
-            "name": "Adamantite bar",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 449,
-            "name": "Adamantite ore",
-            "members": true,
-            "quantity": "5",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 451,
-            "name": "Runite ore",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -232,11 +205,20 @@
             "drop_requirements": null
         },
         {
-            "id": 385,
-            "name": "Shark",
+            "id": 2361,
+            "name": "Adamantite bar",
             "members": true,
-            "quantity": "2",
-            "noted": false,
+            "quantity": "3",
+            "noted": true,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 449,
+            "name": "Adamantite ore",
+            "members": true,
+            "quantity": "5",
+            "noted": true,
             "rarity": "1/128",
             "drop_requirements": null
         },
@@ -245,6 +227,24 @@
             "name": "Death talisman",
             "members": true,
             "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "2",
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
@@ -304,5 +304,5 @@
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": false
+    "rare_drop_table": true
 }

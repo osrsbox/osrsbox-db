@@ -101,6 +101,15 @@
             "drop_requirements": null
         },
         {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        {
             "id": 1359,
             "name": "Rune axe",
             "members": true,
@@ -146,21 +155,21 @@
             "drop_requirements": null
         },
         {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "250",
-            "noted": true,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
             "id": 556,
             "name": "Air rune",
             "members": true,
             "quantity": "225",
             "noted": false,
             "rarity": "6/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "36",
+            "noted": false,
+            "rarity": "5/128",
             "drop_requirements": null
         },
         {
@@ -209,24 +218,6 @@
             "drop_requirements": null
         },
         {
-            "id": 566,
-            "name": "Soul rune",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "36",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
             "id": 9143,
             "name": "Adamant bolts",
             "members": true,
@@ -245,21 +236,21 @@
             "drop_requirements": null
         },
         {
-            "id": 5295,
-            "name": "Ranarr seed",
+            "id": 566,
+            "name": "Soul rune",
             "members": true,
-            "quantity": "3",
+            "quantity": "20",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
-            "id": 5300,
-            "name": "Snapdragon seed",
+            "id": 7936,
+            "name": "Pure essence",
             "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
+            "quantity": "250",
+            "noted": true,
+            "rarity": "8/128",
             "drop_requirements": null
         },
         {
@@ -287,24 +278,6 @@
             "quantity": "200",
             "noted": true,
             "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 567,
-            "name": "Unpowered orb",
-            "members": true,
-            "quantity": "75",
-            "noted": true,
-            "rarity": "2/128",
             "drop_requirements": null
         },
         {
@@ -353,8 +326,35 @@
             "drop_requirements": null
         },
         {
+            "id": 567,
+            "name": "Unpowered orb",
+            "members": true,
+            "quantity": "75",
+            "noted": true,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
             "id": 9465,
             "name": "Runite crossbow (u)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5295,
+            "name": "Ranarr seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
             "members": true,
             "quantity": "1",
             "noted": false,
@@ -389,5 +389,5 @@
             "drop_requirements": null
         }
     ],
-    "rare_drop_table": false
+    "rare_drop_table": true
 }

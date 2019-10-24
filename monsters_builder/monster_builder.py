@@ -657,7 +657,9 @@ class BuildMonster:
         self.monster_dict["drops"] = self.drops
 
         # Determine if monster has access to the rare drop table
-        if "{{RareDropTable}}" in self.monster_wikitext[2]:
+        if "{{raredroptable" in self.monster_wikitext[2].lower():
+            self.monster_dict["rare_drop_table"] = True
+        elif "{{gemdroptable" in self.monster_wikitext[2].lower():
             self.monster_dict["rare_drop_table"] = True
         else:
             self.monster_dict["rare_drop_table"] = False

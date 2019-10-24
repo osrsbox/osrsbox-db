@@ -2,6 +2,12 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/24: The Halloween 2019 Event and BH Beta Changes
+- Added monsters: 1
+    - 9300,Goblin
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2019/10/17: Bounty Hunter Rework Beta
 - Added monsters: 0
 - Removed monsters: 1

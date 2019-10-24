@@ -54,15 +54,6 @@
     "magic_damage": 0,
     "drops": [
         {
-            "id": 4129,
-            "name": "Adamant boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
             "id": 4153,
             "name": "Granite maul",
             "members": true,
@@ -105,6 +96,15 @@
             "quantity": "1",
             "noted": false,
             "rarity": "2/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 4129,
+            "name": "Adamant boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
         {
@@ -162,21 +162,21 @@
             "drop_requirements": null
         },
         {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "150",
-            "noted": true,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        {
             "id": 444,
             "name": "Gold ore",
             "members": true,
             "quantity": "10-20",
             "noted": true,
             "rarity": "10/128",
+            "drop_requirements": null
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": true,
+            "quantity": "150",
+            "noted": true,
+            "rarity": "6/128",
             "drop_requirements": null
         },
         {
@@ -252,15 +252,6 @@
             "drop_requirements": null
         },
         {
-            "id": 21724,
-            "name": "Brittle key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/150",
-            "drop_requirements": null
-        },
-        {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -268,7 +259,16 @@
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
+        },
+        {
+            "id": 21724,
+            "name": "Brittle key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/150",
+            "drop_requirements": null
         }
     ],
-    "rare_drop_table": false
+    "rare_drop_table": true
 }
