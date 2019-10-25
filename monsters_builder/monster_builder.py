@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 
 class BuildMonster:
     def __init__(self, monster_id, all_monster_cache_data, all_wikitext_processed,
-                 all_wikitext_raw,  all_db_monster, all_db_items,
+                 all_wikitext_raw,  all_db_monster, all_db_items, known_monsters,
                  export_monster):
         self.monster_id = monster_id
         self.all_monster_cache_data = all_monster_cache_data  # Raw cache data for all monsters
@@ -46,6 +46,7 @@ class BuildMonster:
         self.all_wikitext_raw = all_wikitext_raw  # Raw data dump from OSRS Wiki
         self.all_db_monster = all_db_monster  # The existing monster database contents
         self.all_db_items = all_db_items  # The existing item database contents
+        self.known_monsters = known_monsters  # A list of already known (processed) monsters
         self.export_monster = export_monster  # If the JSON should be exported/created
 
         # For this monster instance, create dictionary for property storage
@@ -80,6 +81,7 @@ class BuildMonster:
             "slayer_level",
             "slayer_xp",
             "slayer_masters",
+            "duplicate",
             "examine",
             "wiki_name",
             "wiki_url",
@@ -119,6 +121,41 @@ class BuildMonster:
             output_dir = Path(config.DOCS_PATH, "monsters-json")
             self.monster_definition.export_json(True, output_dir)
         logging.debug(self.monster_dict)
+
+    def check_duplicate_monster(self) -> MonsterDefinition:
+        """Determine if this is a duplicate monster.
+
+        :return: A MonsterDefinition object.
+        """
+        # Start by setting the duplicate property to False
+        self.monster_dict["duplicate"] = False
+        # Create an MonsterDefinition object
+        monster_definition = MonsterDefinition(**self.monster_dict)
+
+        # Set the monster properties that we want to compare
+        correlation_properties = {
+            "wiki_name": False,
+            "combat_level": False,
+            "members": False
+        }
+
+        # Loop the list of currently (already processed) monsters
+        for known_monster in self.known_monsters:
+            # Do a quick name check before deeper inspection
+            if monster_definition.name != known_monster.name:
+                continue
+
+            # If the cache names are equal, do further inspection
+            for cprop in correlation_properties:
+                if getattr(monster_definition, cprop) == getattr(known_monster, cprop):
+                    correlation_properties[cprop] = True
+
+            # Check is all values in correlation properties are True
+            correlation_result = all(value is True for value in correlation_properties.values())
+            if correlation_result:
+                self.monster_dict["duplicate"] = True
+
+        return monster_definition
 
     def preprocessing(self):
         """Preprocess an monster, and set important object variables.

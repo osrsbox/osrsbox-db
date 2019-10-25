@@ -160,6 +160,10 @@
           ]
         }
       },
+      "duplicate": {
+        "description": "If the monster is a duplicate.",
+        "type": "boolean"
+      },
       "examine":{
         "description":"The examine text of the monster.",
         "type":"string"
@@ -282,6 +286,7 @@
         "slayer_level",
         "slayer_xp",
         "slayer_masters",
+        "duplicate",
         "examine",
         "wiki_name",
         "wiki_url",

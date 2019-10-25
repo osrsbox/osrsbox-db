@@ -55,6 +55,7 @@ class MonsterDefinition:
     slayer_level: int = None
     slayer_xp: int = None
     slayer_masters: List = None
+    duplicate: bool = None
     examine: str = None
     wiki_name: str = None
     wiki_url: str = None

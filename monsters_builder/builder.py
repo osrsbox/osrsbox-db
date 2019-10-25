@@ -60,6 +60,9 @@ def main(export_monster: bool = False):
     with open(all_monster_cache_data_path) as f:
         all_monster_cache_data = json.load(f)
 
+    # Initialize a list of known monsters
+    known_monsters = list()
+
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
@@ -73,11 +76,14 @@ def main(export_monster: bool = False):
                                                all_wikitext_raw,
                                                all_db_monsters,
                                                all_db_items,
+                                               known_monsters,
                                                export_monster)
 
         status = builder.preprocessing()
         if status:
             builder.populate_monster()
+            known_monster = builder.check_duplicate_monster()
+            known_monsters.append(known_monster)
             builder.parse_monster_drops()
             builder.generate_monster_object()
             builder.compare_new_vs_old_monster()

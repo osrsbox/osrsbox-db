@@ -222,6 +222,7 @@ An `MonsterDefinition` object type includes basic monster metadata such as `id`,
 | slayer_level | integer | The slayer level required to kill the monster. | No |
 | slayer_xp | integer | The slayer XP rewarded for a monster kill. | No |
 | slayer_masters | array | The slayer XP rewarded for a monster kill. | Yes |
+| duplicate | boolean | If the monster is a duplicate. | Yes |
 | examine | string | The examine text of the monster. | Yes |
 | wiki_name | string | The OSRS Wiki name for the monster. | Yes |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | Yes |
@@ -297,6 +298,7 @@ A description of the properties that each monster in the database can have is us
         "konar",
         "duradel"
     ],
+    "duplicate": false,
     "examine": "A denizen of the Abyss!",
     "wiki_name": "Abyssal demon (Standard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_demon#Standard",
