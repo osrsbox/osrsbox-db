@@ -62,6 +62,73 @@ class AllItems:
         """
         return len(self.all_items)
 
+    def lookup_by_item_id(self, item_id_number: int) -> ItemDefinition:
+        """Lookup a specific item ID and get the associated ItemDefinition object.
+
+        :param item_id_number: The item ID to lookup.
+        :return: The ItemDefinition object found from the lookup.
+        :raises: KeyError when the item ID cannot be found.
+        """
+        try:
+            item_definition = self.all_items_dict[item_id_number]
+        except KeyError:
+            raise KeyError("Cannot find the provided item ID number...")
+        return item_definition
+
+    def lookup_by_item_name(self, item_name: str, use_wiki_name: bool = False) -> ItemDefinition:
+        """Lookup a specific item name and get the associated ItemDefinition object.
+
+        This function performs a lookup on all items in the database. The property
+        that is queried is the item name, or the `wiki_name` if specified in the
+        method parameters. The only transformation performed on the item name
+        provided is to convert it to lower case to (slightly) improve lookup recall.
+        This function works on a first-come-first-served basis. The first instance
+        where the name matches is returned.
+
+        :param item_name: The item name to lookup.
+        :param use_wiki_name: Whether to use the `wiki_name` instead of `name`.
+        :return: The ItemDefinition object found from the lookup.
+        :raises: ValueError when the item name cannot be found.
+        """
+        # Set the property value
+        lookup_property = "name"
+        if use_wiki_name:
+            lookup_property = "wiki_name"
+
+        for item in self.all_items:
+            # Get the raw property value
+            name_value = getattr(item, lookup_property)
+            # Check property value for None (only effective for wiki_name)
+            if not name_value:
+                continue
+
+            # Check for an exact name match
+            if name_value.lower() == item_name.lower():
+                return item
+
+        raise ValueError("Cannot find the provided item name...")
+
+    def search_item_names(self, keyword: str) -> List[ItemDefinition]:
+        """Keyword search items and get the a list of ItemDefinition objects.
+
+        This function performs a search of all item names in the database. The name
+        and wiki_name properties are searched. Results are returned as a list of
+        ItemDefinition objects. The only transformation performed is converting the
+        search keyword and item name/wiki_name to lower case.
+
+        :param keyword: The keyword to search for.
+        :return: A list of ItemDefinition objects found from the keyword search.
+        :raises: ValueError when no keyword matches can be found.
+        """
+        item_results = list()
+        for item in self.all_items:
+            if keyword.lower() in item.name.lower():
+                item_results.append(item)
+            elif keyword.lower() in item.wiki_name.lower():
+                item_results.append(item)
+
+        return item_results
+
     def load_all_items(self, input_data_file_or_directory: Union[Path, str]) -> None:
         """Load the items database via a JSON file, or directory of JSON files.
 
