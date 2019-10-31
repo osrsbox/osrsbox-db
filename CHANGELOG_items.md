@@ -2,6 +2,18 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/10/31: Mobile Anniversary and BH Hotspots
+- Added items: 4
+    - 24329,Bounty crate
+    - 24330,Bounty crate
+    - 24331,Birthday cake
+    - 24332,Birthday cake
+- Removed items: 0
+- Changed items: 3
+    - 20104,Ankou's leggings,name
+    - 20105,Ankou's leggings,name
+    - 20106,Ankou's leggings,name
+
 ### 2019/10/24: The Halloween 2019 Event and BH Beta Changes
 - Added items: 41
     - 24288,Dagon'hai hat

@@ -483,7 +483,7 @@ The JSON file for each OSRS item can be directly accessed using unique URLs prov
 - [`https://www.osrsbox.com/osrsbox-db/items-json/415.json`](https://www.osrsbox.com/osrsbox-db/items-json/415.json)
 - [`https://www.osrsbox.com/osrsbox-db/items-json/239.json`](https://www.osrsbox.com/osrsbox-db/items-json/239.json)
 
-As displayed by the links above, each item or monster is stored in the `osrsbox-db` repository, under the [`items-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/items-json) folder or [`monsters-json](https://github.com/osrsbox/osrsbox-db/tree/master/docs/monsters-json) folder. In addition to the single JSON files for each item, many other JSON files can be fetched. Some more examples are provided below:
+As displayed by the links above, each item or monster is stored in the `osrsbox-db` repository, under the [`items-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/items-json) folder or [`monsters-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/monsters-json) folder. In addition to the single JSON files for each item, many other JSON files can be fetched. Some more examples are provided below:
 
 - [`https://www.osrsbox.com/osrsbox-db/items-complete.json`](https://www.osrsbox.com/osrsbox-db/items-complete.json)
 - [`https://www.osrsbox.com/osrsbox-db/monsters-complete.json`](https://www.osrsbox.com/osrsbox-db/monsters-complete.json)

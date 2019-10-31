@@ -47,7 +47,7 @@ def extract_monsters_cache_data(compressed_json_file_path: Union[Path, str]):
     # Loop all entries in the decompressed and loaded definition file
     for id_number in definitions:
         json_data = definitions[id_number]
-        if "Attack" in json_data["options"]:
+        if "Attack" in json_data["actions"]:
             # Skip entries with variable menu list color in name
             if "<col" in json_data["name"]:
                 continue

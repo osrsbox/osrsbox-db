@@ -63,6 +63,7 @@ def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
         "type": type_name,
         "type_id": json_data["id"],
         "name": json_data["name"],
+        "model_id": "",
     }
 
     # Set up output list (populated with 1+ model_dict)
@@ -81,8 +82,10 @@ def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
     except KeyError:
         fi_model_list = []
 
-    for model_id in fi_model_list:
-        model_dict["model_id"] = model_id
+    print(type(fi_model_list))
+    print(fi_model_list)
+    if fi_model_list:
+        model_dict["model_id"] = ",".join(str(n) for n in fi_model_list)
         all_models.append(model_dict)
 
     return all_models
@@ -114,11 +117,12 @@ def main(path_to_cache_definitions: Path):
             model_list = extract_model_ids(definitions[id_number], cache_type)
 
             # Loop the extracted model IDs
-            for model in model_list:
-                # Generate a unique key (e.g., items_10_2361, an item with ID of 10 and model ID of 2361)
-                key = f"{model['type']}_{model['type_id']}_{model['model_id']}"
-                # Add to the dict for outputting
-                models_dict[key] = model
+            if model_list:
+                for model in model_list:
+                    # Generate a unique key (e.g., items_10_2361, an item with ID of 10 and model ID of 2361)
+                    key = f"{model['type']}_{model['type_id']}_{model['model_id']}"
+                    # Add to the dict for outputting
+                    models_dict[key] = model
 
     # Save all extracted models ID numbers to JSON file
     out_fi = Path(config.DOCS_PATH / "models-summary.json")

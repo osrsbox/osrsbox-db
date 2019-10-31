@@ -251,7 +251,7 @@ class BuildMonster:
         self.monster_dict["id"] = self.monster_cache_data["id"]
         self.monster_dict["name"] = self.monster_cache_data["name"]
         self.monster_dict["combat_level"] = self.monster_cache_data["combatLevel"]
-        self.monster_dict["size"] = self.monster_cache_data["tileSpacesOccupied"]
+        self.monster_dict["size"] = self.monster_cache_data["size"]
 
     def populate_monster_properties_from_wiki_data(self):
         """Populate item data from a OSRS Wiki Infobox Item template."""
