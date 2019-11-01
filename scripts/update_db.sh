@@ -45,20 +45,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 '
 
-from items_builder import builder
-
 echo -e ">>> Updating item database"
 cd ~/repos/osrsbox-db/items_builder
-python3 builder.py
+python3 builder.py --export_item=True
 
-echo -e ">>> Runing item population scripts..."
-cd ~/repos/osrsbox-db/scripts/update_items
-python3 generate_items_complete.py
-python3 generate_items_slot_files.py
+echo -e ">>> Updating monster database"
+cd ~/repos/osrsbox-db/monsterss_builder
+python3 builder.py --export_monster=True
 
-# Print remaining tasks to user...
-echo -e ">>> REMEMBER YOU STILL NEED TO DO THE FOLLOWING..."
-echo -e ">>> Run pytests"
-echo -e ">>> Increment PyPi package (if required)"
-echo -e ">>> Update PyPi README.md"
-echo -e ">>> git push"
+echo -e ">>> Runing JSON population scripts..."
+cd ~/repos/osrsbox-db/scripts/
+python3 update_json_files.py
