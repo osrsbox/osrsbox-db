@@ -40,63 +40,93 @@ from extraction_tools_cache import osrs_cache_data
 from extraction_tools_cache import osrs_cache_constants
 
 SKIP_EMPTY_NAMES = ("null", "Null", "")
-TYPE_NAME_TO_JSON_KEY = {
-    "objects": "objectModels",
-    "npcs": "models",
-    "items": "inventoryModel",
-}
 
 
-def extract_model_ids(json_data: Dict, type_name: str) -> List[Dict]:
-    """Extracts the model ID number from an item, npc or object from definition data.
+def extract_model_ids_int(json_data: Dict) -> List[Dict]:
+    """Extracts the model ID numbers for NPCs and NPC Chat heads.
 
     :param json_data: A dictionary from an item, npc or object definition file.
-    :param type_name: The type of item definition (items, npcs, or objects).
-    :return all_models: A list of dictionaries containing ID, type, type ID and model ID.
+    :return models: A list of dictionaries containing ID, type, type ID and model ID.
     """
-    # Name check (it is of no use if it is empty/null, so exclude)
-    if json_data["name"] in SKIP_EMPTY_NAMES:
-        return []
+    # Set up output dict (to be populated with 1 or more model_dict)
+    models = {}
 
-    # Setup output dict
-    model_dict = {
-        "type": type_name,
-        "type_id": json_data["id"],
-        "name": json_data["name"],
-        "model_id": "",
+    model_keys = {
+        "item_model_ground": "inventoryModel",
+        "item_model_male0": "maleModel0",
+        "item_model_male1": "maleModel1",
+        "item_model_male2": "maleModel2",
+        "item_model_female0": "femaleModel0",
+        "item_model_female1": "femaleModel1",
+        "item_model_female2": "femaleModel2"
     }
 
-    # Set up output list (populated with 1+ model_dict)
-    all_models = []
+    for model_type, model_key in model_keys.items():
+        model_dict = dict()
+        # Set base properties
+        model_dict["model_type"] = model_type
+        model_dict["model_type_id"] = json_data["id"]
+        model_dict["model_name"] = json_data["name"]
 
-    # Get the specific JSON key which varies between items, npcs and objects
-    json_data_key = TYPE_NAME_TO_JSON_KEY.get(type_name)
+        # Extract NPC model numbers
+        try:
+            model_dict["model_ids"] = json_data[model_key]
+        except KeyError:
+            continue
 
-    if json_data_key is None:
-        return all_models
+        if model_dict["model_ids"] == -1:
+            continue
 
-    try:
-        # The items type is modeled a bit differently and doesn't return a list.
-        # To make everything work under the same process, we wrap it in a list so we can iterate over it.
-        fi_model_list = [json_data[json_data_key]] if type_name == "items" else json_data[json_data_key]
-    except KeyError:
-        fi_model_list = []
+        model_dict_key = f"{model_dict['model_type']}_{model_dict['model_type_id']}_{model_dict['model_ids']}"
 
-    print(type(fi_model_list))
-    print(fi_model_list)
-    if fi_model_list:
-        model_dict["model_id"] = ",".join(str(n) for n in fi_model_list)
-        all_models.append(model_dict)
+        models[model_dict_key] = model_dict
 
-    return all_models
+    # Return a list of model_dicts
+    return models
+
+
+def extract_model_ids_list(json_data: Dict) -> List[Dict]:
+    """Extracts the model ID numbers for ground, male and female item models.
+
+    :param json_data: A dictionary from an item, npc or object definition file.
+    :return models: A list of dictionaries containing ID, type, type ID and model ID.
+    """
+    # Set up output dict (to be populated with 1 or more model_dict)
+    models = {}
+
+    model_keys = {
+        "npc_model": "models",
+        "npc_chathead": "chatheadModels",
+        "object_model": "objectModels"
+    }
+
+    for model_type, model_key in model_keys.items():
+        model_dict = dict()
+        # Set base properties
+        model_dict["model_type"] = model_type
+        model_dict["model_type_id"] = json_data["id"]
+        model_dict["model_name"] = json_data["name"]
+
+        # Extract NPC model numbers
+        try:
+            model_dict["model_ids"] = ", ".join(str(n) for n in json_data[model_key])
+        except KeyError:
+            continue
+
+        model_dict_key = f"{model_dict['model_type']}_{model_dict['model_type_id']}_{model_dict['model_ids']}"
+
+        models[model_dict_key] = model_dict
+
+    # Return a list of model_dicts
+    return models
 
 
 def main(path_to_cache_definitions: Path):
-    """Main function for extracting OSRS model ID numbers.
+    """Main function for extracting OSRS model ID numbers that map to names.
 
-    :param path_to_cache_definitions: File system location of compressed cache definition files.
+    :param path_to_cache_definitions: File location of compressed cache definition files.
     """
-    models_dict = {}
+    all_models = {}
 
     # Loop the three cache dump files (items, npcs, objects)
     for cache_file in osrs_cache_constants.CACHE_DUMP_FILES:
@@ -113,21 +143,31 @@ def main(path_to_cache_definitions: Path):
 
         # Loop all entries in the decompressed and loaded definition file
         for id_number in definitions:
-            # Extract model ID numbers
-            model_list = extract_model_ids(definitions[id_number], cache_type)
+            # Fetch the decompressed JSON data
+            json_data = definitions[id_number]
 
-            # Loop the extracted model IDs
-            if model_list:
-                for model in model_list:
-                    # Generate a unique key (e.g., items_10_2361, an item with ID of 10 and model ID of 2361)
-                    key = f"{model['type']}_{model['type_id']}_{model['model_id']}"
-                    # Add to the dict for outputting
-                    models_dict[key] = model
+            # Name check (it is of no use if it is empty/null, so exclude)
+            if json_data["name"] in SKIP_EMPTY_NAMES:
+                continue
+
+            # Process cache definition based on type (item, npc, object)
+            # Items: Have single interger model IDs
+            # NPCs: Have list of interger model IDs
+            # Objects: Have list of integer model IDs
+            if cache_type == "items":
+                extracted_models = extract_model_ids_int(json_data)
+            elif cache_type == "npcs":
+                extracted_models = extract_model_ids_list(json_data)
+            elif cache_type == "objects":
+                extracted_models = extract_model_ids_list(json_data)
+
+            # Add extracted models to all_models dictionary
+            all_models.update(extracted_models)
 
     # Save all extracted models ID numbers to JSON file
     out_fi = Path(config.DOCS_PATH / "models-summary.json")
     with open(out_fi, "w") as f:
-        json.dump(models_dict, f, indent=4)
+        json.dump(all_models, f, indent=4)
 
 
 if __name__ == "__main__":
