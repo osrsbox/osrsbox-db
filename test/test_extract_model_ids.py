@@ -42,6 +42,7 @@ def test_osrs_cache_extract_model_ids_int(path_to_cache_dir: Path, definition_id
     model_data = model_data[model_data_key]
     assert model_data["model_ids"] == expected
 
+
 @pytest.mark.parametrize("definition_id,cache_type,expected", [
     ("258", "npcs", "17408, 17426, 17418, 17423"),
     ("33690", "objects", "36910, 7766")
