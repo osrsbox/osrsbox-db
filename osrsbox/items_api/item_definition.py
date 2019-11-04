@@ -39,6 +39,7 @@ class ItemDefinition:
     """
     id: int
     name: str
+    incomplete: bool
     members: bool
     tradeable: Optional[bool]
     tradeable_on_ge: bool

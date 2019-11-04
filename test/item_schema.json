@@ -12,6 +12,10 @@
         "description": "Name of the item.",
         "type": "string"
       },
+      "incomplete":{
+        "description":"If the item has incomplete wiki data.",
+        "type":"boolean"
+      },
       "members": {
         "description": "If the item is a members-only.",
         "type": "boolean"
@@ -222,6 +226,7 @@
     "required": [
       "id",
       "name",
+      "incomplete",
       "members",
       "tradeable",
       "tradeable_on_ge",

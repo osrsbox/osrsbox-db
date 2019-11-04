@@ -67,6 +67,7 @@ class BuildItem:
         self.properties = [
             "id",
             "name",
+            "incomplete",
             "members",
             "tradeable",
             "tradeable_on_ge",
@@ -314,6 +315,7 @@ class BuildItem:
                 self.populate_item_properties_from_wiki_data()
                 self.item_dict["equipable_by_player"] = False
                 self.item_dict["equipable_weapon"] = False
+                self.item_dict["incomplete"] = True
                 return True
 
             if self.status == "no_bonuses_available":
@@ -328,6 +330,7 @@ class BuildItem:
                 self.item_dict["equipment"]["requirements"] = None
                 self.item_dict["equipable_by_player"] = True
                 self.item_dict["equipable_weapon"] = False
+                self.item_dict["incomplete"] = True
                 return True
 
             if self.status == "normalized":
@@ -401,6 +404,7 @@ class BuildItem:
         # Set equipable item/weapon properties to false
         self.item_dict["equipable_by_player"] = False
         self.item_dict["equipable_weapon"] = False
+        self.item_dict["incomplete"] = True
 
     def populate_from_cache_data(self):
         """Populate an item using raw cache data.
@@ -465,6 +469,7 @@ class BuildItem:
                 wiki_name = wiki_page_name + " (" + wiki_versioned_name + ")"
         else:
             wiki_name = wiki_page_name
+            self.item_dict["incomplete"] = True
 
         self.item_dict["wiki_name"] = wiki_name
 
@@ -473,6 +478,7 @@ class BuildItem:
             wiki_url = wiki_page_name + "#" + wiki_versioned_name
         else:
             wiki_url = wiki_page_name
+            self.item_dict["incomplete"] = True
 
         wiki_url = wiki_url.replace(" ", "_")
         self.item_dict["wiki_url"] = "https://oldschool.runescape.wiki/w/" + wiki_url
@@ -490,6 +496,7 @@ class BuildItem:
             self.item_dict["weight"] = infobox_cleaner.clean_weight(weight, self.item_id)
         else:
             self.item_dict["weight"] = None
+            self.item_dict["incomplete"] = True
 
         # QUEST: Determine if item is associated with a quest
         quest = None
@@ -510,6 +517,7 @@ class BuildItem:
                 self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
             else:
                 self.item_dict["quest_item"] = False
+                self.item_dict["incomplete"] = True
 
         # Determine the release date of an item
         release_date = None
@@ -522,6 +530,7 @@ class BuildItem:
             self.item_dict["release_date"] = infobox_cleaner.clean_release_date(release_date)
         else:
             self.item_dict["release_date"] = None
+            self.item_dict["incomplete"] = True
 
         # Determine if an item is tradeable
         tradeable = None
@@ -534,6 +543,7 @@ class BuildItem:
             self.item_dict["tradeable"] = infobox_cleaner.clean_boolean(tradeable)
         else:
             self.item_dict["tradeable"] = False
+            self.item_dict["incomplete"] = True
 
         # Determine the examine text of an item
         examine = None
@@ -554,6 +564,7 @@ class BuildItem:
                 self.item_dict["examine"] = infobox_cleaner.clean_examine(examine, self.item_dict["name"])
             else:
                 self.item_dict["examine"] = None
+                self.item_dict["incomplete"] = True
 
         # Determine if item has a buy limit
         if not self.item_dict["tradeable"]:
@@ -565,6 +576,10 @@ class BuildItem:
                     self.item_dict["buy_limit"] = None
             except KeyError:
                 self.item_dict["buy_limit"] = None
+
+        # We finished processing, set incomplete to false if not true
+        if not self.item_dict.get("incomplete"):
+            self.item_dict["incomplete"] = False
 
         return True
 

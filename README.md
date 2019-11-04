@@ -51,6 +51,7 @@ An `ItemDefinition` object type includes basic item metadata such as `id`, `name
 | -------- | --------- | ----------- | -------- |
 | id | integer | Unique OSRS item ID number. | Yes |
 | name | string | Name of the item. | Yes |
+| incomplete | boolean | If the item has incomplete wiki data. | Yes |
 | members | boolean | If the item is a members-only. | Yes |
 | tradeable | boolean | If the item is tradeable (between players and on the GE). | Yes |
 | tradeable_on_ge | boolean | If the item is tradeable (only on GE). | Yes |
@@ -118,6 +119,7 @@ A description of the properties that each item in the database can have is usefu
 {
     "id": 4151,
     "name": "Abyssal whip",
+    "incomplete": false,
     "members": true,
     "tradeable": true,
     "tradeable_on_ge": true,

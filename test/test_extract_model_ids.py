@@ -30,14 +30,28 @@ from extraction_tools_cache import extract_summary_model_ids
 
 
 @pytest.mark.parametrize("definition_id,cache_type,expected", [
-    ("10035", "items", "19453"),
-    ("258", "npcs", "17408,17426,17418,17423"),
-    ("33690", "objects", "36910,7766")
+    ("10035", "items", 19453)
 ])
-def test_osrs_cache_extract_model_ids(path_to_cache_dir: Path, definition_id, cache_type, expected):
+def test_osrs_cache_extract_model_ids_int(path_to_cache_dir: Path, definition_id, cache_type, expected):
     path_to_cache_file = path_to_cache_dir / f"{cache_type}.json"
     definitions = osrs_cache_data.CacheDefinitionFiles(path_to_cache_file)
     definitions.decompress_cache_file()
     json_data = definitions[definition_id]
-    model_data = extract_summary_model_ids.extract_model_ids(json_data, cache_type)[0]
-    assert model_data["model_id"] == expected
+    model_data = extract_summary_model_ids.extract_model_ids_int(json_data)
+    model_data_key = list(model_data.keys())[0]
+    model_data = model_data[model_data_key]
+    assert model_data["model_ids"] == expected
+
+@pytest.mark.parametrize("definition_id,cache_type,expected", [
+    ("258", "npcs", "17408, 17426, 17418, 17423"),
+    ("33690", "objects", "36910, 7766")
+])
+def test_osrs_cache_extract_model_ids_list(path_to_cache_dir: Path, definition_id, cache_type, expected):
+    path_to_cache_file = path_to_cache_dir / f"{cache_type}.json"
+    definitions = osrs_cache_data.CacheDefinitionFiles(path_to_cache_file)
+    definitions.decompress_cache_file()
+    json_data = definitions[definition_id]
+    model_data = extract_summary_model_ids.extract_model_ids_list(json_data)
+    model_data_key = list(model_data.keys())[0]
+    model_data = model_data[model_data_key]
+    assert model_data["model_ids"] == expected
