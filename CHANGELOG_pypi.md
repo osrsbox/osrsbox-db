@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.2.14`: Release for game update: 2019/11/07.
 - `1.2.13`: Added `incomplete` property for items.
 - `1.2.12`: Release for game update: 2019/10/31.
 - `1.2.11`: Update item requirements.

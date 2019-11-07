@@ -2,6 +2,35 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/11/07: Bounty Hunter Rework
+- Added items: 17
+    - 24333,Dagon'hai robes set
+    - 24334,Dagon'hai robes set
+    - 24335,Dagon'hai robes set
+    - 24336,Bounty target teleport
+    - 24337,Bounty target teleport
+    - 24338,Bounty hunter hat (tier 1)
+    - 24339,Bounty hunter hat (tier 1)
+    - 24340,Bounty hunter hat (tier 2)
+    - 24341,Bounty hunter hat (tier 2)
+    - 24342,Bounty hunter hat (tier 3)
+    - 24343,Bounty hunter hat (tier 3)
+    - 24344,Bounty hunter hat (tier 4)
+    - 24345,Bounty hunter hat (tier 4)
+    - 24346,Bounty hunter hat (tier 5)
+    - 24347,Bounty hunter hat (tier 5)
+    - 24348,Bounty hunter hat (tier 6)
+    - 24349,Bounty hunter hat (tier 6)
+- Removed items: 0
+- Changed items: 7
+    - 24300,Spooky hood,equipable
+    - 24301,Spooky robe,equipable
+    - 24302,Spooky skirt,equipable
+    - 24303,Spooky gloves,equipable
+    - 24304,Spooky boots,equipable
+    - 24331,Birthday cake,linked_id_noted|noteable
+    - 24332,Birthday cake,linked_id_item|noted|noteable|stackable
+
 ### 2019/10/31: Mobile Anniversary and BH Hotspots
 - Added items: 4
     - 24329,Bounty crate
