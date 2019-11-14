@@ -2,6 +2,63 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/11/14: The Twisted League
+- Added items: 52
+    - 24361,Scroll box (beginner)
+    - 24362,Scroll box (easy)
+    - 24363,Scroll box (medium)
+    - 24364,Scroll box (hard)
+    - 24365,Scroll box (elite)
+    - 24366,Scroll box (master)
+    - 24367,Cabbage
+    - 24368,Cabbage
+    - 24370,Twisted slayer helmet
+    - 24371,Twisted slayer helmet
+    - 24372,Twisted league dragon trophy
+    - 24373,Twisted league dragon trophy
+    - 24374,Twisted league rune trophy
+    - 24375,Twisted league rune trophy
+    - 24376,Twisted league adamant trophy
+    - 24377,Twisted league adamant trophy
+    - 24378,Twisted league mithril trophy
+    - 24379,Twisted league mithril trophy
+    - 24380,Twisted league steel trophy
+    - 24381,Twisted league steel trophy
+    - 24382,Twisted league iron trophy
+    - 24383,Twisted league iron trophy
+    - 24384,Twisted league bronze trophy
+    - 24385,Twisted league bronze trophy
+    - 24387,Twisted hat (t3)
+    - 24388,Twisted hat (t3)
+    - 24389,Twisted coat (t3)
+    - 24390,Twisted coat (t3)
+    - 24391,Twisted trousers (t3)
+    - 24392,Twisted trousers (t3)
+    - 24393,Twisted boots (t3)
+    - 24394,Twisted boots (t3)
+    - 24395,Twisted cane
+    - 24396,Twisted cane
+    - 24397,Twisted hat (t2)
+    - 24398,Twisted hat (t2)
+    - 24399,Twisted coat (t2)
+    - 24400,Twisted coat (t2)
+    - 24401,Twisted trousers (t2)
+    - 24402,Twisted trousers (t2)
+    - 24403,Twisted boots (t2)
+    - 24404,Twisted boots (t2)
+    - 24405,Twisted hat (t1)
+    - 24406,Twisted hat (t1)
+    - 24407,Twisted coat (t1)
+    - 24408,Twisted coat (t1)
+    - 24409,Twisted trousers (t1)
+    - 24410,Twisted trousers (t1)
+    - 24411,Twisted boots (t1)
+    - 24412,Twisted boots (t1)
+    - 24413,Twisted league banner
+    - 24414,Twisted league banner
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/11/07: Bounty Hunter Rework
 - Added items: 17
     - 24333,Dagon'hai robes set

@@ -31,10 +31,10 @@ from items_builder import item_builder
 os.remove(Path(__file__).stem+".log")
 logging.basicConfig(filename=Path(__file__).stem+".log",
                     level=logging.DEBUG)
-logging.info(">>> Starting invalid_items_parser.py...")
+logging.info(">>> Starting item_builder/builder.py...")
 
 
-def main(export_item: bool = False):
+def main(export: bool = False):
     # Load the current database contents
     items_compltete_file_path = Path(config.DOCS_PATH / "items-complete.json")
     with open(items_compltete_file_path) as f:
@@ -92,7 +92,7 @@ def main(export_item: bool = False):
     # Start processing every item!
     for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 24000:
+        # if int(item_id) < 23800:
         #     continue
 
         # Initialize the BuildItem class, used for all items
@@ -107,10 +107,10 @@ def main(export_item: bool = False):
                                          weapon_stances_data,
                                          invalid_items_data,
                                          known_items,
-                                         export_item)
+                                         export)
 
-        status = builder.preprocessing()
-        if status:
+        preprocessing_status = builder.preprocessing()
+        if preprocessing_status["status"]:
             builder.populate_item()
             known_item = builder.check_duplicate_item()
             known_items.append(known_item)
@@ -134,11 +134,11 @@ def main(export_item: bool = False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build item database.")
-    parser.add_argument('--export_item',
+    parser.add_argument('--export',
                         default=False,
                         required=False,
                         help='A boolean of whether to export data.')
     args = parser.parse_args()
 
-    export_item = args.export_item
-    main(export_item)
+    export = args.export
+    main(export)

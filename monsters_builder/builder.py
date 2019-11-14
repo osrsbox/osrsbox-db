@@ -35,7 +35,7 @@ logging.basicConfig(filename=Path(__file__).stem+".log",
 logging.info(">>> Starting builder.py to build monster database...")
 
 
-def main(export_monster: bool = False):
+def main(export: bool = False):
     # Load the current database contents
     monsters_compltete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
     with open(monsters_compltete_file_path) as f:
@@ -77,7 +77,7 @@ def main(export_monster: bool = False):
                                                all_db_monsters,
                                                all_db_items,
                                                known_monsters,
-                                               export_monster)
+                                               export)
 
         status = builder.preprocessing()
         if status:
@@ -96,11 +96,11 @@ def main(export_monster: bool = False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build monster database.")
-    parser.add_argument('--export_monster',
+    parser.add_argument('--export',
                         default=False,
                         required=False,
                         help='A boolean of whether to export data.')
     args = parser.parse_args()
 
-    export_monster = args.export_monster
-    main(export_monster)
+    export = args.export
+    main(export)

@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import json
 import logging
+from typing import Dict
 from pathlib import Path
 
 import jsonschema
@@ -62,6 +63,7 @@ class BuildItem:
         self.wiki_page_name = None  # The page name the wikitext is from
         self.infobox_version_number = None  # The version used on the wikitext page
         self.status = None  # Used if the item is special (invalid, normalized etc.)
+        self.is_invalid_item = False  # If the item is not found using ID, linked ID or name lookup
 
         # All properties that are available for all items
         self.properties = [
@@ -156,7 +158,7 @@ class BuildItem:
         return item_definition
 
     def generate_item_object(self):
-        """Generate the `ItemDefinition` object from the item_dict dictiornary."""
+        """Generate the `ItemDefinition` object from the item_dict dictionary."""
         self.item_definition = ItemDefinition(**self.item_dict)
 
     def compare_new_vs_old_item(self):
@@ -170,7 +172,7 @@ class BuildItem:
             self.item_definition.export_json(True, output_dir)
         logging.debug(self.item_dict)
 
-    def preprocessing(self):
+    def preprocessing(self) -> Dict:
         """Preprocess an item, and set important object variables.
 
         This function preprocesses every item dumped from the OSRS cache. Various
@@ -179,13 +181,22 @@ class BuildItem:
         is checked if it is a valid item (has a wiki page, is an actual item etc.).
         Finally, the wikitext (from the OSRS wiki) is found by looking up ID, linked
         ID, name, and normalized name. The `Infobox Item` or `Infobox Pet` is then
-        extracted so that the wiki properties can be later processed and populated."""
+        extracted so that the wiki properties can be later processed and populated.
+
+        :return: A dictionary including success and code.
+        """
+        # Initialize dictionary to return preprocessing status
+        return_status = {
+            "status": False,
+            "code": None
+        }
+
         # Set item ID variables
         self.item_id_int = int(self.item_id)  # Item ID number as an integer
         self.item_id_str = str(self.item_id)  # Item ID number as a string
 
         # Load item dictionary of cache data based on item ID
-        # This raw cache data is the baseline informaiton about the specific item
+        # This raw cache data is the baseline information about the specific item
         # and can be considered 100% correct and available for every item
         self.item_cache_data = self.all_item_cache_data[self.item_id_str]
 
@@ -219,19 +230,6 @@ class BuildItem:
             self.item_id_to_process_str = str(self.item_id)
         logging.debug(f"preprocessing: ID to process: {self.item_id_to_process_str}")
 
-        # Try to determine if the item is invalid
-        # This can include not being an actual item, has no wiki page etc.
-        self.is_invalid_item = False
-        try:
-            self.is_invalid_item = self.invalid_items_data[self.item_id_to_process_str]
-            self.is_invalid_item = True
-            self.status = self.invalid_items_data[self.item_id_to_process_str]["status"]
-            self.normalized_name = self.invalid_items_data[self.item_id_to_process_str]["normalized_name"]
-        except KeyError:
-            self.status = None
-            self.normalized_name = None
-        logging.debug(f"preprocessing: Invalid details: {self.is_invalid_item} {self.status} {self.normalized_name}")
-
         # Find the wiki page
         # Set all variables to None (for invalid items)
         self.item_wikitext = None
@@ -242,28 +240,48 @@ class BuildItem:
         if self.all_wikitext_processed.get(self.item_id_str, None):
             self.item_wikitext = self.all_wikitext_processed.get(self.item_id_str, None)
             self.wikitext_found_using = "id"
+            return_status["code"] = "lookup_passed_id"
 
         # Try to find the wiki data using linked_id_item ID number search
         elif self.all_wikitext_processed.get(self.linked_id_item_str, None):
             self.item_wikitext = self.all_wikitext_processed.get(self.linked_id_item_str, None)
             self.wikitext_found_using = "linked_id"
+            return_status["code"] = "lookup_passed_linked_id"
 
         # Try to find the wiki data using direct name search
         elif self.all_wikitext_raw.get(self.item_name, None):
             self.item_wikitext = self.all_wikitext_raw.get(self.item_name, None)
             self.wikitext_found_using = "name"
+            return_status["code"] = "lookup_passed_name"
 
-        # Try to find the wiki data using normalized_name search
-        elif self.all_wikitext_raw.get(self.normalized_name, None):
-            self.item_wikitext = self.all_wikitext_raw.get(self.normalized_name, None)
-            self.wikitext_found_using = "normalized_name"
+        if self.item_id_to_process_str in self.invalid_items_data:
+            # Anything here means item cannot be found by id, linked_id, or name
+            # This can include not being an actual item, has no wiki page etc.
+            # The item must be invalid, handle it accordingly
+            self.is_invalid_item = True
+            try:
+                self.status = self.invalid_items_data[self.item_id_to_process_str]["status"]
+                self.normalized_name = self.invalid_items_data[self.item_id_to_process_str]["normalized_name"]
+            except KeyError:
+                self.status = None
+                self.normalized_name = None
+            logging.debug(f"preprocessing: Invalid item details: {self.is_invalid_item} {self.status} {self.normalized_name}")
+
+            # Try to find the wiki data using normalized_name search
+            if self.all_wikitext_raw.get(self.normalized_name, None):
+                self.item_wikitext = self.all_wikitext_raw.get(self.normalized_name, None)
+                self.wikitext_found_using = "normalized_name"
+                return_status["code"] = "valid"
+            else:
+                return_status["code"] = "lookup_failed"
 
         logging.debug(f"preprocessing: self.item_wikitext found using: {self.wikitext_found_using}")
 
         # If there is no wikitext, and the item is valid, raise a critical error
         if not self.item_wikitext and not self.is_invalid_item:
             logging.critical("CRITICAL: Could not find item_wikitext by id, linked_id_item or name...")
-            return False
+            return_status["code"] = "no_item_wikitext"
+            return return_status
 
         # Parse the infobox item
         infobox_parser = WikitextTemplateParser(self.item_wikitext)
@@ -275,7 +293,8 @@ class BuildItem:
             if not self.has_infobox:
                 self.template = None
                 logging.critical("CRITICAL: Could not find template...")
-                return False
+                return_status["code"] = "no_infobox_template"
+                return return_status
 
         self.is_versioned = infobox_parser.determine_infobox_versions()
         logging.debug(f"preprocessing: Is the infobox versioned: {self.is_versioned}")
@@ -296,14 +315,15 @@ class BuildItem:
         # Set the template
         self.template = infobox_parser.template
 
-        return True
+        return_status["status"] = True
+        return return_status
 
     def populate_item(self):
         """Populate an item after preprocessing it.
 
         This is called for every item in the OSRS cache dump. Start by populating the
         raw metadata from the cache. Then process invalid items, and """
-        # Start by populatng the item from the cache data
+        # Start by populating the item from the cache data
         self.populate_from_cache_data()
 
         # Process an invalid item
@@ -366,11 +386,6 @@ class BuildItem:
                 self.populate_non_wiki_item()
                 return True
 
-            if self.status == "new_item":
-                # Some items are new and have incomplete data, set defaults
-                self.populate_non_wiki_item()
-                return True
-
         if not self.item_dict["equipable"]:
             # Process a normal, non-equipable item
             logging.debug("populate_item: Populating a normal item using wiki data...")
@@ -410,7 +425,8 @@ class BuildItem:
         """Populate an item using raw cache data.
 
         This function takes the raw OSRS cache data for the specific item and loads
-        all availavle properties (that are extracted from the cache)."""
+        all available properties (that are extracted from the cache).
+        """
         # Log, then populate cache properties
         logging.debug("populate_from_cache: Loading item cache data data to object...")
         self.item_dict["id"] = self.item_cache_data["id"]
@@ -517,7 +533,6 @@ class BuildItem:
                 self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
             else:
                 self.item_dict["quest_item"] = False
-                self.item_dict["incomplete"] = True
 
         # Determine the release date of an item
         release_date = None
@@ -762,7 +777,7 @@ class BuildItem:
         return clean_value
 
     def compare_json_files(self, item_definition: ItemDefinition) -> bool:
-        """Print the difference between this item object, and the item that exists in the database."""
+        """Print the difference between this item and the database."""
         # Create JSON out object to compare
         current_json = item_definition.construct_json()
 

@@ -47,11 +47,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 echo -e ">>> Updating item database"
 cd ~/repos/osrsbox-db/items_builder
-python3 builder.py --export_item=True
+python3 builder.py --export=True
 
 echo -e ">>> Updating monster database"
 cd ~/repos/osrsbox-db/monsterss_builder
-python3 builder.py --export_monster=True
+python3 builder.py --export=True
 
 echo -e ">>> Runing JSON population scripts..."
 cd ~/repos/osrsbox-db/scripts/

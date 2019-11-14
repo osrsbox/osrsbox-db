@@ -116,6 +116,14 @@ def extract_wiki_data(categories: List, last_extraction_date: str):
     for page_title, page_revision_date in wiki_page_titles.page_titles.items():
         print(f"  > Progress: {page_titles_count:4d} of {page_titles_total:4d} - Processing: {page_title}")
 
+        # If update_wiki_data.py ever fails:
+        # 1) Set load_files (above) to True
+        # 2) Uncomment code below, and set item ID to last failed item
+        # 3) Use this script: python extract_wiki_data -c Items Pets
+        # if int(page_titles_count) < 5400:
+        #     page_titles_count += 1
+        #     continue
+
         # Convert revision date to datetime object
         last_revision_date = datetime.datetime.strptime(wiki_page_titles[page_title],
                                                         '%Y-%m-%dT%H:%M:%SZ')
@@ -151,4 +159,4 @@ if __name__ == "__main__":
 
     # List of categories to process from the OSRS Wiki
     target_categories = args["categories"]
-    extract_wiki_data(target_categories, "2019-06-14T00:00:00Z")
+    extract_wiki_data(target_categories, "2019-11-07T00:00:00Z")
