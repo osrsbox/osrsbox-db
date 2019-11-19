@@ -48,53 +48,8 @@
     "melee_strength": 90,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 3032,
-            "name": "Agility potion(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 2428,
-            "name": "Attack potion(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 2432,
-            "name": "Defence potion(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 3040,
-            "name": "Magic potion(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "113": {
             "id": 113,
             "name": "Strength potion(4)",
             "members": true,
@@ -103,7 +58,16 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -111,7 +75,43 @@
             "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
+        },
+        "2428": {
+            "id": 2428,
+            "name": "Attack potion(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "2432": {
+            "id": 2432,
+            "name": "Defence potion(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "3032": {
+            "id": 3032,
+            "name": "Agility potion(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "3040": {
+            "id": 3040,
+            "name": "Magic potion(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

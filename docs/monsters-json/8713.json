@@ -10,6 +10,7 @@
     "max_hit": 31,
     "attack_type": [
         "melee",
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -52,278 +53,8 @@
     "melee_strength": 0,
     "ranged_strength": 15,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "8-10",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1127,
-            "name": "Rune platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1147,
-            "name": "Rune med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1319,
-            "name": "Rune 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1149,
-            "name": "Dragon med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/384",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
-            "id": 23528,
-            "name": "Sarachnis cudgel",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/384",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "178-200",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 566,
-            "name": "Soul rune",
-            "members": true,
-            "quantity": "82-100",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "127-198",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "82-100",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "80-100",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": true,
-            "quantity": "457-600",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 9142,
-            "name": "Mithril bolts",
-            "members": true,
-            "quantity": "168-223",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5314,
-            "name": "Maple seed",
-            "members": true,
-            "quantity": "1-2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5288,
-            "name": "Papaya tree seed",
-            "members": true,
-            "quantity": "2-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5296,
-            "name": "Toadflax seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5315,
-            "name": "Yew seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5297,
-            "name": "Irit seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5281,
-            "name": "Belladonna seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5106,
-            "name": "Poison ivy seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5298,
-            "name": "Avantoe seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5280,
-            "name": "Cactus seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 22873,
-            "name": "Potato cactus seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5299,
-            "name": "Kwuarm seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5300,
-            "name": "Snapdragon seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5301,
-            "name": "Cadantine seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5302,
-            "name": "Lantadyme seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 22879,
-            "name": "Snape grass seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 5303,
-            "name": "Dwarf weed seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 5304,
-            "name": "Torstol seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "205": {
             "id": 205,
             "name": "Grimy harralander",
             "members": true,
@@ -332,7 +63,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "207": {
             "id": 207,
             "name": "Grimy ranarr weed",
             "members": true,
@@ -341,7 +72,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "211": {
             "id": 211,
             "name": "Grimy avantoe",
             "members": true,
@@ -350,7 +81,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "213": {
             "id": 213,
             "name": "Grimy kwuarm",
             "members": true,
@@ -359,16 +90,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 3051,
-            "name": "Grimy snapdragon",
-            "members": true,
-            "quantity": "7-10",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+        "215": {
             "id": 215,
             "name": "Grimy cadantine",
             "members": true,
@@ -377,16 +99,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "12-13",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+        "217": {
             "id": 217,
             "name": "Grimy dwarf weed",
             "members": true,
@@ -395,7 +108,7 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "219": {
             "id": 219,
             "name": "Grimy torstol",
             "members": true,
@@ -404,7 +117,7 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "447": {
             "id": 447,
             "name": "Mithril ore",
             "members": true,
@@ -413,25 +126,7 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 1749,
-            "name": "Red dragonhide",
-            "members": true,
-            "quantity": "15-25",
-            "noted": true,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "20-28",
-            "noted": true,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
+        "449": {
             "id": 449,
             "name": "Adamantite ore",
             "members": true,
@@ -440,25 +135,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "20-30",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "20-30",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+        "451": {
             "id": 451,
             "name": "Runite ore",
             "members": true,
@@ -467,34 +144,7 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "23-30",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
-            "members": true,
-            "quantity": "8-10",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 7056,
-            "name": "Egg potato",
-            "members": true,
-            "quantity": "5-8",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
+        "536": {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
@@ -503,7 +153,52 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "560": {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "82-100",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "178-200",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "564": {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "127-198",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "565": {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "80-100",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "566": {
+            "id": 566,
+            "name": "Soul rune",
+            "members": true,
+            "quantity": "82-100",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -512,7 +207,16 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "888": {
+            "id": 888,
+            "name": "Mithril arrow",
+            "members": true,
+            "quantity": "457-600",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "989": {
             "id": 989,
             "name": "Crystal key",
             "members": true,
@@ -521,70 +225,106 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 5940,
-            "name": "Weapon poison(++)",
+        "1127": {
+            "id": 1127,
+            "name": "Rune platebody",
             "members": true,
-            "quantity": "4-6",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1147": {
+            "id": 1147,
+            "name": "Rune med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1149": {
+            "id": 1149,
+            "name": "Dragon med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/384",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "1319": {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "1391": {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": true,
+            "quantity": "8-10",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1617": {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "23-30",
             "noted": true,
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 6291,
-            "name": "Spider carcass",
+        "1619": {
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
-            "quantity": "10",
+            "quantity": "20-30",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1621": {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "20-30",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1623": {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "20-28",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "1749": {
+            "id": 1749,
+            "name": "Red dragonhide",
+            "members": true,
+            "quantity": "15-25",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "2485": {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "12-13",
             "noted": true,
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 23510,
-            "name": "Tattered moon page",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
-            "id": 23512,
-            "name": "Tattered sun page",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
-            "id": 23514,
-            "name": "Tattered temple page",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
-            "id": 23517,
-            "name": "Giant egg sac(full)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
-            "id": 23499,
-            "name": "Grubby key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/15",
-            "drop_requirements": "forthos-dungeon-only"
-        },
-        {
+        "2722": {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -593,16 +333,196 @@
             "rarity": "1/40",
             "drop_requirements": "forthos-dungeon-only"
         },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
+        "3051": {
+            "id": 3051,
+            "name": "Grimy snapdragon",
+            "members": true,
+            "quantity": "7-10",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5106": {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5280": {
+            "id": 5280,
+            "name": "Cactus seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5281": {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5288": {
+            "id": 5288,
+            "name": "Papaya tree seed",
+            "members": true,
+            "quantity": "2-3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5296": {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5297": {
+            "id": 5297,
+            "name": "Irit seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5298": {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5299": {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5300": {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5301": {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5302": {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5303": {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
+        },
+        "5304": {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
+        },
+        "5314": {
+            "id": 5314,
+            "name": "Maple seed",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5315": {
+            "id": 5315,
+            "name": "Yew seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/56.4",
+            "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "5940": {
+            "id": 5940,
+            "name": "Weapon poison(++)",
+            "members": true,
+            "quantity": "4-6",
+            "noted": true,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "6291": {
+            "id": 6291,
+            "name": "Spider carcass",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "7056": {
+            "id": 7056,
+            "name": "Egg potato",
+            "members": true,
+            "quantity": "5-8",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "9142": {
+            "id": 9142,
+            "name": "Mithril bolts",
+            "members": true,
+            "quantity": "168-223",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "9194": {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": true,
+            "quantity": "8-10",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "12073": {
             "id": 12073,
             "name": "Clue scroll (elite)",
             "members": true,
@@ -611,7 +531,88 @@
             "rarity": "1/60",
             "drop_requirements": "forthos-dungeon-only"
         },
-        {
+        "22873": {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "22879": {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
+        },
+        "23083": {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/56.4",
+            "drop_requirements": null
+        },
+        "23495": {
+            "id": 23495,
+            "name": "Sraracha",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/3000",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "23499": {
+            "id": 23499,
+            "name": "Grubby key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/15",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "23510": {
+            "id": 23510,
+            "name": "Tattered moon page",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "23512": {
+            "id": 23512,
+            "name": "Tattered sun page",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "23514": {
+            "id": 23514,
+            "name": "Tattered temple page",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "23517": {
+            "id": 23517,
+            "name": "Giant egg sac(full)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/20",
+            "drop_requirements": "forthos-dungeon-only"
+        },
+        "23525": {
             "id": 23525,
             "name": "Jar of eyes",
             "members": true,
@@ -620,15 +621,15 @@
             "rarity": "1/2000",
             "drop_requirements": "forthos-dungeon-only"
         },
-        {
-            "id": 23495,
-            "name": "Sraracha",
+        "23528": {
+            "id": 23528,
+            "name": "Sarachnis cudgel",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3000",
+            "rarity": "1/384",
             "drop_requirements": "forthos-dungeon-only"
         }
-    ],
+    },
     "rare_drop_table": true
 }

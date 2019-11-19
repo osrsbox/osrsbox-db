@@ -10,6 +10,7 @@
     "max_hit": 16,
     "attack_type": [
         "typeless",
+        "ranged",
         "ranged"
     ],
     "attack_speed": 3,
@@ -48,71 +49,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 1385,
-            "name": "Staff of earth",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1399,
-            "name": "Earth battlestaff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5318,
-            "name": "Potato seed",
-            "members": true,
-            "quantity": "1-4",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 5319,
-            "name": "Onion seed",
-            "members": true,
-            "quantity": "1-4",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 5324,
-            "name": "Cabbage seed",
-            "members": true,
-            "quantity": "1-4",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 5323,
-            "name": "Strawberry seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "199": {
             "id": 199,
             "name": "Grimy guam leaf",
             "members": true,
@@ -121,7 +59,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "203": {
             "id": 203,
             "name": "Grimy tarromin",
             "members": true,
@@ -130,7 +68,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "205": {
             "id": 205,
             "name": "Grimy harralander",
             "members": true,
@@ -139,7 +77,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "211": {
             "id": 211,
             "name": "Grimy avantoe",
             "members": true,
@@ -148,25 +86,16 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 1965,
-            "name": "Cabbage",
+        "526": {
+            "id": 526,
+            "name": "Bones",
             "members": true,
-            "quantity": "11-18",
+            "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "51-244",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
+        "556": {
             "id": 556,
             "name": "Air rune",
             "members": true,
@@ -175,7 +104,7 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "557": {
             "id": 557,
             "name": "Earth rune",
             "members": true,
@@ -184,16 +113,7 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "25",
-            "noted": true,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
+        "560": {
             "id": 560,
             "name": "Death rune",
             "members": true,
@@ -202,7 +122,34 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "51-244",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "1385": {
+            "id": 1385,
+            "name": "Staff of earth",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1399": {
+            "id": 1399,
+            "name": "Earth battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1607": {
             "id": 1607,
             "name": "Sapphire",
             "members": true,
@@ -211,7 +158,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "1623": {
             "id": 1623,
             "name": "Uncut sapphire",
             "members": true,
@@ -220,7 +167,16 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "1965": {
+            "id": 1965,
+            "name": "Cabbage",
+            "members": true,
+            "quantity": "11-18",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "2434": {
             "id": 2434,
             "name": "Prayer potion(4)",
             "members": true,
@@ -229,7 +185,52 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "5318": {
+            "id": 5318,
+            "name": "Potato seed",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "5319": {
+            "id": 5319,
+            "name": "Onion seed",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "5323": {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5324": {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "7936": {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": true,
+            "quantity": "25",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "11941": {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
@@ -238,6 +239,6 @@
             "rarity": "1/3",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

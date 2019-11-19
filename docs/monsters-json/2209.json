@@ -44,8 +44,8 @@
     "melee_strength": 5,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -54,7 +54,16 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "2722": {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "11941": {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
@@ -63,7 +72,7 @@
             "rarity": "1/3",
             "drop_requirements": null
         },
-        {
+        "11942": {
             "id": 11942,
             "name": "Ecumenical key",
             "members": true,
@@ -71,16 +80,7 @@
             "noted": false,
             "rarity": "1/60",
             "drop_requirements": null
-        },
-        {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

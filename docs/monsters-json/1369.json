@@ -46,53 +46,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "1/9.294",
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/13.203",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/18.884",
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20.973",
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/36.744",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "556": {
             "id": 556,
             "name": "Air rune",
             "members": true,
@@ -101,7 +56,43 @@
             "rarity": "1/46.931",
             "drop_requirements": null
         },
-        {
+        "560": {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/36.744",
+            "drop_requirements": null
+        },
+        "561": {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/13.203",
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/18.884",
+            "drop_requirements": null
+        },
+        "563": {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/20.973",
+            "drop_requirements": null
+        },
+        "565": {
             "id": 565,
             "name": "Blood rune",
             "members": true,
@@ -110,16 +101,7 @@
             "rarity": "1/91.154",
             "drop_requirements": null
         },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "1/3.893",
-            "drop_requirements": null
-        },
-        {
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -128,7 +110,7 @@
             "rarity": "1/47.879",
             "drop_requirements": null
         },
-        {
+        "1381": {
             "id": 1381,
             "name": "Staff of air",
             "members": true,
@@ -137,6 +119,6 @@
             "rarity": "1/66.761",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

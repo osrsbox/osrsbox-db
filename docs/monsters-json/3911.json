@@ -46,17 +46,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "237": {
             "id": 237,
             "name": "Unicorn horn",
             "members": true,
@@ -64,7 +55,16 @@
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
+        },
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

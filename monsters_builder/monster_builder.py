@@ -53,7 +53,7 @@ class BuildMonster:
         self.monster_dict = dict()
 
         # For this monster instance, create an empty drops object
-        self.drops = list()
+        self.drops = dict()
 
         # Set some important properties used for monster building
         self.wiki_page_name = None  # The page name the wikitext is from
@@ -108,7 +108,7 @@ class BuildMonster:
             "rare_drop_table"]
 
     def generate_monster_object(self):
-        """Generate the `MonsterDefinition` object from the monster_dict dictiornary."""
+        """Generate the `MonsterDefinition` object from the monster_dict dictionary."""
         self.monster_definition = MonsterDefinition(**self.monster_dict)
 
     def compare_new_vs_old_monster(self):
@@ -167,7 +167,7 @@ class BuildMonster:
         self.monster_id_str = str(self.monster_id)  # Monster ID number as a string
 
         # Load monster dictionary of cache data based on monster ID
-        # This raw cache data is the baseline informaiton about the specific monster
+        # This raw cache data is the baseline information about the specific monster
         # and can be considered 100% correct and available for every monster
         self.monster_cache_data = self.all_monster_cache_data[self.monster_id_str]
 
@@ -237,7 +237,7 @@ class BuildMonster:
 
         This is called for every monster in the OSRS cache dump. Start by populating
         the raw metadata from the cache. Then ... MORE."""
-        # Start by populatng the monster from the cache data
+        # Start by populating the monster from the cache data
         self.populate_from_cache_data()
         self.populate_monster_properties_from_wiki_data()
 
@@ -310,8 +310,7 @@ class BuildMonster:
         if members is not None:
             self.monster_dict["members"] = infobox_cleaner.clean_boolean(members)
         else:
-            self.monster_dict["members"] = None
-            self.monster_dict["incomplete"] = True
+            self.monster_dict["members"] = False
 
         # RELEASE_DATE: Determine the release date of a monster
         release_date = None
@@ -417,7 +416,7 @@ class BuildMonster:
             self.monster_dict["immune_poison"] = False
             self.monster_dict["incomplete"] = True
 
-        # IMMUNE VENOM: Determine the immunity to venon property of a monster
+        # IMMUNE VENOM: Determine the immunity to venom property of a monster
         immune_venom = None
         if self.infobox_version_number is not None:
             key = "immunevenom" + str(self.infobox_version_number)
@@ -605,6 +604,10 @@ class BuildMonster:
         # Extract "dropsline" templates
         self.drops_templates = wikitext_parser.extract_wikitext_template(self.monster_wikitext, "dropsline")
 
+        drops_dict_all = dict()
+        drops_list_ids = list()
+        self.monster_dict["drops"] = dict()
+
         # Loop the found "dropsline" templates
         for template in self.drops_templates:
             # Parse the template
@@ -626,20 +629,20 @@ class BuildMonster:
             # Extract the item drop name
             name = template_parser.extract_infobox_value("Name")
 
-            # Skip any drop line with rare drop table
-            if name.lower() == "rare drop table":
+            # Skip any drop line with classified drop table
+            if name.lower() == "drop table":
                 continue
 
-            # Determine the drop ID
-            id = None
+            # Determine the drop item ID
+            item_id = None
             found = False
             for item in self.all_db_items:
                 if item.name == name or item.wiki_name == name:
                     found = True
-                    id = item.id
+                    item_id = item.id
                     break
             if not found:
-                id = None
+                item_id = None
 
             # Extract the item drop quantity and if the drop is noted
             quantity = template_parser.extract_infobox_value("Quantity")
@@ -654,8 +657,8 @@ class BuildMonster:
             name_notes = template_parser.extract_infobox_value("Namenotes")
             if self.monster_dict["members"]:
                 members = True
-            elif id:
-                if self.all_db_items[id].members:
+            elif item_id:
+                if self.all_db_items[item_id].members:
                     members = True
             elif name_notes:
                 if "{{m}}" in name_notes:
@@ -670,6 +673,14 @@ class BuildMonster:
                     base_value = self.extract_dropsline_header("herbbase")
                 elif "var:seedbase" in rarity:
                     base_value = self.extract_dropsline_header("seedbase")
+                elif "var:uht" in rarity:
+                    base_value = self.extract_dropsline_header("uht")
+                    if not base_value:
+                        base_value = "(22.5/250)/16"  # Temp fix for Lizardman shaman
+                elif "var:bolttipbase" in rarity:
+                    base_value = self.extract_dropsline_header("uht")
+                    if not base_value:
+                        base_value = "(2/128)/40"  # Temp fix for Hydra
             rarity = infobox_cleaner.clean_drop_rarity(rarity, base_value)
 
             # Extract the rarity notes
@@ -678,7 +689,7 @@ class BuildMonster:
 
             # Populate the dictionary
             drop_dict = {
-                "id": id,
+                "id": item_id,
                 "name": name,
                 "members": members,
                 "quantity": quantity,
@@ -687,11 +698,17 @@ class BuildMonster:
                 "drop_requirements": drop_requirements
             }
 
-            # Attach drops dict to the drops list for this monster
-            self.drops.append(drop_dict)
+            # Attach drops dict to the drops object for this monster
+            if item_id:
+                # self.drops[item_id] = drop_dict
+                drops_list_ids.append(str(item_id))
+                drops_dict_all[str(item_id)] = drop_dict
 
-        # Append the drops to the monster dictionary
-        self.monster_dict["drops"] = self.drops
+        # Order list of drops using drops_list_ids
+        drops_list_ids.sort(key=int)
+        for item_id in drops_list_ids:
+            # Add the drops to the monster dictionary
+            self.monster_dict["drops"][item_id] = drops_dict_all[item_id]
 
         # Determine if monster has access to the rare drop table
         if "{{raredroptable" in self.monster_wikitext[2].lower():

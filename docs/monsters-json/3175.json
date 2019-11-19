@@ -9,6 +9,7 @@
     "hitpoints": 124,
     "max_hit": 15,
     "attack_type": [
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -52,134 +53,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "1-6",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "18/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "30",
-            "noted": false,
-            "rarity": "13/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "9",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "11",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "16",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2361,
-            "name": "Adamantite bar",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "30/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5678,
-            "name": "Rune dagger(p+)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "11/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 442,
-            "name": "Silver ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "175": {
             "id": 175,
             "name": "Antipoison(3)",
             "members": true,
@@ -188,7 +63,16 @@
             "rarity": "5/128",
             "drop_requirements": null
         },
-        {
+        "314": {
+            "id": 314,
+            "name": "Feather",
+            "members": true,
+            "quantity": "1-6",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "373": {
             "id": 373,
             "name": "Swordfish",
             "members": true,
@@ -197,52 +81,106 @@
             "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 9431,
-            "name": "Runite limbs",
+        "442": {
+            "id": 442,
+            "name": "Silver ore",
             "members": true,
             "quantity": "1",
+            "noted": false,
+            "rarity": "10/128",
+            "drop_requirements": null
+        },
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "555": {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "30",
+            "noted": false,
+            "rarity": "13/128",
+            "drop_requirements": null
+        },
+        "556": {
+            "id": 556,
+            "name": "Air rune",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": "18/128",
+            "drop_requirements": null
+        },
+        "558": {
+            "id": 558,
+            "name": "Mind rune",
+            "members": true,
+            "quantity": "5",
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 13504,
-            "name": "Ensouled aviansie head",
+        "559": {
+            "id": 559,
+            "name": "Body rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "12",
             "noted": false,
-            "rarity": "1/35",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 23490,
-            "name": "Larran's key",
+        "561": {
+            "id": 561,
+            "name": "Nature rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "9",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "16",
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 11942,
-            "name": "Ecumenical key",
+        "563": {
+            "id": 563,
+            "name": "Law rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "2",
             "noted": false,
-            "rarity": "1/60",
+            "rarity": "4/128",
             "drop_requirements": null
         },
-        {
-            "id": null,
-            "name": "Archaic emblem",
+        "565": {
+            "id": 565,
+            "name": "Blood rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "11",
             "noted": false,
-            "rarity": "1/120",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
+        "2361": {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": "30/128",
+            "drop_requirements": null
+        },
+        "2722": {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -251,7 +189,43 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "5678": {
+            "id": 5678,
+            "name": "Rune dagger(p+)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "11/128",
+            "drop_requirements": null
+        },
+        "9431": {
+            "id": 9431,
+            "name": "Runite limbs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "11942": {
+            "id": 11942,
+            "name": "Ecumenical key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/60",
+            "drop_requirements": null
+        },
+        "13504": {
+            "id": 13504,
+            "name": "Ensouled aviansie head",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/35",
+            "drop_requirements": null
+        },
+        "21257": {
             "id": 21257,
             "name": "Slayer's enchantment",
             "members": true,
@@ -260,7 +234,7 @@
             "rarity": "1/264",
             "drop_requirements": null
         },
-        {
+        "23083": {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
@@ -268,7 +242,16 @@
             "noted": false,
             "rarity": "1/292.2",
             "drop_requirements": null
+        },
+        "23490": {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

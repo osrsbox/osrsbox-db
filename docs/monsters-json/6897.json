@@ -46,80 +46,8 @@
     "melee_strength": 30,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 1151,
-            "name": "Black med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1107,
-            "name": "Black chainbody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1089,
-            "name": "Black plateskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1327,
-            "name": "Black scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "30-60",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "213": {
             "id": 213,
             "name": "Grimy kwuarm",
             "members": true,
@@ -128,7 +56,16 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "215": {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "217": {
             "id": 217,
             "name": "Grimy dwarf weed",
             "members": true,
@@ -137,16 +74,25 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
+        "526": {
+            "id": 526,
+            "name": "Bones",
             "members": true,
             "quantity": "1",
-            "noted": true,
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "564": {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "30-60",
+            "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -155,43 +101,52 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 8778,
-            "name": "Oak plank",
+        "1089": {
+            "id": 1089,
+            "name": "Black plateskirt",
             "members": true,
-            "quantity": "10-20",
-            "noted": true,
-            "rarity": "1/8",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 8780,
-            "name": "Teak plank",
+        "1107": {
+            "id": 1107,
+            "name": "Black chainbody",
             "members": true,
-            "quantity": "5-10",
-            "noted": true,
-            "rarity": "1/8",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 8782,
-            "name": "Mahogany plank",
+        "1151": {
+            "id": 1151,
+            "name": "Black med helm",
             "members": true,
-            "quantity": "4-8",
-            "noted": true,
-            "rarity": "1/8",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 6032,
-            "name": "Compost",
+        "1327": {
+            "id": 1327,
+            "name": "Black scimitar",
             "members": true,
-            "quantity": "60-80",
-            "noted": true,
-            "rarity": "1/8",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "1333": {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/80",
+            "drop_requirements": null
+        },
+        "2357": {
             "id": 2357,
             "name": "Gold bar",
             "members": true,
@@ -200,16 +155,16 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 13395,
-            "name": "Intelligence",
+        "2485": {
+            "id": 2485,
+            "name": "Grimy lantadyme",
             "members": true,
             "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "2722": {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -217,7 +172,52 @@
             "noted": false,
             "rarity": "1/65",
             "drop_requirements": null
+        },
+        "6032": {
+            "id": 6032,
+            "name": "Compost",
+            "members": true,
+            "quantity": "60-80",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "8778": {
+            "id": 8778,
+            "name": "Oak plank",
+            "members": true,
+            "quantity": "10-20",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "8780": {
+            "id": 8780,
+            "name": "Teak plank",
+            "members": true,
+            "quantity": "5-10",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "8782": {
+            "id": 8782,
+            "name": "Mahogany plank",
+            "members": true,
+            "quantity": "4-8",
+            "noted": true,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "13395": {
+            "id": 13395,
+            "name": "Intelligence",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

@@ -46,8 +46,8 @@
     "melee_strength": 30,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -56,16 +56,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 21263,
-            "name": "Copper's crimson collar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
+        "2138": {
             "id": 2138,
             "name": "Raw chicken",
             "members": true,
@@ -73,7 +64,16 @@
             "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
+        },
+        "21263": {
+            "id": 21263,
+            "name": "Copper's crimson collar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

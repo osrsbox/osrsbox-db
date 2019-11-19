@@ -9,6 +9,7 @@
     "hitpoints": 20,
     "max_hit": 2,
     "attack_type": [
+        "ranged",
         "ranged"
     ],
     "attack_speed": 6,
@@ -44,8 +45,8 @@
     "melee_strength": 10,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "3349": {
             "id": 3349,
             "name": "Blamish ochre shell (round)",
             "members": true,
@@ -54,7 +55,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "3359": {
             "id": 3359,
             "name": "Blamish ochre shell (pointed)",
             "members": true,
@@ -63,7 +64,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "3363": {
             "id": 3363,
             "name": "Thin snail",
             "members": true,
@@ -72,6 +73,6 @@
             "rarity": "1/1",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

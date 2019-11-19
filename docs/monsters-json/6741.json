@@ -50,44 +50,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": false,
-            "quantity": "1-7,10",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": false,
-            "quantity": "40",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": false,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": false,
-            "quantity": "35,50",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "313": {
             "id": 313,
             "name": "Fishing bait",
             "members": false,
@@ -96,16 +60,7 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "26",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": false,
@@ -114,7 +69,16 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "532": {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "1-7,10",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "536": {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
@@ -122,7 +86,43 @@
             "noted": false,
             "rarity": null,
             "drop_requirements": null
+        },
+        "556": {
+            "id": 556,
+            "name": "Air rune",
+            "members": false,
+            "quantity": "40",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "35,50",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "564": {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "26",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

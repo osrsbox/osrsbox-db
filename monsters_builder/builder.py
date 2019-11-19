@@ -37,8 +37,8 @@ logging.info(">>> Starting builder.py to build monster database...")
 
 def main(export: bool = False):
     # Load the current database contents
-    monsters_compltete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
-    with open(monsters_compltete_file_path) as f:
+    monsters_complete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
+    with open(monsters_complete_file_path) as f:
         all_db_monsters = json.load(f)
 
     # Load the current item database contents
@@ -66,7 +66,7 @@ def main(export: bool = False):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) < 231:
+        # if int(monster_id) < 8600:
         #     continue
 
         # Initialize the BuildMonster class, used for all monster

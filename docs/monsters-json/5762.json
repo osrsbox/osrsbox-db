@@ -9,6 +9,7 @@
     "hitpoints": 50,
     "max_hit": 6,
     "attack_type": [
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -44,17 +45,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 10533,
-            "name": "Blue egg",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "10531": {
             "id": 10531,
             "name": "Green egg",
             "members": true,
@@ -63,7 +55,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "10532": {
             "id": 10532,
             "name": "Red egg",
             "members": true,
@@ -71,7 +63,16 @@
             "noted": false,
             "rarity": "1/1",
             "drop_requirements": null
+        },
+        "10533": {
+            "id": 10533,
+            "name": "Blue egg",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

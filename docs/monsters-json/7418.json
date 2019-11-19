@@ -46,8 +46,17 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "379": {
+            "id": 379,
+            "name": "Lobster",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -56,52 +65,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 1213,
-            "name": "Rune dagger",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 1301,
-            "name": "Adamant longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 1325,
-            "name": "Steel scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 1207,
-            "name": "Steel dagger",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -110,15 +74,51 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 379,
-            "name": "Lobster",
+        "1207": {
+            "id": 1207,
+            "name": "Steel dagger",
             "members": true,
-            "quantity": "3",
+            "quantity": "1",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
+        },
+        "1213": {
+            "id": 1213,
+            "name": "Rune dagger",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "1301": {
+            "id": 1301,
+            "name": "Adamant longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "1325": {
+            "id": 1325,
+            "name": "Steel scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "1333": {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/50",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

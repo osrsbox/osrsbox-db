@@ -47,17 +47,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 6319,
-            "name": "Proboscis",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "6319": {
             "id": 6319,
             "name": "Proboscis",
             "members": true,
@@ -66,6 +57,6 @@
             "rarity": "1/1",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

@@ -49,8 +49,17 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "314": {
+            "id": 314,
+            "name": "Feather",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": "32/128",
+            "drop_requirements": null
+        },
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -59,7 +68,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "4289": {
             "id": 4289,
             "name": "Raw chicken (undead)",
             "members": true,
@@ -67,25 +76,7 @@
             "noted": false,
             "rarity": "1/1",
             "drop_requirements": null
-        },
-        {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "64/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "32/128",
-            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

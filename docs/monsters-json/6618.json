@@ -10,6 +10,7 @@
     "max_hit": 0,
     "attack_type": [
         "melee",
+        "ranged",
         "ranged"
     ],
     "attack_speed": 3,
@@ -54,80 +55,8 @@
     "melee_strength": 25,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 11929,
-            "name": "Odium shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/256",
-            "drop_requirements": null
-        },
-        {
-            "id": 11932,
-            "name": "Malediction shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/256",
-            "drop_requirements": null
-        },
-        {
-            "id": 1731,
-            "name": "Amulet of power",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 9185,
-            "name": "Rune crossbow",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2501,
-            "name": "Red d'hide body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 868,
-            "name": "Rune knife",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 4698,
-            "name": "Mud rune",
-            "members": true,
-            "quantity": "30",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "2": {
             "id": 2,
             "name": "Cannonball",
             "members": true,
@@ -136,61 +65,7 @@
             "rarity": "4/128",
             "drop_requirements": null
         },
-        {
-            "id": 11212,
-            "name": "Dragon arrow",
-            "members": true,
-            "quantity": "75",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 6705,
-            "name": "Potato with cheese",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2434,
-            "name": "Prayer potion(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2297,
-            "name": "Anchovy pizza",
-            "members": true,
-            "quantity": "8",
-            "noted": true,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "499-3998",
-            "noted": false,
-            "rarity": "18/128",
-            "drop_requirements": null
-        },
-        {
+        "217": {
             "id": 217,
             "name": "Grimy dwarf weed",
             "members": true,
@@ -199,7 +74,7 @@
             "rarity": "8/128",
             "drop_requirements": null
         },
-        {
+        "239": {
             "id": 239,
             "name": "White berries",
             "members": true,
@@ -208,7 +83,16 @@
             "rarity": "6/128",
             "drop_requirements": null
         },
-        {
+        "385": {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "8/128",
+            "drop_requirements": null
+        },
+        "442": {
             "id": 442,
             "name": "Silver ore",
             "members": true,
@@ -217,34 +101,25 @@
             "rarity": "6/128",
             "drop_requirements": null
         },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
+        "526": {
+            "id": 526,
+            "name": "Bones",
             "members": true,
-            "quantity": "6",
-            "noted": true,
-            "rarity": "5/128",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
+        "617": {
+            "id": 617,
+            "name": "Coins",
             "members": true,
-            "quantity": "4",
-            "noted": true,
-            "rarity": "5/128",
+            "quantity": "499-3998",
+            "noted": false,
+            "rarity": "18/128",
             "drop_requirements": null
         },
-        {
-            "id": 1749,
-            "name": "Red dragonhide",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
+        "686": {
             "id": 686,
             "name": "Rusty sword",
             "members": true,
@@ -253,7 +128,16 @@
             "rarity": "4/128",
             "drop_requirements": null
         },
-        {
+        "868": {
+            "id": 868,
+            "name": "Rune knife",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "991": {
             "id": 991,
             "name": "Muddy key",
             "members": true,
@@ -262,52 +146,70 @@
             "rarity": "4/128",
             "drop_requirements": null
         },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
+        "1621": {
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
-            "quantity": "12",
+            "quantity": "6",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "1623": {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "4",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "1731": {
+            "id": 1731,
+            "name": "Amulet of power",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "1749": {
+            "id": 1749,
+            "name": "Red dragonhide",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "2297": {
+            "id": 2297,
+            "name": "Anchovy pizza",
+            "members": true,
+            "quantity": "8",
+            "noted": true,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "2434": {
+            "id": 2434,
+            "name": "Prayer potion(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "8/128",
+            "drop_requirements": null
+        },
+        "2501": {
+            "id": 2501,
+            "name": "Red d'hide body",
+            "members": true,
+            "quantity": "1",
             "noted": false,
             "rarity": "4/128",
             "drop_requirements": null
         },
-        {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 11990,
-            "name": "Fedora",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/3",
-            "drop_requirements": null
-        },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/79.2",
-            "drop_requirements": null
-        },
-        {
+        "2722": {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -316,7 +218,16 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "4698": {
+            "id": 4698,
+            "name": "Mud rune",
+            "members": true,
+            "quantity": "30",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "6685": {
             "id": 6685,
             "name": "Saradomin brew(4)",
             "members": true,
@@ -325,7 +236,7 @@
             "rarity": "1/5",
             "drop_requirements": null
         },
-        {
+        "6691": {
             "id": 6691,
             "name": "Saradomin brew(1)",
             "members": true,
@@ -334,7 +245,52 @@
             "rarity": "1/5",
             "drop_requirements": null
         },
-        {
+        "6705": {
+            "id": 6705,
+            "name": "Potato with cheese",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "8/128",
+            "drop_requirements": null
+        },
+        "9185": {
+            "id": 9185,
+            "name": "Rune crossbow",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "9194": {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "10976": {
+            "id": 10976,
+            "name": "Long bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "11212": {
+            "id": 11212,
+            "name": "Dragon arrow",
+            "members": true,
+            "quantity": "75",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "11929": {
             "id": 11929,
             "name": "Odium shard 2",
             "members": true,
@@ -343,7 +299,7 @@
             "rarity": "1/64",
             "drop_requirements": null
         },
-        {
+        "11932": {
             "id": 11932,
             "name": "Malediction shard 2",
             "members": true,
@@ -351,7 +307,34 @@
             "noted": false,
             "rarity": "1/64",
             "drop_requirements": null
+        },
+        "11941": {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/3",
+            "drop_requirements": null
+        },
+        "11990": {
+            "id": 11990,
+            "name": "Fedora",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "23083": {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/79.2",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

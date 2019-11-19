@@ -53,8 +53,8 @@
     "melee_strength": 30,
     "ranged_strength": 30,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -63,25 +63,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 13392,
-            "name": "Xeric's talisman (inert)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/250",
-            "drop_requirements": null
-        },
-        {
-            "id": 13391,
-            "name": "Lizardman fang",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "14/67",
-            "drop_requirements": null
-        },
-        {
+        "13383": {
             "id": 13383,
             "name": "Xerician fabric",
             "members": true,
@@ -90,7 +72,25 @@
             "rarity": "8/67",
             "drop_requirements": null
         },
-        {
+        "13391": {
+            "id": 13391,
+            "name": "Lizardman fang",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "14/67",
+            "drop_requirements": null
+        },
+        "13392": {
+            "id": 13392,
+            "name": "Xeric's talisman (inert)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/250",
+            "drop_requirements": null
+        },
+        "23083": {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
@@ -99,6 +99,6 @@
             "rarity": "1/245.8",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

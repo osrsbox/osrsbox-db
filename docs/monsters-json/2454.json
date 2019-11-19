@@ -46,26 +46,17 @@
     "melee_strength": 5,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 8851,
-            "name": "Warrior guild token",
-            "members": true,
-            "quantity": "25",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 1159,
-            "name": "Mithril full helm",
+    "drops": {
+        "1071": {
+            "id": 1071,
+            "name": "Mithril platelegs",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "1121": {
             "id": 1121,
             "name": "Mithril platebody",
             "members": true,
@@ -74,15 +65,24 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 1071,
-            "name": "Mithril platelegs",
+        "1159": {
+            "id": 1159,
+            "name": "Mithril full helm",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/1",
             "drop_requirements": null
+        },
+        "8851": {
+            "id": 8851,
+            "name": "Warrior guild token",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

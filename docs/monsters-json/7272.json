@@ -52,71 +52,89 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 4105,
-            "name": "Mystic gloves (dark)",
+    "drops": {
+        "221": {
+            "id": 221,
+            "name": "Eye of newt",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 1391,
-            "name": "Battlestaff",
+        "373": {
+            "id": 373,
+            "name": "Swordfish",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "5/128",
             "drop_requirements": null
         },
-        {
-            "id": 1199,
-            "name": "Adamant kiteshield",
+        "447": {
+            "id": 447,
+            "name": "Mithril ore",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 1397,
-            "name": "Air battlestaff",
+        "554": {
+            "id": 554,
+            "name": "Fire rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "35",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 1430,
-            "name": "Adamant mace",
+        "556": {
+            "id": 556,
+            "name": "Air rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "30",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "2.5/128",
             "drop_requirements": null
         },
-        {
-            "id": 1213,
-            "name": "Rune dagger",
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "17",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "564": {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "260",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "1147": {
             "id": 1147,
             "name": "Rune med helm",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
+        "1163": {
             "id": 1163,
             "name": "Rune full helm",
             "members": true,
@@ -125,313 +143,52 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "30",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "17-30",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "35",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 22879,
-            "name": "Snape grass seed",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5296,
-            "name": "Toadflax seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5297,
-            "name": "Irit seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5281,
-            "name": "Belladonna seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5106,
-            "name": "Poison ivy seed",
+        "1199": {
+            "id": 1199,
+            "name": "Adamant kiteshield",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 5280,
-            "name": "Cactus seed",
+        "1213": {
+            "id": 1213,
+            "name": "Rune dagger",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 22873,
-            "name": "Potato cactus seed",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5298,
-            "name": "Avantoe seed",
+        "1391": {
+            "id": 1391,
+            "name": "Battlestaff",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": "5/128",
             "drop_requirements": null
         },
-        {
-            "id": 5299,
-            "name": "Kwuarm seed",
+        "1397": {
+            "id": 1397,
+            "name": "Air battlestaff",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 5300,
-            "name": "Snapdragon seed",
+        "1430": {
+            "id": 1430,
+            "name": "Adamant mace",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 5301,
-            "name": "Cadantine seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5302,
-            "name": "Lantadyme seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5303,
-            "name": "Dwarf weed seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5304,
-            "name": "Torstol seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "35-300",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 373,
-            "name": "Swordfish",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "65",
-            "noted": true,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 221,
-            "name": "Eye of newt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 447,
-            "name": "Mithril ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+        "2722": {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -440,42 +197,24 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 19677,
-            "name": "Ancient shard",
+        "4105": {
+            "id": 4105,
+            "name": "Mystic gloves (dark)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/266.66",
+            "rarity": ".5/128",
             "drop_requirements": null
         },
-        {
-            "id": 19679,
-            "name": "Dark totem base",
+        "7936": {
+            "id": 7936,
+            "name": "Pure essence",
             "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/391",
-            "drop_requirements": null
-        },
-        {
-            "id": 19681,
-            "name": "Dark totem middle",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/391",
-            "drop_requirements": null
-        },
-        {
-            "id": 19683,
-            "name": "Dark totem top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/391",
+            "quantity": "65",
+            "noted": true,
+            "rarity": "21/128",
             "drop_requirements": null
         }
-    ],
-    "rare_drop_table": false
+    },
+    "rare_drop_table": true
 }

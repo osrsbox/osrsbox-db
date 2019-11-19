@@ -11,6 +11,7 @@
     "attack_type": [
         "crush",
         "ranged",
+        "ranged",
         "magic"
     ],
     "attack_speed": 4,
@@ -48,134 +49,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "12-23",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "10-14",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 5324,
-            "name": "Cabbage seed",
-            "members": true,
-            "quantity": "10-19",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1965,
-            "name": "Cabbage",
-            "members": true,
-            "quantity": "20-59",
-            "noted": true,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2114,
-            "name": "Pineapple",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2253,
-            "name": "Worm batta",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2150,
-            "name": "Swamp toad",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 7939,
-            "name": "Tortoise shell",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 6332,
-            "name": "Mahogany logs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 6333,
-            "name": "Teak logs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 6333,
-            "name": "Teak logs",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -184,34 +59,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 626,
-            "name": "Pink boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 646,
-            "name": "Pink robe bottoms",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 636,
-            "name": "Pink robe top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+        "557": {
             "id": 557,
             "name": "Earth rune",
             "members": true,
@@ -220,16 +68,7 @@
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": true,
-            "quantity": "6-11",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
+        "561": {
             "id": 561,
             "name": "Nature rune",
             "members": true,
@@ -238,7 +77,34 @@
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
+        "626": {
+            "id": 626,
+            "name": "Pink boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "636": {
+            "id": 636,
+            "name": "Pink robe top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "646": {
+            "id": 646,
+            "name": "Pink robe bottoms",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "886": {
             "id": 886,
             "name": "Steel arrow",
             "members": true,
@@ -247,16 +113,16 @@
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 5324,
-            "name": "Cabbage seed",
+        "888": {
+            "id": 888,
+            "name": "Mithril arrow",
             "members": true,
-            "quantity": "10-19",
+            "quantity": "6-11",
             "noted": false,
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
+        "1965": {
             "id": 1965,
             "name": "Cabbage",
             "members": true,
@@ -265,34 +131,7 @@
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 2114,
-            "name": "Pineapple",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2217,
-            "name": "Toad crunchies",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2253,
-            "name": "Worm batta",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
+        "2064": {
             "id": 2064,
             "name": "Blurberry special",
             "members": true,
@@ -301,16 +140,16 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 7939,
-            "name": "Tortoise shell",
+        "2114": {
+            "id": 2114,
+            "name": "Pineapple",
             "members": true,
-            "quantity": "1-3",
+            "quantity": "1",
             "noted": false,
-            "rarity": "8/128",
+            "rarity": "10/128",
             "drop_requirements": null
         },
-        {
+        "2150": {
             "id": 2150,
             "name": "Swamp toad",
             "members": true,
@@ -319,7 +158,34 @@
             "rarity": "5/128",
             "drop_requirements": null
         },
-        {
+        "2217": {
+            "id": 2217,
+            "name": "Toad crunchies",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "10/128",
+            "drop_requirements": null
+        },
+        "2253": {
+            "id": 2253,
+            "name": "Worm batta",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "5324": {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": true,
+            "quantity": "10-19",
+            "noted": false,
+            "rarity": "10/128",
+            "drop_requirements": null
+        },
+        "6332": {
             "id": 6332,
             "name": "Mahogany logs",
             "members": true,
@@ -328,25 +194,7 @@
             "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 10995,
-            "name": "Perfect shell",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 6333,
-            "name": "Teak logs",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
+        "6333": {
             "id": 6333,
             "name": "Teak logs",
             "members": true,
@@ -354,7 +202,25 @@
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
+        },
+        "7939": {
+            "id": 7939,
+            "name": "Tortoise shell",
+            "members": true,
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "8/128",
+            "drop_requirements": null
+        },
+        "10995": {
+            "id": 10995,
+            "name": "Perfect shell",
+            "members": true,
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

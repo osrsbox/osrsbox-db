@@ -46,26 +46,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 1739,
-            "name": "Cowhide",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 2132,
-            "name": "Raw beef",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": false,
@@ -74,7 +56,25 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "1739": {
+            "id": 1739,
+            "name": "Cowhide",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "2132": {
+            "id": 2132,
+            "name": "Raw beef",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "23182": {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
@@ -83,6 +83,6 @@
             "rarity": "1/128",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

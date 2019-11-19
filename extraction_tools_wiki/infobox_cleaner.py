@@ -422,6 +422,24 @@ def clean_drop_rarity(value: str, base_value: str = None) -> str:
         denominator = eval(denominator)
         denominator = round(denominator, 1)
         value = str(numerator) + "/" + str(denominator)
+    elif "var:uht" in value:
+        # 1/#expr:1/(5*#var:uht)round 2
+        numerator = value.split("/")[0]
+        denominator = value.split("#expr:")[1]
+        denominator = re.sub("round[2 ]", "", denominator)
+        denominator = denominator.replace("#var:uht", str(base_value))
+        denominator = eval(denominator)
+        denominator = round(denominator, 1)
+        value = str(numerator) + "/" + str(denominator)
+    elif "var:bolttipbase" in value:
+        # 1/#expr:1/(10*#var:bolttipbase)round1
+        numerator = value.split("/")[0]
+        denominator = value.split("#expr:")[1]
+        denominator = re.sub("round[1 ]", "", denominator)
+        denominator = denominator.replace("#var:bolttipbase", str(base_value))
+        denominator = eval(denominator)
+        denominator = round(denominator, 1)
+        value = str(numerator) + "/" + str(denominator)
     elif "#expr:" in value:
         # 1/#expr:1/(1800 / 3500) round 1
         numerator = value.split("/")[0]

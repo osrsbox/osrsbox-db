@@ -9,8 +9,7 @@
     "hitpoints": 20,
     "max_hit": 2,
     "attack_type": [
-        "crush",
-        "magic"
+        "crush"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -49,116 +48,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 9142,
-            "name": "Mithril bolts",
-            "members": true,
-            "quantity": "2-12",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "36",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "9",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "9",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "29",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "35",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "227": {
             "id": 227,
             "name": "Vial of water",
             "members": true,
@@ -167,16 +58,7 @@
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 1291,
-            "name": "Bronze longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+        "231": {
             "id": 231,
             "name": "Snape grass",
             "members": true,
@@ -185,7 +67,88 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "556": {
+            "id": 556,
+            "name": "Air rune",
+            "members": true,
+            "quantity": "36",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "557": {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "9",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "558": {
+            "id": 558,
+            "name": "Mind rune",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "559": {
+            "id": 559,
+            "name": "Body rune",
+            "members": true,
+            "quantity": "9",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "561": {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "563": {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "35",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "1291": {
+            "id": 1291,
+            "name": "Bronze longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "1594": {
             "id": 1594,
             "name": "Unholy mould",
             "members": true,
@@ -194,7 +157,16 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "9142": {
+            "id": 9142,
+            "name": "Mithril bolts",
+            "members": true,
+            "quantity": "2-12",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "11941": {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
@@ -203,7 +175,7 @@
             "rarity": "1/23",
             "drop_requirements": null
         },
-        {
+        "13471": {
             "id": 13471,
             "name": "Ensouled chaos druid head",
             "members": true,
@@ -212,6 +184,6 @@
             "rarity": "1/35",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

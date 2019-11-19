@@ -10,6 +10,7 @@
     "max_hit": 0,
     "attack_type": [
         "melee",
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -45,8 +46,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -55,7 +56,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "3849": {
             "id": 3849,
             "name": "Rusty casket",
             "members": true,
@@ -64,6 +65,6 @@
             "rarity": "1/1",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

@@ -21,14 +21,14 @@
     ],
     "slayer_monster": true,
     "slayer_level": 1,
-    "slayer_xp": 2,
+    "slayer_xp": 12,
     "slayer_masters": [
         "turael"
     ],
     "duplicate": true,
     "examine": "A dirty rat.",
-    "wiki_name": "Dungeon rat",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Dungeon_rat",
+    "wiki_name": "Dungeon rat (Large)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dungeon_rat#Large",
     "attack_level": 10,
     "strength_level": 10,
     "defence_level": 10,
@@ -48,8 +48,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -58,7 +58,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "2134": {
             "id": 2134,
             "name": "Raw rat meat",
             "members": true,
@@ -67,7 +67,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "7824": {
             "id": 7824,
             "name": "Giant rat bone",
             "members": true,
@@ -76,7 +76,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "23182": {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": true,
@@ -85,6 +85,6 @@
             "rarity": "1/128",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

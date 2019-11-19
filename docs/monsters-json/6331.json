@@ -10,6 +10,7 @@
     "max_hit": 74,
     "attack_type": [
         "melee",
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -54,170 +55,8 @@
     "melee_strength": 100,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 1141,
-            "name": "Steel med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1341,
-            "name": "Black warhammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1339,
-            "name": "Steel warhammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1145,
-            "name": "Adamant med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1345,
-            "name": "Adamant warhammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1181,
-            "name": "Mithril sq shield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "60",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "45",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "25",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "35",
-            "noted": false,
-            "rarity": "29/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "100",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "50",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "250",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "353": {
             "id": 353,
             "name": "Raw mackerel",
             "members": true,
@@ -226,7 +65,115 @@
             "rarity": "2/128",
             "drop_requirements": null
         },
-        {
+        "453": {
+            "id": 453,
+            "name": "Coal",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "557": {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "561": {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "563": {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "250",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "1141": {
+            "id": 1141,
+            "name": "Steel med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "1145": {
+            "id": 1145,
+            "name": "Adamant med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "1181": {
+            "id": 1181,
+            "name": "Mithril sq shield",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "1339": {
+            "id": 1339,
+            "name": "Steel warhammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "1341": {
+            "id": 1341,
+            "name": "Black warhammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "1345": {
+            "id": 1345,
+            "name": "Adamant warhammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "7884": {
             "id": 7884,
             "name": "Troll bone",
             "members": true,
@@ -235,16 +182,7 @@
             "rarity": "1/4",
             "drop_requirements": null
         },
-        {
-            "id": 13483,
-            "name": "Ensouled troll head",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/45",
-            "drop_requirements": null
-        },
-        {
+        "10976": {
             "id": 10976,
             "name": "Long bone",
             "members": true,
@@ -253,7 +191,7 @@
             "rarity": "1/400",
             "drop_requirements": null
         },
-        {
+        "10977": {
             "id": 10977,
             "name": "Curved bone",
             "members": true,
@@ -261,7 +199,16 @@
             "noted": false,
             "rarity": "1/5012.5",
             "drop_requirements": null
+        },
+        "13483": {
+            "id": 13483,
+            "name": "Ensouled troll head",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/45",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

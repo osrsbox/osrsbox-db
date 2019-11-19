@@ -9,6 +9,7 @@
     "hitpoints": 50,
     "max_hit": 9,
     "attack_type": [
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -46,8 +47,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -56,7 +57,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -65,7 +66,16 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "847": {
+            "id": 847,
+            "name": "Willow longbow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "849": {
             "id": 849,
             "name": "Willow shortbow",
             "members": true,
@@ -74,16 +84,7 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 1777,
-            "name": "Bow string",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+        "886": {
             "id": 886,
             "name": "Steel arrow",
             "members": true,
@@ -92,7 +93,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "888": {
             "id": 888,
             "name": "Mithril arrow",
             "members": true,
@@ -101,15 +102,15 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 847,
-            "name": "Willow longbow",
+        "1777": {
+            "id": 1777,
+            "name": "Bow string",
             "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
+            "quantity": "10",
+            "noted": true,
+            "rarity": "1/32",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

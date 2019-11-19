@@ -46,26 +46,17 @@
     "melee_strength": 5,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 8851,
-            "name": "Warrior guild token",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 1155,
-            "name": "Bronze full helm",
+    "drops": {
+        "1075": {
+            "id": 1075,
+            "name": "Bronze platelegs",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "1117": {
             "id": 1117,
             "name": "Bronze platebody",
             "members": true,
@@ -74,15 +65,24 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 1075,
-            "name": "Bronze platelegs",
+        "1155": {
+            "id": 1155,
+            "name": "Bronze full helm",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
+        },
+        "8851": {
+            "id": 8851,
+            "name": "Warrior guild token",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

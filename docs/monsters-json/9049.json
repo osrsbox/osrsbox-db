@@ -44,71 +44,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 592,
-            "name": "Ashes",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 23962,
-            "name": "Crystal shard",
-            "members": true,
-            "quantity": "1-3",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 2351,
-            "name": "Iron bar",
-            "members": true,
-            "quantity": "10-300",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 2353,
-            "name": "Steel bar",
-            "members": true,
-            "quantity": "10-500",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 2359,
-            "name": "Mithril bar",
-            "members": true,
-            "quantity": "20-412",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 2361,
-            "name": "Adamantite bar",
-            "members": true,
-            "quantity": "5-130",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 2363,
-            "name": "Runite bar",
-            "members": true,
-            "quantity": "1-38",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "440": {
             "id": 440,
             "name": "Iron ore",
             "members": true,
@@ -117,7 +54,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "442": {
             "id": 442,
             "name": "Silver ore",
             "members": true,
@@ -126,16 +63,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "100-819",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
+        "444": {
             "id": 444,
             "name": "Gold ore",
             "members": true,
@@ -144,7 +72,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "447": {
             "id": 447,
             "name": "Mithril ore",
             "members": true,
@@ -153,7 +81,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "449": {
             "id": 449,
             "name": "Adamantite ore",
             "members": true,
@@ -162,7 +90,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "451": {
             "id": 451,
             "name": "Runite ore",
             "members": true,
@@ -171,70 +99,16 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
+        "453": {
+            "id": 453,
+            "name": "Coal",
             "members": true,
-            "quantity": "5-100",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "1000-3000",
+            "quantity": "100-819",
             "noted": true,
             "rarity": null,
             "drop_requirements": null
         },
-        {
-            "id": 4699,
-            "name": "Lava rune",
-            "members": true,
-            "quantity": "271-496",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "100-787",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "163-1352",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "75-752",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "77-729",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
+        "560": {
             "id": 560,
             "name": "Death rune",
             "members": true,
@@ -243,7 +117,43 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "561": {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "75-752",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "163-1352",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "563": {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "77-729",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "564": {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "100-787",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "565": {
             "id": 565,
             "name": "Blood rune",
             "members": true,
@@ -252,7 +162,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "566": {
             "id": 566,
             "name": "Soul rune",
             "members": true,
@@ -261,34 +171,16 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
+        "592": {
+            "id": 592,
+            "name": "Ashes",
             "members": true,
-            "quantity": "18-22",
-            "noted": true,
-            "rarity": null,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "15-20",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "13-16",
-            "noted": true,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
+        "1617": {
             "id": 1617,
             "name": "Uncut diamond",
             "members": true,
@@ -297,7 +189,34 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "1619": {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "13-16",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "1621": {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "15-20",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "1623": {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "18-22",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "1631": {
             "id": 1631,
             "name": "Uncut dragonstone",
             "members": true,
@@ -306,7 +225,61 @@
             "rarity": null,
             "drop_requirements": null
         },
-        {
+        "2351": {
+            "id": 2351,
+            "name": "Iron bar",
+            "members": true,
+            "quantity": "10-300",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "2353": {
+            "id": 2353,
+            "name": "Steel bar",
+            "members": true,
+            "quantity": "10-500",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "2359": {
+            "id": 2359,
+            "name": "Mithril bar",
+            "members": true,
+            "quantity": "20-412",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "2361": {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": true,
+            "quantity": "5-130",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "2363": {
+            "id": 2363,
+            "name": "Runite bar",
+            "members": true,
+            "quantity": "1-38",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "4699": {
+            "id": 4699,
+            "name": "Lava rune",
+            "members": true,
+            "quantity": "271-496",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "6571": {
             "id": 6571,
             "name": "Uncut onyx",
             "members": true,
@@ -315,16 +288,34 @@
             "rarity": "1/1850",
             "drop_requirements": null
         },
-        {
-            "id": 23953,
-            "name": "Crystal tool seed",
+        "7936": {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": true,
+            "quantity": "1000-3000",
+            "noted": true,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "9194": {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": true,
+            "quantity": "5-100",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "23760": {
+            "id": 23760,
+            "name": "Smolcano",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/925",
+            "rarity": "1/2775",
             "drop_requirements": null
         },
-        {
+        "23908": {
             "id": 23908,
             "name": "Zalcano shard",
             "members": true,
@@ -333,15 +324,24 @@
             "rarity": "1/925",
             "drop_requirements": null
         },
-        {
-            "id": 23760,
-            "name": "Smolcano",
+        "23953": {
+            "id": 23953,
+            "name": "Crystal tool seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/2775",
+            "rarity": "1/925",
+            "drop_requirements": null
+        },
+        "23962": {
+            "id": 23962,
+            "name": "Crystal shard",
+            "members": true,
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": "1/1",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

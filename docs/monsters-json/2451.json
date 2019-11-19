@@ -44,26 +44,17 @@
     "melee_strength": 5,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 8851,
-            "name": "Warrior guild token",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 1153,
-            "name": "Iron full helm",
+    "drops": {
+        "1067": {
+            "id": 1067,
+            "name": "Iron platelegs",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "1115": {
             "id": 1115,
             "name": "Iron platebody",
             "members": true,
@@ -72,15 +63,24 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 1067,
-            "name": "Iron platelegs",
+        "1153": {
+            "id": 1153,
+            "name": "Iron full helm",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
+        },
+        "8851": {
+            "id": 8851,
+            "name": "Warrior guild token",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

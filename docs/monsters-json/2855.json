@@ -46,17 +46,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "300": {
             "id": 300,
             "name": "Rat's tail",
             "members": false,
@@ -65,7 +56,16 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "7836": {
             "id": 7836,
             "name": "Rat bone",
             "members": true,
@@ -74,7 +74,7 @@
             "rarity": "1/4",
             "drop_requirements": null
         },
-        {
+        "11941": {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
@@ -83,6 +83,6 @@
             "rarity": "1/30",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

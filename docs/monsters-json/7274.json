@@ -10,8 +10,7 @@
     "max_hit": 26,
     "attack_type": [
         "slash",
-        "dragonfire",
-        "ranged"
+        "dragonfire"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -54,8 +53,26 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "239": {
+            "id": 239,
+            "name": "White berries",
+            "members": true,
+            "quantity": "5",
+            "noted": true,
+            "rarity": "4/128",
+            "drop_requirements": null
+        },
+        "451": {
+            "id": 451,
+            "name": "Runite ore",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "536": {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
@@ -64,124 +81,106 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 1749,
-            "name": "Red dragonhide",
+        "556": {
+            "id": 556,
+            "name": "Air rune",
             "members": true,
-            "quantity": "2",
+            "quantity": "105",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": "7/128",
             "drop_requirements": null
         },
-        {
-            "id": 2489,
-            "name": "Red d'hide vamb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 2501,
-            "name": "Red d'hide body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 829,
-            "name": "Adamant javelin",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 1161,
-            "name": "Adamant full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 810,
-            "name": "Adamant dart",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 892,
-            "name": "Rune arrow",
+        "560": {
+            "id": 560,
+            "name": "Death rune",
             "members": true,
             "quantity": "25",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "8/128",
             "drop_requirements": null
         },
-        {
-            "id": 868,
-            "name": "Rune knife",
+        "563": {
+            "id": 563,
+            "name": "Law rune",
             "members": true,
-            "quantity": "10",
+            "quantity": "25",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "7/128",
             "drop_requirements": null
         },
-        {
+        "565": {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "621",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "805": {
             "id": 805,
             "name": "Rune thrownaxe",
             "members": true,
             "quantity": "15",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
+        "810": {
+            "id": 810,
+            "name": "Adamant dart",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "830": {
             "id": 830,
             "name": "Rune javelin",
             "members": true,
             "quantity": "30",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "8/128",
             "drop_requirements": null
         },
-        {
-            "id": 1303,
-            "name": "Rune longsword",
+        "868": {
+            "id": 868,
+            "name": "Rune knife",
             "members": true,
-            "quantity": "1",
+            "quantity": "10",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "2/128",
             "drop_requirements": null
         },
-        {
-            "id": 1163,
-            "name": "Rune full helm",
+        "892": {
+            "id": 892,
+            "name": "Rune arrow",
             "members": true,
-            "quantity": "2",
+            "quantity": "25",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "7/128",
             "drop_requirements": null
         },
-        {
+        "1073": {
             "id": 1073,
             "name": "Adamant platelegs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "7/128",
             "drop_requirements": null
         },
-        {
+        "1127": {
             "id": 1127,
             "name": "Rune platebody",
             "members": true,
@@ -190,7 +189,7 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "1149": {
             "id": 1149,
             "name": "Dragon med helm",
             "members": true,
@@ -199,16 +198,25 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 1305,
-            "name": "Dragon longsword",
+        "1161": {
+            "id": 1161,
+            "name": "Adamant full helm",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": "5/128",
             "drop_requirements": null
         },
-        {
+        "1163": {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "1215": {
             "id": 1215,
             "name": "Dragon dagger",
             "members": true,
@@ -217,151 +225,70 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 11377,
-            "name": "Rune hasta",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+        "1247": {
             "id": 1247,
             "name": "Rune spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "105",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "25",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "25",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 566,
-            "name": "Soul rune",
-            "members": true,
-            "quantity": "25",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "670",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 13510,
-            "name": "Ensouled dragon head",
+        "1303": {
+            "id": 1303,
+            "name": "Rune longsword",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/20",
+            "rarity": "5/128",
             "drop_requirements": null
         },
-        {
-            "id": 239,
-            "name": "White berries",
+        "1305": {
+            "id": 1305,
+            "name": "Dragon longsword",
             "members": true,
-            "quantity": "5",
-            "noted": true,
-            "rarity": "1/32",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 451,
-            "name": "Runite ore",
+        "1749": {
+            "id": 1749,
+            "name": "Red dragonhide",
             "members": true,
             "quantity": "2",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 11237,
-            "name": "Dragon arrowtips",
-            "members": true,
-            "quantity": "8",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "1/1",
             "drop_requirements": null
         },
-        {
-            "id": 19582,
-            "name": "Dragon javelin heads",
-            "members": true,
-            "quantity": "12-15",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+        "2011": {
             "id": 2011,
             "name": "Curry",
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": "8/128",
             "drop_requirements": null
         },
-        {
-            "id": 11232,
-            "name": "Dragon dart tip",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
+        "2489": {
+            "id": 2489,
+            "name": "Red d'hide vamb",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/62.2",
+            "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "2501": {
+            "id": 2501,
+            "name": "Red d'hide body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "2722": {
             "id": 2722,
             "name": "Clue scroll (hard)",
             "members": true,
@@ -370,43 +297,43 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 19677,
-            "name": "Ancient shard",
+        "11232": {
+            "id": 11232,
+            "name": "Dragon dart tip",
+            "members": true,
+            "quantity": "8",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "11237": {
+            "id": 11237,
+            "name": "Dragon arrowtips",
+            "members": true,
+            "quantity": "8",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "11286": {
+            "id": 11286,
+            "name": "Draconic visage",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/143.33",
+            "rarity": "1/10000",
             "drop_requirements": null
         },
-        {
-            "id": 19679,
-            "name": "Dark totem base",
+        "11377": {
+            "id": 11377,
+            "name": "Rune hasta",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/215",
+            "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 19681,
-            "name": "Dark totem middle",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/215",
-            "drop_requirements": null
-        },
-        {
-            "id": 19683,
-            "name": "Dark totem top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/215",
-            "drop_requirements": null
-        },
-        {
+        "12073": {
             "id": 12073,
             "name": "Clue scroll (elite)",
             "members": true,
@@ -415,15 +342,33 @@
             "rarity": "1/500",
             "drop_requirements": null
         },
-        {
-            "id": 11286,
-            "name": "Draconic visage",
+        "13510": {
+            "id": 13510,
+            "name": "Ensouled dragon head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/10000",
+            "rarity": "1/20",
+            "drop_requirements": null
+        },
+        "19582": {
+            "id": 19582,
+            "name": "Dragon javelin heads",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "23083": {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/62.2",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

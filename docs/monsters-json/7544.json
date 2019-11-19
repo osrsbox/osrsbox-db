@@ -46,8 +46,17 @@
     "melee_strength": 30,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "6573": {
+            "id": 6573,
+            "name": "Onyx",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        "20890": {
             "id": 20890,
             "name": "Tekton's journal",
             "members": true,
@@ -56,7 +65,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "20910": {
             "id": 20910,
             "name": "Stinkhorn mushroom",
             "members": true,
@@ -64,79 +73,7 @@
             "noted": false,
             "rarity": "1/1",
             "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Elder (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Twisted (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Kodai (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Revitalisation (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Prayer enhance (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Xeric's aid (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Overload (+)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        {
-            "id": 6573,
-            "name": "Onyx",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

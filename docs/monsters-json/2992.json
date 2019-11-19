@@ -49,26 +49,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 1739,
-            "name": "Cowhide",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 4287,
-            "name": "Raw beef (undead)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "526": {
             "id": 526,
             "name": "Bones",
             "members": true,
@@ -77,7 +59,25 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "1739": {
+            "id": 1739,
+            "name": "Cowhide",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "4287": {
+            "id": 4287,
+            "name": "Raw beef (undead)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "7890": {
             "id": 7890,
             "name": "Undead cow ribs",
             "members": true,
@@ -86,6 +86,6 @@
             "rarity": "1/4",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

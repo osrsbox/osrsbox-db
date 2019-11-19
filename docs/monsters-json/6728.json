@@ -48,62 +48,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 2347,
-            "name": "Hammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 1913,
-            "name": "Dwarven stout",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "5,42",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 2349,
-            "name": "Bronze bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 438,
-            "name": "Tin ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "436": {
             "id": 436,
             "name": "Copper ore",
             "members": true,
@@ -112,16 +58,16 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 453,
-            "name": "Coal",
+        "438": {
+            "id": 438,
+            "name": "Tin ore",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "440": {
             "id": 440,
             "name": "Iron ore",
             "members": true,
@@ -130,7 +76,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "451": {
             "id": 451,
             "name": "Runite ore",
             "members": true,
@@ -139,25 +85,34 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
+        "453": {
+            "id": 453,
+            "name": "Coal",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
+        "557": {
+            "id": 557,
+            "name": "Earth rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "5,42",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
             "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "1271": {
             "id": 1271,
             "name": "Adamant pickaxe",
             "members": true,
@@ -166,7 +121,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "1275": {
             "id": 1275,
             "name": "Rune pickaxe",
             "members": true,
@@ -174,7 +129,52 @@
             "noted": false,
             "rarity": "1/128",
             "drop_requirements": null
+        },
+        "1621": {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1623": {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "1913": {
+            "id": 1913,
+            "name": "Dwarven stout",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "2347": {
+            "id": 2347,
+            "name": "Hammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "2349": {
+            "id": 2349,
+            "name": "Bronze bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

@@ -48,53 +48,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 4115,
-            "name": "Mystic gloves (light)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
-            "id": 2349,
-            "name": "Bronze bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 2351,
-            "name": "Iron bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "436": {
             "id": 436,
             "name": "Copper ore",
             "members": true,
@@ -103,7 +58,7 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "438": {
             "id": 438,
             "name": "Tin ore",
             "members": true,
@@ -112,7 +67,16 @@
             "rarity": "1/32",
             "drop_requirements": null
         },
-        {
+        "440": {
+            "id": 440,
+            "name": "Iron ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "447": {
             "id": 447,
             "name": "Mithril ore",
             "members": true,
@@ -121,106 +85,16 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 5318,
-            "name": "Potato seed",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5319,
-            "name": "Onion seed",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5324,
-            "name": "Cabbage seed",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5322,
-            "name": "Tomato seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5323,
-            "name": "Strawberry seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5320,
-            "name": "Sweetcorn seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        {
-            "id": 5321,
-            "name": "Watermelon seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 22873,
-            "name": "Potato cactus seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 22879,
-            "name": "Snape grass seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 1913,
-            "name": "Dwarven stout",
+        "453": {
+            "id": 453,
+            "name": "Coal",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
-            "id": 2347,
-            "name": "Hammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        {
+        "557": {
             "id": 557,
             "name": "Earth rune",
             "members": true,
@@ -229,7 +103,7 @@
             "rarity": "1/8",
             "drop_requirements": null
         },
-        {
+        "562": {
             "id": 562,
             "name": "Chaos rune",
             "members": true,
@@ -237,7 +111,133 @@
             "noted": false,
             "rarity": "1/32",
             "drop_requirements": null
+        },
+        "1913": {
+            "id": 1913,
+            "name": "Dwarven stout",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "2347": {
+            "id": 2347,
+            "name": "Hammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "2349": {
+            "id": 2349,
+            "name": "Bronze bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "2351": {
+            "id": 2351,
+            "name": "Iron bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "4115": {
+            "id": 4115,
+            "name": "Mystic gloves (light)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
+        },
+        "5318": {
+            "id": 5318,
+            "name": "Potato seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5319": {
+            "id": 5319,
+            "name": "Onion seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5320": {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5321": {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "5322": {
+            "id": 5322,
+            "name": "Tomato seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5323": {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "5324": {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": "1/32",
+            "drop_requirements": null
+        },
+        "22873": {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "22879": {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": true
 }

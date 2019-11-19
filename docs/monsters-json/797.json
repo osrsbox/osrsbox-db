@@ -10,6 +10,7 @@
     "max_hit": 20,
     "attack_type": [
         "crush",
+        "ranged",
         "ranged"
     ],
     "attack_speed": 4,
@@ -50,8 +51,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "10581": {
             "id": 10581,
             "name": "Keris",
             "members": true,
@@ -60,6 +61,6 @@
             "rarity": "1/1",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

@@ -10,7 +10,6 @@
     "max_hit": 0,
     "attack_type": [
         "slash",
-        "ranged",
         "magic"
     ],
     "attack_speed": 6,
@@ -54,125 +53,8 @@
     "melee_strength": 31,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 592,
-            "name": "Ashes",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 11787,
-            "name": "Steam battlestaff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 11824,
-            "name": "Zamorakian spear",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 11791,
-            "name": "Staff of the dead",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/508",
-            "drop_requirements": null
-        },
-        {
-            "id": 11816,
-            "name": "Zamorak hilt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/508",
-            "drop_requirements": null
-        },
-        {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        {
-            "id": 5626,
-            "name": "Adamant arrow(p++)",
-            "members": true,
-            "quantity": "295-300",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 1123,
-            "name": "Adamant platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 1079,
-            "name": "Rune platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 5698,
-            "name": "Dragon dagger(p++)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/127",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "145": {
             "id": 145,
             "name": "Super attack(3)",
             "members": true,
@@ -181,7 +63,7 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
+        "157": {
             "id": 157,
             "name": "Super strength(3)",
             "members": true,
@@ -190,16 +72,7 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
-            "id": 3026,
-            "name": "Super restore(3)",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
+        "189": {
             "id": 189,
             "name": "Zamorak brew(3)",
             "members": true,
@@ -208,34 +81,7 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "19500-20000",
-            "noted": false,
-            "rarity": "36.7/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 5302,
-            "name": "Lantadyme seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
+        "560": {
             "id": 560,
             "name": "Death rune",
             "members": true,
@@ -244,7 +90,7 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
+        "565": {
             "id": 565,
             "name": "Blood rune",
             "members": true,
@@ -253,16 +99,160 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
+        "592": {
+            "id": 592,
+            "name": "Ashes",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/50",
+            "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "617": {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "19500-20000",
+            "noted": false,
+            "rarity": "36.7/127",
+            "drop_requirements": null
+        },
+        "1079": {
+            "id": 1079,
+            "name": "Rune platelegs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "7/127",
+            "drop_requirements": null
+        },
+        "1123": {
+            "id": 1123,
+            "name": "Adamant platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "1333": {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "2485": {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "3026": {
+            "id": 3026,
+            "name": "Super restore(3)",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "5302": {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "5626": {
+            "id": 5626,
+            "name": "Adamant arrow(p++)",
+            "members": true,
+            "quantity": "295-300",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "5698": {
+            "id": 5698,
+            "name": "Dragon dagger(p++)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/127",
+            "drop_requirements": null
+        },
+        "11787": {
+            "id": 11787,
+            "name": "Steam battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/127",
+            "drop_requirements": null
+        },
+        "11791": {
+            "id": 11791,
+            "name": "Staff of the dead",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/508",
+            "drop_requirements": null
+        },
+        "11816": {
+            "id": 11816,
+            "name": "Zamorak hilt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/508",
+            "drop_requirements": null
+        },
+        "11818": {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/762",
+            "drop_requirements": null
+        },
+        "11820": {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/762",
+            "drop_requirements": null
+        },
+        "11822": {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/762",
+            "drop_requirements": null
+        },
+        "11824": {
+            "id": 11824,
+            "name": "Zamorakian spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/127",
+            "drop_requirements": null
+        },
+        "12073": {
             "id": 12073,
             "name": "Clue scroll (elite)",
             "members": true,
@@ -271,7 +261,7 @@
             "rarity": "1/250",
             "drop_requirements": null
         },
-        {
+        "12652": {
             "id": 12652,
             "name": "Pet k'ril tsutsaroth",
             "members": true,
@@ -279,7 +269,16 @@
             "noted": false,
             "rarity": "1/5000",
             "drop_requirements": null
+        },
+        "23083": {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/50",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

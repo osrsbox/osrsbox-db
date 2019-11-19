@@ -47,26 +47,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 2138,
-            "name": "Raw chicken",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "314": {
             "id": 314,
             "name": "Feather",
             "members": false,
@@ -75,7 +57,25 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "2138": {
+            "id": 2138,
+            "name": "Raw chicken",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "7477": {
             "id": 7477,
             "name": "Evil chicken's egg",
             "members": true,
@@ -84,6 +84,6 @@
             "rarity": "1/1",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

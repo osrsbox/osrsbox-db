@@ -7,7 +7,7 @@
     "combat_level": 1,
     "size": 1,
     "hitpoints": 3,
-    "max_hit": 1,
+    "max_hit": 0,
     "attack_type": [
         "stab"
     ],
@@ -46,35 +46,8 @@
     "melee_strength": -42,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 2138,
-            "name": "Raw chicken",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 314,
-            "name": "Feather",
-            "members": false,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "64/128",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "314": {
             "id": 314,
             "name": "Feather",
             "members": false,
@@ -83,7 +56,25 @@
             "rarity": "32/128",
             "drop_requirements": null
         },
-        {
+        "526": {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "2138": {
+            "id": 2138,
+            "name": "Raw chicken",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "2832": {
             "id": 2832,
             "name": "Key (medium)",
             "members": true,
@@ -92,7 +83,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "23182": {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
@@ -101,6 +92,6 @@
             "rarity": "1/300",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

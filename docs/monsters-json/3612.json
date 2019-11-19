@@ -47,17 +47,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 1267,
-            "name": "Iron pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "1267": {
             "id": 1267,
             "name": "Iron pickaxe",
             "members": true,
@@ -66,7 +57,7 @@
             "rarity": "475/500",
             "drop_requirements": null
         },
-        {
+        "1269": {
             "id": 1269,
             "name": "Steel pickaxe",
             "members": true,
@@ -75,16 +66,7 @@
             "rarity": "10/500",
             "drop_requirements": null
         },
-        {
-            "id": 1273,
-            "name": "Mithril pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/500",
-            "drop_requirements": null
-        },
-        {
+        "1271": {
             "id": 1271,
             "name": "Adamant pickaxe",
             "members": true,
@@ -93,7 +75,16 @@
             "rarity": "4/500",
             "drop_requirements": null
         },
-        {
+        "1273": {
+            "id": 1273,
+            "name": "Mithril pickaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "10/500",
+            "drop_requirements": null
+        },
+        "1275": {
             "id": 1275,
             "name": "Rune pickaxe",
             "members": true,
@@ -102,7 +93,7 @@
             "rarity": "1/500",
             "drop_requirements": null
         },
-        {
+        "2801": {
             "id": 2801,
             "name": "Clue scroll (medium)",
             "members": true,
@@ -110,43 +101,7 @@
             "noted": false,
             "rarity": "1/256",
             "drop_requirements": null
-        },
-        {
-            "id": 19677,
-            "name": "Ancient shard",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/306.66",
-            "drop_requirements": null
-        },
-        {
-            "id": 19679,
-            "name": "Dark totem base",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/460",
-            "drop_requirements": null
-        },
-        {
-            "id": 19681,
-            "name": "Dark totem middle",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/460",
-            "drop_requirements": null
-        },
-        {
-            "id": 19683,
-            "name": "Dark totem top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/460",
-            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

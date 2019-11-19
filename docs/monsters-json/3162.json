@@ -52,161 +52,8 @@
     "melee_strength": 12,
     "ranged_strength": 50,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "1-16",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 11826,
-            "name": "Armadyl helmet",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/381",
-            "drop_requirements": null
-        },
-        {
-            "id": 11828,
-            "name": "Armadyl chestplate",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/381",
-            "drop_requirements": null
-        },
-        {
-            "id": 11830,
-            "name": "Armadyl chainskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/381",
-            "drop_requirements": null
-        },
-        {
-            "id": 11810,
-            "name": "Armadyl hilt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/508",
-            "drop_requirements": null
-        },
-        {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        {
-            "id": 2503,
-            "name": "Black d'hide body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 9185,
-            "name": "Rune crossbow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "586-601",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "100-105",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 9144,
-            "name": "Runite bolts",
-            "members": true,
-            "quantity": "20-25",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 9244,
-            "name": "Dragonstone bolts (e)",
-            "members": true,
-            "quantity": "5-10",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "19500-20000",
-            "noted": false,
-            "rarity": "43.7/127",
-            "drop_requirements": null
-        },
-        {
-            "id": 169,
-            "name": "Ranging potion(3)",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "163": {
             "id": 163,
             "name": "Super defence(3)",
             "members": true,
@@ -215,7 +62,16 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
+        "169": {
+            "id": 169,
+            "name": "Ranging potion(3)",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "217": {
             "id": 217,
             "name": "Grimy dwarf weed",
             "members": true,
@@ -224,16 +80,34 @@
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
-            "id": 5303,
-            "name": "Dwarf weed seed",
+        "314": {
+            "id": 314,
+            "name": "Feather",
             "members": true,
-            "quantity": "3",
+            "quantity": "1-16",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "532": {
+            "id": 532,
+            "name": "Big bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "558": {
+            "id": 558,
+            "name": "Mind rune",
+            "members": true,
+            "quantity": "586-601",
             "noted": false,
             "rarity": "8/127",
             "drop_requirements": null
         },
-        {
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -242,7 +116,16 @@
             "rarity": "1.25/127",
             "drop_requirements": null
         },
-        {
+        "892": {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "100-105",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "989": {
             "id": 989,
             "name": "Crystal key",
             "members": true,
@@ -251,7 +134,25 @@
             "rarity": "1/127",
             "drop_requirements": null
         },
-        {
+        "2503": {
+            "id": 2503,
+            "name": "Black d'hide body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "5303": {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "5315": {
             "id": 5315,
             "name": "Yew seed",
             "members": true,
@@ -260,25 +161,34 @@
             "rarity": "1/127",
             "drop_requirements": null
         },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
+        "9144": {
+            "id": 9144,
+            "name": "Runite bolts",
+            "members": true,
+            "quantity": "20-25",
+            "noted": false,
+            "rarity": "8/127",
+            "drop_requirements": null
+        },
+        "9185": {
+            "id": 9185,
+            "name": "Rune crossbow",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/50",
+            "rarity": "8/127",
             "drop_requirements": null
         },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
+        "9244": {
+            "id": 9244,
+            "name": "Dragonstone bolts (e)",
             "members": true,
-            "quantity": "1",
+            "quantity": "5-10",
             "noted": false,
-            "rarity": "1/250",
+            "rarity": "8/127",
             "drop_requirements": null
         },
-        {
+        "10976": {
             "id": 10976,
             "name": "Long bone",
             "members": true,
@@ -287,7 +197,88 @@
             "rarity": "1/400",
             "drop_requirements": null
         },
-        {
+        "10977": {
+            "id": 10977,
+            "name": "Curved bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5012.5",
+            "drop_requirements": null
+        },
+        "11810": {
+            "id": 11810,
+            "name": "Armadyl hilt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/508",
+            "drop_requirements": null
+        },
+        "11818": {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/762",
+            "drop_requirements": null
+        },
+        "11820": {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/762",
+            "drop_requirements": null
+        },
+        "11822": {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/762",
+            "drop_requirements": null
+        },
+        "11826": {
+            "id": 11826,
+            "name": "Armadyl helmet",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/381",
+            "drop_requirements": null
+        },
+        "11828": {
+            "id": 11828,
+            "name": "Armadyl chestplate",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/381",
+            "drop_requirements": null
+        },
+        "11830": {
+            "id": 11830,
+            "name": "Armadyl chainskirt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/381",
+            "drop_requirements": null
+        },
+        "12073": {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/250",
+            "drop_requirements": null
+        },
+        "12649": {
             "id": 12649,
             "name": "Pet kree'arra",
             "members": true,
@@ -296,15 +287,15 @@
             "rarity": "1/5000",
             "drop_requirements": null
         },
-        {
-            "id": 10977,
-            "name": "Curved bone",
+        "23083": {
+            "id": 23083,
+            "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/5012.5",
+            "rarity": "1/50",
             "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

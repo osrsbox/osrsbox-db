@@ -10,6 +10,7 @@
     "max_hit": 0,
     "attack_type": [
         "ranged",
+        "ranged",
         "magic"
     ],
     "attack_speed": 3,
@@ -48,8 +49,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
+    "drops": {
+        "20888": {
             "id": 20888,
             "name": "Nistirio's manifesto",
             "members": true,
@@ -58,7 +59,7 @@
             "rarity": "1/1",
             "drop_requirements": null
         },
-        {
+        "20911": {
             "id": 20911,
             "name": "Endarkened juice",
             "members": true,
@@ -66,25 +67,7 @@
             "noted": false,
             "rarity": "1/1",
             "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Xeric's aid (+)",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": null,
-            "name": "Twisted (+)",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

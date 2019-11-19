@@ -10,7 +10,6 @@
     "max_hit": 46,
     "attack_type": [
         "stab",
-        "ranged",
         "magic"
     ],
     "attack_speed": 4,
@@ -55,98 +54,8 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": [
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        {
-            "id": 12601,
-            "name": "Ring of the gods",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 1275,
-            "name": "Rune pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "12/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1319,
-            "name": "Rune 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 4675,
-            "name": "Ancient staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 11920,
-            "name": "Dragon pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": ".75/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 7158,
-            "name": "Dragon 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": ".5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "400",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "300",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "200",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
+    "drops": {
+        "2": {
             "id": 2,
             "name": "Cannonball",
             "members": true,
@@ -155,88 +64,7 @@
             "rarity": "4/128",
             "drop_requirements": null
         },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "20",
-            "noted": true,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "300",
-            "noted": true,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 225,
-            "name": "Limpwurt root",
-            "members": true,
-            "quantity": "25",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1513,
-            "name": "Magic logs",
-            "members": true,
-            "quantity": "100",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 8778,
-            "name": "Oak plank",
-            "members": true,
-            "quantity": "300",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 536,
-            "name": "Dragon bones",
-            "members": true,
-            "quantity": "100",
-            "noted": true,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 1631,
-            "name": "Uncut dragonstone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 2970,
-            "name": "Mort myre fungus",
-            "members": true,
-            "quantity": "200",
-            "noted": true,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        {
+        "207": {
             "id": 207,
             "name": "Grimy ranarr weed",
             "members": true,
@@ -245,7 +73,70 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "225": {
+            "id": 225,
+            "name": "Limpwurt root",
+            "members": true,
+            "quantity": "25",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "444": {
+            "id": 444,
+            "name": "Gold ore",
+            "members": true,
+            "quantity": "300",
+            "noted": true,
+            "rarity": "6/128",
+            "drop_requirements": null
+        },
+        "532": {
+            "id": 532,
+            "name": "Big bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/1",
+            "drop_requirements": null
+        },
+        "536": {
+            "id": 536,
+            "name": "Dragon bones",
+            "members": true,
+            "quantity": "100",
+            "noted": true,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "560": {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "300",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "562": {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "400",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "565": {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "200",
+            "noted": false,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "617": {
             "id": 617,
             "name": "Coins",
             "members": true,
@@ -254,16 +145,70 @@
             "rarity": "19/128",
             "drop_requirements": null
         },
-        {
-            "id": 11936,
-            "name": "Dark crab",
+        "1275": {
+            "id": 1275,
+            "name": "Rune pickaxe",
             "members": true,
-            "quantity": "8",
+            "quantity": "1",
             "noted": false,
-            "rarity": "10/128",
+            "rarity": "12/128",
             "drop_requirements": null
         },
-        {
+        "1319": {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "3/128",
+            "drop_requirements": null
+        },
+        "1513": {
+            "id": 1513,
+            "name": "Magic logs",
+            "members": true,
+            "quantity": "100",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "1617": {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "1619": {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "20",
+            "noted": true,
+            "rarity": "7/128",
+            "drop_requirements": null
+        },
+        "1631": {
+            "id": 1631,
+            "name": "Uncut dragonstone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "2970": {
+            "id": 2970,
+            "name": "Mort myre fungus",
+            "members": true,
+            "quantity": "200",
+            "noted": true,
+            "rarity": "2/128",
+            "drop_requirements": null
+        },
+        "3024": {
             "id": 3024,
             "name": "Super restore(4)",
             "members": true,
@@ -272,16 +217,16 @@
             "rarity": "10/128",
             "drop_requirements": null
         },
-        {
-            "id": 10925,
-            "name": "Sanfew serum(4)",
+        "4675": {
+            "id": 4675,
+            "name": "Ancient staff",
             "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "5/128",
+            "quantity": "1",
+            "noted": false,
+            "rarity": "3/128",
             "drop_requirements": null
         },
-        {
+        "4850": {
             "id": 4850,
             "name": "Ogre coffin key",
             "members": true,
@@ -290,25 +235,7 @@
             "rarity": "5/128",
             "drop_requirements": null
         },
-        {
-            "id": 6034,
-            "name": "Supercompost",
-            "members": true,
-            "quantity": "100",
-            "noted": true,
-            "rarity": "4.75/128",
-            "drop_requirements": null
-        },
-        {
-            "id": 11940,
-            "name": "Dark fishing bait",
-            "members": true,
-            "quantity": "375",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        {
+        "5289": {
             "id": 5289,
             "name": "Palm tree seed",
             "members": true,
@@ -317,7 +244,7 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "5315": {
             "id": 5315,
             "name": "Yew seed",
             "members": true,
@@ -326,7 +253,7 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
+        "5316": {
             "id": 5316,
             "name": "Magic seed",
             "members": true,
@@ -335,70 +262,16 @@
             "rarity": "1/128",
             "drop_requirements": null
         },
-        {
-            "id": 11941,
-            "name": "Looting bag",
+        "6034": {
+            "id": 6034,
+            "name": "Supercompost",
             "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
+            "quantity": "100",
+            "noted": true,
+            "rarity": "4.75/128",
             "drop_requirements": null
         },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/50",
-            "drop_requirements": null
-        },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/100",
-            "drop_requirements": null
-        },
-        {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/400",
-            "drop_requirements": null
-        },
-        {
-            "id": 13179,
-            "name": "Vet'ion jr.",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/2000",
-            "drop_requirements": null
-        },
-        {
-            "id": 6806,
-            "name": "Skeleton champion scroll",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5000",
-            "drop_requirements": null
-        },
-        {
-            "id": 10977,
-            "name": "Curved bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5012.5",
-            "drop_requirements": null
-        },
-        {
+        "6685": {
             "id": 6685,
             "name": "Saradomin brew(4)",
             "members": true,
@@ -407,7 +280,7 @@
             "rarity": "1/3",
             "drop_requirements": null
         },
-        {
+        "6691": {
             "id": 6691,
             "name": "Saradomin brew(1)",
             "members": true,
@@ -415,7 +288,133 @@
             "noted": false,
             "rarity": "1/3",
             "drop_requirements": null
+        },
+        "6806": {
+            "id": 6806,
+            "name": "Skeleton champion scroll",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5000",
+            "drop_requirements": null
+        },
+        "7158": {
+            "id": 7158,
+            "name": "Dragon 2h sword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": ".5/128",
+            "drop_requirements": null
+        },
+        "8778": {
+            "id": 8778,
+            "name": "Oak plank",
+            "members": true,
+            "quantity": "300",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "10925": {
+            "id": 10925,
+            "name": "Sanfew serum(4)",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": "5/128",
+            "drop_requirements": null
+        },
+        "10976": {
+            "id": 10976,
+            "name": "Long bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/400",
+            "drop_requirements": null
+        },
+        "10977": {
+            "id": 10977,
+            "name": "Curved bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/5012.5",
+            "drop_requirements": null
+        },
+        "11920": {
+            "id": 11920,
+            "name": "Dragon pickaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": ".75/128",
+            "drop_requirements": null
+        },
+        "11936": {
+            "id": 11936,
+            "name": "Dark crab",
+            "members": true,
+            "quantity": "8",
+            "noted": false,
+            "rarity": "10/128",
+            "drop_requirements": null
+        },
+        "11940": {
+            "id": 11940,
+            "name": "Dark fishing bait",
+            "members": true,
+            "quantity": "375",
+            "noted": false,
+            "rarity": "1/128",
+            "drop_requirements": null
+        },
+        "11941": {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/8",
+            "drop_requirements": null
+        },
+        "12073": {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/100",
+            "drop_requirements": null
+        },
+        "12601": {
+            "id": 12601,
+            "name": "Ring of the gods",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/512",
+            "drop_requirements": null
+        },
+        "13179": {
+            "id": 13179,
+            "name": "Vet'ion jr.",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/2000",
+            "drop_requirements": null
+        },
+        "23083": {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": "1/50",
+            "drop_requirements": null
         }
-    ],
+    },
     "rare_drop_table": false
 }

@@ -16,7 +16,7 @@
         "properties":{
           "id":{
             "description":"The ID number of the item drop.",
-            "type":["integer", "null"]
+            "type":"integer"
           },
           "name":{
             "description":"The name of the item drop.",
@@ -27,7 +27,7 @@
             "type":"boolean"
           },
           "quantity":{
-            "description":"The quantity of the item drop (integer, comma-seperated or range).",
+            "description":"The quantity of the item drop (integer, comma-separated or range).",
             "type":["string", "null"],
             "regex":"^[0-9]*([-,][0-9]*)?"
           },
@@ -255,7 +255,7 @@
       },
       "drops":{
         "description":"An array of monster drop objects.",
-        "type":"array",
+        "type":"object",
         "items":{
           "$ref":"#/definitions/drop"
         }

@@ -78,18 +78,17 @@ class MonsterDefinition:
     melee_strength: int = None
     ranged_strength: int = None
     magic_damage: int = None
-    drops: List[MonsterDrop] = None
+    drops: Dict = None
     rare_drop_table: bool = None
 
     @classmethod
     def from_json(cls, json_dict: Dict) -> List[MonsterDrop]:
-        """Convert the list under the 'drops' key into actual :class:`MonsterDrop`"""
-        monster_drops = list()
+        """Convert the dict under the 'drops' key into actual :class:`MonsterDrop`"""
         if json_dict.get("drops"):
-            for drop in json_dict["drops"]:
-                monster_drops.append(MonsterDrop(**drop))
-
-        json_dict["drops"] = monster_drops
+            drops = json_dict.pop("drops")
+            json_dict["drops"] = dict()
+            for item_id, drop in drops.items():
+                json_dict["drops"][item_id] = MonsterDrop(**drop)
 
         return cls(**json_dict)
 
