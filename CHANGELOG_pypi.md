@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.2.17`: Release for game update: 2019/11/21.
 - `1.2.16`: Updated monster drops to use a dictionary.
 - `1.2.15`: Release for game update: 2019/11/14.
 - `1.2.14`: Release for game update: 2019/11/07.

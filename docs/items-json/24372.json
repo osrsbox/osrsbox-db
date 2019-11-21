@@ -13,19 +13,62 @@
     "linked_id_placeholder": 24373,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
-    "equipable_weapon": false,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
-    "weight": null,
+    "weight": 0.0,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": null,
+    "release_date": "2019-11-14",
     "duplicate": false,
-    "examine": null,
-    "wiki_name": null,
-    "wiki_url": null,
-    "equipment": null,
-    "weapon": null
+    "examine": "That's one ferocious looking trophy.",
+    "wiki_name": "Twisted league dragon trophy",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Twisted_league_dragon_trophy",
+    "equipment": {
+        "attack_stab": -100,
+        "attack_slash": -100,
+        "attack_crush": -50,
+        "attack_magic": 0,
+        "attack_ranged": 0,
+        "defence_stab": 0,
+        "defence_slash": 0,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": -10,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "2h",
+        "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "unarmed",
+        "stances": [
+            {
+                "combat_style": "punch",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "kick",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

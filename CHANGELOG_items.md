@@ -2,6 +2,13 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/11/21: Twisted League Stats and Changes
+- Added items: 2
+    - 24415,Death rune
+    - 24416,Rune pouch (l)
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/11/14: The Twisted League
 - Added items: 52
     - 24361,Scroll box (beginner)

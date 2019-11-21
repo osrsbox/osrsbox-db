@@ -40,7 +40,7 @@ def test_cache_data_compression(test_data, expected):
 
 
 @pytest.mark.parametrize("cache_type,expected", [
-    ("items", 24415),
+    ("items", 24417),
     ("npcs", 9300),
     ("objects", 37491)
 ])
