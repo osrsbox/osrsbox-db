@@ -2,6 +2,20 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/11/28: Ashihama Rewards Beta and Sire Changes
+- Added items: 9
+    - 24417,Inquisitor's mace
+    - 24418,Siren's tome
+    - 24419,Inquisitor's great helm
+    - 24420,Inquisitor's hauberk
+    - 24421,Inquisitor's plateskirt
+    - 24422,Nightmare staff
+    - 24423,Harmonised nightmare staff
+    - 24424,Volatile nightmare staff
+    - 24425,Eldritch nightmare staff
+- Removed items: 1
+    - 24415,Death rune
+
 ### 2019/11/21: Twisted League Stats and Changes
 - Added items: 2
     - 24415,Death rune

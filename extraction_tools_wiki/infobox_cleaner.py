@@ -67,11 +67,37 @@ def clean_boolean(value: str) -> bool:
     return value
 
 
-def clean_integer(value: str) -> bool:
-    """Convert an infobox property to a boolean.
+def clean_float(value: str) -> float:
+    """Convert an infobox property to a float.
 
     :param value: Template value extracted in raw wikitext format.
-    :return value: Template value converted into a boolean.
+    :return value: Template value converted into a float.
+    """
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return None
+
+    if isinstance(value, float):
+        return value
+    elif isinstance(value, int):
+        return float(value)
+    elif isinstance(value, str):
+        try:
+            value = float(value)
+        except ValueError:
+            # If unable to cast value, set to 0
+            value = 0.0
+
+    return value
+
+
+def clean_integer(value: str) -> int:
+    """Convert an infobox property to a integer.
+
+    :param value: Template value extracted in raw wikitext format.
+    :return value: Template value converted into a integer.
     """
     if value is None:
         return None

@@ -464,44 +464,42 @@ class BuildMonster:
         if slayer_xp is None:
             slayer_xp = self.extract_infobox_value(self.template, "slayxp")
         if slayer_xp is not None:
-            self.monster_dict["slayer_xp"] = infobox_cleaner.clean_integer(slayer_xp)
+            self.monster_dict["slayer_xp"] = infobox_cleaner.clean_float(slayer_xp)
         else:
             self.monster_dict["slayer_xp"] = None
             self.monster_dict["incomplete"] = True
 
         # SLAYER MONSTER: Determine if the monster can be a slayer task
-        if self.monster_dict["slayer_level"]:
+        if self.monster_dict["slayer_level"] or self.monster_dict["slayer_xp"]:
             self.monster_dict["slayer_monster"] = True
         else:
             self.monster_dict["slayer_monster"] = False
 
+        # Fix for when no slayer level is provided, but the level is 1
+        if self.monster_dict["slayer_monster"]:
+            if not self.monster_dict["slayer_level"]:
+                self.monster_dict["slayer_level"] = 1
+                self.monster_dict["incomplete"] = False
+
         # SLAYER MASTERS: Determine the slayer masters
         if self.monster_dict["slayer_monster"]:
-            # Populate a list of slayer masters
-            # This name is used by this project and the OSRS Wiki
-            slayer_masters = ["turael",
-                              "krystilia",
-                              "mazchna",
-                              "vannaka",
-                              "chaeldar",
-                              "konar",
-                              "nieve",
-                              "duradel"
-                              ]
-
-            # Loop through each slayer master and add to a list if the slayer
-            # master assigns this monster as a slayer task
-            value_list = list()
-            for slayer_master in slayer_masters:
-                value = None
-                if self.infobox_version_number is not None:
-                    key = slayer_master + str(self.infobox_version_number)
-                    value = self.extract_infobox_value(self.template, key)
-                if value is None:
-                    value = self.extract_infobox_value(self.template, slayer_master)
-                if value is not None:
-                    value_list.append(slayer_master)
-                self.monster_dict["slayer_masters"] = value_list
+            slayer_masters = None
+            if self.infobox_version_number is not None:
+                key = "assignedby" + str(self.infobox_version_number)
+                slayer_masters = self.extract_infobox_value(self.template, key)
+            if slayer_masters is None:
+                slayer_masters = self.extract_infobox_value(self.template, "assignedby")
+            if slayer_masters is not None:
+                slayer_masters = slayer_masters.strip()
+                slayer_masters = slayer_masters.split(",")
+                if "steve" in slayer_masters:
+                    slayer_masters.remove("steve")
+                    if "nieve" not in slayer_masters:
+                        slayer_masters.append("nieve")
+                self.monster_dict["slayer_masters"] = slayer_masters
+            else:
+                self.monster_dict["slayer_masters"] = None
+                self.monster_dict["incomplete"] = True
 
         # Set the slayer_masters property to an empty list if not populated
         try:

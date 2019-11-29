@@ -1,7 +1,7 @@
 {
     "id": 680,
     "name": "Giant skeleton",
-    "incomplete": true,
+    "incomplete": false,
     "members": true,
     "release_date": "2007-01-22",
     "combat_level": 80,
@@ -20,10 +20,14 @@
         "crush",
         "magic"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
-    "slayer_xp": 110,
-    "slayer_masters": [],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 110.0,
+    "slayer_masters": [
+        "turael",
+        "mazchna",
+        "vannaka"
+    ],
     "duplicate": false,
     "examine": "A giant skeleton or a giant's skeleton?",
     "wiki_name": "Giant skeleton (Tarn's Lair)",

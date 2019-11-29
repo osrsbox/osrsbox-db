@@ -27,7 +27,7 @@ from pathlib import Path
 
 from osrsbox.items_api import all_items
 
-NUMBER_OF_ITEMS = 22363  # The current number of items being loaded from the db
+NUMBER_OF_ITEMS = 22372  # The current number of items being loaded from the db
 
 
 def test_all_items_load_items_json(path_to_docs_dir: Path):

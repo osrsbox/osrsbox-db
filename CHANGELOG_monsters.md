@@ -2,6 +2,12 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/11/28: Ashihama Rewards Beta and Sire Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 1
+    - 5888,Abyssal Sire,actions
+
 ### 2019/11/21: Twisted League Stats and Changes
 - Added monsters: 0
 - Removed monsters: 0
