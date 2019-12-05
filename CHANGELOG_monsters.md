@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/12/05: Game Improvements and Nightmare Beta Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2019/11/28: Ashihama Rewards Beta and Sire Changes
 - Added monsters: 0
 - Removed monsters: 0

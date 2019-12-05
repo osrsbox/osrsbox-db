@@ -492,6 +492,7 @@ class BuildMonster:
             if slayer_masters is not None:
                 slayer_masters = slayer_masters.strip()
                 slayer_masters = slayer_masters.split(",")
+                slayer_masters = [x.strip() for x in slayer_masters]
                 if "steve" in slayer_masters:
                     slayer_masters.remove("steve")
                     if "nieve" not in slayer_masters:

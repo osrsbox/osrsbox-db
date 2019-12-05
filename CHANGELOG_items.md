@@ -2,6 +2,14 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/12/05: Game Improvements and Nightmare Beta Changes
+- Added items: 2
+    - 24426,Cabbage
+    - 24427,Cabbage
+- Removed items: 0
+- Changed items: 1
+    - 13658,Teleport card,tradeable_on_ge
+
 ### 2019/11/28: Ashihama Rewards Beta and Sire Changes
 - Added items: 9
     - 24417,Inquisitor's mace
