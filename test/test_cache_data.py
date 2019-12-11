@@ -40,9 +40,9 @@ def test_cache_data_compression(test_data, expected):
 
 
 @pytest.mark.parametrize("cache_type,expected", [
-    ("items", 24428),
-    ("npcs", 9300),
-    ("objects", 37547)
+    ("items", 24444),
+    ("npcs", 9413),
+    ("objects", 37599)
 ])
 def test_cache_data_decompression(path_to_cache_dir: Path, cache_type, expected):
     path_to_cache_file = path_to_cache_dir / f"{cache_type}.json"

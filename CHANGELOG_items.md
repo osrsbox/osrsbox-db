@@ -2,6 +2,28 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2019/12/11: Christmas 2019
+- Added items: 17
+    - 24415,Death rune
+    - 24428,Green gingerbread shield
+    - 24429,Green gingerbread shield
+    - 24430,Red gingerbread shield
+    - 24431,Blue gingerbread shield
+    - 24432,Festive cinnamon stick
+    - 24433,Festive ginger powder
+    - 24434,Festive egg
+    - 24435,Festive pot
+    - 24436,Festive flour
+    - 24437,Gingerbread shield
+    - 24438,Iced gingerbread shield
+    - 24439,Iced gingerbread shield
+    - 24440,Iced gingerbread shield
+    - 24441,Scaperune teleport
+    - 24442,Bakery storage key
+    - 24443,Gingerbread gnome
+- Removed items: 0
+- Changed items: 0
+
 ### 2019/12/05: Game Improvements and Nightmare Beta Changes
 - Added items: 2
     - 24426,Cabbage
