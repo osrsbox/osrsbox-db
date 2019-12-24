@@ -388,7 +388,7 @@ def clean_drop_quantity(value: str) -> str:
     return value
 
 
-def clean_drop_rarity(value: str, base_value: str = None) -> str:
+def clean_drop_rarity(value: str, base_value: str = None) -> float:
     """Convert the drop rartiy text entry from an OSRS Wiki infobox.
 
     :param value: The extracted raw wiki text.
@@ -480,11 +480,14 @@ def clean_drop_rarity(value: str, base_value: str = None) -> str:
         value = value
 
     # Check the extracted and processed value against the supplied regex
-    # Potenital format: "1/1", "1/2.3", "3.5/4", "9.5/5.6"
+    # Potential format: "1/1", "1/2.3", "3.5/4", "9.5/5.6"
     pattern = re.compile(r"^[0-9]*(\.[0-9]*)?\/([0-9]*)(\.[0-9]*)?")
     if value and not pattern.match(value):
         print(f"Drop rarity regex failed: {value}")
         value = None
+
+    if value is not None:
+        value = float(eval(value))
 
     return value
 

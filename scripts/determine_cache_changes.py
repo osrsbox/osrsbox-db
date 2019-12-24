@@ -171,6 +171,10 @@ def determine_cache_changes_monsters():
     for monsterID in changed:
         changed_keys = list()
         for key in new_monsters[monsterID]:
+            new_monsters_key = new_monsters[monsterID].get(key)
+            old_monsters_key = old_monsters[monsterID].get(key)
+            if new_monsters_key is None or old_monsters_key is None:
+                continue
             if new_monsters[monsterID][key] != old_monsters[monsterID][key]:
                 changed_keys.append(key)
         if changed_keys:
