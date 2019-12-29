@@ -44,43 +44,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "223": {
-            "id": 223,
-            "name": "Red spiders' eggs",
-            "members": true,
-            "quantity": "3-6",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "10859": {
-            "id": 10859,
-            "name": "Tea flask",
+        {
+            "id": 223,
+            "name": "Red spiders' eggs",
             "members": true,
-            "quantity": "1",
+            "quantity": "3-6",
             "noted": false,
-            "rarity": "1/10",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "10879": {
+        {
             "id": 10879,
             "name": "Red satchel",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "3/20",
+            "rarity": 0.15,
+            "drop_requirements": null
+        },
+        {
+            "id": 10859,
+            "name": "Tea flask",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

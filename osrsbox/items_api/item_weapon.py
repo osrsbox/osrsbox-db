@@ -36,8 +36,8 @@ class ItemWeapon:
     stances: List
 
     def construct_json(self) -> Dict:
-        """Construct dictionary/JSON of item_equipment property for exporting or printing.
+        """Construct dictionary/JSON of ItemWeapon class for exporting or printing.
 
-        :return json_out: A dictionary of all equipment properties.
+        :return: All class attributes stored in a dictionary.
         """
         return asdict(self)

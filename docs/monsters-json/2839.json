@@ -1,7 +1,7 @@
 {
     "id": 2839,
     "name": "Black bear",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
     "combat_level": 19,
@@ -50,79 +50,78 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "948": {
+        {
             "id": 948,
             "name": "Bear fur",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2136": {
+        {
             "id": 2136,
             "name": "Raw bear meat",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7815": {
+        {
             "id": 7815,
             "name": "Bear ribs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "11941": {
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/15",
+            "rarity": 0.06666666666666667,
             "drop_requirements": null
         },
-        "13462": {
+        {
             "id": 13462,
             "name": "Ensouled bear head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.04,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/90",
+            "rarity": 0.011111111111111112,
             "drop_requirements": null
         },
-        "23490": {
+        {
             "id": 23490,
             "name": "Larran's key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1216",
+            "rarity": 0.0008223684210526315,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

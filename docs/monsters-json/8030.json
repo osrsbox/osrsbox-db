@@ -1,7 +1,7 @@
 {
     "id": 8030,
     "name": "Adamant dragon",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2018-01-04",
     "combat_level": 338,
@@ -54,223 +54,375 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "449": {
-            "id": 449,
-            "name": "Adamantite ore",
-            "members": true,
-            "quantity": "8-20",
-            "noted": true,
-            "rarity": "6/110",
-            "drop_requirements": null
-        },
-        "536": {
+    "drops": [
+        {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "30-60",
-            "noted": false,
-            "rarity": "7/110",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "60-120",
-            "noted": false,
-            "rarity": "7/110",
-            "drop_requirements": null
-        },
-        "890": {
-            "id": 890,
-            "name": "Adamant arrow",
-            "members": true,
-            "quantity": "30-40",
-            "noted": false,
-            "rarity": "8/110",
-            "drop_requirements": null
-        },
-        "1123": {
-            "id": 1123,
-            "name": "Adamant platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "9/110",
-            "drop_requirements": null
-        },
-        "1149": {
-            "id": 1149,
-            "name": "Dragon med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/110",
-            "drop_requirements": null
-        },
-        "1333": {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/110",
-            "drop_requirements": null
-        },
-        "1432": {
-            "id": 1432,
-            "name": "Rune mace",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/110",
-            "drop_requirements": null
-        },
-        "1601": {
-            "id": 1601,
-            "name": "Diamond",
-            "members": true,
-            "quantity": "1-3",
-            "noted": true,
-            "rarity": "7/110",
-            "drop_requirements": null
-        },
-        "2361": {
+        {
             "id": 2361,
             "name": "Adamantite bar",
             "members": true,
             "quantity": "5-35",
             "noted": true,
-            "rarity": "4/110",
+            "rarity": 0.03636363636363636,
             "drop_requirements": null
         },
-        "4087": {
+        {
+            "id": 1123,
+            "name": "Adamant platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.08181818181818182,
+            "drop_requirements": null
+        },
+        {
+            "id": 1432,
+            "name": "Rune mace",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06363636363636363,
+            "drop_requirements": null
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06363636363636363,
+            "drop_requirements": null
+        },
+        {
+            "id": 1149,
+            "name": "Dragon med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00909090909090909,
+            "drop_requirements": null
+        },
+        {
             "id": 4087,
             "name": "Dragon platelegs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/110",
+            "rarity": 0.00909090909090909,
             "drop_requirements": null
         },
-        "4585": {
+        {
             "id": 4585,
             "name": "Dragon plateskirt",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/110",
+            "rarity": 0.00909090909090909,
             "drop_requirements": null
         },
-        "9380": {
-            "id": 9380,
-            "name": "Adamant bolts(unf)",
+        {
+            "id": 890,
+            "name": "Adamant arrow",
             "members": true,
-            "quantity": "20-40",
+            "quantity": "30-40",
             "noted": false,
-            "rarity": "11/110",
+            "rarity": 0.07272727272727272,
             "drop_requirements": null
         },
-        "11286": {
-            "id": 11286,
-            "name": "Draconic visage",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/2250",
-            "drop_requirements": null
-        },
-        "12073": {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/320",
-            "drop_requirements": null
-        },
-        "19578": {
-            "id": 19578,
-            "name": "Adamant javelin heads",
-            "members": true,
-            "quantity": "40-50",
-            "noted": false,
-            "rarity": "8/110",
-            "drop_requirements": null
-        },
-        "19582": {
-            "id": 19582,
-            "name": "Dragon javelin heads",
-            "members": true,
-            "quantity": "20-30",
-            "noted": false,
-            "rarity": "7/110",
-            "drop_requirements": null
-        },
-        "21880": {
+        {
             "id": 21880,
             "name": "Wrath rune",
             "members": true,
             "quantity": "10-30",
             "noted": false,
-            "rarity": "8/110",
+            "rarity": 0.07272727272727272,
             "drop_requirements": null
         },
-        "21918": {
-            "id": 21918,
-            "name": "Dragon limbs",
+        {
+            "id": 562,
+            "name": "Chaos rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "60-120",
             "noted": false,
-            "rarity": "1/1000",
+            "rarity": 0.06363636363636363,
             "drop_requirements": null
         },
-        "21930": {
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "30-60",
+            "noted": false,
+            "rarity": 0.06363636363636363,
+            "drop_requirements": null
+        },
+        {
+            "id": 19578,
+            "name": "Adamant javelin heads",
+            "members": true,
+            "quantity": "40-50",
+            "noted": false,
+            "rarity": 0.07272727272727272,
+            "drop_requirements": null
+        },
+        {
+            "id": 9380,
+            "name": "Adamant bolts(unf)",
+            "members": true,
+            "quantity": "20-40",
+            "noted": false,
+            "rarity": 0.1,
+            "drop_requirements": null
+        },
+        {
+            "id": 1601,
+            "name": "Diamond",
+            "members": true,
+            "quantity": "1-3",
+            "noted": true,
+            "rarity": 0.06363636363636363,
+            "drop_requirements": null
+        },
+        {
+            "id": 19582,
+            "name": "Dragon javelin heads",
+            "members": true,
+            "quantity": "20-30",
+            "noted": false,
+            "rarity": 0.06363636363636363,
+            "drop_requirements": null
+        },
+        {
+            "id": 449,
+            "name": "Adamantite ore",
+            "members": true,
+            "quantity": "8-20",
+            "noted": true,
+            "rarity": 0.05454545454545454,
+            "drop_requirements": null
+        },
+        {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": true,
+            "quantity": "5-35",
+            "noted": true,
+            "rarity": 0.03636363636363636,
+            "drop_requirements": null
+        },
+        {
             "id": 21930,
             "name": "Dragon bolts (unf)",
             "members": true,
             "quantity": "15-20",
             "noted": false,
-            "rarity": "1/110",
+            "rarity": 0.00909090909090909,
             "drop_requirements": null
         },
-        "22100": {
-            "id": 22100,
-            "name": "Dragon metal slice",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5000",
-            "drop_requirements": null
-        },
-        "22118": {
+        {
             "id": 22118,
             "name": "Wrath talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/110",
+            "rarity": 0.00909090909090909,
             "drop_requirements": null
         },
-        "23083": {
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/52.4",
+            "rarity": 0.019083969465648856,
+            "drop_requirements": null
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003125,
+            "drop_requirements": null
+        },
+        {
+            "id": 21918,
+            "name": "Dragon limbs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001,
+            "drop_requirements": null
+        },
+        {
+            "id": 22100,
+            "name": "Dragon metal slice",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
+            "drop_requirements": null
+        },
+        {
+            "id": 11286,
+            "name": "Draconic visage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00044444444444444447,
+            "drop_requirements": null
+        },
+        {
+            "id": 11286,
+            "name": "Draconic visage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00044444444444444447,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01818181818181818,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.013637215962361282,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010227432530906022,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007954421166714723,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.01818181818181818,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004545454545454545,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.022727272727272728,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002840909090909091,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0022727272727272726,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001704412297334725,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001704412297334725,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.022727272727272728,
+            "drop_requirements": null
+        },
+        {
+            "id": 3051,
+            "name": "Grimy snapdragon",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.01818181818181818,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.01818181818181818,
+            "drop_requirements": null
+        },
+        {
+            "id": 219,
+            "name": "Grimy torstol",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.013637215962361282,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

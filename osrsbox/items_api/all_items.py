@@ -23,7 +23,7 @@ import json
 from pathlib import Path
 from typing import Dict, List, Union, Generator
 
-from osrsbox.items_api.item_definition import ItemDefinition
+from osrsbox.items_api.item_properties import ItemProperties
 
 PATH_TO_ITEMS_COMPLETE_JSON = Path(__file__).absolute().parent / ".." / ".." / "docs" / "items-complete.json"
 if not PATH_TO_ITEMS_COMPLETE_JSON.is_file():
@@ -38,16 +38,16 @@ class AllItems:
     :param input_data_file_or_directory: The osrsbox-db items folder of JSON files, or single JSON file.
     """
     def __init__(self, input_data_file_or_directory: Path = PATH_TO_ITEMS_COMPLETE_JSON):
-        self.all_items: List[ItemDefinition] = list()
-        self.all_items_dict: Dict[int, ItemDefinition] = dict()
+        self.all_items: List[ItemProperties] = list()
+        self.all_items_dict: Dict[int, ItemProperties] = dict()
         self.load_all_items(input_data_file_or_directory)
 
-    def __iter__(self) -> Generator[ItemDefinition, None, None]:
-        """Iterate (loop) over each ItemDefinition object."""
+    def __iter__(self) -> Generator[ItemProperties, None, None]:
+        """Iterate (loop) over each ItemProperties object."""
         for item in self.all_items:
             yield item
 
-    def __getitem__(self, id_number: int) -> ItemDefinition:
+    def __getitem__(self, id_number: int) -> ItemProperties:
         """Return the item definition object for a loaded item.
 
         :param id_number: The item ID number.
@@ -62,21 +62,21 @@ class AllItems:
         """
         return len(self.all_items)
 
-    def lookup_by_item_id(self, item_id_number: int) -> ItemDefinition:
-        """Lookup a specific item ID and get the associated ItemDefinition object.
+    def lookup_by_item_id(self, item_id_number: int) -> ItemProperties:
+        """Lookup a specific item ID and get the associated ItemProperties object.
 
         :param item_id_number: The item ID to lookup.
-        :return: The ItemDefinition object found from the lookup.
+        :return: The ItemProperties object found from the lookup.
         :raises: KeyError when the item ID cannot be found.
         """
         try:
-            item_definition = self.all_items_dict[item_id_number]
+            item_properties = self.all_items_dict[item_id_number]
         except KeyError:
             raise KeyError("Cannot find the provided item ID number...")
-        return item_definition
+        return item_properties
 
-    def lookup_by_item_name(self, item_name: str, use_wiki_name: bool = False) -> ItemDefinition:
-        """Lookup a specific item name and get the associated ItemDefinition object.
+    def lookup_by_item_name(self, item_name: str, use_wiki_name: bool = False) -> ItemProperties:
+        """Lookup a specific item name and get the associated ItemProperties object.
 
         This function performs a lookup on all items in the database. The property
         that is queried is the item name, or the `wiki_name` if specified in the
@@ -87,7 +87,7 @@ class AllItems:
 
         :param item_name: The item name to lookup.
         :param use_wiki_name: Whether to use the `wiki_name` instead of `name`.
-        :return: The ItemDefinition object found from the lookup.
+        :return: The ItemProperties object found from the lookup.
         :raises: ValueError when the item name cannot be found.
         """
         # Set the property value
@@ -108,16 +108,16 @@ class AllItems:
 
         raise ValueError("Cannot find the provided item name...")
 
-    def search_item_names(self, keyword: str) -> List[ItemDefinition]:
-        """Keyword search items and get the a list of ItemDefinition objects.
+    def search_item_names(self, keyword: str) -> List[ItemProperties]:
+        """Keyword search items and get the a list of ItemProperties objects.
 
         This function performs a search of all item names in the database. The name
         and wiki_name properties are searched. Results are returned as a list of
-        ItemDefinition objects. The only transformation performed is converting the
+        ItemProperties objects. The only transformation performed is converting the
         search keyword and item name/wiki_name to lower case.
 
         :param keyword: The keyword to search for.
-        :return: A list of ItemDefinition objects found from the keyword search.
+        :return: A list of ItemProperties objects found from the keyword search.
         :raises: ValueError when no keyword matches can be found.
         """
         item_results = list()
@@ -183,14 +183,14 @@ class AllItems:
             self._load_item(temp[entry])
 
     def _load_item(self, item_json: Dict) -> None:
-        """Convert the `item_json` into a :class:`ItemDefinition` and store it.
+        """Convert the `item_json` into a :class:`ItemProperties` and store it.
 
         :param item_json: A dict from an open and loaded JSON file.
         :raises ValueError: Cannot populate item.
         """
-        # Load the item using the ItemDefinition class
+        # Load the item using the ItemProperties class
         try:
-            item_def = ItemDefinition.from_json(item_json)
+            item_def = ItemProperties.from_json(item_json)
         except TypeError as e:
             raise ValueError("Error: Invalid JSON structure found, check supplied input. Exiting") from e
 

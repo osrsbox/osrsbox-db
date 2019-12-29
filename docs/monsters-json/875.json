@@ -1,7 +1,7 @@
 {
     "id": 875,
     "name": "Zogre",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-05-17",
     "combat_level": 44,
@@ -47,52 +47,51 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "2677": {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "4812": {
-            "id": 4812,
-            "name": "Zogre bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "4850": {
+    "drops": [
+        {
             "id": 4850,
             "name": "Ogre coffin key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "6807": {
-            "id": 6807,
-            "name": "Zombie champion scroll",
+        {
+            "id": 4812,
+            "name": "Zogre bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/512",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7848": {
+        {
             "id": 7848,
             "name": "Zogre bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 6807,
+            "name": "Zombie champion scroll",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

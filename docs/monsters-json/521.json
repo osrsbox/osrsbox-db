@@ -1,37 +1,36 @@
 {
     "id": 521,
-    "name": "Monk of Zamorak",
+    "name": "Pirate",
     "incomplete": true,
-    "members": false,
-    "release_date": "2001-04-06",
-    "combat_level": 45,
+    "members": true,
+    "release_date": "2006-07-24",
+    "combat_level": 23,
     "size": 1,
-    "hitpoints": 10,
+    "hitpoints": 20,
     "max_hit": 3,
     "attack_type": [
-        "crush",
-        "magic"
+        "slash"
     ],
-    "attack_speed": 4,
-    "aggressive": true,
+    "attack_speed": 5,
+    "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "ranged"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "An evil human cleric.",
-    "wiki_name": "Monk of Zamorak (Lv 17)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Monk_of_Zamorak#Lv_17",
-    "attack_level": 8,
-    "strength_level": 8,
-    "defence_level": 12,
-    "magic_level": 25,
+    "examine": "Yar! Shiver me timbers!",
+    "wiki_name": "Pirate (Pirate's Cove)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pirate#Pirate's_Cove",
+    "attack_level": 20,
+    "strength_level": 20,
+    "defence_level": 20,
+    "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
     "attack_slash": 0,
@@ -39,60 +38,230 @@
     "attack_magic": 0,
     "attack_ranged": 0,
     "defence_stab": 0,
-    "defence_slash": 0,
+    "defence_slash": 1,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
+    "attack_accuracy": 9,
+    "melee_strength": 10,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "1033": {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": null
-        },
-        "1035": {
-            "id": 1035,
-            "name": "Zamorak monk top",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": null
-        },
-        "2944": {
-            "id": 2944,
-            "name": "Golden key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "11941": {
+        {
+            "id": 9140,
+            "name": "Iron bolts",
+            "members": true,
+            "quantity": "2-12",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1203,
+            "name": "Iron dagger",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 1321,
+            "name": "Bronze scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1115,
+            "name": "Iron platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "9",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1025,
+            "name": "Right eye patch",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.09375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1949,
+            "name": "Chef's hat",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2351,
+            "name": "Iron bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2832,
+            "name": "Key (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/13",
+            "rarity": 0.09090909090909091,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

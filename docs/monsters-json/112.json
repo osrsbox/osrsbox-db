@@ -1,7 +1,7 @@
 {
     "id": 112,
     "name": "Wild dog",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-01-17",
     "combat_level": 63,
@@ -49,25 +49,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "13468": {
+        {
             "id": 13468,
             "name": "Ensouled dog head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.04,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

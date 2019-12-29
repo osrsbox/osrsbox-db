@@ -51,124 +51,195 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "460",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1163": {
-            "id": 1163,
-            "name": "Rune full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1197": {
-            "id": 1197,
-            "name": "Mithril kiteshield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1311": {
-            "id": 1311,
-            "name": "Steel 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "1353": {
-            "id": 1353,
-            "name": "Steel axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1365": {
+    "drops": [
+        {
             "id": 1365,
             "name": "Steel battleaxe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "11/128",
+            "rarity": 0.0859375,
             "drop_requirements": null
         },
-        "1734": {
-            "id": 1734,
-            "name": "Thread",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2357": {
-            "id": 2357,
-            "name": "Gold bar",
+        {
+            "id": 1311,
+            "name": "Steel 2h sword",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.0546875,
             "drop_requirements": null
         },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
+        {
+            "id": 1353,
+            "name": "Steel axe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "10/128",
+            "rarity": 0.0234375,
             "drop_requirements": null
         },
-        "4127": {
+        {
+            "id": 1197,
+            "name": "Mithril kiteshield",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 4127,
             "name": "Mithril boots",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "460",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "460",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "460",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "460",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "460",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2357,
+            "name": "Gold bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1734,
+            "name": "Thread",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/78.8",
+            "rarity": 0.012690355329949238,
             "drop_requirements": null
+        },
+        {
+            "id": 20730,
+            "name": "Mist battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00345915430595528,
+            "drop_requirements": "superior"
+        },
+        {
+            "id": 20736,
+            "name": "Dust battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00345915430595528,
+            "drop_requirements": "superior"
+        },
+        {
+            "id": 21270,
+            "name": "Eternal gem",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011530514353184267,
+            "drop_requirements": "superior"
+        },
+        {
+            "id": 20724,
+            "name": "Imbued heart",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011530514353184267,
+            "drop_requirements": "superior"
         }
-    },
-    "rare_drop_table": true
+    ]
 }

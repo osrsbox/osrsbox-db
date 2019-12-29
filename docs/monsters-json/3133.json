@@ -1,7 +1,7 @@
 {
     "id": 3133,
     "name": "Hellhound",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 127,
@@ -53,70 +53,123 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/64",
-            "drop_requirements": null
-        },
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/3",
-            "drop_requirements": null
-        },
-        "12073": {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "13233": {
+        {
             "id": 13233,
             "name": "Smouldering stone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32768",
+            "rarity": 3.0517578125e-05,
             "drop_requirements": null
         },
-        "20543": {
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 20543,
             "name": "Reward casket (elite)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/95.6",
+            "rarity": 0.010460251046025106,
             "drop_requirements": null
+        },
+        {
+            "id": 19677,
+            "name": "Ancient shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19679,
+            "name": "Dark totem base",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026041666666666665,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19681,
+            "name": "Dark totem middle",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026041666666666665,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19683,
+            "name": "Dark totem top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026041666666666665,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011111111111111112,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0043859649122807015,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -18,8 +18,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-from dataclasses import dataclass, asdict
-from typing import Dict, Optional
+from dataclasses import asdict
+from dataclasses import dataclass
+from typing import Dict
+from typing import Optional
 
 
 @dataclass
@@ -49,8 +51,8 @@ class ItemEquipment:
     requirements: Optional[Dict]
 
     def construct_json(self) -> Dict:
-        """Construct dictionary/JSON of item_equipment property for exporting or printing.
+        """Construct dictionary/JSON of ItemEquipment class for exporting or printing.
 
-        :return json_out: A dictionary of all equipment properties.
+        :return: All class attributes stored in a dictionary.
         """
         return asdict(self)

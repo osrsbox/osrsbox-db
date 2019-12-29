@@ -1,0 +1,162 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "JSON Schema for an OSRS objects definition.",
+    "title": "OSRS Cache - objects.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "number"
+        },
+        "decorDisplacement": {
+            "type": "number"
+        },
+        "isHollow": {
+            "type": "boolean"
+        },
+        "name": {
+            "type": "string"
+        },
+        "objectModels": {
+            "type": "array"
+        },
+        "recolorToFind": {
+            "type": "array"
+        },
+        "mapAreaId": {
+            "type": "number"
+        },
+        "sizeX": {
+            "type": "number"
+        },
+        "sizeY": {
+            "type": "number"
+        },
+        "anInt2083": {
+            "type": "number"
+        },
+        "offsetX": {
+            "type": "number"
+        },
+        "mergeNormals": {
+            "type": "boolean"
+        },
+        "wallOrDoor": {
+            "type": "number"
+        },
+        "animationID": {
+            "type": "number"
+        },
+        "varbitID": {
+            "type": "number"
+        },
+        "ambient": {
+            "type": "number"
+        },
+        "contrast": {
+            "type": "number"
+        },
+        "actions": {
+            "type": "array"
+        },
+        "interactType": {
+            "type": "number"
+        },
+        "mapSceneID": {
+            "type": "number"
+        },
+        "recolorToReplace": {
+            "type": "array"
+        },
+        "shadow": {
+            "type": "boolean"
+        },
+        "modelSizeX": {
+            "type": "number"
+        },
+        "modelSizeHeight": {
+            "type": "number"
+        },
+        "modelSizeY": {
+            "type": "number"
+        },
+        "objectID": {
+            "type": "number"
+        },
+        "offsetHeight": {
+            "type": "number"
+        },
+        "offsetY": {
+            "type": "number"
+        },
+        "obstructsGround": {
+            "type": "boolean"
+        },
+        "contouredGround": {
+            "type": "number"
+        },
+        "supportsItems": {
+            "type": "number"
+        },
+        "isRotated": {
+            "type": "boolean"
+        },
+        "varpID": {
+            "type": "number"
+        },
+        "ambientSoundId": {
+            "type": "number"
+        },
+        "aBool2111": {
+            "type": "boolean"
+        },
+        "anInt2112": {
+            "type": "number"
+        },
+        "anInt2113": {
+            "type": "number"
+        },
+        "blocksProjectile": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "id",
+        "decorDisplacement",
+        "isHollow",
+        "name",
+        "objectModels",
+        "recolorToFind",
+        "mapAreaId",
+        "sizeX",
+        "sizeY",
+        "anInt2083",
+        "offsetX",
+        "mergeNormals",
+        "wallOrDoor",
+        "animationID",
+        "varbitID",
+        "ambient",
+        "contrast",
+        "actions",
+        "interactType",
+        "mapSceneID",
+        "recolorToReplace",
+        "shadow",
+        "modelSizeX",
+        "modelSizeHeight",
+        "modelSizeY",
+        "objectID",
+        "offsetHeight",
+        "offsetY",
+        "obstructsGround",
+        "contouredGround",
+        "supportsItems",
+        "isRotated",
+        "varpID",
+        "ambientSoundId",
+        "aBool2111",
+        "anInt2112",
+        "anInt2113",
+        "blocksProjectile"
+    ]
+}

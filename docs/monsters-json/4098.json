@@ -47,98 +47,44 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "447": {
-            "id": 447,
-            "name": "Mithril ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "17",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "556": {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "29",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "18",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "5,12,15,27,42",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "847": {
+        {
             "id": 847,
             "name": "Willow longbow",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "853": {
+        {
+            "id": 1097,
+            "name": "Studded chaps",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1099,
+            "name": "Green d'hide chaps",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 853,
             "name": "Maple shortbow",
             "members": true,
@@ -147,51 +93,104 @@
             "rarity": null,
             "drop_requirements": null
         },
-        "882": {
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "18",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 882,
             "name": "Bronze arrow",
             "members": true,
             "quantity": "14",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "886": {
+        {
             "id": 886,
             "name": "Steel arrow",
             "members": true,
             "quantity": "14",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1097": {
-            "id": 1097,
-            "name": "Studded chaps",
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "17",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": true,
+            "quantity": "29",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": null,
             "drop_requirements": null
         },
-        "1099": {
-            "id": 1099,
-            "name": "Green d'hide chaps",
+        {
+            "id": 562,
+            "name": "Chaos rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "2",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": null,
             "drop_requirements": null
         },
-        "1440": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "5,12,15,27,42",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
             "id": 1440,
             "name": "Earth talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 447,
+            "name": "Mithril ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

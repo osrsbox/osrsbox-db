@@ -53,196 +53,231 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "40": {
-            "id": 40,
-            "name": "Iron arrowtips",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "43": {
-            "id": 43,
-            "name": "Adamant arrowtips",
-            "members": true,
-            "quantity": "1-13",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "53": {
-            "id": 53,
-            "name": "Headless arrow",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "56": {
-            "id": 56,
-            "name": "Oak longbow (u)",
-            "members": true,
-            "quantity": "1-12",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "559": {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "1-12",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "687": {
-            "id": 687,
-            "name": "Broken arrow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "843": {
+    "drops": [
+        {
             "id": 843,
             "name": "Oak shortbow",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "851": {
-            "id": 851,
-            "name": "Maple longbow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "861": {
-            "id": 861,
-            "name": "Magic shortbow",
-            "members": true,
-            "quantity": "1-2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "882": {
-            "id": 882,
-            "name": "Bronze arrow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "884": {
-            "id": 884,
-            "name": "Iron arrow",
-            "members": true,
-            "quantity": "1-24",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "886": {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "1-12",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "888": {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "890": {
-            "id": 890,
-            "name": "Adamant arrow",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "892": {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "1-5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1777": {
-            "id": 1777,
-            "name": "Bow string",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "2538": {
-            "id": 2538,
-            "name": "Adamant fire arrow",
-            "members": true,
-            "quantity": "3-4",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "9179": {
+        {
             "id": 9179,
             "name": "Steel crossbow",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "11941": {
+        {
+            "id": 851,
+            "name": "Maple longbow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 861,
+            "name": "Magic shortbow",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 888,
+            "name": "Mithril arrow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": true,
+            "quantity": "1-12",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 884,
+            "name": "Iron arrow",
+            "members": true,
+            "quantity": "1-24",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 559,
+            "name": "Body rune",
+            "members": true,
+            "quantity": "1-12",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "1-5",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 890,
+            "name": "Adamant arrow",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 890,
+            "name": "Adamant arrow",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2538,
+            "name": "Adamant fire arrow",
+            "members": true,
+            "quantity": "3-4",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 53,
+            "name": "Headless arrow",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 40,
+            "name": "Iron arrowtips",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 43,
+            "name": "Adamant arrowtips",
+            "members": true,
+            "quantity": "1-13",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1777,
+            "name": "Bow string",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 687,
+            "name": "Broken arrow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 56,
+            "name": "Oak longbow (u)",
+            "members": true,
+            "quantity": "1-12",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3",
+            "rarity": 0.3333333333333333,
             "drop_requirements": null
         },
-        "11942": {
+        {
             "id": 11942,
             "name": "Ecumenical key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/60",
+            "rarity": 0.016666666666666666,
             "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008791208791208791,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00423728813559322,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": 1412,
     "name": "Black Guard",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2005-05-31",
     "combat_level": 25,
@@ -48,187 +48,186 @@
     "melee_strength": 7,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "436": {
-            "id": 436,
-            "name": "Copper ore",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "453": {
-            "id": 453,
-            "name": "Coal",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": false,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "562": {
+        {
             "id": 562,
             "name": "Chaos rune",
             "members": false,
             "quantity": "2",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "4-42",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "877": {
-            "id": 877,
-            "name": "Bronze bolts",
+        {
+            "id": 561,
+            "name": "Nature rune",
             "members": false,
-            "quantity": "6",
+            "quantity": "2",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "1139": {
+        {
             "id": 1139,
             "name": "Bronze med helm",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1265": {
-            "id": 1265,
-            "name": "Bronze pickaxe",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1337": {
-            "id": 1337,
-            "name": "Bronze warhammer",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1341": {
-            "id": 1341,
-            "name": "Black warhammer",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1363": {
-            "id": 1363,
-            "name": "Iron battleaxe",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1375": {
+        {
             "id": 1375,
             "name": "Bronze battleaxe",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "1592": {
-            "id": 1592,
-            "name": "Ring mould",
+        {
+            "id": 877,
+            "name": "Bronze bolts",
             "members": false,
-            "quantity": null,
+            "quantity": "6",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "1929": {
-            "id": 1929,
-            "name": "Bucket of water",
-            "members": false,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "2347": {
-            "id": 2347,
-            "name": "Hammer",
+        {
+            "id": 1337,
+            "name": "Bronze warhammer",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2349": {
+        {
+            "id": 1265,
+            "name": "Bronze pickaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1363,
+            "name": "Iron battleaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1341,
+            "name": "Black warhammer",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "4-42",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 436,
+            "name": "Copper ore",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 2349,
             "name": "Bronze bar",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2351": {
+        {
             "id": 2351,
             "name": "Iron bar",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2801": {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
+        {
+            "id": 2347,
+            "name": "Hammer",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "3711": {
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 3711,
             "name": "Keg of beer",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1929,
+            "name": "Bucket of water",
+            "members": false,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1592,
+            "name": "Ring mould",
+            "members": false,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

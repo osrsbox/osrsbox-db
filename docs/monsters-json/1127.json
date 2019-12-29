@@ -1,7 +1,7 @@
 {
     "id": 1127,
     "name": "Giant scarab (hard)",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2013-09-05",
     "combat_level": 316,
@@ -51,16 +51,15 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "10581": {
+    "drops": [
+        {
             "id": 10581,
             "name": "Keris",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

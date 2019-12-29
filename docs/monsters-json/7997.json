@@ -1,7 +1,7 @@
 {
     "id": 7997,
     "name": "Corrupt Lizardman",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2018-04-19",
     "combat_level": 46,
@@ -52,25 +52,24 @@
     "melee_strength": 20,
     "ranged_strength": 20,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "13383": {
+        {
             "id": 13383,
             "name": "Xerician fabric",
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -44,52 +44,51 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "23834": {
-            "id": 23834,
-            "name": "Weapon frame",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "23835": {
-            "id": 23835,
-            "name": "Grym leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "23866": {
+    "drops": [
+        {
             "id": 23866,
             "name": "Crystal shards",
             "members": true,
             "quantity": "10-30",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23872": {
+        {
             "id": 23872,
             "name": "Raw paddlefish",
             "members": true,
             "quantity": "1,3",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "23904": {
+        {
+            "id": 23835,
+            "name": "Grym leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23834,
+            "name": "Weapon frame",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
             "id": 23904,
             "name": "Teleport crystal (The Gauntlet)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

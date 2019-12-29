@@ -1,7 +1,7 @@
 {
     "id": 5336,
     "name": "Cave goblin miner",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-05-31",
     "combat_level": 11,
@@ -46,70 +46,78 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "440": {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "15/128",
-            "drop_requirements": null
-        },
-        "442": {
-            "id": 442,
-            "name": "Silver ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "590": {
-            "id": 590,
-            "name": "Tinderbox",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "5013": {
+        {
             "id": 5013,
             "name": "Mining helmet",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "20/128",
+            "rarity": 0.15625,
             "drop_requirements": null
         },
-        "7905": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.1171875,
+            "drop_requirements": null
+        },
+        {
+            "id": 590,
+            "name": "Tinderbox",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.1171875,
+            "drop_requirements": null
+        },
+        {
+            "id": 442,
+            "name": "Silver ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
             "id": 7905,
             "name": "Cave goblin skull",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

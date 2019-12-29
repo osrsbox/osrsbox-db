@@ -1,15 +1,15 @@
 {
     "id": 99,
-    "name": "Death wing",
-    "incomplete": false,
-    "members": true,
-    "release_date": "2003-08-20",
-    "combat_level": 83,
-    "size": 2,
-    "hitpoints": 80,
-    "max_hit": 8,
+    "name": "Ghost",
+    "incomplete": true,
+    "members": false,
+    "release_date": "2001-01-04",
+    "combat_level": 19,
+    "size": 1,
+    "hitpoints": 25,
+    "max_hit": 2,
     "attack_type": [
-        "stab"
+        "crush"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -21,18 +21,18 @@
     ],
     "slayer_monster": true,
     "slayer_level": 1,
-    "slayer_xp": 80.0,
+    "slayer_xp": 25.0,
     "slayer_masters": [
         "turael",
         "mazchna"
     ],
-    "duplicate": false,
-    "examine": "A shadowy, barely visible flying entity from some evil place.",
-    "wiki_name": "Death wing",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Death_wing",
-    "attack_level": 70,
-    "strength_level": 70,
-    "defence_level": 70,
+    "duplicate": true,
+    "examine": "Eeek! A ghost!",
+    "wiki_name": "Ghost (Lv 19)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ghost#Lv_19",
+    "attack_level": 13,
+    "strength_level": 13,
+    "defence_level": 18,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -40,25 +40,33 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 0,
-    "defence_slash": 0,
-    "defence_crush": 0,
-    "defence_magic": 0,
-    "defence_ranged": 0,
+    "defence_stab": 5,
+    "defence_slash": 5,
+    "defence_crush": 5,
+    "defence_magic": -5,
+    "defence_ranged": 5,
     "attack_accuracy": 0,
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "23182": {
-            "id": 23182,
-            "name": "Clue scroll (beginner)",
+    "drops": [
+        {
+            "id": 11941,
+            "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.06666666666666667,
+            "drop_requirements": null
+        },
+        {
+            "id": 23182,
+            "name": "Clue scroll (beginner)",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011111111111111112,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

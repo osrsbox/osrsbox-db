@@ -1,7 +1,7 @@
 {
     "id": 5370,
     "name": "Ghost",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
     "combat_level": 24,
@@ -49,25 +49,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "11941": {
+    "drops": [
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/15",
+            "rarity": 0.06666666666666667,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/90",
+            "rarity": 0.011111111111111112,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

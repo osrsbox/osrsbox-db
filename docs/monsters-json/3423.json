@@ -1,7 +1,7 @@
 {
     "id": 3423,
     "name": "Grizzly bear",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-09-20",
     "combat_level": 42,
@@ -48,70 +48,87 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "948": {
+        {
             "id": 948,
             "name": "Bear fur",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2136": {
+        {
             "id": 2136,
             "name": "Raw bear meat",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7815": {
+        {
             "id": 7815,
             "name": "Bear ribs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "11941": {
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/14",
+            "rarity": 0.07142857142857142,
             "drop_requirements": null
         },
-        "13462": {
+        {
             "id": 13462,
             "name": "Ensouled bear head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.04,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/90",
+            "rarity": 0.011111111111111112,
             "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 533.2,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003424657534246575,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

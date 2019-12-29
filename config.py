@@ -3,6 +3,9 @@ Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
+Description:
+Project path constants.
+
 Copyright (c) 2019, PH01L
 
 ###############################################################################
@@ -18,16 +21,31 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 from pathlib import Path
 
 PROJECT_ROOT_PATH = Path(__file__).parent
 
+# Top level directories
+BUILDERS_PATH = Path(PROJECT_ROOT_PATH / "builders")
 DATA_PATH = Path(PROJECT_ROOT_PATH / "data")
 DOCS_PATH = Path(PROJECT_ROOT_PATH / "docs")
-EXTRACTION_WIKI_PATH = Path(PROJECT_ROOT_PATH / "extraction_tools_wiki")
-EXTRACTION_CACHE_PATH = Path(PROJECT_ROOT_PATH / "extraction_tools_cache")
-ITEMS_BUILDER_PATH = Path(PROJECT_ROOT_PATH / "items_builder")
-PACKAGE_ROOT_PATH = Path(PROJECT_ROOT_PATH / "osrsbox")
+PACKAGE_PATH = Path(PROJECT_ROOT_PATH / "osrsbox")
 SCRIPTS_PATH = Path(PROJECT_ROOT_PATH / "scripts")
 TEST_PATH = Path(PROJECT_ROOT_PATH / "test")
+
+# Useful data paths
+DATA_CACHE_PATH = Path(DATA_PATH / "cache")
+DATA_WIKI_PATH = Path(DATA_PATH / "wiki")
+DATA_ITEMS_PATH = Path(DATA_PATH / "items")
+DATA_MONSTERS_PATH = Path(DATA_PATH / "monsters")
+DATA_SCHEMAS_PATH = Path(DATA_PATH / "schemas")
+
+# Useful builder paths
+BUILDERS_ITEMS = Path(BUILDERS_PATH / "items")
+BUILDERS_MONSTERS = Path(BUILDERS_PATH / "monsters")
+
+# Useful scripts paths
+SCRIPTS_ITEMS = Path(SCRIPTS_PATH / "items")
+SCRIPTS_MONSTERS = Path(SCRIPTS_PATH / "monsters")
+SCRIPTS_SCHEMAS = Path(SCRIPTS_PATH / "schemas")
+SCRIPTS_UPDATE = Path(SCRIPTS_PATH / "update")

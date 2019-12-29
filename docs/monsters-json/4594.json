@@ -1,7 +1,7 @@
 {
     "id": 4594,
     "name": "Rat",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
     "combat_level": 0,
@@ -46,43 +46,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "300": {
-            "id": 300,
-            "name": "Rat's tail",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7836": {
+        {
+            "id": 300,
+            "name": "Rat's tail",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 7836,
             "name": "Rat bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "11941": {
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/30",
+            "rarity": 0.03333333333333333,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

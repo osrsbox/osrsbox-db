@@ -1,7 +1,7 @@
 {
     "id": 7796,
     "name": "Lobstrosity",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2017-09-07",
     "combat_level": 68,
@@ -49,502 +49,501 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "199": {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "201": {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "203": {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "205": {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "207": {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "209": {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "211": {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "213": {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "215": {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "217": {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "377": {
+    "drops": [
+        {
             "id": 377,
             "name": "Raw lobster",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "401": {
-            "id": 401,
-            "name": "Seaweed",
-            "members": true,
-            "quantity": "6",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "413": {
-            "id": 413,
-            "name": "Oyster pearls",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "555": {
+        {
             "id": 555,
             "name": "Water rune",
             "members": true,
             "quantity": "100",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "562": {
+        {
             "id": 562,
             "name": "Chaos rune",
             "members": true,
             "quantity": "20",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "617": {
-            "id": 617,
-            "name": "Coins",
+        {
+            "id": 560,
+            "name": "Death rune",
             "members": true,
-            "quantity": "1000",
+            "quantity": "10",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2152": {
-            "id": 2152,
-            "name": "Toad's legs",
+        {
+            "id": 561,
+            "name": "Nature rune",
             "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": "1/32",
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "2485": {
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 2485,
             "name": "Grimy lantadyme",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2677": {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "5100": {
-            "id": 5100,
-            "name": "Limpwurt seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "5104": {
-            "id": 5104,
-            "name": "Jangerberry seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "5105": {
-            "id": 5105,
-            "name": "Whiteberry seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5106": {
-            "id": 5106,
-            "name": "Poison ivy seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5280": {
-            "id": 5280,
-            "name": "Cactus seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5281": {
-            "id": 5281,
-            "name": "Belladonna seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5282": {
-            "id": 5282,
-            "name": "Mushroom spore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5292": {
-            "id": 5292,
-            "name": "Marrentill seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "5293": {
-            "id": 5293,
-            "name": "Tarromin seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "5294": {
-            "id": 5294,
-            "name": "Harralander seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5295": {
-            "id": 5295,
-            "name": "Ranarr seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5296": {
-            "id": 5296,
-            "name": "Toadflax seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5297": {
-            "id": 5297,
-            "name": "Irit seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5298": {
-            "id": 5298,
-            "name": "Avantoe seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5299": {
-            "id": 5299,
-            "name": "Kwuarm seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5300": {
-            "id": 5300,
-            "name": "Snapdragon seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "5301": {
-            "id": 5301,
-            "name": "Cadantine seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "5302": {
-            "id": 5302,
-            "name": "Lantadyme seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "5303": {
-            "id": 5303,
-            "name": "Dwarf weed seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "5304": {
-            "id": 5304,
-            "name": "Torstol seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "5311": {
-            "id": 5311,
-            "name": "Wildblood seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "5321": {
-            "id": 5321,
-            "name": "Watermelon seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5323": {
-            "id": 5323,
-            "name": "Strawberry seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "11326": {
-            "id": 11326,
-            "name": "Caviar",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "21490": {
+        {
             "id": 21490,
             "name": "Seaweed spore",
             "members": true,
             "quantity": "5",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.0625,
             "drop_requirements": null
         },
-        "21504": {
-            "id": 21504,
-            "name": "Giant seaweed",
-            "members": true,
-            "quantity": "6",
-            "noted": true,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "21555": {
-            "id": 21555,
-            "name": "Numulite",
-            "members": true,
-            "quantity": "5-14",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "21562": {
-            "id": 21562,
-            "name": "Unidentified small fossil",
+        {
+            "id": 5100,
+            "name": "Limpwurt seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "21564": {
-            "id": 21564,
-            "name": "Unidentified medium fossil",
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "21566": {
-            "id": 21566,
-            "name": "Unidentified large fossil",
+        {
+            "id": 5292,
+            "name": "Marrentill seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "21568": {
-            "id": 21568,
-            "name": "Unidentified rare fossil",
+        {
+            "id": 5104,
+            "name": "Jangerberry seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "21655": {
-            "id": 21655,
-            "name": "Pufferfish",
+        {
+            "id": 5293,
+            "name": "Tarromin seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "22873": {
-            "id": 22873,
-            "name": "Potato cactus seed",
+        {
+            "id": 5311,
+            "name": "Wildblood seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "22879": {
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5294,
+            "name": "Harralander seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5295,
+            "name": "Ranarr seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5105,
+            "name": "Whiteberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5282,
+            "name": "Mushroom spore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5297,
+            "name": "Irit seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5280,
+            "name": "Cactus seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 22879,
             "name": "Snape grass seed",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "1000",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 21655,
+            "name": "Pufferfish",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 21504,
+            "name": "Giant seaweed",
+            "members": true,
+            "quantity": "6",
+            "noted": true,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 401,
+            "name": "Seaweed",
+            "members": true,
+            "quantity": "6",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2152,
+            "name": "Toad's legs",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 11326,
+            "name": "Caviar",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 413,
+            "name": "Oyster pearls",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 21555,
+            "name": "Numulite",
+            "members": true,
+            "quantity": "5-14",
+            "noted": false,
+            "rarity": 0.2571428571428571,
+            "drop_requirements": null
+        },
+        {
+            "id": 21562,
+            "name": "Unidentified small fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.014285714285714285,
+            "drop_requirements": null
+        },
+        {
+            "id": 21564,
+            "name": "Unidentified medium fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007142857142857143,
+            "drop_requirements": null
+        },
+        {
+            "id": 21566,
+            "name": "Unidentified large fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005714285714285714,
+            "drop_requirements": null
+        },
+        {
+            "id": 21568,
+            "name": "Unidentified rare fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0014285714285714286,
+            "drop_requirements": null
+        },
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

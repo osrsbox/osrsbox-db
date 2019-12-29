@@ -44,17 +44,44 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "23824": {
+    "drops": [
+        {
             "id": 23824,
             "name": "Corrupted shards",
             "members": true,
             "quantity": null,
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23833": {
+        {
+            "id": 23872,
+            "name": "Raw paddlefish",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23871,
+            "name": "Weapon frame (corrupted)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23858,
+            "name": "Corrupted teleport crystal",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 23833,
             "name": "Corrupted orb",
             "members": true,
@@ -62,34 +89,6 @@
             "noted": false,
             "rarity": null,
             "drop_requirements": null
-        },
-        "23858": {
-            "id": 23858,
-            "name": "Corrupted teleport crystal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "23871": {
-            "id": 23871,
-            "name": "Weapon frame (corrupted)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "23872": {
-            "id": 23872,
-            "name": "Raw paddlefish",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

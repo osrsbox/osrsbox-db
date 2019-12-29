@@ -63,23 +63,23 @@ jar_file=$(ls | grep .jar-with-dependencies.)
 
 # Remove old cache dump
 echo -e ">>> Removing the old cache dump in osrsbox-db..."
-rm -r ~/repos/osrsbox-db/extraction_tools_cache/items/
-rm -r ~/repos/osrsbox-db/extraction_tools_cache/npcs/
-rm -r ~/repos/osrsbox-db/extraction_tools_cache/objects/
+rm -r ~/repos/osrsbox-db/data/cache/items/
+rm -r ~/repos/osrsbox-db/data/cache/npcs/
+rm -r ~/repos/osrsbox-db/data/cache/objects/
 
 # Dump the cache
 echo -e ">>> Dumping cache using RuneLite cache tool..."
 java -classpath $jar_file net.runelite.cache.Cache \
 -cache ~/jagexcache/oldschool/LIVE \
--items ~/repos/osrsbox-db/extraction_tools_cache/items
+-items ~/repos/osrsbox-db/data/cache/items
 
 java -classpath $jar_file net.runelite.cache.Cache \
 -cache ~/jagexcache/oldschool/LIVE \
--npcs ~/repos/osrsbox-db/extraction_tools_cache/npcs
+-npcs ~/repos/osrsbox-db/data/cache/npcs
 
 java -classpath $jar_file net.runelite.cache.Cache \
 -cache ~/jagexcache/oldschool/LIVE \
--objects ~/repos/osrsbox-db/extraction_tools_cache/objects
+-objects ~/repos/osrsbox-db/data/cache/objects
 
 
 # OSRSBOX
@@ -88,11 +88,11 @@ echo -e ">>> Updating osrsbox-db..."
 cd ~/repos/osrsbox-db
 git pull
 
-# Move to the scripts/ path and update all data
-cd ~/repos/osrsbox-db/scripts/
+# Move to the scripts/update path and update all data
+cd ~/repos/osrsbox-db/scripts/update/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2019-12-11T00:00:00Z
+# python3 update_wiki_data.py 2019-12-20T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py
@@ -102,14 +102,10 @@ python3 determine_cache_changes.py
 
 # Move the new cache data
 cd ~/repos/osrsbox-db/
-mv extraction_tools_cache/items-cache-data.json data/
-mv extraction_tools_cache/monsters-cache-data.json data/
+mv data/cache/items-cache-data.json data/items/
+mv data/cache/monsters-cache-data.json data/monsters/
 
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."
-cd ~/repos/osrsbox-db/extraction_tools_wiki/
+cd ~/repos/osrsbox-db/scripts/wiki/
 python3 process_wikitext.py
-
-echo -e ">>> FINISHED DATA UPDATE... MAKE SURE TO..."
-echo -e ">>> Update changelog"
-echo -e ">>> Update tests"

@@ -46,88 +46,96 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "555": {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "564": {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "617": {
+        {
             "id": 617,
             "name": "Coins",
             "members": true,
             "quantity": "15",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1440": {
-            "id": 1440,
-            "name": "Earth talisman",
+        {
+            "id": 617,
+            "name": "Coins",
             "members": true,
-            "quantity": "1",
+            "quantity": "15",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1444": {
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 1444,
             "name": "Water talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "7908": {
+        {
+            "id": 1440,
+            "name": "Earth talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 7908,
             "name": "Big frog leg",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

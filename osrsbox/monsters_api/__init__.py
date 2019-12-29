@@ -18,13 +18,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 from osrsbox.monsters_api import all_monsters
 
 
 def load() -> all_monsters.AllMonsters:
     """Load the osrsbox monster database.
 
-    :return all_db_monsters: An AllMonsters object containing the entire monster database.
+    :return: An AllMonsters object containing the entire monster database.
     """
     return all_monsters.AllMonsters()

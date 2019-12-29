@@ -45,35 +45,44 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "23834": {
-            "id": 23834,
-            "name": "Weapon frame",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "23866": {
+    "drops": [
+        {
             "id": 23866,
             "name": "Crystal shards",
             "members": true,
             "quantity": null,
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23868": {
-            "id": 23868,
-            "name": "Crystal spike",
+        {
+            "id": 23872,
+            "name": "Raw paddlefish",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23834,
+            "name": "Weapon frame",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": null,
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "23869": {
+        {
+            "id": 23904,
+            "name": "Teleport crystal (The Gauntlet)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 23869,
             "name": "Crystalline bowstring",
             "members": true,
@@ -82,7 +91,16 @@
             "rarity": null,
             "drop_requirements": null
         },
-        "23870": {
+        {
+            "id": 23868,
+            "name": "Crystal spike",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
             "id": 23870,
             "name": "Crystal orb",
             "members": true,
@@ -90,25 +108,6 @@
             "noted": false,
             "rarity": null,
             "drop_requirements": null
-        },
-        "23872": {
-            "id": 23872,
-            "name": "Raw paddlefish",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "23904": {
-            "id": 23904,
-            "name": "Teleport crystal (The Gauntlet)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

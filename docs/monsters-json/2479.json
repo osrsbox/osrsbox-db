@@ -1,7 +1,7 @@
 {
     "id": 2479,
     "name": "Scorpion",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2006-07-04",
     "combat_level": 59,
@@ -51,43 +51,60 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "4569": {
+    "drops": [
+        {
             "id": 4569,
             "name": "Book page 1",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "11941": {
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/21",
+            "rarity": 0.047619047619047616,
             "drop_requirements": null
         },
-        "13459": {
+        {
             "id": 13459,
             "name": "Ensouled scorpion head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.04,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/100",
+            "rarity": 0.01,
             "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 232.29999999999998,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0036231884057971015,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

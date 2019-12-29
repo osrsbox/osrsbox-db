@@ -53,259 +53,348 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "444": {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "75",
-            "noted": false,
-            "rarity": "9/128",
-            "drop_requirements": null
-        },
-        "556": {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "105",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        "566": {
-            "id": 566,
-            "name": "Soul rune",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "11",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "867": {
-            "id": 867,
-            "name": "Adamant knife",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1111": {
-            "id": 1111,
-            "name": "Adamant chainbody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1121": {
-            "id": 1121,
-            "name": "Mithril platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1147": {
-            "id": 1147,
-            "name": "Rune med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1151": {
-            "id": 1151,
-            "name": "Black med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "1159": {
-            "id": 1159,
-            "name": "Mithril full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "1213": {
-            "id": 1213,
-            "name": "Rune dagger",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1301": {
-            "id": 1301,
-            "name": "Adamant longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1331": {
-            "id": 1331,
-            "name": "Adamant scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1355": {
-            "id": 1355,
-            "name": "Mithril axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "1369": {
-            "id": 1369,
-            "name": "Mithril battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "1373": {
-            "id": 1373,
-            "name": "Rune battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1698": {
-            "id": 1698,
-            "name": "Ruby amulet",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1777": {
-            "id": 1777,
-            "name": "Bow string",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "2327": {
-            "id": 2327,
-            "name": "Meat pie",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "2359": {
-            "id": 2359,
-            "name": "Mithril bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        "4125": {
-            "id": 4125,
-            "name": "Black boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "13495": {
+        {
             "id": 13495,
             "name": "Ensouled bloodveld head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 1151,
+            "name": "Black med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1355,
+            "name": "Mithril axe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1369,
+            "name": "Mithril battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 1121,
+            "name": "Mithril platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 867,
+            "name": "Adamant knife",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1111,
+            "name": "Adamant chainbody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1159,
+            "name": "Mithril full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1301,
+            "name": "Adamant longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1331,
+            "name": "Adamant scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1147,
+            "name": "Rune med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 4125,
+            "name": "Black boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1213,
+            "name": "Rune dagger",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1373,
+            "name": "Rune battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": true,
+            "quantity": "105",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "75",
+            "noted": false,
+            "rarity": 0.0703125,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 566,
+            "name": "Soul rune",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "11",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "11",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1777,
+            "name": "Bow string",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 444,
+            "name": "Gold ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 2327,
+            "name": "Meat pie",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2359,
+            "name": "Mithril bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1698,
+            "name": "Ruby amulet",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/64.4",
+            "rarity": 0.015527950310559004,
             "drop_requirements": null
         },
-        "23962": {
+        {
             "id": 23962,
             "name": "Crystal shard",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 19677,
+            "name": "Ancient shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016666666666666666,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19679,
+            "name": "Dark totem base",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19681,
+            "name": "Dark totem middle",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19683,
+            "name": "Dark totem top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 20730,
+            "name": "Mist battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0033542039355992847,
+            "drop_requirements": "superior"
+        },
+        {
+            "id": 20736,
+            "name": "Dust battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0033542039355992847,
+            "drop_requirements": "superior"
+        },
+        {
+            "id": 21270,
+            "name": "Eternal gem",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011180679785330948,
+            "drop_requirements": "superior"
+        },
+        {
+            "id": 20724,
+            "name": "Imbued heart",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011180679785330948,
+            "drop_requirements": "superior"
         }
-    },
-    "rare_drop_table": true
+    ]
 }

@@ -50,178 +50,204 @@
     "melee_strength": 20,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "313": {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        "327": {
-            "id": 327,
-            "name": "Raw sardine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "331": {
-            "id": 331,
-            "name": "Raw salmon",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "345": {
-            "id": 345,
-            "name": "Raw herring",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "349": {
-            "id": 349,
-            "name": "Raw pike",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "359": {
-            "id": 359,
-            "name": "Raw tuna",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "9/128",
-            "drop_requirements": null
-        },
-        "371": {
-            "id": 371,
-            "name": "Raw swordfish",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "383": {
-            "id": 383,
-            "name": "Raw shark",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "401": {
-            "id": 401,
-            "name": "Seaweed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "407": {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "532": {
+    "drops": [
+        {
             "id": 532,
             "name": "Big bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "555": {
+        {
             "id": 555,
             "name": "Water rune",
             "members": true,
             "quantity": "14",
             "noted": false,
-            "rarity": "4/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "1383": {
-            "id": 1383,
-            "name": "Staff of water",
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "14",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "14",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 371,
+            "name": "Raw swordfish",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.15625,
             "drop_requirements": null
         },
-        "6665": {
+        {
+            "id": 359,
+            "name": "Raw tuna",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0703125,
+            "drop_requirements": null
+        },
+        {
+            "id": 349,
+            "name": "Raw pike",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 331,
+            "name": "Raw salmon",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 345,
+            "name": "Raw herring",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 327,
+            "name": "Raw sardine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 383,
+            "name": "Raw shark",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
             "id": 6665,
             "name": "Mudskipper hat",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "5/128",
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
-        "6666": {
+        {
+            "id": 407,
+            "name": "Oyster",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
             "id": 6666,
             "name": "Flippers",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "6668": {
+        {
+            "id": 401,
+            "name": "Seaweed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1383,
+            "name": "Staff of water",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 6668,
             "name": "Fishbowl",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "7851": {
+        {
             "id": 7851,
             "name": "Mogre bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "10976": {
+        {
             "id": 10976,
             "name": "Long bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/400",
+            "rarity": 0.0025,
             "drop_requirements": null
         },
-        "10977": {
+        {
             "id": 10977,
             "name": "Curved bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/5012.5",
+            "rarity": 0.00019950124688279303,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

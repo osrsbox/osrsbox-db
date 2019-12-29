@@ -46,43 +46,42 @@
     "melee_strength": 5,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "1079": {
-            "id": 1079,
-            "name": "Rune platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "1127": {
-            "id": 1127,
-            "name": "Rune platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "1163": {
-            "id": 1163,
-            "name": "Rune full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "8851": {
+    "drops": [
+        {
             "id": 8851,
             "name": "Warrior guild token",
             "members": true,
             "quantity": "40",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 1127,
+            "name": "Rune platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 1079,
+            "name": "Rune platelegs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

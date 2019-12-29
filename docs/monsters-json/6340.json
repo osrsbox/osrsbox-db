@@ -46,52 +46,51 @@
     "melee_strength": -15,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "1739": {
+    "drops": [
+        {
             "id": 1739,
             "name": "Cowhide",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2132": {
+        {
             "id": 2132,
             "name": "Raw beef",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23083": {
-            "id": 23083,
-            "name": "Brimstone key",
+        {
+            "id": 526,
+            "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/2020.8",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004948535233570864,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

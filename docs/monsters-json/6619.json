@@ -1,7 +1,7 @@
 {
     "id": 6619,
     "name": "Chaos Fanatic",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
     "combat_level": 202,
@@ -51,295 +51,330 @@
     "melee_strength": 0,
     "ranged_strength": -20,
     "magic_damage": 0,
-    "drops": {
-        "245": {
-            "id": 245,
-            "name": "Wine of zamorak",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "385": {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "250",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "175",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "50",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "499-3998",
-            "noted": false,
-            "rarity": "18/128",
-            "drop_requirements": null
-        },
-        "993": {
-            "id": 993,
-            "name": "Sinister key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1033": {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1035": {
-            "id": 1035,
-            "name": "Zamorak monk top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1391": {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "5",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "1452": {
-            "id": 1452,
-            "name": "Chaos talisman",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "1621": {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "6",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "1623": {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "4",
-            "noted": true,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "2297": {
-            "id": 2297,
-            "name": "Anchovy pizza",
-            "members": true,
-            "quantity": "8",
-            "noted": true,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "2434": {
-            "id": 2434,
-            "name": "Prayer potion(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "2485": {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "4",
-            "noted": true,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "2570": {
-            "id": 2570,
-            "name": "Ring of life",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "3387": {
-            "id": 3387,
-            "name": "Splitbark body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "3389": {
-            "id": 3389,
-            "name": "Splitbark legs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "4675": {
-            "id": 4675,
-            "name": "Ancient staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "4697": {
-            "id": 4697,
-            "name": "Smoke rune",
-            "members": true,
-            "quantity": "30",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "6685": {
-            "id": 6685,
-            "name": "Saradomin brew(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5",
-            "drop_requirements": null
-        },
-        "6691": {
-            "id": 6691,
-            "name": "Saradomin brew(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5",
-            "drop_requirements": null
-        },
-        "7936": {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "250",
-            "noted": true,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "7946": {
-            "id": 7946,
-            "name": "Monkfish",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "11928": {
+        {
             "id": 11928,
             "name": "Odium shard 1",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "11931": {
+        {
             "id": 11931,
             "name": "Malediction shard 1",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "11941": {
+        {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": true,
+            "quantity": "5",
+            "noted": true,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 3387,
+            "name": "Splitbark body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 3389,
+            "name": "Splitbark legs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1035,
+            "name": "Zamorak monk top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1033,
+            "name": "Zamorak monk bottom",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 4675,
+            "name": "Ancient staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "250",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 4697,
+            "name": "Smoke rune",
+            "members": true,
+            "quantity": "30",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "175",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "50",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 7946,
+            "name": "Monkfish",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2434,
+            "name": "Prayer potion(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2297,
+            "name": "Anchovy pizza",
+            "members": true,
+            "quantity": "8",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "499-3998",
+            "noted": false,
+            "rarity": 0.140625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "4",
+            "noted": true,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2570,
+            "name": "Ring of life",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 245,
+            "name": "Wine of zamorak",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "6",
+            "noted": true,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "4",
+            "noted": true,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 993,
+            "name": "Sinister key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": true,
+            "quantity": "250",
+            "noted": true,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3",
+            "rarity": 0.3333333333333333,
             "drop_requirements": null
         },
-        "11995": {
-            "id": 11995,
-            "name": "Pet chaos elemental",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1000",
-            "drop_requirements": null
-        },
-        "23083": {
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/79.6",
+            "rarity": 0.01256281407035176,
             "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 11995,
+            "name": "Pet chaos elemental",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001,
+            "drop_requirements": null
+        },
+        {
+            "id": 6685,
+            "name": "Saradomin brew(4)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.2,
+            "drop_requirements": null
+        },
+        {
+            "id": 6691,
+            "name": "Saradomin brew(1)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.2,
+            "drop_requirements": null
+        },
+        {
+            "id": 11928,
+            "name": "Odium shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 11931,
+            "name": "Malediction shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.013157894736842105,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007142857142857143,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": true
+    ]
 }

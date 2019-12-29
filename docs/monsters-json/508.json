@@ -1,23 +1,22 @@
 {
     "id": 508,
-    "name": "Black Knight",
+    "name": "Soulless",
     "incomplete": true,
-    "members": false,
-    "release_date": "2001-01-04",
-    "combat_level": 33,
+    "members": true,
+    "release_date": "2003-03-03",
+    "combat_level": 18,
     "size": 1,
-    "hitpoints": 42,
-    "max_hit": 5,
+    "hitpoints": 24,
+    "max_hit": 2,
     "attack_type": [
-        "slash"
+        "crush"
     ],
-    "attack_speed": 5,
-    "aggressive": false,
+    "attack_speed": 4,
+    "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "crush",
         "magic"
     ],
     "slayer_monster": false,
@@ -25,12 +24,12 @@
     "slayer_xp": null,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "A dark-hearted knight.",
-    "wiki_name": "Black Knight",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Black_Knight",
-    "attack_level": 25,
-    "strength_level": 25,
-    "defence_level": 25,
+    "examine": "A servant of Iban.",
+    "wiki_name": "Soulless",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Soulless",
+    "attack_level": 13,
+    "strength_level": 13,
+    "defence_level": 18,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -38,178 +37,24 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 73,
-    "defence_slash": 76,
-    "defence_crush": 70,
-    "defence_magic": -11,
-    "defence_ranged": 72,
-    "attack_accuracy": 18,
-    "melee_strength": 16,
+    "defence_stab": 0,
+    "defence_slash": 0,
+    "defence_crush": 0,
+    "defence_magic": 0,
+    "defence_ranged": 0,
+    "attack_accuracy": 0,
+    "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "438": {
-            "id": 438,
-            "name": "Tin ore",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": false,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
-            "members": false,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "559": {
-            "id": 559,
-            "name": "Body rune",
-            "members": false,
-            "quantity": "9",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": false,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": false,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": false,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "564": {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": false,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "13",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "888": {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": false,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1153": {
-            "id": 1153,
-            "name": "Iron full helm",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1279": {
-            "id": 1279,
-            "name": "Iron sword",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1424": {
-            "id": 1424,
-            "name": "Steel mace",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1933": {
-            "id": 1933,
-            "name": "Pot of flour",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2309": {
-            "id": 2309,
-            "name": "Bread",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2353": {
-            "id": 2353,
-            "name": "Steel bar",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/9",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

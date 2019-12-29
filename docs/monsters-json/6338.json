@@ -19,10 +19,13 @@
     "weakness": [
         "magic"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
     "duplicate": false,
     "examine": "A giant skeleton of huge strength and devastating power.",
     "wiki_name": "Nazastarool (Skeleton (hard))",
@@ -46,16 +49,15 @@
     "melee_strength": 15,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "609": {
+    "drops": [
+        {
             "id": 609,
             "name": "Rashiliyia corpse",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

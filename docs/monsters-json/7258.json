@@ -1,7 +1,7 @@
 {
     "id": 7258,
     "name": "Shade",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2016-06-09",
     "combat_level": 140,
@@ -49,25 +49,60 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "546": {
+    "drops": [
+        {
             "id": 546,
             "name": "Shade robe top",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "32/128",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "548": {
+        {
             "id": 548,
             "name": "Shade robe",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "32/128",
+            "rarity": 0.25,
             "drop_requirements": null
+        },
+        {
+            "id": 19677,
+            "name": "Ancient shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0038961038961038965,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19679,
+            "name": "Dark totem base",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025974025974025974,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19681,
+            "name": "Dark totem middle",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025974025974025974,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19683,
+            "name": "Dark totem top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025974025974025974,
+            "drop_requirements": "catacombs"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

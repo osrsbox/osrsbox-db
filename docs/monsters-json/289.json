@@ -1,7 +1,7 @@
 {
     "id": 289,
     "name": "Ghoul",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-10-14",
     "combat_level": 42,
@@ -49,34 +49,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "6799": {
-            "id": 6799,
-            "name": "Ghoul champion scroll",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5000",
-            "drop_requirements": null
-        },
-        "7881": {
+        {
             "id": 7881,
             "name": "Ghoul bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 6799,
+            "name": "Ghoul champion scroll",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

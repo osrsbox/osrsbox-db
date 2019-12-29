@@ -46,43 +46,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "237": {
-            "id": 237,
-            "name": "Unicorn horn",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7821": {
+        {
+            "id": 237,
+            "name": "Unicorn horn",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 7821,
             "name": "Unicorn bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "13465": {
+        {
             "id": 13465,
             "name": "Ensouled unicorn head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/35",
+            "rarity": 0.02857142857142857,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

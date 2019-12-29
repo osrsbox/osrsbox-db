@@ -1,7 +1,7 @@
 {
     "id": 5683,
     "name": "Undead Lumberjack",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2007-03-13",
     "combat_level": 50,
@@ -49,160 +49,159 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "884": {
-            "id": 884,
-            "name": "Iron arrow",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "886": {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "960": {
+        {
             "id": 960,
             "name": "Plank",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "1139": {
+        {
             "id": 1139,
             "name": "Bronze med helm",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "1291": {
+        {
             "id": 1291,
             "name": "Bronze longsword",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "3363": {
-            "id": 3363,
-            "name": "Thin snail",
+        {
+            "id": 884,
+            "name": "Iron arrow",
             "members": true,
-            "quantity": "1",
+            "quantity": "5",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "3365": {
-            "id": 3365,
-            "name": "Lean snail",
+        {
+            "id": 886,
+            "name": "Steel arrow",
             "members": true,
-            "quantity": "1",
+            "quantity": "5",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "3367": {
-            "id": 3367,
-            "name": "Fat snail",
+        {
+            "id": 558,
+            "name": "Mind rune",
             "members": true,
-            "quantity": "3",
+            "quantity": "5",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "6807": {
-            "id": 6807,
-            "name": "Zombie champion scroll",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "7666": {
-            "id": 7666,
-            "name": "Guthix balance(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "7863": {
-            "id": 7863,
-            "name": "Zombie bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "10933": {
-            "id": 10933,
-            "name": "Lumberjack boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "10939": {
+        {
             "id": 10939,
             "name": "Lumberjack top",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "10940": {
+        {
             "id": 10940,
             "name": "Lumberjack legs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "10941": {
+        {
             "id": 10941,
             "name": "Lumberjack hat",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 10933,
+            "name": "Lumberjack boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 7666,
+            "name": "Guthix balance(1)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 3363,
+            "name": "Thin snail",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 3365,
+            "name": "Lean snail",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 3367,
+            "name": "Fat snail",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 7863,
+            "name": "Zombie bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 6807,
+            "name": "Zombie champion scroll",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

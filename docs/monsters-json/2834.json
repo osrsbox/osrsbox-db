@@ -1,7 +1,7 @@
 {
     "id": 2834,
     "name": "Giant bat",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2002-02-27",
     "combat_level": 27,
@@ -50,34 +50,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "530": {
+    "drops": [
+        {
             "id": 530,
             "name": "Bat bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7827": {
+        {
             "id": 7827,
             "name": "Giant bat wing",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "11941": {
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/11",
+            "rarity": 0.09090909090909091,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

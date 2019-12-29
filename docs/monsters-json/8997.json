@@ -44,34 +44,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "1033": {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "1035": {
+        {
             "id": 1035,
             "name": "Zamorak monk top",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 1033,
+            "name": "Zamorak monk bottom",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

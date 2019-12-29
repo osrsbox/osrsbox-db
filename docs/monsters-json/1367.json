@@ -46,97 +46,222 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/46.931",
-            "drop_requirements": null
-        },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/36.744",
-            "drop_requirements": null
-        },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/13.203",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/18.884",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20.973",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/91.154",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "42",
-            "noted": false,
-            "rarity": "1/47.879",
-            "drop_requirements": null
-        },
-        "1385": {
-            "id": 1385,
-            "name": "Staff of earth",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/66.761",
-            "drop_requirements": null
-        },
-        "1480": {
+    "drops": [
+        {
             "id": 1480,
             "name": "Rock (elemental)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2892": {
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.021307877522320003,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.07574036203893054,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.05295488244016098,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.04768035092738283,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.027215327672545177,
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.021307877522320003,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010970445619501064,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "42",
+            "noted": false,
+            "rarity": 0.02088598341652917,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "42",
+            "noted": false,
+            "rarity": 0.02088598341652917,
+            "drop_requirements": null
+        },
+        {
+            "id": 1385,
+            "name": "Staff of earth",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.014978804990937823,
+            "drop_requirements": null
+        },
+        {
+            "id": 1480,
+            "name": "Rock (elemental)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 2892,
             "name": "Elemental ore",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.026899074671831287,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.020175566976809514,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015130965924247666,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01176816129140601,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00924366827210697,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.006724768667957822,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0050443646829500775,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004202980417473638,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003362384333978911,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025215912511676853,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025215912511676853,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

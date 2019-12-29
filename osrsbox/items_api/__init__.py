@@ -18,12 +18,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 from osrsbox.items_api import all_items
 
 
 def load() -> all_items.AllItems:
-    """Load the osrsbox item database.
+    """Load the item database.
 
     :return all_db_items: An AllItems object containing the entire item database.
     """

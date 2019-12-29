@@ -1,7 +1,7 @@
 {
     "id": 6607,
     "name": "Elder Chaos druid",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
     "combat_level": 129,
@@ -49,214 +49,339 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "227": {
-            "id": 227,
-            "name": "Vial of water",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "10/129",
-            "drop_requirements": null
-        },
-        "231": {
-            "id": 231,
-            "name": "Snape grass",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "1/129",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "556": {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "56",
-            "noted": false,
-            "rarity": "5/129",
-            "drop_requirements": null
-        },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "19",
-            "noted": false,
-            "rarity": "5/129",
-            "drop_requirements": null
-        },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "22",
-            "noted": false,
-            "rarity": "5/129",
-            "drop_requirements": null
-        },
-        "559": {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "19",
-            "noted": false,
-            "rarity": "5/129",
-            "drop_requirements": null
-        },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "1/129",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "5/129",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "7/129",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "250",
-            "noted": false,
-            "rarity": "6/129",
-            "drop_requirements": null
-        },
-        "1033": {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/1419",
-            "drop_requirements": null
-        },
-        "1035": {
+        {
             "id": 1035,
             "name": "Zamorak monk top",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "4/1419",
+            "rarity": 0.0028188865398167725,
             "drop_requirements": null
         },
-        "1295": {
-            "id": 1295,
-            "name": "Steel longsword",
+        {
+            "id": 1033,
+            "name": "Zamorak monk bottom",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "5/129",
+            "rarity": 0.0028188865398167725,
             "drop_requirements": null
         },
-        "1594": {
-            "id": 1594,
-            "name": "Unholy mould",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/129",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "9142": {
-            "id": 9142,
-            "name": "Mithril bolts",
-            "members": true,
-            "quantity": "8-28",
-            "noted": false,
-            "rarity": "6/129",
-            "drop_requirements": null
-        },
-        "11940": {
-            "id": 11940,
-            "name": "Dark fishing bait",
-            "members": true,
-            "quantity": "10-24",
-            "noted": false,
-            "rarity": "2/129",
-            "drop_requirements": null
-        },
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/3",
-            "drop_requirements": null
-        },
-        "13471": {
-            "id": 13471,
-            "name": "Ensouled chaos druid head",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": null
-        },
-        "20517": {
-            "id": 20517,
-            "name": "Elder chaos top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1419",
-            "drop_requirements": null
-        },
-        "20520": {
-            "id": 20520,
-            "name": "Elder chaos robe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1419",
-            "drop_requirements": null
-        },
-        "20595": {
+        {
             "id": 20595,
             "name": "Elder chaos hood",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1419",
+            "rarity": 0.0007047216349541931,
             "drop_requirements": null
+        },
+        {
+            "id": 20520,
+            "name": "Elder chaos robe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007047216349541931,
+            "drop_requirements": null
+        },
+        {
+            "id": 20517,
+            "name": "Elder chaos top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007047216349541931,
+            "drop_requirements": null
+        },
+        {
+            "id": 9142,
+            "name": "Mithril bolts",
+            "members": true,
+            "quantity": "8-28",
+            "noted": false,
+            "rarity": 0.046511627906976744,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.05426356589147287,
+            "drop_requirements": null
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": true,
+            "quantity": "56",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "drop_requirements": null
+        },
+        {
+            "id": 559,
+            "name": "Body rune",
+            "members": true,
+            "quantity": "19",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "19",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "drop_requirements": null
+        },
+        {
+            "id": 558,
+            "name": "Mind rune",
+            "members": true,
+            "quantity": "22",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.007751937984496124,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "250",
+            "noted": false,
+            "rarity": 0.046511627906976744,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "250",
+            "noted": false,
+            "rarity": 0.046511627906976744,
+            "drop_requirements": null
+        },
+        {
+            "id": 227,
+            "name": "Vial of water",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.07751937984496124,
+            "drop_requirements": null
+        },
+        {
+            "id": 1295,
+            "name": "Steel longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "drop_requirements": null
+        },
+        {
+            "id": 11940,
+            "name": "Dark fishing bait",
+            "members": true,
+            "quantity": "10-24",
+            "noted": false,
+            "rarity": 0.015503875968992248,
+            "drop_requirements": null
+        },
+        {
+            "id": 231,
+            "name": "Snape grass",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.007751937984496124,
+            "drop_requirements": null
+        },
+        {
+            "id": 1594,
+            "name": "Unholy mould",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007751937984496124,
+            "drop_requirements": null
+        },
+        {
+            "id": 13471,
+            "name": "Ensouled chaos druid head",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05,
+            "drop_requirements": null
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.1065891472868217,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.07994685714368775,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.05995733218215255,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.04663202331262023,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.036628572950797834,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.026647286821705425,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.01998858833320613,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.01665455426356589,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.013323643410852713,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.009991951936894464,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.009991951936894464,
+            "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011111111111111112,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": true
+    ]
 }

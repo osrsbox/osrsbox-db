@@ -46,43 +46,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "407": {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "1-2",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "7518": {
+    "drops": [
+        {
             "id": 7518,
             "name": "Crab meat",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7536": {
+        {
             "id": 7536,
             "name": "Fresh crab claw",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "7538": {
+        {
             "id": 7538,
             "name": "Fresh crab shell",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 407,
+            "name": "Oyster",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

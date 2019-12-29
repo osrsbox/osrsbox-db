@@ -47,34 +47,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "4810": {
+        {
             "id": 4810,
             "name": "Ruined backpack",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "6807": {
+        {
             "id": 6807,
             "name": "Zombie champion scroll",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/5000",
+            "rarity": 0.0002,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

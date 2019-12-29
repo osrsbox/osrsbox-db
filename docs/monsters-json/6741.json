@@ -20,10 +20,13 @@
         "slash",
         "crumble undead"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
     "duplicate": false,
     "examine": "The walking dead.",
     "wiki_name": "Zombie (Sepulcher of Death)",
@@ -47,17 +50,62 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "313": {
+    "drops": [
+        {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "1-7,10",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": false,
+            "quantity": "40",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "35,50",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 313,
             "name": "Fishing bait",
             "members": false,
             "quantity": "27,50",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "526": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "26",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
@@ -66,16 +114,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        "532": {
-            "id": 532,
-            "name": "Big bones",
-            "members": false,
-            "quantity": "1-7,10",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "536": {
+        {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
@@ -83,43 +122,6 @@
             "noted": false,
             "rarity": null,
             "drop_requirements": null
-        },
-        "556": {
-            "id": 556,
-            "name": "Air rune",
-            "members": false,
-            "quantity": "40",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": false,
-            "quantity": "35,50",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "564": {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": false,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "26",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

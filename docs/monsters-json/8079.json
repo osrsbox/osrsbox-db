@@ -1,7 +1,7 @@
 {
     "id": 8079,
     "name": "Red dragon",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2002-02-27",
     "combat_level": 152,
@@ -25,7 +25,7 @@
     ],
     "slayer_monster": true,
     "slayer_level": 1,
-    "slayer_xp": 143.5,
+    "slayer_xp": 143.4,
     "slayer_masters": [
         "konar",
         "nieve",
@@ -54,232 +54,357 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "536": {
+    "drops": [
+        {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "690",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "811": {
-            "id": 811,
-            "name": "Rune dart",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "828": {
-            "id": 828,
-            "name": "Mithril javelin",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "892": {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "1123": {
-            "id": 1123,
-            "name": "Adamant platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1197": {
-            "id": 1197,
-            "name": "Mithril kiteshield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1303": {
-            "id": 1303,
-            "name": "Rune longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1315": {
-            "id": 1315,
-            "name": "Mithril 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1355": {
-            "id": 1355,
-            "name": "Mithril axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1369": {
-            "id": 1369,
-            "name": "Mithril battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1749": {
+        {
             "id": 1749,
             "name": "Red dragonhide",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "1897": {
-            "id": 1897,
-            "name": "Chocolate cake",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "2361": {
-            "id": 2361,
-            "name": "Adamantite bar",
+        {
+            "id": 1315,
+            "name": "Mithril 2h sword",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
+        {
+            "id": 1355,
+            "name": "Mithril axe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0234375,
             "drop_requirements": null
         },
-        "13510": {
-            "id": 13510,
-            "name": "Ensouled dragon head",
+        {
+            "id": 1369,
+            "name": "Mithril battleaxe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/40",
+            "rarity": 0.0234375,
             "drop_requirements": null
         },
-        "19582": {
+        {
+            "id": 811,
+            "name": "Rune dart",
+            "members": true,
+            "quantity": "8",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 828,
+            "name": "Mithril javelin",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1197,
+            "name": "Mithril kiteshield",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1123,
+            "name": "Adamant platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1303,
+            "name": "Rune longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "690",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "690",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "690",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "690",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 19582,
             "name": "Dragon javelin heads",
             "members": true,
             "quantity": "10",
             "noted": false,
-            "rarity": "10/128",
+            "rarity": 0.078125,
             "drop_requirements": null
         },
-        "23083": {
-            "id": 23083,
-            "name": "Brimstone key",
+        {
+            "id": 1897,
+            "name": "Chocolate cake",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2361,
+            "name": "Adamantite bar",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/89.6",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "23499": {
-            "id": 23499,
-            "name": "Grubby key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/50",
-            "drop_requirements": null
-        },
-        "23510": {
+        {
             "id": 23510,
             "name": "Tattered moon page",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/10",
+            "rarity": 0.1,
             "drop_requirements": "forthos-dungeon-only"
         },
-        "23512": {
+        {
             "id": 23512,
             "name": "Tattered sun page",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/10",
+            "rarity": 0.1,
             "drop_requirements": null
         },
-        "23514": {
+        {
             "id": 23514,
             "name": "Tattered temple page",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/10",
+            "rarity": 0.1,
+            "drop_requirements": null
+        },
+        {
+            "id": 13510,
+            "name": "Ensouled dragon head",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.025,
+            "drop_requirements": null
+        },
+        {
+            "id": 23499,
+            "name": "Grubby key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02,
+            "drop_requirements": null
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002929870616913557,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002197299957811841,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0017089576725363665,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013423539518900344,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009765625,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007325363338021566,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006103515625,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00036618232950550735,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00036618232950550735,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

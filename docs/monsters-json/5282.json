@@ -1,7 +1,7 @@
 {
     "id": 5282,
     "name": "Monkey Zombie",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-12-06",
     "combat_level": 129,
@@ -48,34 +48,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "3185": {
+    "drops": [
+        {
             "id": 3185,
             "name": "Monkey bones (small zombie)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "3186": {
+        {
             "id": 3186,
             "name": "Monkey bones (large zombie)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7854": {
+        {
             "id": 7854,
             "name": "Monkey paw",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

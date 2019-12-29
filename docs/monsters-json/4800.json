@@ -1,7 +1,7 @@
 {
     "id": 4800,
     "name": "Giant Lobster",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2006-09-20",
     "combat_level": 45,
@@ -49,124 +49,123 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "313": {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "401": {
-            "id": 401,
-            "name": "Seaweed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "403": {
-            "id": 403,
-            "name": "Edible seaweed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "405": {
-            "id": 405,
-            "name": "Casket",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "407": {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "1,2",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "436": {
-            "id": 436,
-            "name": "Copper ore",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "438": {
-            "id": 438,
-            "name": "Tin ore",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "440": {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "617": {
+    "drops": [
+        {
             "id": 617,
             "name": "Coins",
             "members": true,
             "quantity": "4,8,36",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1265": {
-            "id": 1265,
-            "name": "Bronze pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1267": {
-            "id": 1267,
-            "name": "Iron pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "9683": {
-            "id": 9683,
-            "name": "Dead sea slug",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "13459": {
+        {
             "id": 13459,
             "name": "Ensouled scorpion head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 403,
+            "name": "Edible seaweed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 407,
+            "name": "Oyster",
+            "members": true,
+            "quantity": "1,2",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 401,
+            "name": "Seaweed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 9683,
+            "name": "Dead sea slug",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1265,
+            "name": "Bronze pickaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1267,
+            "name": "Iron pickaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 436,
+            "name": "Copper ore",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 438,
+            "name": "Tin ore",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 405,
+            "name": "Casket",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

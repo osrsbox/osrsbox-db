@@ -1,7 +1,7 @@
 {
     "id": 2844,
     "name": "Magic axe",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2002-02-27",
     "combat_level": 42,
@@ -49,70 +49,141 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "1363": {
+    "drops": [
+        {
             "id": 1363,
             "name": "Iron battleaxe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "475/500",
+            "rarity": 0.95,
             "drop_requirements": null
         },
-        "1365": {
-            "id": 1365,
-            "name": "Steel battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/500",
-            "drop_requirements": null
-        },
-        "1369": {
-            "id": 1369,
-            "name": "Mithril battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/500",
-            "drop_requirements": null
-        },
-        "1371": {
-            "id": 1371,
-            "name": "Adamant battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/500",
-            "drop_requirements": null
-        },
-        "1373": {
-            "id": 1373,
-            "name": "Rune battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/500",
-            "drop_requirements": null
-        },
-        "2801": {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/256",
-            "drop_requirements": null
-        },
-        "11941": {
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/6",
+            "rarity": 0.16666666666666666,
             "drop_requirements": null
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1363,
+            "name": "Iron battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.95,
+            "drop_requirements": null
+        },
+        {
+            "id": 1365,
+            "name": "Steel battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02,
+            "drop_requirements": null
+        },
+        {
+            "id": 1369,
+            "name": "Mithril battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02,
+            "drop_requirements": null
+        },
+        {
+            "id": 1371,
+            "name": "Adamant battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008,
+            "drop_requirements": null
+        },
+        {
+            "id": 1373,
+            "name": "Rune battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002,
+            "drop_requirements": null
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 19677,
+            "name": "Ancient shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0032967032967032967,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19679,
+            "name": "Dark totem base",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002197802197802198,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19681,
+            "name": "Dark totem middle",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002197802197802198,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19683,
+            "name": "Dark totem top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002197802197802198,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 533.2,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0035211267605633804,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

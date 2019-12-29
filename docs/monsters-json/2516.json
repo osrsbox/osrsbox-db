@@ -1,7 +1,7 @@
 {
     "id": 2516,
     "name": "Ankou",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2006-07-04",
     "combat_level": 86,
@@ -52,241 +52,564 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "187": {
-            "id": 187,
-            "name": "Weapon poison",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/95",
-            "drop_requirements": null
-        },
-        "313": {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": false,
-            "quantity": "60",
-            "noted": false,
-            "rarity": "33/100",
-            "drop_requirements": null
-        },
-        "365": {
-            "id": 365,
-            "name": "Bass",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/100",
-            "drop_requirements": null
-        },
-        "447": {
-            "id": 447,
-            "name": "Mithril ore",
-            "members": false,
-            "quantity": "3-7",
-            "noted": true,
-            "rarity": "2/95",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": false,
-            "quantity": "17",
-            "noted": false,
-            "rarity": "3/95",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": false,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "6/100",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "18",
-            "noted": false,
-            "rarity": "1/95",
-            "drop_requirements": null
-        },
-        "581": {
-            "id": 581,
-            "name": "Black robe",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/100",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "500-999",
-            "noted": false,
-            "rarity": "10/95",
-            "drop_requirements": null
-        },
-        "869": {
+        {
             "id": 869,
             "name": "Black knife",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/100",
+            "rarity": 0.01,
             "drop_requirements": null
         },
-        "890": {
+        {
+            "id": 581,
+            "name": "Black robe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01,
+            "drop_requirements": null
+        },
+        {
             "id": 890,
             "name": "Adamant arrow",
             "members": false,
             "quantity": "5-14",
             "noted": false,
-            "rarity": "4/100",
+            "rarity": 0.04,
             "drop_requirements": null
         },
-        "892": {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "5-14",
-            "noted": false,
-            "rarity": "4/95",
-            "drop_requirements": null
-        },
-        "1073": {
-            "id": 1073,
-            "name": "Adamant platelegs",
+        {
+            "id": 560,
+            "name": "Death rune",
             "members": false,
-            "quantity": "1",
+            "quantity": "17",
             "noted": false,
-            "rarity": "1/95",
+            "rarity": 0.031578947368421054,
             "drop_requirements": null
         },
-        "1211": {
-            "id": 1211,
-            "name": "Adamant dagger",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/95",
-            "drop_requirements": null
-        },
-        "1436": {
-            "id": 1436,
-            "name": "Rune essence",
-            "members": false,
-            "quantity": "15",
-            "noted": true,
-            "rarity": "5/100",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
+        {
+            "id": 565,
+            "name": "Blood rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "18",
             "noted": false,
-            "rarity": "1/256",
+            "rarity": 0.010526315789473684,
             "drop_requirements": null
         },
-        "7082": {
-            "id": 7082,
-            "name": "Fried mushrooms",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/100",
-            "drop_requirements": null
-        },
-        "7936": {
-            "id": 7936,
-            "name": "Pure essence",
+        {
+            "id": 563,
+            "name": "Law rune",
             "members": false,
-            "quantity": "15",
-            "noted": true,
-            "rarity": "5/100",
-            "drop_requirements": null
-        },
-        "7946": {
-            "id": 7946,
-            "name": "Monkfish",
-            "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "1/95",
+            "rarity": 0.06,
             "drop_requirements": null
         },
-        "9008": {
-            "id": 9008,
-            "name": "Left skull half",
-            "members": false,
-            "quantity": "1",
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "18",
             "noted": false,
-            "rarity": "3/100",
+            "rarity": 0.010526315789473684,
             "drop_requirements": null
         },
-        "11940": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "500-999",
+            "noted": false,
+            "rarity": 0.10526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "500-999",
+            "noted": false,
+            "rarity": 0.10526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "500-999",
+            "noted": false,
+            "rarity": 0.10526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "500-999",
+            "noted": false,
+            "rarity": 0.10526315789473684,
+            "drop_requirements": null
+        },
+        {
             "id": 11940,
             "name": "Dark fishing bait",
             "members": true,
             "quantity": "60",
             "noted": false,
-            "rarity": "53/95",
+            "rarity": 0.5578947368421052,
             "drop_requirements": null
         },
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": false,
+            "quantity": "60",
+            "noted": false,
+            "rarity": 0.33,
+            "drop_requirements": null
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": false,
+            "quantity": "15",
+            "noted": true,
+            "rarity": 0.05,
+            "drop_requirements": null
+        },
+        {
+            "id": 1436,
+            "name": "Rune essence",
+            "members": false,
+            "quantity": "15",
+            "noted": true,
+            "rarity": 0.05,
+            "drop_requirements": null
+        },
+        {
+            "id": 9008,
+            "name": "Left skull half",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03,
+            "drop_requirements": null
+        },
+        {
+            "id": 365,
+            "name": "Bass",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3",
+            "rarity": 0.02,
             "drop_requirements": null
         },
-        "12073": {
+        {
+            "id": 447,
+            "name": "Mithril ore",
+            "members": false,
+            "quantity": "3-7",
+            "noted": true,
+            "rarity": 0.021052631578947368,
+            "drop_requirements": null
+        },
+        {
+            "id": 187,
+            "name": "Weapon poison",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.021052631578947368,
+            "drop_requirements": null
+        },
+        {
+            "id": 7082,
+            "name": "Fried mushrooms",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01,
+            "drop_requirements": null
+        },
+        {
             "id": 12073,
             "name": "Clue scroll (elite)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "20543": {
+        {
             "id": 20543,
             "name": "Reward casket (elite)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/225",
+            "rarity": 0.0044444444444444444,
             "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 1211,
+            "name": "Adamant dagger",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.021052631578947368,
+            "drop_requirements": null
+        },
+        {
+            "id": 1073,
+            "name": "Adamant platelegs",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "5-14",
+            "noted": false,
+            "rarity": 0.042105263157894736,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "17",
+            "noted": false,
+            "rarity": 0.031578947368421054,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "17",
+            "noted": false,
+            "rarity": 0.031578947368421054,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "18",
+            "noted": false,
+            "rarity": 0.010526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "18",
+            "noted": false,
+            "rarity": 0.010526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "18",
+            "noted": false,
+            "rarity": 0.010526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 11940,
+            "name": "Dark fishing bait",
+            "members": true,
+            "quantity": "60",
+            "noted": false,
+            "rarity": 0.5578947368421052,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "500-999",
+            "noted": false,
+            "rarity": 0.10526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 7946,
+            "name": "Monkfish",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.010526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 7946,
+            "name": "Monkfish",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.010526315789473684,
+            "drop_requirements": null
+        },
+        {
+            "id": 447,
+            "name": "Mithril ore",
+            "members": false,
+            "quantity": "3-7",
+            "noted": true,
+            "rarity": 0.021052631578947368,
+            "drop_requirements": null
+        },
+        {
+            "id": 187,
+            "name": "Weapon poison",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.021052631578947368,
+            "drop_requirements": null
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 20543,
+            "name": "Reward casket (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 19677,
+            "name": "Ancient shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003488372093023256,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19679,
+            "name": "Dark totem base",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002325581395348837,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19681,
+            "name": "Dark totem middle",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002325581395348837,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 19683,
+            "name": "Dark totem top",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002325581395348837,
+            "drop_requirements": "catacombs"
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007894736842105263,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005921422720498978,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004440858862103931,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0034538934013366566,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0027129679869777536,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001973684210526316,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0014804944851580428,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0012335526315789473,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000986842105263158,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007400737606848149,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007400737606848149,
+            "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01020408163265306,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003787878787878788,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": true
+    ]
 }

@@ -51,124 +51,123 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "555": {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "596": {
-            "id": 596,
-            "name": "Unlit torch",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "1,4,10,22,46",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1155": {
-            "id": 1155,
-            "name": "Bronze full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1191": {
-            "id": 1191,
-            "name": "Iron kiteshield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1279": {
-            "id": 1279,
-            "name": "Iron sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1351": {
-            "id": 1351,
-            "name": "Bronze axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1939": {
+    "drops": [
+        {
             "id": 1939,
             "name": "Swamp tar",
             "members": true,
             "quantity": "1-6",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2357": {
-            "id": 2357,
-            "name": "Gold bar",
+        {
+            "id": 1351,
+            "name": "Bronze axe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "2677": {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
+        {
+            "id": 1279,
+            "name": "Iron sword",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "4121": {
+        {
+            "id": 1155,
+            "name": "Bronze full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1191,
+            "name": "Iron kiteshield",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
             "id": 4121,
             "name": "Iron boots",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "4540": {
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "1,4,10,22,46",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 596,
+            "name": "Unlit torch",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
             "id": 4540,
             "name": "Oil lantern frame",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2357,
+            "name": "Gold bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

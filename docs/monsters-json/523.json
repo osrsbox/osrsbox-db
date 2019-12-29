@@ -1,38 +1,35 @@
 {
     "id": 523,
-    "name": "Dark warrior",
-    "incomplete": false,
+    "name": "Pirate",
+    "incomplete": true,
     "members": false,
-    "release_date": "2002-02-27",
-    "combat_level": 8,
+    "release_date": "2001-04-06",
+    "combat_level": 26,
     "size": 1,
-    "hitpoints": 17,
-    "max_hit": 2,
+    "hitpoints": 23,
+    "max_hit": 4,
     "attack_type": [
         "slash"
     ],
-    "attack_speed": 4,
-    "aggressive": true,
+    "attack_speed": 5,
+    "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "crush",
         "magic"
     ],
-    "slayer_monster": true,
-    "slayer_level": 1,
-    "slayer_xp": 17.0,
-    "slayer_masters": [
-        "krystilia"
-    ],
+    "slayer_monster": false,
+    "slayer_level": null,
+    "slayer_xp": null,
+    "slayer_masters": [],
     "duplicate": false,
-    "examine": "A warrior touched by chaos.",
-    "wiki_name": "Dark warrior (Level 8)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Dark_warrior#Level_8",
-    "attack_level": 5,
-    "strength_level": 5,
-    "defence_level": 5,
+    "examine": "This one's had too much to drink!",
+    "wiki_name": "Pirate (Asgarnian Ice Dungeon)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pirate#Asgarnian_Ice_Dungeon",
+    "attack_level": 23,
+    "strength_level": 23,
+    "defence_level": 23,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -40,187 +37,231 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 96,
-    "defence_slash": 79,
-    "defence_crush": 59,
+    "defence_stab": 3,
+    "defence_slash": 2,
+    "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 20,
-    "melee_strength": 16,
+    "attack_accuracy": 8,
+    "melee_strength": 10,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "325": {
-            "id": 325,
-            "name": "Sardine",
-            "members": false,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "440": {
-            "id": 440,
-            "name": "Iron ore",
-            "members": false,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "555": {
-            "id": 555,
-            "name": "Water rune",
-            "members": false,
-            "quantity": "12",
+        {
+            "id": 9140,
+            "name": "Iron bolts",
+            "members": true,
+            "quantity": "2-12",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.078125,
             "drop_requirements": null
         },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
+        {
+            "id": 1203,
+            "name": "Iron dagger",
             "members": false,
-            "quantity": "12",
+            "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.046875,
             "drop_requirements": null
         },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
+        {
+            "id": 1321,
+            "name": "Bronze scimitar",
             "members": false,
-            "quantity": "12",
+            "quantity": "1",
             "noted": false,
-            "rarity": "3/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
+        {
+            "id": 1115,
+            "name": "Iron platebody",
             "members": false,
-            "quantity": "9",
+            "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "562": {
+        {
             "id": 562,
             "name": "Chaos rune",
             "members": false,
-            "quantity": "8",
+            "quantity": "2",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.046875,
             "drop_requirements": null
         },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "90",
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "2",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
-        "882": {
+        {
             "id": 882,
             "name": "Bronze arrow",
             "members": false,
-            "quantity": "28",
+            "quantity": "12",
             "noted": false,
-            "rarity": "4/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "1139": {
-            "id": 1139,
-            "name": "Bronze med helm",
+        {
+            "id": 882,
+            "name": "Bronze arrow",
             "members": false,
-            "quantity": "1",
+            "quantity": "12",
             "noted": false,
-            "rarity": "3/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "1145": {
-            "id": 1145,
-            "name": "Adamant med helm",
+        {
+            "id": 556,
+            "name": "Air rune",
             "members": false,
-            "quantity": "1",
+            "quantity": "10",
             "noted": false,
-            "rarity": "3/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "1151": {
-            "id": 1151,
-            "name": "Black med helm",
+        {
+            "id": 557,
+            "name": "Earth rune",
             "members": false,
-            "quantity": "1",
+            "quantity": "9",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "1420": {
-            "id": 1420,
-            "name": "Iron mace",
+        {
+            "id": 554,
+            "name": "Fire rune",
             "members": false,
-            "quantity": "1",
+            "quantity": "5",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "1426": {
-            "id": 1426,
-            "name": "Black mace",
+        {
+            "id": 563,
+            "name": "Law rune",
             "members": false,
-            "quantity": "1",
+            "quantity": "2",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1428": {
-            "id": 1428,
-            "name": "Mithril mace",
-            "members": false,
-            "quantity": "1",
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1025,
+            "name": "Right eye patch",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.09375,
             "drop_requirements": null
         },
-        "11940": {
-            "id": 11940,
-            "name": "Dark fishing bait",
-            "members": true,
-            "quantity": "10-24",
+        {
+            "id": 1949,
+            "name": "Chef's hat",
+            "members": false,
+            "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "11941": {
+        {
+            "id": 2351,
+            "name": "Iron bar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2832,
+            "name": "Key (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3",
+            "rarity": 0.09090909090909091,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

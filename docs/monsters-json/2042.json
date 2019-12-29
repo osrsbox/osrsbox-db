@@ -1,7 +1,7 @@
 {
     "id": 2042,
     "name": "Zulrah",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2015-01-08",
     "combat_level": 725,
@@ -52,421 +52,429 @@
     "melee_strength": 0,
     "ranged_strength": 20,
     "magic_damage": 20,
-    "drops": {
-        "267": {
-            "id": 267,
-            "name": "Dwarf weed",
-            "members": true,
-            "quantity": "30",
-            "noted": true,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "269": {
-            "id": 269,
-            "name": "Torstol",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "391": {
-            "id": 391,
-            "name": "Manta ray",
-            "members": true,
-            "quantity": "35",
-            "noted": true,
-            "rarity": "12/248",
-            "drop_requirements": null
-        },
-        "451": {
-            "id": 451,
-            "name": "Runite ore",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": "11/248",
-            "drop_requirements": null
-        },
-        "453": {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "200",
-            "noted": true,
-            "rarity": "8/248",
-            "drop_requirements": null
-        },
-        "536": {
-            "id": 536,
-            "name": "Dragon bones",
-            "members": true,
-            "quantity": "12",
-            "noted": true,
-            "rarity": "8/248",
-            "drop_requirements": null
-        },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "300",
-            "noted": false,
-            "rarity": "12/248",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "500",
-            "noted": false,
-            "rarity": "12/248",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "200",
-            "noted": false,
-            "rarity": "12/248",
-            "drop_requirements": null
-        },
-        "1149": {
-            "id": 1149,
-            "name": "Dragon med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "1391": {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "10/248",
-            "drop_requirements": null
-        },
-        "1515": {
-            "id": 1515,
-            "name": "Yew logs",
-            "members": true,
-            "quantity": "35",
-            "noted": true,
-            "rarity": "10/248",
-            "drop_requirements": null
-        },
-        "1779": {
-            "id": 1779,
-            "name": "Flax",
-            "members": true,
-            "quantity": "1000",
-            "noted": true,
-            "rarity": "10/248",
-            "drop_requirements": null
-        },
-        "1939": {
-            "id": 1939,
-            "name": "Swamp tar",
-            "members": true,
-            "quantity": "1000",
-            "noted": false,
-            "rarity": "5/248",
-            "drop_requirements": null
-        },
-        "1987": {
-            "id": 1987,
-            "name": "Grapes",
-            "members": true,
-            "quantity": "250",
-            "noted": true,
-            "rarity": "6/248",
-            "drop_requirements": null
-        },
-        "2361": {
-            "id": 2361,
-            "name": "Adamantite bar",
-            "members": true,
-            "quantity": "20",
-            "noted": true,
-            "rarity": "8/248",
-            "drop_requirements": null
-        },
-        "2998": {
-            "id": 2998,
-            "name": "Toadflax",
-            "members": true,
-            "quantity": "25",
-            "noted": true,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "3000": {
-            "id": 3000,
-            "name": "Snapdragon",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "3204": {
-            "id": 3204,
-            "name": "Dragon halberd",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "5288": {
-            "id": 5288,
-            "name": "Papaya tree seed",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "6/248",
-            "drop_requirements": null
-        },
-        "5289": {
-            "id": 5289,
-            "name": "Palm tree seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "6/248",
-            "drop_requirements": null
-        },
-        "5290": {
-            "id": 5290,
-            "name": "Calquat tree seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "6/248",
-            "drop_requirements": null
-        },
-        "5296": {
-            "id": 5296,
-            "name": "Toadflax seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "5300": {
-            "id": 5300,
-            "name": "Snapdragon seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "5303": {
-            "id": 5303,
-            "name": "Dwarf weed seed",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "5304": {
-            "id": 5304,
-            "name": "Torstol seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/248",
-            "drop_requirements": null
-        },
-        "5316": {
-            "id": 5316,
-            "name": "Magic seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/248",
-            "drop_requirements": null
-        },
-        "5317": {
-            "id": 5317,
-            "name": "Spirit seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/248",
-            "drop_requirements": null
-        },
-        "5952": {
-            "id": 5952,
-            "name": "Antidote++(4)",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": "9/248",
-            "drop_requirements": null
-        },
-        "5974": {
-            "id": 5974,
-            "name": "Coconut",
-            "members": true,
-            "quantity": "20",
-            "noted": true,
-            "rarity": "5/248",
-            "drop_requirements": null
-        },
-        "6289": {
-            "id": 6289,
-            "name": "Snakeskin",
-            "members": true,
-            "quantity": "35",
-            "noted": true,
-            "rarity": "11/248",
-            "drop_requirements": null
-        },
-        "6332": {
-            "id": 6332,
-            "name": "Mahogany logs",
-            "members": true,
-            "quantity": "50",
-            "noted": true,
-            "rarity": "8/248",
-            "drop_requirements": null
-        },
-        "6571": {
-            "id": 6571,
-            "name": "Uncut onyx",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1024",
-            "drop_requirements": null
-        },
-        "7936": {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "1500",
-            "noted": true,
-            "rarity": "10/248",
-            "drop_requirements": null
-        },
-        "9193": {
-            "id": 9193,
-            "name": "Dragonstone bolt tips",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "8/248",
-            "drop_requirements": null
-        },
-        "12073": {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/75",
-            "drop_requirements": null
-        },
-        "12921": {
-            "id": 12921,
-            "name": "Pet snakeling",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/4000",
-            "drop_requirements": null
-        },
-        "12922": {
-            "id": 12922,
-            "name": "Tanzanite fang",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1024",
-            "drop_requirements": null
-        },
-        "12927": {
-            "id": 12927,
-            "name": "Serpentine visage",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1024",
-            "drop_requirements": null
-        },
-        "12932": {
-            "id": 12932,
-            "name": "Magic fang",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1024",
-            "drop_requirements": null
-        },
-        "12934": {
+    "drops": [
+        {
             "id": 12934,
             "name": "Zulrah's scales",
             "members": true,
             "quantity": "500",
             "noted": false,
-            "rarity": "5/248",
+            "rarity": 0.020161290322580645,
             "drop_requirements": null
         },
-        "12936": {
-            "id": 12936,
-            "name": "Jar of swamp",
+        {
+            "id": 12922,
+            "name": "Tanzanite fang",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3000",
+            "rarity": 0.0009765625,
             "drop_requirements": null
         },
-        "12938": {
-            "id": 12938,
-            "name": "Zul-andra teleport",
+        {
+            "id": 12932,
+            "name": "Magic fang",
             "members": true,
-            "quantity": "4",
+            "quantity": "1",
             "noted": false,
-            "rarity": "15/248",
+            "rarity": 0.0009765625,
             "drop_requirements": null
         },
-        "13200": {
+        {
+            "id": 12927,
+            "name": "Serpentine visage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009765625,
+            "drop_requirements": null
+        },
+        {
+            "id": 6571,
+            "name": "Uncut onyx",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009765625,
+            "drop_requirements": null
+        },
+        {
             "id": 13200,
             "name": "Tanzanite mutagen",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/13159",
+            "rarity": 7.599361653621096e-05,
             "drop_requirements": null
         },
-        "13201": {
+        {
             "id": 13201,
             "name": "Magma mutagen",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/13159",
+            "rarity": 7.599361653621096e-05,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.04032258064516129,
+            "drop_requirements": null
+        },
+        {
+            "id": 1149,
+            "name": "Dragon med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 3204,
+            "name": "Dragon halberd",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "300",
+            "noted": false,
+            "rarity": 0.04838709677419355,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "200",
+            "noted": false,
+            "rarity": 0.04838709677419355,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "500",
+            "noted": false,
+            "rarity": 0.04838709677419355,
+            "drop_requirements": null
+        },
+        {
+            "id": 3000,
+            "name": "Snapdragon",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 267,
+            "name": "Dwarf weed",
+            "members": true,
+            "quantity": "30",
+            "noted": true,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 2998,
+            "name": "Toadflax",
+            "members": true,
+            "quantity": "25",
+            "noted": true,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 269,
+            "name": "Torstol",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 5289,
+            "name": "Palm tree seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.024193548387096774,
+            "drop_requirements": null
+        },
+        {
+            "id": 5288,
+            "name": "Papaya tree seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.024193548387096774,
+            "drop_requirements": null
+        },
+        {
+            "id": 5290,
+            "name": "Calquat tree seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.024193548387096774,
+            "drop_requirements": null
+        },
+        {
+            "id": 5316,
+            "name": "Magic seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016129032258064516,
+            "drop_requirements": null
+        },
+        {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008064516129032258,
+            "drop_requirements": null
+        },
+        {
+            "id": 5317,
+            "name": "Spirit seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004032258064516129,
+            "drop_requirements": null
+        },
+        {
+            "id": 6289,
+            "name": "Snakeskin",
+            "members": true,
+            "quantity": "35",
+            "noted": true,
+            "rarity": 0.04435483870967742,
+            "drop_requirements": null
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.04435483870967742,
+            "drop_requirements": null
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": true,
+            "quantity": "1500",
+            "noted": true,
+            "rarity": 0.04032258064516129,
+            "drop_requirements": null
+        },
+        {
+            "id": 1779,
+            "name": "Flax",
+            "members": true,
+            "quantity": "1000",
+            "noted": true,
+            "rarity": 0.04032258064516129,
+            "drop_requirements": null
+        },
+        {
+            "id": 1515,
+            "name": "Yew logs",
+            "members": true,
+            "quantity": "35",
+            "noted": true,
+            "rarity": 0.04032258064516129,
+            "drop_requirements": null
+        },
+        {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": true,
+            "quantity": "20",
+            "noted": true,
+            "rarity": 0.03225806451612903,
+            "drop_requirements": null
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": true,
+            "quantity": "200",
+            "noted": true,
+            "rarity": 0.03225806451612903,
+            "drop_requirements": null
+        },
+        {
+            "id": 536,
+            "name": "Dragon bones",
+            "members": true,
+            "quantity": "12",
+            "noted": true,
+            "rarity": 0.03225806451612903,
+            "drop_requirements": null
+        },
+        {
+            "id": 6332,
+            "name": "Mahogany logs",
+            "members": true,
+            "quantity": "50",
+            "noted": true,
+            "rarity": 0.03225806451612903,
+            "drop_requirements": null
+        },
+        {
+            "id": 12938,
+            "name": "Zul-andra teleport",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.06048387096774194,
+            "drop_requirements": null
+        },
+        {
+            "id": 391,
+            "name": "Manta ray",
+            "members": true,
+            "quantity": "35",
+            "noted": true,
+            "rarity": 0.04838709677419355,
+            "drop_requirements": null
+        },
+        {
+            "id": 5952,
+            "name": "Antidote++(4)",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.036290322580645164,
+            "drop_requirements": null
+        },
+        {
+            "id": 9193,
+            "name": "Dragonstone bolt tips",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.03225806451612903,
+            "drop_requirements": null
+        },
+        {
+            "id": 1987,
+            "name": "Grapes",
+            "members": true,
+            "quantity": "250",
+            "noted": true,
+            "rarity": 0.024193548387096774,
+            "drop_requirements": null
+        },
+        {
+            "id": 5974,
+            "name": "Coconut",
+            "members": true,
+            "quantity": "20",
+            "noted": true,
+            "rarity": 0.020161290322580645,
+            "drop_requirements": null
+        },
+        {
+            "id": 1939,
+            "name": "Swamp tar",
+            "members": true,
+            "quantity": "1000",
+            "noted": false,
+            "rarity": 0.020161290322580645,
+            "drop_requirements": null
+        },
+        {
+            "id": 12934,
+            "name": "Zulrah's scales",
+            "members": true,
+            "quantity": "500",
+            "noted": false,
+            "rarity": 0.020161290322580645,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/50",
+            "rarity": 0.02,
+            "drop_requirements": null
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.013333333333333334,
+            "drop_requirements": null
+        },
+        {
+            "id": 12936,
+            "name": "Jar of swamp",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003333333333333333,
+            "drop_requirements": null
+        },
+        {
+            "id": 12921,
+            "name": "Pet snakeling",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00025,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

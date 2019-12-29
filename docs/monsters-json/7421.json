@@ -47,70 +47,69 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "617": {
+        {
             "id": 617,
             "name": "Coins",
             "members": true,
             "quantity": "100",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "847": {
-            "id": 847,
-            "name": "Willow longbow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "849": {
+        {
             "id": 849,
             "name": "Willow shortbow",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "886": {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "888": {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1777": {
+        {
             "id": 1777,
             "name": "Bow string",
             "members": true,
             "quantity": "10",
             "noted": true,
-            "rarity": "1/32",
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 888,
+            "name": "Mithril arrow",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 847,
+            "name": "Willow longbow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

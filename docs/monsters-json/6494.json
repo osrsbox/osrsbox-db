@@ -1,7 +1,7 @@
 {
     "id": 6494,
     "name": "General Graardor",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 624,
@@ -50,232 +50,240 @@
     "melee_strength": 43,
     "ranged_strength": 40,
     "magic_damage": 0,
-    "drops": {
-        "449": {
-            "id": 449,
-            "name": "Adamantite ore",
-            "members": true,
-            "quantity": "15-20",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "453": {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "115-120",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "532": {
+    "drops": [
+        {
             "id": 532,
             "name": "Big bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "65-70",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "20100-20600",
-            "noted": false,
-            "rarity": "1.25/127",
-            "drop_requirements": null
-        },
-        "1127": {
-            "id": 1127,
-            "name": "Rune platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "1275": {
-            "id": 1275,
-            "name": "Rune pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "6/127",
-            "drop_requirements": null
-        },
-        "1303": {
-            "id": 1303,
-            "name": "Rune longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "1319": {
-            "id": 1319,
-            "name": "Rune 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "1513": {
-            "id": 1513,
-            "name": "Magic logs",
-            "members": true,
-            "quantity": "15-20",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "3024": {
-            "id": 3024,
-            "name": "Super restore(4)",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "3051": {
-            "id": 3051,
-            "name": "Grimy snapdragon",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "5300": {
-            "id": 5300,
-            "name": "Snapdragon seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "10976": {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/400",
-            "drop_requirements": null
-        },
-        "10977": {
-            "id": 10977,
-            "name": "Curved bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5012.5",
-            "drop_requirements": null
-        },
-        "11812": {
-            "id": 11812,
-            "name": "Bandos hilt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/508",
-            "drop_requirements": null
-        },
-        "11818": {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        "11820": {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        "11822": {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/762",
-            "drop_requirements": null
-        },
-        "11832": {
+        {
             "id": 11832,
             "name": "Bandos chestplate",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/381",
+            "rarity": 0.0026246719160104987,
             "drop_requirements": null
         },
-        "11834": {
+        {
             "id": 11834,
             "name": "Bandos tassets",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/381",
+            "rarity": 0.0026246719160104987,
             "drop_requirements": null
         },
-        "11836": {
+        {
             "id": 11836,
             "name": "Bandos boots",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/381",
+            "rarity": 0.0026246719160104987,
             "drop_requirements": null
         },
-        "12073": {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
+        {
+            "id": 11812,
+            "name": "Bandos hilt",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/250",
+            "rarity": 0.001968503937007874,
             "drop_requirements": null
         },
-        "12650": {
-            "id": 12650,
-            "name": "Pet general graardor",
+        {
+            "id": 11818,
+            "name": "Godsword shard 1",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/5000",
+            "rarity": 0.0013123359580052493,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "drop_requirements": null
+        },
+        {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "drop_requirements": null
+        },
+        {
+            "id": 1303,
+            "name": "Rune longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 1127,
+            "name": "Rune platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 1275,
+            "name": "Rune pickaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.047244094488188976,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "20100-20600",
+            "noted": false,
+            "rarity": 0.00984251968503937,
+            "drop_requirements": null
+        },
+        {
+            "id": 3051,
+            "name": "Grimy snapdragon",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 3024,
+            "name": "Super restore(4)",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 449,
+            "name": "Adamantite ore",
+            "members": true,
+            "quantity": "15-20",
+            "noted": true,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": true,
+            "quantity": "115-120",
+            "noted": true,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 1513,
+            "name": "Magic logs",
+            "members": true,
+            "quantity": "15-20",
+            "noted": true,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "65-70",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "20100-20600",
+            "noted": false,
+            "rarity": 0.00984251968503937,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/50",
+            "rarity": 0.02,
+            "drop_requirements": null
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004,
+            "drop_requirements": null
+        },
+        {
+            "id": 10976,
+            "name": "Long bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025,
+            "drop_requirements": null
+        },
+        {
+            "id": 12650,
+            "name": "Pet general graardor",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
+            "drop_requirements": null
+        },
+        {
+            "id": 10977,
+            "name": "Curved bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00019950124688279303,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

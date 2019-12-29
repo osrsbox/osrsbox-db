@@ -1,19 +1,19 @@
 {
     "id": 522,
-    "name": "Tribesman",
+    "name": "Pirate",
     "incomplete": true,
     "members": true,
-    "release_date": "2002-08-15",
-    "combat_level": 32,
+    "release_date": "2001-04-06",
+    "combat_level": 23,
     "size": 1,
-    "hitpoints": 39,
-    "max_hit": 4,
+    "hitpoints": 20,
+    "max_hit": 3,
     "attack_type": [
-        "stab"
+        "slash"
     ],
-    "attack_speed": 4,
-    "aggressive": true,
-    "poisonous": true,
+    "attack_speed": 5,
+    "aggressive": false,
+    "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
@@ -24,12 +24,12 @@
     "slayer_xp": null,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "A primitive warrior.",
-    "wiki_name": "Tribesman",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Tribesman",
-    "attack_level": 23,
-    "strength_level": 27,
-    "defence_level": 26,
+    "examine": "Avast ye scurvy land lubbers!",
+    "wiki_name": "Pirate (Brimhaven)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pirate#Brimhaven",
+    "attack_level": 21,
+    "strength_level": 21,
+    "defence_level": 21,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -37,214 +37,231 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 4,
-    "defence_slash": 6,
-    "defence_crush": 6,
+    "defence_stab": 3,
+    "defence_slash": 2,
+    "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
     "attack_accuracy": 8,
-    "melee_strength": 5,
+    "melee_strength": 10,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "181": {
-            "id": 181,
-            "name": "Superantipoison(3)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/138",
-            "drop_requirements": null
-        },
-        "183": {
-            "id": 183,
-            "name": "Superantipoison(2)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/138",
-            "drop_requirements": null
-        },
-        "225": {
-            "id": 225,
-            "name": "Limpwurt root",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "12/138",
-            "drop_requirements": null
-        },
-        "231": {
-            "id": 231,
-            "name": "Snape grass",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/138",
-            "drop_requirements": null
-        },
-        "438": {
-            "id": 438,
-            "name": "Tin ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/138",
-            "drop_requirements": null
-        },
-        "444": {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/138",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "561": {
+        {
+            "id": 9140,
+            "name": "Iron bolts",
+            "members": true,
+            "quantity": "2-12",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1203,
+            "name": "Iron dagger",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 1321,
+            "name": "Bronze scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1115,
+            "name": "Iron platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
             "id": 561,
             "name": "Nature rune",
             "members": true,
-            "quantity": "3",
+            "quantity": "2",
             "noted": false,
-            "rarity": "8/138",
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
-        "827": {
-            "id": 827,
-            "name": "Steel javelin",
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
             "members": true,
             "quantity": "10",
             "noted": false,
-            "rarity": "3/138",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "828": {
-            "id": 828,
-            "name": "Mithril javelin",
+        {
+            "id": 557,
+            "name": "Earth rune",
             "members": true,
-            "quantity": "10",
+            "quantity": "9",
             "noted": false,
-            "rarity": "2/138",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "878": {
-            "id": 878,
-            "name": "Bronze bolts (p)",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "2/138",
-            "drop_requirements": null
-        },
-        "887": {
-            "id": 887,
-            "name": "Steel arrow(p)",
+        {
+            "id": 554,
+            "name": "Fire rune",
             "members": true,
             "quantity": "5",
             "noted": false,
-            "rarity": "2/138",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "1237": {
-            "id": 1237,
-            "name": "Bronze spear",
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1025,
+            "name": "Right eye patch",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "7/138",
+            "rarity": 0.09375,
             "drop_requirements": null
         },
-        "1239": {
-            "id": 1239,
-            "name": "Iron spear",
+        {
+            "id": 1949,
+            "name": "Chef's hat",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "2/138",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1243": {
-            "id": 1243,
-            "name": "Mithril spear",
+        {
+            "id": 2351,
+            "name": "Iron bar",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/138",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1525": {
-            "id": 1525,
-            "name": "Grimy snake weed",
+        {
+            "id": 2832,
+            "name": "Key (medium)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "5/138",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "1533": {
-            "id": 1533,
-            "name": "Grimy rogue's purse",
+        {
+            "id": 11941,
+            "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "5/138",
-            "drop_requirements": null
-        },
-        "1933": {
-            "id": 1933,
-            "name": "Pot of flour",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/138",
-            "drop_requirements": null
-        },
-        "2309": {
-            "id": 2309,
-            "name": "Bread",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/138",
-            "drop_requirements": null
-        },
-        "2801": {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/138",
-            "drop_requirements": null
-        },
-        "3188": {
-            "id": 3188,
-            "name": "Cleaning cloth",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "12/138",
-            "drop_requirements": null
-        },
-        "6306": {
-            "id": 6306,
-            "name": "Trading sticks",
-            "members": true,
-            "quantity": "62",
-            "noted": false,
-            "rarity": "5/138",
+            "rarity": 0.09090909090909091,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

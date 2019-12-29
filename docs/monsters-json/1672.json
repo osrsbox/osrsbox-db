@@ -1,7 +1,7 @@
 {
     "id": 1672,
     "name": "Ahrim the Blighted",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-05-09",
     "combat_level": 98,
@@ -51,16 +51,15 @@
     "melee_strength": 68,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "23083": {
+    "drops": [
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/100.8",
+            "rarity": 0.00992063492063492,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

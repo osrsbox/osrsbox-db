@@ -1,18 +1,18 @@
 {
     "id": 524,
-    "name": "Chaos druid warrior",
+    "name": "Pirate",
     "incomplete": true,
     "members": true,
-    "release_date": "2002-12-12",
-    "combat_level": 37,
+    "release_date": "2001-04-06",
+    "combat_level": 23,
     "size": 1,
-    "hitpoints": 40,
-    "max_hit": 5,
+    "hitpoints": 20,
+    "max_hit": 3,
     "attack_type": [
-        "crush"
+        "slash"
     ],
     "attack_speed": 5,
-    "aggressive": true,
+    "aggressive": false,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
@@ -23,13 +23,13 @@
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": [],
-    "duplicate": false,
-    "examine": "A crazy evil druid.",
-    "wiki_name": "Chaos druid warrior",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Chaos_druid_warrior",
-    "attack_level": 32,
-    "strength_level": 34,
-    "defence_level": 25,
+    "duplicate": true,
+    "examine": "Avast ye scurvy land lubbers!",
+    "wiki_name": "Pirate (Brimhaven)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pirate#Brimhaven",
+    "attack_level": 21,
+    "strength_level": 21,
+    "defence_level": 21,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -37,160 +37,231 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 13,
-    "defence_slash": 17,
-    "defence_crush": 14,
-    "defence_magic": -4,
-    "defence_ranged": 14,
-    "attack_accuracy": 9,
-    "melee_strength": 5,
+    "defence_stab": 3,
+    "defence_slash": 2,
+    "defence_crush": 0,
+    "defence_magic": 0,
+    "defence_ranged": 0,
+    "attack_accuracy": 8,
+    "melee_strength": 10,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "167": {
-            "id": 167,
-            "name": "Super defence(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "225": {
-            "id": 225,
-            "name": "Limpwurt root",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "227": {
-            "id": 227,
-            "name": "Vial of water",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "231": {
-            "id": 231,
-            "name": "Snape grass",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "235": {
-            "id": 235,
-            "name": "Unicorn horn dust",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "239": {
-            "id": 239,
-            "name": "White berries",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
+        {
+            "id": 9140,
+            "name": "Iron bolts",
+            "members": true,
+            "quantity": "2-12",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1203,
+            "name": "Iron dagger",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 1321,
+            "name": "Bronze scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1115,
+            "name": "Iron platebody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
             "members": true,
             "quantity": "12",
             "noted": false,
-            "rarity": "5/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "556": {
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 556,
             "name": "Air rune",
             "members": true,
-            "quantity": "36",
+            "quantity": "10",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "557": {
+        {
             "id": 557,
             "name": "Earth rune",
             "members": true,
             "quantity": "9",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
+        {
+            "id": 554,
+            "name": "Fire rune",
             "members": true,
-            "quantity": "3",
+            "quantity": "5",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "563": {
+        {
             "id": 563,
             "name": "Law rune",
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "4/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "617": {
+        {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "10",
+            "quantity": "55",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1217": {
-            "id": 1217,
-            "name": "Black dagger",
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "55",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1025,
+            "name": "Right eye patch",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.09375,
             "drop_requirements": null
         },
-        "5100": {
-            "id": 5100,
-            "name": "Limpwurt seed",
+        {
+            "id": 1949,
+            "name": "Chef's hat",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "13471": {
-            "id": 13471,
-            "name": "Ensouled chaos druid head",
+        {
+            "id": 2351,
+            "name": "Iron bar",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2832,
+            "name": "Key (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.09090909090909091,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

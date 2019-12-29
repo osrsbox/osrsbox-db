@@ -18,19 +18,19 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 import pytest
 from pathlib import Path
 
 
-PATH_TO_TEST_DIR = Path(__file__).absolute().parent
+PROJECT_ROOT_PATH = Path(__file__).absolute().parent.parent
+TEST_PATH = Path(PROJECT_ROOT_PATH / "test")
 
 
 @pytest.fixture(scope="session")
 def path_to_docs_dir() -> Path:
-    return PATH_TO_TEST_DIR / ".." / "docs"
+    return PROJECT_ROOT_PATH / "docs"
 
 
 @pytest.fixture(scope="session")
 def path_to_cache_dir() -> Path:
-    return PATH_TO_TEST_DIR / ".." / "extraction_tools_cache"
+    return TEST_PATH / "cache"

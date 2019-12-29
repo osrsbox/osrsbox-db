@@ -1,7 +1,7 @@
 {
     "id": 3165,
     "name": "Flight Kilisa",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 159,
@@ -51,169 +51,186 @@
     "melee_strength": 14,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "213": {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "314": {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "1-11",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "391": {
-            "id": 391,
-            "name": "Manta ray",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "617": {
-            "id": 617,
-            "name": "Coins",
+        {
+            "id": 314,
+            "name": "Feather",
             "members": true,
-            "quantity": "1000-1100",
+            "quantity": "1-11",
             "noted": false,
-            "rarity": "70/127",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "808": {
-            "id": 808,
-            "name": "Steel dart",
-            "members": true,
-            "quantity": "91-101",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "886": {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "91-101",
-            "noted": false,
-            "rarity": "7/127",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "4697": {
-            "id": 4697,
-            "name": "Smoke rune",
-            "members": true,
-            "quantity": "10-15",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "6693": {
-            "id": 6693,
-            "name": "Crushed nest",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "7058": {
-            "id": 7058,
-            "name": "Mushroom potato",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "8/127",
-            "drop_requirements": null
-        },
-        "11818": {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1524",
-            "drop_requirements": null
-        },
-        "11820": {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1524",
-            "drop_requirements": null
-        },
-        "11822": {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1524",
-            "drop_requirements": null
-        },
-        "11826": {
+        {
             "id": 11826,
             "name": "Armadyl helmet",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/16129",
+            "rarity": 6.2000124000248e-05,
             "drop_requirements": null
         },
-        "11828": {
+        {
             "id": 11828,
             "name": "Armadyl chestplate",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/16129",
+            "rarity": 6.2000124000248e-05,
             "drop_requirements": null
         },
-        "11830": {
+        {
             "id": 11830,
             "name": "Armadyl chainskirt",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/16129",
+            "rarity": 6.2000124000248e-05,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "1000-1100",
+            "noted": false,
+            "rarity": 0.5511811023622047,
+            "drop_requirements": null
+        },
+        {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006561679790026247,
+            "drop_requirements": null
+        },
+        {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006561679790026247,
+            "drop_requirements": null
+        },
+        {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006561679790026247,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "1000-1100",
+            "noted": false,
+            "rarity": 0.5511811023622047,
+            "drop_requirements": null
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": true,
+            "quantity": "91-101",
+            "noted": false,
+            "rarity": 0.05511811023622047,
+            "drop_requirements": null
+        },
+        {
+            "id": 808,
+            "name": "Steel dart",
+            "members": true,
+            "quantity": "91-101",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 4697,
+            "name": "Smoke rune",
+            "members": true,
+            "quantity": "10-15",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 391,
+            "name": "Manta ray",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 7058,
+            "name": "Mushroom potato",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "1000-1100",
+            "noted": false,
+            "rarity": 0.5511811023622047,
+            "drop_requirements": null
+        },
+        {
+            "id": 6693,
+            "name": "Crushed nest",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.06299212598425197,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/91.4",
+            "rarity": 0.010940919037199124,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

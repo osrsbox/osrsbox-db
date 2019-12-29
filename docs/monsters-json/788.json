@@ -1,7 +1,7 @@
 {
     "id": 788,
     "name": "Suqah",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2006-07-24",
     "combat_level": 111,
@@ -51,88 +51,87 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "199": {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "30/129",
-            "drop_requirements": null
-        },
-        "201": {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "25/129",
-            "drop_requirements": null
-        },
-        "532": {
+    "drops": [
+        {
             "id": 532,
             "name": "Big bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/129",
-            "drop_requirements": null
-        },
-        "9079": {
-            "id": 9079,
-            "name": "Suqah tooth",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "69/129",
-            "drop_requirements": null
-        },
-        "9080": {
+        {
             "id": 9080,
             "name": "Suqah hide",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "9103": {
+        {
             "id": 9103,
             "name": "A special tiara",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "10976": {
+        {
+            "id": 9079,
+            "name": "Suqah tooth",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.5348837209302325,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.23255813953488372,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1937984496124031,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007751937984496124,
+            "drop_requirements": null
+        },
+        {
             "id": 10976,
             "name": "Long bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/400",
+            "rarity": 0.0025,
             "drop_requirements": null
         },
-        "10977": {
+        {
             "id": 10977,
             "name": "Curved bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/5012.5",
+            "rarity": 0.00019950124688279303,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

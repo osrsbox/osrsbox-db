@@ -1,7 +1,7 @@
 {
     "id": 562,
     "name": "Sorebones",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2007-03-06",
     "combat_level": 57,
@@ -49,268 +49,267 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "199": {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "201": {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "203": {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "205": {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "207": {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "211": {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "213": {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "313": {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "555": {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "23",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "559": {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "564": {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "30-65",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1025": {
-            "id": 1025,
-            "name": "Right eye patch",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1209": {
-            "id": 1209,
-            "name": "Mithril dagger",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1329": {
-            "id": 1329,
-            "name": "Mithril scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "2485": {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": null,
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "6807": {
-            "id": 6807,
-            "name": "Zombie champion scroll",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5000",
-            "drop_requirements": null
-        },
-        "7157": {
-            "id": 7157,
-            "name": "Braindeath 'rum'",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "7863": {
-            "id": 7863,
-            "name": "Zombie bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/4",
-            "drop_requirements": null
-        },
-        "8925": {
-            "id": 8925,
-            "name": "Bandana eyepatch (red)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "8926": {
-            "id": 8926,
-            "name": "Bandana eyepatch (blue)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "9141": {
+        {
             "id": 9141,
             "name": "Steel bolts",
             "members": true,
             "quantity": "2-6",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "10893": {
-            "id": 10893,
-            "name": "Cranial clamp",
+        {
+            "id": 1209,
+            "name": "Mithril dagger",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "10894": {
+        {
+            "id": 8926,
+            "name": "Bandana eyepatch (blue)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 8925,
+            "name": "Bandana eyepatch (red)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1025,
+            "name": "Right eye patch",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1329,
+            "name": "Mithril scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "23",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 559,
+            "name": "Body rune",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "30-65",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 7157,
+            "name": "Braindeath 'rum'",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 10894,
             "name": "Brain tongs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "10895": {
+        {
+            "id": 10893,
+            "name": "Cranial clamp",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 10895,
             "name": "Bell jar",
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "10904": {
+        {
             "id": 10904,
             "name": "Skull staple",
             "members": true,
             "quantity": "30",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 7863,
+            "name": "Zombie bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 6807,
+            "name": "Zombie champion scroll",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

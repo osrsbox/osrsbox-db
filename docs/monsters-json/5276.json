@@ -1,7 +1,7 @@
 {
     "id": 5276,
     "name": "Monkey Guard",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-12-06",
     "combat_level": 167,
@@ -46,34 +46,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "3181": {
+    "drops": [
+        {
             "id": 3181,
             "name": "Monkey bones (gorilla)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "3182": {
+        {
             "id": 3182,
             "name": "Monkey bones (bearded gorilla)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "13450": {
+        {
             "id": 13450,
             "name": "Ensouled monkey head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/35",
+            "rarity": 0.02857142857142857,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

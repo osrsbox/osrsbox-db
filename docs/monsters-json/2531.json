@@ -19,10 +19,13 @@
     "weakness": [
         "magic"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "turael",
+        "mazchna"
+    ],
     "duplicate": false,
     "examine": "Eeek! A ghost!",
     "wiki_name": "Ghost (Lv 29)",
@@ -46,25 +49,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "11941": {
+    "drops": [
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/15",
+            "rarity": 0.06666666666666667,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/90",
+            "rarity": 0.011111111111111112,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

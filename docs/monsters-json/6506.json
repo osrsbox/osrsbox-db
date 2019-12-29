@@ -23,10 +23,14 @@
         "melee",
         "ranged"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "chaeldar",
+        "nieve",
+        "duradel"
+    ],
     "duplicate": true,
     "examine": "This is going to hurt ...",
     "wiki_name": "TzTok-Jad",
@@ -50,16 +54,15 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "13225": {
+    "drops": [
+        {
             "id": 13225,
             "name": "Tzrek-jad",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/200",
+            "rarity": 0.005,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

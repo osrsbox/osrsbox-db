@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "JSON Schema for an OSRS npcs definition.",
+    "title": "OSRS Cache - npcs.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "number"
+        },
+        "name": {
+            "type": "string"
+        },
+        "size": {
+            "type": "number"
+        },
+        "models": {
+            "type": "array"
+        },
+        "standingAnimation": {
+            "type": "number"
+        },
+        "rotateLeftAnimation": {
+            "type": "number"
+        },
+        "rotateRightAnimation": {
+            "type": "number"
+        },
+        "walkingAnimation": {
+            "type": "number"
+        },
+        "rotate180Animation": {
+            "type": "number"
+        },
+        "rotate90RightAnimation": {
+            "type": "number"
+        },
+        "rotate90LeftAnimation": {
+            "type": "number"
+        },
+        "actions": {
+            "type": "array"
+        },
+        "isMinimapVisible": {
+            "type": "boolean"
+        },
+        "combatLevel": {
+            "type": "number"
+        },
+        "widthScale": {
+            "type": "number"
+        },
+        "heightScale": {
+            "type": "number"
+        },
+        "hasRenderPriority": {
+            "type": "boolean"
+        },
+        "ambient": {
+            "type": "number"
+        },
+        "contrast": {
+            "type": "number"
+        },
+        "headIcon": {
+            "type": "number"
+        },
+        "rotationSpeed": {
+            "type": "number"
+        },
+        "varbitId": {
+            "type": "number"
+        },
+        "varpIndex": {
+            "type": "number"
+        },
+        "isInteractable": {
+            "type": "boolean"
+        },
+        "rotationFlag": {
+            "type": "boolean"
+        },
+        "isPet": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "size",
+        "models",
+        "standingAnimation",
+        "rotateLeftAnimation",
+        "rotateRightAnimation",
+        "walkingAnimation",
+        "rotate180Animation",
+        "rotate90RightAnimation",
+        "rotate90LeftAnimation",
+        "actions",
+        "isMinimapVisible",
+        "combatLevel",
+        "widthScale",
+        "heightScale",
+        "hasRenderPriority",
+        "ambient",
+        "contrast",
+        "headIcon",
+        "rotationSpeed",
+        "varbitId",
+        "varpIndex",
+        "isInteractable",
+        "rotationFlag",
+        "isPet"
+    ]
+}

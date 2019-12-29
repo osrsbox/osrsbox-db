@@ -46,88 +46,87 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "245": {
-            "id": 245,
-            "name": "Wine of zamorak",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
+        {
             "id": 554,
             "name": "Fire rune",
             "members": true,
             "quantity": "7",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "555": {
+        {
             "id": 555,
             "name": "Water rune",
             "members": true,
             "quantity": "6,19",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "556": {
+        {
             "id": 556,
             "name": "Air rune",
             "members": true,
             "quantity": "5",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "561": {
+        {
             "id": 561,
             "name": "Nature rune",
             "members": true,
             "quantity": "2,28",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "563": {
+        {
             "id": 563,
             "name": "Law rune",
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "565": {
+        {
             "id": 565,
             "name": "Blood rune",
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "617": {
+        {
             "id": 617,
             "name": "Coins",
             "members": true,
             "quantity": "100",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 245,
+            "name": "Wine of zamorak",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

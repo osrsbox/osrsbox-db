@@ -1,7 +1,7 @@
 {
     "id": 2806,
     "name": "Chicken",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
     "combat_level": 1,
@@ -46,52 +46,60 @@
     "melee_strength": -42,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "314": {
-            "id": 314,
-            "name": "Feather",
-            "members": false,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "32/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2138": {
+        {
             "id": 2138,
             "name": "Raw chicken",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2832": {
+        {
+            "id": 314,
+            "name": "Feather",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 314,
+            "name": "Feather",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
             "id": 2832,
             "name": "Key (medium)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/300",
+            "rarity": 0.0033333333333333335,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

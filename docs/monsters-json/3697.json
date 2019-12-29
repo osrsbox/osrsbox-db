@@ -1,7 +1,7 @@
 {
     "id": 3697,
     "name": "Vampyre Juvenile",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2006-09-04",
     "combat_level": 54,
@@ -50,16 +50,15 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "3325": {
+    "drops": [
+        {
             "id": 3325,
             "name": "Vampyre dust",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

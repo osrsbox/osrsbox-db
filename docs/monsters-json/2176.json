@@ -1,7 +1,7 @@
 {
     "id": 2176,
     "name": "TzHaar-Ket",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-09-19",
     "combat_level": 149,
@@ -29,8 +29,8 @@
     ],
     "duplicate": true,
     "examine": "Must be a guard or something.",
-    "wiki_name": "TzHaar-Ket (Lv 149)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Ket#Lv_149",
+    "wiki_name": "TzHaar-Ket (Level 149)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Ket#Level_149",
     "attack_level": 120,
     "strength_level": 140,
     "defence_level": 120,
@@ -50,124 +50,123 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "1617": {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1619": {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1621": {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1623": {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "6524": {
-            "id": 6524,
-            "name": "Toktz-ket-xil",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "6528": {
+    "drops": [
+        {
             "id": 6528,
             "name": "Tzhaar-ket-om",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/512",
+            "rarity": 0.001953125,
             "drop_requirements": null
         },
-        "6529": {
-            "id": 6529,
-            "name": "Tokkul",
+        {
+            "id": 6524,
+            "name": "Toktz-ket-xil",
             "members": true,
-            "quantity": "1-103",
+            "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.001953125,
             "drop_requirements": null
         },
-        "6568": {
+        {
             "id": 6568,
             "name": "Obsidian cape",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/512",
+            "rarity": 0.001953125,
             "drop_requirements": null
         },
-        "9194": {
-            "id": 9194,
-            "name": "Onyx bolt tips",
-            "members": true,
-            "quantity": "1-4,20",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "13498": {
-            "id": 13498,
-            "name": "Ensouled tzhaar head",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/35",
-            "drop_requirements": null
-        },
-        "21298": {
+        {
             "id": 21298,
             "name": "Obsidian helmet",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/2000",
+            "rarity": 0.0005,
             "drop_requirements": null
         },
-        "21301": {
+        {
             "id": 21301,
             "name": "Obsidian platebody",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/2000",
+            "rarity": 0.0005,
             "drop_requirements": null
         },
-        "21304": {
+        {
             "id": 21304,
             "name": "Obsidian platelegs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/2000",
+            "rarity": 0.0005,
+            "drop_requirements": null
+        },
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": true,
+            "quantity": "1-4,20",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 6529,
+            "name": "Tokkul",
+            "members": true,
+            "quantity": "1-103",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 13498,
+            "name": "Ensouled tzhaar head",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02857142857142857,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -44,34 +44,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": false,
-            "quantity": "5-10",
-            "noted": false,
-            "rarity": "19/20",
-            "drop_requirements": null
-        },
-        "592": {
+    "drops": [
+        {
             "id": 592,
             "name": "Ashes",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "1440": {
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": false,
+            "quantity": "5-10",
+            "noted": false,
+            "rarity": 0.95,
+            "drop_requirements": null
+        },
+        {
             "id": 1440,
             "name": "Earth talisman",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/20",
+            "rarity": 0.05,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

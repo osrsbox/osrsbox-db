@@ -1,15 +1,16 @@
 {
     "id": 527,
-    "name": "Guard Bandit",
-    "incomplete": false,
+    "name": "Monk of Zamorak",
+    "incomplete": true,
     "members": false,
-    "release_date": "2002-02-27",
+    "release_date": "2001-04-06",
     "combat_level": 22,
     "size": 1,
-    "hitpoints": 27,
+    "hitpoints": 10,
     "max_hit": 3,
     "attack_type": [
-        "stab"
+        "crush",
+        "magic"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -17,56 +18,80 @@
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "stab"
+        "ranged"
     ],
-    "slayer_monster": true,
-    "slayer_level": 1,
-    "slayer_xp": 29.0,
-    "slayer_masters": [
-        "krystilia"
-    ],
+    "slayer_monster": false,
+    "slayer_level": null,
+    "slayer_xp": null,
+    "slayer_masters": [],
     "duplicate": false,
-    "examine": "Bandit Camp guard.",
-    "wiki_name": "Guard Bandit",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Guard_Bandit",
-    "attack_level": 17,
-    "strength_level": 17,
-    "defence_level": 17,
-    "magic_level": 1,
+    "examine": "An evil human cleric.",
+    "wiki_name": "Monk of Zamorak (Lv 17)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Monk_of_Zamorak#Lv_17",
+    "attack_level": 8,
+    "strength_level": 8,
+    "defence_level": 12,
+    "magic_level": 25,
     "ranged_level": 1,
-    "attack_stab": 11,
+    "attack_stab": 0,
     "attack_slash": 0,
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 4,
-    "defence_slash": 8,
-    "defence_crush": 5,
-    "defence_magic": 1,
-    "defence_ranged": 4,
+    "defence_stab": 0,
+    "defence_slash": 0,
+    "defence_crush": 0,
+    "defence_magic": 0,
+    "defence_ranged": 0,
     "attack_accuracy": 0,
-    "melee_strength": 12,
+    "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "11941": {
+        {
+            "id": 1033,
+            "name": "Zamorak monk bottom",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05,
+            "drop_requirements": null
+        },
+        {
+            "id": 1035,
+            "name": "Zamorak monk top",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05,
+            "drop_requirements": null
+        },
+        {
+            "id": 2944,
+            "name": "Golden key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/13",
+            "rarity": 0.07692307692307693,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

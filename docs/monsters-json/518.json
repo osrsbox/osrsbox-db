@@ -1,37 +1,35 @@
 {
     "id": 518,
-    "name": "Rogue",
-    "incomplete": false,
-    "members": true,
-    "release_date": "2002-05-10",
-    "combat_level": 15,
+    "name": "Highwayman",
+    "incomplete": true,
+    "members": false,
+    "release_date": "2001-01-21",
+    "combat_level": 5,
     "size": 1,
-    "hitpoints": 17,
-    "max_hit": 2,
+    "hitpoints": 13,
+    "max_hit": 1,
     "attack_type": [
         "stab"
     ],
     "attack_speed": 4,
-    "aggressive": false,
+    "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
         "magic"
     ],
-    "slayer_monster": true,
-    "slayer_level": 1,
-    "slayer_xp": 17.0,
-    "slayer_masters": [
-        "krystilia"
-    ],
+    "slayer_monster": false,
+    "slayer_level": null,
+    "slayer_xp": null,
+    "slayer_masters": [],
     "duplicate": false,
-    "examine": "Rogueish.",
-    "wiki_name": "Rogue (Lv 15)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Rogue#Lv_15",
-    "attack_level": 13,
-    "strength_level": 13,
-    "defence_level": 13,
+    "examine": "He holds up passers by.",
+    "wiki_name": "Highwayman",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Highwayman",
+    "attack_level": 2,
+    "strength_level": 2,
+    "defence_level": 4,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -39,205 +37,42 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 6,
-    "defence_slash": 9,
-    "defence_crush": 11,
+    "defence_stab": 0,
+    "defence_slash": 3,
+    "defence_crush": 2,
     "defence_magic": 0,
-    "defence_ranged": 0,
-    "attack_accuracy": 5,
-    "melee_strength": 5,
+    "defence_ranged": 2,
+    "attack_accuracy": 6,
+    "melee_strength": 7,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "313": {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
+    "drops": [
+        {
+            "id": 1019,
+            "name": "Black cape",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "5/128",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "436": {
-            "id": 436,
-            "name": "Copper ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "526": {
+        {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "556": {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "9",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "25-40",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "877": {
-            "id": 877,
-            "name": "Bronze bolts",
+        {
+            "id": 9140,
+            "name": "Iron bolts",
             "members": true,
             "quantity": "2-12",
             "noted": false,
-            "rarity": "22/128",
-            "drop_requirements": null
-        },
-        "882": {
-            "id": 882,
-            "name": "Bronze arrow",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1139": {
-            "id": 1139,
-            "name": "Bronze med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1203": {
-            "id": 1203,
-            "name": "Iron dagger",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1219": {
-            "id": 1219,
-            "name": "Iron dagger(p)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/71",
-            "drop_requirements": null
-        },
-        "1440": {
-            "id": 1440,
-            "name": "Earth talisman",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1523": {
-            "id": 1523,
-            "name": "Lockpick",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1965": {
-            "id": 1965,
-            "name": "Cabbage",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1993": {
-            "id": 1993,
-            "name": "Jug of wine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "2677": {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": null
-        },
-        "23182": {
-            "id": 23182,
-            "name": "Clue scroll (beginner)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/90",
+            "rarity": 0.05,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

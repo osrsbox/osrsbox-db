@@ -1,7 +1,7 @@
 {
     "id": 6617,
     "name": "Scorpia's guardian",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
     "combat_level": 47,
@@ -48,25 +48,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "11941": {
+    "drops": [
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/6",
+            "rarity": 0.16666666666666666,
             "drop_requirements": null
         },
-        "13459": {
+        {
             "id": 13459,
             "name": "Ensouled scorpion head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.04,
             "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 426.7,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003787878787878788,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": false
+    ]
 }

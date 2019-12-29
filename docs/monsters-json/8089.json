@@ -1,7 +1,7 @@
 {
     "id": 8089,
     "name": "Mithril dragon",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2007-07-03",
     "combat_level": 304,
@@ -55,250 +55,276 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "385": {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "536": {
+    "drops": [
+        {
             "id": 536,
             "name": "Dragon bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "27",
-            "noted": false,
-            "rarity": "19/128",
-            "drop_requirements": null
-        },
-        "566": {
-            "id": 566,
-            "name": "Soul rune",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "876",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "817": {
-            "id": 817,
-            "name": "Rune dart(p)",
-            "members": true,
-            "quantity": "14",
-            "noted": false,
-            "rarity": "7/128",
-            "drop_requirements": null
-        },
-        "830": {
-            "id": 830,
-            "name": "Rune javelin",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "14/128",
-            "drop_requirements": null
-        },
-        "868": {
-            "id": 868,
-            "name": "Rune knife",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "892": {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1163": {
-            "id": 1163,
-            "name": "Rune full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1247": {
-            "id": 1247,
-            "name": "Rune spear",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1373": {
-            "id": 1373,
-            "name": "Rune battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "12/128",
-            "drop_requirements": null
-        },
-        "1432": {
-            "id": 1432,
-            "name": "Rune mace",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "2359": {
+        {
             "id": 2359,
             "name": "Mithril bar",
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2363": {
-            "id": 2363,
-            "name": "Runite bar",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "9144": {
-            "id": 9144,
-            "name": "Runite bolts",
-            "members": true,
-            "quantity": "10-21",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "11286": {
-            "id": 11286,
-            "name": "Draconic visage",
+        {
+            "id": 1373,
+            "name": "Rune battleaxe",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/2500",
+            "rarity": 0.09375,
             "drop_requirements": null
         },
-        "11335": {
+        {
+            "id": 817,
+            "name": "Rune dart(p)",
+            "members": true,
+            "quantity": "14",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 868,
+            "name": "Rune knife",
+            "members": true,
+            "quantity": "8",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1432,
+            "name": "Rune mace",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 11335,
             "name": "Dragon full helm",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32768",
+            "rarity": 3.0517578125e-05,
             "drop_requirements": null
         },
-        "11338": {
-            "id": 11338,
-            "name": "Chewed bones",
+        {
+            "id": 565,
+            "name": "Blood rune",
             "members": true,
-            "quantity": "1",
+            "quantity": "27",
             "noted": false,
-            "rarity": "3/128",
+            "rarity": 0.1484375,
             "drop_requirements": null
         },
-        "11341": {
-            "id": 11341,
-            "name": "Ancient page",
+        {
+            "id": 830,
+            "name": "Rune javelin",
             "members": true,
-            "quantity": "1",
+            "quantity": "8",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.109375,
             "drop_requirements": null
         },
-        "11465": {
+        {
+            "id": 9144,
+            "name": "Runite bolts",
+            "members": true,
+            "quantity": "10-21",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 566,
+            "name": "Soul rune",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "8",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 11465,
             "name": "Prayer mix(2)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "11469": {
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 11469,
             "name": "Superattack mix(2)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "11485": {
-            "id": 11485,
-            "name": "Super str. mix(2)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "11497": {
+        {
             "id": 11497,
             "name": "Super def. mix(2)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "12073": {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
+        {
+            "id": 11485,
+            "name": "Super str. mix(2)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/350",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "19582": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "876",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "876",
+            "noted": false,
+            "rarity": 0.0546875,
+            "drop_requirements": null
+        },
+        {
             "id": 19582,
             "name": "Dragon javelin heads",
             "members": true,
             "quantity": "15",
             "noted": false,
-            "rarity": "7/128",
+            "rarity": 0.0546875,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 11338,
+            "name": "Chewed bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2363,
+            "name": "Runite bar",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 11341,
+            "name": "Ancient page",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/59.2",
+            "rarity": 0.01689189189189189,
+            "drop_requirements": null
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002857142857142857,
+            "drop_requirements": null
+        },
+        {
+            "id": 11286,
+            "name": "Draconic visage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004,
+            "drop_requirements": null
+        },
+        {
+            "id": 11286,
+            "name": "Draconic visage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

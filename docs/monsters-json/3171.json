@@ -1,7 +1,7 @@
 {
     "id": 3171,
     "name": "Aviansie",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 84,
@@ -53,205 +53,312 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "175": {
-            "id": 175,
-            "name": "Antipoison(3)",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "314": {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "1-6",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "373": {
-            "id": 373,
-            "name": "Swordfish",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "442": {
-            "id": 442,
-            "name": "Silver ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "555": {
-            "id": 555,
-            "name": "Water rune",
+        {
+            "id": 314,
+            "name": "Feather",
             "members": true,
-            "quantity": "30",
+            "quantity": "1-6",
             "noted": false,
-            "rarity": "13/128",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "556": {
+        {
             "id": 556,
             "name": "Air rune",
             "members": true,
             "quantity": "15",
             "noted": false,
-            "rarity": "18/128",
+            "rarity": 0.140625,
             "drop_requirements": null
         },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
+        {
+            "id": 555,
+            "name": "Water rune",
             "members": true,
-            "quantity": "5",
+            "quantity": "30",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.1015625,
             "drop_requirements": null
         },
-        "559": {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "9",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "16",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "563": {
+        {
             "id": 563,
             "name": "Law rune",
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "4/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "565": {
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "9",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "16",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 559,
+            "name": "Body rune",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 565,
             "name": "Blood rune",
             "members": true,
             "quantity": "11",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "2361": {
+        {
+            "id": 558,
+            "name": "Mind rune",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "16",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
             "id": 2361,
             "name": "Adamantite bar",
             "members": true,
             "quantity": "4",
             "noted": false,
-            "rarity": "30/128",
+            "rarity": 0.234375,
             "drop_requirements": null
         },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "5678": {
+        {
             "id": 5678,
             "name": "Rune dagger(p+)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "11/128",
+            "rarity": 0.0859375,
             "drop_requirements": null
         },
-        "9431": {
+        {
+            "id": 442,
+            "name": "Silver ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 175,
+            "name": "Antipoison(3)",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 373,
+            "name": "Swordfish",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 9431,
             "name": "Runite limbs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "11942": {
-            "id": 11942,
-            "name": "Ecumenical key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/60",
-            "drop_requirements": null
-        },
-        "13504": {
+        {
             "id": 13504,
             "name": "Ensouled aviansie head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/35",
+            "rarity": 0.02857142857142857,
             "drop_requirements": null
         },
-        "21257": {
-            "id": 21257,
-            "name": "Slayer's enchantment",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/264",
-            "drop_requirements": null
-        },
-        "23083": {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/292.2",
-            "drop_requirements": null
-        },
-        "23490": {
+        {
             "id": 23490,
             "name": "Larran's key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 11942,
+            "name": "Ecumenical key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016666666666666666,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003787878787878788,
+            "drop_requirements": null
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003422313483915127,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.029296875,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.021974029626851677,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016479749683588805,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.012817182544022749,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010067654639175258,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00732421875,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005494022503516174,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00457763671875,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003662109375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002746367471291305,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002746367471291305,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

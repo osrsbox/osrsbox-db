@@ -19,10 +19,16 @@
     "weakness": [
         "magic"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "vannaka",
+        "chaeldar",
+        "konar",
+        "nieve",
+        "duradel"
+    ],
     "duplicate": false,
     "examine": "A knee-high horror from the ocean depths.",
     "wiki_name": "Dagannoth fledgeling",
@@ -46,25 +52,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "23083": {
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/280",
+            "rarity": 0.0035714285714285713,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": 3025,
     "name": "Poison Scorpion",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2002-02-27",
     "combat_level": 20,
@@ -51,25 +51,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "13459": {
+    "drops": [
+        {
             "id": 13459,
             "name": "Ensouled scorpion head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/25",
+            "rarity": 0.04,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/100",
+            "rarity": 0.01,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

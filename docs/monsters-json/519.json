@@ -1,16 +1,15 @@
 {
     "id": 519,
-    "name": "Monk of Zamorak",
+    "name": "Highwayman",
     "incomplete": true,
     "members": false,
-    "release_date": "2001-04-06",
-    "combat_level": 22,
+    "release_date": "2001-01-21",
+    "combat_level": 5,
     "size": 1,
-    "hitpoints": 10,
-    "max_hit": 3,
+    "hitpoints": 13,
+    "max_hit": 1,
     "attack_type": [
-        "crush",
-        "magic"
+        "stab"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -18,20 +17,20 @@
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "ranged"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": [],
-    "duplicate": false,
-    "examine": "An evil human cleric.",
-    "wiki_name": "Monk of Zamorak (Lv 17)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Monk_of_Zamorak#Lv_17",
-    "attack_level": 8,
-    "strength_level": 8,
-    "defence_level": 12,
-    "magic_level": 25,
+    "duplicate": true,
+    "examine": "He holds up passers by.",
+    "wiki_name": "Highwayman",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Highwayman",
+    "attack_level": 2,
+    "strength_level": 2,
+    "defence_level": 4,
+    "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
     "attack_slash": 0,
@@ -39,60 +38,41 @@
     "attack_magic": 0,
     "attack_ranged": 0,
     "defence_stab": 0,
-    "defence_slash": 0,
-    "defence_crush": 0,
+    "defence_slash": 3,
+    "defence_crush": 2,
     "defence_magic": 0,
-    "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
+    "defence_ranged": 2,
+    "attack_accuracy": 6,
+    "melee_strength": 7,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
+            "id": 1019,
+            "name": "Black cape",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "1033": {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": null
-        },
-        "1035": {
-            "id": 1035,
-            "name": "Zamorak monk top",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/20",
-            "drop_requirements": null
-        },
-        "2944": {
-            "id": 2944,
-            "name": "Golden key",
+        {
+            "id": 9140,
+            "name": "Iron bolts",
             "members": true,
-            "quantity": "1",
+            "quantity": "2-12",
             "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/13",
+            "rarity": 0.05,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

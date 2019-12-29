@@ -4,7 +4,7 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-Tests for module: docs/monsters-json data
+Tests for module: docs/monsters-json
 
 Copyright (c) 2019, PH01L
 
@@ -21,25 +21,23 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 import json
 from pathlib import Path
+
+import config
 
 import jsonschema
 
 
-def test_monsters_data(path_to_docs_dir: Path):
-    """Unit test to check monsters database contents against JSON schema
-
-    :param path_to_docs_dir: The path to the `docs` folder.
-    """
-    # Read in the monster_schema.json file
-    path_to_schema = Path("test/monster_schema.json")
+def test_monsters_data():
+    """Unit test to check monsters database contents against JSON schema."""
+    # Read in the monster schema file
+    path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-monsters.json")
     with open(path_to_schema, 'r') as f:
         schema = json.loads(f.read())
 
     # Set the path to the monsters-json folder and get all the JSON files
-    path_to_monsters_json_dir = Path(f"{path_to_docs_dir}/monsters-json")
+    path_to_monsters_json_dir = Path(config.DOCS_PATH / "monsters-json")
     fis = path_to_monsters_json_dir.glob("*.json")
     fis = sorted(fis)
 

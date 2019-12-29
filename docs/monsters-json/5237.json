@@ -1,7 +1,7 @@
 {
     "id": 5237,
     "name": "Skeleton",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-12-06",
     "combat_level": 142,
@@ -49,25 +49,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "3187": {
+    "drops": [
+        {
             "id": 3187,
             "name": "Bones (Ape Atoll)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "6806": {
+        {
             "id": 6806,
             "name": "Skeleton champion scroll",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/512",
+            "rarity": 0.001953125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

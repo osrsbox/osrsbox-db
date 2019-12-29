@@ -1,7 +1,7 @@
 {
     "id": 5335,
     "name": "Cave goblin guard",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-05-31",
     "combat_level": 24,
@@ -48,79 +48,78 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "590": {
-            "id": 590,
-            "name": "Tinderbox",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "1101": {
-            "id": 1101,
-            "name": "Iron chainbody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "4537": {
-            "id": 4537,
-            "name": "Oil lantern",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "5016": {
-            "id": 5016,
-            "name": "Bone spear",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "20/128",
-            "drop_requirements": null
-        },
-        "5018": {
+        {
             "id": 5018,
             "name": "Bone club",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "20/128",
+            "rarity": 0.15625,
             "drop_requirements": null
         },
-        "7905": {
+        {
+            "id": 5016,
+            "name": "Bone spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1101,
+            "name": "Iron chainbody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
+            "id": 4537,
+            "name": "Oil lantern",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
+            "id": 590,
+            "name": "Tinderbox",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.15625,
+            "drop_requirements": null
+        },
+        {
             "id": 7905,
             "name": "Cave goblin skull",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

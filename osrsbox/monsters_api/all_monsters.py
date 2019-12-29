@@ -18,12 +18,14 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 import json
 from pathlib import Path
-from typing import Dict, List, Union, Generator
+from typing import Dict
+from typing import List
+from typing import Union
+from typing import Generator
 
-from osrsbox.monsters_api.monster_definition import MonsterDefinition
+from osrsbox.monsters_api.monster_properties import MonsterProperties
 
 PATH_TO_MONSTERS_COMPLETE = Path(__file__).absolute().parent / ".." / ".." / "docs" / "monsters-complete.json"
 if not PATH_TO_MONSTERS_COMPLETE.is_file():
@@ -38,16 +40,16 @@ class AllMonsters:
     :param input_data_file_or_directory: The osrsbox-db monsters folder of JSON files, or single JSON file.
     """
     def __init__(self, input_data_file_or_directory: Path = PATH_TO_MONSTERS_COMPLETE):
-        self.all_monsters: List[MonsterDefinition] = list()
-        self.all_monsters_dict: Dict[int, MonsterDefinition] = dict()
+        self.all_monsters: List[MonsterProperties] = list()
+        self.all_monsters_dict: Dict[int, MonsterProperties] = dict()
         self.load_all_monsters(input_data_file_or_directory)
 
-    def __iter__(self) -> Generator[MonsterDefinition, None, None]:
-        """Iterate (loop) over each MonsterDefinition object."""
+    def __iter__(self) -> Generator[MonsterProperties, None, None]:
+        """Iterate (loop) over each MonsterProperties object."""
         for monster in self.all_monsters:
             yield monster
 
-    def __getitem__(self, id_number: int) -> MonsterDefinition:
+    def __getitem__(self, id_number: int) -> MonsterProperties:
         """Return the monster definition object for a loaded monster.
 
         :param id_number: The monster ID number.
@@ -116,14 +118,14 @@ class AllMonsters:
             self._load_monster(temp[entry])
 
     def _load_monster(self, monster_json: Dict) -> None:
-        """Convert the `monster_json` into a :class:`Monster` and store it.
+        """Convert the `monster_json` into a :class:`MonsterProperties` and store it.
 
         :param monster_json: A dict from an open and loaded JSON file.
         :raises ValueError: Cannot populate monster.
         """
-        # Load the monster using the MonsterDefinition class
+        # Load the monster using the MonsterProperties class
         try:
-            monster_def = MonsterDefinition.from_json(monster_json)
+            monster_def = MonsterProperties.from_json(monster_json)
         except TypeError as e:
             raise ValueError("Error: Invalid JSON structure found, check supplied input. Exiting") from e
 

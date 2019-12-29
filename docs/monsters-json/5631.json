@@ -1,7 +1,7 @@
 {
     "id": 5631,
     "name": "Riyl shadow",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2006-03-28",
     "combat_level": 80,
@@ -47,16 +47,15 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "3400": {
+    "drops": [
+        {
             "id": 3400,
             "name": "Riyl remains",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

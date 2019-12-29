@@ -53,196 +53,222 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "444": {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "10-20",
-            "noted": true,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        "451": {
-            "id": 451,
-            "name": "Runite ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "150",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "562": {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "30",
-            "noted": false,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "10000",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "1073": {
-            "id": 1073,
-            "name": "Adamant platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1079": {
-            "id": 1079,
-            "name": "Rune platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1163": {
-            "id": 1163,
-            "name": "Rune full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "1319": {
-            "id": 1319,
-            "name": "Rune 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1373": {
-            "id": 1373,
-            "name": "Rune battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2353": {
-            "id": 2353,
-            "name": "Steel bar",
-            "members": true,
-            "quantity": "15",
-            "noted": true,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "2357": {
-            "id": 2357,
-            "name": "Gold bar",
-            "members": true,
-            "quantity": "10-15",
-            "noted": true,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "2359": {
-            "id": 2359,
-            "name": "Mithril bar",
-            "members": true,
-            "quantity": "15",
-            "noted": true,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "4101": {
-            "id": 4101,
-            "name": "Mystic robe top (dark)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        "4129": {
-            "id": 4129,
-            "name": "Adamant boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "4153": {
+    "drops": [
+        {
             "id": 4153,
             "name": "Granite maul",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/256",
+            "rarity": 0.00390625,
             "drop_requirements": null
         },
-        "7936": {
+        {
+            "id": 4101,
+            "name": "Mystic robe top (dark)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1073,
+            "name": "Adamant platelegs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 4129,
+            "name": "Adamant boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1373,
+            "name": "Rune battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1079,
+            "name": "Rune platelegs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "150",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "30",
+            "noted": false,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "150",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 444,
+            "name": "Gold ore",
+            "members": true,
+            "quantity": "10-20",
+            "noted": true,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
             "id": 7936,
             "name": "Pure essence",
             "members": true,
             "quantity": "150",
             "noted": true,
-            "rarity": "6/128",
+            "rarity": 0.046875,
             "drop_requirements": null
         },
-        "21724": {
-            "id": 21724,
-            "name": "Brittle key",
+        {
+            "id": 2353,
+            "name": "Steel bar",
+            "members": true,
+            "quantity": "15",
+            "noted": true,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 2357,
+            "name": "Gold bar",
+            "members": true,
+            "quantity": "10-15",
+            "noted": true,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2359,
+            "name": "Mithril bar",
+            "members": true,
+            "quantity": "15",
+            "noted": true,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/150",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "23083": {
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "10000",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "10000",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "10000",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/97.8",
+            "rarity": 0.010224948875255624,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 21724,
+            "name": "Brittle key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.006666666666666667,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

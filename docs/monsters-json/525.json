@@ -1,206 +1,312 @@
 {
     "id": 525,
-    "name": "Necromancer",
+    "name": "Thug",
     "incomplete": true,
     "members": true,
-    "release_date": "2002-06-17",
-    "combat_level": 26,
+    "release_date": "2002-02-27",
+    "combat_level": 10,
     "size": 1,
-    "hitpoints": 40,
-    "max_hit": 3,
+    "hitpoints": 18,
+    "max_hit": 2,
     "attack_type": [
-        "melee",
-        "curse"
+        "stab"
     ],
-    "attack_speed": 4,
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "crush"
+        "magic"
     ],
     "slayer_monster": false,
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "A crazy evil necromancer.",
-    "wiki_name": "Necromancer (monster)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Necromancer_(monster)",
-    "attack_level": 18,
-    "strength_level": 18,
-    "defence_level": 18,
-    "magic_level": 18,
+    "examine": "Low on brains, high on aggression.",
+    "wiki_name": "Thug",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Thug",
+    "attack_level": 7,
+    "strength_level": 5,
+    "defence_level": 9,
+    "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
     "attack_slash": 0,
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 0,
-    "defence_slash": 0,
-    "defence_crush": 0,
+    "defence_stab": 2,
+    "defence_slash": 3,
+    "defence_crush": 3,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
+    "attack_accuracy": 5,
+    "melee_strength": 5,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "554": {
-            "id": 554,
-            "name": "Fire rune",
+        {
+            "id": 1137,
+            "name": "Iron med helm",
             "members": true,
-            "quantity": "18",
+            "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "555": {
-            "id": 555,
-            "name": "Water rune",
+        {
+            "id": 1363,
+            "name": "Iron battleaxe",
             "members": true,
-            "quantity": "18",
+            "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.015625,
             "drop_requirements": null
         },
-        "556": {
-            "id": 556,
-            "name": "Air rune",
+        {
+            "id": 1353,
+            "name": "Steel axe",
             "members": true,
-            "quantity": "18",
+            "quantity": "1",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "557": {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "18",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
-            "members": true,
-            "quantity": "18",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "559": {
-            "id": 559,
-            "name": "Body rune",
-            "members": true,
-            "quantity": "18",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "561": {
+        {
             "id": 561,
             "name": "Nature rune",
             "members": true,
-            "quantity": "4",
+            "quantity": "2",
             "noted": false,
-            "rarity": "7/128",
+            "rarity": 0.1015625,
             "drop_requirements": null
         },
-        "562": {
+        {
             "id": 562,
             "name": "Chaos rune",
             "members": true,
-            "quantity": "5",
+            "quantity": "2",
             "noted": false,
-            "rarity": "6/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "563": {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "564": {
+        {
             "id": 564,
             "name": "Cosmic rune",
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
+        {
+            "id": 563,
+            "name": "Law rune",
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": "2/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "617": {
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2351,
+            "name": "Iron bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "29",
+            "quantity": "20",
             "noted": false,
-            "rarity": "3/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1033": {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "4/128",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1035": {
-            "id": 1035,
-            "name": "Zamorak monk top",
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "3/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "1379": {
-            "id": 1379,
-            "name": "Staff",
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "8/128",
+            "rarity": 0.046875,
             "drop_requirements": null
         },
-        "1387": {
-            "id": 1387,
-            "name": "Staff of fire",
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.035158447402962686,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02636759949374209,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0205074920704364,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01610824742268041,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01171875,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008790436005625879,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00732421875,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005859375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004394187954066088,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004394187954066088,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

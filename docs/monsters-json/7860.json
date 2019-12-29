@@ -1,7 +1,7 @@
 {
     "id": 7860,
     "name": "Porazdir",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2018-02-08",
     "combat_level": 235,
@@ -50,25 +50,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 80,
-    "drops": {
-        "11941": {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/3",
-            "drop_requirements": null
-        },
-        "21799": {
+    "drops": [
+        {
             "id": 21799,
             "name": "Demon's heart",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

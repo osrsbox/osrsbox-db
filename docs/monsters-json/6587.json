@@ -20,10 +20,14 @@
     "weakness": [
         "ranged"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "krystilia",
+        "nieve",
+        "duradel"
+    ],
     "duplicate": false,
     "examine": "A servant of Armadyl.",
     "wiki_name": "Armadylian guard",
@@ -47,133 +51,150 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "53": {
-            "id": 53,
-            "name": "Headless arrow",
-            "members": true,
-            "quantity": "30",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "385": {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "1-4",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "561": {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "564": {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "35-350",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "805": {
-            "id": 805,
-            "name": "Rune thrownaxe",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1247": {
+        {
             "id": 1247,
             "name": "Rune spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2347": {
-            "id": 2347,
-            "name": "Hammer",
+        {
+            "id": 805,
+            "name": "Rune thrownaxe",
             "members": true,
-            "quantity": "1",
+            "quantity": "6",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2361": {
-            "id": 2361,
-            "name": "Adamantite bar",
-            "members": true,
-            "quantity": "5",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "11826": {
+        {
             "id": 11826,
             "name": "Armadyl helmet",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1000000",
+            "rarity": 1e-06,
             "drop_requirements": null
         },
-        "11836": {
+        {
             "id": 11836,
             "name": "Bandos boots",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1000000",
+            "rarity": 1e-06,
             "drop_requirements": null
         },
-        "11941": {
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "35-350",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2347,
+            "name": "Hammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 53,
+            "name": "Headless arrow",
+            "members": true,
+            "quantity": "30",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": true,
+            "quantity": "5",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 11941,
             "name": "Looting bag",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3",
+            "rarity": 0.3333333333333333,
             "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010416666666666666,
+            "drop_requirements": "wilderness-slayer"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004651162790697674,
+            "drop_requirements": "wilderness-slayer"
         }
-    },
-    "rare_drop_table": true
+    ]
 }

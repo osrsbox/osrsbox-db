@@ -1,7 +1,7 @@
 {
     "id": 8564,
     "name": "Lizardman brute",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2019-01-10",
     "combat_level": 73,
@@ -53,52 +53,51 @@
     "melee_strength": 30,
     "ranged_strength": 30,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "13383": {
-            "id": 13383,
-            "name": "Xerician fabric",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "8/67",
-            "drop_requirements": null
-        },
-        "13391": {
+        {
             "id": 13391,
             "name": "Lizardman fang",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "14/67",
+            "rarity": 0.208955223880597,
             "drop_requirements": null
         },
-        "13392": {
+        {
+            "id": 13383,
+            "name": "Xerician fabric",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.11940298507462686,
+            "drop_requirements": null
+        },
+        {
             "id": 13392,
             "name": "Xeric's talisman (inert)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/250",
+            "rarity": 0.004,
             "drop_requirements": null
         },
-        "23083": {
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/245.8",
+            "rarity": 0.0040683482506102524,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

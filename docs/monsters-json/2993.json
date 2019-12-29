@@ -1,7 +1,7 @@
 {
     "id": 2993,
     "name": "Undead chicken",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-02-15",
     "combat_level": 1,
@@ -49,34 +49,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "314": {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "32/128",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "4289": {
+        {
             "id": 4289,
             "name": "Raw chicken (undead)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 314,
+            "name": "Feather",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.25,
+            "drop_requirements": null
+        },
+        {
+            "id": 314,
+            "name": "Feather",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.25,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -22,10 +22,14 @@
     "weakness": [
         "ranged"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
     "slayer_xp": 0.0,
-    "slayer_masters": [],
+    "slayer_masters": [
+        "chaeldar",
+        "nieve",
+        "duradel"
+    ],
     "duplicate": false,
     "examine": "An ancient adversary to the TzHaar.",
     "wiki_name": "TzKal-Zuk",
@@ -49,16 +53,15 @@
     "melee_strength": 200,
     "ranged_strength": 200,
     "magic_damage": 0,
-    "drops": {
-        "21291": {
+    "drops": [
+        {
             "id": 21291,
             "name": "Jal-nib-rek",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/100",
+            "rarity": 0.01,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

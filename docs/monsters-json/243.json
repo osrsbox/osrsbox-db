@@ -1,7 +1,7 @@
 {
     "id": 243,
     "name": "Baby dragon",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2002-02-27",
     "combat_level": 48,
@@ -54,34 +54,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "534": {
+    "drops": [
+        {
             "id": 534,
             "name": "Babydragon bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7839": {
+        {
             "id": 7839,
             "name": "Baby dragon bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "23083": {
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/640.8",
+            "rarity": 0.0015605493133583022,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": 3184,
     "name": "Dagannoth spawn",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-08-01",
     "combat_level": 42,
@@ -52,124 +52,123 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "313": {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "314": {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "327": {
-            "id": 327,
-            "name": "Raw sardine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "359": {
-            "id": 359,
-            "name": "Raw tuna",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "401": {
-            "id": 401,
-            "name": "Seaweed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "407": {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "411": {
-            "id": 411,
-            "name": "Oyster pearl",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "555": {
+        {
             "id": 555,
             "name": "Water rune",
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "16-38",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1444": {
+        {
             "id": 1444,
             "name": "Water talisman",
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "2677": {
+        {
+            "id": 401,
+            "name": "Seaweed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "16-38",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 314,
+            "name": "Feather",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 359,
+            "name": "Raw tuna",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 327,
+            "name": "Raw sardine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 407,
+            "name": "Oyster",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 411,
+            "name": "Oyster pearl",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 2677,
             "name": "Clue scroll (easy)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
-        "23083": {
+        {
             "id": 23083,
             "name": "Brimstone key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/772.8",
+            "rarity": 0.0012939958592132505,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

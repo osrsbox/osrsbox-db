@@ -1,7 +1,7 @@
 {
     "id": 4367,
     "name": "Gorad",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2003-05-07",
     "combat_level": 68,
@@ -48,61 +48,60 @@
     "melee_strength": 8,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "532": {
+    "drops": [
+        {
             "id": 532,
             "name": "Big bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2377": {
+        {
             "id": 2377,
             "name": "Ogre tooth",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7842": {
+        {
             "id": 7842,
             "name": "Ogre ribs",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         },
-        "10976": {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/400",
-            "drop_requirements": null
-        },
-        "10977": {
-            "id": 10977,
-            "name": "Curved bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/5012.5",
-            "drop_requirements": null
-        },
-        "13477": {
+        {
             "id": 13477,
             "name": "Ensouled ogre head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/30",
+            "rarity": 0.03333333333333333,
+            "drop_requirements": null
+        },
+        {
+            "id": 10976,
+            "name": "Long bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025,
+            "drop_requirements": null
+        },
+        {
+            "id": 10977,
+            "name": "Curved bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00019950124688279303,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

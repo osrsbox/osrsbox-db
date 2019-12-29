@@ -1,7 +1,7 @@
 {
     "id": 714,
     "name": "Ice wolf",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-04-18",
     "combat_level": 132,
@@ -49,25 +49,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "2859": {
+    "drops": [
+        {
             "id": 2859,
             "name": "Wolf bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7830": {
+        {
             "id": 7830,
             "name": "Wolf bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

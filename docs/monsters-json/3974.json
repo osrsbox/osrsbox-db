@@ -1,7 +1,7 @@
 {
     "id": 3974,
     "name": "Skeleton",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2001-09-23",
     "combat_level": 22,
@@ -50,16 +50,15 @@
     "melee_strength": 14,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": 2916,
     "name": "Waterfiend",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2007-07-03",
     "combat_level": 115,
@@ -50,358 +50,465 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "227": {
-            "id": 227,
-            "name": "Vial of water",
-            "members": true,
-            "quantity": "40-50",
-            "noted": true,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "231": {
-            "id": 231,
-            "name": "Snape grass",
-            "members": true,
-            "quantity": "20-30",
-            "noted": true,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "377": {
-            "id": 377,
-            "name": "Raw lobster",
-            "members": true,
-            "quantity": "18",
-            "noted": true,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "383": {
-            "id": 383,
-            "name": "Raw shark",
-            "members": true,
-            "quantity": "8",
-            "noted": true,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "385": {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "401": {
-            "id": 401,
-            "name": "Seaweed",
-            "members": true,
-            "quantity": "20-30",
-            "noted": true,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "407": {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "447": {
-            "id": 447,
-            "name": "Mithril ore",
-            "members": true,
-            "quantity": "10-20",
-            "noted": true,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "555": {
+    "drops": [
+        {
             "id": 555,
             "name": "Water rune",
             "members": true,
             "quantity": "150",
             "noted": false,
-            "rarity": "6/128",
+            "rarity": 0.046875,
             "drop_requirements": null
         },
-        "560": {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "23",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "565": {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "17",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "571": {
-            "id": 571,
-            "name": "Water orb",
-            "members": true,
-            "quantity": "6-10",
-            "noted": true,
-            "rarity": "8/128",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "2000-3000",
-            "noted": false,
-            "rarity": "15/128",
-            "drop_requirements": null
-        },
-        "888": {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": true,
-            "quantity": "90",
-            "noted": false,
-            "rarity": "10/128",
-            "drop_requirements": null
-        },
-        "1111": {
-            "id": 1111,
-            "name": "Adamant chainbody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1147": {
-            "id": 1147,
-            "name": "Rune med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1163": {
-            "id": 1163,
-            "name": "Rune full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1345": {
-            "id": 1345,
-            "name": "Adamant warhammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "1383": {
-            "id": 1383,
-            "name": "Staff of water",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "6/128",
-            "drop_requirements": null
-        },
-        "1395": {
-            "id": 1395,
-            "name": "Water battlestaff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1403": {
-            "id": 1403,
-            "name": "Mystic water staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1444": {
-            "id": 1444,
-            "name": "Water talisman",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "4/128",
-            "drop_requirements": null
-        },
-        "1617": {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1619": {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1621": {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "1623": {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2359": {
-            "id": 2359,
-            "name": "Mithril bar",
-            "members": true,
-            "quantity": "10-15",
-            "noted": true,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2487": {
-            "id": 2487,
-            "name": "Blue d'hide vamb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "2722": {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/128",
-            "drop_requirements": null
-        },
-        "4694": {
-            "id": 4694,
-            "name": "Steam rune",
-            "members": true,
-            "quantity": "40-60",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "4695": {
-            "id": 4695,
-            "name": "Mist rune",
-            "members": true,
-            "quantity": "25-75",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "4698": {
-            "id": 4698,
-            "name": "Mud rune",
-            "members": true,
-            "quantity": "75-100",
-            "noted": false,
-            "rarity": "2/128",
-            "drop_requirements": null
-        },
-        "5321": {
-            "id": 5321,
-            "name": "Watermelon seed",
-            "members": true,
-            "quantity": "5-15",
-            "noted": false,
-            "rarity": "3/128",
-            "drop_requirements": null
-        },
-        "9337": {
-            "id": 9337,
-            "name": "Sapphire bolts",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": "5/128",
-            "drop_requirements": null
-        },
-        "12073": {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "20543": {
-            "id": 20543,
-            "name": "Reward casket (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "20730": {
+        {
             "id": 20730,
             "name": "Mist battlestaff",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/3000",
+            "rarity": 0.0003333333333333333,
             "drop_requirements": null
         },
-        "23083": {
-            "id": 23083,
-            "name": "Brimstone key",
+        {
+            "id": 1383,
+            "name": "Staff of water",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/97",
+            "rarity": 0.046875,
             "drop_requirements": null
         },
-        "23962": {
+        {
+            "id": 1111,
+            "name": "Adamant chainbody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1345,
+            "name": "Adamant warhammer",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1147,
+            "name": "Rune med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1395,
+            "name": "Water battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1403,
+            "name": "Mystic water staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2487,
+            "name": "Blue d'hide vamb",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 9337,
+            "name": "Sapphire bolts",
+            "members": true,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 888,
+            "name": "Mithril arrow",
+            "members": true,
+            "quantity": "90",
+            "noted": false,
+            "rarity": 0.078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": true,
+            "quantity": "150",
+            "noted": false,
+            "rarity": 0.046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "17",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": true,
+            "quantity": "23",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 4695,
+            "name": "Mist rune",
+            "members": true,
+            "quantity": "25-75",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 4698,
+            "name": "Mud rune",
+            "members": true,
+            "quantity": "75-100",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 4694,
+            "name": "Steam rune",
+            "members": true,
+            "quantity": "40-60",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 447,
+            "name": "Mithril ore",
+            "members": true,
+            "quantity": "10-20",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 377,
+            "name": "Raw lobster",
+            "members": true,
+            "quantity": "18",
+            "noted": true,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 383,
+            "name": "Raw shark",
+            "members": true,
+            "quantity": "8",
+            "noted": true,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2359,
+            "name": "Mithril bar",
+            "members": true,
+            "quantity": "10-15",
+            "noted": true,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "5-15",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "2000-3000",
+            "noted": false,
+            "rarity": 0.1171875,
+            "drop_requirements": null
+        },
+        {
+            "id": 571,
+            "name": "Water orb",
+            "members": true,
+            "quantity": "6-10",
+            "noted": true,
+            "rarity": 0.0625,
+            "drop_requirements": null
+        },
+        {
+            "id": 227,
+            "name": "Vial of water",
+            "members": true,
+            "quantity": "40-50",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1444,
+            "name": "Water talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 407,
+            "name": "Oyster",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 401,
+            "name": "Seaweed",
+            "members": true,
+            "quantity": "20-30",
+            "noted": true,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 231,
+            "name": "Snape grass",
+            "members": true,
+            "quantity": "20-30",
+            "noted": true,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
+            "id": 20543,
+            "name": "Reward casket (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 23962,
             "name": "Crystal shard",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010309278350515464,
+            "drop_requirements": null
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.017578125,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.013184417776111006,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009887849810153284,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00769030952641365,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.006040592783505155,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00439453125,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0032964135021097047,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00274658203125,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002197265625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016478204827747832,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016478204827747832,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": true
+    ]
 }

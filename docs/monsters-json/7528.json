@@ -47,53 +47,44 @@
     "melee_strength": 0,
     "ranged_strength": 25,
     "magic_damage": 0,
-    "drops": {
-        "20895": {
+    "drops": [
+        {
             "id": 20895,
             "name": "Vanguard judgement",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "20924": {
+        {
             "id": 20924,
             "name": "Elder (+)(4)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "20936": {
+        {
             "id": 20936,
             "name": "Twisted (+)(4)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "20948": {
+        {
             "id": 20948,
             "name": "Kodai (+)(4)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "20960": {
-            "id": 20960,
-            "name": "Revitalisation (+)(4)",
-            "members": true,
-            "quantity": "0-2",
-            "noted": false,
-            "rarity": null,
-            "drop_requirements": null
-        },
-        "20972": {
+        {
             "id": 20972,
             "name": "Prayer enhance (+)(4)",
             "members": true,
@@ -102,7 +93,7 @@
             "rarity": null,
             "drop_requirements": null
         },
-        "20984": {
+        {
             "id": 20984,
             "name": "Xeric's aid (+)(4)",
             "members": true,
@@ -111,7 +102,16 @@
             "rarity": null,
             "drop_requirements": null
         },
-        "20996": {
+        {
+            "id": 20960,
+            "name": "Revitalisation (+)(4)",
+            "members": true,
+            "quantity": "0-2",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
             "id": 20996,
             "name": "Overload (+)(4)",
             "members": true,
@@ -120,6 +120,5 @@
             "rarity": null,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": 1475,
     "name": "Chompy bird",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-05-18",
     "combat_level": 6,
@@ -27,7 +27,7 @@
     "wiki_url": "https://oldschool.runescape.wiki/w/Chompy_bird",
     "attack_level": 0,
     "strength_level": 0,
-    "defence_level": 5000,
+    "defence_level": 0,
     "magic_level": 0,
     "ranged_level": 0,
     "attack_stab": 0,
@@ -44,34 +44,33 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "2876": {
+        {
             "id": 2876,
             "name": "Raw chompy",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "13071": {
+        {
             "id": 13071,
             "name": "Chompy chick",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/128",
+            "rarity": 0.002,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

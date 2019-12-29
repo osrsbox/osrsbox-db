@@ -44,43 +44,42 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "221": {
-            "id": 221,
-            "name": "Eye of newt",
-            "members": true,
-            "quantity": "4,6,8,12",
-            "noted": false,
-            "rarity": "1/1",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "10859": {
+        {
+            "id": 221,
+            "name": "Eye of newt",
+            "members": true,
+            "quantity": "4,6,8,12",
+            "noted": false,
+            "rarity": 1.0,
+            "drop_requirements": null
+        },
+        {
             "id": 10859,
             "name": "Tea flask",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "10882": {
+        {
             "id": 10882,
             "name": "Rune satchel",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": 2482,
     "name": "Minotaur",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2006-07-04",
     "combat_level": 19,
@@ -48,160 +48,159 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "436": {
-            "id": 436,
-            "name": "Copper ore",
-            "members": false,
-            "quantity": "1",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "438": {
-            "id": 438,
-            "name": "Tin ore",
-            "members": false,
-            "quantity": "1",
-            "noted": true,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "558": {
-            "id": 558,
-            "name": "Mind rune",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "617": {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "2-84",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "882": {
-            "id": 882,
-            "name": "Bronze arrow",
-            "members": false,
-            "quantity": "3-6",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "884": {
+        {
             "id": 884,
             "name": "Iron arrow",
             "members": false,
             "quantity": "5-14",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1155": {
-            "id": 1155,
-            "name": "Bronze full helm",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/8",
-            "drop_requirements": null
-        },
-        "1205": {
-            "id": 1205,
-            "name": "Bronze dagger",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "1237": {
+        {
             "id": 1237,
             "name": "Bronze spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/8",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "1436": {
-            "id": 1436,
-            "name": "Rune essence",
-            "members": false,
-            "quantity": "5",
-            "noted": true,
-            "rarity": "1/32",
-            "drop_requirements": null
-        },
-        "2142": {
-            "id": 2142,
-            "name": "Cooked meat",
+        {
+            "id": 1155,
+            "name": "Bronze full helm",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/32",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "2677": {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": false,
+            "quantity": "3-6",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1205,
+            "name": "Bronze dagger",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 558,
+            "name": "Mind rune",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
             "members": true,
-            "quantity": "1",
+            "quantity": "2-84",
             "noted": false,
-            "rarity": "1/101",
+            "rarity": 0.125,
             "drop_requirements": null
         },
-        "7936": {
+        {
+            "id": 436,
+            "name": "Copper ore",
+            "members": false,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 438,
+            "name": "Tin ore",
+            "members": false,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.125,
+            "drop_requirements": null
+        },
+        {
             "id": 7936,
             "name": "Pure essence",
             "members": false,
             "quantity": "15,20",
             "noted": true,
-            "rarity": "1/32",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
-        "9007": {
+        {
+            "id": 1436,
+            "name": "Rune essence",
+            "members": false,
+            "quantity": "5",
+            "noted": true,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2142,
+            "name": "Cooked meat",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "drop_requirements": null
+        },
+        {
             "id": 9007,
             "name": "Right skull half",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "3/101",
+            "rarity": 0.0297029702970297,
             "drop_requirements": null
         },
-        "13456": {
+        {
             "id": 13456,
             "name": "Ensouled minotaur head",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/50",
+            "rarity": 0.02,
             "drop_requirements": null
         },
-        "23182": {
+        {
             "id": 23182,
             "name": "Clue scroll (beginner)",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/60",
+            "rarity": 0.016666666666666666,
+            "drop_requirements": null
+        },
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009900990099009901,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

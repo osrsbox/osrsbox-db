@@ -1,7 +1,7 @@
 {
     "id": 1339,
     "name": "Seagull",
-    "incomplete": false,
+    "incomplete": true,
     "members": false,
     "release_date": "2005-09-26",
     "combat_level": 3,
@@ -46,25 +46,24 @@
     "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "526": {
+    "drops": [
+        {
             "id": 526,
             "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         },
-        "7887": {
+        {
             "id": 7887,
             "name": "Seagull wing",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/4",
+            "rarity": 0.25,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }

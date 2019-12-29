@@ -4,7 +4,7 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-Tests for module: osrsbox.items_api.all_items
+Tests for module: docs/items-json
 
 Copyright (c) 2019, PH01L
 
@@ -21,25 +21,23 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 import json
 from pathlib import Path
+
+import config
 
 import jsonschema
 
 
-def test_item_database(path_to_docs_dir: Path):
-    """Unit test to check item database contents against JSON schema
-
-    :param path_to_docs_dir: The path to the `docs` folder.
-    """
-    # Read in the item_schema.json file
-    path_to_schema = Path("test/item_schema.json")
+def test_item_database():
+    """Unit test to check item database contents against JSON schema."""
+    # Read in the item schema file
+    path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
     with open(path_to_schema, 'r') as f:
         schema = json.loads(f.read())
 
     # Set the path to the items-json folder and get all the JSON files
-    path_to_items_json_dir = Path(f"{path_to_docs_dir}/items-json")
+    path_to_items_json_dir = Path(config.DOCS_PATH / "items-json")
     fis = path_to_items_json_dir.glob("*.json")
     fis = sorted(fis)
 

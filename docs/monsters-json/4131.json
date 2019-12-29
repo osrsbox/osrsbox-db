@@ -1,7 +1,7 @@
 {
     "id": 4131,
     "name": "Twig",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2004-08-24",
     "combat_level": 71,
@@ -51,16 +51,15 @@
     "melee_strength": 20,
     "ranged_strength": 0,
     "magic_damage": 0,
-    "drops": {
-        "3136": {
+    "drops": [
+        {
             "id": 3136,
             "name": "Cell key 1",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": 1.0,
             "drop_requirements": null
         }
-    },
-    "rare_drop_table": false
+    ]
 }
