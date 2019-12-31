@@ -4,6 +4,8 @@
 
 [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
 
+[![Discord Chat](https://img.shields.io/discord/598412106118987787.svg)](https://discord.gg/HFynKyr)
+
 ## A complete and up-to-date database of Old School Runescape (OSRS) items and monsters
 
 This project hosts a complete and up-to-date database of every item and every monster in OSRS. **Complete** means it holds every single item and monster in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
@@ -45,11 +47,11 @@ Each item is represented by Python objects when using the PyPi `osrsbox` package
 
 ### Item Properties
 
-An `ItemProperties` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `high_alch` and `low_alch` values and `quest_item` association. Every item object in the item database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+An `ItemProperties` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `highalch` and `lowalch` values and `quest_item` association. Every item object in the item database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
-| id | integer | Unique OSRS item ID number. | Yes |
+| id | number | Unique OSRS item ID number. | Yes |
 | name | string | Name of the item. | Yes |
 | incomplete | boolean | If the item has incomplete wiki data. | Yes |
 | members | boolean | If the item is a members-only. | Yes |
@@ -58,17 +60,17 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | stackable | boolean | If the item is stackable (in inventory). | Yes |
 | noted | boolean | If the item is noted. | Yes |
 | noteable | boolean | If the item is noteable. | Yes |
-| linked_id_item | integer | The linked ID of the actual item (if noted/placeholder). | No |
-| linked_id_noted | integer | The linked ID of an item in noted form. | No |
-| linked_id_placeholder | integer | The linked ID of an item in placeholder form. | No |
+| linked_id_item | number | The linked ID of the actual item (if noted/placeholder). | No |
+| linked_id_noted | number | The linked ID of an item in noted form. | No |
+| linked_id_placeholder | number | The linked ID of an item in placeholder form. | No |
 | placeholder | boolean | If the item is a placeholder. | Yes |
 | equipable | boolean | If the item is equipable (based on right-click menu entry). | Yes |
 | equipable_by_player | boolean | If the item is equipable by a player and is equipable in-game. | Yes |
-| cost | integer | The store price of an item. | Yes |
-| lowalch | integer | The low alchemy value of the item (cost * 0.4). | Yes |
-| highalch | integer | The high alchemy value of the item (cost * 0.6). | Yes |
+| cost | number | The store price of an item. | Yes |
+| lowalch | number | The low alchemy value of the item (cost * 0.4). | Yes |
+| highalch | number | The high alchemy value of the item (cost * 0.6). | Yes |
 | weight | number | The weight (in kilograms) of the item. | No |
-| buy_limit | integer | The GE buy limit of the item. | No |
+| buy_limit | number | The GE buy limit of the item. | No |
 | quest_item | boolean | If the item is associated with a quest. | Yes |
 | release_date | string | Date the item was released (in ISO8601 format). | No |
 | duplicate | boolean | If the item is a duplicate. | Yes |
@@ -84,22 +86,22 @@ Many items in OSRS are equipable, this includes armor, weapons, and other _weara
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
-| attack_stab | integer | The attack stab bonus of the item. | Yes |
-| attack_slash | integer | The attack slash bonus of the item. | Yes |
-| attack_crush | integer | The attack crush bonus of the item. | Yes |
-| attack_magic | integer | The attack magic bonus of the item. | Yes |
-| attack_ranged | integer | The attack ranged bonus of the item. | Yes |
-| defence_stab | integer | The defence stab bonus of the item. | Yes |
-| defence_slash | integer | The defence slash bonus of the item. | Yes |
-| defence_crush | integer | The defence crush bonus of the item. | Yes |
-| defence_magic | integer | The defence magic bonus of the item. | Yes |
-| defence_ranged | integer | The defence ranged bonus of the item. | Yes |
-| melee_strength | integer | The melee strength bonus of the item. | Yes |
-| ranged_strength | integer | The ranged strength bonus of the item. | Yes |
-| magic_damage | integer | The magic damage bonus of the item. | Yes |
-| prayer | integer | The prayer bonus of the item. | Yes |
+| attack_stab | number | The attack stab bonus of the item. | Yes |
+| attack_slash | number | The attack slash bonus of the item. | Yes |
+| attack_crush | number | The attack crush bonus of the item. | Yes |
+| attack_magic | number | The attack magic bonus of the item. | Yes |
+| attack_ranged | number | The attack ranged bonus of the item. | Yes |
+| defence_stab | number | The defence stab bonus of the item. | Yes |
+| defence_slash | number | The defence slash bonus of the item. | Yes |
+| defence_crush | number | The defence crush bonus of the item. | Yes |
+| defence_magic | number | The defence magic bonus of the item. | Yes |
+| defence_ranged | number | The defence ranged bonus of the item. | Yes |
+| melee_strength | number | The melee strength bonus of the item. | Yes |
+| ranged_strength | number | The ranged strength bonus of the item. | Yes |
+| magic_damage | number | The magic damage bonus of the item. | Yes |
+| prayer | number | The prayer bonus of the item. | Yes |
 | slot | string | The equipment slot associated with the item (e.g., head). | Yes |
-| requirements | object, null | An object of requirements {skill: level}. | Yes |
+| requirements | object | An object of requirements {skill: level}. | No |
 
 ### Item Weapon
 
@@ -107,7 +109,7 @@ A select number of items in OSRS are equipable weapons. Any equipable item that 
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
-| attack_speed | integer | The attack speed of a weapon. | Yes |
+| attack_speed | number | The attack speed of a weapon. | Yes |
 | weapon_type | string | The weapon classification (e.g., axe) | Yes |
 | stances | array | An array of weapon stance information | Yes |
 
@@ -119,7 +121,7 @@ A description of the properties that each item in the database can have is usefu
 {
     "id": 4151,
     "name": "Abyssal whip",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "tradeable": true,
     "tradeable_on_ge": true,
@@ -196,7 +198,7 @@ A description of the properties that each item in the database can have is usefu
 
 ## The Monster Database
 
-Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects. - or accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
+Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects Additionally, the data is accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
 
 ### Monster Properties
 
@@ -204,51 +206,51 @@ A `MonsterProperties` object type includes basic monster metadata such as `id`, 
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
-| id | integer | The ID number of the monster. | Yes |
+| id | number | The ID number of the monster. | Yes |
 | name | string | The name of the monster. | Yes |
 | incomplete | boolean | If the monster has incomplete wiki data. | Yes |
 | members | boolean | If the monster is members only, or not. | Yes |
 | release_date | string | The release date of the monster (in ISO8601 format). | No |
-| combat_level | integer | The combat level of the monster. | Yes |
-| size | integer | The size, in tiles, of the monster. | Yes |
-| hitpoints | integer | The number of hitpoints a monster has. | Yes |
-| max_hit | integer | The maximum hit of the monster. | Yes |
+| combat_level | number | The combat level of the monster. | Yes |
+| size | number | The size, in tiles, of the monster. | Yes |
+| hitpoints | number | The number of hitpoints a monster has. | Yes |
+| max_hit | number | The maximum hit of the monster. | Yes |
 | attack_type | array | The attack style (melee, magic, range) of the monster. | Yes |
-| attack_speed | integer | The attack speed (in game ticks) of the monster. | No |
+| attack_speed | number | The attack speed (in game ticks) of the monster. | No |
 | aggressive | boolean | If the monster is aggressive, or not. | Yes |
 | poisonous | boolean | If the monster poisons, or not | Yes |
 | immune_poison | boolean | If the monster is immune to poison, or not | Yes |
 | immune_venom | boolean | If the monster is immune to venom, or not | Yes |
 | weakness | array | An array of monster weaknesses. | Yes |
 | slayer_monster | boolean | If the monster is a potential slayer task. | Yes |
-| slayer_level | integer | The slayer level required to kill the monster. | No |
-| slayer_xp | integer | The slayer XP rewarded for a monster kill. | No |
+| slayer_level | number | The slayer level required to kill the monster. | No |
+| slayer_xp | number | The slayer XP rewarded for a monster kill. | No |
 | slayer_masters | array | The slayer XP rewarded for a monster kill. | Yes |
 | duplicate | boolean | If the monster is a duplicate. | Yes |
 | examine | string | The examine text of the monster. | Yes |
 | wiki_name | string | The OSRS Wiki name for the monster. | Yes |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | Yes |
-| attack_level | integer | The attack level of the monster. | Yes |
-| strength_level | integer | The strength level of the monster. | Yes |
-| defence_level | integer | The defence level of the monster. | Yes |
-| magic_level | integer | The magic level of the monster. | Yes |
-| ranged_level | integer | The ranged level of the monster. | Yes |
-| attack_stab | integer | The attack stab bonus of the monster. | Yes |
-| attack_slash | integer | The attack slash bonus of the monster. | Yes |
-| attack_crush | integer | The attack crush bonus of the monster. | Yes |
-| attack_magic | integer | The attack magic bonus of the monster. | Yes |
-| attack_ranged | integer | The attack ranged bonus of the monster. | Yes |
-| defence_stab | integer | The defence stab bonus of the monster. | Yes |
-| defence_slash | integer | The defence slash bonus of the monster. | Yes |
-| defence_crush | integer | The defence crush bonus of the monster. | Yes |
-| defence_magic | integer | The defence magic bonus of the monster. | Yes |
-| defence_ranged | integer | The defence ranged bonus of the monster. | Yes |
-| attack_accuracy | integer | The attack accuracy bonus of the monster. | Yes |
-| melee_strength | integer | The melee strength bonus of the monster. | Yes |
-| ranged_strength | integer | The ranged strength bonus of the monster. | Yes |
-| magic_damage | integer | The magic damage bonus of the monster. | Yes |
-| drops | array | An array of monster drop objects. | Yes |
+| attack_level | number | The attack level of the monster. | Yes |
+| strength_level | number | The strength level of the monster. | Yes |
+| defence_level | number | The defence level of the monster. | Yes |
+| magic_level | number | The magic level of the monster. | Yes |
+| ranged_level | number | The ranged level of the monster. | Yes |
+| attack_stab | number | The attack stab bonus of the monster. | Yes |
+| attack_slash | number | The attack slash bonus of the monster. | Yes |
+| attack_crush | number | The attack crush bonus of the monster. | Yes |
+| attack_magic | number | The attack magic bonus of the monster. | Yes |
+| attack_ranged | number | The attack ranged bonus of the monster. | Yes |
+| defence_stab | number | The defence stab bonus of the monster. | Yes |
+| defence_slash | number | The defence slash bonus of the monster. | Yes |
+| defence_crush | number | The defence crush bonus of the monster. | Yes |
+| defence_magic | number | The defence magic bonus of the monster. | Yes |
+| defence_ranged | number | The defence ranged bonus of the monster. | Yes |
+| attack_accuracy | number | The attack accuracy bonus of the monster. | Yes |
+| melee_strength | number | The melee strength bonus of the monster. | Yes |
+| ranged_strength | number | The ranged strength bonus of the monster. | Yes |
+| magic_damage | number | The magic damage bonus of the monster. | Yes |
 | rare_drop_table | boolean | If the monster has a chance of rolling on the rare drop table. | Yes |
+| drops | array | An array of monster drop objects. | No |
 
 ### Monster Drops
 
@@ -256,12 +258,12 @@ Most monsters in OSRS drop items when they have been defeated (killed). All mons
 
 | Property | Data type | Description | Required |
 | -------- | --------- | ----------- | -------- |
-| id | integer | The ID number of the item drop. | No |
+| id | number | The ID number of the item drop. | Yes |
 | name | string | The name of the item drop. | Yes |
 | members | boolean | If the drop is a members-only item. | Yes |
-| quantity | string | The quantity of the item drop (integer, comma-seperated or range). | No |
+| quantity | string | The quantity of the item drop (integer, comma-separated or range). | No |
 | noted | boolean | If the item drop is noted, or not. | Yes |
-| rarity | string | The rarity of the item drop (in fraction format). | No |
+| rarity | number | The rarity of the item drop (as a float out of 1.0). | No |
 | drop_requirements | string | If there are any requirements to getting the specific drop. | No |
 
 ### Monster JSON Example
@@ -293,11 +295,12 @@ A description of the properties that each monster in the database can have is us
     ],
     "slayer_monster": true,
     "slayer_level": 85,
-    "slayer_xp": 150,
+    "slayer_xp": 150.0,
     "slayer_masters": [
         "vannaka",
         "chaeldar",
         "konar",
+        "nieve",
         "duradel"
     ],
     "duplicate": false,
@@ -330,56 +333,46 @@ A description of the properties that each monster in the database can have is us
             "members": True,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1",
+            "rarity": "1.0",
             "drop_requirements": null
         },
         {
             "id": 4151,
             "name": "Abyssal whip",
-            "members": True,
+            "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/512",
-            "drop_requirements": null
-        },
-        {
-            "id": 13265,
-            "name": "Abyssal dagger",
-            "members": True,
-            "quantity": "1",
-            "noted": false,
-            "rarity": "1/32768",
+            "rarity": 0.001953125,
             "drop_requirements": null
         },
         {
             "id": 565,
             "name": "Blood rune",
-            "members": True,
+            "members": true,
             "quantity": "7",
             "noted": false,
-            "rarity": "4/128",
+            "rarity": 0.03125,
             "drop_requirements": null
         },
         {
             "id": 19683,
             "name": "Dark totem top",
-            "members": True,
+            "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/350",
-            "drop_requirements": "catacombs-only"
+            "rarity": 0.002857142857142857,
+            "drop_requirements": "catacombs"
         },
         {
             "id": 12073,
             "name": "Clue scroll (elite)",
-            "members": True,
+            "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1/1200",
+            "rarity": 0.0008333333333333334,
             "drop_requirements": null
         }
-    ],
-    "rare_drop_table": false
+    ]
 }
 ```
 
@@ -391,11 +384,11 @@ If you want to access the item and monster database programmatically using Pytho
 
 - Make sure you have >= Python 3.6
 - Install package using: `pip install osrsbox`
-- Item database quickstart:
+- Item database quick start:
     - Import items API using: `from osrsbox import items_api`
     - Load all items using: `all_db_items = items_api.load()`
     - Loop items using: `for item in all_db_items: print(item.name)`
-- Monster database quickstart:
+- Monster database quick start:
     - Import monsters API using: `from osrsbox import monsters_api`
     - Load all monsters using: `all_db_monsters = monsters_api.load()`
     - Loop monsters using: `for monster in all_db_monsters: print(monster.name)`
@@ -493,8 +486,7 @@ As displayed by the links above, each item or monster is stored in the `osrsbox-
 - [`https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json`](https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json)
 - [`https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json`](https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json)
 
-So how can you get and use these JSON files about OSRS items? It is pretty easy but depends on what you are t- Python 3.6 or above
-- Dataclasses package (if Python is below 3.7)rying to accomplish and what programming language you are using. Some examples are provided in the following subsections.
+So how can you get and use these JSON files about OSRS items? It is pretty easy but depends on what you are trying to accomplish and what programming language you are using. Some examples are provided in the following subsections.
 
 ### Accessing the JSON API using Command Line Tools
 
@@ -567,13 +559,13 @@ Finally, let's have a look at JavaScript (specifically jQuery) example to fetch 
 
 The [official osrsbox-db GitHub repository](https://github.com/osrsbox/osrsbox-db) hosts the source code for the entire osrsbox-db project. The Python PyPi package is located in the `osrsbox` folder of the official development repository, while the other folders in this repository are used to store essential data and Python modules to build the item database. 
 
-### Using the Development Repostory
+### Using the Development Repository
 
 If using this repository (the development version), you will need to fulfil some specific requirements. This includes having the following tools available on your system:
 
 - Python 3.6 or above
 - Pip - the standard package manager for Python
-- Virtualenv - a tool to create isloated virtual environments
+- Virtualenv - a tool to create isolated virtual environments
 - A selection of additional Python packages
 
 As a short example, I configured my Ubuntu 18.04 system to run the development repository code using the following steps:
@@ -581,7 +573,7 @@ As a short example, I configured my Ubuntu 18.04 system to run the development r
 ```
 sudo apt update
 sudo apt install python3-pip
-pip3 insatll virtualenv
+pip3 install virtualenv
 ```
 
 These three commands will install the `pip3` command, allowing the installation of Python package. Then you can use `pip3` to install the `virtualenv` tool, allowing the creation of a virtualized and isolated Python development environment. Then we can install more Python packages that are used in this project. The PyPi `osrsbox` package requires a variety of Python packages in addition to the mandatory `dataclasses` package. These package requirements are documented in the [`requirements.txt`](https://github.com/osrsbox/osrsbox-db/tree/master/requirements.txt) file. It is recommended to use `virtualenv` tool to set up your environment, then install the specified requirements. As an example, the following workflow is provided for Linux-based environments (make sure `virtualenv`, and `python3` are available first):
@@ -600,25 +592,34 @@ When you have finished with working in the `osrsbox-db` repository, make sure to
 deactivate
 ```
 
-### Summary of Respository Structure
+### Summary of Repository Structure
 
-- `data`: Collection of useful data files used in the osrsbox-db project. The [`README.md`](github.com/osrsbox/osrsbox-db/tree/master/data/README.md) file has additional information on the purpose of each file in this folder.
-- `docs`: The publicly accessible item database available through this repo or by using the static JSON API. This folder contains the actual item database that is publicly available, or browsable within this repository.
-- `extraction_tools_cache`: An up-to-date OSRS cache dump (compressed) with associated tools that are used in other parts in this project.
-- `extraction_tools_wiki`: Collection of Python modules to extract data from the new (non-Wikia) OSRS Wiki site. There is also dumped data (category page titles and raw wiki text) for items, quests, and monsters that are somewhat-regularly updated.
-- `items_builder`: Collection of Python scripts to build the item database. The `builder.py` script is the primary entry point, and the `item_builder.py` module does the processing of each item.
-- `monster-builder`: Collection of Python scripts to build the monster database. The `builder.py` script is the primary entry point, and the `monster_builder.py` module does the processing of each monster.
-- `osrsbox`: The Python package:
+- `builders`: The builders are the code that performs automatic regeneration of the databases. These builders read in a variety of data and produce a JSON file for each item or monster.
+    - `items`: The item database builder that uses a collection of Python scripts to build the item database. The `builder.py` script is the primary entry point, and the `build_item.py` module does the processing of each item.
+    - `monsters`: The monster database builder that uses a collection of Python scripts to build the monster database. The `builder.py` script is the primary entry point, and the `build_monster.py` module does the processing of each monster. Additionally, the `drop_table.py` module contains a selection of hard-coded drop tables for the various OSRS Wiki drop table templates such as the rare, herb, seed, gem and catacombs drop tables.
+- `changelog`: A collection of markdown files that document the changes to items, monsters and PyPi package releases.
+- `data`: Collection of useful data files used in the osrsbox-db project.
+    - `cache`: OSRS client cache dump (not present in repository due to size, but populated using the `scripts/cache` scripts).
+    - `items`: Data used for item database generation.
+    - `monsters`: Data used for monster database generation.
+    - `schemas`: JSON schemas for the item and monster database, as well as schemas for item, npc and object definitions from cache data.
+    - `wiki`: OSRS Wiki data dump including all item and monster page titles and page data.
+- `docs`: The publicly accessible item database available through this repo or by using the static JSON API. This folder contains the actual item database that is publicly available, or browsable within this repository (see section above for more information).
+- `osrsbox`: The Python PyPi package:
     - `items_api`: The Python API for interacting with the items database. The API has modules to load all items in the database, iterate through items, and access the different item properties.
     - `items_api_examples`: A collection of simple Python scripts that use the `items_api` to provide an example of what can be achieved and how to use the items database.
     - `monsters_api`: The Python API for interacting with the monster database. The API has modules to load all monsters in the database, iterate through items, and access different monster properties.
     - `monsters_api_examples`: A collection of simple Python scripts that use the `monsters_api` to provide an example of what can be achieved and how to use the monster's database.
-- `scripts`: A selection of scripts (using Python and BASH) to help automate common tasks.
-- `test`: A collection of unit tests, as well as the JSON schemas.
-- `CHANGELOG_items.md`: Document of items added, removed or changed in each weekly game update. This is raw cache data and does not contain every modified property in the database.
-- `CHANGELOG_monsters.md`: Document of monsters added, removed, or changed in each weekly game update. This is based on raw cache data and does not contain every modified property in the database.
+- `scripts`: A collection of scripts (using Python and BASH) to help automate common tasks including dumping the OSRS cache, scraping the OSRS wiki, generating schemas, updating the databases, and inserting data into a MongoDB database.
+    - `cache`: A collection of scripts to extract useful data from the OSRS cache item, npc and object definition files.
+    - `items`: A collection of scripts to help process data for the item builder.
+    - `mongodb`: A collection of scripts for creating and inserting data into the MongoDB database.
+    - `schemas`: A collection of scripts for generating and parsing the JSON schemas used in this project.
+    - `update`: A collection of scripts for automating the data collection and database regeneration.
+    - `wiki`: A collection of scripts for automating data extraction from the OSRS Wiki using the MediaWiki API.
+- `test`: A collection of PyTest tests.
 
-### Item and Monster Database Schema
+### Item and Monster Database Schemas
 
 Technically, the `osrsbox-db` is not really a database - more specifically it should be called a data set. Anyway... the contents in the item/monster database need to adhere to a specified structure, as well as specified data types for each property. This is achieved (documented and tested) using the [JSON Schema project](https://json-schema.org/). The JSON schema is useful to determine:
 
@@ -626,10 +627,10 @@ Technically, the `osrsbox-db` is not really a database - more specifically it sh
 - Mandatory properties for each item (specified in the `required` property)
 - The data types of each property (e.g., boolean, integer, string, null)
 
-The JSON schemas are provided with this project in the `test` folder and includes:
+The JSON schemas are provided with this project in the `data/schemas` folder and includes:
 
-1. [`item_schema.json`](github.com/osrsbox/osrsbox-db/tree/master/test/item_schema.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, or property type specification.
-1. [`monster_schema.json`](github.com/osrsbox/osrsbox-db/tree/master/test/monster_schema.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, or property type specification.
+1. [`schema-items.json`](github.com/osrsbox/osrsbox-db/tree/master/data/schemas/schema-items.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, or property type specification.
+1. [`schema-monsters.json`](github.com/osrsbox/osrsbox-db/tree/master/data/schemas/schema-monsters.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, or property type specification.
 
 All JSON schema files are authored using Draft version 7 of the JSON schema, so you should be able to validate any JSON files in this project using any library that supports version 7. This project uses the [`jsonschema` PyPi package](https://pypi.org/project/jsonschema/).
 
@@ -656,7 +657,7 @@ The osrsbox-db project is released under the GNU General Public License version 
 
 Old School RuneScape (OSRS) content and materials are trademarks and copyrights of JaGeX or its licensors. All rights reserved. OSRSBox and the osrsbox-db project is not associated or affiliated with JaGeX or its licensors. 
 
-Additional data to help build this project is sourced from the [OSRS Wiki](https://oldschool.runescape.wiki/). This primarily includes item metadata. As specified by the [Weird Gloop Copyright](https://meta.weirdgloop.org/w/Meta:Copyrights) page, this content is licensed under CC BY-NC-SA 3.0 - [Attribution-NonCommercial-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-nc-sa/3.0/) license.
+Additional data to help build this project is sourced from the [OSRS Wiki](https://oldschool.runescape.wiki/). This primarily includes item and monster metadata that is not available in the OSRS cache. As specified by the [Weird Gloop Copyright](https://meta.weirdgloop.org/w/Meta:Copyrights) page, this content is licensed under CC BY-NC-SA 3.0 - [Attribution-NonCommercial-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-nc-sa/3.0/) license.
 
 ### Project Attribution
 
