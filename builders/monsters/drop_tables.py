@@ -400,7 +400,7 @@ def herb(members: bool, wikitext: str) -> Dict:
         base_rarity = eval(drop_table_template[1])
     except ValueError:
         print("Error: drop_tables.herb")
-        print("There is no base rarity able to be extracted.")
+        print("NO BASE RARITY FOR: drop_tables.herb")
         exit(1)
 
     # Populate drop table items
@@ -537,7 +537,7 @@ def usefulherb(wikitext: str) -> Dict:
     try:
         base_rarity = float(Fraction(drop_table_template.split("|")[1]))
     except ValueError:
-        print("NO BASE RARITY FOR HERBDROPTABLE")
+        print("NO BASE RARITY FOR: drop_tables.usefulherb")
         exit(1)
 
     # Populate drop table items
@@ -606,7 +606,7 @@ def gem(wikitext: str) -> Dict:
     try:
         base_rarity = float(Fraction(drop_table_template.split("|")[1]))
     except ValueError:
-        print("NO BASE RARITY FOR HERBDROPTABLE")
+        print("NO BASE RARITY FOR: drop_tables.herb")
         exit(1)
 
     # Populate drop table items
@@ -717,6 +717,918 @@ def gem(wikitext: str) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": 1/128 * 1/42.67 * base_rarity,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)
+
+
+def fixedallotmentseed(wikitext: str) -> Dict:
+    """Set allotment seed drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://osrs.wiki/w/Drop_table#Fixed_allotment_seed_drop_table
+
+    :param wikitext: The monsters wikitext as a string.
+    :return: Dictionary of items on the drop table.
+    """
+    drop_table_template = None
+    wikicode = mwparserfromhell.parse(wikitext)
+    templates = wikicode.filter_templates()
+    for template in templates:
+        if "fixedallotmentseeddroptable2" in template.lower():
+            drop_table_template = template
+        if "dropsallotmenttable" in template.lower():
+            drop_table_template = template
+
+    drop_table_template = drop_table_template.replace("{", "")
+    drop_table_template = drop_table_template.replace("}", "")
+
+    try:
+        base_rarity = float(Fraction(drop_table_template.split("|")[1]))
+    except (ValueError, IndexError):
+        # print("NO BASE RARITY FOR: drop_tables.allotmentseed")
+        base_rarity = 6/128
+
+    # Populate drop table items
+    items = {
+        "5318": {
+            "id": 5318,
+            "name": "Potato seed",
+            "members": True,
+            "quantity": "4",
+            "noted": False,
+            "rarity": 1/2.74 * base_rarity,
+            "drop_requirements": None
+        },
+        "5319": {
+            "id": 5319,
+            "name": "Onion seed",
+            "members": True,
+            "quantity": "4",
+            "noted": False,
+            "rarity": 1/3.653 * base_rarity,
+            "drop_requirements": None
+        },
+        "5324": {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": True,
+            "quantity": "4",
+            "noted": False,
+            "rarity": 1/5.479 * base_rarity,
+            "drop_requirements": None
+        },
+        "5322": {
+            "id": 5322,
+            "name": "Tomato seed",
+            "members": True,
+            "quantity": "3",
+            "noted": False,
+            "rarity": 1/10.96 * base_rarity,
+            "drop_requirements": None
+        },
+        "5320": {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "members": True,
+            "quantity": "3",
+            "noted": False,
+            "rarity": 1/21.92 * base_rarity,
+            "drop_requirements": None
+        },
+        "5323": {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": True,
+            "quantity": "2",
+            "noted": False,
+            "rarity": 1/43.83 * base_rarity,
+            "drop_requirements": None
+        },
+        "5321": {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": True,
+            "quantity": "2",
+            "noted": False,
+            "rarity": 1/87.67 * base_rarity,
+            "drop_requirements": None
+        },
+        "22879": {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": True,
+            "quantity": "2",
+            "noted": False,
+            "rarity": 1/131.5 * base_rarity,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)
+
+
+def treeseed(wikitext: str) -> Dict:
+    """Set tree seed drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://osrs.wiki/w/Drop_table#Tree-herb_seed_drop_table
+
+    :param wikitext: The monsters wikitext as a string.
+    :return: Dictionary of items on the drop table.
+    """
+    drop_table_template = None
+    wikicode = mwparserfromhell.parse(wikitext)
+    templates = wikicode.filter_templates()
+    for template in templates:
+        if "treeherbseeddroptable2" in template.lower():
+            drop_table_template = template
+
+    drop_table_template = drop_table_template.replace("{", "")
+    drop_table_template = drop_table_template.replace("}", "")
+
+    try:
+        base_rarity = float(Fraction(drop_table_template.split("|")[1]))
+    except ValueError:
+        print("NO BASE RARITY FOR: drop_tables.treeseed")
+        exit(1)
+
+    if "multiplier=2-3" in drop_table_template:
+        quantity = "2-3"
+        watermelon_quantity = "30-45"
+    elif "multiplier=2" in drop_table_template:
+        quantity = "2"
+        watermelon_quantity = "30"
+    else:
+        quantity = "1"
+        watermelon_quantity = "15"
+
+    # Populate drop table items
+    items = {
+        "5295": {
+            "id": 5295,
+            "name": "Ranarr seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/8.333 * base_rarity,
+            "drop_requirements": None
+        },
+        "5300": {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/8.929 * base_rarity,
+            "drop_requirements": None
+        },
+        "5304": {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/11.36 * base_rarity,
+            "drop_requirements": None
+        },
+        "5321": {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": True,
+            "quantity": watermelon_quantity,
+            "noted": False,
+            "rarity": 1/12.5 * base_rarity,
+            "drop_requirements": None
+        },
+        "5313": {
+            "id": 5313,
+            "name": "Willow seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/12.5 * base_rarity,
+            "drop_requirements": None
+        },
+        "21488": {
+            "id": 21488,
+            "name": "Mahogany seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/13.89 * base_rarity,
+            "drop_requirements": None
+        },
+        "5314": {
+            "id": 5314,
+            "name": "Maple seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/13.89 * base_rarity,
+            "drop_requirements": None
+        },
+        "21486": {
+            "id": 21486,
+            "name": "Teak seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/13.89 * base_rarity,
+            "drop_requirements": None
+        },
+        "5315": {
+            "id": 5315,
+            "name": "Yew seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/13.89 * base_rarity,
+            "drop_requirements": None
+        },
+        "5288": {
+            "id": 5288,
+            "name": "Papaya tree seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/17.86 * base_rarity,
+            "drop_requirements": None
+        },
+        "5316": {
+            "id": 5316,
+            "name": "Magic seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/20.83 * base_rarity,
+            "drop_requirements": None
+        },
+        "5289": {
+            "id": 5289,
+            "name": "Palm tree seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/25 * base_rarity,
+            "drop_requirements": None
+        },
+        "5317": {
+            "id": 5317,
+            "name": "Spirit seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/31.25 * base_rarity,
+            "drop_requirements": None
+        },
+        "22877": {
+            "id": 22877,
+            "name": "Dragonfruit tree seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/41.67 * base_rarity,
+            "drop_requirements": None
+        },
+        "22869": {
+            "id": 22869,
+            "name": "Celastrus seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/62.5 * base_rarity,
+            "drop_requirements": None
+        },
+        "22871": {
+            "id": 22871,
+            "name": "Redwood tree seed",
+            "members": True,
+            "quantity": quantity,
+            "noted": False,
+            "rarity": 1/62.5 * base_rarity,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)
+
+
+def rareseed(wikitext: str) -> Dict:
+    """Set rare seed drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://osrs.wiki/w/Drop_table#Rare_seed_drop_table
+
+    :param wikitext: The monsters wikitext as a string.
+    :return: Dictionary of items on the drop table.
+    """
+    drop_table_template = None
+    wikicode = mwparserfromhell.parse(wikitext)
+    templates = wikicode.filter_templates()
+    for template in templates:
+        if "rareseeddroptable" in template.lower():
+            drop_table_template = template
+
+    drop_table_template = drop_table_template.replace("{", "")
+    drop_table_template = drop_table_template.replace("}", "")
+
+    try:
+        base_rarity = float(Fraction(drop_table_template.split("|")[1]))
+    except ValueError:
+        print("NO BASE RARITY FOR: drop_tables.rareseed")
+        exit(1)
+
+    # Populate drop table items
+    items = {
+        "5296": {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/5.064 * base_rarity,
+            "drop_requirements": None
+        },
+        "5297": {
+            "id": 5297,
+            "name": "Irit seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/7.438 * base_rarity,
+            "drop_requirements": None
+        },
+        "5281": {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/7.677 * base_rarity,
+            "drop_requirements": None
+        },
+        "5298": {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/10.82 * base_rarity,
+            "drop_requirements": None
+        },
+        "5106": {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/10.82 * base_rarity,
+            "drop_requirements": None
+        },
+        "5280": {
+            "id": 5280,
+            "name": "Cactus seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/11.33 * base_rarity,
+            "drop_requirements": None
+        },
+        "5299": {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/15.87 * base_rarity,
+            "drop_requirements": None
+        },
+        "22873": {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/15.87 * base_rarity,
+            "drop_requirements": None
+        },
+        "5300": {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/23.8 * base_rarity,
+            "drop_requirements": None
+        },
+        "5301": {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/34 * base_rarity,
+            "drop_requirements": None
+        },
+        "5302": {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/47.6 * base_rarity,
+            "drop_requirements": None
+        },
+        "22879": {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": True,
+            "quantity": "3",
+            "noted": False,
+            "rarity": 1/59.5 * base_rarity,
+            "drop_requirements": None
+        },
+        "5303": {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/79.33 * base_rarity,
+            "drop_requirements": None
+        },
+        "5304": {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/119 * base_rarity,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)
+
+
+def variableallotmentseed(wikitext: str) -> Dict:
+    """Set rare seed drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://osrs.wiki/w/Drop_table#Rare_seed_drop_table
+
+    :param wikitext: The monsters wikitext as a string.
+    :return: Dictionary of items on the drop table.
+    """
+    drop_table_template = None
+    wikicode = mwparserfromhell.parse(wikitext)
+    templates = wikicode.filter_templates()
+    for template in templates:
+        if "rareseeddroptable" in template.lower():
+            drop_table_template = template
+
+    drop_table_template = drop_table_template.replace("{", "")
+    drop_table_template = drop_table_template.replace("}", "")
+
+    try:
+        base_rarity = float(Fraction(drop_table_template.split("|")[1]))
+    except ValueError:
+        print("NO BASE RARITY FOR: drop_tables.rareseed")
+        exit(1)
+
+    # Populate drop table items
+    items = {
+        "5318": {
+            "id": 5318,
+            "name": "Potato seed",
+            "members": True,
+            "quantity": "1-4",
+            "noted": False,
+            "rarity": 1/2 * base_rarity,
+            "drop_requirements": None
+        },
+        "5319": {
+            "id": 5319,
+            "name": "Onion seed",
+            "members": True,
+            "quantity": "1-3",
+            "noted": False,
+            "rarity": 1/4 * base_rarity,
+            "drop_requirements": None
+        },
+        "5324": {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": True,
+            "quantity": "1-3",
+            "noted": False,
+            "rarity": 1/8 * base_rarity,
+            "drop_requirements": None
+        },
+        "5322": {
+            "id": 5322,
+            "name": "Tomato seed",
+            "members": True,
+            "quantity": "1-2",
+            "noted": False,
+            "rarity": 1/16 * base_rarity,
+            "drop_requirements": None
+        },
+        "5320": {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "members": True,
+            "quantity": "1-2",
+            "noted": False,
+            "rarity": 1/32 * base_rarity,
+            "drop_requirements": None
+        },
+        "5323": {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/64 * base_rarity,
+            "drop_requirements": None
+        },
+        "5321": {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/128 * base_rarity,
+            "drop_requirements": None
+        },
+        "22879": {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/128 * base_rarity,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)
+
+
+def commonseed(wikitext: str) -> Dict:
+    """Set common seed drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://osrs.wiki/w/Drop_table#Common_seed_drop_table
+
+    :param wikitext: The monsters wikitext as a string.
+    :return: Dictionary of items on the drop table.
+    """
+    drop_table_template = None
+    wikicode = mwparserfromhell.parse(wikitext)
+    templates = wikicode.filter_templates()
+    for template in templates:
+        if "manyseeddroptable2" in template.lower():
+            drop_table_template = template
+
+    drop_table_template = drop_table_template.replace("{", "")
+    drop_table_template = drop_table_template.replace("}", "")
+
+    try:
+        base_rarity = float(Fraction(drop_table_template.split("|")[1]))
+    except ValueError:
+        print("NO BASE RARITY FOR: drop_tables.commonseed")
+        exit(1)
+
+    # Populate drop table items
+    items = {
+        "5100": {
+            "id": 5100,
+            "name": "Limpwurt seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/7.65 * base_rarity,
+            "drop_requirements": None
+        },
+        "5323": {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/8 * base_rarity,
+            "drop_requirements": None
+        },
+        "5292": {
+            "id": 5292,
+            "name": "Marrentill seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/8.384 * base_rarity,
+            "drop_requirements": None
+        },
+        "5104": {
+            "id": 5104,
+            "name": "Jangerberry seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/11.39 * base_rarity,
+            "drop_requirements": None
+        },
+        "5293": {
+            "id": 5293,
+            "name": "Tarromin seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/12.33 * base_rarity,
+            "drop_requirements": None
+        },
+        "5311": {
+            "id": 5311,
+            "name": "Wildblood seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/12.63 * base_rarity,
+            "drop_requirements": None
+        },
+        "5321": {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/16.63 * base_rarity,
+            "drop_requirements": None
+        },
+        "5294": {
+            "id": 5294,
+            "name": "Harralander seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/18.71 * base_rarity,
+            "drop_requirements": None
+        },
+        "22879": {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/26.2 * base_rarity,
+            "drop_requirements": None
+        },
+        "5295": {
+            "id": 5295,
+            "name": "Ranarr seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/26.87 * base_rarity,
+            "drop_requirements": None
+        },
+        "5105": {
+            "id": 5105,
+            "name": "Whiteberry seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/30.82 * base_rarity,
+            "drop_requirements": None
+        },
+        "5282": {
+            "id": 5282,
+            "name": "Mushroom spore",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/36.14 * base_rarity,
+            "drop_requirements": None
+        },
+        "5296": {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/38.81 * base_rarity,
+            "drop_requirements": None
+        },
+        "5281": {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/58.22 * base_rarity,
+            "drop_requirements": None
+        },
+        "5297": {
+            "id": 5297,
+            "name": "Irit seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/58.22 * base_rarity,
+            "drop_requirements": None
+        },
+        "5106": {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/80.62 * base_rarity,
+            "drop_requirements": None
+        },
+        "5298": {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/87.33 * base_rarity,
+            "drop_requirements": None
+        },
+        "5280": {
+            "id": 5280,
+            "name": "Cactus seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/87.33 * base_rarity,
+            "drop_requirements": None
+        },
+        "5299": {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/116.4 * base_rarity,
+            "drop_requirements": None
+        },
+        "22873": {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/131 * base_rarity,
+            "drop_requirements": None
+        },
+        "5300": {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/209.6 * base_rarity,
+            "drop_requirements": None
+        },
+        "5301": {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/262 * base_rarity,
+            "drop_requirements": None
+        },
+        "5302": {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/349.3 * base_rarity,
+            "drop_requirements": None
+        },
+        "5303": {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/524 * base_rarity,
+            "drop_requirements": None
+        },
+        "5304": {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/1048 * base_rarity,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)
+
+
+def hopsseed(wikitext: str) -> Dict:
+    """Set hops seed drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://osrs.wiki/w/Template:HopsDropTable2
+
+    :param wikitext: The monsters wikitext as a string.
+    :return: Dictionary of items on the drop table.
+    """
+    drop_table_template = None
+    wikicode = mwparserfromhell.parse(wikitext)
+    templates = wikicode.filter_templates()
+    for template in templates:
+        if "hopsdroptable2" in template.lower():
+            drop_table_template = template
+
+    drop_table_template = drop_table_template.replace("{", "")
+    drop_table_template = drop_table_template.replace("}", "")
+
+    try:
+        base_rarity = float(Fraction(drop_table_template.split("|")[1]))
+    except ValueError:
+        print("NO BASE RARITY FOR: drop_tables.hopsseed")
+        exit(1)
+
+    # Populate drop table items
+    items = {
+        "5305": {
+            "id": 5305,
+            "name": "Barley seed",
+            "members": True,
+            "quantity": "4",
+            "noted": False,
+            "rarity": 1/3.228 * base_rarity,
+            "drop_requirements": None
+        },
+        "5307": {
+            "id": 5307,
+            "name": "Hammerstone seed",
+            "members": True,
+            "quantity": "3",
+            "noted": False,
+            "rarity": 1/4.035 * base_rarity,
+            "drop_requirements": None
+        },
+        "5308": {
+            "id": 5308,
+            "name": "Asgarnian seed",
+            "members": True,
+            "quantity": "3",
+            "noted": False,
+            "rarity": 1/6.647 * base_rarity,
+            "drop_requirements": None
+        },
+        "5306": {
+            "id": 5306,
+            "name": "Jute seed",
+            "members": True,
+            "quantity": "2",
+            "noted": False,
+            "rarity": 1/6.647 * base_rarity,
+            "drop_requirements": None
+        },
+        "5309": {
+            "id": 5309,
+            "name": "Yanillian seed",
+            "members": True,
+            "quantity": "2",
+            "noted": False,
+            "rarity": 1/10.272 * base_rarity,
+            "drop_requirements": None
+        },
+        "5310": {
+            "id": 5310,
+            "name": "Krandorian seed",
+            "members": True,
+            "quantity": "2",
+            "noted": False,
+            "rarity": 113/4 * base_rarity,
+            "drop_requirements": None
+        },
+        "5311": {
+            "id": 5311,
+            "name": "Wildblood seed",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1/113 * base_rarity,
             "drop_requirements": None
         }
     }

@@ -739,6 +739,41 @@ class BuildMonster:
             for item, item_dict in items.items():
                 drops_list_ids.append(str(item))
                 drops_dict_all[str(item)] = item_dict
+        if "fixedallotmentseeddroptable2" in self.monster_wikitext[2].lower():
+            items = drop_tables.fixedallotmentseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+        if "dropsallotmenttable" in self.monster_wikitext[2].lower():
+            items = drop_tables.fixedallotmentseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+        if "treeherbseeddroptable2" in self.monster_wikitext[2].lower():
+            items = drop_tables.treeseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+        if "rareseeddroptable2" in self.monster_wikitext[2].lower():
+            items = drop_tables.rareseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+        if "variableallotmentseeddroptale2" in self.monster_wikitext[2].lower():
+            items = drop_tables.variableallotmentseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+        if "manyseeddroptable2" in self.monster_wikitext[2].lower():
+            items = drop_tables.commonseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+        if "hopsdroptable2" in self.monster_wikitext[2].lower():
+            items = drop_tables.hopsseed(self.monster_wikitext[2])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
         if "superiordroptable" in self.monster_wikitext[2].lower():
             items = drop_tables.superior(self.monster_dict["slayer_level"])
             for item, item_dict in items.items():
@@ -752,6 +787,17 @@ class BuildMonster:
             for item, item_dict in items.items():
                 drops_list_ids.append(str(item))
                 drops_dict_all[str(item)] = item_dict
+
+        # if "mainraredroptable" in self.monster_wikitext[2].lower():
+        #     items = drop_tables.raredroptable(self.monster_wikitext[2])
+        #     for item, item_dict in items.items():
+        #         drops_list_ids.append(str(item))
+        #         drops_dict_all[str(item)] = item_dict
+        # if "raredroptable" in self.monster_wikitext[2].lower():
+        #     items = drop_tables.raredroptable(self.monster_wikitext[2])
+        #     for item, item_dict in items.items():
+        #         drops_list_ids.append(str(item))
+        #         drops_dict_all[str(item)] = item_dict
 
         # Append all parsed drops to the drops array
         for item_id in drops_list_ids:
@@ -810,12 +856,7 @@ class BuildMonster:
         ddiff_drops = DeepDiff(existing_drops, current_drops, ignore_order=True)
         if ddiff_drops:
             print("  > CHANGED DROP PROPERTIES...")
-            if ddiff_drops.get("iterable_item_added"):
-                del ddiff_drops["iterable_item_added"]
-            if ddiff_drops.get("iterable_item_removed"):
-                del ddiff_drops["iterable_item_removed"]
-            if ddiff_drops:
-                print(ddiff_drops)
+            print(ddiff_drops)
 
         return
 

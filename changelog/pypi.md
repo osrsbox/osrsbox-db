@@ -2,6 +2,8 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.2.23`: Updated monster database drops.
+- `1.2.22`: Updated item database.
 - `1.2.21`: Updated item skill requirements.
 - `1.2.20`: Release for game update: 2019/12/11.
 - `1.2.19`: Release for game update: 2019/12/05.
