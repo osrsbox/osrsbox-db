@@ -4,9 +4,17 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-Here
+Parse the RuneLite Grand Exchange (GE) buy limits, and export to a new
+JSON file that maps item name to buy limit. This is to provide more
+search flexibility when looking up buy limits.
 
-Copyright (c) 2019, PH01L
+The ge_limits.json file can be downloaded from:
+https://github.com/runelite/runelite/raw/master/runelite-client/src/main/
+resources/net/runelite/client/plugins/grandexchange/ge_limits.json
+
+Make sure to rename to ge-limits-ids.json to match this repository.
+
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -28,17 +36,17 @@ import config
 from osrsbox import items_api
 
 
-if __name__ == "__main__":
+def main():
     # Load all items from osrsbox item API
     all_db_items = items_api.load()
 
     # Get a dict with: id -> ItemProperties
-    all_item_ids = {}
+    all_item_ids = dict()
     for item in all_db_items:
         all_item_ids[item.id] = item
 
     # Load the ge-limits-ids.json file from RuneLite
-    ge_limits_path = Path(config.DATA_PATH / "ge-limits-ids.json")
+    ge_limits_path = Path(config.DATA_ITEMS_PATH / "ge-limits-ids.json")
     with open(ge_limits_path) as f:
         ge_limits = json.load(f)
 
@@ -50,6 +58,10 @@ if __name__ == "__main__":
         buy_limits[item_name] = buy_limit
 
     # Write out buy limit data file
-    out_fi = Path(config.DATA_PATH / "ge-limits-names.json")
+    out_fi = Path(config.DATA_ITEMS_PATH / "ge-limits-names.json")
     with open(out_fi, "w") as f:
         json.dump(buy_limits, f, indent=4)
+
+
+if __name__ == "__main__":
+    main()

@@ -4,9 +4,11 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-Here
+Load the existing database and check if each equipable item has an
+associated dictionary of null, or skills required to equip. This information
+needs to be manually entered in the data/skill-requirements.json file.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -25,16 +27,15 @@ import json
 from pathlib import Path
 
 import config
-
 from osrsbox import items_api
 
 
-if __name__ == "__main__":
+def main():
     # Start processing all items in database
     all_db_items = items_api.load()
 
     # Load current file
-    isr_file = Path(config.DATA_PATH / "item-skill-requirements.json")
+    isr_file = Path(config.DATA_ITEMS_PATH / "skill-requirements.json")
     with open(isr_file) as f:
         known_items = json.load(f)
 
@@ -67,3 +68,7 @@ if __name__ == "__main__":
             else:
                 print(item.name)
                 print(f'    "{item.id}": {{\n        "skill": level\n    }},')
+
+
+if __name__ == "__main__":
+    main()

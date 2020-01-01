@@ -4,9 +4,10 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-Here
+Script to generate the data/items/dmm-only-items.json file which documents
+any items that are unique to the old DMM tournaments.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -48,7 +49,8 @@ DMM_MODE_ITEM_NAMES = [
     "Morrigan's javelin"
 ]
 
-if __name__ == "__main__":
+
+def main():
     # Output dictionary of DMM-only items
     dmm_only_items = dict()
 
@@ -60,6 +62,10 @@ if __name__ == "__main__":
             dmm_only_items[item.id] = item.name
 
     # Write out file
-    out_fi = Path(config.DATA_PATH / "dmm-only-items.json")
-    with open(out_fi, "w") as f:
+    out_fi_path = Path(config.DATA_ITEMS_PATH / "dmm-only-items.json")
+    with open(out_fi_path, "w") as f:
         json.dump(dmm_only_items, f, indent=4)
+
+
+if __name__ == "__main__":
+    main()
