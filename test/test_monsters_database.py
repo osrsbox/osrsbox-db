@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Tests for module: docs/monsters-json
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -26,8 +26,6 @@ from pathlib import Path
 
 import config
 
-import jsonschema
-
 
 def test_monsters_data():
     """Unit test to check monsters database contents against JSON schema."""
@@ -35,6 +33,9 @@ def test_monsters_data():
     path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-monsters.json")
     with open(path_to_schema, 'r') as f:
         schema = json.loads(f.read())
+
+    # Validator object with schema attached
+    v = config.MyValidator(schema)
 
     # Set the path to the monsters-json folder and get all the JSON files
     path_to_monsters_json_dir = Path(config.DOCS_PATH / "monsters-json")
@@ -46,4 +47,4 @@ def test_monsters_data():
         with open(json_file) as fi:
             monster = json.load(fi)
             # print(monster["id"])
-            jsonschema.validate(instance=monster, schema=schema)
+            v.validate(monster)

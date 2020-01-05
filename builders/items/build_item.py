@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Build an item given OSRS cache, wiki and custom data.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -21,12 +21,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-import json
 import logging
 from typing import Dict
 from pathlib import Path
 
-import jsonschema
+from cerberus import Validator
 import mwparserfromhell
 from deepdiff import DeepDiff
 
@@ -36,6 +35,19 @@ from osrsbox.items_api.item_properties import ItemProperties
 from scripts.wiki.wikitext_parser import WikitextTemplateParser
 
 logger = logging.getLogger(__name__)
+
+
+class MyValidator(Validator):
+    def _validate_description(self, description, field, value):
+        """ {'type': 'string'} """
+        # Accept description attribute, used for swagger doc generation
+        print("EVER")
+        pass
+
+    def _validate_example(self, description, field, value):
+        """ {'type': 'string'} """
+        # Accept an example attribute, used for swagger doc generation
+        pass
 
 
 class BuildItem:
@@ -62,6 +74,8 @@ class BuildItem:
         self.invalid_items_data = kwargs["invalid_items_data"]
         # A list of already known (processed) items
         self.known_items = kwargs["known_items"]
+        # The item schema
+        self.schema_data = kwargs["schema_data"]
         # If the JSON should be exported/created
         self.export = kwargs["export"]
 
@@ -813,14 +827,15 @@ class BuildItem:
         return
 
     def validate_item(self):
-        """Use the items-schema.json file to validate the populated item."""
+        """Use the schema-items.json file to validate the populated item."""
         # Create JSON out object to validate
         current_json = self.item_properties.construct_json()
 
-        # Open the JSON Schema for items
-        path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
-        with open(path_to_schema, 'r') as f:
-            schema = json.loads(f.read())
+        # Validate object with schema attached
+        v = config.MyValidator(self.schema_data)
+        v.validate(current_json)
 
-        # Check the populate item object against the schema
-        jsonschema.validate(instance=current_json, schema=schema)
+        if not v:
+            print(current_json["id"], "ERROR...")
+            print(v.errors)
+            quit()

@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Build a monster given OSRS cache, wiki and custom data.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -21,11 +21,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-import json
 import logging
 from pathlib import Path
 
-import jsonschema
 import mwparserfromhell
 from deepdiff import DeepDiff
 
@@ -55,6 +53,8 @@ class BuildMonster:
         self.all_db_items = kwargs["all_db_items"]
         # A list of already known (processed) monsters
         self.known_monsters = kwargs["known_monsters"]
+        # The monster schema
+        self.schema_data = kwargs["schema_data"]
         # If the JSON should be exported/created
         self.export = kwargs["export"]
 
@@ -861,14 +861,15 @@ class BuildMonster:
         return
 
     def validate_monster(self):
-        """Use the monsters-schema.json file to validate the populated monster."""
+        """Use the schema-monsters.json file to validate the populated monster."""
         # Create JSON out object to validate
         current_json = self.monster_properties.construct_json()
 
-        # Open the JSON Schema for monsters
-        path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-monsters.json")
-        with open(path_to_schema, 'r') as f:
-            schema = json.loads(f.read())
+        # Validate object with schema attached
+        v = config.MyValidator(self.schema_data)
+        v.validate(current_json)
 
-        # Check the populate monster object against the schema
-        jsonschema.validate(instance=current_json, schema=schema)
+        if not v:
+            print(current_json["id"], "ERROR...")
+            print(v.errors)
+            quit()

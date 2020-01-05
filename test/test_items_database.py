@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Tests for module: docs/items-json
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -26,8 +26,6 @@ from pathlib import Path
 
 import config
 
-import jsonschema
-
 
 def test_item_database():
     """Unit test to check item database contents against JSON schema."""
@@ -35,6 +33,9 @@ def test_item_database():
     path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
     with open(path_to_schema, 'r') as f:
         schema = json.loads(f.read())
+
+    # Validator object with schema attached
+    v = config.MyValidator(schema)
 
     # Set the path to the items-json folder and get all the JSON files
     path_to_items_json_dir = Path(config.DOCS_PATH / "items-json")
@@ -46,4 +47,4 @@ def test_item_database():
         with open(json_file) as fi:
             item = json.load(fi)
             # print(item["id"])
-            jsonschema.validate(instance=item, schema=schema)
+            v.validate(item)

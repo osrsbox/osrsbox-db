@@ -4,9 +4,10 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 Description:
-Project path constants.
+Global project configurations including project path constants and
+Cerberus validator configuration.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -22,6 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 from pathlib import Path
+
+from cerberus import Validator
 
 PROJECT_ROOT_PATH = Path(__file__).parent
 
@@ -49,3 +52,17 @@ SCRIPTS_ITEMS = Path(SCRIPTS_PATH / "items")
 SCRIPTS_MONSTERS = Path(SCRIPTS_PATH / "monsters")
 SCRIPTS_SCHEMAS = Path(SCRIPTS_PATH / "schemas")
 SCRIPTS_UPDATE = Path(SCRIPTS_PATH / "update")
+
+
+class MyValidator(Validator):
+    """Modification of the Cerberus Validator class to remove specific fields.
+
+    :param Validator: Subclass the Cerberus Validator class.
+    """
+    def _validate_description(self, description, field, value):
+        """Remove description field from Cerberus schema."""
+        pass
+
+    def _validate_example(self, description, field, value):
+        """Remove example field from Cerberus schema."""
+        pass

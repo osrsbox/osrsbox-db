@@ -3,7 +3,10 @@ Author:  PH01L
 Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
-Copyright (c) 2019, PH01L
+Description:
+Various methods to help clean OSRS Wiki wikitext entries.
+
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -18,7 +21,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-
 import re
 import datetime
 from typing import List
@@ -516,7 +518,7 @@ def clean_drop_requirements(value: str) -> str:
           'name="catacomb"' in value):
         value = "catacombs-only"
     elif "[[Krystilia]]" in value:
-        value = "krystilia-task-only"
+        value = "wilderness-slayer"
     elif "[[Treasure Trails" in value:
         value = "treasure-trails-only"
     elif "[[Iorwerth Dungeon]]" in value:

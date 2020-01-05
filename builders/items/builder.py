@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Program to invoke item database generation process.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -86,6 +86,11 @@ def main(export: bool = False):
     with open(all_item_cache_data_path) as f:
         all_item_cache_data = json.load(f)
 
+    # Load schema data
+    schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
+    with open(schema_file_path) as f:
+        schema_data = json.load(f)
+
     # Initialize a list of known items
     known_items = list()
 
@@ -107,6 +112,7 @@ def main(export: bool = False):
                                        weapon_stances_data=weapon_stances_data,
                                        invalid_items_data=invalid_items_data,
                                        known_items=known_items,
+                                       schema_data=schema_data,
                                        export=export)
 
         preprocessing_status = builder.preprocessing()

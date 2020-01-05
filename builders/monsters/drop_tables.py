@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Populate hard-coded drop tables for monsters.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -60,7 +60,7 @@ def superior(slayer_level: int) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": staff_drop_rate,
-            "drop_requirements": "superior"
+            "drop_requirements": "superior-only"
         },
         "20736": {
             "id": 20736,
@@ -69,7 +69,7 @@ def superior(slayer_level: int) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": staff_drop_rate,
-            "drop_requirements": "superior"
+            "drop_requirements": "superior-only"
         },
         "21270": {
             "id": 21270,
@@ -78,7 +78,7 @@ def superior(slayer_level: int) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": other_drop_rate,
-            "drop_requirements": "superior"
+            "drop_requirements": "superior-only"
         },
         "20724": {
             "id": 20724,
@@ -87,7 +87,7 @@ def superior(slayer_level: int) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": other_drop_rate,
-            "drop_requirements": "superior"
+            "drop_requirements": "superior-only"
         }
     }
 
@@ -143,7 +143,7 @@ def wildernessslayer(monster_name: str, combat_level: int, hitpoints: int, slaye
             "quantity": "1",
             "noted": False,
             "rarity": larrans_key_drop_rate,
-            "drop_requirements": "wilderness-slayer"
+            "drop_requirements": "krystilia-task-only"
         },
         "21257": {
             "id": 21257,
@@ -152,7 +152,7 @@ def wildernessslayer(monster_name: str, combat_level: int, hitpoints: int, slaye
             "quantity": "1",
             "noted": False,
             "rarity": slayers_enchantment_drop_rate,
-            "drop_requirements": "wilderness-slayer"
+            "drop_requirements": "krystilia-task-only"
         }
     }
 
@@ -327,7 +327,7 @@ def catacombs(monster_name: str, hitpoints: int, wikitext: str) -> Dict:
             "quantity": ancient_shard_quantity,
             "noted": False,
             "rarity": ancient_shard_drop_rate,
-            "drop_requirements": "catacombs"
+            "drop_requirements": "catacombs-only"
         },
         "19679": {
             "id": 19679,
@@ -336,7 +336,7 @@ def catacombs(monster_name: str, hitpoints: int, wikitext: str) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": totem_drop_rate,
-            "drop_requirements": "catacombs"
+            "drop_requirements": "catacombs-only"
         },
         "19681": {
             "id": 19681,
@@ -345,7 +345,7 @@ def catacombs(monster_name: str, hitpoints: int, wikitext: str) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": totem_drop_rate,
-            "drop_requirements": "catacombs"
+            "drop_requirements": "catacombs-only"
         },
         "19683": {
             "id": 19683,
@@ -354,7 +354,7 @@ def catacombs(monster_name: str, hitpoints: int, wikitext: str) -> Dict:
             "quantity": "1",
             "noted": False,
             "rarity": totem_drop_rate,
-            "drop_requirements": "catacombs"
+            "drop_requirements": "catacombs-only"
         }
     }
 

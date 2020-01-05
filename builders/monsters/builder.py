@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Program to invoke monster database generation process.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -66,6 +66,11 @@ def main(export: bool = False):
     with open(all_monster_cache_data_path) as f:
         all_monster_cache_data = json.load(f)
 
+    # Load schema data
+    schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-monsters.json")
+    with open(schema_file_path) as f:
+        schema_data = json.load(f)
+
     # Initialize a list of known monsters
     known_monsters = list()
 
@@ -83,6 +88,7 @@ def main(export: bool = False):
                                              all_db_monsters=all_db_monsters,
                                              all_db_items=all_db_items,
                                              known_monsters=known_monsters,
+                                             schema_data=schema_data,
                                              export=export)
 
         status = builder.preprocessing()
