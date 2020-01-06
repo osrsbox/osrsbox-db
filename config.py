@@ -61,7 +61,6 @@ class MyValidator(Validator):
     """
     def _validate_description(self, description, field, value):
         """Remove description field from Cerberus schema.
-        
         The rule's arguments are validated against this schema:
         {'type': 'string'}
         """
@@ -69,7 +68,6 @@ class MyValidator(Validator):
 
     def _validate_example(self, description, field, value):
         """Remove example field from Cerberus schema.
-        
         The rule's arguments are validated against this schema:
         {'type': 'string'}
         """
