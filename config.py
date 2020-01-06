@@ -60,9 +60,17 @@ class MyValidator(Validator):
     :param Validator: Subclass the Cerberus Validator class.
     """
     def _validate_description(self, description, field, value):
-        """Remove description field from Cerberus schema."""
+        """Remove description field from Cerberus schema.
+        
+        The rule's arguments are validated against this schema:
+        {'type': 'string'}
+        """
         pass
 
     def _validate_example(self, description, field, value):
-        """Remove example field from Cerberus schema."""
+        """Remove example field from Cerberus schema.
+        
+        The rule's arguments are validated against this schema:
+        {'type': 'string'}
+        """
         pass
