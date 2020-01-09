@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.2.26`: Added category property to monster database.
 - `1.2.25`: Updated item skill requirements.
 - `1.2.24`: Updated monster database drops.
 - `1.2.23`: Updated monster database drops.

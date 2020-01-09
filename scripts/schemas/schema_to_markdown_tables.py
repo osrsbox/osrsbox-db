@@ -30,22 +30,18 @@ import config
 
 def parse_json_schema(properties_dict: Dict):
     # Print markdown table header
-    print("| Property | Data type | Description | Required |")
-    print("| -------- | --------- | ----------- | -------- |")
+    print("| Property | Data type | Description | Required | Nullable |")
+    print("| -------- | --------- | ----------- | -------- |----------|")
     for prop in properties_dict:
         data_type = properties_dict[prop]["type"]
-        # Determine if property can be set to null
-        if "null" in data_type:
-            required = "No"
-            data_type.remove("null")
-        else:
-            required = "Yes"
+        required = properties_dict[prop]["required"]
+        nullable = properties_dict[prop]["nullable"]
         if isinstance(data_type, list):
             data_type = ", ".join(data_type)
         description = properties_dict[prop]["description"]
 
         # Print row
-        print(f"| {prop} | {data_type} | {description} | {required} |")
+        print(f"| {prop} | {data_type} | {description} | {required} | {nullable} |")
 
 
 # Read in the schema-items.json file
@@ -54,16 +50,11 @@ with open(path_to_schema, 'r') as f:
     schema = json.loads(f.read())
 
 # Process the base item properties
-properties_dict = schema["properties"]
-parse_json_schema(properties_dict)
-
+parse_json_schema(schema)
 # Process the equipment properties
-properties_dict = schema["properties"]["equipment"]["properties"]
-parse_json_schema(properties_dict)
-
+parse_json_schema(schema["equipment"]["schema"])
 # Process the weapon properties
-properties_dict = schema["properties"]["weapon"]["properties"]
-parse_json_schema(properties_dict)
+parse_json_schema(schema["weapon"]["schema"])
 
 # Read in the schema-monsters.json file
 path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-monsters.json")
@@ -71,9 +62,6 @@ with open(path_to_schema, 'r') as f:
     schema = json.loads(f.read())
 
 # Process the base monster properties
-properties_dict = schema["properties"]
-parse_json_schema(properties_dict)
-
+parse_json_schema(schema)
 # Process the drops properties
-properties_dict = schema["properties"]["drops"]["properties"]
-parse_json_schema(properties_dict)
+parse_json_schema(schema["drops"]["schema"]["schema"])

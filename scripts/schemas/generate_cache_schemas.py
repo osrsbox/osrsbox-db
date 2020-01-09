@@ -26,7 +26,7 @@ from pathlib import Path
 from typing import Dict
 
 import config
-from data.cache import cache_constants
+from scripts.cache import cache_constants
 
 
 def generate_cache_schema(cache_definition: Dict, cache_dump_type: str):

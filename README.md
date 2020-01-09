@@ -47,71 +47,74 @@ Each item is represented by Python objects when using the PyPi `osrsbox` package
 
 ### Item Properties
 
-An `ItemProperties` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `highalch` and `lowalch` values and `quest_item` association. Every item object in the item database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+An `ItemProperties` object type includes basic item metadata such as `id`, `name`, `examine` text, store `cost`, `highalch` and `lowalch` values and `quest_item` association. Every item object in the item database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property, if the property is required to be populated, and if the property is nullable (able to be set to `null` or `None`).
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| id | number | Unique OSRS item ID number. | Yes |
-| name | string | Name of the item. | Yes |
-| incomplete | boolean | If the item has incomplete wiki data. | Yes |
-| members | boolean | If the item is a members-only. | Yes |
-| tradeable | boolean | If the item is tradeable (between players and on the GE). | Yes |
-| tradeable_on_ge | boolean | If the item is tradeable (only on GE). | Yes |
-| stackable | boolean | If the item is stackable (in inventory). | Yes |
-| noted | boolean | If the item is noted. | Yes |
-| noteable | boolean | If the item is noteable. | Yes |
-| linked_id_item | number | The linked ID of the actual item (if noted/placeholder). | No |
-| linked_id_noted | number | The linked ID of an item in noted form. | No |
-| linked_id_placeholder | number | The linked ID of an item in placeholder form. | No |
-| placeholder | boolean | If the item is a placeholder. | Yes |
-| equipable | boolean | If the item is equipable (based on right-click menu entry). | Yes |
-| equipable_by_player | boolean | If the item is equipable by a player and is equipable in-game. | Yes |
-| cost | number | The store price of an item. | Yes |
-| lowalch | number | The low alchemy value of the item (cost * 0.4). | Yes |
-| highalch | number | The high alchemy value of the item (cost * 0.6). | Yes |
-| weight | number | The weight (in kilograms) of the item. | No |
-| buy_limit | number | The GE buy limit of the item. | No |
-| quest_item | boolean | If the item is associated with a quest. | Yes |
-| release_date | string | Date the item was released (in ISO8601 format). | No |
-| duplicate | boolean | If the item is a duplicate. | Yes |
-| examine | string | The examine text for the item. | No |
-| wiki_name | string | The OSRS Wiki name for the item. | No |
-| wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | No |
-| equipment | object | The equipment bonuses of equipable armour/weapons. | No |
-| weapon | object | The information about weapon properties. | No |
+| Property | Data type | Description | Required | Nullable |
+| -------- | --------- | ----------- | -------- |----------|
+| id | integer | Unique OSRS item ID number. | True | False |
+| name | string | The name of the item. | True | False |
+| incomplete | boolean | If the item has incomplete wiki data. | True | False |
+| members | boolean | If the item is a members-only. | True | False |
+| tradeable | boolean | If the item is tradeable (between players and on the GE). | True | False |
+| tradeable_on_ge | boolean | If the item is tradeable (only on GE). | True | False |
+| stackable | boolean | If the item is stackable (in inventory). | True | False |
+| noted | boolean | If the item is noted. | True | False |
+| noteable | boolean | If the item is noteable. | True | False |
+| linked_id_item | integer | The linked ID of the actual item (if noted/placeholder). | True | True |
+| linked_id_noted | integer | The linked ID of an item in noted form. | True | True |
+| linked_id_placeholder | integer | The linked ID of an item in placeholder form. | True | True |
+| placeholder | boolean | If the item is a placeholder. | True | False |
+| equipable | boolean | If the item is equipable (based on right-click menu entry). | True | False |
+| equipable_by_player | boolean | If the item is equipable in-game by a player. | True | False |
+| equipable_weapon | boolean | If the item is an equipable weapon. | True | False |
+| cost | integer | The store price of an item. | True | False |
+| lowalch | integer | The low alchemy value of the item (cost * 0.4). | True | False |
+| highalch | integer | The high alchemy value of the item (cost * 0.6). | True | False |
+| weight | float | The weight (in kilograms) of the item. | True | True |
+| buy_limit | integer | The Grand Exchange buy limit of the item. | True | True |
+| quest_item | boolean | If the item is associated with a quest. | True | False |
+| release_date | string | Date the item was released (in ISO8601 format). | True | True |
+| duplicate | boolean | If the item is a duplicate. | True | False |
+| examine | string | The examine text for the item. | True | True |
+| wiki_name | string | The OSRS Wiki name for the item. | True | True |
+| wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | True |
+| equipment | dict | The equipment bonuses of equipable armour/weapons. | True | True |
+| weapon | dict | The weapon bonuses including attack speed, type and stance. | True | True |
+
 
 ### Item Equipment
 
-Many items in OSRS are equipable, this includes armor, weapons, and other _wearable_ items. Any equipable item has additional properties stored as an `ItemEquipment` object type - including attributes such as `attack_slash`, `defence_crush` and `melee_strength` values. The `ItemEquipment` object is nested within an `ItemProperties`. If you are parsing the raw JSON files, this data is nested under the `equipment` key. It is very important to note that not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not equipable by a player). All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+Many items in OSRS are equipable, this includes armor, weapons, and other _wearable_ items. Any equipable item has additional properties stored as an `ItemEquipment` object type - including attributes such as `attack_slash`, `defence_crush` and `melee_strength` values. The `ItemEquipment` object is nested within an `ItemProperties`. If you are parsing the raw JSON files, this data is nested under the `equipment` key. It is very important to note that not all items in OSRS are equipable. Only items with the `equipable_by_player` property set to `true` are equipable. The `equipable` property is similar, but this is the raw data extracted from the game cache - and can sometimes be incorrect (not equipable by a player). All of the properties available for equipable items are listed in the table below including the property name, the data types used, a description of the property, if the property is required to be populated, and if the property is nullable (able to be set to `null` or `None`).
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| attack_stab | number | The attack stab bonus of the item. | Yes |
-| attack_slash | number | The attack slash bonus of the item. | Yes |
-| attack_crush | number | The attack crush bonus of the item. | Yes |
-| attack_magic | number | The attack magic bonus of the item. | Yes |
-| attack_ranged | number | The attack ranged bonus of the item. | Yes |
-| defence_stab | number | The defence stab bonus of the item. | Yes |
-| defence_slash | number | The defence slash bonus of the item. | Yes |
-| defence_crush | number | The defence crush bonus of the item. | Yes |
-| defence_magic | number | The defence magic bonus of the item. | Yes |
-| defence_ranged | number | The defence ranged bonus of the item. | Yes |
-| melee_strength | number | The melee strength bonus of the item. | Yes |
-| ranged_strength | number | The ranged strength bonus of the item. | Yes |
-| magic_damage | number | The magic damage bonus of the item. | Yes |
-| prayer | number | The prayer bonus of the item. | Yes |
-| slot | string | The equipment slot associated with the item (e.g., head). | Yes |
-| requirements | object | An object of requirements {skill: level}. | No |
+| Property | Data type | Description | Required | Nullable |
+| -------- | --------- | ----------- | -------- |----------|
+| attack_stab | integer | The attack stab bonus of the item. | True | False |
+| attack_slash | integer | The attack slash bonus of the item. | True | False |
+| attack_crush | integer | The attack crush bonus of the item. | True | False |
+| attack_magic | integer | The attack magic bonus of the item. | True | False |
+| attack_ranged | integer | The attack ranged bonus of the item. | True | False |
+| defence_stab | integer | The defence stab bonus of the item. | True | False |
+| defence_slash | integer | The defence slash bonus of the item. | True | False |
+| defence_crush | integer | The defence crush bonus of the item. | True | False |
+| defence_magic | integer | The defence magic bonus of the item. | True | False |
+| defence_ranged | integer | The defence ranged bonus of the item. | True | False |
+| melee_strength | integer | The melee strength bonus of the item. | True | False |
+| ranged_strength | integer | The ranged strength bonus of the item. | True | False |
+| magic_damage | integer | The magic damage bonus of the item. | True | False |
+| prayer | integer | The prayer bonus of the item. | True | False |
+| slot | string | The equipment slot associated with the item (e.g., head). | True | False |
+| requirements | dict | An object of requirements {skill: level}. | True | True |
 
 ### Item Weapon
 
-A select number of items in OSRS are equipable weapons. Any equipable item that is a weapon has additional properties stored as an `ItemWeapon` type object including attributes such as `attack_speed` and `weapon_types` values. Additionally, each weapon has an array of combat stances associated with it to determine the `combat_style`, `attack_type`, `attack_style` and any `bonuses` or combat `experience` association. The `ItemWeapon` object is nested within an `ItemProperties` object when using the Python API. If you are parsing the raw JSON files, this data is nested under the `weapon` key.  It is very important to note that not all items in OSRS are equipable weapons. Only items with the `equipable_weapon` property set to `true` are equipable. All of the properties available for equipable weapons are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+A select number of items in OSRS are equipable weapons. Any equipable item that is a weapon has additional properties stored as an `ItemWeapon` type object including attributes such as `attack_speed` and `weapon_types` values. Additionally, each weapon has an array of combat stances associated with it to determine the `combat_style`, `attack_type`, `attack_style` and any `bonuses` or combat `experience` association. The `ItemWeapon` object is nested within an `ItemProperties` object when using the Python API. If you are parsing the raw JSON files, this data is nested under the `weapon` key.  It is very important to note that not all items in OSRS are equipable weapons. Only items with the `equipable_weapon` property set to `true` are equipable. All of the properties available for equipable weapons are listed in the table below including the property name, the data types used, a description of the property, if the property is required to be populated, and if the property is nullable (able to be set to `null` or `None`).
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| attack_speed | number | The attack speed of a weapon. | Yes |
-| weapon_type | string | The weapon classification (e.g., axe) | Yes |
-| stances | array | An array of weapon stance information | Yes |
+| Property | Data type | Description | Required | Nullable |
+| -------- | --------- | ----------- | -------- |----------|
+| attack_speed | integer | The attack speed of a weapon (in game ticks). | True | False |
+| weapon_type | string | The weapon classification (e.g., axe) | True | False |
+| stances | list | An array of weapon stance information. | True | False |
+
 
 ### Item JSON Example
 
@@ -202,69 +205,69 @@ Each monster is represented by Python objects when using the PyPi `osrsbox` pack
 
 ### Monster Properties
 
-A `MonsterProperties` object type includes basic monster metadata such as `id`, `name`, `examine` text, `combat_level`, `attack_speed` and `hitpoints` values and slayer association such as `slayer_masters` who give this monster as a task. Every monster object in the monster database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`.
+A `MonsterProperties` object type includes basic monster metadata such as `id`, `name`, `examine` text, `combat_level`, `attack_speed` and `hitpoints` values and slayer association such as `slayer_masters` who give this monster as a task. Every monster object in the monster database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property, if the property is required to be populated, and if the property is nullable (able to be set to `null` or `None`).
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| id | number | The ID number of the monster. | Yes |
-| name | string | The name of the monster. | Yes |
-| incomplete | boolean | If the monster has incomplete wiki data. | Yes |
-| members | boolean | If the monster is members only, or not. | Yes |
-| release_date | string | The release date of the monster (in ISO8601 format). | No |
-| combat_level | number | The combat level of the monster. | Yes |
-| size | number | The size, in tiles, of the monster. | Yes |
-| hitpoints | number | The number of hitpoints a monster has. | Yes |
-| max_hit | number | The maximum hit of the monster. | Yes |
-| attack_type | array | The attack style (melee, magic, range) of the monster. | Yes |
-| attack_speed | number | The attack speed (in game ticks) of the monster. | No |
-| aggressive | boolean | If the monster is aggressive, or not. | Yes |
-| poisonous | boolean | If the monster poisons, or not | Yes |
-| immune_poison | boolean | If the monster is immune to poison, or not | Yes |
-| immune_venom | boolean | If the monster is immune to venom, or not | Yes |
-| weakness | array | An array of monster weaknesses. | Yes |
-| slayer_monster | boolean | If the monster is a potential slayer task. | Yes |
-| slayer_level | number | The slayer level required to kill the monster. | No |
-| slayer_xp | number | The slayer XP rewarded for a monster kill. | No |
-| slayer_masters | array | The slayer XP rewarded for a monster kill. | Yes |
-| duplicate | boolean | If the monster is a duplicate. | Yes |
-| examine | string | The examine text of the monster. | Yes |
-| wiki_name | string | The OSRS Wiki name for the monster. | Yes |
-| wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | Yes |
-| attack_level | number | The attack level of the monster. | Yes |
-| strength_level | number | The strength level of the monster. | Yes |
-| defence_level | number | The defence level of the monster. | Yes |
-| magic_level | number | The magic level of the monster. | Yes |
-| ranged_level | number | The ranged level of the monster. | Yes |
-| attack_stab | number | The attack stab bonus of the monster. | Yes |
-| attack_slash | number | The attack slash bonus of the monster. | Yes |
-| attack_crush | number | The attack crush bonus of the monster. | Yes |
-| attack_magic | number | The attack magic bonus of the monster. | Yes |
-| attack_ranged | number | The attack ranged bonus of the monster. | Yes |
-| defence_stab | number | The defence stab bonus of the monster. | Yes |
-| defence_slash | number | The defence slash bonus of the monster. | Yes |
-| defence_crush | number | The defence crush bonus of the monster. | Yes |
-| defence_magic | number | The defence magic bonus of the monster. | Yes |
-| defence_ranged | number | The defence ranged bonus of the monster. | Yes |
-| attack_accuracy | number | The attack accuracy bonus of the monster. | Yes |
-| melee_strength | number | The melee strength bonus of the monster. | Yes |
-| ranged_strength | number | The ranged strength bonus of the monster. | Yes |
-| magic_damage | number | The magic damage bonus of the monster. | Yes |
-| rare_drop_table | boolean | If the monster has a chance of rolling on the rare drop table. | Yes |
-| drops | array | An array of monster drop objects. | No |
+| Property | Data type | Description | Required | Nullable |
+| -------- | --------- | ----------- | -------- |----------|
+| id | integer | Unique OSRS item ID number. | True | False |
+| name | string | The name of the monster. | True | False |
+| incomplete | boolean | If the monster has incomplete wiki data. | True | False |
+| members | boolean | If the monster is members only, or not. | True | False |
+| release_date | string | The release date of the monster (in ISO8601 format). | True | True |
+| combat_level | integer | The combat level of the monster. | True | False |
+| size | integer | The size, in tiles, of the monster. | True | False |
+| hitpoints | integer | The number of hitpoints a monster has. | True | False |
+| max_hit | integer | The maximum hit of the monster. | True | False |
+| attack_type | list | The attack style (melee, magic, range) of the monster. | True | False |
+| attack_speed | integer | The attack speed (in game ticks) of the monster. | True | True |
+| aggressive | boolean | If the monster is aggressive, or not. | True | False |
+| poisonous | boolean | If the monster poisons, or not | True | False |
+| immune_poison | boolean | If the monster is immune to poison, or not | True | False |
+| immune_venom | boolean | If the monster is immune to venom, or not | True | False |
+| weakness | list | An array of monster weaknesses. | True | False |
+| category | list | An array of monster category. | True | False |
+| slayer_monster | boolean | If the monster is a potential slayer task. | True | False |
+| slayer_level | integer | The slayer level required to kill the monster. | True | True |
+| slayer_xp | float | The slayer XP rewarded for a monster kill. | True | True |
+| slayer_masters | list | The slayer XP rewarded for a monster kill. | True | True |
+| duplicate | boolean | If the monster is a duplicate. | True | False |
+| examine | string | The examine text of the monster. | True | False |
+| wiki_name | string | The OSRS Wiki name for the monster. | True | False |
+| wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | False |
+| attack_level | integer | The attack level of the monster. | True | False |
+| strength_level | integer | The strength level of the monster. | True | False |
+| defence_level | integer | The defence level of the monster. | True | False |
+| magic_level | integer | The magic level of the monster. | True | False |
+| ranged_level | integer | The ranged level of the monster. | True | False |
+| attack_stab | integer | The attack stab bonus of the monster. | True | False |
+| attack_slash | integer | The attack slash bonus of the monster. | True | False |
+| attack_crush | integer | The attack crush bonus of the monster. | True | False |
+| attack_magic | integer | The attack magic bonus of the monster. | True | False |
+| attack_ranged | integer | The attack ranged bonus of the monster. | True | False |
+| defence_stab | integer | The defence stab bonus of the monster. | True | False |
+| defence_slash | integer | The defence slash bonus of the monster. | True | False |
+| defence_crush | integer | The defence crush bonus of the monster. | True | False |
+| defence_magic | integer | The defence magic bonus of the monster. | True | False |
+| defence_ranged | integer | The defence ranged bonus of the monster. | True | False |
+| attack_accuracy | integer | The attack accuracy bonus of the monster. | True | False |
+| melee_strength | integer | The melee strength bonus of the monster. | True | False |
+| ranged_strength | integer | The ranged strength bonus of the monster. | True | False |
+| magic_damage | integer | The magic damage bonus of the monster. | True | False |
+| drops | list | An array of monster drop objects. | True | True |
 
 ### Monster Drops
 
-Most monsters in OSRS drop items when they have been defeated (killed). All monster drops are stored in the `drops` property in an array containing properties about the item drop. When using the PyPi `osrsbox` package, these drops are represented by a list of `MonsterDrops` object type. When parsing the raw JSON files, the drops are stored in an array, that are nested under the `drops` key. The data included with the monster drops are the item `id`, item `name`, the drop `rarity`, whether the drop is `noted` and any `drop_requirements`. All of the properties available for item drops are listed in the table below including the property name, the data types used, a description of the property and if the property is required to be populated - if not required, the property value can potentially be set to `None`. 
+Most monsters in OSRS drop items when they have been defeated (killed). All monster drops are stored in the `drops` property in an array containing properties about the item drop. When using the PyPi `osrsbox` package, these drops are represented by a list of `MonsterDrops` object type. When parsing the raw JSON files, the drops are stored in an array, that are nested under the `drops` key. The data included with the monster drops are the item `id`, item `name`, the drop `rarity`, whether the drop is `noted` and any `drop_requirements`. All of the properties available for item drops are listed in the table below including the property name, the data types used, a description of the property, if the property is required to be populated, and if the property is nullable (able to be set to `null` or `None`).
 
-| Property | Data type | Description | Required |
-| -------- | --------- | ----------- | -------- |
-| id | number | The ID number of the item drop. | Yes |
-| name | string | The name of the item drop. | Yes |
-| members | boolean | If the drop is a members-only item. | Yes |
-| quantity | string | The quantity of the item drop (integer, comma-separated or range). | No |
-| noted | boolean | If the item drop is noted, or not. | Yes |
-| rarity | number | The rarity of the item drop (as a float out of 1.0). | No |
-| drop_requirements | string | If there are any requirements to getting the specific drop. | No |
+| Property | Data type | Description | Required | Nullable |
+| -------- | --------- | ----------- | -------- |----------|
+| id | integer | The ID number of the item drop. | True | False |
+| name | string | The name of the item drop. | True | False |
+| members | boolean | If the drop is a members-only item. | True | False |
+| quantity | string | The quantity of the item drop (integer, comma-separated or range). | True | True |
+| noted | boolean | If the item drop is noted, or not. | True | False |
+| rarity | float | The rarity of the item drop (as a float out of 1.0). | True | True |
+| drop_requirements | string | If there are any requirements to getting the specific drop. | True | True |
 
 ### Monster JSON Example
 

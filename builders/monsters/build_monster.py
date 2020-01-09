@@ -453,6 +453,20 @@ class BuildMonster:
             self.monster_dict["weakness"] = list()
             self.monster_dict["incomplete"] = True
 
+        # CATEGORY: Determine category of the monster
+        category = None
+        if self.infobox_version_number is not None:
+            key = "cat" + str(self.infobox_version_number)
+            category = self.extract_infobox_value(self.template, key)
+        if category is None:
+            category = self.extract_infobox_value(self.template, "cat")
+        if category is not None:
+            category = infobox_cleaner.clean_category(category)
+            self.monster_dict["category"] = category
+        else:
+            self.monster_dict["category"] = list()
+            self.monster_dict["incomplete"] = True
+
         # SLAYER LEVEL: Determine the slayer level required
         slayer_level = None
         if self.infobox_version_number is not None:

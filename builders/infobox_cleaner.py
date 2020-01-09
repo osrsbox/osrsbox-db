@@ -680,3 +680,32 @@ def clean_weaknesses(value: str) -> str:
         weaknesses_list.append("broad-ammunition")
 
     return weaknesses_list
+
+
+def clean_category(value: str) -> str:
+    """Convert the category text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned categories property value.
+    """
+    category_list = list()
+
+    if value is None or value == "" or value.lower() == "no":
+        return category_list
+
+    value = clean_wikitext(value)
+
+    value = value.lower()
+
+    if "|" in value:
+        value = value.split("|")[1]
+
+    if "," in value:
+        value = value.split(",")
+
+    if isinstance(value, list):
+        category_list += value
+    else:
+        category_list.append(value)
+
+    return category_list
