@@ -2,6 +2,15 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/01/09: Eating in the Bank
+- Added items: 0
+- Removed items: 0
+- Changed items: 4
+    - 24437,Gingerbread shield,equipable
+    - 24438,Iced gingerbread shield,equipable
+    - 24439,Iced gingerbread shield,equipable
+    - 24440,Iced gingerbread shield,equipable
+
 ### 2019/12/11: Christmas 2019
 - Added items: 17
     - 24415,Death rune
