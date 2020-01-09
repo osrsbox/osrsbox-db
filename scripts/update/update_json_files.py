@@ -45,12 +45,12 @@ def generate_items_complete():
     # Save all items to docs/items_complete.json
     out_fi = Path(config.DOCS_PATH / "items-complete.json")
     with open(out_fi, "w") as f:
-        json.dump(items, f, indent=4)
+        json.dump(items, f)
 
     # Save all items to osrsbox/docs/items_complete.json
     out_fi = Path(config.PACKAGE_PATH / "docs" / "items-complete.json")
     with open(out_fi, "w") as f:
-        json.dump(items, f, indent=4)
+        json.dump(items, f)
 
 
 def generate_item_slot_files():
@@ -73,7 +73,7 @@ def generate_item_slot_files():
             json_out[item.id] = json_out_temp
         out_fi = Path(config.DOCS_PATH / "items-json-slot" / f"items-{slot}.json")
         with open(out_fi, "w") as f:
-            json.dump(json_out, f, indent=4)
+            json.dump(json_out, f)
 
 
 def generate_monsters_complete():
@@ -91,12 +91,12 @@ def generate_monsters_complete():
     # Save all monsters to docs/monsters-complete.json
     out_fi = Path(config.DOCS_PATH / "monsters-complete.json")
     with open(out_fi, "w") as f:
-        json.dump(monsters, f, indent=4)
+        json.dump(monsters, f)
 
     # Save all monsters to osrsbox/docs/monsters-complete.json
     out_fi = Path(config.PACKAGE_PATH / "docs" / "monsters-complete.json")
     with open(out_fi, "w") as f:
-        json.dump(monsters, f, indent=4)
+        json.dump(monsters, f)
 
 
 def main():
