@@ -47,4 +47,4 @@ def test_prayer_database():
         with open(json_file) as fi:
             prayer = json.load(fi)
             # print(prayer["id"])
-            v.validate(prayer)
+            assert v.validate(prayer)

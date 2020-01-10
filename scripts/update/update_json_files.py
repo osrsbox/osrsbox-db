@@ -28,6 +28,7 @@ from pathlib import Path
 import config
 from osrsbox import items_api
 from osrsbox import monsters_api
+from osrsbox import prayers_api
 
 
 def generate_items_complete():
@@ -99,6 +100,29 @@ def generate_monsters_complete():
         json.dump(monsters, f)
 
 
+def generate_prayers_complete():
+    """Generate the `docs/prayers-complete.json` file."""
+    # Read in the item database content
+    path_to_prayers_json = Path(config.DOCS_PATH / "prayers-json")
+    all_db_prayers = prayers_api.all_prayers.AllPrayers(path_to_prayers_json)
+
+    prayers = {}
+
+    for prayer in all_db_prayers:
+        json_out = prayer.construct_json()
+        prayers[prayer.id] = json_out
+
+    # Save all prayers to docs/prayers-complete.json
+    out_fi = Path(config.DOCS_PATH / "prayers-complete.json")
+    with open(out_fi, "w") as f:
+        json.dump(prayers, f)
+
+    # Save all prayers to osrsbox/docs/prayers-complete.json
+    out_fi = Path(config.PACKAGE_PATH / "docs" / "prayers-complete.json")
+    with open(out_fi, "w") as f:
+        json.dump(prayers, f)
+
+
 def main():
     """The main function for generating the static JSON files."""
     print("Generating items-complete.json file...")
@@ -107,6 +131,8 @@ def main():
     generate_item_slot_files()
     print("Generating monsters-complete.json file...")
     generate_monsters_complete()
+    print("Generating prayers-complete.json file...")
+    generate_prayers_complete()
 
 
 if __name__ == '__main__':

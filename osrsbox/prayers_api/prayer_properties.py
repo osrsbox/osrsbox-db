@@ -27,19 +27,17 @@ from typing import Dict
 
 @dataclass
 class PrayerProperties:
-    """This class defines the object structure and properties for an OSRS item.
+    """This class defines the object structure and properties for an OSRS prayer.
 
     The PrayerProperties class is the object that retains all properties and stats
-    for one specific item. Every item has the properties defined in this class.
-    Equipable items have additional properties defined in the linked ItemEquipment
-    class.
+    for one specific prayer.
     """
-    id: int
-    name: str
-    members: bool
-    description: str
-    drain_per_minute: int
-    wiki_url: str
+    id: int = None
+    name: str = None
+    members: bool = None
+    description: str = None
+    drain_per_minute: float = None
+    wiki_url: str = None
     requirements: Dict = None
     bonuses: Dict = None
 

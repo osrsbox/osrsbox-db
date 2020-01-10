@@ -47,4 +47,4 @@ def test_monsters_data():
         with open(json_file) as fi:
             monster = json.load(fi)
             # print(monster["id"])
-            v.validate(monster)
+            assert v.validate(monster)

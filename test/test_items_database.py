@@ -47,4 +47,4 @@ def test_item_database():
         with open(json_file) as fi:
             item = json.load(fi)
             # print(item["id"])
-            v.validate(item)
+            assert v.validate(item)
