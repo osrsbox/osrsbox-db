@@ -29,7 +29,7 @@ $ pwd
 $ chmod u+x update_data.sh
 $ ./update_data.sh
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -81,18 +81,24 @@ java -classpath $jar_file net.runelite.cache.Cache \
 -cache ~/jagexcache/oldschool/LIVE \
 -objects ~/repos/osrsbox-db/data/cache/objects
 
-
 # OSRSBOX
 # Update osrsbox-db
 echo -e ">>> Updating osrsbox-db..."
 cd ~/repos/osrsbox-db
 git pull
 
+# Create virtual environment and activate
+python -m venv venv
+source venv/bin/activate
+
+# Install Python package requirements
+pip install -r requirements.txt
+
 # Move to the scripts/update path and update all data
 cd ~/repos/osrsbox-db/scripts/update/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2019-12-25T00:00:00Z
+python3 update_wiki_data.py 2020-01-05T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py
@@ -109,3 +115,6 @@ mv data/cache/monsters-cache-data.json data/monsters/
 echo -e ">>> Process raw wikitext..."
 cd ~/repos/osrsbox-db/scripts/wiki/
 python3 process_wikitext.py
+
+# Make sure to deactivate the venv
+deactivate

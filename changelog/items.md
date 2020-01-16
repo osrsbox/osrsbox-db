@@ -2,6 +2,67 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/01/16: Twisted League Reward Shop and Game Improvements
+- Added items: 25
+    - 24444,Twisted slayer helmet (i)
+    - 24445,Twisted slayer helmet (i)
+    - 24446,Twisted hat (t3)
+    - 24447,Twisted coat (t3)
+    - 24448,Twisted trousers (t3)
+    - 24449,Twisted boots (t3)
+    - 24450,Twisted cane
+    - 24451,Twisted hat (t2)
+    - 24452,Twisted coat (t2)
+    - 24453,Twisted trousers (t2)
+    - 24454,Twisted boots (t2)
+    - 24455,Twisted hat (t1)
+    - 24456,Twisted coat (t1)
+    - 24457,Twisted trousers (t1)
+    - 24458,Twisted boots (t1)
+    - 24459,Twisted banner
+    - 24460,Twisted teleport scroll
+    - 24461,Twisted teleport scroll
+    - 24462,Twisted teleport scroll
+    - 24463,Twisted blueprints
+    - 24464,Twisted blueprints
+    - 24465,Twisted blueprints
+    - 24466,Twisted horns
+    - 24467,Twisted horns
+    - 24468,Twisted horns
+- Removed items: 0
+- Changed items: 31
+    - 24372,Twisted league dragon trophy,name
+    - 24373,Twisted league dragon trophy,name
+    - 24374,Twisted league rune trophy,name
+    - 24375,Twisted league rune trophy,name
+    - 24376,Twisted league adamant trophy,name
+    - 24377,Twisted league adamant trophy,name
+    - 24378,Twisted league mithril trophy,name
+    - 24379,Twisted league mithril trophy,name
+    - 24380,Twisted league steel trophy,name
+    - 24381,Twisted league steel trophy,name
+    - 24382,Twisted league iron trophy,name
+    - 24383,Twisted league iron trophy,name
+    - 24384,Twisted league bronze trophy,name
+    - 24385,Twisted league bronze trophy,name
+    - 24387,Twisted hat (t3),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24389,Twisted coat (t3),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24391,Twisted trousers (t3),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24393,Twisted boots (t3),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24395,Twisted cane,tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24397,Twisted hat (t2),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24399,Twisted coat (t2),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24401,Twisted trousers (t2),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24403,Twisted boots (t2),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24405,Twisted hat (t1),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24407,Twisted coat (t1),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24409,Twisted trousers (t1),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24411,Twisted boots (t1),tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24413,Twisted league banner,name|tradeable_on_ge|linked_id_noted|noteable|cost|lowalch|highalch
+    - 24414,Twisted league banner,name
+    - 981,Disk of returning,cost|lowalch|highalch
+    - 982,Disk of returning,cost|lowalch|highalch
+
 ### 2020/01/09: Eating in the Bank
 - Added items: 0
 - Removed items: 0

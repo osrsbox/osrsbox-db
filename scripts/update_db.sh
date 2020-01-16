@@ -18,18 +18,16 @@ $ git clone https://github.com/osrsbox/osrsbox-db.git
 
 This script assumes the following packages:
 
-- maven
 - default-jdk
 - python3
-- git
 
 To run:
 $ pwd
 /home/phoil/repos/osrsbox-db/scripts/
-$ chmod u+x update_item_database.sh
-$ ./update_item_database.sh
+$ chmod u+x update_db.sh
+$ ./update_db.sh
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -45,6 +43,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 '
 
+# Create virtual environment and activate
+python -m venv venv
+source venv/bin/activate
+
+# Install Python package requirements
+pip install -r requirements.txt
+
 echo -e ">>> Updating item database"
 cd ~/repos/osrsbox-db/builder/items/
 python3 builder.py --export=True
@@ -56,3 +61,6 @@ python3 builder.py --export=True
 echo -e ">>> Runing JSON population scripts..."
 cd ~/repos/osrsbox-db/scripts/update/
 python3 update_json_files.py
+
+# Make sure to deactivate the venv
+deactivate

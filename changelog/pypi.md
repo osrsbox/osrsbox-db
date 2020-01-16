@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.2.30`: Release for game update: 2020/01/16.
 - `1.2.29`: Fixed prayer data and schema validation.
 - `1.2.28`: Added `prayers_api` and prayer data.
 - `1.2.27`: Release for game update: 2020/01/09.

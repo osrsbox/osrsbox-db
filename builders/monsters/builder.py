@@ -98,7 +98,7 @@ def main(export: bool = False):
             known_monsters.append(known_monster)
             builder.parse_monster_drops()
             builder.generate_monster_object()
-            # builder.compare_new_vs_old_monster()
+            builder.compare_new_vs_old_monster()
             builder.export_monster_to_json()
             builder.validate_monster()
 
