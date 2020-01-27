@@ -138,16 +138,14 @@ def clean_stats_value(value: str) -> int:
     if isinstance(value, int):
         return value
     elif isinstance(value, str):
-        if value[0] == "-":
-            if value[1:].isdigit():
-                value = int(value)
-        elif value[0] == "+":
-            if value[1:].isdigit():
-                value = int(value)
+        if value[0] == "-" and value[1:].isdigit():
+            value = int(value)
+        elif value[0] == "+" and value[1:].isdigit():
+            value = int(value)
         elif value.isdigit():
-                value = int(value)
+            value = int(value)
         else:
-            print("Cannot int cast stat value")
+            print("clean_stats_value: Cannot int cast stat value")
             quit()
     else:
         # If unable to process, set to 0
