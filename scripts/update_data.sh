@@ -88,7 +88,7 @@ cd ~/repos/osrsbox-db
 git pull
 
 # Create virtual environment and activate
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 
 # Install Python package requirements
@@ -98,7 +98,7 @@ pip install -r requirements.txt
 cd ~/repos/osrsbox-db/scripts/update/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2020-01-05T00:00:00Z
+python3 update_wiki_data.py 2020-01-12T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py

@@ -131,6 +131,10 @@ def clean_stats_value(value: str) -> int:
     if value == "":
         return 0
 
+    # Quick fix for an equals sign in stats value
+    if "=" in value:
+        value = value.replace("=", "")
+
     if isinstance(value, int):
         return value
     elif isinstance(value, str):
@@ -140,9 +144,11 @@ def clean_stats_value(value: str) -> int:
         elif value[0] == "+":
             if value[1:].isdigit():
                 value = int(value)
-        else:
-            if value.isdigit():
+        elif value.isdigit():
                 value = int(value)
+        else:
+            print("Cannot int cast stat value")
+            quit()
     else:
         # If unable to process, set to 0
         value = 0

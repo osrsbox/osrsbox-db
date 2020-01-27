@@ -2,6 +2,23 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 20202/01/23: Wiki Integration
+- Added items: 14
+    - 24469,Twisted relichunter (t1) armour set
+    - 24470,Twisted relichunter (t1) armour set
+    - 24471,Twisted relichunter (t1) armour set
+    - 24472,Twisted relichunter (t2) armour set
+    - 24473,Twisted relichunter (t2) armour set
+    - 24474,Twisted relichunter (t2) armour set
+    - 24475,Twisted relichunter (t3) armour set
+    - 24476,Twisted relichunter (t3) armour set
+    - 24477,Twisted relichunter (t3) armour set
+    - 24478,Open herb sack
+    - 24479,Spice rack
+    - 24480,Opened coal bag
+    - 24481,Opened gem bag
+    - 24482,Open seed box
+
 ### 2020/01/16: Twisted League Reward Shop and Game Improvements
 - Added items: 25
     - 24444,Twisted slayer helmet (i)

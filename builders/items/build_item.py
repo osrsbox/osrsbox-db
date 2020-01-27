@@ -835,7 +835,4 @@ class BuildItem:
         v = config.MyValidator(self.schema_data)
         v.validate(current_json)
 
-        if not v:
-            print(current_json["id"], "ERROR...")
-            print(v.errors)
-            quit()
+        assert v.validate(current_json)
