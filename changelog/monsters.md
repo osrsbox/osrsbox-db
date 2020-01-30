@@ -2,7 +2,24 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
-### 20202/01/23: Wiki Integration
+### 2020/01/29: Poll 69, BH Rewards, and Welcome Screen
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 12
+    - 1871,Baby dragon,name
+    - 1872,Baby dragon,name
+    - 241,Baby dragon,name
+    - 242,Baby dragon,name
+    - 243,Baby dragon,name
+    - 244,Baby dragon,name
+    - 245,Baby dragon,name
+    - 246,Baby dragon,name
+    - 5194,Baby dragon,name
+    - 5872,Baby dragon,name
+    - 5873,Baby dragon,name
+    - 7955,Baby dragon,name
+
+### 2020/01/23: Wiki Integration
 - Added monsters: 0
 - Removed monsters: 0
 - Changed monsters: 0

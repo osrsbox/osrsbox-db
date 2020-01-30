@@ -46,7 +46,7 @@ class AllPrayers:
         for prayer in self.all_prayers:
             yield prayer
 
-    def __getprayer__(self, id_number: int) -> PrayerProperties:
+    def __getitem__(self, id_number: int) -> PrayerProperties:
         """Return the prayer definition object for a loaded prayer.
 
         :param id_number: The prayer ID number.

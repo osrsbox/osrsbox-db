@@ -98,7 +98,7 @@ pip install -r requirements.txt
 cd ~/repos/osrsbox-db/scripts/update/
 
 echo -e ">>> Updating wiki data..."
-python3 update_wiki_data.py 2020-01-12T00:00:00Z
+python3 update_wiki_data.py 2020-01-25T00:00:00Z
 
 echo -e ">>> Updating cache data..."
 python3 update_cache_data.py

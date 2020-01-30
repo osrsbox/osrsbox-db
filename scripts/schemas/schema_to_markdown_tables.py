@@ -65,3 +65,11 @@ with open(path_to_schema, 'r') as f:
 parse_json_schema(schema)
 # Process the drops properties
 parse_json_schema(schema["drops"]["schema"]["schema"])
+
+# Read in the schema-prayers.json file
+path_to_schema = Path(config.DATA_SCHEMAS_PATH / "schema-prayers.json")
+with open(path_to_schema, 'r') as f:
+    schema = json.loads(f.read())
+
+# Process the base monster properties
+parse_json_schema(schema)

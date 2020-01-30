@@ -6,19 +6,22 @@
 
 [![Discord Chat](https://img.shields.io/discord/598412106118987787.svg)](https://discord.gg/HFynKyr)
 
-## A complete and up-to-date database of Old School Runescape (OSRS) items and monsters
+## A complete and up-to-date database of Old School Runescape (OSRS) items, monsters and prayers
 
-This project hosts a complete and up-to-date database of every item and every monster in OSRS. **Complete** means it holds every single item and monster in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
+This project hosts a complete and up-to-date database of every item, every monster and every prayer in OSRS. **Complete** means it holds every single item, monster and prayer in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
 
 The item database has extensive properties for each item: a total of 27 properties for every item, an additional 16 properties for equipable items, and an additional 3 properties for equipable weapons. These properties include the item ID and name, whether an item is tradeable, stackable, or equipable or if the item is members only or associated with a quest. For any equipable item, there are additional properties about combat stats the item has; for example, what slash attack bonus, magic defence bonus or prayer bonus that an item provides. For weapons, additional properties are added which include attack speed and combat stance/weapon type information.
 
 The monster database also has extensive properties: a total of 44 unique properties for each monster, as well as an array of item drops for each monster that has 6 additional properties per item drop. The base properties include the monster ID, name, member status, and all monster combat stats. Additional properties include slayer-related properties, attack type, hit points and max hit. Each monster also has an associated array of drops which document the item ID, name, rarity, quantity, and any requirements to get the drop.
+
+The prayer database documentes each prayer that available in-game and has detailed properties: a total of 8 properties for every prayer. The base properties include the prayer name, members status, description, requirements, and bonuses that it provides.
 
 ## Table of Contents
 
 - [Project Summary](#project-summary)
 - [The Item Database](#the-item-database)
 - [The Monster Database](#the-monster-database)
+- [The Prayer Database](#the-prayer-database)
 - [The `osrsbox` Python PyPi Package](#the-osrsbox-python-pypi-package)
 - [The `osrsbox-db` Static JSON API](#the-osrsbox-db-static-json-api)
 - [The `osrsbox-db` GitHub Repository](#the-osrsbox-db-github-repository)
@@ -30,16 +33,18 @@ The monster database also has extensive properties: a total of 44 unique propert
 
 ## Project Summary
 
-The osrsbox-db project provides two primary data sources for:
+The osrsbox-db project provides three primary data sources:
 
 1. **Items**
 1. **Monsters**
+1. **Prayers**
 
-The osrsbox-db project code and data is accessible using three primary methods:
+The osrsbox-db project and data is accessible using three primary methods:
 
-1. [**The Python PyPi package named `osrsbox`**](https://pypi.org/project/osrsbox/)
-1. [**The web-accessible, static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs)
-1. [**The GitHub repository for development**](https://github.com/osrsbox)
+1. [**The Python PyPi package**](https://pypi.org/project/osrsbox/)
+1. [**The static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs) - Note: this will be removed soon, replaced by the new RESTful API
+1. [**The RESTful API**](https://github.com/osrsbox/osrsbox-api/)
+1. [**The GitHub development repository**](https://github.com/osrsbox/osrsbox-db/)
 
 ## The Item Database
 
@@ -115,8 +120,82 @@ A select number of items in OSRS are equipable weapons. Any equipable item that 
 | weapon_type | string | The weapon classification (e.g., axe) | True | False |
 | stances | list | An array of weapon stance information. | True | False |
 
+### Item: Python Object Example
 
-### Item JSON Example
+A description of the properties that each item in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of an item as loaded in a Python object, specifically the _Abyssal whip_ item. Since this item is a type of equipment, there is an `EquipmentProperties` object nested with combat bonuses. Additionally, this item is also a weapon, so there is a `WeaponProperties` object with extra information. If the item was not equipable, the `EquipmentProperties` property would be `None` and the `equipable_by_player` would be `False`. If the item was not a weapon, the `WeaponProperties` key would be `None` and the `equipable_weapon` would be `False`.
+
+```
+ItemProperties(
+    id=4151,
+    name='Abyssal whip',
+    incomplete=True,
+    members=True,
+    tradeable=True,
+    tradeable_on_ge=True,
+    stackable=False,
+    noted=False,
+    noteable=True,
+    linked_id_item=None,
+    linked_id_noted=4152,
+    linked_id_placeholder=14032,
+    placeholder=False,
+    equipable=True,
+    equipable_by_player=True,
+    equipable_weapon=True,
+    cost=120001,
+    lowalch=48000,
+    highalch=72000,
+    weight=0.453,
+    buy_limit=70,
+    quest_item=False,
+    release_date='2005-01-26',
+    duplicate=False,
+    examine='A weapon from the abyss.',
+    wiki_name='Abyssal whip',
+    wiki_url='https://oldschool.runescape.wiki/w/Abyssal_whip',
+    equipment=ItemEquipment(
+        attack_stab=0,
+        attack_slash=82,
+        attack_crush=0,
+        attack_magic=0,
+        attack_ranged=0,
+        defence_stab=0,
+        defence_slash=0,
+        defence_crush=0,
+        defence_magic=0,
+        defence_ranged=0,
+        melee_strength=82,
+        ranged_strength=0,
+        magic_damage=0,
+        prayer=0,
+        slot='weapon',
+        requirements={'attack': 70}
+    ),
+    weapon=ItemWeapon(
+        attack_speed=4,
+        weapon_type='whips',
+        stances=[
+            {'combat_style': 'flick',
+            'attack_type': 'slash',
+            'attack_style': 'accurate',
+            'experience': 'attack',
+            'boosts': None},
+            {'combat_style': 'lash',
+            'attack_type': 'slash',
+            'attack_style': 'controlled',
+            'experience': 'shared',
+            'boosts': None},
+            {'combat_style': 'deflect',
+            'attack_type': 'slash',
+            'attack_style': 'defensive',
+            'experience': 'defence',
+            'boosts': None}
+        ]
+    )
+)
+```
+
+### Item: JSON Example
 
 A description of the properties that each item in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of an item, specifically the _Abyssal whip_ item. Since this item is a type of equipment, there is an `equipment` key with combat bonuses. Additionally, this item is also a weapon, so there is a `weapon` key with extra information. If the item was not equipable, the `equipment` key would be `null` and the `equipable_by_player` would be `false`. If the item was not a weapon, the `weapon` key would be `null` and the `equipable_weapon` would be `false`.
 
@@ -201,7 +280,7 @@ A description of the properties that each item in the database can have is usefu
 
 ## The Monster Database
 
-Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects Additionally, the data is accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
+Each monster is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects. Additionally, the data is accessible directly by parsing the raw JSON files. There are two types of objects, or classifications of data, that can be used to represent part of an in-game OSRS monster, each outlined in the following subsections. 
 
 ### Monster Properties
 
@@ -269,7 +348,107 @@ Most monsters in OSRS drop items when they have been defeated (killed). All mons
 | rarity | float | The rarity of the item drop (as a float out of 1.0). | True | True |
 | drop_requirements | string | If there are any requirements to getting the specific drop. | True | True |
 
-### Monster JSON Example
+### Monster: Python Object Example 
+
+A description of the properties that each monster in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a monster, specifically the _Abyssal demon_ monster. Please note that the number of item `drops` key data has been reduced to make the data more readable.
+
+```
+MonsterProperties(
+    id=415,
+    name='Abyssal demon',
+    incomplete=False,
+    members=True,
+    release_date='2005-01-26',
+    combat_level=124,
+    size=1,
+    hitpoints=150,
+    max_hit=8,
+    attack_type=['stab'],
+    attack_speed=4,
+    aggressive=False,
+    poisonous=False,
+    immune_poison=False,
+    immune_venom=False,
+    weakness=['magic', 'demonbane'],
+    category=['abyssal demon'],
+    slayer_monster=True,
+    slayer_level=85,
+    slayer_xp=150.0,
+    slayer_masters=['vannaka', 'chaeldar', 'konar', 'nieve', 'duradel'], 
+    duplicate=False,
+    examine='A denizen of the Abyss!',
+    wiki_name='Abyssal demon (Standard)',
+    wiki_url='https://oldschool.runescape.wiki/w/Abyssal_demon#Standard',
+    attack_level=97,
+    strength_level=67,
+    defence_level=135,
+    magic_level=1,
+    ranged_level=1,
+    attack_stab=0,
+    attack_slash=0,
+    attack_crush=0,
+    attack_magic=0,
+    attack_ranged=0,
+    defence_stab=20,
+    defence_slash=20,
+    defence_crush=20,
+    defence_magic=0,
+    defence_ranged=20,
+    attack_accuracy=0,
+    melee_strength=0,
+    ranged_strength=0,
+    magic_damage=0,
+    drops=[
+        MonsterDrop(
+            id=592,
+            name='Ashes',
+            members=True,
+            quantity='1',
+            noted=False,
+            rarity=1.0,
+            drop_requirements=None
+        ),
+        MonsterDrop(
+            id=4151,
+            name='Abyssal whip',
+            members=True,
+            quantity='1',
+            noted=False,
+            rarity=0.001953125,
+            drop_requirements=None
+        ),
+        MonsterDrop(
+            id=565,
+            name='Blood rune',
+            members=True,
+            quantity='7',
+            noted=False,
+            rarity=0.03125,
+            drop_requirements=None
+        ),
+        MonsterDrop(
+            id=19683,
+            name='Dark totem top',
+            members=True,
+            quantity='1',
+            noted=False,
+            rarity=0.002857142857142857,
+            drop_requirements='catacombs'
+        ),
+        MonsterDrop(
+            id=12073,
+            name='Clue scroll (elite)',
+            members=True,
+            quantity='1',
+            noted=False,
+            rarity=0.0008333333333333334,
+            drop_requirements=None
+        )
+    ]
+)
+```
+
+### Monster: JSON Example
 
 A description of the properties that each monster in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a monster, specifically the _Abyssal demon_ monster. Please note that the number of item `drops` key data has been reduced to make the data more readable.
 
@@ -379,6 +558,65 @@ A description of the properties that each monster in the database can have is us
 }
 ```
 
+## The Prayer Database
+
+Each prayer is represented by Python objects when using the PyPi `osrsbox` package, specifically using Python dataclass objects Additionally, the data is accessible directly by parsing the raw JSON files. All prayer data is stored in a single object to represent the properties of an in-game OSRS prayer, which is outlined in the following subsection. 
+
+### Prayer Properties
+
+A `PrayerProperties` object type includes basic prayer metadata such as `id`, `name`, `description` text, `drain_per_minute`, `requirements` and `bonuses` values. Every prayer object in the prayer database has all of these properties. If you are parsing the raw JSON files all of these properties are in the root of the JSON document - so they are not nested. All of the properties available are listed in the table below including the property name, the data types used, a description of the property, if the property is required to be populated, and if the property is nullable (able to be set to `null` or `None`).
+
+| Property | Data type | Description | Required | Nullable |
+| -------- | --------- | ----------- | -------- |----------|
+| id | integer | Unique prayer ID number. | True | False |
+| name | string | The name of the prayer. | True | False |
+| members | boolean | If the prayer is members-only. | True | False |
+| description | string | The prayer description (as show in-game). | True | False |
+| drain_per_minute | float | The prayer point drain rate per minute. | True | False |
+| wiki_url | string | The OSRS Wiki URL. | True | False |
+| requirements | dict | The stat requirements to use the prayer. | True | False |
+| bonuses | dict | The bonuses a prayer provides. | True | False |
+
+### Prayer: Python Object Example 
+
+A description of the properties that each prayer in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a prayer, specifically the _Rigour_ prayer, as loaded in the `osrsbox` PyPi Python package.
+
+```
+PrayerProperties(
+    id=28,
+    name='Rigour',
+    members=True,
+    description='Increases your Ranged attack by 20% and damage by 23%,and your defence by 25%.',
+    drain_per_minute=40.0,
+    wiki_url='https://oldschool.runescape.wiki/w/Rigour',
+    requirements={'prayer': 74, 'defence': 70}, 
+    bonuses={'ranged': 20, 'ranged_strength': 25, 'defence': 23})
+```
+
+### Prayer: JSON Example
+
+A description of the properties that each prayer in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a prayer, specifically the _Rigour_ prayer, as a JSON object.
+
+```
+{
+    "id": 28,
+    "name": "Rigour",
+    "members": true,
+    "description": "Increases your Ranged attack by 20% and damage by 23%, and your defence by 25%.",
+    "drain_per_minute": 40.0,
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rigour",
+    "requirements": {
+        "prayer": 74,
+        "defence": 70
+    },
+    "bonuses": {
+        "ranged": 20,
+        "ranged_strength": 25,
+        "defence": 23
+    }
+}
+```
+
 ## The `osrsbox` Python PyPi Package
 
 If you want to access the item and monster database programmatically using Python, the simplest option is to use the [`osrsbox` package available from PyPi](https://pypi.org/project/osrsbox/). You can load the item and/or monster database and process item objects, monster objects, and their properties. 
@@ -395,12 +633,17 @@ If you want to access the item and monster database programmatically using Pytho
     - Import monsters API using: `from osrsbox import monsters_api`
     - Load all monsters using: `all_db_monsters = monsters_api.load()`
     - Loop monsters using: `for monster in all_db_monsters: print(monster.name)`
+- Prayer database quick start:
+    - Import prayers API using: `from osrsbox import prayers_api`
+    - Load all prayers using: `all_db_prayers = prayers_api.load()`
+    - Loop prayers using: `for prayer in all_db_prayers: print(prayer.name)`
 
 ### Package Requirements
 
 For the `osrsbox` PyPi package you must meet the following requirements:
 
 - Python 3.6 or above
+- Pip package manager
 - Dataclasses package (if Python is below 3.7)
 
 If you are using Python 3.6, the `dataclasses` package will automatically be installed. If you are using Python 3.7 or above, the `dataclasses` package is part of the standard library and will not be installed automatically.
@@ -622,20 +865,21 @@ deactivate
     - `wiki`: A collection of scripts for automating data extraction from the OSRS Wiki using the MediaWiki API.
 - `test`: A collection of PyTest tests.
 
-### Item and Monster Database Schemas
+### Item, Monster and Prayer Database Schemas
 
-Technically, the `osrsbox-db` is not really a database - more specifically it should be called a data set. Anyway... the contents in the item/monster database need to adhere to a specified structure, as well as specified data types for each property. This is achieved (documented and tested) using the [JSON Schema project](https://json-schema.org/). The JSON schema is useful to determine:
+Technically, the `osrsbox-db` is not really a database - more specifically it should be called a data set. Anyway... the contents in the item/monster/prayer database need to adhere to a specified structure, as well as specified data types for each property. This is achieved (documented and tested) using the [Cerberus project](https://docs.python-cerberus.org/en/stable/). The Cerberus schema is useful to determine the properties that are available for each entity, and the types and requirements for each property, including:
 
-- The properties that are available for each item
-- Mandatory properties for each item (specified in the `required` property)
-- The data types of each property (e.g., boolean, integer, string, null)
+- `type`: Specifies the data type (e.g., boolean, integer, string)
+- `required`: If the property must be populated (true or false)
+- `nullable`: If the property can be set to `null` or `None`
 
-The JSON schemas are provided with this project in the `data/schemas` folder and includes:
+The Cerberus schemas are provided in a dedicated repository called [`osrsbox/schemas`](https://github.com/osrsbox/schemas), and implorted into this project as a submodule - this is because the schemas are used in other respositories and central management is required. The schemas are loaded into the `data/schemas` folder and includes:
 
-1. [`schema-items.json`](github.com/osrsbox/osrsbox-db/tree/master/data/schemas/schema-items.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, or property type specification.
-1. [`schema-monsters.json`](github.com/osrsbox/osrsbox-db/tree/master/data/schemas/schema-monsters.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, or property type specification.
+1. [`schema-items.json`](https://github.com/osrsbox/schemas/blob/master/schema-items.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
+1. [`schema-monsters.json`](https://github.com/osrsbox/schemas/blob/master/schema-monsters.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
+1. [`schema-prayers.json`](https://github.com/osrsbox/schemas/blob/master/schema-prayers.json): This file defines the prayer schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
 
-All JSON schema files are authored using Draft version 7 of the JSON schema, so you should be able to validate any JSON files in this project using any library that supports version 7. This project uses the [`jsonschema` PyPi package](https://pypi.org/project/jsonschema/).
+All Cerberus schema files are authored using Cerberus version 1.3.2. This project uses the [`Cerberus` PyPi package](https://pypi.org/project/Cerberus/).
 
 ## Additional Project Information
 

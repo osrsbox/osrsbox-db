@@ -2,7 +2,16 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
-### 20202/01/23: Wiki Integration
+### 2020/01/29: Poll 69, BH Rewards, and Welcome Screen
+- Added items: 4
+    - 24483,Phoenix
+    - 24484,Phoenix
+    - 24485,Phoenix
+    - 24486,Phoenix
+- Removed items: 0
+- Changed items: 0
+
+### 2020/01/23: Wiki Integration
 - Added items: 14
     - 24469,Twisted relichunter (t1) armour set
     - 24470,Twisted relichunter (t1) armour set
