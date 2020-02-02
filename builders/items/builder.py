@@ -39,7 +39,7 @@ logging.basicConfig(filename=Path(__file__).stem+".log",
 logging.info(">>> Starting builders/items/builder.py...")
 
 
-def main(export: bool = False):
+def main(export: bool = False, verbose: bool = False):
     # Load the current database contents
     items_compltete_file_path = Path(config.DOCS_PATH / "items-complete.json")
     with open(items_compltete_file_path) as f:
@@ -113,7 +113,8 @@ def main(export: bool = False):
                                        invalid_items_data=invalid_items_data,
                                        known_items=known_items,
                                        schema_data=schema_data,
-                                       export=export)
+                                       export=export,
+                                       verbose=verbose)
 
         preprocessing_status = builder.preprocessing()
         if preprocessing_status["status"]:
@@ -144,7 +145,12 @@ if __name__ == "__main__":
                         default=False,
                         required=False,
                         help='A boolean of whether to export data.')
+    parser.add_argument('--verbose',
+                        default=False,
+                        required=False,
+                        help='A boolean of whether to be verbose.')
     args = parser.parse_args()
 
     export = args.export
-    main(export)
+    verbose = args.verbose
+    main(export, verbose)

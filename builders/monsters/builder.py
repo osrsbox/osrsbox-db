@@ -41,7 +41,7 @@ logging.basicConfig(filename=Path(__file__).stem+".log",
 logging.info(">>> Starting builders/monsters/builder.py...")
 
 
-def main(export: bool = False):
+def main(export: bool = False, verbose: bool = False):
     # Load the current database contents
     monsters_complete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
     with open(monsters_complete_file_path) as f:
@@ -89,7 +89,8 @@ def main(export: bool = False):
                                              all_db_items=all_db_items,
                                              known_monsters=known_monsters,
                                              schema_data=schema_data,
-                                             export=export)
+                                             export=export,
+                                             verbose=verbose)
 
         status = builder.preprocessing()
         if status:
@@ -112,7 +113,12 @@ if __name__ == "__main__":
                         default=False,
                         required=False,
                         help='A boolean of whether to export data.')
+    parser.add_argument('--verbose',
+                        default=False,
+                        required=False,
+                        help='A boolean of whether to be verbose.')
     args = parser.parse_args()
 
     export = args.export
+    verbose = args.verbose
     main(export)

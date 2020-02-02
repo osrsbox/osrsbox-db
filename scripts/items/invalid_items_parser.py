@@ -8,7 +8,7 @@ Determine any invalid items and generate a list to help keep the
 invalid-items.json file up to date. The output is supposed to be
 grepped to find informaton about item ID and status.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -87,8 +87,15 @@ def main():
     with open(all_item_cache_data_path) as f:
         all_item_cache_data = json.load(f)
 
+    # Load schema data
+    schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
+    with open(schema_file_path) as f:
+        schema_data = json.load(f)
+
     # Set export to false
     export = False
+    # Set verbose to false
+    verbose = False
 
     # Initialize a list of known items
     known_items = list()
@@ -96,8 +103,8 @@ def main():
     # Start processing every item!
     for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 24000:
-        #     continue
+        if int(item_id) < 24000:
+            continue
 
         # Initialize the BuildItem class, used for all items
         builder = build_item.BuildItem(item_id=item_id,
@@ -111,25 +118,49 @@ def main():
                                        weapon_stances_data=weapon_stances_data,
                                        invalid_items_data=invalid_items_data,
                                        known_items=known_items,
-                                       export=export)
+                                       schema_data=schema_data,
+                                       export=export,
+                                       verbose=verbose)
 
         preprocessing_status = builder.preprocessing()
         item_id_original = builder.item_id_str
         item_id_to_process = builder.item_id_to_process_str
 
-        # preprocessing_status is a dictionary
-        # {'status': True, 'code': 'valid'}
-        # A valid item with an OSRS Wiki page (found using id, linked_id, name):
-        # preprocessing_status["code"] == "valid"
-        # An invalid item without an OSRS Wiki page will have a variety of errors
-        # See the builders/items/build_item.py module for error codes
+        # Preprocessing codes:
+        # {'status': True, 'code': 'various_options_here_listed_below'}
+        # lookup_passed_id: Found item in wiki using ID
+        # lookup_passed_linked_id: Found item in wiki using linked ID
+        # lookup_passed_name: Found item in wiki using name
+        # Anything else is invalid...
+        valid_item_codes = [
+            "lookup_passed_id",
+            "lookup_passed_linked_id",
+            "lookup_passed_name"
+        ]
 
-        if preprocessing_status["code"] == "valid":
-            # Check for valid items in the invalid-items.json file
+        # Check for valid items in invalid-items.json file...
+        if preprocessing_status["code"] in valid_item_codes:
             if item_id_to_process in invalid_items_data:
+                print("ERROR: Item should not be invalid:")
                 print(item_id_original, item_id_to_process, builder.item_name, invalid_items_data[item_id_to_process]["status"])
-        else:
-            print(item_id_original, item_id_to_process, builder.item_name, preprocessing_status["code"])
+
+        # Preprocessing codes:
+        # lookup_failed: No wiki entry
+        # no_item_wikitext: No wikitext data
+        # no_infobox_template: No wiki infobox data
+        invalid_item_codes = [
+            "lookup_failed",
+            "no_item_wikitext",
+            "no_infobox_template"
+        ]
+
+        # Check for items that failed lookup and are not in invalid-items.json file...
+        if preprocessing_status["code"] in invalid_item_codes:
+            try:
+                invalid_items_data[item_id_to_process]
+            except KeyError:
+                print("ERROR: Item not marked as invalid:")
+                print(item_id_original, item_id_to_process, builder.item_name)
 
     # Done processing, rejoice!
     print("Done.")

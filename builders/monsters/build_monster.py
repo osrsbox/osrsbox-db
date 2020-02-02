@@ -57,6 +57,8 @@ class BuildMonster:
         self.schema_data = kwargs["schema_data"]
         # If the JSON should be exported/created
         self.export = kwargs["export"]
+        # Specify verbosity
+        self.verbose = kwargs["verbose"]
 
         # For this monster instance, create dictionary for property storage
         self.monster_dict = dict()
@@ -186,7 +188,8 @@ class BuildMonster:
 
         # Log and print monster
         logging.debug(f"======================= {self.monster_id_str} {self.monster_name}")
-        # print(f"======================= {self.monster_id_str} {self.monster_name}")
+        if self.verbose:
+            print(f"======================= {self.monster_id_str} {self.monster_name}")
         logging.debug(f"preprocessing: using the following cache data:")
         logging.debug(self.monster_cache_data)
 

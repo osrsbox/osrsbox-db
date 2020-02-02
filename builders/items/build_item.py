@@ -78,6 +78,8 @@ class BuildItem:
         self.schema_data = kwargs["schema_data"]
         # If the JSON should be exported/created
         self.export = kwargs["export"]
+        # Specify verbosity
+        self.verbose = kwargs["verbose"]
 
         # For this item instance, create dictionary for property storage
         self.item_dict = dict()
@@ -231,7 +233,8 @@ class BuildItem:
 
         # Log and print item
         logging.debug(f"======================= {self.item_id_str} {self.item_name}")
-        # print(f"======================= {self.item_id_str} {self.item_name}")
+        if self.verbose:
+            print(f"======================= {self.item_id_str} {self.item_name}")
         logging.debug(f"preprocessing: using the following cache data:")
         logging.debug(self.item_cache_data)
 
@@ -297,7 +300,7 @@ class BuildItem:
             if self.all_wikitext_raw.get(self.normalized_name, None):
                 self.item_wikitext = self.all_wikitext_raw.get(self.normalized_name, None)
                 self.wikitext_found_using = "normalized_name"
-                return_status["code"] = "valid"
+                return_status["code"] = "lookup_passed_normalized_name"
             else:
                 return_status["code"] = "lookup_failed"
 
@@ -681,7 +684,9 @@ class BuildItem:
             requirements = self.skill_requirements[str(self.item_id)]
             self.item_dict["equipment"]["requirements"] = requirements
         except KeyError:
-            self.item_dict["equipment"]["requirements"] = None
+            print("populate_equipable_properties: Could not determine skill requirements...")
+            logging.critical("populate_equipable_properties: Could not determine skill requirements...")
+            quit()
 
         # STAGE TWO: WEAPONS
 
