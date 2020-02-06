@@ -11,7 +11,7 @@ URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.2.34"
+VERSION = "1.2.35"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [

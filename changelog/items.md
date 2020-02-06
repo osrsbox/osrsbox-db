@@ -2,6 +2,52 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/02/06: The Nightmare of Ashihama
+- Added items: 32
+    - 24488,Inquisitor's armour set
+    - 24489,Inquisitor's armour set
+    - 24490,Inquisitor's armour set
+    - 24491,Little nightmare
+    - 24492,Little nightmare
+    - 24493,Clue scroll (hard)
+    - 24494,Puzzle box (hard)
+    - 24495,Jar of dreams
+    - 24496,Jar of dreams
+    - 24497,Jar of dreams
+    - 24498,Inquisitor's mace
+    - 24499,Inquisitor's mace
+    - 24500,Inquisitor's great helm
+    - 24501,Inquisitor's great helm
+    - 24502,Inquisitor's hauberk
+    - 24503,Inquisitor's hauberk
+    - 24504,Inquisitor's plateskirt
+    - 24505,Inquisitor's plateskirt
+    - 24506,Nightmare staff
+    - 24507,Nightmare staff
+    - 24508,Harmonised nightmare staff
+    - 24509,Volatile nightmare staff
+    - 24510,Eldritch nightmare staff
+    - 24511,Harmonised orb
+    - 24512,Harmonised orb
+    - 24513,Harmonised orb
+    - 24514,Volatile orb
+    - 24515,Volatile orb
+    - 24516,Volatile orb
+    - 24517,Eldritch orb
+    - 24518,Eldritch orb
+    - 24519,Eldritch orb
+- Removed items: 0
+- Changed items: 9
+    - 24417,Inquisitor's mace,tradeable_on_ge|linked_id_noted|linked_id_placeholder|noteable
+    - 24418,Siren's tome,name|members|equipable|cost|lowalch|highalch
+    - 24419,Inquisitor's great helm,tradeable_on_ge|linked_id_noted|linked_id_placeholder|noteable
+    - 24420,Inquisitor's hauberk,tradeable_on_ge|linked_id_noted|linked_id_placeholder|noteable
+    - 24421,Inquisitor's plateskirt,tradeable_on_ge|linked_id_noted|linked_id_placeholder|noteable
+    - 24422,Nightmare staff,tradeable_on_ge|linked_id_noted|linked_id_placeholder|noteable
+    - 24423,Harmonised nightmare staff,linked_id_placeholder
+    - 24424,Volatile nightmare staff,linked_id_placeholder
+    - 24425,Eldritch nightmare staff,linked_id_placeholder
+
 ### 2020/01/29: Poll 69, BH Rewards, and Welcome Screen
 - Added items: 4
     - 24483,Phoenix

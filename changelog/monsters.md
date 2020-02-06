@@ -2,6 +2,35 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/02/06: The Nightmare of Ashihama
+- Added monsters: 19
+    - 6762,Pyrelord
+    - 6795,Pyrelord
+    - 9425,The Nightmare
+    - 9426,The Nightmare
+    - 9427,The Nightmare
+    - 9428,The Nightmare
+    - 9429,The Nightmare
+    - 9430,The Nightmare
+    - 9431,The Nightmare
+    - 9446,Sleepwalker
+    - 9447,Sleepwalker
+    - 9448,Sleepwalker
+    - 9449,Sleepwalker
+    - 9450,Sleepwalker
+    - 9451,Sleepwalker
+    - 9452,Parasite
+    - 9453,Parasite
+    - 9454,Husk
+    - 9455,Husk
+- Removed monsters: 0
+- Changed monsters: 5
+    - 3019,Spider,isMinimapVisible
+    - 3696,Vampyre Juvenile,actions
+    - 3697,Vampyre Juvenile,actions
+    - 3698,Vampyre Juvinate,actions
+    - 3699,Vampyre Juvinate,actions
+
 ### 2020/01/29: Poll 69, BH Rewards, and Welcome Screen
 - Added monsters: 0
 - Removed monsters: 0
