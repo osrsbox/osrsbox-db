@@ -514,7 +514,6 @@ class BuildItem:
                 wiki_name = wiki_page_name + " (" + wiki_versioned_name + ")"
         else:
             wiki_name = wiki_page_name
-            self.item_dict["incomplete"] = True
 
         self.item_dict["wiki_name"] = wiki_name
 
@@ -523,7 +522,6 @@ class BuildItem:
             wiki_url = wiki_page_name + "#" + wiki_versioned_name
         else:
             wiki_url = wiki_page_name
-            self.item_dict["incomplete"] = True
 
         wiki_url = wiki_url.replace(" ", "_")
         self.item_dict["wiki_url"] = "https://oldschool.runescape.wiki/w/" + wiki_url

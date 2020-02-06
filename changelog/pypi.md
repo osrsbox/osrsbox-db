@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.2.34`: Fixed item incomplete property.
 - `1.2.33`: Release for game update: 2020/01/29.
 - `1.2.32`: Release for game update: 2020/01/23.
 - `1.2.31`: Update.
