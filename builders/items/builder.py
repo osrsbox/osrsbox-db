@@ -86,6 +86,11 @@ def main(export: bool = False, verbose: bool = False):
     with open(all_item_cache_data_path) as f:
         all_item_cache_data = json.load(f)
 
+    # Load icon data
+    icons_file_path = Path(config.DATA_ICONS_PATH / "icons-items-complete.json")
+    with open(icons_file_path) as f:
+        icons_data = json.load(f)
+
     # Load schema data
     schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
     with open(schema_file_path) as f:
@@ -112,6 +117,7 @@ def main(export: bool = False, verbose: bool = False):
                                        weapon_stances_data=weapon_stances_data,
                                        invalid_items_data=invalid_items_data,
                                        known_items=known_items,
+                                       icons_data=icons_data,
                                        schema_data=schema_data,
                                        export=export,
                                        verbose=verbose)

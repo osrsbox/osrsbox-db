@@ -39,6 +39,7 @@ TEST_PATH = Path(PROJECT_ROOT_PATH / "test")
 # Useful data paths
 DATA_CACHE_PATH = Path(DATA_PATH / "cache")
 DATA_WIKI_PATH = Path(DATA_PATH / "wiki")
+DATA_ICONS_PATH = Path(DATA_PATH / "icons")
 DATA_ITEMS_PATH = Path(DATA_PATH / "items")
 DATA_MONSTERS_PATH = Path(DATA_PATH / "monsters")
 DATA_SCHEMAS_PATH = Path(DATA_PATH / "schemas")

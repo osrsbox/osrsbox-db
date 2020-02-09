@@ -40,6 +40,7 @@ class PrayerProperties:
     wiki_url: str = None
     requirements: Dict = None
     bonuses: Dict = None
+    icon: str = None
 
     @classmethod
     def from_json(cls, json_dict: Dict) -> 'PrayerProperties':

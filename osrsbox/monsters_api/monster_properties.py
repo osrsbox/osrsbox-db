@@ -60,6 +60,7 @@ class MonsterProperties:
     slayer_masters: List = None
     duplicate: bool = None
     examine: str = None
+    icon: str = None
     wiki_name: str = None
     wiki_url: str = None
     attack_level: int = None

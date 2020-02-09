@@ -63,6 +63,7 @@ class ItemProperties:
     release_date: Optional[str]
     duplicate: bool
     examine: Optional[str]
+    icon: str
     wiki_name: Optional[str]
     wiki_url: Optional[str]
     equipment: Optional[ItemEquipment] = None

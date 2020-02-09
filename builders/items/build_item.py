@@ -74,6 +74,8 @@ class BuildItem:
         self.invalid_items_data = kwargs["invalid_items_data"]
         # A list of already known (processed) items
         self.known_items = kwargs["known_items"]
+        # Dictionary of item icons
+        self.icons_data = kwargs["icons_data"]
         # The item schema
         self.schema_data = kwargs["schema_data"]
         # If the JSON should be exported/created
@@ -119,6 +121,7 @@ class BuildItem:
             "quest_item",
             "release_date",
             "examine",
+            "icon",
             "wiki_name",
             "wiki_url"]
 
@@ -473,6 +476,7 @@ class BuildItem:
         self.item_dict["cost"] = self.item_cache_data["cost"]
         self.item_dict["lowalch"] = self.item_cache_data["lowalch"]
         self.item_dict["highalch"] = self.item_cache_data["highalch"]
+        self.item_dict["icon"] = self.icons_data[self.item_id_str]
 
     def populate_item_properties_from_wiki_data(self):
         """Populate item data from a OSRS Wiki Infobox Item template."""
