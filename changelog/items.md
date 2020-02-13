@@ -2,6 +2,13 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/02/13: Nightmare Feedback and the Zalcano Loot Table
+- Added items: 2
+    - 24520,Victor's cape (1000)
+    - 24521,Victor's cape (1000)
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/02/06: The Nightmare of Ashihama
 - Added items: 32
     - 24488,Inquisitor's armour set

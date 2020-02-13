@@ -3,13 +3,13 @@
     "name": "Goat",
     "incomplete": true,
     "members": true,
-    "release_date": "2006-10-18",
+    "release_date": "2001-01-04",
     "combat_level": 23,
     "size": 1,
-    "hitpoints": 21,
-    "max_hit": 4,
+    "hitpoints": 22,
+    "max_hit": 0,
     "attack_type": [
-        "crush"
+        "melee"
     ],
     "attack_speed": 4,
     "aggressive": false,
@@ -17,21 +17,21 @@
     "immune_poison": false,
     "immune_venom": false,
     "weakness": [
-        "magic"
+        "fire spells"
     ],
     "category": [],
-    "slayer_monster": false,
-    "slayer_level": null,
-    "slayer_xp": null,
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 0.0,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "They'll eat anything!",
+    "examine": "Watch your pockets.",
     "icon": null,
-    "wiki_name": "Goat (Tan)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Goat#Tan",
-    "attack_level": 20,
-    "strength_level": 20,
-    "defence_level": 20,
+    "wiki_name": "Thief (The Warrens)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Thief#The_Warrens",
+    "attack_level": 14,
+    "strength_level": 13,
+    "defence_level": 12,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -39,13 +39,13 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 10,
-    "defence_slash": 10,
+    "defence_stab": 0,
+    "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
-    "defence_ranged": 10,
-    "attack_accuracy": 29,
-    "melee_strength": 10,
+    "defence_ranged": 0,
+    "attack_accuracy": 0,
+    "melee_strength": 0,
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [
@@ -59,12 +59,273 @@
             "drop_requirements": null
         },
         {
-            "id": 9735,
-            "name": "Desert goat horn",
+            "id": 1139,
+            "name": "Bronze med helm",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1203,
+            "name": "Iron dagger",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 877,
+            "name": "Bronze bolts",
+            "members": true,
+            "quantity": "2-12",
+            "noted": false,
+            "rarity": 0.171875,
+            "drop_requirements": null
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": true,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 558,
+            "name": "Mind rune",
+            "members": true,
+            "quantity": "9",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 436,
+            "name": "Copper ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1440,
+            "name": "Earth talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1965,
+            "name": "Cabbage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 23182,
+            "name": "Clue scroll (beginner)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011111111111111112,
+            "drop_requirements": null
+        },
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.044921875,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.033693512094505905,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02526894951483617,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.019653013234168216,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015437070446735396,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01123046875,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008424167838724801,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00701904296875,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005615234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004211096789313334,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004211096789313334,
             "drop_requirements": null
         }
     ]

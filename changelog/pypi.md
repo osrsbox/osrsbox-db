@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.1`: Release for game update: 2020/02/13.
 - `1.3.0`: Added icons to API.
 - `1.2.35`: Release for game update: 2020/02/06.
 - `1.2.34`: Fixed item incomplete property.
