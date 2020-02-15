@@ -63,6 +63,7 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | tradeable | boolean | If the item is tradeable (between players and on the GE). | True | False |
 | tradeable_on_ge | boolean | If the item is tradeable (only on GE). | True | False |
 | stackable | boolean | If the item is stackable (in inventory). | True | False |
+| stacked | boolean | If the item is stacked. | True | False |
 | noted | boolean | If the item is noted. | True | False |
 | noteable | boolean | If the item is noteable. | True | False |
 | linked_id_item | integer | The linked ID of the actual item (if noted/placeholder). | True | True |
@@ -81,11 +82,11 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | release_date | string | Date the item was released (in ISO8601 format). | True | True |
 | duplicate | boolean | If the item is a duplicate. | True | False |
 | examine | string | The examine text for the item. | True | True |
+| icon | string | The item icon (in base64 encoding). | True | False |
 | wiki_name | string | The OSRS Wiki name for the item. | True | True |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | True |
 | equipment | dict | The equipment bonuses of equipable armour/weapons. | True | True |
 | weapon | dict | The weapon bonuses including attack speed, type and stance. | True | True |
-
 
 ### Item Equipment
 

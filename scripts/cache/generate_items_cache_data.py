@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Generate the items-cache-data.json file from raw Item Definition files.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -101,7 +101,7 @@ def parse_item_definition(item_data: Dict, definitions: Dict, id_number: str) ->
     return item_data
 
 
-def parse_item_definition_fix_noted_item(item_data: Dict, definitions: Dict, id_number: str) -> Dict:
+def parse_item_definition_fix_linked_item(item_data: Dict, definitions: Dict, id_number: str) -> Dict:
     """Parse the raw cache ItemDefinition data to a Python dictionary.
 
     This function tries to fix any item that is linked, by looking up properties
@@ -110,7 +110,7 @@ def parse_item_definition_fix_noted_item(item_data: Dict, definitions: Dict, id_
 
     :param item_data: A dictionary holding item properties.
     :param definitions: A dictionary holding the raw ItemDefinition data.
-    :param id_number: The item ID number to process
+    :param id_number: The item ID number to process.
     """
     item_definition = definitions[id_number]
     item_data["name"] = item_definition["name"]
@@ -121,10 +121,11 @@ def parse_item_definition_fix_noted_item(item_data: Dict, definitions: Dict, id_
     return item_data
 
 
-def generate_items_cache_data(definitions: Dict):
+def generate_items_cache_data(definitions: Dict, stacked_variants: Dict):
     """Extract item definition data, and process for builder ingestion.
 
     :param definitions: The raw cache definitions.
+    :param stacked_variants: Dictionary of stacked variant item IDs.
     """
     all_items = dict()
 
@@ -142,12 +143,26 @@ def generate_items_cache_data(definitions: Dict):
         # Parse the item
         item_data = parse_item_definition(item_data, definitions, id_number)
 
-        if (item_definition["name"] == "null" and
+        if item_definition["id"] in stacked_variants:
+            # This item is a stacked variant (found in countObj)
+            linked_id_number = str(stacked_variants[item_definition["id"]])
+            # Parse linked item id to get missing properties
+            item_data = parse_item_definition_fix_linked_item(item_data,
+                                                              definitions,
+                                                              linked_id_number)
+            item_data["linked_id_item"] = int(linked_id_number)
+            item_data["tradeable_on_ge"] = definitions[linked_id_number]["isTradeable"]
+            # Manually set "stacked" property to True
+            item_data["stacked"] = True
+
+        elif (item_definition["name"] == "null" and
                 item_definition["notedTemplate"] == 799):
             # This item is noted (notedTemplate is 799)
             # The linked ID must be queried for name, members, cost, lowalch, highalch
             linked_id_number = str(item_definition["notedID"])
-            item_data = parse_item_definition_fix_noted_item(item_data, definitions, linked_id_number)
+            item_data = parse_item_definition_fix_linked_item(item_data,
+                                                              definitions,
+                                                              linked_id_number)
             item_data["linked_id_item"] = int(linked_id_number)
 
         elif (item_definition["name"] == "null" and
@@ -176,6 +191,12 @@ def generate_items_cache_data(definitions: Dict):
             # Skip this item, it is not useful
             continue
 
+        # Check if stacked property is set
+        try:
+            item_data["stacked"]
+        except KeyError:
+            item_data["stacked"] = False
+
         all_items[str(item_data["id"])] = item_data
 
     # Finally, dump the extracted data to the items-cache-data.json file
@@ -184,5 +205,56 @@ def generate_items_cache_data(definitions: Dict):
         json.dump(all_items, f, indent=4)
 
 
+def find_stacked_variants(definitions: Dict):
+    """Extract find all stacked item variants in ItemDefinition data.
+
+    :param definitions: The raw cache definitions.
+    """
+    stacked_variants = dict()
+
+    # Loop the loaded data
+    for id_number in definitions:
+        # Fetch the specific item definition being processed
+        item_definition = definitions[id_number]
+
+        # Determine if item has stacked variants
+        try:
+            is_stacked = item_definition["countObj"]
+        except KeyError:
+            is_stacked = False
+
+        # Process stacked items
+        if is_stacked:
+            for stacked_id in item_definition["countObj"]:
+                # Skip any entry that is a zero (empty)
+                if stacked_id == 0:
+                    pass
+                else:
+                    # Skip any ID that has already been processed
+                    if stacked_id in stacked_variants:
+                        pass
+                    else:
+                        stacked_variants[stacked_id] = item_definition["id"]
+
+    # Sort list of stacked items
+    item_ids = [x for x in stacked_variants]
+    item_ids.sort(key=int)
+    sorted_stacked_variants = dict()
+    for item_id in item_ids:
+        sorted_stacked_variants[item_id] = stacked_variants[item_id]
+
+    # Finally, dump the extracted stacked item IDs to the items-cache-data.json file
+    out_fi = Path(config.DATA_ITEMS_PATH / "stacked-items.json")
+    with open(out_fi, "w") as f:
+        json.dump(sorted_stacked_variants, f, indent=4)
+
+    return sorted_stacked_variants
+
+
 if __name__ == "__main__":
-    generate_items_cache_data(cache_constants.ITEM_DEFINITIONS)
+    # Determine items with stacked variants. Example:
+    # 23663: 23661
+    stacked_variants = find_stacked_variants(cache_constants.ITEM_DEFINITIONS)
+    # Extract cache data
+    generate_items_cache_data(cache_constants.ITEM_DEFINITIONS,
+                              stacked_variants)

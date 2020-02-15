@@ -104,6 +104,7 @@ class BuildItem:
             "tradeable",
             "tradeable_on_ge",
             "stackable",
+            "stacked",
             "noted",
             "noteable",
             "linked_id_item",
@@ -466,6 +467,7 @@ class BuildItem:
         self.item_dict["members"] = self.item_cache_data["members"]
         self.item_dict["tradeable_on_ge"] = self.item_cache_data["tradeable_on_ge"]
         self.item_dict["stackable"] = self.item_cache_data["stackable"]
+        self.item_dict["stacked"] = self.item_cache_data["stacked"]
         self.item_dict["noted"] = self.item_cache_data["noted"]
         self.item_dict["noteable"] = self.item_cache_data["noteable"]
         self.item_dict["linked_id_item"] = self.item_cache_data["linked_id_item"]
@@ -476,7 +478,10 @@ class BuildItem:
         self.item_dict["cost"] = self.item_cache_data["cost"]
         self.item_dict["lowalch"] = self.item_cache_data["lowalch"]
         self.item_dict["highalch"] = self.item_cache_data["highalch"]
-        self.item_dict["icon"] = self.icons_data[self.item_id_str]
+        try:
+            self.item_dict["icon"] = self.icons_data[self.item_id_str]
+        except KeyError:
+            self.item_dict["icon"] = self.icons_data[self.linked_id_item_str]
 
     def populate_item_properties_from_wiki_data(self):
         """Populate item data from a OSRS Wiki Infobox Item template."""

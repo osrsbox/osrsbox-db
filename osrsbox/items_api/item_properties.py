@@ -45,6 +45,7 @@ class ItemProperties:
     tradeable: Optional[bool]
     tradeable_on_ge: bool
     stackable: bool
+    stacked: bool
     noted: bool
     noteable: bool
     linked_id_item: Optional[int]
