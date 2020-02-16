@@ -478,10 +478,7 @@ class BuildItem:
         self.item_dict["cost"] = self.item_cache_data["cost"]
         self.item_dict["lowalch"] = self.item_cache_data["lowalch"]
         self.item_dict["highalch"] = self.item_cache_data["highalch"]
-        try:
-            self.item_dict["icon"] = self.icons_data[self.item_id_str]
-        except KeyError:
-            self.item_dict["icon"] = self.icons_data[self.linked_id_item_str]
+        self.item_dict["icon"] = self.icons_data[self.item_id_str]
 
     def populate_item_properties_from_wiki_data(self):
         """Populate item data from a OSRS Wiki Infobox Item template."""
