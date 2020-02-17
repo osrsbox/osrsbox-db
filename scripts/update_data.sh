@@ -94,16 +94,21 @@ source venv/bin/activate
 # Install Python package requirements
 pip install -r requirements.txt
 
-# Move to the scripts/update path and update all data
-cd ~/repos/osrsbox-db/scripts/update/
-
 echo -e ">>> Updating wiki data..."
+cd ~/repos/osrsbox-db/scripts/update/
 python3 update_wiki_data.py 2020-02-06T00:00:00Z
 
+# Generate the processed wikitext files
+echo -e ">>> Process raw wikitext..."
+cd ~/repos/osrsbox-db/scripts/wiki/
+python3 process_wikitext.py
+
 echo -e ">>> Updating cache data..."
+cd ~/repos/osrsbox-db/scripts/update/
 python3 update_cache_data.py
 
 echo -e ">>> Determine any cache changes..."
+cd ~/repos/osrsbox-db/scripts/update/
 python3 determine_cache_changes.py
 
 # Move the new cache data
@@ -111,10 +116,11 @@ cd ~/repos/osrsbox-db/
 mv data/cache/items-cache-data.json data/items/
 mv data/cache/monsters-cache-data.json data/monsters/
 
-# Generate the processed wikitext files
-echo -e ">>> Process raw wikitext..."
-cd ~/repos/osrsbox-db/scripts/wiki/
-python3 process_wikitext.py
+cd ~/repos/osrsbox-db/scripts/items/
+echo -e ">>> New items with skill requirements..."
+python3 check_item_skill_requirements.py
+echo -e ">>> New items with weapon types..."
+python3 check_item_weapon_types.py
 
 # Make sure to deactivate the venv
 deactivate

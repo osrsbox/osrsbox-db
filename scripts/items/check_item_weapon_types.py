@@ -5,7 +5,7 @@ Website: https://www.osrsbox.com
 
 Description:
 Load the processed cache data for items, check equipable items for an
-entry in the data/items/skill-requirements.json file, and print a generic
+entry in the data/items/weapon-types.json file, and print a generic
 entry for manual insertion.
 
 Copyright (c) 2020, PH01L
@@ -40,10 +40,15 @@ def main():
     with open(invalid_items_file_path) as f:
         invalid_items = json.load(f)
 
-    # Load current skill-requirements file
-    skill_requirements_file_path = Path(config.DATA_ITEMS_PATH / "skill-requirements.json")
-    with open(skill_requirements_file_path) as f:
-        skill_requirements = json.load(f)
+    # Load current weapon-types.json file
+    weapon_type_file_path = Path(config.DATA_ITEMS_PATH / "weapon-types.json")
+    with open(weapon_type_file_path) as f:
+        weapon_types = json.load(f)
+
+    # Load current OSRS Wiki item dump
+    processed_wikitextfile_path = Path(config.DATA_WIKI_PATH / "processed-wikitext-items.json")
+    with open(processed_wikitextfile_path) as f:
+        all_wikitext_processed = json.load(f)
 
     for item_id, item_data in items_cache_data.items():
         # Check if item is equipable, skip if not
@@ -54,11 +59,18 @@ def main():
         if item_id in invalid_items:
             continue
 
-        # Check for item ID in skill requirements file
+        # Check for OSRS Wiki page, skip if non-existant
         try:
-            skill_requirements[item_id]
+            all_wikitext_processed[item_id]
         except KeyError:
-            print(f"  > No entry in skill_requirements: {item_id}")
+            continue
+
+        # Check for "2h" or "weapon" in wikitext
+        try:
+            weapon_types[item_id]
+        except KeyError:
+            if "2h" in all_wikitext_processed[item_id] or "weapon" in all_wikitext_processed[item_id]:
+                print(f"  > No entry in weapon_types: {item_id}")
 
 
 if __name__ == "__main__":
