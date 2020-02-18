@@ -734,6 +734,21 @@ class BuildMonster:
                 drops_dict_all[str(item_id)] = drop_dict
 
         # Handle any embedded drop tables
+
+        if "revenants/drops" in self.monster_wikitext[2].lower():
+            items = drop_tables.revenants(self.monster_wikitext[2],
+                                          self.monster_dict["combat_level"],
+                                          self.monster_dict["hitpoints"])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
+            # Also add wilderness slayer drops for Revenants
+            items = drop_tables.wildernessslayer(self.monster_dict["name"],
+                                                 self.monster_dict["combat_level"], self.monster_dict["hitpoints"],
+                                                 self.monster_dict["slayer_level"])
+            for item, item_dict in items.items():
+                drops_list_ids.append(str(item))
+                drops_dict_all[str(item)] = item_dict
         if "talismandroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.talisman(self.monster_wikitext[2])
             for item, item_dict in items.items():

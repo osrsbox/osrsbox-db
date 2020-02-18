@@ -1634,3 +1634,428 @@ def hopsseed(wikitext: str) -> Dict:
     }
 
     return(items)
+
+
+def revenants(wikitext: str, combat_level: int, hitpoints: int) -> Dict:
+    """Set revenant drop tables items.
+
+    Item drops are hard coded.
+    Drop rates sourced from:
+    https://oldschool.runescape.wiki/w/Template:Revenants/Drops
+    https://twitter.com/JagexAsh/status/1051241566852050944/photo/1
+    https://www.reddit.com/r/2007scape/comments/9nzkf5/using_mod_ashs_newly_release_rev_drop_formula/
+
+    :param wikitext: The monsters wikitext as a string.
+    :param combat_level: The monsters combat level.
+    :param hitpoints: The monsters hitpoints level.
+    :return: Dictionary of items on the drop table.
+    """
+
+    """
+    {{#vardefine:A|{{#expr:floor(2200/floor(sqrt({{{combat|135}}})))}}}}
+    {{#vardefine:B|{{#expr:15 + floor((({{{combat|135}}}+60)^2)/200)}}}}
+    {{#vardefine:mediocreStandardChance|
+    {{#expr:106*{{max|1|{{#var:A}}/({{min|{{#var:B}}|{{#var:A}}}}-1)}}}}}}
+    """
+    A = math.floor(2200/math.floor(math.sqrt(combat_level)))
+    B = 15 + math.floor((combat_level + 60) ** 2 / 200)
+    MSC = 106 * max(1, A) / (min(B, A) - 1)
+    # print("A", A)
+    # print("B", B)
+    # print("MSC", MSC)
+
+    # Determine Revenant ether quantity using combat level
+    ether_quantity = 1 + math.floor(math.sqrt(combat_level) + 1 / 2)
+
+    # Populate drop table items
+    items = {
+        "21820": {
+            "id": 21820,
+            "name": "Revenant ether",
+            "members": True,
+            "quantity": f"1-{ether_quantity}",
+            "noted": False,
+            "rarity": 1.0,
+            "drop_requirements": None
+        },
+        "22557": {
+            "id": 22557,
+            "name": "Amulet of avarice",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 * 2.5),
+            "drop_requirements": None
+        },
+        "22547": {
+            "id": 22547,
+            "name": "Craw's bow (u)",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 * 5),
+            "drop_requirements": None
+        },
+        "22552": {
+            "id": 22552,
+            "name": "Thammaron's sceptre (u)",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 * 5),
+            "drop_requirements": None
+        },
+        "22542": {
+            "id": 22557,
+            "name": "Viggora's chainmace (u)",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 * 5),
+            "drop_requirements": None
+        },
+        "21807": {
+            "id": 21807,
+            "name": "Ancient emblem",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 6),
+            "drop_requirements": None
+        },
+        "21810": {
+            "id": 21810,
+            "name": "Ancient totem",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 5),
+            "drop_requirements": None
+        },
+        "21813": {
+            "id": 21813,
+            "name": "Ancient statuette",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 4),
+            "drop_requirements": None
+        },
+        "21804": {
+            "id": 21804,
+            "name": "Ancient crystal",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 3),
+            "drop_requirements": None
+        },
+        "22299": {
+            "id": 22299,
+            "name": "Ancient medallion",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 2),
+            "drop_requirements": None
+        },
+        "22302": {
+            "id": 22302,
+            "name": "Ancient effigy",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 1),
+            "drop_requirements": None
+        },
+        "22305": {
+            "id": 22305,
+            "name": "Ancient relic",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 1),
+            "drop_requirements": None
+        },
+        "1391": {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": True,
+            "quantity": "3",
+            "noted": True,
+            "rarity": 1 / (MSC / 5),
+            "drop_requirements": None
+        },
+        "21817": {
+            "id": 21817,
+            "name": "Bracelet of ethereum (uncharged)",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 15),
+            "drop_requirements": None
+        },
+        "1163": {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "1127": {
+            "id": 1127,
+            "name": "Rune platebody",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "1079": {
+            "id": 1079,
+            "name": "Rune platelegs",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "1201": {
+            "id": 1201,
+            "name": "Rune kiteshield",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "1347": {
+            "id": 1347,
+            "name": "Rune warhammer",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "4087": {
+            "id": 4087,
+            "name": "Dragon platelegs",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 1),
+            "drop_requirements": None
+        },
+        "4585": {
+            "id": 4585,
+            "name": "Dragon plateskirt",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 1),
+            "drop_requirements": None
+        },
+        "1215": {
+            "id": 1215,
+            "name": "Dragon dagger",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 1),
+            "drop_requirements": None
+        },
+        "1305": {
+            "id": 1305,
+            "name": "Dragon longsword",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 1),
+            "drop_requirements": None
+        },
+        "1149": {
+            "id": 1149,
+            "name": "Dragon med helm",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 13),
+            "drop_requirements": None
+        },
+        "453": {
+            "id": 453,
+            "name": "Coal",
+            "members": True,
+            "quantity": "50-100",
+            "noted": True,
+            "rarity": 1 / (MSC / 6),
+            "drop_requirements": None
+        },
+        "2361": {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": True,
+            "quantity": "8-12",
+            "noted": True,
+            "rarity": 1 / (MSC / 6),
+            "drop_requirements": None
+        },
+        "451": {
+            "id": 451,
+            "name": "Runite ore",
+            "members": True,
+            "quantity": "3-6",
+            "noted": True,
+            "rarity": 1 / (MSC / 6),
+            "drop_requirements": None
+        },
+        "2363": {
+            "id": 2363,
+            "name": "Runite bar",
+            "members": True,
+            "quantity": "3-5",
+            "noted": True,
+            "rarity": 1 / (MSC / 6),
+            "drop_requirements": None
+        },
+        "1747": {
+            "id": 1747,
+            "name": "Black dragonhide",
+            "members": True,
+            "quantity": "10-15",
+            "noted": True,
+            "rarity": 1 / (MSC / 6),
+            "drop_requirements": None
+        },
+        "8782": {
+            "id": 8782,
+            "name": "Mahogany plank",
+            "members": True,
+            "quantity": "15-25",
+            "noted": True,
+            "rarity": 1 / (MSC / 5),
+            "drop_requirements": None
+        },
+        "391": {
+            "id": 391,
+            "name": "Manta ray",
+            "members": True,
+            "quantity": "30-50",
+            "noted": True,
+            "rarity": 1 / (MSC / 3),
+            "drop_requirements": None
+        },
+        "1515": {
+            "id": 1515,
+            "name": "Yew logs",
+            "members": True,
+            "quantity": "60-100",
+            "noted": True,
+            "rarity": 1 / (MSC / 3),
+            "drop_requirements": None
+        },
+        "1513": {
+            "id": 1513,
+            "name": "Magic logs",
+            "members": True,
+            "quantity": "15-25",
+            "noted": True,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "1631": {
+            "id": 1631,
+            "name": "Uncut dragonstone",
+            "members": True,
+            "quantity": "5-7",
+            "noted": True,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "5123": {
+            "id": 5123,
+            "name": "Magic seed",
+            "members": True,
+            "quantity": "5-9",
+            "noted": False,
+            "rarity": 1 / (A * 40 / 4),
+            "drop_requirements": None
+        },
+        "21802": {
+            "id": 21802,
+            "name": "Revenant cave teleport",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / (MSC / 7),
+            "drop_requirements": None
+        },
+        "3024": {
+            "id": 3024,
+            "name": "Super restore(4)",
+            "members": True,
+            "quantity": "3-5",
+            "noted": True,
+            "rarity": 1 / (MSC / 4),
+            "drop_requirements": None
+        },
+        "9193": {
+            "id": 9193,
+            "name": "Dragonstone bolt tips",
+            "members": True,
+            "quantity": "40-70",
+            "noted": False,
+            "rarity": 1 / (MSC / 4),
+            "drop_requirements": None
+        },
+        "9194": {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": True,
+            "quantity": "5-10",
+            "noted": False,
+            "rarity": 1 / (MSC / 4),
+            "drop_requirements": None
+        },
+        "563": {
+            "id": 563,
+            "name": "Law rune",
+            "members": True,
+            "quantity": "80-120",
+            "noted": False,
+            "rarity": 1 / (MSC / 2),
+            "drop_requirements": None
+        },
+        "560": {
+            "id": 560,
+            "name": "Death rune",
+            "members": True,
+            "quantity": "60-100",
+            "noted": False,
+            "rarity": 1 / (MSC / 3),
+            "drop_requirements": None
+        },
+        "565": {
+            "id": 565,
+            "name": "Blood rune",
+            "members": True,
+            "quantity": "60-100",
+            "noted": False,
+            "rarity": 1 / (MSC / 3),
+            "drop_requirements": None
+        },
+        "11941": {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": True,
+            "quantity": "1",
+            "noted": False,
+            "rarity": 1 / 3,
+            "drop_requirements": None
+        }
+    }
+
+    return(items)

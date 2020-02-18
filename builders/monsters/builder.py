@@ -121,4 +121,4 @@ if __name__ == "__main__":
 
     export = args.export
     verbose = args.verbose
-    main(export)
+    main(export, verbose)
