@@ -187,6 +187,10 @@ class BuildItem:
             if correlation_result:
                 self.item_dict["duplicate"] = True
 
+        # Check stacked property... If stacked, it must be a duplicate
+        if item_properties.stacked:
+            self.item_dict["duplicate"] = True
+
         return item_properties
 
     def generate_item_object(self):

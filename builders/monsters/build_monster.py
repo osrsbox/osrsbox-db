@@ -666,6 +666,9 @@ class BuildMonster:
             item_id = None
             found = False
             for item in self.all_db_items:
+                # Skip items that are not actual items
+                if item.placeholder or item.noted or item.stacked or item.duplicate:
+                    continue
                 if item.name == name or item.wiki_name == name:
                     found = True
                     item_id = item.id

@@ -145,7 +145,7 @@ def generate_items_cache_data(definitions: Dict, stacked_variants: Dict):
 
         if item_definition["id"] in stacked_variants:
             # This item is a stacked variant (found in countObj)
-            linked_id_number = str(stacked_variants[item_definition["id"]])
+            linked_id_number = str(stacked_variants[item_definition["id"]]["id"])
             # Parse linked item id to get missing properties
             item_data = parse_item_definition_fix_linked_item(item_data,
                                                               definitions,
@@ -153,7 +153,7 @@ def generate_items_cache_data(definitions: Dict, stacked_variants: Dict):
             item_data["linked_id_item"] = int(linked_id_number)
             item_data["tradeable_on_ge"] = definitions[linked_id_number]["isTradeable"]
             # Manually set "stacked" property to True
-            item_data["stacked"] = True
+            item_data["stacked"] = stacked_variants[item_definition["id"]]["count"]
 
         elif (item_definition["name"] == "null" and
                 item_definition["notedTemplate"] == 799):
@@ -193,9 +193,9 @@ def generate_items_cache_data(definitions: Dict, stacked_variants: Dict):
 
         # Check if stacked property is set
         try:
-            item_data["stacked"]
+            int(item_data["stacked"])
         except KeyError:
-            item_data["stacked"] = False
+            item_data["stacked"] = None
 
         all_items[str(item_data["id"])] = item_data
 
@@ -225,7 +225,7 @@ def find_stacked_variants(definitions: Dict):
 
         # Process stacked items
         if is_stacked:
-            for stacked_id in item_definition["countObj"]:
+            for stacked_id, stacked_count in zip(item_definition["countObj"], item_definition["countCo"]):
                 # Skip any entry that is a zero (empty)
                 if stacked_id == 0:
                     pass
@@ -234,7 +234,10 @@ def find_stacked_variants(definitions: Dict):
                     if stacked_id in stacked_variants:
                         pass
                     else:
-                        stacked_variants[stacked_id] = item_definition["id"]
+                        stacked_dict = dict()
+                        stacked_dict["id"] = item_definition["id"]
+                        stacked_dict["count"] = stacked_count
+                        stacked_variants[stacked_id] = stacked_dict
 
     # Sort list of stacked items
     item_ids = [x for x in stacked_variants]
