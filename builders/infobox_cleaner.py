@@ -617,73 +617,45 @@ def clean_attack_type(value: str) -> List:
     return attack_type_list
 
 
-def clean_weaknesses(value: str) -> str:
-    """Convert the weaknesses text entry from an OSRS Wiki infobox.
+def clean_attributes(value: str) -> str:
+    """Convert the attributes text entry from an OSRS Wiki infobox.
 
     :param value: The extracted raw wiki text.
-    :return: A cleaned weaknesses property value.
+    :return: A cleaned attribute property value.
     """
-    weaknesses_list = list()
+    attributes_list = list()
 
     if value is None or value == "":
-        return weaknesses_list
+        return None
 
     value = value.lower()
 
     # Check for specific melee attack types
-    if "slash" in value:
-        weaknesses_list.append("slash")
-    if "crush" in value:
-        weaknesses_list.append("crush")
-    if "stab" in value:
-        weaknesses_list.append("stab")
+    if "demon" in value:
+        attributes_list.append("demon")
+    if "dragon" in value:
+        attributes_list.append("dragon")
+    if "fiery" in value:
+        attributes_list.append("fiery")
+    if "kalphite" in value:
+        attributes_list.append("kalphite")
+    if "leafy" in value:
+        attributes_list.append("leafy")
+    if "penance" in value:
+        attributes_list.append("penance")
+    if "shade" in value:
+        attributes_list.append("shade")
+    if "undead" in value:
+        attributes_list.append("undead")
+    if "vampyre" in value:
+        attributes_list.append("vampyre")
+    if "xerician" in value:
+        attributes_list.append("xerician")
 
-    # Check for generic melee attack type
-    # Do not add if specific melee attack type found
-    if "melee" in value:
-        if ("slash" not in value and "crush" not in value and "stab" not in value):
-            weaknesses_list.append("melee")
+    if not attributes_list:
+        return None
 
-    if "ranged" in value:
-        weaknesses_list.append("ranged")
-
-    if "magic" in value and "dragonfire" not in value:
-        weaknesses_list.append("magic")
-
-    if "keris" in value:
-        weaknesses_list.append("keris")
-
-    if "wolfbane" in value:
-        weaknesses_list.append("wolfbane")
-
-    if "crumble" in value:
-        weaknesses_list.append("crumble undead")
-
-    if "dragonbane" in value:
-        weaknesses_list.append("dragonbane")
-
-    if "pickaxe" in value:
-        weaknesses_list.append("pickaxe")
-
-    if "demonbane" in value:
-        weaknesses_list.append("demonbane")
-
-    if "water" in value:
-        weaknesses_list.append("water spells")
-    if "fire" in value:
-        weaknesses_list.append("fire spells")
-    if "earth" in value:
-        weaknesses_list.append("earth spells")
-    if "air" in value:
-        weaknesses_list.append("air spells")
-
-    if "leaf" in value:
-        weaknesses_list.append("leaf-bladed")
-
-    if "broad" in value:
-        weaknesses_list.append("broad-ammunition")
-
-    return weaknesses_list
+    return attributes_list
 
 
 def clean_category(value: str) -> str:

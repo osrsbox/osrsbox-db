@@ -89,7 +89,7 @@ class BuildMonster:
             "poisonous",
             "immune_poison",
             "immune_venon",
-            "weakness",
+            "attributes",
             "slayer_monster",
             "slayer_level",
             "slayer_xp",
@@ -443,19 +443,19 @@ class BuildMonster:
             self.monster_dict["immune_venom"] = False
             self.monster_dict["incomplete"] = True
 
-        # WEAKNESS: Determine any weaknesses of the monster
-        weakness = None
+        # ATTRIBUTES: Determine any attributes of the monster
+        attributes = None
         if self.infobox_version_number is not None:
-            key = "weakness" + str(self.infobox_version_number)
-            weakness = self.extract_infobox_value(self.template, key)
-        if weakness is None:
-            weakness = self.extract_infobox_value(self.template, "weakness")
-        if weakness is not None:
-            weakness = infobox_cleaner.clean_weaknesses(weakness)
-            self.monster_dict["weakness"] = weakness
+            key = "attributes" + str(self.infobox_version_number)
+            attributes = self.extract_infobox_value(self.template, key)
+        if attributes is None:
+            attributes = self.extract_infobox_value(self.template, "attributes")
+        if attributes is not None:
+            attributes = infobox_cleaner.clean_attributes(attributes)
+            self.monster_dict["attributes"] = attributes
         else:
-            self.monster_dict["weakness"] = list()
-            self.monster_dict["incomplete"] = True
+            self.monster_dict["attributes"] = None
+            # self.monster_dict["incomplete"] = True
 
         # CATEGORY: Determine category of the monster
         category = None

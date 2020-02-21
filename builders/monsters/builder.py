@@ -41,7 +41,7 @@ logging.basicConfig(filename=Path(__file__).stem+".log",
 logging.info(">>> Starting builders/monsters/builder.py...")
 
 
-def main(export: bool = False, verbose: bool = False):
+def main(export: bool = False, verbose: bool = False, validate: bool = True):
     # Load the current database contents
     monsters_complete_file_path = Path(config.DOCS_PATH / "monsters-complete.json")
     with open(monsters_complete_file_path) as f:
@@ -77,8 +77,8 @@ def main(export: bool = False, verbose: bool = False):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) < 8030:
-        #     continue
+        if int(monster_id) < 7526:
+            continue
 
         # Initialize the BuildMonster class, used for all monster
         builder = build_monster.BuildMonster(monster_id=monster_id,
@@ -101,7 +101,8 @@ def main(export: bool = False, verbose: bool = False):
             builder.generate_monster_object()
             builder.compare_new_vs_old_monster()
             builder.export_monster_to_json()
-            builder.validate_monster()
+            if validate:
+                builder.validate_monster()
 
     # Done processing, rejoice!
     print("Done.")
@@ -117,8 +118,13 @@ if __name__ == "__main__":
                         default=False,
                         required=False,
                         help='A boolean of whether to be verbose.')
+    parser.add_argument('--validate',
+                        default=True,
+                        required=False,
+                        help='A boolean of whether to validate using schema.')
     args = parser.parse_args()
 
     export = args.export
     verbose = args.verbose
-    main(export, verbose)
+    validate = args.validate
+    main(export, verbose, validate)

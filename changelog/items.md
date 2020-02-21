@@ -2,6 +2,18 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/02/20: Old School RuneScape's 7th Birthday
+- Added items: 7
+    - 24522,Cat ears
+    - 24523,Loose cat hair
+    - 24524,Gertrude's comb
+    - 24525,Cat ears
+    - 24526,Cat ears
+    - 24527,Hell cat ears
+    - 24528,Lamp of the gatherer
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/02/13: Nightmare Feedback and the Zalcano Loot Table
 - Added items: 2
     - 24520,Victor's cape (1000)

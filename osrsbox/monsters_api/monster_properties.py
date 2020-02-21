@@ -52,7 +52,7 @@ class MonsterProperties:
     poisonous: bool = None
     immune_poison: bool = None
     immune_venom: bool = None
-    weakness: List = None
+    attributes: List = None
     category: List = None
     slayer_monster: bool = None
     slayer_level: int = None

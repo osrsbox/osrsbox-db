@@ -70,7 +70,7 @@ def main():
             weapon_types[item_id]
         except KeyError:
             if "2h" in all_wikitext_processed[item_id] or "weapon" in all_wikitext_processed[item_id]:
-                print(f"  > No entry in weapon_types: {item_id}")
+                print(f"  > No entry in weapon_types: {item_id}, {item_data['name']}")
 
 
 if __name__ == "__main__":

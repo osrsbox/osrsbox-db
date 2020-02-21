@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.5`: Release for game update: 2020/02/20.
 - `1.3.4`: Added revenant drop tables to monsters database.
 - `1.3.3`: Added correct icons for `stacked` items.
 - `1.3.2`: Added `stacked` property to items database.

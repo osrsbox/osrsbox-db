@@ -6,12 +6,12 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'osrsbox'
-DESCRIPTION = 'A complete and up-to-date database of Old School Runescape (OSRS) items and monsters accessible using a Python API.'
+DESCRIPTION = 'A complete and up-to-date database of Old School Runescape (OSRS) items, monsters and prayers accessible using a Python API.'
 URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.3.4"
+VERSION = "1.3.5"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [

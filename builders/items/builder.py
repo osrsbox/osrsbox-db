@@ -39,7 +39,7 @@ logging.basicConfig(filename=Path(__file__).stem+".log",
 logging.info(">>> Starting builders/items/builder.py...")
 
 
-def main(export: bool = False, verbose: bool = False):
+def main(export: bool = False, verbose: bool = False, validate: bool = True):
     # Load the current database contents
     items_compltete_file_path = Path(config.DOCS_PATH / "items-complete.json")
     with open(items_compltete_file_path) as f:
@@ -130,7 +130,8 @@ def main(export: bool = False, verbose: bool = False):
             builder.generate_item_object()
             builder.compare_new_vs_old_item()
             builder.export_item_to_json()
-            builder.validate_item()
+            if validate:
+                builder.validate_item()
         else:
             builder.populate_from_cache_data()
             builder.populate_non_wiki_item()
@@ -139,7 +140,8 @@ def main(export: bool = False, verbose: bool = False):
             builder.generate_item_object()
             builder.compare_new_vs_old_item()
             builder.export_item_to_json()
-            builder.validate_item()
+            if validate:
+                builder.validate_item()
 
     # Done processing, rejoice!
     print("Done.")
@@ -155,8 +157,13 @@ if __name__ == "__main__":
                         default=False,
                         required=False,
                         help='A boolean of whether to be verbose.')
+    parser.add_argument('--validate',
+                        default=True,
+                        required=False,
+                        help='A boolean of whether to validate using schema.')
     args = parser.parse_args()
 
     export = args.export
     verbose = args.verbose
-    main(export, verbose)
+    validate = args.validate
+    main(export, verbose, validate)
