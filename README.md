@@ -19,12 +19,12 @@ The prayer database documentes each prayer that available in-game and has detail
 ## Table of Contents
 
 - [Project Summary](#project-summary)
+- [The `osrsbox` Python PyPi Package](#the-osrsbox-python-pypi-package)
+- [The osrsbox RESTful API](#the-osrsbox-restful-api)
+- [The `osrsbox-db` GitHub Repository](#the-osrsbox-db-github-repository)
 - [The Item Database](#the-item-database)
 - [The Monster Database](#the-monster-database)
 - [The Prayer Database](#the-prayer-database)
-- [The `osrsbox` Python PyPi Package](#the-osrsbox-python-pypi-package)
-- [The `osrsbox-db` Static JSON API](#the-osrsbox-db-static-json-api)
-- [The `osrsbox-db` GitHub Repository](#the-osrsbox-db-github-repository)
 - [Additional Project Information](#additional-project-information)
     - [Project Feedback](#project-feedback)
     - [Project Contribution](#project-contribution)
@@ -33,7 +33,7 @@ The prayer database documentes each prayer that available in-game and has detail
 
 ## Project Summary
 
-The osrsbox-db project provides three primary data sources:
+The osrsbox-db project provides three primary data sources for:
 
 1. **Items**
 1. **Monsters**
@@ -42,9 +42,170 @@ The osrsbox-db project provides three primary data sources:
 The osrsbox-db project and data is accessible using three primary methods:
 
 1. [**The Python PyPi package**](https://pypi.org/project/osrsbox/)
-1. [**The static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs) - Note: this will be removed soon, replaced by the new RESTful API
 1. [**The RESTful API**](https://github.com/osrsbox/osrsbox-api/)
 1. [**The GitHub development repository**](https://github.com/osrsbox/osrsbox-db/)
+
+## The `osrsbox` Python PyPi Package
+
+If you want to access the item and monster database programmatically using Python, the simplest option is to use the [`osrsbox` package available from PyPi](https://pypi.org/project/osrsbox/). You can load the item and/or monster database and process item objects, monster objects, and their properties. 
+
+### Package Quick Start
+
+- Make sure you have >= Python 3.6
+- Install package using: `pip install osrsbox`
+- Item database quick start:
+    - Import items API using: `from osrsbox import items_api`
+    - Load all items using: `all_db_items = items_api.load()`
+    - Loop items using: `for item in all_db_items: print(item.name)`
+- Monster database quick start:
+    - Import monsters API using: `from osrsbox import monsters_api`
+    - Load all monsters using: `all_db_monsters = monsters_api.load()`
+    - Loop monsters using: `for monster in all_db_monsters: print(monster.name)`
+- Prayer database quick start:
+    - Import prayers API using: `from osrsbox import prayers_api`
+    - Load all prayers using: `all_db_prayers = prayers_api.load()`
+    - Loop prayers using: `for prayer in all_db_prayers: print(prayer.name)`
+
+### Package Requirements
+
+For the `osrsbox` PyPi package you must meet the following requirements:
+
+- Python 3.6 or above
+- Pip package manager
+- Dataclasses package (if Python is below 3.7)
+
+If you are using Python 3.6, the `dataclasses` package will automatically be installed. If you are using Python 3.7 or above, the `dataclasses` package is part of the standard library and will not be installed automatically.
+
+### Package Installation
+
+The easiest way to install the osrsbox package is through the [Python Package Index](http://pypi.python.org/) using the `pip` command. You need to have `pip` installed - and make sure it is updated (especially on Windows). Then you can install the `osrsbox` package using the following `pip` command:
+
+```
+pip install osrsbox
+```
+
+### Package Upgrading
+
+The package is consistently updated - usually after each weekly in-game update. This is because the in-game update usually introduces additional items into the game or changes existing items. Therefore, you should regularly check and update the `osrsbox` package. To achieve this, run `pip` with the `upgrade` flag, as demonstrated in the following command:
+
+```
+pip install --upgrade osrsbox
+```
+
+### Package Usage 
+
+The key use of the `osrsbox` package is to load and automate the processing of OSRS items and their associated metadata. You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module or `monsters_api` module. A simple example of using the package to `load` all the items, then loop and print out the item ID and name of every item in OSRS is provided below:
+
+```
+phoil@gilenor ~ $ python3.6
+Python 3.6.8 (default, Jan 14 2019, 11:02:34) 
+[GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from osrsbox import items_api
+>>> all_db_items = items_api.load()
+>>> for item in all_db_items:
+...     print(item.id, item.name)
+```
+
+Instead of using the Python interpreter, you can also write a simple script and import the `osrsbox` Python package. An example script is provided below, this time for the `monsters_api`:
+
+```
+#!/usr/bin/python3
+
+from osrsbox import monsters_api
+
+all_db_monsters = monsters_api.load()
+for monster in all_db_monsters:
+    print(monster.id, monster.name)
+```
+
+If you would like to review additional examples of using the `osrsbox` Python API, have a look at the [`items_api_examples` folder](https://github.com/osrsbox/osrsbox-db/tree/master/osrsbox/items_api_examples) and [`monsters_api_examples` folder](https://github.com/osrsbox/osrsbox-db/tree/master/osrsbox/monsters_api_examples). There are a number of scripts available that provide examples of loading and processing data using the Python API. 
+
+## The osrsbox RESTful API
+
+The [official osrsbox-api GitHub repository](https://github.com/osrsbox/osrsbox-api) hosts the source code used for the RESTful API. The official `osrsbox-api` project is available from:
+
+- [https://api.osrsbox.com](https://api.osrsbox.com)
+
+Have a look at the [official `osrsbox-api` project README](https://github.com/osrsbox/osrsbox-api/blob/master/README.md) for more information on API endpoints, documentation, Swagger UI availability and examples of API queries.
+
+## The `osrsbox-db` GitHub Repository 
+
+The [official osrsbox-db GitHub repository](https://github.com/osrsbox/osrsbox-db) hosts the source code for the entire osrsbox-db project. The Python PyPi package is located in the `osrsbox` folder of the official development repository, while the other folders in this repository are used to store essential data and Python modules to build the item database. 
+
+### Using the Development Repository
+
+If using this repository (the development version), you will need to fulfil some specific requirements. This includes having the following tools available on your system:
+
+- Python 3.6 or above
+- Pip - the standard package manager for Python
+- A selection of additional Python packages
+
+As a short example, I configured my Ubuntu 18.04 system to run the development repository code using the following steps:
+
+```
+sudo apt update
+sudo apt install python3-pip
+```
+
+These two commands will install the `pip3` command, allowing the installation of Python packages. Then you can use `pip3` to install additional packages. The development repository requires a variety of Python packages in addition to the mandatory `dataclasses` package. These package requirements are documented in the [`requirements.txt`](https://github.com/osrsbox/osrsbox-db/tree/master/requirements.txt) file. It is recommended to use the `venv` module to set up your environment, then install the specified requirements. As an example, the following workflow is provided for Linux-based environments (make sure `python3` is available first):
+
+```
+git clone --recursive https://github.com/osrsbox/osrsbox-db.git
+cd osrsbox-db
+python -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+When you have finished with working in the `osrsbox-db` repository, make sure to deactivate the current `venv` environment using:
+
+```
+deactivate
+```
+
+### Summary of Repository Structure
+
+- `builders`: The builders are the code that performs automatic regeneration of the databases. These builders read in a variety of data and produce a JSON file for each item or monster.
+    - `items`: The item database builder that uses a collection of Python scripts to build the item database. The `builder.py` script is the primary entry point, and the `build_item.py` module does the processing of each item.
+    - `monsters`: The monster database builder that uses a collection of Python scripts to build the monster database. The `builder.py` script is the primary entry point, and the `build_monster.py` module does the processing of each monster. Additionally, the `drop_table.py` module contains a selection of hard-coded drop tables for the various OSRS Wiki drop table templates such as the rare, herb, seed, gem and catacombs drop tables.
+- `changelog`: A collection of markdown files that document the changes to items, monsters and PyPi package releases.
+- `data`: Collection of useful data files used in the osrsbox-db project.
+    - `cache`: OSRS client cache dump (not present in repository due to size, but populated using the `scripts/cache` scripts).
+    - `items`: Data used for item database generation.
+    - `monsters`: Data used for monster database generation.
+    - `schemas`: JSON schemas for the item and monster database, as well as schemas for item, npc and object definitions from cache data.
+    - `wiki`: OSRS Wiki data dump including all item and monster page titles and page data.
+- `docs`: The publicly accessible item database available through this repo or by using the static JSON API. This folder contains the actual item database that is publicly available, or browsable within this repository (see section above for more information).
+- `osrsbox`: The Python PyPi package:
+    - `items_api`: The Python API for interacting with the items database. The API has modules to load all items in the database, iterate through items, and access the different item properties.
+    - `items_api_examples`: A collection of simple Python scripts that use the `items_api` to provide an example of what can be achieved and how to use the items database.
+    - `monsters_api`: The Python API for interacting with the monster database. The API has modules to load all monsters in the database, iterate through items, and access different monster properties.
+    - `monsters_api_examples`: A collection of simple Python scripts that use the `monsters_api` to provide an example of what can be achieved and how to use the monster's database.
+- `scripts`: A collection of scripts (using Python and BASH) to help automate common tasks including dumping the OSRS cache, scraping the OSRS wiki, generating schemas, updating the databases, and inserting data into a MongoDB database.
+    - `cache`: A collection of scripts to extract useful data from the OSRS cache item, npc and object definition files.
+    - `items`: A collection of scripts to help process data for the item builder.
+    - `mongodb`: A collection of scripts for creating and inserting data into the MongoDB database.
+    - `schemas`: A collection of scripts for generating and parsing the JSON schemas used in this project.
+    - `update`: A collection of scripts for automating the data collection and database regeneration.
+    - `wiki`: A collection of scripts for automating data extraction from the OSRS Wiki using the MediaWiki API.
+- `test`: A collection of PyTest tests.
+
+### Item, Monster and Prayer Database Schemas
+
+Technically, the `osrsbox-db` is not really a database - more specifically it should be called a data set. Anyway... the contents in the item/monster/prayer database need to adhere to a specified structure, as well as specified data types for each property. This is achieved (documented and tested) using the [Cerberus project](https://docs.python-cerberus.org/en/stable/). The Cerberus schema is useful to determine the properties that are available for each entity, and the types and requirements for each property, including:
+
+- `type`: Specifies the data type (e.g., boolean, integer, string)
+- `required`: If the property must be populated (true or false)
+- `nullable`: If the property can be set to `null` or `None`
+
+The Cerberus schemas are provided in a dedicated repository called [`osrsbox/schemas`](https://github.com/osrsbox/schemas), and implorted into this project as a submodule - this is because the schemas are used in other respositories and central management is required. The schemas are loaded into the `data/schemas` folder and includes:
+
+1. [`schema-items.json`](https://github.com/osrsbox/schemas/blob/master/schema-items.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
+1. [`schema-monsters.json`](https://github.com/osrsbox/schemas/blob/master/schema-monsters.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
+1. [`schema-prayers.json`](https://github.com/osrsbox/schemas/blob/master/schema-prayers.json): This file defines the prayer schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
+
+All Cerberus schema files are authored using Cerberus version 1.3.2. This project uses the [`Cerberus` PyPi package](https://pypi.org/project/Cerberus/).
 
 ## The Item Database
 
@@ -617,270 +778,6 @@ A description of the properties that each prayer in the database can have is use
     }
 }
 ```
-
-## The `osrsbox` Python PyPi Package
-
-If you want to access the item and monster database programmatically using Python, the simplest option is to use the [`osrsbox` package available from PyPi](https://pypi.org/project/osrsbox/). You can load the item and/or monster database and process item objects, monster objects, and their properties. 
-
-### Package Quick Start
-
-- Make sure you have >= Python 3.6
-- Install package using: `pip install osrsbox`
-- Item database quick start:
-    - Import items API using: `from osrsbox import items_api`
-    - Load all items using: `all_db_items = items_api.load()`
-    - Loop items using: `for item in all_db_items: print(item.name)`
-- Monster database quick start:
-    - Import monsters API using: `from osrsbox import monsters_api`
-    - Load all monsters using: `all_db_monsters = monsters_api.load()`
-    - Loop monsters using: `for monster in all_db_monsters: print(monster.name)`
-- Prayer database quick start:
-    - Import prayers API using: `from osrsbox import prayers_api`
-    - Load all prayers using: `all_db_prayers = prayers_api.load()`
-    - Loop prayers using: `for prayer in all_db_prayers: print(prayer.name)`
-
-### Package Requirements
-
-For the `osrsbox` PyPi package you must meet the following requirements:
-
-- Python 3.6 or above
-- Pip package manager
-- Dataclasses package (if Python is below 3.7)
-
-If you are using Python 3.6, the `dataclasses` package will automatically be installed. If you are using Python 3.7 or above, the `dataclasses` package is part of the standard library and will not be installed automatically.
-
-### Package Installation
-
-The easiest way to install the osrsbox package is through the [Python Package Index](http://pypi.python.org/) using the `pip` command. You need to have `pip` installed - and make sure it is updated (especially on Windows). Then you can install the `osrsbox` package using the following `pip` command:
-
-```
-pip install osrsbox
-```
-
-### Package Upgrading
-
-The package is consistently updated - usually after each weekly in-game update. This is because the in-game update usually introduces additional items into the game or changes existing items. Therefore, you should regularly check and update the `osrsbox` package. To achieve this, run `pip` with the `upgrade` flag, as demonstrated in the following command:
-
-```
-pip install --upgrade osrsbox
-```
-
-### Package Usage 
-
-The key use of the `osrsbox` package is to load and automate the processing of OSRS items and their associated metadata. You can load the package using `import osrsbox`, however, you probably want to load the `items_api` module or `monsters_api` module. A simple example of using the package to `load` all the items, then loop and print out the item ID and name of every item in OSRS is provided below:
-
-```
-phoil@gilenor ~ $ python3.6
-Python 3.6.8 (default, Jan 14 2019, 11:02:34) 
-[GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> from osrsbox import items_api
->>> all_db_items = items_api.load()
->>> for item in all_db_items:
-...     print(item.id, item.name)
-```
-
-Instead of using the Python interpreter, you can also write a simple script and import the `osrsbox` Python package. An example script is provided below, this time for the `monsters_api`:
-
-```
-#!/usr/bin/python3
-
-from osrsbox import monsters_api
-
-all_db_monsters = monsters_api.load()
-for monster in all_db_monsters:
-    print(monster.id, monster.name)
-```
-
-If you would like to review additional examples of using the `osrsbox` Python API, have a look at the [`items_api_examples` folder](https://github.com/osrsbox/osrsbox-db/tree/master/osrsbox/items_api_examples) and [`monsters_api_examples` folder](https://github.com/osrsbox/osrsbox-db/tree/master/osrsbox/monsters_api_examples). There are a number of scripts available that provide examples of loading and processing data using the Python API. 
-
-## The `osrsbox-db` Static JSON API
-
-This project also includes an Internet-accessible, static JSON API for all items/monsters in the database. The JSON API was originally written for the [`osrsbox-tooltips` project](https://github.com/osrsbox/osrsbox-tooltips) but has since been used for a variety of other projects. The JSON API is useful when you do not want to write a program in Python (as using the PyPi package is probably easier), but would like to fetch the database information programmatically over the Internet, and receive the data back in nicely structured JSON syntax. A key example is a web application. 
-
-### Static JSON API Files
-
-The JSON API is available in the [`docs` folder](https://github.com/osrsbox/osrsbox-db/tree/master/docs/) in the osrsbox-db project repository. This folder contains the publicly available database and somewhat-RESTful API of osrsbox-db (read: not RESTful at all, as it only supports HTTP GET requests). Every file inside this specific folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any name of any file from the `docs` folder to the base URL, and you can fetch this data. You can also clone the entire osrsbox-db project repository and access the files provided in this folder, or download a single file for offline processing. A summary of the folders/files provided in the JSON API are listed below with descriptions:
-
-- `items-complete.json`: A single JSON file that combines all single JSON files from `items-json` folder. This file contains the entire osrsbox-db items database in one file. This is useful if you want to get the data for every single item.
-- `items-icons`: Collection of PNG files (20K+) for every item inventory icon in OSRS. Each inventory icon is named using the unique item ID number.
-- `items-json`: Collection of JSON files (20K+) of extensive item metadata for every item in OSRS. This folder contains the entire osrsbox-db item database where each item has an individual JSON file, named using the unique item ID number. This is useful when you want to fetch data for a single item where you already know the item ID number.
-- `items-json-slot`: Collection of JSON files extracted from the database that are specific for each equipment slot (e.g., head, legs). This is useful when you want to only get item data for equipable items for one, or multiple, specific item slot.
-- `items-summary.json`: A single JSON file that contains only the item names and item ID numbers. This file is useful when you want to download a small file (1.1MB) to quickly scan/process item data when you only need the item name and/or ID number.
-- `models-summary.json`: A single JSON file that contains model ID numbers for items, objects, and NPCs. This file is useful to determine the model ID number for a specific item, object or NPC.
-- `monsters-complete.json`: A single JSON file that combines all single JSON files from the `monsters-json` folder. This file contains the entire osrsbox-db monster database in one file. This is useful if you want to get the data for every single monster in one file.
-- `monsters-json`: Collection of JSON files (2.5K+) of extensive monster metadata for every monster in OSRS. This folder contains the entire osrsbox-db monster database where each monster has an individual JSON file, named using the unique monster ID number. This is useful when you want to fetch data for a single monster where you already know the item ID number.
-- `npcs-summary.json`: A single JSON file that contains only the NPC names and NPC ID numbers. This file is useful when you want to download a small file (0.35MB) to quickly scan/process NPC data when you only need the NPC name and/or ID number. Note that this file contains both attackable, and non-attackable (monster) NPCs.
-- `objects-summary.json`: A single JSON file that contains only the object names and object ID numbers. This file is useful when you want to download a small file (0.86MB) to quickly scan/process in-game object data when you only need the object name and/or ID number.
-- `prayer-icon`: Collection of PNG files for each prayer in OSRS.
-- `prayer-json`: Collection of individual JSON files with properties and metadata about OSRS prayers.
-
-### Accessing the Static JSON API
-
-The JSON file for each OSRS item can be directly accessed using unique URLs provide through the [`osrsbox.com`](https://www.osrsbox.com/osrsbox-db/) base URL. As mentioned, you can fetch JSON files using a unique URL, but cannot modify any JSON content. Below is a list of URL examples for items and monsters in the osrsbox-db database:
-
-- [`https://www.osrsbox.com/osrsbox-db/items-json/2.json`](https://www.osrsbox.com/osrsbox-db/items-json/2.json)
-- [`https://www.osrsbox.com/osrsbox-db/items-json/74.json`](https://www.osrsbox.com/osrsbox-db/items-json/74.json)
-- [`https://www.osrsbox.com/osrsbox-db/items-json/35.json`](https://www.osrsbox.com/osrsbox-db/items-json/35.json)
-- [`https://www.osrsbox.com/osrsbox-db/items-json/415.json`](https://www.osrsbox.com/osrsbox-db/items-json/415.json)
-- [`https://www.osrsbox.com/osrsbox-db/items-json/239.json`](https://www.osrsbox.com/osrsbox-db/items-json/239.json)
-
-As displayed by the links above, each item or monster is stored in the `osrsbox-db` repository, under the [`items-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/items-json) folder or [`monsters-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/monsters-json) folder. In addition to the single JSON files for each item, many other JSON files can be fetched. Some more examples are provided below:
-
-- [`https://www.osrsbox.com/osrsbox-db/items-complete.json`](https://www.osrsbox.com/osrsbox-db/items-complete.json)
-- [`https://www.osrsbox.com/osrsbox-db/monsters-complete.json`](https://www.osrsbox.com/osrsbox-db/monsters-complete.json)
-- [`https://www.osrsbox.com/osrsbox-db/items-summary.json`](https://www.osrsbox.com/osrsbox-db/items-summary.json)
-- [`https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json`](https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json)
-- [`https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json`](https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json)
-
-So how can you get and use these JSON files about OSRS items? It is pretty easy but depends on what you are trying to accomplish and what programming language you are using. Some examples are provided in the following subsections.
-
-### Accessing the JSON API using Command Line Tools
-
-Take a simple example of downloading a single JSON file. In a Linux system, we could use the `wget` command to download a single JSON file, as illustrated in the example code below:
-
-```
-wget https://www.osrsbox.com/osrsbox-db/items-json/12453.json
-```
-
-You could perform a similar technique using the `curl` tool:
-
-```
-curl https://www.osrsbox.com/osrsbox-db/items-json/12453.json
-```
-
-For Windows users, you could use PowerShell:
-
-```
-Invoke-WebRequest -Uri "https://www.osrsbox.com/osrsbox-db/items-json/12453.json" -OutFile "12453.json"
-```
-
-### Accessing the JSON API using Python
-
-Maybe you are interested in downloading a single (or potentially multiple) JSON files about OSRS items and processing the information in a Python program. The short script below downloads the `12453.json` file using Python's `urllib` library, loads the data as a JSON object and prints the contents to the console. The code is a little messy, primarily due to supporting both Python 2 and 3 - as you can see from the `try` and `except` importing method implemented.
-
-```
-import json
-
-try:
-    from urllib.request import urlopen
-except ImportError:
-    from urllib2 import urlopen
-
-url = ("https://www.osrsbox.com/osrsbox-db/items-json/12453.json")
-response = urlopen(url)
-data = response.read().decode("utf-8")
-json_obj = json.loads(data)
-print(json_obj)
-```
-
-### Accessing the JSON API using JavaScript
-
-Finally, let's have a look at JavaScript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a web page. The example below is a very simple method to download the JSON file using the jQuery `getJSON` function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., `name` and _Black wizard hat (g)_) on its own line in a `div` element.
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-          $("button").click(function(){
-              $.getJSON("https://www.osrsbox.com/osrsbox-db/items-json/12453.json", function(result){
-                  $.each(result, function(i, field){
-                      $("div").append(i + " " + field + "<br>");
-                  });
-              });
-          });
-      });
-    </script>
-  </head>
-  <body>
-    <button>Get JSON data</button>
-    <div></div>
-  </body>
-</html>
-```
-
-## The `osrsbox-db` GitHub Repository 
-
-The [official osrsbox-db GitHub repository](https://github.com/osrsbox/osrsbox-db) hosts the source code for the entire osrsbox-db project. The Python PyPi package is located in the `osrsbox` folder of the official development repository, while the other folders in this repository are used to store essential data and Python modules to build the item database. 
-
-### Using the Development Repository
-
-If using this repository (the development version), you will need to fulfil some specific requirements. This includes having the following tools available on your system:
-
-- Python 3.6 or above
-- Pip - the standard package manager for Python
-- Virtualenv - a tool to create isolated virtual environments
-- A selection of additional Python packages
-
-As a short example, I configured my Ubuntu 18.04 system to run the development repository code using the following steps:
-
-```
-sudo apt update
-sudo apt install python3-pip
-pip3 install virtualenv
-```
-
-These three commands will install the `pip3` command, allowing the installation of Python package. Then you can use `pip3` to install the `virtualenv` tool, allowing the creation of a virtualized and isolated Python development environment. Then we can install more Python packages that are used in this project. The PyPi `osrsbox` package requires a variety of Python packages in addition to the mandatory `dataclasses` package. These package requirements are documented in the [`requirements.txt`](https://github.com/osrsbox/osrsbox-db/tree/master/requirements.txt) file. It is recommended to use `virtualenv` tool to set up your environment, then install the specified requirements. As an example, the following workflow is provided for Linux-based environments (make sure `virtualenv`, and `python3` are available first):
-
-```
-git clone https://github.com/osrsbox/osrsbox-db.git
-cd osrsbox-db
-virtualenv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-```
-
-When you have finished with working in the `osrsbox-db` repository, make sure to deactivate the current `virtualenv` environment using:
-
-```
-deactivate
-```
-
-### Summary of Repository Structure
-
-- `builders`: The builders are the code that performs automatic regeneration of the databases. These builders read in a variety of data and produce a JSON file for each item or monster.
-    - `items`: The item database builder that uses a collection of Python scripts to build the item database. The `builder.py` script is the primary entry point, and the `build_item.py` module does the processing of each item.
-    - `monsters`: The monster database builder that uses a collection of Python scripts to build the monster database. The `builder.py` script is the primary entry point, and the `build_monster.py` module does the processing of each monster. Additionally, the `drop_table.py` module contains a selection of hard-coded drop tables for the various OSRS Wiki drop table templates such as the rare, herb, seed, gem and catacombs drop tables.
-- `changelog`: A collection of markdown files that document the changes to items, monsters and PyPi package releases.
-- `data`: Collection of useful data files used in the osrsbox-db project.
-    - `cache`: OSRS client cache dump (not present in repository due to size, but populated using the `scripts/cache` scripts).
-    - `items`: Data used for item database generation.
-    - `monsters`: Data used for monster database generation.
-    - `schemas`: JSON schemas for the item and monster database, as well as schemas for item, npc and object definitions from cache data.
-    - `wiki`: OSRS Wiki data dump including all item and monster page titles and page data.
-- `docs`: The publicly accessible item database available through this repo or by using the static JSON API. This folder contains the actual item database that is publicly available, or browsable within this repository (see section above for more information).
-- `osrsbox`: The Python PyPi package:
-    - `items_api`: The Python API for interacting with the items database. The API has modules to load all items in the database, iterate through items, and access the different item properties.
-    - `items_api_examples`: A collection of simple Python scripts that use the `items_api` to provide an example of what can be achieved and how to use the items database.
-    - `monsters_api`: The Python API for interacting with the monster database. The API has modules to load all monsters in the database, iterate through items, and access different monster properties.
-    - `monsters_api_examples`: A collection of simple Python scripts that use the `monsters_api` to provide an example of what can be achieved and how to use the monster's database.
-- `scripts`: A collection of scripts (using Python and BASH) to help automate common tasks including dumping the OSRS cache, scraping the OSRS wiki, generating schemas, updating the databases, and inserting data into a MongoDB database.
-    - `cache`: A collection of scripts to extract useful data from the OSRS cache item, npc and object definition files.
-    - `items`: A collection of scripts to help process data for the item builder.
-    - `mongodb`: A collection of scripts for creating and inserting data into the MongoDB database.
-    - `schemas`: A collection of scripts for generating and parsing the JSON schemas used in this project.
-    - `update`: A collection of scripts for automating the data collection and database regeneration.
-    - `wiki`: A collection of scripts for automating data extraction from the OSRS Wiki using the MediaWiki API.
-- `test`: A collection of PyTest tests.
-
-### Item, Monster and Prayer Database Schemas
-
-Technically, the `osrsbox-db` is not really a database - more specifically it should be called a data set. Anyway... the contents in the item/monster/prayer database need to adhere to a specified structure, as well as specified data types for each property. This is achieved (documented and tested) using the [Cerberus project](https://docs.python-cerberus.org/en/stable/). The Cerberus schema is useful to determine the properties that are available for each entity, and the types and requirements for each property, including:
-
-- `type`: Specifies the data type (e.g., boolean, integer, string)
-- `required`: If the property must be populated (true or false)
-- `nullable`: If the property can be set to `null` or `None`
-
-The Cerberus schemas are provided in a dedicated repository called [`osrsbox/schemas`](https://github.com/osrsbox/schemas), and implorted into this project as a submodule - this is because the schemas are used in other respositories and central management is required. The schemas are loaded into the `data/schemas` folder and includes:
-
-1. [`schema-items.json`](https://github.com/osrsbox/schemas/blob/master/schema-items.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
-1. [`schema-monsters.json`](https://github.com/osrsbox/schemas/blob/master/schema-monsters.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
-1. [`schema-prayers.json`](https://github.com/osrsbox/schemas/blob/master/schema-prayers.json): This file defines the prayer schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
-
-All Cerberus schema files are authored using Cerberus version 1.3.2. This project uses the [`Cerberus` PyPi package](https://pypi.org/project/Cerberus/).
 
 ## Additional Project Information
 

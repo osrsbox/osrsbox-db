@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/02/27: Game Improvements and Email Linking for Mobile Accounts
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/02/20: Old School RuneScape's 7th Birthday
 - Added items: 7
     - 24522,Cat ears

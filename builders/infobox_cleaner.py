@@ -603,10 +603,7 @@ def clean_attack_type(value: str) -> List:
         attack_type_list.append("dragonfire")
 
     if "range" in value:
-        if "long-range" not in value or "short-range" not in value:
-            attack_type_list.append("ranged")
-        if "[[ranged]]" in value:
-            attack_type_list.append("ranged")
+        attack_type_list.append("ranged")
 
     if "magic" in value and "dragonfire" not in value:
         attack_type_list.append("magic")
@@ -676,11 +673,16 @@ def clean_category(value: str) -> str:
     if "|" in value:
         value = value.split("|")[1]
 
+    value_list = None
     if "," in value:
-        value = value.split(",")
+        value_list = list()
+        for v in value.split(","):
+            v = v.strip()
+            value_list.append(v)
 
-    if isinstance(value, list):
-        category_list += value
+    if value_list:
+        for value in value_list:
+            category_list.append(value)
     else:
         category_list.append(value)
 

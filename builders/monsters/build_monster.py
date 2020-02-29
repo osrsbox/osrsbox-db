@@ -454,7 +454,7 @@ class BuildMonster:
             attributes = infobox_cleaner.clean_attributes(attributes)
             self.monster_dict["attributes"] = attributes
         else:
-            self.monster_dict["attributes"] = None
+            self.monster_dict["attributes"] = list()
             # self.monster_dict["incomplete"] = True
 
         # CATEGORY: Determine category of the monster
