@@ -91,6 +91,11 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
     with open(icons_file_path) as f:
         icons_data = json.load(f)
 
+    # Load duplicate item data
+    duplicates_file_path = Path(config.DATA_ITEMS_PATH / "duplicate-items.json")
+    with open(duplicates_file_path) as f:
+        duplicate_items = json.load(f)
+
     # Load schema data
     schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
     with open(schema_file_path) as f:
@@ -117,6 +122,7 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
                                        weapon_stances_data=weapon_stances_data,
                                        invalid_items_data=invalid_items_data,
                                        known_items=known_items,
+                                       duplicate_items=duplicate_items,
                                        icons_data=icons_data,
                                        schema_data=schema_data,
                                        export=export,
@@ -126,7 +132,8 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
         if preprocessing_status["status"]:
             builder.populate_item()
             known_item = builder.check_duplicate_item()
-            known_items.append(known_item)
+            if known_item:
+                known_items.append(known_item)
             builder.generate_item_object()
             builder.compare_new_vs_old_item()
             builder.export_item_to_json()
@@ -136,7 +143,8 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
             builder.populate_from_cache_data()
             builder.populate_non_wiki_item()
             known_item = builder.check_duplicate_item()
-            known_items.append(known_item)
+            if known_item:
+                known_items.append(known_item)
             builder.generate_item_object()
             builder.compare_new_vs_old_item()
             builder.export_item_to_json()

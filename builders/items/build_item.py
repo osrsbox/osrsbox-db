@@ -74,6 +74,8 @@ class BuildItem:
         self.invalid_items_data = kwargs["invalid_items_data"]
         # A list of already known (processed) items
         self.known_items = kwargs["known_items"]
+        # A dictionary of know duplicate items
+        self.duplicate_items = kwargs["duplicate_items"]
         # Dictionary of item icons
         self.icons_data = kwargs["icons_data"]
         # The item schema
@@ -154,43 +156,61 @@ class BuildItem:
     def check_duplicate_item(self) -> ItemProperties:
         """Determine if this is a duplicate item.
 
-        :return: An ItemDeinition object.
+        :return: An ItemProperties object.
         """
         # Start by setting the duplicate property to False
         self.item_dict["duplicate"] = False
         # Create an ItemProperties object
         item_properties = ItemProperties(**self.item_dict)
 
+        # Check list of known bad duplicates
+        if str(item_properties.id) in self.duplicate_items:
+            duplicate_status = self.duplicate_items[str(item_properties.id)]["duplicate"]
+            self.item_dict["duplicate"] = duplicate_status
+            return None
+
+        # Check noted, placeholder and noted properties
+        # If any of these properties, it must be a duplicate
+        if item_properties.stacked or item_properties.noted or item_properties.placeholder:
+            self.item_dict["duplicate"] = True
+            return None
+
         # Set the item properties that we want to compare
         correlation_properties = {
-            "wiki_name": False,
-            "noted": False,
-            "placeholder": False,
-            "equipable": False,
-            "equipable_by_player": False,
-            "equipable_weapon": False
+            "name": False,
+            "wiki_name": False
         }
 
         # Loop the list of currently (already processed) items
         for known_item in self.known_items:
-            # Do a quick name check before deeper inspection
+            # Skip when cache names are not the same
             if item_properties.name != known_item.name:
                 continue
 
-            # If the cache names are equal, do further inspection
+            # Check equality of each correlation property
             for cprop in correlation_properties:
                 if getattr(item_properties, cprop) == getattr(known_item, cprop):
                     correlation_properties[cprop] = True
 
-            # Check is all values in correlation properties are True
+            # Check all values in correlation properties are True
             correlation_result = all(value is True for value in correlation_properties.values())
+
+            # If name and wiki_name match, set duplicate property to True
             if correlation_result:
+                item_properties.duplicate = True
                 self.item_dict["duplicate"] = True
+                return item_properties
 
-        # Check stacked property... If stacked, it must be a duplicate
-        if item_properties.stacked:
-            self.item_dict["duplicate"] = True
+            # If wiki_name is None, but cache names match...
+            # The item must also be a duplicate
+            if not item_properties.wiki_name:
+                item_properties.duplicate = True
+                self.item_dict["duplicate"] = True
+                return item_properties
 
+        # If we made it this far, no duplicates were found
+        item_properties.duplicate = False
+        self.item_dict["duplicate"] = False
         return item_properties
 
     def generate_item_object(self):

@@ -124,8 +124,9 @@ class AllItems:
         for item in self.all_items:
             if keyword.lower() in item.name.lower():
                 item_results.append(item)
-            elif keyword.lower() in item.wiki_name.lower():
-                item_results.append(item)
+            elif item.wiki_name:
+                if keyword.lower() in item.wiki_name.lower():
+                    item_results.append(item)
 
         return item_results
 
