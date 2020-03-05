@@ -2,6 +2,23 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/03/01: Phosani's Nightmare and Tinted Hitsplats
+- Added monsters: 12
+    - 9416,Phosani's Nightmare
+    - 9417,Phosani's Nightmare
+    - 9418,Phosani's Nightmare
+    - 9419,Phosani's Nightmare
+    - 9420,Phosani's Nightmare
+    - 9421,Phosani's Nightmare
+    - 9422,Phosani's Nightmare
+    - 9466,Husk
+    - 9467,Husk
+    - 9468,Parasite
+    - 9469,Parasite
+    - 9470,Sleepwalker
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/02/27: Game Improvements and Email Linking for Mobile Accounts
 - Added monsters: 0
 - Removed monsters: 0

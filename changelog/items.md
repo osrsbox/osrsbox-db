@@ -2,6 +2,22 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/03/01: Phosani's Nightmare and Tinted Hitsplats
+- Added items: 2
+    - 24529,Harmony
+    - 24530,Harmony
+- Removed items: 3
+    - 24522,Cat ears
+    - 24523,Loose cat hair
+    - 24524,Gertrude's comb
+- Changed items: 6
+    - 11739,Opened herb box,name
+    - 11916,Slice of birthday cake,linked_id_noted|noteable
+    - 11917,Slice of birthday cake,linked_id_item|noted|noteable|stackable
+    - 16156,Opened herb box,name
+    - 24480,Opened coal bag,name
+    - 24481,Opened gem bag,name
+
 ### 2020/02/27: Game Improvements and Email Linking for Mobile Accounts
 - Added items: 0
 - Removed items: 0

@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.9`: Release for game update: 2020/03/01.
 - `1.3.8`: Fixed `duplicate` property to be more strict/accurate.
 - `1.3.7`: Release for game update: 2020/02/27.
 - `1.3.6`: Fixed `stacked` property to have integer count value.

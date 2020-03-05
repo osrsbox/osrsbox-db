@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 echo -e ">>> Updating wiki data..."
 cd ~/repos/osrsbox-db/scripts/update/
-python3 update_wiki_data.py 2020-02-19T00:00:00Z
+python3 update_wiki_data.py 2020-02-28T00:00:00Z
 
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."
@@ -116,11 +116,16 @@ cd ~/repos/osrsbox-db/
 mv data/cache/items-cache-data.json data/items/
 mv data/cache/monsters-cache-data.json data/monsters/
 
+# Perform pre update_db.sh check for...
+# item skill requirements, item weapon types, and item icons
 cd ~/repos/osrsbox-db/scripts/items/
 echo -e ">>> New items with skill requirements..."
 python3 check_item_skill_requirements.py
 echo -e ">>> New items with weapon types..."
 python3 check_item_weapon_types.py
+cd ~/repos/osrsbox-db/scripts/icons/
+echo -e ">>> New items with no icon..."
+python3 check_item_icons.py
 
 # Make sure to deactivate the venv
 deactivate
