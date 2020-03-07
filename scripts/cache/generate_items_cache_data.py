@@ -151,7 +151,8 @@ def generate_items_cache_data(definitions: Dict, stacked_variants: Dict):
                                                               definitions,
                                                               linked_id_number)
             item_data["linked_id_item"] = int(linked_id_number)
-            item_data["tradeable_on_ge"] = definitions[linked_id_number]["isTradeable"]
+            # Set tradeable_og_ge to False, as stacked variants not tradeable on GE
+            item_data["tradeable_on_ge"] = False
             # Manually set "stacked" property to True
             item_data["stacked"] = stacked_variants[item_definition["id"]]["count"]
 
