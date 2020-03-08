@@ -492,7 +492,7 @@ class BuildMonster:
         if slayer_xp is None:
             slayer_xp = self.extract_infobox_value(self.template, "slayxp")
         if slayer_xp is not None:
-            self.monster_dict["slayer_xp"] = infobox_cleaner.clean_float(slayer_xp)
+            self.monster_dict["slayer_xp"] = infobox_cleaner.clean_slayer_xp(slayer_xp)
         else:
             self.monster_dict["slayer_xp"] = None
             self.monster_dict["incomplete"] = True

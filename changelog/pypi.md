@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.11`: Fixed some bugs in `slayer_*` monster properties.
 - `1.3.10`: Fixed `tradeable_on_ge` for stacked variants.
 - `1.3.9`: Release for game update: 2020/03/01.
 - `1.3.8`: Fixed `duplicate` property to be more strict/accurate.

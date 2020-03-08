@@ -687,3 +687,42 @@ def clean_category(value: str) -> str:
         category_list.append(value)
 
     return category_list
+
+
+def clean_slayer_xp(value: str) -> float:
+    """Convert the slayer xp text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :return: A cleaned slayer_xp property value.
+    """
+    print(value)
+    if value is None:
+        return None
+    value = clean_wikitext(value)
+    if value == "":
+        return None
+    if "not" in value.lower():
+        return None
+    if "no" in value.lower():
+        return None
+    if "n/a" in value.lower():
+        return None
+    if "yes" in value.lower():
+        return None
+    if value == "None":
+        return None
+    if "-" in value.lower():
+        value = value.split("-")[0]
+
+    if isinstance(value, float):
+        return value
+    elif isinstance(value, int):
+        return float(value)
+    elif isinstance(value, str):
+        try:
+            value = float(value)
+        except ValueError:
+            print("Error converting slayer_xp value. Quitting.")
+            quit()
+
+    return value
