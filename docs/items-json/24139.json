@@ -14,7 +14,7 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
+    "equipable_by_player": true,
     "equipable_weapon": false,
     "cost": 1,
     "lowalch": 0,
@@ -26,8 +26,28 @@
     "duplicate": false,
     "examine": "A defensive weapon.",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAAA1UlEQVR4Xu2VWwqEMAxFdQl+zL9LcP+bc6ghNE2ipo84GfBAf+RiT25Ap+k/mXc4IZj3z7Icxy7lNkCWsUu1DFAFTGuTkrltXU+yHcBLSzG5FtnmtfwArsS4CG3IpSWKJqYdt5XplC1xmZ8KUSls7rF1ZeTK6DMqJs9w7lYkZXmOv7EDvRWUwRWdifFcJ3JqeoF2CYrxLM81IGXKlu4YKpPQhWousmSM9MsMRgq9MkAomYTrN6SWUDKJLBRKhgrx1IMEbeeVkbj8lVsJJYOEkgFCyUTgC6abPwP3jzDaAAAAAElFTkSuQmCC",
-    "wiki_name": "Black defender (l) (Locked)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Black_defender_(l)#Locked",
-    "equipment": null,
+    "wiki_name": "Black defender (Locked)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_defender#Locked",
+    "equipment": {
+        "attack_stab": 9,
+        "attack_slash": 8,
+        "attack_crush": 7,
+        "attack_magic": -3,
+        "attack_ranged": -2,
+        "defence_stab": 9,
+        "defence_slash": 8,
+        "defence_crush": 7,
+        "defence_magic": -3,
+        "defence_ranged": -2,
+        "melee_strength": 2,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "shield",
+        "requirements": {
+            "attack": 10,
+            "defence": 10
+        }
+    },
     "weapon": null
 }

@@ -14,7 +14,7 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
+    "equipable_by_player": true,
     "equipable_weapon": false,
     "cost": 1,
     "lowalch": 0,
@@ -26,8 +26,28 @@
     "duplicate": false,
     "examine": "A defensive weapon.",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABi0lEQVR4XtWWQWuDMBiGmx/QQw+D0pP0UIoHkdEiK46JZWWU0cMOY4exw2Dstv9/y3jz7TMx1qJWTfZADsKneZL3MzqZ/E+EpOEFQu52rzJJXlpIDbYAoUQghLHdnhpMJOTsJpHzed6gthO02jR9U1K3m+cLE5EMD1zHQVBTewX0UBIrx2eK/cnM4tKol++BS2LFzlgyuGeQXTIxxSB1TmY6DQsh+/6BEPJw+Jb3D++0Q5aME6H945d687jR0fi8c6PFpaFJo2ivhFaru0IE/WWKVUfvCHk8/qgdgUgYZjKOn4pdMcVQw0cG+q3ZWdYKigqT6IdXIzLFTCG77kqEzPNP1ciQQVzmBOcmYTGOsa6uAySTZR9qpYgIcS0W9DbZ1VV6lQEkhO1HE6/XqQyCqNWqm9Q0pBwVmni53LSS6RlRicq5DH/pEZVzGTMqhzJAR2W/4nblCOiozFPYkQygE5ZPY+cy6Bs7KrtqROio9yoq/sdxLsNReSADBvkqd0X/gnogw3glQ3gl4wO/32hzbNzckT0AAAAASUVORK5CYII=",
-    "wiki_name": "Mithril defender (l) (Locked)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Mithril_defender_(l)#Locked",
-    "equipment": null,
+    "wiki_name": "Mithril defender (Locked)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mithril_defender#Locked",
+    "equipment": {
+        "attack_stab": 10,
+        "attack_slash": 9,
+        "attack_crush": 8,
+        "attack_magic": -3,
+        "attack_ranged": -2,
+        "defence_stab": 10,
+        "defence_slash": 9,
+        "defence_crush": 8,
+        "defence_magic": -3,
+        "defence_ranged": -2,
+        "melee_strength": 3,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "shield",
+        "requirements": {
+            "attack": 20,
+            "defence": 20
+        }
+    },
     "weapon": null
 }

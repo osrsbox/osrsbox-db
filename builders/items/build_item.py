@@ -395,21 +395,6 @@ class BuildItem:
                 self.item_dict["incomplete"] = True
                 return True
 
-            if self.status == "no_bonuses_available":
-                # Equipable item with wiki page, but does not have an Infobox Bonuses template
-                # This is only ever called on ring slot items, as they sometimes have a
-                # wiki page without an Infobox Bonuses template
-                self.populate_non_wiki_item()
-                self.item_dict["equipment"] = dict()
-                for equipment_property in self.equipment_properties:
-                    self.item_dict["equipment"][equipment_property] = 0
-                self.item_dict["equipment"]["slot"] = "ring"
-                self.item_dict["equipment"]["requirements"] = None
-                self.item_dict["equipable_by_player"] = True
-                self.item_dict["equipable_weapon"] = False
-                self.item_dict["incomplete"] = True
-                return True
-
             if self.status == "normalized":
                 # Some items have a wiki page, but lookup by ID, linked ID and item name
                 # fail. So use the normalized name from the invalid-items.json file
@@ -638,16 +623,18 @@ class BuildItem:
                 self.item_dict["examine"] = None
                 self.item_dict["incomplete"] = True
 
-        # Determine if item has a buy limit
-        if not self.item_dict["tradeable"]:
+        # Set item buy limit, if it is tradeable on the GE
+        if not self.item_dict["tradeable_on_ge"]:
             self.item_dict["buy_limit"] = None
         else:
+            buy_limit = None
             try:
-                self.item_dict["buy_limit"] = int(self.buy_limits_data[self.item_dict["name"]])
-                if self.item_dict["noted"]:
-                    self.item_dict["buy_limit"] = None
+                buy_limit = self.buy_limits_data[self.item_id_str]
             except KeyError:
-                self.item_dict["buy_limit"] = None
+                print("populate_item_properties_from_wiki_data: Error setting buy limit...")
+                print(f"{self.item_id} has no buy limit available. Exiting.")
+                exit()
+            self.item_dict["buy_limit"] = buy_limit
 
         # We finished processing, set incomplete to false if not true
         if not self.item_dict.get("incomplete"):

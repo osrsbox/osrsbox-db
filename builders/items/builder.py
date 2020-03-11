@@ -61,7 +61,7 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
         invalid_items_data = json.load(f)
 
     # Load buy limit data
-    buy_limits_file_path = Path(config.DATA_ITEMS_PATH / "ge-limits-names.json")
+    buy_limits_file_path = Path(config.DATA_ITEMS_PATH / "ge-limits-ids.json")
     with open(buy_limits_file_path) as f:
         buy_limits_data = json.load(f)
 
