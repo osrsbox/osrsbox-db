@@ -695,7 +695,6 @@ def clean_slayer_xp(value: str) -> float:
     :param value: The extracted raw wiki text.
     :return: A cleaned slayer_xp property value.
     """
-    print(value)
     if value is None:
         return None
     value = clean_wikitext(value)

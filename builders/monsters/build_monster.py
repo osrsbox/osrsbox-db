@@ -500,7 +500,6 @@ class BuildMonster:
         # Quick check for slayer XP versus slayer level
         # Fix None for slayer level, when a level is not required
         if self.monster_dict["slayer_xp"] is not None:
-            # print("Here", self.monster_dict["slayer_xp"])
             if self.monster_dict["slayer_level"] is None:
                 self.monster_dict["slayer_level"] = 1
 

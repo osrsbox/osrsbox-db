@@ -79,8 +79,6 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
         # Toggle to start, stop at a specific monster ID
         # if int(monster_id) < 7526:
         #     continue
-        if int(monster_id) != 5665:
-            continue
 
         # Initialize the BuildMonster class, used for all monster
         builder = build_monster.BuildMonster(monster_id=monster_id,

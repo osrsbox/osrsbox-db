@@ -2,7 +2,12 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
-### 2020/03/01: Phosani's Nightmare and Tinted Hitsplats
+### 2020/03/12: Phosani's Nightmare and HiScores
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
+### 2020/03/05: Phosani's Nightmare and Tinted Hitsplats
 - Added items: 2
     - 24529,Harmony
     - 24530,Harmony
