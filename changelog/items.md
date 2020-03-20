@@ -2,6 +2,15 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2010/03/19: Last Man Standing Changes
+- Added items: 4
+    - 24531,Runner hat (broken)
+    - 24532,Runner hat (broken)
+    - 24533,Runner hat (l)
+    - 24534,Mithril seeds
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/03/12: Phosani's Nightmare and HiScores
 - Added items: 0
 - Removed items: 0

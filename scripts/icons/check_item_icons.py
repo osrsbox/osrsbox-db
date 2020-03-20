@@ -35,7 +35,7 @@ def main():
         items_cache_data = json.load(f)
 
     # Load current icons-items-complete.json file
-    icons_items_file_path = Path(config.DATA_ITEMS_PATH / "icons-items-complete.json")
+    icons_items_file_path = Path(config.DATA_ICONS_PATH / "icons-items-complete.json")
     with open(icons_items_file_path) as f:
         icon_items = json.load(f)
 

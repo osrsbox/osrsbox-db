@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2010/03/19: Last Man Standing Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/03/12: Phosani's Nightmare and HiScores
 - Added monsters: 0
 - Removed monsters: 0
