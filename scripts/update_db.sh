@@ -44,23 +44,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
 
 # Create virtual environment and activate
-python -m venv venv
+cd ~/repos/osrsbox-db
+python3 -m venv venv
 source venv/bin/activate
 
 # Install Python package requirements
 pip install -r requirements.txt
 
 echo -e ">>> Updating item database"
-cd ~/repos/osrsbox-db/builder/items/
+cd ~/repos/osrsbox-db/builders/items/
 python3 builder.py --export=True
 
 echo -e ">>> Updating monster database"
-cd ~/repos/osrsbox-db/builder/items/
+cd ~/repos/osrsbox-db/builders/monsters/
 python3 builder.py --export=True
 
-echo -e ">>> Runing JSON population scripts..."
+echo -e ">>> Running JSON population scripts..."
 cd ~/repos/osrsbox-db/scripts/update/
 python3 update_json_files.py
+
+echo -e ">>> Generating items-search.json file..."
+cd ~/repos/osrsbox-db/scripts/items/
+python3 generate_item_search_file.py
+
+echo -e ">>> Running repo tests..."
+cd ~/repos/osrsbox-db
+python3 -m flake8
+python3 -m pytest test
 
 # Make sure to deactivate the venv
 deactivate
