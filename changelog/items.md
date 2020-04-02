@@ -2,6 +2,27 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/02: Easter Event
+- Added items: 16
+    - 24535,Magic egg ball
+    - 24536,Magic egg ball
+    - 24537,Carrot sword
+    - 24538,Carrot sword
+    - 24539,'24-carat' sword
+    - 24540,'24-carat' sword
+    - 24541,Painted fake magic egg
+    - 24542,Unpainted fake magic egg
+    - 24543,Conch shell
+    - 24544,Broken egg
+    - 24545,Dummy portal
+    - 24546,Carrot
+    - 24547,Broken goat horn
+    - 24548,Broken goat horn
+    - 24549,Cake
+    - 24550,Cake
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/03/26: Game Improvements
 - Added items: 0
 - Removed items: 0

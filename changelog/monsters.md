@@ -2,6 +2,14 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/02: Easter Event
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 3
+    - 1283,Asyn Shadow,recolorToReplace
+    - 1284,Asyn Shade,recolorToReplace
+    - 5632,Asyn shadow,recolorToReplace
+
 ### 2020/03/26: Game Improvements
 - Added monsters: 0
 - Removed monsters: 0
