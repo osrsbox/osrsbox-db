@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/08: Poll 70 Improvements
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/04/02: Easter Event
 - Added monsters: 0
 - Removed monsters: 0

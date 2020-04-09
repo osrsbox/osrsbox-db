@@ -85,7 +85,7 @@ java -classpath $jar_file net.runelite.cache.Cache \
 # Update osrsbox-db
 echo -e ">>> Updating osrsbox-db..."
 cd ~/repos/osrsbox-db
-git pull
+# git pull
 
 # Create virtual environment and activate
 python3 -m venv venv
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 echo -e ">>> Updating wiki data..."
 cd ~/repos/osrsbox-db/scripts/update/
-python3 update_wiki_data.py 2020-03-26T00:00:00Z
+python3 update_wiki_data.py 2020-04-02T00:00:00Z
 
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."

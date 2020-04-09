@@ -670,6 +670,13 @@ def clean_category(value: str) -> str:
 
     value = value.lower()
 
+    value = value.replace("wolves", "wolf")
+    value = value.replace("zombies", "zombie")
+    value = value.replace("shades", "shade")
+    value = value.replace("dogs", "dog")
+    value = value.replace("chaos druids", "chaos druid")
+    value = value.replace("birds", "bird")
+
     if "|" in value:
         value = value.split("|")[1]
 

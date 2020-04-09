@@ -2,6 +2,64 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/08: Poll 70 Improvements
+- Added items: 4
+    - 24551,Blade of saeldor (i)
+    - 24552,Blade of saeldor (i)
+    - 24553,Blade of saeldor (i)
+    - 24554,Pyromancer set
+- Removed items: 0
+- Changed items: 49
+    - 10079,Green spiky vambs,name
+    - 10080,Green spiky vambs,name
+    - 10081,Blue spiky vambs,name
+    - 10082,Blue spiky vambs,name
+    - 10083,Red spiky vambs,name
+    - 10084,Red spiky vambs,name
+    - 10085,Black spiky vambs,name
+    - 10086,Black spiky vambs,name
+    - 10370,Zamorak d'hide,name
+    - 10371,Zamorak d'hide,name
+    - 10378,Guthix d'hide,name
+    - 10379,Guthix d'hide,name
+    - 10386,Saradomin d'hide,name
+    - 10387,Saradomin d'hide,name
+    - 1065,Green d'hide vamb,name
+    - 1066,Green d'hide vamb,name
+    - 10790,Zamorak d'hide,name
+    - 10791,Zamorak d'hide,name
+    - 10792,Saradomin d'hide,name
+    - 10793,Saradomin d'hide,name
+    - 12492,Ancient d'hide,name
+    - 12493,Ancient d'hide,name
+    - 12500,Bandos d'hide,name
+    - 12501,Bandos d'hide,name
+    - 12508,Armadyl d'hide,name
+    - 12509,Armadyl d'hide,name
+    - 14200,Green d'hide vamb,name
+    - 14201,Blue d'hide vamb,name
+    - 14202,Red d'hide vamb,name
+    - 14203,Black d'hide vamb,name
+    - 15395,Green spiky vambs,name
+    - 15396,Blue spiky vambs,name
+    - 15397,Red spiky vambs,name
+    - 15398,Black spiky vambs,name
+    - 15981,Ancient d'hide,name
+    - 15985,Bandos d'hide,name
+    - 15989,Armadyl d'hide,name
+    - 16095,Zamorak d'hide,name
+    - 16099,Guthix d'hide,name
+    - 16103,Saradomin d'hide,name
+    - 23261,Gilded d'hide vambs,name
+    - 23262,Gilded d'hide vambs,name
+    - 23263,Gilded d'hide vambs,name
+    - 2487,Blue d'hide vamb,name
+    - 2488,Blue d'hide vamb,name
+    - 2489,Red d'hide vamb,name
+    - 2490,Red d'hide vamb,name
+    - 2491,Black d'hide vamb,name
+    - 2492,Black d'hide vamb,name
+
 ### 2020/04/02: Easter Event
 - Added items: 16
     - 24535,Magic egg ball

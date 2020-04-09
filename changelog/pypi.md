@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.17`: Release for game update: 2020/04/08.
 - `1.3.16`: Release for game update: 2020/04/02.
 - `1.3.15`: Release for game update: 2020/03/26.
 - `1.3.14`: Release for game update: 2020/03/19.
