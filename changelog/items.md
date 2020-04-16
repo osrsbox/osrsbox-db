@@ -2,6 +2,24 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/16: Poll 70 Game Improvements
+- Added items: 10
+    - 24555,Tangleroot
+    - 24556,Tangleroot
+    - 24557,Tangleroot
+    - 24558,Tangleroot
+    - 24559,Tangleroot
+    - 24560,Tangleroot
+    - 24561,Tangleroot
+    - 24562,Tangleroot
+    - 24563,Tangleroot
+    - 24564,Tangleroot
+- Removed items: 0
+- Changed items: 3
+    - 24551,Blade of saeldor (i),name
+    - 24552,Blade of saeldor (i),name
+    - 24553,Blade of saeldor (i),name
+
 ### 2020/04/08: Poll 70 Improvements
 - Added items: 4
     - 24551,Blade of saeldor (i)

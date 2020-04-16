@@ -6,6 +6,8 @@
 
 [![Discord Chat](https://img.shields.io/discord/598412106118987787.svg)](https://discord.gg/HFynKyr)
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9J44ADGJQ5BC6&source=url)
+
 ## A complete and up-to-date database of Old School Runescape (OSRS) items, monsters and prayers
 
 This project hosts a complete and up-to-date database of every item, every monster and every prayer in OSRS. **Complete** means it holds every single item, monster and prayer in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
