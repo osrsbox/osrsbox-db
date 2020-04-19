@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.19`: Updated low/high alch property. Can be none for items that cannot be alched.
 - `1.3.18`: Release for game update: 2020/04/16.
 - `1.3.17`: Release for game update: 2020/04/08.
 - `1.3.16`: Release for game update: 2020/04/02.

@@ -41,7 +41,6 @@ class MyValidator(Validator):
     def _validate_description(self, description, field, value):
         """ {'type': 'string'} """
         # Accept description attribute, used for swagger doc generation
-        print("EVER")
         pass
 
     def _validate_example(self, description, field, value):
@@ -60,6 +59,8 @@ class BuildItem:
         self.all_wikitext_processed = kwargs["all_wikitext_processed"]
         # Raw data dump from OSRS Wiki
         self.all_wikitext_raw = kwargs["all_wikitext_raw"]
+        # Dictionary of unalchable items (using item name)
+        self.unalchable_items = kwargs["unalchable_items"]
         # All current item database contents
         self.all_db_items = kwargs["all_db_items"]
         # Dictionary of item buy limits
@@ -485,8 +486,12 @@ class BuildItem:
         self.item_dict["placeholder"] = self.item_cache_data["placeholder"]
         self.item_dict["equipable"] = self.item_cache_data["equipable"]
         self.item_dict["cost"] = self.item_cache_data["cost"]
-        self.item_dict["lowalch"] = self.item_cache_data["lowalch"]
-        self.item_dict["highalch"] = self.item_cache_data["highalch"]
+        if self.item_cache_data["placeholder"]:
+            self.item_dict["lowalch"] = None
+            self.item_dict["highalch"] = None
+        else:
+            self.item_dict["lowalch"] = self.item_cache_data["lowalch"]
+            self.item_dict["highalch"] = self.item_cache_data["highalch"]
         self.item_dict["icon"] = self.icons_data[self.item_id_str]
 
     def populate_item_properties_from_wiki_data(self):
@@ -531,6 +536,12 @@ class BuildItem:
             wiki_name = wiki_page_name
 
         self.item_dict["wiki_name"] = wiki_name
+
+        # Check if item is not actually able to be alched
+        if wiki_name:
+            if wiki_name in self.unalchable_items:
+                self.item_dict["lowalch"] = None
+                self.item_dict["highalch"] = None
 
         # Set the wiki_url property
         if wiki_versioned_name is not None:

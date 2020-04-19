@@ -55,6 +55,11 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
     with open(processed_wikitextfile_path) as f:
         all_wikitext_processed = json.load(f)
 
+    # Dict of unalchable items
+    unalchable_items_path = Path(config.DATA_WIKI_PATH / "page-titles-unalchable.json")
+    with open(unalchable_items_path) as f:
+        unalchable_items = json.load(f)
+
     # Load the invalid items file
     invalid_items_file_path = Path(config.DATA_ITEMS_PATH / "invalid-items.json")
     with open(invalid_items_file_path) as f:
@@ -115,6 +120,7 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
                                        all_item_cache_data=all_item_cache_data,
                                        all_wikitext_processed=all_wikitext_processed,
                                        all_wikitext_raw=all_wikitext_raw,
+                                       unalchable_items=unalchable_items,
                                        all_db_items=all_db_items,
                                        buy_limits_data=buy_limits_data,
                                        skill_requirements_data=skill_requirements_data,

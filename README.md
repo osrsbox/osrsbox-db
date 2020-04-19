@@ -10,11 +10,11 @@
 
 ## A complete and up-to-date database of Old School Runescape (OSRS) items, monsters and prayers
 
-This project hosts a complete and up-to-date database of every item, every monster and every prayer in OSRS. **Complete** means it holds every single item, monster and prayer in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information. 
+This project hosts a complete and up-to-date database items, monsters and prayers in OSRS. **Complete** means it holds every single item, monster and prayer in OSRS. **Up-to-date** means this database is updated after every weekly game update to ensure accurate information.
 
-The item database has extensive properties for each item: a total of 27 properties for every item, an additional 16 properties for equipable items, and an additional 3 properties for equipable weapons. These properties include the item ID and name, whether an item is tradeable, stackable, or equipable or if the item is members only or associated with a quest. For any equipable item, there are additional properties about combat stats the item has; for example, what slash attack bonus, magic defence bonus or prayer bonus that an item provides. For weapons, additional properties are added which include attack speed and combat stance/weapon type information.
+The item database has extensive properties for each item: a total of 27 properties for every item, an additional 16 properties for equipable items, and an additional 3 properties for equipable weapons. These properties include the item ID and name, whether an item is tradeable, stackable, or equipable or if the item is members only. For any equipable item, there are additional properties about combat stats; for example, what slash attack bonus, magic defence bonus or prayer bonus that an item provides. For weapons, additional properties are added which include attack speed, combat stance and weapon type information.
 
-The monster database also has extensive properties: a total of 44 unique properties for each monster, as well as an array of item drops for each monster that has 6 additional properties per item drop. The base properties include the monster ID, name, member status, and all monster combat stats. Additional properties include slayer-related properties, attack type, hit points and max hit. Each monster also has an associated array of drops which document the item ID, name, rarity, quantity, and any requirements to get the drop.
+The monster database also has extensive properties: a total of 44 unique properties for each monster, as well as an array of item drops for each monster that has 6 additional properties per item drop. The base properties include the monster ID, name, member status, slayer properties, attack type, max hit, attack types and all monster combat stats. Each monster also has an associated array of drops which document the item ID, name, rarity, quantity, and any requirements to get the drop.
 
 The prayer database documentes each prayer that available in-game and has detailed properties: a total of 8 properties for every prayer. The base properties include the prayer name, members status, description, requirements, and bonuses that it provides.
 
@@ -23,29 +23,34 @@ The prayer database documentes each prayer that available in-game and has detail
 - [Project Summary](#project-summary)
 - [The `osrsbox` Python PyPi Package](#the-osrsbox-python-pypi-package)
 - [The osrsbox RESTful API](#the-osrsbox-restful-api)
+- [The osrsbox Static JSON API](#the-osrsbox-static-json-api)
 - [The `osrsbox-db` GitHub Repository](#the-osrsbox-db-github-repository)
 - [The Item Database](#the-item-database)
 - [The Monster Database](#the-monster-database)
 - [The Prayer Database](#the-prayer-database)
 - [Additional Project Information](#additional-project-information)
-    - [Project Feedback](#project-feedback)
-    - [Project Contribution](#project-contribution)
-    - [Project License](#project-license)
-    - [Project Attribution](#project-attribution)
 
 ## Project Summary
 
-The osrsbox-db project provides three primary data sources for:
+The osrsbox-db project provides data for three different categories:
 
 1. **Items**
 1. **Monsters**
 1. **Prayers**
 
-The osrsbox-db project and data is accessible using three primary methods:
+The osrsbox-db project and data is accessible using four methods:
 
 1. [**The Python PyPi package**](https://pypi.org/project/osrsbox/)
 1. [**The RESTful API**](https://github.com/osrsbox/osrsbox-api/)
+1. [**The Static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs)
 1. [**The GitHub development repository**](https://github.com/osrsbox/osrsbox-db/)
+
+With four different methods to access data... most people will have the following question: _Which one should I use?_ The following list is a short-sharp summary of the options:
+
+1. [**The Python PyPi package**](https://pypi.org/project/osrsbox/): Use this if you are programming anything in Python - as it is the simplest option. Install using `pip`, and you are ready to do anything from experimenting and prototyping, to building a modern web app using something like Flask.
+1. [**The RESTful API**](https://github.com/osrsbox/osrsbox-api/): Use this if you are not programming in Python, and want an Internet-accessible API with rich-quering including filtering, sorting and projection functionality.
+1. [**The Static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs): Use this if you want Internet-accessible raw data (JSON files and PNG images) and don't need queries to filter data. This is a good option if you want to _dump_ the enitire database contents, and saves the RESTful API from un-needed traffic.
+1. [**The GitHub development repository**](https://github.com/osrsbox/osrsbox-db/): The development repository provides the code and data to build the database. I would not recommend using the development repository unless you are (really) interested in the project or you want to contribute to the project.
 
 ## The `osrsbox` Python PyPi Package
 
@@ -57,16 +62,16 @@ If you want to access the item and monster database programmatically using Pytho
 - Install package using: `pip install osrsbox`
 - Item database quick start:
     - Import items API using: `from osrsbox import items_api`
-    - Load all items using: `all_db_items = items_api.load()`
-    - Loop items using: `for item in all_db_items: print(item.name)`
+    - Load all items using: `items = items_api.load()`
+    - Loop items using: `for item in items: print(item.name)`
 - Monster database quick start:
     - Import monsters API using: `from osrsbox import monsters_api`
-    - Load all monsters using: `all_db_monsters = monsters_api.load()`
-    - Loop monsters using: `for monster in all_db_monsters: print(monster.name)`
+    - Load all monsters using: `monsters = monsters_api.load()`
+    - Loop monsters using: `for monster in monsters: print(monster.name)`
 - Prayer database quick start:
     - Import prayers API using: `from osrsbox import prayers_api`
-    - Load all prayers using: `all_db_prayers = prayers_api.load()`
-    - Loop prayers using: `for prayer in all_db_prayers: print(prayer.name)`
+    - Load all prayers using: `prayers = prayers_api.load()`
+    - Loop prayers using: `for prayer in prayers: print(prayer.name)`
 
 ### Package Requirements
 
@@ -104,8 +109,8 @@ Python 3.6.8 (default, Jan 14 2019, 11:02:34)
 [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from osrsbox import items_api
->>> all_db_items = items_api.load()
->>> for item in all_db_items:
+>>> items = items_api.load()
+>>> for item in items:
 ...     print(item.id, item.name)
 ```
 
@@ -116,8 +121,8 @@ Instead of using the Python interpreter, you can also write a simple script and 
 
 from osrsbox import monsters_api
 
-all_db_monsters = monsters_api.load()
-for monster in all_db_monsters:
+monsters = monsters_api.load()
+for monster in monsters:
     print(monster.id, monster.name)
 ```
 
@@ -129,7 +134,115 @@ The [official osrsbox-api GitHub repository](https://github.com/osrsbox/osrsbox-
 
 - [https://api.osrsbox.com](https://api.osrsbox.com)
 
-Have a look at the [official `osrsbox-api` project README](https://github.com/osrsbox/osrsbox-api/blob/master/README.md) for more information on API endpoints, documentation, Swagger UI availability and examples of API queries.
+The link provided above has an API landing page with detailed information on the project including a project summary, API enpoints, and links to useful documentation. Also, have a look at the [official `osrsbox-api` project README](https://github.com/osrsbox/osrsbox-api/blob/master/README.md) for more information. The README has a tutorial on how to build the API docker environment locally for testing purposes which might be useful.
+
+## The `osrsbox` Static JSON API
+
+This project also includes an Internet-accessible, static JSON API for all items/monsters in the database. The JSON API was originally written for the [`osrsbox-tooltips` project](https://github.com/osrsbox/osrsbox-tooltips) but has since been used for a variety of other projects. The JSON API is useful when you do not want to write a program in Python (as using the PyPi package is probably easier), but would like to fetch the database information programmatically over the Internet, and receive the data back in nicely structured JSON syntax. A key example is a web application. 
+
+### Static JSON API Files
+
+The JSON API is available in the [`docs` folder](https://github.com/osrsbox/osrsbox-db/tree/master/docs/) in the osrsbox-db project repository. This folder contains the publicly available database. Every file inside this specific folder can be fetched using HTTP GET requests. The base URL for this folder is `https://www.osrsbox.com/osrsbox-db/`. Simply append any name of any file from the `docs` folder to the base URL, and you can fetch this data. A summary of the folders/files provided in the JSON API are listed below with descriptions:
+
+- `items-complete.json`: A single JSON file that combines all single JSON files from `items-json` folder. This file contains the entire osrsbox-db items database in one file. This is useful if you want to get the data for every single item.
+- `items-icons`: Collection of PNG files (20K+) for every item inventory icon in OSRS. Each inventory icon is named using the unique item ID number.
+- `items-json`: Collection of JSON files (20K+) of extensive item metadata for every item in OSRS. This folder contains the entire osrsbox-db item database where each item has an individual JSON file, named using the unique item ID number. This is useful when you want to fetch data for a single item where you already know the item ID number.
+- `items-json-slot`: Collection of JSON files extracted from the database that are specific for each equipment slot (e.g., head, legs). This is useful when you want to only get item data for equipable items for one, or multiple, specific item slot.
+- `items-summary.json`: A single JSON file that contains only the item names and item ID numbers. This file is useful when you want to download a small file (1.1MB) to quickly scan/process item data when you only need the item name and/or ID number.
+- `models-summary.json`: A single JSON file that contains model ID numbers for items, objects, and NPCs. This file is useful to determine the model ID number for a specific item, object or NPC.
+- `monsters-complete.json`: A single JSON file that combines all single JSON files from the `monsters-json` folder. This file contains the entire osrsbox-db monster database in one file. This is useful if you want to get the data for every single monster in one file.
+- `monsters-json`: Collection of JSON files (2.5K+) of extensive monster metadata for every monster in OSRS. This folder contains the entire osrsbox-db monster database where each monster has an individual JSON file, named using the unique monster ID number. This is useful when you want to fetch data for a single monster where you already know the item ID number.
+- `npcs-summary.json`: A single JSON file that contains only the NPC names and NPC ID numbers. This file is useful when you want to download a small file (0.35MB) to quickly scan/process NPC data when you only need the NPC name and/or ID number. Note that this file contains both attackable, and non-attackable (monster) NPCs.
+- `objects-summary.json`: A single JSON file that contains only the object names and object ID numbers. This file is useful when you want to download a small file (0.86MB) to quickly scan/process in-game object data when you only need the object name and/or ID number.
+- `prayer-icon`: Collection of PNG files for each prayer in OSRS.
+- `prayer-json`: Collection of individual JSON files with properties and metadata about OSRS prayers.
+
+### Accessing the Static JSON API
+
+The JSON file for each OSRS item can be directly accessed using unique URLs provide through the [`osrsbox.com`](https://www.osrsbox.com/osrsbox-db/) base URL. As mentioned, you can fetch JSON files using a unique URL, but cannot modify any JSON content. Below is a list of URL examples for items and monsters in the osrsbox-db database:
+
+- [`https://www.osrsbox.com/osrsbox-db/items-json/2.json`](https://www.osrsbox.com/osrsbox-db/items-json/2.json)
+- [`https://www.osrsbox.com/osrsbox-db/items-json/74.json`](https://www.osrsbox.com/osrsbox-db/items-json/74.json)
+- [`https://www.osrsbox.com/osrsbox-db/items-json/35.json`](https://www.osrsbox.com/osrsbox-db/items-json/35.json)
+- [`https://www.osrsbox.com/osrsbox-db/items-json/415.json`](https://www.osrsbox.com/osrsbox-db/items-json/415.json)
+- [`https://www.osrsbox.com/osrsbox-db/items-json/239.json`](https://www.osrsbox.com/osrsbox-db/items-json/239.json)
+
+As displayed by the links above, each item or monster is stored in the `osrsbox-db` repository, under the [`items-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/items-json) folder or [`monsters-json`](https://github.com/osrsbox/osrsbox-db/tree/master/docs/monsters-json) folder. In addition to the single JSON files for each item, many other JSON files can be fetched. Some more examples are provided below:
+
+- [`https://www.osrsbox.com/osrsbox-db/items-complete.json`](https://www.osrsbox.com/osrsbox-db/items-complete.json)
+- [`https://www.osrsbox.com/osrsbox-db/monsters-complete.json`](https://www.osrsbox.com/osrsbox-db/monsters-complete.json)
+- [`https://www.osrsbox.com/osrsbox-db/items-summary.json`](https://www.osrsbox.com/osrsbox-db/items-summary.json)
+- [`https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json`](https://www.osrsbox.com/osrsbox-db/items-json-slot/items-cape.json)
+- [`https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json`](https://www.osrsbox.com/osrsbox-db/prayer-json/protect-from-magic.json)
+
+So how can you get and use these JSON files about OSRS items? It is pretty easy but depends on what you are trying to accomplish and what programming language you are using. Some examples are provided in the following subsections.
+
+### Accessing the JSON API using Command Line Tools
+
+Take a simple example of downloading a single JSON file. In a Linux system, we could use the `wget` command to download a single JSON file, as illustrated in the example code below:
+
+```
+wget https://www.osrsbox.com/osrsbox-db/items-json/12453.json
+```
+
+You could perform a similar technique using the `curl` tool:
+
+```
+curl https://www.osrsbox.com/osrsbox-db/items-json/12453.json
+```
+
+For Windows users, you could use PowerShell:
+
+```
+Invoke-WebRequest -Uri "https://www.osrsbox.com/osrsbox-db/items-json/12453.json" -OutFile "12453.json"
+```
+
+### Accessing the JSON API using Python
+
+Maybe you are interested in downloading a single (or potentially multiple) JSON files about OSRS items and processing the information in a Python program. The short script below downloads the `12453.json` file using Python's `urllib` library, loads the data as a JSON object and prints the contents to the console. The code is a little messy, primarily due to supporting both Python 2 and 3 - as you can see from the `try` and `except` importing method implemented.
+
+```
+import json
+
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
+
+url = ("https://www.osrsbox.com/osrsbox-db/items-json/12453.json")
+response = urlopen(url)
+data = response.read().decode("utf-8")
+json_obj = json.loads(data)
+print(json_obj)
+```
+
+### Accessing the JSON API using JavaScript
+
+Finally, let's have a look at JavaScript (specifically jQuery) example to fetch a JSON file from the osrsbox-db and build an HTML element to display in a web page. The example below is a very simple method to download the JSON file using the jQuery `getJSON` function. Once we get the JSON file, we loop through the JSON entries and print each key and value (e.g., `name` and _Black wizard hat (g)_) on its own line in a `div` element.
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("button").click(function(){
+              $.getJSON("https://www.osrsbox.com/osrsbox-db/items-json/12453.json", function(result){
+                  $.each(result, function(i, field){
+                      $("div").append(i + " " + field + "<br>");
+                  });
+              });
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Get JSON data</button>
+    <div></div>
+  </body>
+</html>
+```
 
 ## The `osrsbox-db` GitHub Repository 
 
@@ -187,7 +300,6 @@ deactivate
 - `scripts`: A collection of scripts (using Python and BASH) to help automate common tasks including dumping the OSRS cache, scraping the OSRS wiki, generating schemas, updating the databases, and inserting data into a MongoDB database.
     - `cache`: A collection of scripts to extract useful data from the OSRS cache item, npc and object definition files.
     - `items`: A collection of scripts to help process data for the item builder.
-    - `mongodb`: A collection of scripts for creating and inserting data into the MongoDB database.
     - `schemas`: A collection of scripts for generating and parsing the JSON schemas used in this project.
     - `update`: A collection of scripts for automating the data collection and database regeneration.
     - `wiki`: A collection of scripts for automating data extraction from the OSRS Wiki using the MediaWiki API.
@@ -226,7 +338,7 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | tradeable | boolean | If the item is tradeable (between players and on the GE). | True | False |
 | tradeable_on_ge | boolean | If the item is tradeable (only on GE). | True | False |
 | stackable | boolean | If the item is stackable (in inventory). | True | False |
-| stacked | boolean | If the item is stacked. | True | False |
+| stacked | integer | If the item is stacked, indicated by the stack count. | True | True |
 | noted | boolean | If the item is noted. | True | False |
 | noteable | boolean | If the item is noteable. | True | False |
 | linked_id_item | integer | The linked ID of the actual item (if noted/placeholder). | True | True |
@@ -237,8 +349,8 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | equipable_by_player | boolean | If the item is equipable in-game by a player. | True | False |
 | equipable_weapon | boolean | If the item is an equipable weapon. | True | False |
 | cost | integer | The store price of an item. | True | False |
-| lowalch | integer | The low alchemy value of the item (cost * 0.4). | True | False |
-| highalch | integer | The high alchemy value of the item (cost * 0.6). | True | False |
+| lowalch | integer | The low alchemy value of the item (cost * 0.4). | True | True |
+| highalch | integer | The high alchemy value of the item (cost * 0.6). | True | True |
 | weight | float | The weight (in kilograms) of the item. | True | True |
 | buy_limit | integer | The Grand Exchange buy limit of the item. | True | True |
 | quest_item | boolean | If the item is associated with a quest. | True | False |
@@ -281,7 +393,7 @@ A select number of items in OSRS are equipable weapons. Any equipable item that 
 | Property | Data type | Description | Required | Nullable |
 | -------- | --------- | ----------- | -------- |----------|
 | attack_speed | integer | The attack speed of a weapon (in game ticks). | True | False |
-| weapon_type | string | The weapon classification (e.g., axe) | True | False |
+| weapon_type | string | The weapon classification (e.g., axes) | True | False |
 | stances | list | An array of weapon stance information. | True | False |
 
 ### Item: Python Object Example
@@ -292,11 +404,12 @@ A description of the properties that each item in the database can have is usefu
 ItemProperties(
     id=4151,
     name='Abyssal whip',
-    incomplete=True,
+    incomplete=Flase,
     members=True,
     tradeable=True,
     tradeable_on_ge=True,
     stackable=False,
+    stacked=None,
     noted=False,
     noteable=True,
     linked_id_item=None,
@@ -315,6 +428,7 @@ ItemProperties(
     release_date='2005-01-26',
     duplicate=False,
     examine='A weapon from the abyss.',
+    icon: 'iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABvUlEQVR4Xu2Xv26DMBDG4QEyZECKIkVCKIoyVR26dOrQpUOHDn3/V3F7nL7689kGAo6z9JNuiH1wP+6PIU3zr2Jq3bRVkQ/Y7feBvfcn93o8upfDwT11XQKwOGQMwfYx9O7rcnaf52GEezuFgNdfn4JQ7RjAQojZLAAMcPJbAOH73PcloBTIQiEAG8MB7Pt6MQ+wSW1QAs6Kh1A/NgtnHyKMcZMUCP3AIBw0XcqmgU9qb4W0JwTIwuRAYHETF4FSIMkORjn1xCnjayy8lN/vLVY7TglfvBRGTJpZrpXM+my1f6DhPRdJs8M3nAPibGDseY9hVgHxzbh3chC22dkPQ8EnufddpBgI69Lk3B8hnPrwOsPEw7FYqUzoOsqBUtps8XUASh0bYbxZxUCcJZzCNnjOBGgDDBRD8d4tQAVgRAqEs2jusLOGEhaCgTQTgApLp/s5A0RBGMg3shx2YZb0fZUz9issD4VpsR4PkJ+uYbczJQr94rW7KT3yDJcegLtqeuRlAFa+0bdoeuTxPV2538Ixt1D86Vutr8IR16CSndzfoSpQLIDh09dmscL5lJICMUClw3JKD8tGXiVgfgACr1tEhnw7UAAAAABJRU5ErkJggg==',
     wiki_name='Abyssal whip',
     wiki_url='https://oldschool.runescape.wiki/w/Abyssal_whip',
     equipment=ItemEquipment(
@@ -367,11 +481,12 @@ A description of the properties that each item in the database can have is usefu
 {
     "id": 4151,
     "name": "Abyssal whip",
-    "incomplete": true,
+    "incomplete": false,
     "members": true,
     "tradeable": true,
     "tradeable_on_ge": true,
     "stackable": false,
+    "stacked": null,
     "noted": false,
     "noteable": true,
     "linked_id_item": null,
@@ -390,6 +505,7 @@ A description of the properties that each item in the database can have is usefu
     "release_date": "2005-01-26",
     "duplicate": false,
     "examine": "A weapon from the abyss.",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABvUlEQVR4Xu2Xv26DMBDG4QEyZECKIkVCKIoyVR26dOrQpUOHDn3/V3F7nL7689kGAo6z9JNuiH1wP+6PIU3zr2Jq3bRVkQ/Y7feBvfcn93o8upfDwT11XQKwOGQMwfYx9O7rcnaf52GEezuFgNdfn4JQ7RjAQojZLAAMcPJbAOH73PcloBTIQiEAG8MB7Pt6MQ+wSW1QAs6Kh1A/NgtnHyKMcZMUCP3AIBw0XcqmgU9qb4W0JwTIwuRAYHETF4FSIMkORjn1xCnjayy8lN/vLVY7TglfvBRGTJpZrpXM+my1f6DhPRdJs8M3nAPibGDseY9hVgHxzbh3chC22dkPQ8EnufddpBgI69Lk3B8hnPrwOsPEw7FYqUzoOsqBUtps8XUASh0bYbxZxUCcJZzCNnjOBGgDDBRD8d4tQAVgRAqEs2jusLOGEhaCgTQTgApLp/s5A0RBGMg3shx2YZb0fZUz9issD4VpsR4PkJ+uYbczJQr94rW7KT3yDJcegLtqeuRlAFa+0bdoeuTxPV2538Ixt1D86Vutr8IR16CSndzfoSpQLIDh09dmscL5lJICMUClw3JKD8tGXiVgfgACr1tEhnw7UAAAAABJRU5ErkJggg==",
     "wiki_name": "Abyssal whip",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_whip",
     "equipment": {
@@ -467,14 +583,15 @@ A `MonsterProperties` object type includes basic monster metadata such as `id`, 
 | poisonous | boolean | If the monster poisons, or not | True | False |
 | immune_poison | boolean | If the monster is immune to poison, or not | True | False |
 | immune_venom | boolean | If the monster is immune to venom, or not | True | False |
-| weakness | list | An array of monster weaknesses. | True | False |
+| attributes | list | An array of monster attributes. | True | False |
 | category | list | An array of monster category. | True | False |
 | slayer_monster | boolean | If the monster is a potential slayer task. | True | False |
 | slayer_level | integer | The slayer level required to kill the monster. | True | True |
 | slayer_xp | float | The slayer XP rewarded for a monster kill. | True | True |
-| slayer_masters | list | The slayer XP rewarded for a monster kill. | True | True |
+| slayer_masters | list | The slayer masters who can assign the monster. | True | False |
 | duplicate | boolean | If the monster is a duplicate. | True | False |
 | examine | string | The examine text of the monster. | True | False |
+| icon | string | The monster icon  (in base64 encoding). | True | True |
 | wiki_name | string | The OSRS Wiki name for the monster. | True | False |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | False |
 | attack_level | integer | The attack level of the monster. | True | False |
@@ -496,7 +613,7 @@ A `MonsterProperties` object type includes basic monster metadata such as `id`, 
 | melee_strength | integer | The melee strength bonus of the monster. | True | False |
 | ranged_strength | integer | The ranged strength bonus of the monster. | True | False |
 | magic_damage | integer | The magic damage bonus of the monster. | True | False |
-| drops | list | An array of monster drop objects. | True | True |
+| drops | list | An array of monster drop objects. | True | False |
 
 ### Monster Drops
 
@@ -520,7 +637,7 @@ A description of the properties that each monster in the database can have is us
 MonsterProperties(
     id=415,
     name='Abyssal demon',
-    incomplete=False,
+    incomplete=True,
     members=True,
     release_date='2005-01-26',
     combat_level=124,
@@ -533,7 +650,7 @@ MonsterProperties(
     poisonous=False,
     immune_poison=False,
     immune_venom=False,
-    weakness=['magic', 'demonbane'],
+    attributes=['demon'],
     category=['abyssal demon'],
     slayer_monster=True,
     slayer_level=85,
@@ -541,6 +658,7 @@ MonsterProperties(
     slayer_masters=['vannaka', 'chaeldar', 'konar', 'nieve', 'duradel'], 
     duplicate=False,
     examine='A denizen of the Abyss!',
+    icon=None,
     wiki_name='Abyssal demon (Standard)',
     wiki_url='https://oldschool.runescape.wiki/w/Abyssal_demon#Standard',
     attack_level=97,
@@ -620,7 +738,7 @@ A description of the properties that each monster in the database can have is us
 {
     "id": 415,
     "name": "Abyssal demon",
-    "incomplete": false,
+    "incomplete": true,
     "members": true,
     "release_date": "2005-01-26",
     "combat_level": 124,
@@ -635,9 +753,11 @@ A description of the properties that each monster in the database can have is us
     "poisonous": false,
     "immune_poison": false,
     "immune_venom": false,
-    "weakness": [
-        "magic",
-        "demonbane"
+    "attributes": [
+        "demon"
+    ],
+    "category": [
+        "abyssal demon"
     ],
     "slayer_monster": true,
     "slayer_level": 85,
@@ -651,6 +771,7 @@ A description of the properties that each monster in the database can have is us
     ],
     "duplicate": false,
     "examine": "A denizen of the Abyss!",
+    "icon": null,
     "wiki_name": "Abyssal demon (Standard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_demon#Standard",
     "attack_level": 97,
@@ -740,6 +861,7 @@ A `PrayerProperties` object type includes basic prayer metadata such as `id`, `n
 | wiki_url | string | The OSRS Wiki URL. | True | False |
 | requirements | dict | The stat requirements to use the prayer. | True | False |
 | bonuses | dict | The bonuses a prayer provides. | True | False |
+| icon | string | The prayer icon. | True | False |
 
 ### Prayer: Python Object Example 
 
@@ -750,11 +872,13 @@ PrayerProperties(
     id=28,
     name='Rigour',
     members=True,
-    description='Increases your Ranged attack by 20% and damage by 23%,and your defence by 25%.',
+    description='Increases your Ranged attack by 20% and damage by 23%, and your defence by 25%.',
     drain_per_minute=40.0,
     wiki_url='https://oldschool.runescape.wiki/w/Rigour',
-    requirements={'prayer': 74, 'defence': 70}, 
-    bonuses={'ranged': 20, 'ranged_strength': 25, 'defence': 23})
+    requirements={'prayer': 74, 'defence': 70},
+    bonuses={'ranged': 20, 'ranged_strength': 25, 'defence': 23}, 
+    icon='iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAABMklEQVR42rWW3Q0CIRCEjwJ8tgBrMPHZFmzAIny0gOvA+izAGjCYcMwNswucSrLJHT/7McvyM02bSojTfwo7Tv8h3h/PqKFfTSTEYqUuwTRQ9R8Erp0XdV79ANBWw7Y/7Mw2W7mhqDSGxTkC0vf5eqqg2I99CKAOVXZ0mY+Lw/SdgFjHk7DD3xE+hLZsINR2+BQMlXG7Gu8Cc2jyt4KketWWw22HWYTUWqcMsYzVcmIBMFQZqBSxmvl1+xj2Z7XdQByQHbKSDET1qNCB1uuHs1ZhY2NgQ2W9fpbCEaAT0jpLeZAKaQvmJI3OUs5QhHoZqoDuWcr7jDe4lURqL3bcIOsTxwJbxmvdcV0FeQPgPmydpZ3KJvcg904bVNi+GwegCPYgG2D1g6nXfvCu4cdRy9rlDXGzl98mKbMMAAAAAElFTkSuQmCC'
+)
 ```
 
 ### Prayer: JSON Example
@@ -762,7 +886,6 @@ PrayerProperties(
 A description of the properties that each prayer in the database can have is useful, but sometimes it is simpler to provide an example. Below is a full example of a prayer, specifically the _Rigour_ prayer, as a JSON object.
 
 ```
-{
     "id": 28,
     "name": "Rigour",
     "members": true,
@@ -777,7 +900,8 @@ A description of the properties that each prayer in the database can have is use
         "ranged": 20,
         "ranged_strength": 25,
         "defence": 23
-    }
+    },
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAABMklEQVR42rWW3Q0CIRCEjwJ8tgBrMPHZFmzAIny0gOvA+izAGjCYcMwNswucSrLJHT/7McvyM02bSojTfwo7Tv8h3h/PqKFfTSTEYqUuwTRQ9R8Erp0XdV79ANBWw7Y/7Mw2W7mhqDSGxTkC0vf5eqqg2I99CKAOVXZ0mY+Lw/SdgFjHk7DD3xE+hLZsINR2+BQMlXG7Gu8Cc2jyt4KketWWw22HWYTUWqcMsYzVcmIBMFQZqBSxmvl1+xj2Z7XdQByQHbKSDET1qNCB1uuHs1ZhY2NgQ2W9fpbCEaAT0jpLeZAKaQvmJI3OUs5QhHoZqoDuWcr7jDe4lURqL3bcIOsTxwJbxmvdcV0FeQPgPmydpZ3KJvcg904bVNi+GwegCPYgG2D1g6nXfvCu4cdRy9rlDXGzl98mKbMMAAAAAElFTkSuQmCC"
 }
 ```
 
