@@ -2,6 +2,72 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/23: Bounty Hunter Returns
+- Added items: 56
+    - 24565,Antique emblem (tier 1)
+    - 24566,Antique emblem (tier 1)
+    - 24567,Antique emblem (tier 2)
+    - 24568,Antique emblem (tier 2)
+    - 24569,Antique emblem (tier 3)
+    - 24570,Antique emblem (tier 3)
+    - 24571,Antique emblem (tier 4)
+    - 24572,Antique emblem (tier 4)
+    - 24573,Antique emblem (tier 5)
+    - 24574,Antique emblem (tier 5)
+    - 24575,Antique emblem (tier 6)
+    - 24576,Antique emblem (tier 6)
+    - 24577,Antique emblem (tier 7)
+    - 24578,Antique emblem (tier 7)
+    - 24579,Antique emblem (tier 8)
+    - 24580,Antique emblem (tier 8)
+    - 24581,Antique emblem (tier 9)
+    - 24582,Antique emblem (tier 9)
+    - 24583,Antique emblem (tier 10)
+    - 24584,Antique emblem (tier 10)
+    - 24585,Looting bag note
+    - 24586,Looting bag note
+    - 24587,Rune pouch note
+    - 24588,Rune pouch note
+    - 24589,Blighted manta ray
+    - 24590,Blighted manta ray
+    - 24591,Blighted manta ray
+    - 24592,Blighted anglerfish
+    - 24593,Blighted anglerfish
+    - 24594,Blighted anglerfish
+    - 24595,Blighted karambwan
+    - 24596,Blighted karambwan
+    - 24597,Blighted karambwan
+    - 24598,Blighted super restore(4)
+    - 24599,Blighted super restore(4)
+    - 24600,Blighted super restore(4)
+    - 24601,Blighted super restore(3)
+    - 24602,Blighted super restore(3)
+    - 24603,Blighted super restore(2)
+    - 24604,Blighted super restore(2)
+    - 24605,Blighted super restore(1)
+    - 24606,Blighted super restore(1)
+    - 24607,Blighted ice barrage sack
+    - 24608,Blighted ice barrage sack
+    - 24609,Blighted bind sack
+    - 24610,Blighted bind sack
+    - 24611,Blighted snare sack
+    - 24612,Blighted snare sack
+    - 24613,Blighted entangle sack
+    - 24614,Blighted entangle sack
+    - 24615,Blighted teleblock sack
+    - 24616,Blighted teleblock sack
+    - 24617,Vesta's blighted longsword
+    - 24618,Vesta's blighted longsword
+    - 24619,Vesta's longsword (inactive)
+    - 24620,Vesta's longsword (inactive)
+- Removed items: 0
+- Changed items: 5
+    - 24277,Mysterious emblem (tier 1),cost|lowalch|highalch
+    - 24279,Mysterious emblem (tier 2),cost|lowalch|highalch
+    - 24281,Mysterious emblem (tier 3),cost|lowalch|highalch
+    - 24283,Mysterious emblem (tier 4),cost|lowalch|highalch
+    - 24285,Mysterious emblem (tier 5),cost|lowalch|highalch
+
 ### 2020/04/16: Poll 70 Game Improvements
 - Added items: 10
     - 24555,Tangleroot
