@@ -2,6 +2,39 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/04/30: Poll 70 and Bounty Hunter Changes
+- Added items: 26
+    - 24621,Blighted vengeance sack
+    - 24622,Blighted vengeance sack
+    - 24623,Divine battlemage potion(4)
+    - 24624,Divine battlemage potion(4)
+    - 24625,Divine battlemage potion(4)
+    - 24626,Divine battlemage potion(3)
+    - 24627,Divine battlemage potion(3)
+    - 24628,Divine battlemage potion(3)
+    - 24629,Divine battlemage potion(2)
+    - 24630,Divine battlemage potion(2)
+    - 24631,Divine battlemage potion(2)
+    - 24632,Divine battlemage potion(1)
+    - 24633,Divine battlemage potion(1)
+    - 24634,Divine battlemage potion(1)
+    - 24635,Divine bastion potion(4)
+    - 24636,Divine bastion potion(4)
+    - 24637,Divine bastion potion(4)
+    - 24638,Divine bastion potion(3)
+    - 24639,Divine bastion potion(3)
+    - 24640,Divine bastion potion(3)
+    - 24641,Divine bastion potion(2)
+    - 24642,Divine bastion potion(2)
+    - 24643,Divine bastion potion(2)
+    - 24644,Divine bastion potion(1)
+    - 24645,Divine bastion potion(1)
+    - 24646,Divine bastion potion(1)
+- Removed items: 0
+- Changed items: 2
+    - 24607,Blighted ice barrage sack,name
+    - 24608,Blighted ice barrage sack,name
+
 ### 2020/04/23: Bounty Hunter Returns
 - Added items: 56
     - 24565,Antique emblem (tier 1)

@@ -77,7 +77,7 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) < 70:
+        # if int(monster_id) < 7389:
         #     continue
 
         # Initialize the BuildMonster class, used for all monster

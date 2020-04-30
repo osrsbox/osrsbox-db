@@ -388,6 +388,8 @@ def herb(members: bool, wikitext: str) -> Dict:
     drop_table_template = drop_table_template.replace("{", "")
     drop_table_template = drop_table_template.replace("}", "")
     drop_table_template = drop_table_template.split("|")
+    if "Rolls=3" in drop_table_template:
+        drop_table_template.remove('Rolls=3')
 
     try:
         quantity = drop_table_template[2]
@@ -1037,6 +1039,7 @@ def rareseed(wikitext: str) -> Dict:
 
     drop_table_template = drop_table_template.replace("{", "")
     drop_table_template = drop_table_template.replace("}", "")
+    drop_table_template = drop_table_template.replace("|Rolls=3", "")
 
     try:
         base_rarity = float(Fraction(drop_table_template.split("|")[1]))
