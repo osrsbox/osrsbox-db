@@ -77,8 +77,11 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) < 7389:
+        # if int(monster_id) < 5008:
         #     continue
+        if int(monster_id) == 5079:
+            # Temp skip Delrith, due to crazy edits
+            continue
 
         # Initialize the BuildMonster class, used for all monster
         builder = build_monster.BuildMonster(monster_id=monster_id,
