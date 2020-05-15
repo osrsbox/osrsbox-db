@@ -17,11 +17,15 @@
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
-    "category": [],
-    "slayer_monster": false,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": [],
+    "category": [
+        "pirate"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 20.0,
+    "slayer_masters": [
+        "krystilia"
+    ],
     "duplicate": false,
     "examine": "Yar! Shiver me timbers!",
     "icon": null,
@@ -114,9 +118,9 @@
             "id": 882,
             "name": "Bronze arrow",
             "members": false,
-            "quantity": "12",
+            "quantity": "9",
             "noted": false,
-            "rarity": 0.015625,
+            "rarity": 0.0234375,
             "drop_requirements": null
         },
         {
@@ -168,45 +172,45 @@
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "55",
+            "quantity": "4",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.2265625,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "55",
+            "quantity": "25",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.1015625,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "55",
+            "quantity": "7",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.0625,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "55",
+            "quantity": "12",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.046875,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "55",
+            "quantity": "35",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.03125,
             "drop_requirements": null
         },
         {
@@ -262,6 +266,24 @@
             "noted": false,
             "rarity": 0.16666666666666666,
             "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009304922303898764,
+            "drop_requirements": "krystilia-task-only"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003289473684210526,
+            "drop_requirements": "krystilia-task-only"
         }
     ]
 }

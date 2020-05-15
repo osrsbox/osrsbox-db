@@ -49,9 +49,9 @@ def determine_runelite_api_version() -> str:
         raise SystemExit(">>> ERROR: Get request error. Exiting.") from e
 
     # Find RuneLite HTTP API base URL
-    for l in page_data.text.split("\n"):
-        if "HTTPS" in l:
-            api_url = l.lower()
+    for line in page_data.text.split("\n"):
+        if "HTTPS" in line:
+            api_url = line.lower()
             return api_url
 
 

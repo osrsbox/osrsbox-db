@@ -2,6 +2,25 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/05/14: Bounty Hunter Feedback Changes
+- Added items: 9
+    - 24647,Blighted super restore(3)
+    - 24648,Blighted super restore(2)
+    - 24649,Blighted super restore(1)
+    - 24650,Logs
+    - 24651,Logs
+    - 24652,Raw shrimps
+    - 24653,Raw shrimps
+    - 24654,Raw shrimps
+    - 24655,Bones
+- Removed items: 0
+- Changed items: 5
+    - 24601,Blighted super restore(3),linked_id_placeholder
+    - 24603,Blighted super restore(2),linked_id_placeholder
+    - 24605,Blighted super restore(1),linked_id_placeholder
+    - 24615,Blighted teleblock sack,name
+    - 24616,Blighted teleblock sack,name
+
 ### 2020/04/30: Poll 70 and Bounty Hunter Changes
 - Added items: 26
     - 24621,Blighted vengeance sack

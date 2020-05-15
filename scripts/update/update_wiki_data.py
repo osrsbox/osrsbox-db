@@ -33,10 +33,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     last_extraction_date = args.timestamp
-    print(f">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
+    print(">>> WIKI DATA ITEMS: Extracting page titles and wiki text...")
     categories = ["Items", "Pets"]
     extract_wiki_data.extract_wiki_data(categories, last_extraction_date)
-    print(f">>> WIKI DATA MONSTERS: Extracting page titles and wiki text...")
+    print(">>> WIKI DATA MONSTERS: Extracting page titles and wiki text...")
     categories = ["Monsters"]
     extract_wiki_data.extract_wiki_data(categories, last_extraction_date)
     # print(f">>> WIKI DATA QUESTS: Extracting page titles and wiki text...")

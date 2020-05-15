@@ -67,6 +67,7 @@ class ItemProperties:
     icon: str
     wiki_name: Optional[str]
     wiki_url: Optional[str]
+    wiki_exchange: Optional[str]
     equipment: Optional[ItemEquipment] = None
     weapon: Optional[ItemWeapon] = None
 

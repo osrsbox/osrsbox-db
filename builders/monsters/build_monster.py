@@ -63,9 +63,6 @@ class BuildMonster:
         # For this monster instance, create dictionary for property storage
         self.monster_dict = dict()
 
-        # For this monster instance, create an empty drops object
-        self.drops = dict()
-
         # The page name the wikitext is from
         self.wiki_page_name = None
         # The version used on the wikitext page
@@ -190,7 +187,7 @@ class BuildMonster:
         logging.debug(f"======================= {self.monster_id_str} {self.monster_name}")
         if self.verbose:
             print(f"======================= {self.monster_id_str} {self.monster_name}")
-        logging.debug(f"preprocessing: using the following cache data:")
+        logging.debug("preprocessing: using the following cache data:")
         logging.debug(self.monster_cache_data)
 
         # Set all variables to None (for invalid monsters)
@@ -632,9 +629,7 @@ class BuildMonster:
         # Extract "dropsline" templates
         self.drops_templates = wikitext_parser.extract_wikitext_template(self.monster_wikitext, "dropsline")
 
-        drops_dict_all = dict()
-        drops_list_ids = list()
-        self.monster_dict["drops"] = list()
+        drops = list()
 
         # Loop the found "dropsline" templates
         for template in self.drops_templates:
@@ -664,9 +659,11 @@ class BuildMonster:
             # Determine the drop item ID
             item_id = None
             found = False
+
             for item in self.all_db_items:
                 # Skip items that are not actual items
-                if item.placeholder or item.noted or item.stacked or item.duplicate:
+                # if item.placeholder or item.noted or item.stacked or item.duplicate:
+                if item.duplicate:
                     continue
                 if item.name == name or item.wiki_name == name:
                     found = True
@@ -731,9 +728,7 @@ class BuildMonster:
 
             # Attach drops dict to the drops object for this monster
             if item_id:
-                # self.drops[item_id] = drop_dict
-                drops_list_ids.append(str(item_id))
-                drops_dict_all[str(item_id)] = drop_dict
+                drops.append(drop_dict)
 
         # Handle any embedded drop tables
 
@@ -741,87 +736,72 @@ class BuildMonster:
             items = drop_tables.revenants(self.monster_wikitext[2],
                                           self.monster_dict["combat_level"],
                                           self.monster_dict["hitpoints"])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
             # Also add wilderness slayer drops for Revenants
             items = drop_tables.wildernessslayer(self.monster_dict["name"],
                                                  self.monster_dict["combat_level"], self.monster_dict["hitpoints"],
                                                  self.monster_dict["slayer_level"])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "talismandroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.talisman(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "catacombsdroptable" in self.monster_wikitext[2].lower():
             items = drop_tables.catacombs(self.monster_dict["name"],
                                           self.monster_dict["hitpoints"],
                                           self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "herbdroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.herb(self.monster_dict["members"],
                                      self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "usefulherbdroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.usefulherb(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "fixedallotmentseeddroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.fixedallotmentseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "dropsallotmenttable" in self.monster_wikitext[2].lower():
             items = drop_tables.fixedallotmentseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "treeherbseeddroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.treeseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "rareseeddroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.rareseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "variableallotmentseeddroptale2" in self.monster_wikitext[2].lower():
             items = drop_tables.variableallotmentseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "manyseeddroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.commonseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "hopsdroptable2" in self.monster_wikitext[2].lower():
             items = drop_tables.hopsseed(self.monster_wikitext[2])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if "superiordroptable" in self.monster_wikitext[2].lower():
             items = drop_tables.superior(self.monster_dict["slayer_level"])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
         if ("wildernessslayerdroptable" in self.monster_wikitext[2].lower() and
                 "krystilia" in self.monster_dict["slayer_masters"]):
             items = drop_tables.wildernessslayer(self.monster_dict["name"],
                                                  self.monster_dict["combat_level"], self.monster_dict["hitpoints"],
                                                  self.monster_dict["slayer_level"])
-            for item, item_dict in items.items():
-                drops_list_ids.append(str(item))
-                drops_dict_all[str(item)] = item_dict
+            for item, drop_dict in items.items():
+                drops.append(drop_dict)
 
         # if "mainraredroptable" in self.monster_wikitext[2].lower():
         #     items = drop_tables.raredroptable(self.monster_wikitext[2])
@@ -835,8 +815,7 @@ class BuildMonster:
         #         drops_dict_all[str(item)] = item_dict
 
         # Append all parsed drops to the drops array
-        for item_id in drops_list_ids:
-            self.monster_dict["drops"].append(drops_dict_all[item_id])
+        self.monster_dict["drops"] = drops
 
     def extract_infobox_value(self, template: mwparserfromhell.nodes.template.Template, key: str) -> str:
         """Helper method to extract a value from a template using a specified key.

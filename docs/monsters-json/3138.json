@@ -25,6 +25,7 @@
     "slayer_level": 50,
     "slayer_xp": 134.0,
     "slayer_masters": [
+        "krystilia",
         "vannaka",
         "chaeldar",
         "konar",
@@ -62,7 +63,7 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.078125,
+            "rarity": 1.0,
             "drop_requirements": null
         },
         {
@@ -141,9 +142,18 @@
             "id": 565,
             "name": "Blood rune",
             "members": true,
-            "quantity": "30",
+            "quantity": "3",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
         {
@@ -156,48 +166,39 @@
             "drop_requirements": null
         },
         {
-            "id": 565,
-            "name": "Blood rune",
+            "id": 617,
+            "name": "Coins",
             "members": true,
-            "quantity": "30",
+            "quantity": "10",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.0546875,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "450",
+            "quantity": "40",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.2265625,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "450",
+            "quantity": "120",
             "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.234375,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "450",
+            "quantity": "200",
             "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "450",
-            "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.078125,
             "drop_requirements": null
         },
         {
@@ -222,9 +223,9 @@
             "id": 532,
             "name": "Big bones",
             "members": true,
-            "quantity": "3",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.0234375,
+            "rarity": 0.0546875,
             "drop_requirements": null
         },
         {
@@ -415,6 +416,24 @@
             "noted": false,
             "rarity": 0.00018309116475275368,
             "drop_requirements": null
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.010101010101010102,
+            "drop_requirements": "krystilia-task-only"
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004694835680751174,
+            "drop_requirements": "krystilia-task-only"
         }
     ]
 }

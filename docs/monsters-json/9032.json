@@ -9,7 +9,7 @@
     "hitpoints": 100,
     "max_hit": 0,
     "attack_type": [
-        "melee"
+        "ranged"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -23,10 +23,10 @@
     "slayer_xp": null,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "That is one big bear.",
+    "examine": "It doesn't look so dark with all those crystals.",
     "icon": null,
-    "wiki_name": "Crystalline Bear",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Crystalline_Bear",
+    "wiki_name": "Crystalline Dark Beast",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystalline_Dark_Beast",
     "attack_level": 98,
     "strength_level": 98,
     "defence_level": 98,
@@ -36,15 +36,15 @@
     "attack_slash": 0,
     "attack_crush": 0,
     "attack_magic": 0,
-    "attack_ranged": 0,
+    "attack_ranged": 54,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 54,
-    "melee_strength": 106,
-    "ranged_strength": 0,
+    "attack_accuracy": 0,
+    "melee_strength": 0,
+    "ranged_strength": 106,
     "magic_damage": 0,
     "drops": [
         {
@@ -75,8 +75,26 @@
             "drop_requirements": null
         },
         {
+            "id": 23869,
+            "name": "Crystalline bowstring",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
             "id": 23868,
             "name": "Crystal spike",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": null,
+            "drop_requirements": null
+        },
+        {
+            "id": 23870,
+            "name": "Crystal orb",
             "members": true,
             "quantity": "1",
             "noted": false,

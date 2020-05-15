@@ -110,7 +110,8 @@ def wildernessslayer(monster_name: str, combat_level: int, hitpoints: int, slaye
     :return: Dictionary of items on the drop table.
     """
     # Exit if required levels not provided
-    if not combat_level or not hitpoints or not slayer_level:
+    # if not combat_level or not hitpoints or not slayer_level:
+    if not combat_level or not slayer_level:
         print("Error: drop_tables.wildernessslayer")
         print("You need these to determine drop rarity!")
         exit(1)
@@ -123,7 +124,9 @@ def wildernessslayer(monster_name: str, combat_level: int, hitpoints: int, slaye
 
     # Determine Larran's key drop rate
     if combat_level <= 80:
-        larrans_key_drop_rate = 100 + ((3 / 10) * (80 - combat_level) ** 2)
+        larrans_key_drop_rate = 100 + ((3 / 10) * (80 - combat_level) * (80 - combat_level))
+        larrans_key_drop_rate = f"1/{larrans_key_drop_rate}"
+        larrans_key_drop_rate = eval(larrans_key_drop_rate)
     elif combat_level > 80 and combat_level < 350:
         # Use linear interpolation to determine drop rate
         larrans_key_drop_rate = math.floor(((combat_level - 81) / (350 - 81)) * (50 - 99) + 99)
@@ -1978,8 +1981,8 @@ def revenants(wikitext: str, combat_level: int, hitpoints: int) -> Dict:
             "rarity": 1 / (MSC / 2),
             "drop_requirements": None
         },
-        "5123": {
-            "id": 5123,
+        "5316": {
+            "id": 5316,
             "name": "Magic seed",
             "members": True,
             "quantity": "5-9",

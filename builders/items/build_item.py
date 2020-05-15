@@ -127,7 +127,8 @@ class BuildItem:
             "examine",
             "icon",
             "wiki_name",
-            "wiki_url"]
+            "wiki_url",
+            "wiki_exchange"]
 
         # Additional properties for all equipable items (weapons/armour)
         self.equipment_properties = [
@@ -264,7 +265,7 @@ class BuildItem:
         logging.debug(f"======================= {self.item_id_str} {self.item_name}")
         if self.verbose:
             print(f"======================= {self.item_id_str} {self.item_name}")
-        logging.debug(f"preprocessing: using the following cache data:")
+        logging.debug("preprocessing: using the following cache data:")
         logging.debug(self.item_cache_data)
 
         # Get the linked ID item value, if available
@@ -502,7 +503,8 @@ class BuildItem:
             logging.error("populate_item_properties_from_wiki_data: No infobox for wiki item.")
             return False
 
-        # STAGE ONE: Determine then set the wiki_name and wiki_url
+        # STAGE ONE: Determine then set the wiki_name, wiki_url
+        # and wiki_exchnage properties
 
         # Manually set OSRS Wiki name
         if self.wikitext_found_using not in ["id", "linked_id"]:
@@ -537,12 +539,6 @@ class BuildItem:
 
         self.item_dict["wiki_name"] = wiki_name
 
-        # Check if item is not actually able to be alched
-        if wiki_name:
-            if wiki_name in self.unalchable_items:
-                self.item_dict["lowalch"] = None
-                self.item_dict["highalch"] = None
-
         # Set the wiki_url property
         if wiki_versioned_name is not None:
             wiki_url = wiki_page_name + "#" + wiki_versioned_name
@@ -551,6 +547,31 @@ class BuildItem:
 
         wiki_url = wiki_url.replace(" ", "_")
         self.item_dict["wiki_url"] = "https://oldschool.runescape.wiki/w/" + wiki_url
+
+        # Try find the OSRS Wiki Exchange name/URL
+        exchange_base_url = "https://oldschool.runescape.wiki/w/Exchange:"
+        if self.item_dict["tradeable_on_ge"]:
+            gemwname = None
+            if self.infobox_version_number is not None:
+                key = "gemwname" + str(self.infobox_version_number)
+                gemwname = self.extract_infobox_value(self.template, key)
+            if gemwname is None:
+                gemwname = self.extract_infobox_value(self.template, "gemwname")
+            if gemwname is not None:
+                self.item_dict["wiki_exchange"] = gemwname
+            else:
+                self.item_dict["wiki_exchange"] = exchange_base_url + self.item_dict["name"]
+        else:
+            self.item_dict["wiki_exchange"] = None
+
+        # Check if item is not actually able to be alched
+        if wiki_name:
+            if wiki_name in self.unalchable_items:
+                self.item_dict["lowalch"] = None
+                self.item_dict["highalch"] = None
+            elif wiki_versioned_name in self.unalchable_items:
+                self.item_dict["lowalch"] = None
+                self.item_dict["highalch"] = None
 
         # STAGE TWO: Extract, process and set item properties from the infobox template
 
