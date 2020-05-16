@@ -477,6 +477,9 @@ class BuildItem:
         self.item_dict["name"] = self.item_cache_data["name"]
         self.item_dict["members"] = self.item_cache_data["members"]
         self.item_dict["tradeable_on_ge"] = self.item_cache_data["tradeable_on_ge"]
+        # Fix for invalid items that are not actually tradeable on the GE
+        if self.item_dict["id"] in [2203, 4595, 7228, 7466, 8624, 8626, 8628]:
+            self.item_dict["tradeable_on_ge"] = False
         self.item_dict["stackable"] = self.item_cache_data["stackable"]
         self.item_dict["stacked"] = self.item_cache_data["stacked"]
         self.item_dict["noted"] = self.item_cache_data["noted"]
@@ -558,9 +561,10 @@ class BuildItem:
             if gemwname is None:
                 gemwname = self.extract_infobox_value(self.template, "gemwname")
             if gemwname is not None:
-                self.item_dict["wiki_exchange"] = gemwname
+                wiki_exchange = gemwname.replace(" ", "_")
             else:
-                self.item_dict["wiki_exchange"] = exchange_base_url + self.item_dict["name"]
+                wiki_exchange = self.item_dict["name"].replace(" ", "_")
+            self.item_dict["wiki_exchange"] = exchange_base_url + wiki_exchange
         else:
             self.item_dict["wiki_exchange"] = None
 

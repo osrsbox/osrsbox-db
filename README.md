@@ -360,6 +360,7 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | icon | string | The item icon (in base64 encoding). | True | False |
 | wiki_name | string | The OSRS Wiki name for the item. | True | True |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | True |
+| wiki_exchnage | string | The OSRS Wiki Exchange URL. | True | True |
 | equipment | dict | The equipment bonuses of equipable armour/weapons. | True | True |
 | weapon | dict | The weapon bonuses including attack speed, type and stance. | True | True |
 
