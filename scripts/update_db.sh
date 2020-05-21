@@ -65,7 +65,7 @@ python3 update_json_files.py
 
 echo -e ">>> Generating items-search.json file..."
 cd ~/repos/osrsbox-db/scripts/items/
-python3 generate_item_search_file.py
+python3 generate_items_search_file.py
 
 echo -e ">>> Running repo tests..."
 cd ~/repos/osrsbox-db

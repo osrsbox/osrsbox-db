@@ -56,13 +56,18 @@ def main():
     with open(processed_wikitextfile_path) as f:
         all_wikitext_processed = json.load(f)
 
+    # Dict of unalchable items
+    unalchable_items_path = Path(config.DATA_WIKI_PATH / "page-titles-unalchable.json")
+    with open(unalchable_items_path) as f:
+        unalchable_items = json.load(f)
+
     # Load the invalid items file
     invalid_items_file_path = Path(config.DATA_ITEMS_PATH / "invalid-items.json")
     with open(invalid_items_file_path) as f:
         invalid_items_data = json.load(f)
 
     # Load buy limit data
-    buy_limits_file_path = Path(config.DATA_ITEMS_PATH / "ge-limits-names.json")
+    buy_limits_file_path = Path(config.DATA_ITEMS_PATH / "ge-limits-ids.json")
     with open(buy_limits_file_path) as f:
         buy_limits_data = json.load(f)
 
@@ -86,6 +91,16 @@ def main():
     all_item_cache_data_path = Path(config.DATA_ITEMS_PATH / "items-cache-data.json")
     with open(all_item_cache_data_path) as f:
         all_item_cache_data = json.load(f)
+
+    # Load icon data
+    icons_file_path = Path(config.DATA_ICONS_PATH / "icons-items-complete.json")
+    with open(icons_file_path) as f:
+        icons_data = json.load(f)
+
+    # Load duplicate item data
+    duplicates_file_path = Path(config.DATA_ITEMS_PATH / "duplicate-items.json")
+    with open(duplicates_file_path) as f:
+        duplicate_items = json.load(f)
 
     # Load schema data
     schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
@@ -111,6 +126,7 @@ def main():
                                        all_item_cache_data=all_item_cache_data,
                                        all_wikitext_processed=all_wikitext_processed,
                                        all_wikitext_raw=all_wikitext_raw,
+                                       unalchable_items=unalchable_items,
                                        all_db_items=all_db_items,
                                        buy_limits_data=buy_limits_data,
                                        skill_requirements_data=skill_requirements_data,
@@ -118,6 +134,8 @@ def main():
                                        weapon_stances_data=weapon_stances_data,
                                        invalid_items_data=invalid_items_data,
                                        known_items=known_items,
+                                       duplicate_items=duplicate_items,
+                                       icons_data=icons_data,
                                        schema_data=schema_data,
                                        export=export,
                                        verbose=verbose)

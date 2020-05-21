@@ -2,6 +2,7 @@
 
 A document that specifies the changes to the PyPi `osrsbox` package.
 
+- `1.3.25`: Release for game update: 2020/05/21.
 - `1.3.24`: Added wiki_exchange to items database.
 - `1.3.23`: Release for game update: 2020/05/14.
 - `1.3.22`: Release for weekly update, no game update.

@@ -94,6 +94,7 @@ source venv/bin/activate
 # Install Python package requirements
 pip install -r requirements.txt
 
+# Update wiki data for items/monsters
 echo -e ">>> Updating wiki data..."
 cd ~/repos/osrsbox-db/scripts/update/
 python3 update_wiki_data.py 2020-05-13T00:00:00Z
@@ -103,10 +104,17 @@ echo -e ">>> Process raw wikitext..."
 cd ~/repos/osrsbox-db/scripts/wiki/
 python3 process_wikitext.py
 
+# Update items unalchable file
+echo -e ">>> Update unalchable items..."
+cd ~/repos/osrsbox-db/scripts/items/
+python3 generate_items_unalchable.py
+
+# Update local cache data from cache dump
 echo -e ">>> Updating cache data..."
 cd ~/repos/osrsbox-db/scripts/update/
 python3 update_cache_data.py
 
+# Determine cache changes
 echo -e ">>> Determine any cache changes..."
 cd ~/repos/osrsbox-db/scripts/update/
 python3 determine_cache_changes.py
