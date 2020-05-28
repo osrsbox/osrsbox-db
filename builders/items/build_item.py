@@ -750,7 +750,7 @@ class BuildItem:
 
             # Try set the attack speed of the weapon
             try:
-                self.item_dict["weapon"]["attack_speed"] = int(self.strip_infobox(template.get("aspeed").value))
+                self.item_dict["weapon"]["attack_speed"] = int(self.strip_infobox(template.get("speed").value))
             except ValueError:
                 self.item_dict["weapon"]["attack_speed"] = None
                 logging.critical("WEAPON: Could not determine weapon attack speed")

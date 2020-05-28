@@ -2,6 +2,117 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/05/28: Chambers of Xeric Improvements
+- Added items: 16
+    - 24656,Enraged tektiny
+    - 24657,Enraged tektiny
+    - 24658,Flying vespina
+    - 24659,Flying vespina
+    - 24660,Massive storage unit
+    - 24661,Massive storage unit
+    - 24662,Massive storage unit
+    - 24663,Massive storage unit
+    - 24664,Twisted ancestral hat
+    - 24665,Twisted ancestral hat
+    - 24666,Twisted ancestral robe top
+    - 24667,Twisted ancestral robe top
+    - 24668,Twisted ancestral robe bottom
+    - 24669,Twisted ancestral robe bottom
+    - 24670,Twisted ancestral colour kit
+    - 24671,Twisted ancestral colour kit
+- Removed items: 0
+- Changed items: 90
+    - 20913,Elder (-)(1),cost|lowalch|highalch
+    - 20914,Elder (-)(2),cost|lowalch|highalch
+    - 20915,Elder (-)(3),cost|lowalch|highalch
+    - 20916,Elder (-)(4),cost|lowalch|highalch
+    - 20917,Elder potion (1),cost|lowalch|highalch
+    - 20918,Elder potion (2),cost|lowalch|highalch
+    - 20919,Elder potion (3),cost|lowalch|highalch
+    - 20920,Elder potion (4),cost|lowalch|highalch
+    - 20921,Elder (+)(1),cost|lowalch|highalch
+    - 20922,Elder (+)(2),cost|lowalch|highalch
+    - 20923,Elder (+)(3),cost|lowalch|highalch
+    - 20924,Elder (+)(4),cost|lowalch|highalch
+    - 20925,Twisted (-)(1),cost|lowalch|highalch
+    - 20926,Twisted (-)(2),cost|lowalch|highalch
+    - 20927,Twisted (-)(3),cost|lowalch|highalch
+    - 20928,Twisted (-)(4),cost|lowalch|highalch
+    - 20929,Twisted potion (1),cost|lowalch|highalch
+    - 20930,Twisted potion (2),cost|lowalch|highalch
+    - 20931,Twisted potion (3),cost|lowalch|highalch
+    - 20932,Twisted potion (4),cost|lowalch|highalch
+    - 20933,Twisted (+)(1),cost|lowalch|highalch
+    - 20934,Twisted (+)(2),cost|lowalch|highalch
+    - 20935,Twisted (+)(3),cost|lowalch|highalch
+    - 20936,Twisted (+)(4),cost|lowalch|highalch
+    - 20937,Kodai (-)(1),cost|lowalch|highalch
+    - 20938,Kodai (-)(2),cost|lowalch|highalch
+    - 20939,Kodai (-)(3),cost|lowalch|highalch
+    - 20940,Kodai (-)(4),cost|lowalch|highalch
+    - 20941,Kodai potion (1),cost|lowalch|highalch
+    - 20942,Kodai potion (2),cost|lowalch|highalch
+    - 20943,Kodai potion (3),cost|lowalch|highalch
+    - 20944,Kodai potion (4),cost|lowalch|highalch
+    - 20945,Kodai (+)(1),cost|lowalch|highalch
+    - 20946,Kodai (+)(2),cost|lowalch|highalch
+    - 20947,Kodai (+)(3),cost|lowalch|highalch
+    - 20948,Kodai (+)(4),cost|lowalch|highalch
+    - 20949,Revitalisation (-)(1),cost|lowalch|highalch
+    - 20950,Revitalisation (-)(2),cost|lowalch|highalch
+    - 20951,Revitalisation (-)(3),cost|lowalch|highalch
+    - 20952,Revitalisation (-)(4),cost|lowalch|highalch
+    - 20953,Revitalisation potion (1),cost|lowalch|highalch
+    - 20954,Revitalisation potion (2),cost|lowalch|highalch
+    - 20955,Revitalisation potion (3),cost|lowalch|highalch
+    - 20956,Revitalisation potion (4),cost|lowalch|highalch
+    - 20957,Revitalisation (+)(1),cost|lowalch|highalch
+    - 20958,Revitalisation (+)(2),cost|lowalch|highalch
+    - 20959,Revitalisation (+)(3),cost|lowalch|highalch
+    - 20960,Revitalisation (+)(4),cost|lowalch|highalch
+    - 20961,Prayer enhance (-)(1),cost|lowalch|highalch
+    - 20962,Prayer enhance (-)(2),cost|lowalch|highalch
+    - 20963,Prayer enhance (-)(3),cost|lowalch|highalch
+    - 20964,Prayer enhance (-)(4),cost|lowalch|highalch
+    - 20965,Prayer enhance (1),cost|lowalch|highalch
+    - 20966,Prayer enhance (2),cost|lowalch|highalch
+    - 20967,Prayer enhance (3),cost|lowalch|highalch
+    - 20968,Prayer enhance (4),cost|lowalch|highalch
+    - 20969,Prayer enhance (+)(1),cost|lowalch|highalch
+    - 20970,Prayer enhance (+)(2),cost|lowalch|highalch
+    - 20971,Prayer enhance (+)(3),cost|lowalch|highalch
+    - 20972,Prayer enhance (+)(4),cost|lowalch|highalch
+    - 20973,Xeric's aid (-)(1),cost|lowalch|highalch
+    - 20974,Xeric's aid (-)(2),cost|lowalch|highalch
+    - 20975,Xeric's aid (-)(3),cost|lowalch|highalch
+    - 20976,Xeric's aid (-)(4),cost|lowalch|highalch
+    - 20977,Xeric's aid (1),cost|lowalch|highalch
+    - 20978,Xeric's aid (2),cost|lowalch|highalch
+    - 20979,Xeric's aid (3),cost|lowalch|highalch
+    - 20980,Xeric's aid (4),cost|lowalch|highalch
+    - 20981,Xeric's aid (+)(1),cost|lowalch|highalch
+    - 20982,Xeric's aid (+)(2),cost|lowalch|highalch
+    - 20983,Xeric's aid (+)(3),cost|lowalch|highalch
+    - 20984,Xeric's aid (+)(4),cost|lowalch|highalch
+    - 20985,Overload (-)(1),cost|lowalch|highalch
+    - 20986,Overload (-)(2),cost|lowalch|highalch
+    - 20987,Overload (-)(3),cost|lowalch|highalch
+    - 20988,Overload (-)(4),cost|lowalch|highalch
+    - 20989,Overload (1),cost|lowalch|highalch
+    - 20990,Overload (2),cost|lowalch|highalch
+    - 20991,Overload (3),cost|lowalch|highalch
+    - 20992,Overload (4),cost|lowalch|highalch
+    - 20993,Overload (+)(1),cost|lowalch|highalch
+    - 20994,Overload (+)(2),cost|lowalch|highalch
+    - 20995,Overload (+)(3),cost|lowalch|highalch
+    - 20996,Overload (+)(4),cost|lowalch|highalch
+    - 21555,Numulite,cost|lowalch|highalch
+    - 21557,Numulite,cost|lowalch|highalch
+    - 21558,Numulite,cost|lowalch|highalch
+    - 21559,Numulite,cost|lowalch|highalch
+    - 21560,Numulite,cost|lowalch|highalch
+    - 21561,Numulite,cost|lowalch|highalch
+
 ### 2020/05/21: Vanguard Improvements
 - Added items: 0
 - Removed items: 0
