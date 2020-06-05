@@ -28,6 +28,8 @@ from typing import List
 import dateparser
 
 
+# GENERIC CLEANERS...
+
 def clean_wikitext(value: str) -> str:
     """Generic infobox property cleaner.
 
@@ -119,6 +121,224 @@ def clean_integer(value: str) -> int:
     return value
 
 
+# ITEM CLEANERS...
+
+
+def clean_weight(value: str, item_id: int) -> float:
+    """Convert the weight entry from a OSRS Wiki infobox to a float.
+
+    :param value: Template value extracted in raw wikitext format.
+    :param item_id: The item ID number.
+    :return weight: The weight of an item.
+    """
+    item_id = int(item_id)
+
+    weight = str(value)
+    weight = weight.strip()
+
+    # Handle weight reducing items... (item ID changes when equipped)
+    # Generic weight reducing items (not graceful)
+    if item_id == 89:
+        return -4.5  # Boots of lightness
+    elif item_id == 10554:
+        return -4.5  # Penance gloves
+    elif item_id == 13342:
+        return -4.0  # Max cape
+    elif item_id == 10073:
+        return -2.2  # Spotted cape
+    elif item_id == 10074:
+        return -4.5  # Spottier cape
+    elif item_id == 13341:
+        return -4.0  # Agility cape (t)
+    elif item_id == 13340:
+        return -4.0  # Agility cape
+    # Graceful items
+    elif item_id in [11851, 13580, 13592, 13604, 13616, 13628, 13668, 21063]:
+        return -3  # Graceful hood
+    elif item_id in [11853, 13582, 13594, 13606, 13618, 13630, 13670, 21066]:
+        return -4  # Graceful cape
+    elif item_id in [11855, 13584, 13596, 13608, 13620, 13632, 13672, 21069]:
+        return -5  # Graceful top
+    elif item_id in [11857, 13586, 13598, 13610, 13622, 13634, 13674, 21072]:
+        return -6  # Graceful legs
+    elif item_id in [11859, 13588, 13600, 13612, 13624, 13636, 13676, 21075]:
+        return -3  # Graceful gloves
+    elif item_id in [11861, 13590, 13602, 13614, 13626, 13638, 13678, 21078]:
+        return -4  # Graceful boots
+
+    # The weight property is usally quite clean...
+    # Try float cast the value, and return
+    try:
+        return float(weight)
+    except ValueError:
+        pass
+
+    # Some items have Inventory/Equipped weights:
+    # For example: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
+    # There are multiple HTML break tags: <br> <br /> <br/>
+    break_tags = ["<br>", "<br />", "<br/>"]
+    if "inventory" in weight.lower():
+        weight = weight.replace("'''", "")
+        for break_tag in break_tags:
+            if break_tag in weight:
+                weight_list = weight.split(break_tag)
+                # Grab first list entry, convert to lower case and replace string
+                weight = weight_list[0]
+                weight = weight.lower()
+                weight = weight.replace("in inventory:", "")
+                weight = weight.replace("inventory:", "")
+                weight = weight.replace("kg", "")
+                try:
+                    return float(weight)
+                except ValueError:
+                    print("ERROR: clean_weight: Cleaning inventory weight failed.")
+                    print(value, weight)
+                    exit()
+
+    # Do a generic check for an empty string
+    # If found, set weight to 0
+    if weight == "":
+        return 0
+
+    print("ERROR: clean_weight: Cleaning weight property failed.")
+    print(value, weight)
+    exit()
+
+
+def clean_quest(value: str, item_id: int) -> bool:
+    """Convert the quest entry from an OSRS Wiki infobox to a boolean.
+
+    :param value: The extracted raw wiki text.
+    :param item_id: The item ID number.
+    :return quest: A boolean to identify if an item is associated with a quest.
+    """
+    item_id = int(item_id)
+
+    # Clean a quest value
+    quest = str(value)
+    quest = quest.strip()
+    quest = quest.lower()
+
+    # Specific item ID checks
+    if item_id in [19730, 19731]:
+        return False  # Bloodhound
+
+    # Check quest entry and categorize based on string content
+    if quest in ["", "no", "none"]:
+        return False
+    elif quest in ["yes", "rune mysteries"]:
+        return True
+    elif "[[" in quest:
+        return True
+    else:
+        print("ERROR: clean_quest: Cleaning quest failed.")
+        print(value, quest)
+        exit()
+
+
+def clean_release_date(value: str) -> str:
+    """A helper method to convert the release date entry from an OSRS Wiki infobox.
+
+    The returned value will be a specifically formatted string: dd Month YYYY.
+    For example, 25 June 2017 or 01 November 2014.
+
+    :param value: The extracted raw wiki text.
+    :return release_date: A cleaned release date of an item.
+    """
+    release_date = str(value)
+    release_date = release_date.strip()
+    release_date = release_date.replace("[", "")
+    release_date = release_date.replace("]", "")
+
+    if release_date == "":
+        return None
+
+    try:
+        release_date = datetime.datetime.strptime(release_date, "%d %B %Y")
+        return release_date.date().isoformat()
+    except ValueError:
+        pass
+
+    try:
+        release_date = dateparser.parse(release_date)
+        release_date = release_date.date().isoformat()
+    except (ValueError, TypeError):
+        print("ERROR: clean_release_date: Cleaning release date failed.")
+        print(value, release_date)
+        exit()
+
+
+def clean_tradeable(value: str, item_id: int) -> bool:
+    """Convert the tradeable entry from an OSRS Wiki infobox to a boolean.
+
+    :param value: The extracted raw wiki text.
+    :param item_id: The item ID number.
+    :return quest: A boolean to identify if an item is tradeable.
+    """
+    item_id = int(item_id)
+
+    # Clean a quest value
+    tradeable = str(value)
+    tradeable = tradeable.strip()
+    tradeable = tradeable.lower()
+
+    if tradeable in ["", "no", "none"]:
+        return False
+    elif tradeable in ["yes"]:
+        return True
+    else:
+        print("ERROR: clean_tradeable: Cleaning tradeable property failed.")
+        print(value, tradeable)
+        exit()
+
+
+def clean_examine(value: str, name: str) -> str:
+    """Convert the examine text entry from an OSRS Wiki infobox.
+
+    :param value: The extracted raw wiki text.
+    :param name: The name of the item being processed.
+    :return tradeable: A cleaned tradeable property of an item.
+    """
+    examine = str(value)
+    examine = examine.strip()
+
+    # Apart from "Clue scroll (master)" and "Clue scroll (beginner)"
+    # clues have variable examine text
+    clue_scrolls = ["Clue scroll (easy)",
+                    "Clue scroll (medium)",
+                    "Clue scroll (hard)",
+                    "Clue scroll (elite)"]
+    if name in clue_scrolls:
+        return "A clue!"
+
+    # Medium clue keys are also variable (but not other key variants)
+    # Set to first value available
+    if name == "Key (medium)":
+        return "A key to unlock a treasure chest."
+
+    # Ghrim's book
+    # Example: ''Managing Thine Kingdom for Noobes'' by A. Ghrim.
+    if name == "Ghrim's book":
+        examine = examine.replace("''", "")
+        return examine
+
+    # Pet smoke devil
+    # Example: <nowiki>*cough*</nowiki>
+    if name == "Pet smoke devil":
+        return "*cough*"
+
+    # Fix for quest related examine texts (mostly for keys)
+    examine = re.sub(r' \([^()]*\)', '', examine)
+
+    # Remove sic
+    examine = examine.replace("{{sic}}", "")
+
+    return examine
+
+
+# MONSTER CLEANERS...
+
+
 def clean_stats_value(value: str) -> int:
     """Clean a item/monster stats bonuses value extracted from a wiki template.
 
@@ -146,223 +366,12 @@ def clean_stats_value(value: str) -> int:
             value = int(value)
         else:
             print("clean_stats_value: Cannot int cast stat value")
-            quit()
+            exit()
     else:
         # If unable to process, set to 0
         value = 0
 
     return value
-
-
-def clean_weight(value: str, item_id: int) -> float:
-    """Convert the weight entry from a OSRS Wiki infobox to a float.
-
-    :param value: Template value extracted in raw wikitext format.
-    :param item_id: The item ID number.
-    :return weight: The weight of an item.
-    """
-    weight = str(value)
-    weight = weight.strip()
-
-    # Replace generic wiki text links
-    weight = weight.replace("[", "")
-    weight = weight.replace("]", "")
-
-    # Remove "kg" from weight
-    weight = weight.replace("kg", "")
-
-    weight = weight.replace(",", ".")
-
-    # Some items have Inventory/Equipped weights:
-    # For example: "'''Inventory:''' 0.3{{kg}}<br> '''Equipped:''' -4.5"
-    if "inventory" in weight.lower():
-        weight = weight.replace("'''", "")
-        weight = weight.replace("{", "")
-        weight = weight.replace("}", "")
-        # Split based on HTML break
-        if "<br>" in weight:
-            weight_list = weight.split("<br>")
-        if "<br />" in weight:
-            weight_list = weight.split("<br />")
-        if "<br/>" in weight:
-            weight_list = weight.split("<br/>")
-        # Grab first list entry
-        weight = weight_list[0]
-        weight = weight.lower()
-        weight = weight.replace("in inventory:", "")
-        weight = weight.replace("inventory:", "")
-
-    # Remove greater than, less than for approximate weights
-    if ">" in weight:
-        weight = weight.replace(">", "")
-    if "<" in weight:
-        weight = weight.replace("<", "")
-
-    # Strip the string again...
-    weight = weight.strip()
-
-    # If weight string is empty, set to None
-    if weight == "":
-        weight = 0
-
-    # Handle special weight reducing equipment. When worn, weight reducing items
-    # have a specific item ID number that changes
-    item_id = int(item_id)
-    # Boots of lightness
-    if item_id == 89:
-        weight = -4.5
-    # Penance gloves
-    elif item_id == 10554:
-        weight = -4.5
-    # Max cape
-    elif item_id == 13342:
-        weight = -4.0
-    # Spotted cape
-    elif item_id == 10073:
-        weight = -2.2
-    # Spottier cape
-    elif item_id == 10074:
-        weight = -4.5
-    # Agility cape (t)
-    elif item_id == 13341:
-        weight = -4.0
-    # Agility cape
-    elif item_id == 13340:
-        weight = -4.0
-    # Graceful
-    elif item_id in [11851, 13580, 13592, 13604, 13616, 13628, 13668, 21063]:  # hood
-        weight = -3
-    elif item_id in [11853, 13582, 13594, 13606, 13618, 13630, 13670, 21066]:  # cape
-        weight = -4
-    elif item_id in [11855, 13584, 13596, 13608, 13620, 13632, 13672, 21069]:  # top
-        weight = -5
-    elif item_id in [11857, 13586, 13598, 13610, 13622, 13634, 13674, 21072]:  # legs
-        weight = -6
-    elif item_id in [11859, 13588, 13600, 13612, 13624, 13636, 13676, 21075]:  # gloves
-        weight = -3
-    elif item_id in [11861, 13590, 13602, 13614, 13626, 13638, 13678, 21078]:  # boots
-        weight = -4
-
-    # Cast to a float, and return
-    weight = float(weight)
-    return weight
-
-
-def clean_quest(value: str) -> bool:
-    """Convert the quest entry from an OSRS Wiki infobox to a boolean.
-
-    :param value: The extracted raw wiki text.
-    :return quest: A boolean to identify if an item is associated with a quest.
-    """
-    # Clean a quest value
-    quest = value
-    quest = quest.strip()
-
-    # Generic test for not a quest item
-    if quest.lower() == "no" or quest.lower() == "":
-        quest = False
-    elif quest.lower() == "yes":
-        quest = True
-    elif "[[" in quest:
-        quest = True
-    else:
-        # Only two items get here (Rune mysteries related items)
-        quest = True
-
-    return quest
-
-
-def clean_release_date(value: str) -> str:
-    """A helper method to convert the release date entry from an OSRS Wiki infobox.
-
-    The returned value will be a specifically formatted string: dd Month YYYY.
-    For example, 25 June 2017 or 01 November 2014.
-
-    :param value: The extracted raw wiki text.
-    :return release_date: A cleaned release date of an item.
-    """
-    release_date = value
-    release_date = release_date.strip()
-    release_date = release_date.replace("[", "")
-    release_date = release_date.replace("]", "")
-
-    if release_date is None or release_date == "":
-        return None
-
-    try:
-        release_date = datetime.datetime.strptime(release_date, "%d %B %Y")
-        return release_date.date().isoformat()
-    except ValueError:
-        pass
-
-    try:
-        release_date = dateparser.parse(release_date)
-        release_date = release_date.date().isoformat()
-    except (ValueError, TypeError):
-        return None
-
-    return release_date
-
-
-def clean_examine(value: str, name: str) -> str:
-    """Convert the examine text entry from an OSRS Wiki infobox.
-
-    :param value: The extracted raw wiki text.
-    :param name: The name of the item being processed.
-    :return tradeable: A cleaned tradeable property of an item.
-    """
-    examine = str(value)
-    examine = examine.strip()
-
-    examine = examine.replace("[", "")
-    examine = examine.replace("]", "")
-
-    # Generic fix for clue scroll related items
-    clue_scrolls = ["Clue scroll (easy)",
-                    "Clue scroll (medium)",
-                    "Clue scroll (hard)",
-                    "Clue scroll (elite)"]
-    if name in clue_scrolls:
-        examine = "A clue!"
-        return examine
-    if name == "Key (medium)":
-        examine = "A key to unlock a treasure chest."
-        return examine
-
-    # Fix for quest related examine texts (mostly for keys)
-    examine = re.sub(r' \([^()]*\)', '', examine)
-
-    # Remove nowiki tags
-    examine = examine.replace("<nowiki>", "")
-    examine = examine.replace("</nowiki>", "")
-
-    # Remove linked tags
-    examine = examine.replace("{{*}}", "")
-
-    # Remove sic
-    examine = examine.replace("{{sic}}", "")
-
-    # Remove triple/double quotes
-    examine = examine.replace("'''", "")
-    examine = examine.replace("''", "")
-
-    # Remove stars (used for lists in wiki)
-    examine = examine.replace("*", "")
-
-    # Remove breaks
-    examine = examine.replace("<br />", " ")
-    examine = examine.replace("<br/>", " ")
-    examine = examine.replace("<br>", " ")
-
-    # Remove any line breaks for spaces
-    examine = examine.replace("\n", " ")
-
-    # Remove double spaces for single spaces
-    examine = examine.replace("  ", " ")
-
-    examine = examine.strip()
-
-    return examine
 
 
 def clean_drop_quantity(value: str) -> str:
@@ -389,7 +398,7 @@ def clean_drop_quantity(value: str) -> str:
     pattern = re.compile(r"^[0-9]*([-,][0-9]*)?")
     if value and not pattern.match(value):
         print(f"Drop quantity regex failed: {value}")
-        quit()
+        exit()
 
     return value
 
@@ -731,7 +740,7 @@ def clean_slayer_xp(value: str) -> float:
         try:
             value = float(value)
         except ValueError:
-            print("Error converting slayer_xp value. Quitting.")
-            quit()
+            print("Error converting slayer_xp value. exitting.")
+            exit()
 
     return value

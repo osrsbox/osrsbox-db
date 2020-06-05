@@ -114,8 +114,6 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
         # Toggle to start, stop at a specific item ID
         # if int(item_id) < 24300:
         #     continue
-        # if int(item_id) != 2203:
-        #     continue
 
         # Initialize the BuildItem class, used for all items
         builder = build_item.BuildItem(item_id=item_id,

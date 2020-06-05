@@ -600,7 +600,7 @@ class BuildItem:
         if quest is None:
             quest = self.extract_infobox_value(self.template, "quest")
         if quest is not None:
-            self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
+            self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest, self.item_id)
         else:
             # Being here means the extraction for "quest" failed
             key = "questrequired" + str(self.infobox_version_number)
@@ -608,7 +608,7 @@ class BuildItem:
             if quest is None:
                 quest = self.extract_infobox_value(self.template, "questrequired")
             if quest is not None:
-                self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest)
+                self.item_dict["quest_item"] = infobox_cleaner.clean_quest(quest, self.item_id)
             else:
                 self.item_dict["quest_item"] = False
 
@@ -633,7 +633,7 @@ class BuildItem:
         if tradeable is None:
             tradeable = self.extract_infobox_value(self.template, "tradeable")
         if tradeable is not None:
-            self.item_dict["tradeable"] = infobox_cleaner.clean_boolean(tradeable)
+            self.item_dict["tradeable"] = infobox_cleaner.clean_tradeable(tradeable, self.item_id)
         else:
             self.item_dict["tradeable"] = False
             self.item_dict["incomplete"] = True
@@ -666,11 +666,11 @@ class BuildItem:
             buy_limit = None
             try:
                 buy_limit = self.buy_limits_data[self.item_id_str]
+                self.item_dict["buy_limit"] = buy_limit
             except KeyError:
-                print("populate_item_properties_from_wiki_data: Error setting buy limit...")
+                print("populate_item_properties_from_wiki_data: Error setting buy limit.")
                 print(f"{self.item_id} has no buy limit available. Exiting.")
                 exit()
-            self.item_dict["buy_limit"] = buy_limit
 
         # We finished processing, set incomplete to false if not true
         if not self.item_dict.get("incomplete"):
@@ -692,7 +692,7 @@ class BuildItem:
                 # No infobox bonuses found for the item!
                 print("populate_equipable_properties: Item has no equipment infobox.")
                 logging.critical("populate_equipable_properties: Item has no equipment infobox.")
-                quit()
+                exit()
 
         # Set the template
         template = infobox_parser.template
@@ -727,7 +727,7 @@ class BuildItem:
             self.item_dict["equipment"]["slot"] = None
             print("populate_equipable_properties: Could not determine item slot...")
             logging.critical("populate_equipable_properties: Could not determine item slot...")
-            quit()
+            exit()
 
         # Determine the skill requirements for the equipable item
         self.item_dict["equipment"]["requirements"] = None
@@ -737,13 +737,12 @@ class BuildItem:
         except KeyError:
             print("populate_equipable_properties: Could not determine skill requirements...")
             logging.critical("populate_equipable_properties: Could not determine skill requirements...")
-            quit()
+            exit()
 
         # STAGE TWO: WEAPONS
 
         # If item is weapon, two-handed, or 2h, start processing the weapon data
         if (self.item_dict["equipment"]["slot"] == "weapon" or
-                self.item_dict["equipment"]["slot"] == "two-handed" or
                 self.item_dict["equipment"]["slot"] == "2h"):
 
             self.item_dict["weapon"] = dict()
@@ -755,15 +754,18 @@ class BuildItem:
                 self.item_dict["weapon"]["attack_speed"] = None
                 logging.critical("WEAPON: Could not determine weapon attack speed")
 
-                # Item IDs with no known attack speed, set to zero
+                # Hotfix: Crate with zanik
                 if int(self.item_id) in [8871]:
                     self.item_dict["weapon"]["attack_speed"] = 0
-                # Salamander fix, set to base attack speed of 5
+
+                # Hotfix: Salamanders - set to base attack speed of 5
+                # Note depending on attack style, speed can be +1
                 elif int(self.item_id) in [10145, 10146, 10147, 10147, 10148, 10149]:
                     self.item_dict["weapon"]["attack_speed"] = 5
                 else:
-                    pass
-                    # quit()
+                    print("populate_equipable_properties: Could not determine weapon speed...")
+                    logging.critical("populate_equipable_properties: Could not determine weapon speed...")
+                    exit()
 
             # Try to set the weapon type of the weapon
             try:
@@ -773,7 +775,7 @@ class BuildItem:
                 self.item_dict["weapon"]["weapon_type"] = None
                 print("populate_equipable_properties: Could not determine weapon type...")
                 logging.critical("populate_equipable_properties: Could not determine weapon type...")
-                quit()
+                exit()
 
             # Try to set stances available for the weapon
             try:
@@ -782,13 +784,13 @@ class BuildItem:
                 self.item_dict["weapon"]["stances"] = None
                 print("populate_equipable_properties: Could not determine weapon stance...")
                 logging.critical("populate_equipable_properties: Could not determine weapon stance...")
-                quit()
+                exit()
 
             # Finally, set the equipable_weapon property to true
             self.item_dict["equipable_weapon"] = True
 
         else:
-            # If the item is not a weapon, two-handed or 2h it is not a weapon
+            # If the item is not "weapon" or "2h" it is not a weapon
             self.item_dict["equipable_weapon"] = False
 
         return True
