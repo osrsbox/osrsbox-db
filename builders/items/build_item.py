@@ -758,10 +758,15 @@ class BuildItem:
                 if int(self.item_id) in [8871]:
                     self.item_dict["weapon"]["attack_speed"] = 0
 
+                # Hotfix: Hallowed hammer
+                elif int(self.item_id) in [24727]:
+                    self.item_dict["weapon"]["attack_speed"] = 0
+
                 # Hotfix: Salamanders - set to base attack speed of 5
                 # Note depending on attack style, speed can be +1
                 elif int(self.item_id) in [10145, 10146, 10147, 10147, 10148, 10149]:
                     self.item_dict["weapon"]["attack_speed"] = 5
+
                 else:
                     print("populate_equipable_properties: Could not determine weapon speed...")
                     logging.critical("populate_equipable_properties: Could not determine weapon speed...")
@@ -831,7 +836,7 @@ class BuildItem:
         if value is None:
             value = self.extract_infobox_value(template, prop)
 
-        if value is not None:
+        if value is not None and value != "":
             value = self.strip_infobox(value)
             if isinstance(value, str):
                 if value[0] == "-":
@@ -892,5 +897,10 @@ class BuildItem:
         # Validate object with schema attached
         v = config.MyValidator(self.schema_data)
         v.validate(current_json)
+
+        # Print any validation errors
+        if v.errors:
+            print(v.errors)
+            exit()
 
         assert v.validate(current_json)

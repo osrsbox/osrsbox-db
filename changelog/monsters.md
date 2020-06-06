@@ -2,6 +2,58 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/06/04: Darkmeyer
+- Added monsters: 37
+    - 9560,Kroy
+    - 9564,Damien Leucurte
+    - 9569,Vanstrom Klause
+    - 9571,Vanstrom Klause
+    - 9573,Acidic Bloodveld
+    - 9609,Seagull
+    - 9611,Mutated Bloodveld
+    - 9612,Nail beast
+    - 9613,Nail beast
+    - 9614,Vampyre Juvinate
+    - 9615,Vampyre Juvinate
+    - 9616,Vampyre Juvinate
+    - 9617,Vampyre Juvinate
+    - 9727,Vampyre Juvinate
+    - 9728,Vampyre Juvinate
+    - 9729,Vampyre Juvinate
+    - 9730,Vampyre Juvinate
+    - 9731,Vampyre Juvenile
+    - 9732,Vampyre Juvenile
+    - 9733,Vampyre Juvenile
+    - 9734,Vampyre Juvenile
+    - 9735,Vyrewatch
+    - 9736,Vyrewatch
+    - 9737,Vyrewatch
+    - 9738,Vyrewatch
+    - 9739,Vyrewatch
+    - 9740,Vyrewatch
+    - 9741,Vyrewatch
+    - 9742,Vyrewatch
+    - 9756,Vyrewatch Sentinel
+    - 9757,Vyrewatch Sentinel
+    - 9758,Vyrewatch Sentinel
+    - 9759,Vyrewatch Sentinel
+    - 9760,Vyrewatch Sentinel
+    - 9761,Vyrewatch Sentinel
+    - 9762,Vyrewatch Sentinel
+    - 9763,Vyrewatch Sentinel
+- Removed monsters: 0
+- Changed monsters: 10
+    - 3692,Vampyre Juvenile,chatheadModels
+    - 3693,Vampyre Juvenile,chatheadModels
+    - 3694,Vampyre Juvinate,chatheadModels|recolorToFind|recolorToReplace
+    - 3695,Vampyre Juvinate,chatheadModels
+    - 3696,Vampyre Juvenile,chatheadModels
+    - 3697,Vampyre Juvenile,chatheadModels
+    - 3698,Vampyre Juvinate,chatheadModels|recolorToFind|recolorToReplace
+    - 3699,Vampyre Juvinate,chatheadModels
+    - 3755,Vyrewatch,actions
+    - 4484,Gadderanks,actions
+
 ### 2020/05/28: Chambers of Xeric Improvements
 - Added monsters: 0
 - Removed monsters: 0

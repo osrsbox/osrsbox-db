@@ -200,6 +200,13 @@ def clean_weight(value: str, item_id: int) -> float:
     if weight == "":
         return 0
 
+    # Strip KG and cast: Only affects 24731 Hallowed ring
+    weight = weight.replace(" kg", "")
+    try:
+        return float(weight)
+    except ValueError:
+        pass
+
     print("ERROR: clean_weight: Cleaning weight property failed.")
     print(value, weight)
     exit()
@@ -410,6 +417,10 @@ def clean_drop_rarity(value: str, base_value: str = None) -> float:
     :param base_value: Used for special drop rartiy rates.
     :return: A cleaned drop rarity property value.
     """
+    # Temp fix for 0 division: 484 Bloodveld
+    if value == "0/0":
+        return float(1/128)
+
     if value is None:
         return None
     if "#expr" not in value:

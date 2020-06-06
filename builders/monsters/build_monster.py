@@ -447,7 +447,7 @@ class BuildMonster:
             attributes = self.extract_infobox_value(self.template, key)
         if attributes is None:
             attributes = self.extract_infobox_value(self.template, "attributes")
-        if attributes is not None:
+        if attributes is not None and attributes != "":
             attributes = infobox_cleaner.clean_attributes(attributes)
             self.monster_dict["attributes"] = attributes
         else:
@@ -518,6 +518,7 @@ class BuildMonster:
                 slayer_masters = slayer_masters.strip()
                 slayer_masters = slayer_masters.split(",")
                 slayer_masters = [x.strip() for x in slayer_masters]
+                slayer_masters = [x.lower() for x in slayer_masters]
                 if "steve" in slayer_masters:
                     slayer_masters.remove("steve")
                     if "nieve" not in slayer_masters:
@@ -882,5 +883,10 @@ class BuildMonster:
         # Validate object with schema attached
         v = config.MyValidator(self.schema_data)
         v.validate(current_json)
+
+        # Print any validation errors
+        if v.errors:
+            print(v.errors)
+            exit()
 
         assert v.validate(current_json)

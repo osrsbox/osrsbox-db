@@ -58,7 +58,9 @@ def main():
         try:
             skill_requirements[item_id]
         except KeyError:
-            print(f"  > No entry in skill_requirements: {item_id}, {item_data['name']}")
+            # "24537": null,
+            item_name = item_data["name"].replace(" ", "_")
+            print(f'    "{item_id}": {item_name},')
 
 
 if __name__ == "__main__":

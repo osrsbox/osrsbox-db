@@ -118,8 +118,8 @@ def main():
     # Start processing every item!
     for item_id in all_item_cache_data:
         # Toggle to start, stop at a specific item ID
-        if int(item_id) < 24000:
-            continue
+        # if int(item_id) < 24000:
+        #     continue
 
         # Initialize the BuildItem class, used for all items
         builder = build_item.BuildItem(item_id=item_id,

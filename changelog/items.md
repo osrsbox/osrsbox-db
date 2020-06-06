@@ -2,6 +2,196 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/06/04: Darkmeyer
+- Added items: 171
+    - 24672,Haemalchemy volume 2
+    - 24673,Vyre noble top (unscented)
+    - 24674,Vyre noble legs (unscented)
+    - 24675,Vyre noble shoes (unscented)
+    - 24676,Vyre noble top
+    - 24677,Vyre noble top
+    - 24678,Vyre noble legs
+    - 24679,Vyre noble legs
+    - 24680,Vyre noble shoes
+    - 24681,Vyre noble shoes
+    - 24682,Old note
+    - 24683,Old note
+    - 24684,Tatty note
+    - 24685,Tatty note
+    - 24686,Journal page
+    - 24687,Journal page
+    - 24688,Ancient armour
+    - 24689,Ancient armour
+    - 24690,Tome of experience
+    - 24691,Blisterwood logs
+    - 24692,Blisterwood logs
+    - 24693,Ruby sickle (b)
+    - 24694,Ruby sickle (b)
+    - 24695,Enchanted ruby sickle (b)
+    - 24696,Enchanted ruby sickle (b)
+    - 24697,Blisterwood sickle
+    - 24698,Blisterwood sickle
+    - 24699,Blisterwood flail
+    - 24700,Blisterwood flail
+    - 24701,Dark squirrel
+    - 24702,Vyre
+    - 24703,Coin pouch
+    - 24704,Daeyalt essence
+    - 24705,Daeyalt essence
+    - 24706,Daeyalt shard
+    - 24707,Daeyalt shard
+    - 24708,Vampyre
+    - 24709,Hallowed crystal shard
+    - 24710,Hallowed crystal shard
+    - 24711,Hallowed mark
+    - 24712,Hallowed mark
+    - 24713,Hallowed mark
+    - 24714,Hallowed mark
+    - 24715,Hallowed mark
+    - 24716,Hallowed mark
+    - 24717,Hallowed mark
+    - 24719,Hallowed token
+    - 24720,Hallowed token
+    - 24721,Hallowed grapple
+    - 24722,Hallowed grapple
+    - 24723,Hallowed focus
+    - 24724,Hallowed focus
+    - 24725,Hallowed symbol
+    - 24726,Hallowed symbol
+    - 24727,Hallowed hammer
+    - 24728,Hallowed hammer
+    - 24729,Dark dye
+    - 24730,Dark dye
+    - 24731,Hallowed ring
+    - 24732,Hallowed ring
+    - 24733,Dark acorn
+    - 24734,Dark acorn
+    - 24735,Ring of endurance (uncharged)
+    - 24736,Ring of endurance
+    - 24737,Ring of endurance
+    - 24738,Strange old lockpick
+    - 24739,Strange old lockpick
+    - 24740,Strange old lockpick (full)
+    - 24741,Strange old lockpick (full)
+    - 24742,Strange old lockpick (full)
+    - 24743,Graceful hood
+    - 24744,Graceful hood
+    - 24745,Graceful hood
+    - 24746,Graceful cape
+    - 24747,Graceful cape
+    - 24748,Graceful cape
+    - 24749,Graceful top
+    - 24750,Graceful top
+    - 24751,Graceful top
+    - 24752,Graceful legs
+    - 24753,Graceful legs
+    - 24754,Graceful legs
+    - 24755,Graceful gloves
+    - 24756,Graceful gloves
+    - 24757,Graceful gloves
+    - 24758,Graceful boots
+    - 24759,Graceful boots
+    - 24760,Graceful boots
+    - 24761,Strange hallowed tome
+    - 24762,Strange hallowed tome
+    - 24763,Mysterious page
+    - 24764,Mysterious page
+    - 24765,Mysterious page
+    - 24766,Mysterious page
+    - 24767,Mysterious page
+    - 24768,Mysterious page
+    - 24769,Mysterious page
+    - 24770,Mysterious page
+    - 24771,Mysterious page
+    - 24772,Mysterious page
+    - 24773,Clue scroll (elite)
+    - 24774,Blood pint
+    - 24775,Blood pint
+    - 24776,Blood pint
+    - 24777,Blood shard
+    - 24778,Blood shard
+    - 24779,Blood shard
+    - 24780,Amulet of blood fury
+    - 24781,Amulet of blood fury
+    - 24782,Raw mystery meat
+    - 24783,Raw mystery meat
+    - 24784,Raw mystery meat
+    - 24785,Cooked mystery meat
+    - 24786,Cooked mystery meat
+    - 24787,Cooked mystery meat
+    - 24788,Pat of not garlic butter
+    - 24789,Pat of not garlic butter
+    - 24790,Long rope
+    - 24791,Long rope
+    - 24792,Severed leg
+    - 24793,Severed leg
+    - 24794,Vyre noble blazer
+    - 24795,Vyre noble blazer
+    - 24796,Vyre noble coat tails
+    - 24797,Vyre noble coat tails
+    - 24798,Vyre noble vest
+    - 24799,Vyre noble vest
+    - 24800,Vyre noble pants
+    - 24801,Vyre noble pants
+    - 24802,Vyre noble corset
+    - 24803,Vyre noble corset
+    - 24804,Vyre noble skirt
+    - 24805,Vyre noble skirt
+    - 24806,Vyre noble dress top
+    - 24807,Vyre noble dress top
+    - 24808,Vyre noble dress bottom
+    - 24809,Vyre noble dress bottom
+    - 24810,Vyre noble blazer
+    - 24811,Vyre noble blazer
+    - 24812,Vyre noble coat tails
+    - 24813,Vyre noble coat tails
+    - 24814,Vyre noble vest
+    - 24815,Vyre noble vest
+    - 24816,Vyre noble pants
+    - 24817,Vyre noble pants
+    - 24818,Vyre noble corset
+    - 24819,Vyre noble corset
+    - 24820,Vyre noble skirt
+    - 24821,Vyre noble skirt
+    - 24822,Vyre noble dress top
+    - 24823,Vyre noble dress top
+    - 24824,Vyre noble dress bottom
+    - 24825,Vyre noble dress bottom
+    - 24826,Vyre noble blazer
+    - 24827,Vyre noble blazer
+    - 24828,Vyre noble coat tails
+    - 24829,Vyre noble coat tails
+    - 24830,Vyre noble vest
+    - 24831,Vyre noble vest
+    - 24832,Vyre noble pants
+    - 24833,Vyre noble pants
+    - 24834,Vyre noble corset
+    - 24835,Vyre noble corset
+    - 24836,Vyre noble skirt
+    - 24837,Vyre noble skirt
+    - 24838,Vyre noble dress top
+    - 24839,Vyre noble dress top
+    - 24840,Vyre noble dress bottom
+    - 24841,Vyre noble dress bottom
+    - 24842,A taste of hope
+    - 24843,A taste of hope
+- Removed items: 0
+- Changed items: 14
+    - 16680,Haemalchemy,name
+    - 17120,Ancient book,name
+    - 17121,Battered tome,name
+    - 17122,Leather book,name
+    - 17125,Rod clay mould,name
+    - 20104,Ankou leggings,name
+    - 20105,Ankou leggings,name
+    - 20106,Ankou leggings,name
+    - 22398,Ivandis flail,cost|lowalch|highalch
+    - 7633,Ancient book,name
+    - 7634,Battered tome,name
+    - 7635,Leather book,name
+    - 7649,Rod clay mould,name
+    - 9652,Haemalchemy,name
+
 ### 2020/05/28: Chambers of Xeric Improvements
 - Added items: 16
     - 24656,Enraged tektiny
