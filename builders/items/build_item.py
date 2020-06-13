@@ -758,10 +758,6 @@ class BuildItem:
                 if int(self.item_id) in [8871]:
                     self.item_dict["weapon"]["attack_speed"] = 0
 
-                # Hotfix: Hallowed hammer
-                elif int(self.item_id) in [24727]:
-                    self.item_dict["weapon"]["attack_speed"] = 0
-
                 # Hotfix: Salamanders - set to base attack speed of 5
                 # Note depending on attack style, speed can be +1
                 elif int(self.item_id) in [10145, 10146, 10147, 10147, 10148, 10149]:

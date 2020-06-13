@@ -77,10 +77,13 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
     # Start processing every monster!
     for monster_id in all_monster_cache_data:
         # Toggle to start, stop at a specific monster ID
-        # if int(monster_id) < 9756:
+        # if int(monster_id) < 3852:
         #     continue
         if int(monster_id) == 5079:
             # Temp skip Delrith, due to crazy edits
+            continue
+        if int(monster_id) in [3898, 3897, 3899, 3900]:
+            # Temp skip Koschei the deathless, due to crazy edits
             continue
 
         # Initialize the BuildMonster class, used for all monster

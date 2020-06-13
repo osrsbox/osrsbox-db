@@ -200,13 +200,6 @@ def clean_weight(value: str, item_id: int) -> float:
     if weight == "":
         return 0
 
-    # Strip KG and cast: Only affects 24731 Hallowed ring
-    weight = weight.replace(" kg", "")
-    try:
-        return float(weight)
-    except ValueError:
-        pass
-
     print("ERROR: clean_weight: Cleaning weight property failed.")
     print(value, weight)
     exit()
@@ -456,6 +449,21 @@ def clean_drop_rarity(value: str, base_value: str = None) -> float:
         value = "1/128"
     elif value.lower() == "veryrare":
         value = "1/512"
+    elif "brimstone" in value.lower():
+        # Rarity={{Brimstone rarity|96|bonus=yes}}
+        value = value.split("|")
+        level = int(value[1])
+        try:
+            bonus = value[2]
+        except IndexError:
+            bonus = "no"
+        if int(level) < 100:
+            value = 0.2 * (level - 100) ** 2 + 100
+        else:
+            value = -0.2 * level + 120
+        if "yes" in bonus:
+            value = value * 0.8
+        value = f"1/{value}"
     elif "var:herbbase" in value:
         # 1/#expr:1/(40*#var:herbbase) round 1
         numerator = value.split("/")[0]
@@ -510,6 +518,7 @@ def clean_drop_rarity(value: str, base_value: str = None) -> float:
     pattern = re.compile(r"^[0-9]*(\.[0-9]*)?\/([0-9]*)(\.[0-9]*)?")
     if value and not pattern.match(value):
         print(f"Drop rarity regex failed: {value}")
+        quit()
         value = None
 
     if value is not None:
