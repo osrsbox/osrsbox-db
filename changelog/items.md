@@ -2,6 +2,31 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/06/18: Poll 71 and Darkmeyer Updates
+- Added items: 11
+    - 24844,Ring of endurance (uncharged)
+    - 24845,Ring of endurance (uncharged)
+    - 24846,Ring of endurance (uncharged)
+    - 24847,Red
+    - 24848,Red
+    - 24849,Ziggy
+    - 24850,Ziggy
+    - 24851,Soft clay pack
+    - 24852,Soft clay pack
+    - 24853,Bag full of gems
+    - 24854,Bag full of gems
+- Removed items: 0
+- Changed items: 9
+    - 24673,Vyre noble top (unscented),cost|lowalch|highalch
+    - 24674,Vyre noble legs (unscented),cost|lowalch|highalch
+    - 24675,Vyre noble shoes (unscented),cost|lowalch|highalch
+    - 24676,Vyre noble top,cost|lowalch|highalch
+    - 24678,Vyre noble legs,cost|lowalch|highalch
+    - 24680,Vyre noble shoes,cost|lowalch|highalch
+    - 24691,Blisterwood logs,cost|lowalch|highalch
+    - 24719,Hallowed token,cost|lowalch|highalch
+    - 24735,Ring of endurance (uncharged),tradeable_on_ge|equipable
+
 ### 2020/06/12: Darkmeyer Improvements
 - Added items: 0
 - Removed items: 0

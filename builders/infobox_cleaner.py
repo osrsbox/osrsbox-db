@@ -195,6 +195,27 @@ def clean_weight(value: str, item_id: int) -> float:
                     print(value, weight)
                     exit()
 
+    # Some items have Without/With weights:
+    # For example: "'''Without falcon:''' 0.907 kg<br/> '''With falcon:''' 1.814 kg"
+    # There are multiple HTML break tags: <br> <br /> <br/>
+    break_tags = ["<br>", "<br />", "<br/>"]
+    if "without" in weight.lower():
+        weight = weight.replace("'''", "")
+        for break_tag in break_tags:
+            if break_tag in weight:
+                weight_list = weight.split(break_tag)
+                # Grab first list entry, convert to lower case and replace string
+                weight = weight_list[0]
+                weight = weight.lower()
+                weight = weight.replace("without falcon:", "")
+                weight = weight.replace("kg", "")
+                try:
+                    return float(weight)
+                except ValueError:
+                    print("ERROR: clean_weight: Cleaning falcon weight failed.")
+                    print(value, weight)
+                    exit()
+
     # Do a generic check for an empty string
     # If found, set weight to 0
     if weight == "":
