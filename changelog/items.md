@@ -2,6 +2,14 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/06/25: Death Changes
+- Added items: 2
+    - 24523,Death's coffer
+    - 24524,Gravestone
+- Removed items: 0
+- Changed items: 1
+    - 24418,Cabbage,name
+
 ### 2020/06/18: Poll 71 and Darkmeyer Updates
 - Added items: 11
     - 24844,Ring of endurance (uncharged)

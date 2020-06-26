@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/06/25: Death Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/06/18: Poll 71 and Darkmeyer Updates
 - Added monsters: 0
 - Removed monsters: 0
