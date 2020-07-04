@@ -2,6 +2,21 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/07/02: Poll 71 and Death Feedback Changes
+- Added items: 7
+    - 24855,Mythical max cape
+    - 24856,Mythical max cape
+    - 24857,Mythical max hood
+    - 24858,Mythical max hood
+    - 24859,Warrior path starter kit
+    - 24860,Wizard path starter kit
+    - 24861,Ranger path starter kit
+- Removed items: 0
+- Changed items: 3
+    - 24725,Hallowed symbol,members
+    - 24727,Hallowed hammer,members
+    - 24731,Hallowed ring,members
+
 ### 2020/06/25: Death Changes
 - Added items: 2
     - 24523,Death's coffer
