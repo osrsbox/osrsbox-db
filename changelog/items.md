@@ -2,6 +2,17 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/07/09: Grotesque Guardian Changes and Monkey Backpacks
+- Added items: 6
+    - 24862,Karamjan monkey
+    - 24863,Zombie monkey
+    - 24864,Maniacal monkey
+    - 24865,Skeleton monkey
+    - 24866,Kruk jr
+    - 24867,Princely monkey
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/07/02: Poll 71 and Death Feedback Changes
 - Added items: 7
     - 24855,Mythical max cape
