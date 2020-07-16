@@ -539,8 +539,8 @@ def clean_drop_rarity(value: str, base_value: str = None) -> float:
     pattern = re.compile(r"^[0-9]*(\.[0-9]*)?\/([0-9]*)(\.[0-9]*)?")
     if value and not pattern.match(value):
         print(f"Drop rarity regex failed: {value}")
-        quit()
-        value = None
+        # quit()
+        value = "0"
 
     if value is not None:
         value = float(eval(value))

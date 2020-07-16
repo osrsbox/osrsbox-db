@@ -2,6 +2,15 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/07/16: Ferox Enclave
+- Added monsters: 6
+    - 10374,Hill Giant
+    - 10375,Hill Giant
+    - 10376,Hill Giant
+    - 10393,Warrior of Murahs
+    - 10394,Warrior of Murahs
+    - 10395,Warrior of Murahs
+
 ### 2020/07/09: Grotesque Guardian Changes and Monkey Backpacks
 - Added monsters: 0
 - Removed monsters: 0
