@@ -27,7 +27,7 @@ from pathlib import Path
 from osrsbox.monsters_api import all_monsters
 
 # The current number of monsters being loaded from the db
-NUMBER_OF_MONSTERS = 2789
+NUMBER_OF_MONSTERS = 2794
 
 
 def test_all_monsters_load_monsters_json(path_to_docs_dir: Path):

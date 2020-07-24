@@ -97,7 +97,7 @@ pip install -r requirements.txt
 # Update wiki data for items/monsters
 echo -e ">>> Updating wiki data..."
 cd ~/repos/osrsbox-db/scripts/update/
-python3 update_wiki_data.py 2020-07-08T00:00:00Z
+python3 update_wiki_data.py 2020-07-15T00:00:00Z
 
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."

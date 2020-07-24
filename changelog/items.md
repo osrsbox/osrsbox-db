@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/07/23: Poll 71 and Ferox Enclave Updates
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
 ### 2020/07/16: Ferox Enclave
 - Added items: 0
 - Removed items: 0

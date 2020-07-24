@@ -2,6 +2,16 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/07/23: Poll 71 and Ferox Enclave Updates
+- Added monsters: 5
+    - 10397,Spiked Turoth
+    - 10398,Shadow Wyrm
+    - 10399,Shadow Wyrm
+    - 10400,Guardian Drake
+    - 10402,Colossal Hydra
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/07/16: Ferox Enclave
 - Added monsters: 6
     - 10374,Hill Giant
