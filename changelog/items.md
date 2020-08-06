@@ -2,6 +2,20 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/08/06: PVP Changes
+- Added items: 4
+    - 24868,Golden armadyl special attack
+    - 24869,Golden bandos special attack
+    - 24870,Golden saradomin special attack
+    - 24871,Golden zamorak special attack
+- Removed items: 0
+- Changed items: 5
+    - 12846,Bounty teleport scroll,name
+    - 12847,Bounty teleport scroll,name
+    - 15099,Bounty teleport scroll,name
+    - 24336,Bounty target teleport,name
+    - 24337,Bounty target teleport,name
+
 ### 2020/07/23: Poll 71 and Ferox Enclave Updates
 - Added items: 0
 - Removed items: 0

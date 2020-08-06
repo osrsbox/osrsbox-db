@@ -2,6 +2,12 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/08/06: PVP Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 1
+    - 10402,Colossal Hydra,combatLevel
+
 ### 2020/07/23: Poll 71 and Ferox Enclave Updates
 - Added monsters: 5
     - 10397,Spiked Turoth

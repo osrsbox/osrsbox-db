@@ -49,42 +49,28 @@
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "staves",
+        "weapon_type": "trident-class_weapons",
         "stances": [
             {
-                "combat_style": "bash",
-                "attack_type": "crush",
-                "attack_style": "accurate",
-                "experience": "attack",
-                "boosts": null
-            },
-            {
-                "combat_style": "pound",
-                "attack_type": "crush",
-                "attack_style": "aggressive",
-                "experience": "strength",
-                "boosts": null
-            },
-            {
-                "combat_style": "focus",
-                "attack_type": "crush",
-                "attack_style": "defensive",
-                "experience": "defence",
-                "boosts": null
-            },
-            {
-                "combat_style": "spell",
-                "attack_type": "spellcasting",
-                "attack_style": "magic",
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
                 "experience": "magic",
-                "boosts": null
+                "boosts": "accuracy and damage"
             },
             {
-                "combat_style": "spell (defensive)",
-                "attack_type": "defensive casting",
-                "attack_style": "magic",
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
                 "experience": "magic and defence",
-                "boosts": null
+                "boosts": "attack range by 2 squares"
             }
         ]
     }

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 from pathlib import Path
-from setuptools import find_packages, setup
+from setuptools import setup
+from setuptools import find_packages
 
 # Package meta-data.
 NAME = 'osrsbox'
@@ -11,7 +11,7 @@ URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.3.34"
+VERSION = "1.3.35"
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [
@@ -35,6 +35,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
+    setup_requires=['wheel'],
     packages=find_packages(),
     install_requires=REQUIRED,
     include_package_data=True,
