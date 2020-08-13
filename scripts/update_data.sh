@@ -94,10 +94,13 @@ source venv/bin/activate
 # Install Python package requirements
 pip install -r requirements.txt
 
+# Determine last wiki update timestamp
+lastUpdate=$(date +%Y-%m-%dT%H:%M:%SZ -d "$(stat -c %x data/wiki/page-titles-items.json) - 2 days")
+
 # Update wiki data for items/monsters
 echo -e ">>> Updating wiki data..."
 cd ~/repos/osrsbox-db/scripts/update/
-python3 update_wiki_data.py 2020-07-23T00:00:00Z
+python3 update_wiki_data.py $lastUpdate
 
 # Generate the processed wikitext files
 echo -e ">>> Process raw wikitext..."

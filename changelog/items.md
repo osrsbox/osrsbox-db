@@ -2,6 +2,69 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/08/12: Darker Graceful and Other Changes
+- Added items: 0
+- Removed items: 0
+- Changed items: 58
+    - 11922,Bonemeal,name
+    - 12855,Hunter's honour,cost|lowalch|highalch
+    - 12856,Rogue's revenge,cost|lowalch|highalch
+    - 17791,Bonemeal,name
+    - 17792,Bonemeal,name
+    - 17793,Bonemeal,name
+    - 17794,Bonemeal,name
+    - 17795,Bonemeal,name
+    - 17796,Bonemeal,name
+    - 17797,Bonemeal,name
+    - 17798,Bonemeal,name
+    - 17799,Bonemeal,name
+    - 17800,Bonemeal,name
+    - 17801,Bonemeal,name
+    - 17802,Bonemeal,name
+    - 17803,Bonemeal,name
+    - 17804,Bonemeal,name
+    - 17805,Bonemeal,name
+    - 17806,Bonemeal,name
+    - 17807,Bonemeal,name
+    - 17808,Bonemeal,name
+    - 17809,Bonemeal,name
+    - 17810,Bonemeal,name
+    - 17811,Bonemeal,name
+    - 17812,Bonemeal,name
+    - 17813,Bonemeal,name
+    - 17814,Bonemeal,name
+    - 22116,Bonemeal,name
+    - 22117,Bonemeal,name
+    - 22754,Bonemeal,name
+    - 22755,Bonemeal,name
+    - 22756,Bonemeal,name
+    - 22757,Bonemeal,name
+    - 22758,Bonemeal,name
+    - 22759,Bonemeal,name
+    - 4256,Bonemeal,name
+    - 4257,Bonemeal,name
+    - 4258,Bonemeal,name
+    - 4259,Bonemeal,name
+    - 4260,Bonemeal,name
+    - 4261,Bonemeal,name
+    - 4262,Bonemeal,name
+    - 4263,Bonemeal,name
+    - 4264,Bonemeal,name
+    - 4265,Bonemeal,name
+    - 4266,Bonemeal,name
+    - 4267,Bonemeal,name
+    - 4268,Bonemeal,name
+    - 4269,Bonemeal,name
+    - 4270,Bonemeal,name
+    - 4271,Bonemeal,name
+    - 4852,Bonemeal,name
+    - 4853,Bonemeal,name
+    - 4854,Bonemeal,name
+    - 4855,Bonemeal,name
+    - 5615,Bonemeal,name
+    - 6728,Bonemeal,name
+    - 6810,Bonemeal,name
+
 ### 2020/08/06: PVP Changes
 - Added items: 4
     - 24868,Golden armadyl special attack

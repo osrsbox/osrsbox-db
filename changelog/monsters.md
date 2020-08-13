@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/08/12: Darker Graceful and Other Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/08/06: PVP Changes
 - Added monsters: 0
 - Removed monsters: 0
