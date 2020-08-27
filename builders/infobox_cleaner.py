@@ -729,6 +729,8 @@ def clean_category(value: str) -> str:
     value = value.replace("knights", "knight")
     value = value.replace("pirates", "pirate")
     value = value.replace("skeletons", "skeleton")
+    value = value.replace("lizard", "lizards")
+    value = value.replace("lizardsmen", "lizardmen")
 
     if "|" in value:
         value = value.split("|")[1]
