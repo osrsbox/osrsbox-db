@@ -2,6 +2,242 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/09/02: Costume Room Rework
+- Added items: 0
+- Removed items: 226
+    - 10165,More...
+    - 10166,Back...
+    - 10601,Mystic hat
+    - 10602,Mystic hat (dark)
+    - 10603,Mystic hat (light)
+    - 10604,Skeletal helm
+    - 10605,Infinity top
+    - 10606,Splitbark helm
+    - 10607,Ghostly boots
+    - 10608,Moonclan hat
+    - 10609,Lunar helm
+    - 10610,Decorative armour
+    - 10611,Void knight top
+    - 10612,Rogue mask
+    - 10613,Rock-shell helm
+    - 10614,Spined helm
+    - 10615,Tribal mask
+    - 10616,Tribal mask
+    - 10617,Tribal mask
+    - 10618,White platebody
+    - 10619,Initiate hauberk
+    - 10620,Proselyte hauberk
+    - 10621,Mourner top
+    - 10622,Kyatt top
+    - 10623,Larupia top
+    - 10624,Graahk top
+    - 10625,Wood camo top
+    - 10626,Jungle camo top
+    - 10627,Desert camo top
+    - 10628,Polar camo top
+    - 10629,Mime mask
+    - 10630,Princess blouse
+    - 10631,Zombie shirt
+    - 10632,Camo top
+    - 10633,Lederhosen top
+    - 10634,Shade robe
+    - 10635,Cape of legends
+    - 10636,Obsidian cape
+    - 10637,Fire cape
+    - 10638,Team-1 cape
+    - 10639,Attack cape
+    - 10640,Strength cape
+    - 10641,Defence cape
+    - 10642,Ranging cape
+    - 10643,Prayer cape
+    - 10644,Magic cape
+    - 10645,Runecraft cape
+    - 10646,Hunter cape
+    - 10647,Hitpoints cape
+    - 10648,Agility cape
+    - 10649,Herblore cape
+    - 10650,Thieving cape
+    - 10651,Crafting cape
+    - 10652,Fletching cape
+    - 10653,Slayer cape
+    - 10654,Construct. cape
+    - 10655,Mining cape
+    - 10656,Smithing cape
+    - 10657,Fishing cape
+    - 10658,Cooking cape
+    - 10659,Firemaking cape
+    - 10660,Woodcutting cape
+    - 10661,Farming cape
+    - 10662,Quest point cape
+    - 10663,Spotted cape
+    - 10664,Spottier cape
+    - 10665,Black shield (h1)
+    - 10666,Adamant shield (h1)
+    - 10667,Rune shield (h1)
+    - 10668,Black shield (h2)
+    - 10669,Adamant shield (h2)
+    - 10670,Rune shield (h2)
+    - 10671,Black shield (h3)
+    - 10672,Adamant shield (h3)
+    - 10673,Rune shield (h3)
+    - 10674,Black shield (h4)
+    - 10675,Adamant shield (h4)
+    - 10676,Rune shield (h4)
+    - 10677,Black shield (h5)
+    - 10678,Adamant shield (h5)
+    - 10679,Rune shield (h5)
+    - 10680,Studded body (g)
+    - 10681,Studded body (t)
+    - 10682,D'hide body (g)
+    - 10683,D'hide body (t)
+    - 10684,D'hide body (g)
+    - 10685,D'hide body (t)
+    - 10686,Wizard robe (g)
+    - 10687,Wizard robe (t)
+    - 10688,Enchanted top
+    - 10689,Wizard boots
+    - 10690,Black platebody (t)
+    - 10691,Black platebody (g)
+    - 10692,Highwayman mask
+    - 10693,Blue beret
+    - 10694,Black beret
+    - 10695,White beret
+    - 10696,Ranger boots
+    - 10697,Adamant platebody (t)
+    - 10698,Adamant platebody (g)
+    - 10699,Black helm (h1)
+    - 10700,Black helm (h2)
+    - 10701,Black helm (h3)
+    - 10702,Black helm (h4)
+    - 10703,Black helm (h5)
+    - 10704,Rune helm (h1)
+    - 10705,Rune helm (h2)
+    - 10706,Rune helm (h3)
+    - 10707,Rune helm (h4)
+    - 10708,Rune helm (h5)
+    - 10709,Adamant helm (h1)
+    - 10710,Adamant helm (h2)
+    - 10711,Adamant helm (h3)
+    - 10712,Adamant helm (h4)
+    - 10713,Adamant helm (h5)
+    - 10714,Bob's red shirt
+    - 10715,Bob's blue shirt
+    - 10716,Bob's green shirt
+    - 10717,Bob's black shirt
+    - 10718,Bob's purple shirt
+    - 10719,Amulet of glory (t)
+    - 10720,Guthix cape
+    - 10721,Frog mask
+    - 10722,Reindeer hat
+    - 10723,Jack lantern mask
+    - 10724,Skeleton boots
+    - 10725,Skeleton gloves
+    - 10726,Skeleton leggings
+    - 10727,Skeleton shirt
+    - 10728,Skeleton mask
+    - 10729,Easter ring
+    - 10730,Blue marionette
+    - 10731,Zombie head
+    - 10732,Rubber chicken
+    - 10733,Yo-yo
+    - 10734,Bunny ears
+    - 10735,Scythe
+    - 10736,Strength amulet (t)
+    - 10737,Strength amulet (t)
+    - 10738,Amulet of magic (t)
+    - 10739,Amulet of magic (t)
+    - 10740,A powdered wig
+    - 10741,A powdered wig
+    - 10742,Flared trousers
+    - 10743,Flared trousers
+    - 10744,Pantaloons
+    - 10745,Pantaloons
+    - 10746,Sleeping cap
+    - 10747,Sleeping cap
+    - 10748,Black elegant shirt
+    - 10749,Black elegant shirt
+    - 10750,Red elegant shirt
+    - 10751,Red elegant shirt
+    - 10752,Blue elegant shirt
+    - 10753,Blue elegant shirt
+    - 10754,Green elegant shirt
+    - 10755,Green elegant shirt
+    - 10756,Purple elegant shirt
+    - 10757,Purple elegant shirt
+    - 10758,Red boater
+    - 10759,Red boater
+    - 10760,Orange boater
+    - 10761,Orange boater
+    - 10762,Green boater
+    - 10763,Green boater
+    - 10764,Blue boater
+    - 10765,Blue boater
+    - 10766,Black boater
+    - 10767,Black boater
+    - 10768,Red headband
+    - 10769,Red headband
+    - 10770,Black headband
+    - 10771,Black headband
+    - 10772,Brown headband
+    - 10773,Brown headband
+    - 10774,Pirate's hat
+    - 10775,Pirate's hat
+    - 10776,Zamorak platebody
+    - 10777,Zamorak platebody
+    - 10778,Saradomin plate
+    - 10779,Saradomin plate
+    - 10780,Guthix platebody
+    - 10781,Guthix platebody
+    - 10782,Gilded platebody
+    - 10783,Gilded platebody
+    - 10784,Saradomin robe top
+    - 10785,Saradomin robe top
+    - 10786,Zamorak robe top
+    - 10787,Zamorak robe top
+    - 10788,Guthix robe top
+    - 10789,Guthix robe top
+    - 10790,Zamorak d'hide body
+    - 10791,Zamorak d'hide body
+    - 10792,Saradomin d'hide body
+    - 10793,Saradomin d'hide body
+    - 10794,Guthix dragonhide
+    - 10795,Guthix dragonhide
+    - 10796,Robin hood hat
+    - 10797,Robin hood hat
+    - 10798,Rune platebody (g)
+    - 10799,Rune platebody (g)
+    - 10800,Rune platebody (t)
+    - 10801,Rune platebody (t)
+    - 10802,Tan cavalier
+    - 10803,Tan cavalier
+    - 10804,Dark cavalier
+    - 10805,Dark cavalier
+    - 10806,Black cavalier
+    - 10807,Black cavalier
+    - 10883,Hard hat
+    - 10945,Lumberjack top
+    - 11015,Chicken head
+    - 11016,Chicken feet
+    - 11017,Chicken wings
+    - 11018,Chicken legs
+    - 11135,Bomber jacket
+    - 11274,Ham shirt
+    - 11277,Cavalier mask
+    - 11278,Beret mask
+    - 11674,Void mage helm
+    - 11675,Void ranger helm
+    - 11676,Void melee helm
+    - 13224,Music cape
+    - 13282,Max cape
+    - 9815,Bobble hat
+    - 9816,Bobble scarf
+- Changed items: 5
+    - 16217,Guilded smile flag,name
+    - 17613,Mahogany pyre log,name
+    - 6213,Mahogany pyre log,name
+    - 6214,Mahogany pyre log,name
+    - 8967,Guilded smile flag,name
+
 ### 2020/08/26: Mahogany Homes
 - Added items: 74
     - 20601,Wooden table

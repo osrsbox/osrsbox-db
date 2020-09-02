@@ -2,6 +2,11 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/09/02: Costume Room Rework
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/08/26: Mahogany Homes
 - Added monsters: 0
 - Removed monsters: 1
