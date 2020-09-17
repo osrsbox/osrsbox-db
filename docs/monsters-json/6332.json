@@ -9,7 +9,7 @@
     "hitpoints": 210,
     "max_hit": 17,
     "attack_type": [
-        "melee"
+        "crush"
     ],
     "attack_speed": 4,
     "aggressive": true,
@@ -22,10 +22,13 @@
     "category": [
         "vampyre"
     ],
-    "slayer_monster": false,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": [],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 210.0,
+    "slayer_masters": [
+        "mazchna",
+        "vannaka"
+    ],
     "duplicate": false,
     "examine": "Stop looking and run!",
     "icon": null,

@@ -2,6 +2,21 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/09/16: Poll 72 Updates
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
+### 2020/09/10: A Porcine of Interest
+- Added items: 4
+    - 24941,Bp obj
+    - 24942,Reinforced goggles
+    - 24943,Reinforced goggles
+    - 24944,Sourhog foot
+- Removed items: 0
+- Changed items: 1
+    - 9825,Mahogany cos box,name
+
 ### 2020/09/02: Costume Room Rework
 - Added items: 0
 - Removed items: 226
