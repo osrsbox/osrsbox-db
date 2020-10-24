@@ -2,6 +2,77 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/10/21: Halloween 2020
+- Added items: 45
+    - 24971,Cabbage
+    - 24972,Cabbage
+    - 24973,Cabbage
+    - 24974,Cabbage
+    - 24975,Headless head
+    - 24976,Headless head
+    - 24977,Magical pumpkin
+    - 24978,Magical pumpkin
+    - 24979,Pumpkin
+    - 24980,Brown candy
+    - 24981,Blue candy
+    - 24982,White candy
+    - 24983,Purple candy
+    - 24984,Red candy
+    - 24985,Green candy
+    - 24986,Black candy
+    - 24987,Orange candy
+    - 24988,Pink candy
+    - 24989,Rick's box
+    - 24990,Rick's head
+    - 24991,Witch's brew
+    - 24992,Spider snack
+    - 24993,Incantation
+    - 24994,Cabbage
+    - 24995,Cabbage
+    - 24996,Cabbage
+    - 24997,Cabbage
+- Removed items: 0
+- Changed items: 0
+
+### 2020/10/14: Volcanic Mine and Ava's Devices Changes
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
+### 2020/10/07: Blowpipe Ammo Changes and Small Fixes
+- Added items: 0
+- Removed items: 0
+- Changed items: 0
+
+### 2020/09/30: Last Poll 72 Updates
+- Added items: 16
+    - 24949,Moonclan teleport
+    - 24950,Moonclan teleport
+    - 24951,Ourania teleport
+    - 24952,Ourania teleport
+    - 24953,Waterbirth teleport
+    - 24954,Waterbirth teleport
+    - 24955,Barbarian teleport
+    - 24956,Barbarian teleport
+    - 24957,Khazard teleport
+    - 24958,Khazard teleport
+    - 24959,Fishing guild teleport
+    - 24960,Fishing guild teleport
+    - 24961,Catherby teleport
+    - 24962,Catherby teleport
+    - 24963,Ice plateau teleport
+    - 24964,Ice plateau teleport
+- Removed items: 0
+- Changed items: 0
+
+### 2020/09/23: More Poll 72 Updates
+- Added items: 2
+    - 24946,Hallowed sack
+    - 24947,Hallowed sack
+- Removed items: 0
+- Changed items: 1
+    - 24733,Dark acorn,cost|lowalch|highalch
+
 ### 2020/09/16: Poll 72 Updates
 - Added items: 0
 - Removed items: 0

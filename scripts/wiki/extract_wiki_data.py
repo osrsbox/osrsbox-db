@@ -158,4 +158,4 @@ if __name__ == "__main__":
 
     # List of categories to process from the OSRS Wiki
     target_categories = args["categories"]
-    extract_wiki_data(target_categories, "2019-11-07T00:00:00Z")
+    extract_wiki_data(target_categories, "2020-08-01T00:00:00Z")

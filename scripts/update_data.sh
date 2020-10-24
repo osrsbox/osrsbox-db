@@ -139,6 +139,11 @@ echo -e ">>> Update unalchable items..."
 cd $odb/scripts/items/
 python3 generate_items_unalchable.py
 
+# # Update items buy limits file
+# echo -e ">>> Update buy limits items..."
+# cd $odb/scripts/items/
+# python3 generate_items_buylimits.py
+
 # Update local cache data from cache dump
 echo -e ">>> Updating cache data..."
 cd $odb/scripts/update/

@@ -3,15 +3,15 @@
     "name": "Giant skeleton",
     "incomplete": true,
     "members": true,
-    "release_date": "2005-04-18",
+    "release_date": "2007-01-22",
     "combat_level": 100,
     "size": 2,
-    "hitpoints": 70,
-    "max_hit": 8,
+    "hitpoints": 110,
+    "max_hit": 11,
     "attack_type": [
         "crush"
     ],
-    "attack_speed": 4,
+    "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
     "immune_poison": false,
@@ -24,20 +24,21 @@
     ],
     "slayer_monster": true,
     "slayer_level": 1,
-    "slayer_xp": 70.0,
+    "slayer_xp": 110.0,
     "slayer_masters": [
         "turael",
         "spria",
-        "mazchna"
+        "mazchna",
+        "vannaka"
     ],
     "duplicate": false,
-    "examine": "A giant skeleton.",
+    "examine": "A giant skeleton or a giant's skeleton?",
     "icon": null,
-    "wiki_name": "Giant skeleton (Shadow Dungeon)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_skeleton_(Shadow_Dungeon)",
-    "attack_level": 70,
-    "strength_level": 70,
-    "defence_level": 70,
+    "wiki_name": "Giant skeleton (Tarn's Lair)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_skeleton_(Tarn's_Lair)",
+    "attack_level": 84,
+    "strength_level": 80,
+    "defence_level": 80,
     "magic_level": 1,
     "ranged_level": 1,
     "attack_stab": 0,
@@ -45,13 +46,13 @@
     "attack_crush": 0,
     "attack_magic": 0,
     "attack_ranged": 0,
-    "defence_stab": 0,
-    "defence_slash": 0,
+    "defence_stab": 50,
+    "defence_slash": 40,
     "defence_crush": 0,
     "defence_magic": 0,
-    "defence_ranged": 0,
+    "defence_ranged": 40,
     "attack_accuracy": 0,
-    "melee_strength": 0,
+    "melee_strength": 15,
     "ranged_strength": 0,
     "magic_damage": 0,
     "drops": [
@@ -65,129 +66,30 @@
             "drop_requirements": null
         },
         {
-            "id": 199,
-            "name": "Grimy guam leaf",
+            "id": 1191,
+            "name": "Iron kiteshield",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.125,
+            "rarity": 0.0625,
             "drop_requirements": null
         },
         {
-            "id": 201,
-            "name": "Grimy marrentill",
+            "id": 1155,
+            "name": "Bronze full helm",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.125,
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
         {
-            "id": 203,
-            "name": "Grimy tarromin",
+            "id": 1087,
+            "name": "Bronze plateskirt",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1141,
-            "name": "Steel med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1281,
-            "name": "Steel sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1325,
-            "name": "Steel scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
         {
@@ -196,16 +98,43 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
         {
-            "id": 1353,
-            "name": "Steel axe",
+            "id": 1207,
+            "name": "Steel dagger",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1241,
+            "name": "Steel spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 841,
+            "name": "Shortbow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 1363,
+            "name": "Iron battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
             "drop_requirements": null
         },
         {
@@ -214,79 +143,286 @@
             "members": true,
             "quantity": "1",
             "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1353,
+            "name": "Steel axe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1105,
+            "name": "Steel chainbody",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1428,
+            "name": "Mithril mace",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1389,
+            "name": "Magic staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
             "rarity": 0.0078125,
             "drop_requirements": null
         },
         {
-            "id": 884,
-            "name": "Iron arrow",
+            "id": 1297,
+            "name": "Black longsword",
             "members": true,
-            "quantity": "24",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
         {
-            "id": 556,
-            "name": "Air rune",
+            "id": 1157,
+            "name": "Steel full helm",
             "members": true,
-            "quantity": "30",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
         {
-            "id": 555,
-            "name": "Water rune",
+            "id": 1193,
+            "name": "Steel kiteshield",
             "members": true,
-            "quantity": "18",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
         {
-            "id": 562,
-            "name": "Chaos rune",
+            "id": 1143,
+            "name": "Mithril med helm",
             "members": true,
-            "quantity": "8",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
+            "rarity": 0.0078125,
             "drop_requirements": null
         },
         {
-            "id": 564,
-            "name": "Cosmic rune",
+            "id": 1181,
+            "name": "Mithril sq shield",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1371,
+            "name": "Adamant battleaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": true,
+            "quantity": "11",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 9295,
+            "name": "Steel bolts (p+)",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 5644,
+            "name": "Steel javelin(p+)",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 9145,
+            "name": "Silver bolts",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 890,
+            "name": "Adamant arrow",
             "members": true,
             "quantity": "4",
             "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": 0.0078125,
+            "rarity": 0.015625,
             "drop_requirements": null
         },
         {
             "id": 617,
             "name": "Coins",
             "members": true,
-            "quantity": "2-427",
+            "quantity": "17",
             "noted": false,
-            "rarity": 0.125,
+            "rarity": 0.0390625,
             "drop_requirements": null
         },
         {
-            "id": 2351,
-            "name": "Iron bar",
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "41",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "142",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "206",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "106",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 617,
+            "name": "Coins",
+            "members": true,
+            "quantity": "323",
+            "noted": false,
+            "rarity": 0.0078125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2370,
+            "name": "Steel studs",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1539,
+            "name": "Steel nails",
+            "members": true,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 36,
+            "name": "Candle",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.125,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 115,
+            "name": "Strength potion(3)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "drop_requirements": null
+        },
+        {
+            "id": 946,
+            "name": "Knife",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "drop_requirements": null
+        },
+        {
+            "id": 444,
+            "name": "Gold ore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 2361,
+            "name": "Adamantite bar",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "drop_requirements": null
+        },
+        {
+            "id": 1637,
+            "name": "Sapphire ring",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
             "drop_requirements": null
         },
         {
@@ -299,15 +435,6 @@
             "drop_requirements": null
         },
         {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0025,
-            "drop_requirements": null
-        },
-        {
             "id": 6806,
             "name": "Skeleton champion scroll",
             "members": true,
@@ -317,12 +444,102 @@
             "drop_requirements": null
         },
         {
-            "id": 10977,
-            "name": "Curved bone",
+            "id": 199,
+            "name": "Grimy guam leaf",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.00019950124688279303,
+            "rarity": 0.009765625,
+            "drop_requirements": null
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007324676542283892,
+            "drop_requirements": null
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005493249894529602,
+            "drop_requirements": null
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004272394181340917,
+            "drop_requirements": null
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003355884879725086,
+            "drop_requirements": null
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00244140625,
+            "drop_requirements": null
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0018313408345053915,
+            "drop_requirements": null
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00152587890625,
+            "drop_requirements": null
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001220703125,
+            "drop_requirements": null
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009154558237637684,
+            "drop_requirements": null
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009154558237637684,
             "drop_requirements": null
         }
     ]

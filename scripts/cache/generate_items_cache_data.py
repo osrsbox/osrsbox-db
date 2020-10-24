@@ -44,12 +44,12 @@ def parse_item_definition(item_data: Dict, definitions: Dict, id_number: str) ->
     # Determine any linked IDs (item, placeholder, noted)
     item_data["linked_id_item"] = None
 
-    if item_definition["notedID"] is not -1 and item_definition["notedTemplate"] != 799:
+    if item_definition["notedID"] != -1 and item_definition["notedTemplate"] != 799:
         item_data["linked_id_noted"] = item_definition["notedID"]
     else:
         item_data["linked_id_noted"] = None
 
-    if item_definition["placeholderId"] is not -1 and item_definition["placeholderTemplateId"] != 14401:
+    if item_definition["placeholderId"] != -1 and item_definition["placeholderTemplateId"] != 14401:
         item_data["linked_id_placeholder"] = item_definition["placeholderId"]
     else:
         item_data["linked_id_placeholder"] = None
