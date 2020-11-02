@@ -2,6 +2,12 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/10/28: Leagues II - Trailblazer Launch
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 1
+    - 10400,Guardian Drake,hasRenderPriority
+
 ### 2020/10/21: Halloween 2020
 - Added monsters: 0
 - Removed monsters: 0

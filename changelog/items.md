@@ -2,6 +2,140 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/10/28: Leagues II - Trailblazer Launch
+- Added items: 115
+    - 25001,Trailblazer hood (t3)
+    - 25002,Trailblazer hood (t3)
+    - 25003,Trailblazer hood (t3)
+    - 25004,Trailblazer coat (t3)
+    - 25005,Trailblazer coat (t3)
+    - 25006,Trailblazer coat (t3)
+    - 25007,Trailblazer trousers (t3)
+    - 25008,Trailblazer trousers (t3)
+    - 25009,Trailblazer trousers (t3)
+    - 25010,Trailblazer boots (t3)
+    - 25011,Trailblazer boots (t3)
+    - 25012,Trailblazer boots (t3)
+    - 25013,Trailblazer cane
+    - 25014,Trailblazer cane
+    - 25015,Trailblazer cane
+    - 25016,Trailblazer hood (t2)
+    - 25017,Trailblazer hood (t2)
+    - 25018,Trailblazer hood (t2)
+    - 25019,Trailblazer coat (t2)
+    - 25020,Trailblazer coat (t2)
+    - 25021,Trailblazer coat (t2)
+    - 25022,Trailblazer trousers (t2)
+    - 25023,Trailblazer trousers (t2)
+    - 25024,Trailblazer trousers (t2)
+    - 25025,Trailblazer boots (t2)
+    - 25026,Trailblazer boots (t2)
+    - 25027,Trailblazer boots (t2)
+    - 25028,Trailblazer hood (t1)
+    - 25029,Trailblazer hood (t1)
+    - 25030,Trailblazer hood (t1)
+    - 25031,Trailblazer coat (t1)
+    - 25032,Trailblazer coat (t1)
+    - 25033,Trailblazer coat (t1)
+    - 25034,Trailblazer trousers (t1)
+    - 25035,Trailblazer trousers (t1)
+    - 25036,Trailblazer trousers (t1)
+    - 25037,Trailblazer boots (t1)
+    - 25038,Trailblazer boots (t1)
+    - 25039,Trailblazer boots (t1)
+    - 25040,Trailblazer trophy
+    - 25041,Trailblazer trophy
+    - 25042,Trailblazer dragon trophy
+    - 25043,Trailblazer dragon trophy
+    - 25044,Trailblazer rune trophy
+    - 25045,Trailblazer rune trophy
+    - 25046,Twisted adamant trophy
+    - 25047,Twisted adamant trophy
+    - 25048,Trailblazer mithril trophy
+    - 25049,Trailblazer mithril trophy
+    - 25050,Trailblazer steel trophy
+    - 25051,Trailblazer steel trophy
+    - 25052,Trailblazer iron trophy
+    - 25053,Trailblazer iron trophy
+    - 25054,Trailblazer bronze trophy
+    - 25055,Trailblazer bronze trophy
+    - 25056,Trailblazer banner
+    - 25057,Trailblazer banner
+    - 25058,Trailblazer banner
+    - 25059,Trailblazer harpoon
+    - 25060,Trailblazer harpoon
+    - 25061,Trailblazer harpoon
+    - 25063,Trailblazer pickaxe
+    - 25064,Trailblazer pickaxe
+    - 25065,Trailblazer pickaxe
+    - 25066,Trailblazer axe
+    - 25067,Trailblazer axe
+    - 25068,Trailblazer axe
+    - 25069,Graceful hood
+    - 25070,Graceful hood
+    - 25071,Graceful hood
+    - 25072,Graceful cape
+    - 25073,Graceful cape
+    - 25074,Graceful cape
+    - 25075,Graceful top
+    - 25076,Graceful top
+    - 25077,Graceful top
+    - 25078,Graceful legs
+    - 25079,Graceful legs
+    - 25080,Graceful legs
+    - 25081,Graceful gloves
+    - 25082,Graceful gloves
+    - 25083,Graceful gloves
+    - 25084,Graceful boots
+    - 25085,Graceful boots
+    - 25086,Graceful boots
+    - 25087,Trailblazer teleport scroll
+    - 25088,Trailblazer teleport scroll
+    - 25089,Trailblazer teleport scroll
+    - 25090,Trailblazer tool ornament kit
+    - 25091,Trailblazer tool ornament kit
+    - 25092,Trailblazer tool ornament kit
+    - 25093,Trailblazer globe
+    - 25094,Trailblazer globe
+    - 25095,Trailblazer globe
+    - 25096,Trailblazer rug
+    - 25097,Trailblazer rug
+    - 25098,Trailblazer rug
+    - 25099,Trailblazer graceful ornament kit
+    - 25100,Trailblazer graceful ornament kit
+    - 25101,Trailblazer graceful ornament kit
+    - 25102,Fairy mushroom
+    - 25103,Fairy mushroom
+    - 25104,Crystal of memories
+    - 25105,Crystal of memories
+    - 25106,Extradimensional bag
+    - 25107,Extradimensional bag
+    - 25108,Extradimensional bag
+    - 25109,Extradimensional bag
+    - 25110,Trailblazer axe
+    - 25111,Trailblazer axe
+    - 25112,Trailblazer pickaxe
+    - 25113,Trailblazer pickaxe
+    - 25114,Trailblazer harpoon
+    - 25115,Trailblazer harpoon
+    - 25117,League tomato
+- Removed items: 0
+- Changed items: 14
+    - 14505,Mith crossbow,name
+    - 23677,Dragon pickaxe(or),name
+    - 23678,Dragon pickaxe(or),name
+    - 24469,Twisted relichunter (t1) armour set,name
+    - 24470,Twisted relichunter (t1) armour set,name
+    - 24471,Twisted relichunter (t1) armour set,name
+    - 24472,Twisted relichunter (t2) armour set,name
+    - 24473,Twisted relichunter (t2) armour set,name
+    - 24474,Twisted relichunter (t2) armour set,name
+    - 24475,Twisted relichunter (t3) armour set,name
+    - 24476,Twisted relichunter (t3) armour set,name
+    - 24477,Twisted relichunter (t3) armour set,name
+    - 9181,Mith crossbow,name
+    - 9182,Mith crossbow,name
+
 ### 2020/10/21: Halloween 2020
 - Added items: 45
     - 24971,Cabbage

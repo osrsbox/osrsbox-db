@@ -21,6 +21,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
+import re
 import logging
 from pathlib import Path
 
@@ -514,6 +515,12 @@ class BuildMonster:
                 slayer_masters = self.extract_infobox_value(self.template, key)
             if slayer_masters is None:
                 slayer_masters = self.extract_infobox_value(self.template, "assignedby")
+            if slayer_masters is not None:
+                slayer_masters = re.sub("(<!--.*?-->)", "", slayer_masters)
+                slayer_masters = slayer_masters.strip()
+                slayer_masters = slayer_masters.lower()
+                if slayer_masters == "no":
+                    slayer_masters = None
             if slayer_masters is not None:
                 slayer_masters = slayer_masters.strip()
                 slayer_masters = slayer_masters.split(",")
