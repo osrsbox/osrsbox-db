@@ -2,6 +2,13 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/11/05: Revenant Cave Tweaks and Leagues II Fixes
+- Added items: 0
+- Removed items: 0
+- Changed items: 2
+    - 25046,Twisted adamant trophy,name
+    - 25047,Twisted adamant trophy,name
+
 ### 2020/10/28: Leagues II - Trailblazer Launch
 - Added items: 115
     - 25001,Trailblazer hood (t3)

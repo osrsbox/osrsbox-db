@@ -80,10 +80,7 @@ def main(export: bool = False, verbose: bool = False, validate: bool = True):
         # if int(monster_id) < 3852:
         #     continue
         if int(monster_id) == 5079:
-            # Temp skip Delrith, due to crazy edits
-            continue
-        if int(monster_id) in [3898, 3897, 3899, 3900]:
-            # Temp skip Koschei the deathless, due to crazy edits
+            # Temp skip Delrith, due to ? stat
             continue
 
         # Initialize the BuildMonster class, used for all monster
