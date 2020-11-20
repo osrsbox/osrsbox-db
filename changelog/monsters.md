@@ -2,6 +2,16 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/11/18: More Poll 73 Updates & Leagues Changes
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
+### 2020/11/11: The Nightmare and Chambers of Xeric QoL
+- Added monsters: 0
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/11/05: Revenant Cave Tweaks and Leagues II Fixes
 - Added monsters: 0
 - Removed monsters: 0

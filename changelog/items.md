@@ -2,6 +2,61 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/11/18: More Poll 73 Updates & Leagues Changes
+- Added items: 16
+    - 25129,Beekeeper's hat
+    - 25130,Beekeeper's hat
+    - 25131,Beekeeper's top
+    - 25132,Beekeeper's top
+    - 25133,Beekeeper's legs
+    - 25134,Beekeeper's legs
+    - 25135,Beekeeper's gloves
+    - 25136,Beekeeper's gloves
+    - 25137,Beekeeper's boots
+    - 25138,Beekeeper's boots
+    - 25139,Bone fragments
+    - 25140,Bone fragments
+    - 25141,Bone fragments
+    - 25142,Bone fragments
+    - 25143,Bone fragments
+    - 25144,Bone fragments
+- Removed items: 9
+    - 7499,Evil dave
+    - 7500,Dwarf
+    - 7501,Goblins
+    - 7502,Lumbridge guide
+    - 7503,Monkey
+    - 7504,Osman
+    - 7505,Pirate pete
+    - 7506,Sir amik varze
+    - 7507,Skrach
+- Changed items: 0
+
+### 2020/11/11: The Nightmare and Chambers of Xeric QoL
+- Added items: 25
+    - 25118,Brown candy
+    - 25119,Blue candy
+    - 25120,White candy
+    - 25121,Purple candy
+    - 25122,Red candy
+    - 25123,Green candy
+    - 25124,Black candy
+    - 25125,Orange candy
+    - 25126,Pink candy
+- Removed items: 2
+    - 22366,Cyan crystal
+    - 22778,Dark altar
+- Changed items: 9
+    - 24980,Brown candy,linked_id_placeholder
+    - 24981,Blue candy,linked_id_placeholder
+    - 24982,White candy,linked_id_placeholder
+    - 24983,Purple candy,linked_id_placeholder
+    - 24984,Red candy,linked_id_placeholder
+    - 24985,Green candy,linked_id_placeholder
+    - 24986,Black candy,linked_id_placeholder
+    - 24987,Orange candy,linked_id_placeholder
+    - 24988,Pink candy,linked_id_placeholder
+
 ### 2020/11/05: Revenant Cave Tweaks and Leagues II Fixes
 - Added items: 0
 - Removed items: 0

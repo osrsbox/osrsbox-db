@@ -4,6 +4,8 @@ from pathlib import Path
 from setuptools import setup
 from setuptools import find_packages
 
+from osrsbox import __version__
+
 # Package meta-data.
 NAME = 'osrsbox'
 DESCRIPTION = 'A complete and up-to-date database of Old School Runescape (OSRS) items, monsters and prayers accessible using a Python API.'
@@ -11,7 +13,7 @@ URL = 'https://github.com/osrsbox/osrsbox-db'
 EMAIL = 'phoil@osrsbox.com'
 AUTHOR = 'PH01L'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = "1.4.2"
+VERSION = __version__
 
 # Name of any third party packages that are required from the `osrsbox` package.
 REQUIRED = [
