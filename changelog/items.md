@@ -2,6 +2,17 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/11/25: Twisted Tales - Getting Ahead Launch
+- Added items: 5
+    - 25145,Clay head
+    - 25146,Fur head
+    - 25147,Bloody head
+    - 25152,Neilan's journal
+    - 25153,Neilan's journal
+- Removed items: 1
+    - 5572,Dial
+- Changed items: 0
+
 ### 2020/11/18: More Poll 73 Updates & Leagues Changes
 - Added items: 16
     - 25129,Beekeeper's hat

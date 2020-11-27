@@ -5,14 +5,9 @@ Email:   phoil@osrsbox.com
 Website: https://www.osrsbox.com
 
 The primary entry script to update the osrsbox-db project after each weekly
-in-game update. This script assumes the following structure:
-$ tree ~
-/home/phoil
-├── repos
-│   ├── runelite
-│   ├── osrsbox-db
+in-game update.
 
-The repos should already be populated:
+The repos should already be cloned:
 $ git clone https://github.com/runelite/runelite.git
 $ git clone https://github.com/osrsbox/osrsbox-db.git
 
@@ -24,10 +19,7 @@ This script assumes the following packages:
 - git
 
 To run:
-$ pwd
-/home/phoil/repos/osrsbox-db/scripts/
-$ chmod u+x update_data.sh
-$ ./update_data.sh
+$ ./update.sh
 
 Copyright (c) 2020, PH01L
 

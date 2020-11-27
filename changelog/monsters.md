@@ -2,6 +2,20 @@
 
 A document that specifies the changes to the osrsbox-db monster database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/11/25: Twisted Tales - Getting Ahead Launch
+- Added monsters: 9
+    - 10492,Headless Beast (hard)
+    - 10493,Headless Beast
+    - 10494,Chicken
+    - 10495,Chicken
+    - 10496,Chicken
+    - 10497,Chicken
+    - 10498,Chicken
+    - 10499,Chicken
+    - 10506,Headless Beast
+- Removed monsters: 0
+- Changed monsters: 0
+
 ### 2020/11/18: More Poll 73 Updates & Leagues Changes
 - Added monsters: 0
 - Removed monsters: 0
