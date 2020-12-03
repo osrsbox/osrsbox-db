@@ -1,13 +1,3 @@
-language: python
-python:
-  - "3.6"
-  - "3.7-dev"
-cache: pip
-before_install:
-  - "pip install -U pip"
-  - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
-install:
-  - pip install -r requirements_travis.txt
 deploy:
   provider: pypi
   user: "PH01L"
