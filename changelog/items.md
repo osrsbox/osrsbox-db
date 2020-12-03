@@ -2,6 +2,32 @@
 
 A document that specifies the changes to the osrsbox-db item database based on each weekly in-game update. Note that only raw cache data changes are noted here.
 
+### 2020/12/02: Settings Rework and the last of Poll 73
+- Added items: 23
+    - 25154,Ornate undead combat dummy
+    - 25155,Decorative boots (broken)
+    - 25156,Decorative boots (broken)
+    - 25157,Decorative full helm (broken)
+    - 25158,Decorative full helm (broken)
+    - 25159,Castlewars brew(4)
+    - 25160,Castlewars brew(3)
+    - 25161,Castlewars brew(2)
+    - 25162,Castlewars brew(1)
+    - 25163,Decorative boots
+    - 25164,Decorative boots
+    - 25165,Decorative full helm
+    - 25166,Decorative full helm
+    - 25167,Decorative boots
+    - 25168,Decorative boots
+    - 25169,Decorative full helm
+    - 25170,Decorative full helm
+    - 25171,Decorative boots
+    - 25172,Decorative boots
+    - 25173,Decorative boots (l)
+    - 25174,Decorative full helm
+    - 25175,Decorative full helm
+    - 25176,Decorative full helm (l)
+
 ### 2020/11/25: Twisted Tales - Getting Ahead Launch
 - Added items: 5
     - 25145,Clay head

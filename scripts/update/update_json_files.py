@@ -79,7 +79,7 @@ def generate_item_slot_files():
 
 def generate_monsters_complete():
     """Generate the `docs/monsters-complete.json` file."""
-    # Read in the item database content
+    # Read in the monster database content
     path_to_monsters_json = Path(config.DOCS_PATH / "monsters-json")
     all_db_monsters = monsters_api.all_monsters.AllMonsters(path_to_monsters_json)
 
@@ -123,6 +123,39 @@ def generate_prayers_complete():
         json.dump(prayers, f)
 
 
+def generate_items_search_file():
+    """Generate the `docs/items-search.json` file."""
+    # Read in the item database content
+    path_to_items_json = Path(config.DOCS_PATH / "items-json")
+    all_db_items = items_api.all_items.AllItems(path_to_items_json)
+
+    items_search = {}
+
+    for item in all_db_items:
+        # Make a temporary dictionary for each item
+        temp_dict = dict()
+
+        # Add id, name, type and duplicate status
+        temp_dict["id"] = item.id
+        temp_dict["name"] = item.name
+        temp_dict["type"] = None
+        if item.noted:
+            temp_dict["type"] = "noted"
+        elif item.placeholder:
+            temp_dict["type"] = "placeholder"
+        else:
+            temp_dict["type"] = "normal"
+        temp_dict["duplicate"] = item.duplicate
+
+        # Add temp_dict to all items
+        items_search[item.id] = temp_dict
+
+    # Save search file to docs/items_complete.json
+    out_fi = Path(config.DOCS_PATH / "items-search.json")
+    with open(out_fi, "w") as f:
+        json.dump(items_search, f, indent=4)
+
+
 def main():
     """The main function for generating the static JSON files."""
     print("Generating items-complete.json file...")
@@ -133,6 +166,8 @@ def main():
     generate_monsters_complete()
     print("Generating prayers-complete.json file...")
     generate_prayers_complete()
+    print("Generating items-search.json file...")
+    generate_items_search_file()
 
 
 if __name__ == '__main__':

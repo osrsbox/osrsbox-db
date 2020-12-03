@@ -28,6 +28,7 @@ The prayer database documentes each prayer that available in-game and has detail
 - [The Item Database](#the-item-database)
 - [The Monster Database](#the-monster-database)
 - [The Prayer Database](#the-prayer-database)
+- [Project Contribution](#project-contribution)
 - [Additional Project Information](#additional-project-information)
 
 ## Project Summary
@@ -906,6 +907,40 @@ A description of the properties that each prayer in the database can have is use
 }
 ```
 
+## Project Contribution
+
+This project would thoroughly benefit from contributions from additional developers. Please feel free to submit a pull request if you have code that you wish to contribute - I would thoroughly appreciate the helping hand. For any code contributions, the best method is to [open a new GitHub pull request](https://github.com/osrsbox/osrsbox-db/pulls) in the project repository. Also, feel free to contact me (e.g., on the Discord server) if you wish to discuss contribution before making a pull request. If you are not a software developer and want to contribute, even something as small as _Staring_ this repository really makes my day and keeps me motivated!
+
+### Crowd Sourcing Item Skill Requirements
+
+A really manual part of the item database is the `item.equipment.requirements` data. So far, I have manually populated this data... for over 3,500 items! To keep this project alive, I have stopped adding in this data (as it takes a lot of time). Here is a summary of how the item skill requirements work:
+
+- All item requirements are stored in the [`skill-requirements.json`](https://github.com/osrsbox/osrsbox-db/blob/master/data/items/skill-requirements.json) file
+- They have a structure of:
+
+```
+    "item_id": {
+        "skill_name": integer
+    },
+```
+
+- For example, the Abyssal whip item:
+
+```
+    "4151": {
+        "attack": 70
+    },
+```
+
+- For the `skill_name`, the [`schema-items.json`](https://github.com/osrsbox/schemas/blob/67b062b8d8499f80f43a95ff3b72cc40a6a833c9/schema-items.json#L293) file has a list of the allowed values - to help get the correct skill name. For example, `runecraft` and not `runecrafting`!
+
+With some community help (by crowd sourcing) we could keep this data point fresh. If you find an error or want to add in a requirement, and want to contribute, here are the best ways to help:
+
+- GitHub PR: Clone the project repo, make changes to `skill-requirements.json`, submit PR
+- GitHub Issue: Submit an issue with the fix. It would really help me if you put the request in the correct JSON format as described above!
+
+FYI - there is currently no quest-associated requirements. This would be a great addition to the project, but seems to be a very complex thing to add.
+
 ## Additional Project Information
 
 This section contains additional information about the osrsbox-db project. For detailed information about the project see the [`osrsbox.com`](https://www.osrsbox.com/) website for the official project page, and the _Database_ tag to find blog posts about the project: 
@@ -916,10 +951,6 @@ This section contains additional information about the osrsbox-db project. For d
 ### Project Feedback
 
 I would thoroughly appreciate any feedback regarding the osrsbox-db project, especially problems with the inaccuracies of the data provided. So if you notice any problem with the accuracy of item property data, could you please let me know. The same goes for any discovered bugs, or if you have a specific feature request. The best method is to [open a new Github issue](https://github.com/osrsbox/osrsbox-db/issues) in the project repository. 
-
-### Project Contribution
-
-This project would thoroughly benefit from a contribution from additional developers. Please feel free to submit a pull request if you have code that you wish to contribute - I would thoroughly appreciate the helping hand. For any code contributions, the best method is to [open a new GitHub pull request](https://github.com/osrsbox/osrsbox-db/pulls) in the project repository. Also, feel free to contact me (e.g., email) if you wish to discuss contribution before making a pull request. If you are not a software developer and want to contribute, even something as small as _Staring_ this repository really makes my day and keeps me motivated!
 
 ### Project License
 

@@ -155,8 +155,6 @@ mv data/cache/monsters-cache-data.json data/monsters/
 # item skill requirements, item weapon types, 
 # item buy limits, and item icons
 cd $odb/scripts/items/
-echo -e ">>> Items with no skill requirements..."
-python3 check_item_skill_requirements.py
 echo -e ">>> Items with no weapon types..."
 python3 check_item_weapon_types.py
 echo -e ">>> Items with no buy limits..."
@@ -177,10 +175,6 @@ python3 builder.py --export=True
 echo -e ">>> Running JSON population scripts..."
 cd $odb/scripts/update/
 python3 update_json_files.py
-
-echo -e ">>> Generating items-search.json file..."
-cd $odb/scripts/items/
-python3 generate_items_search_file.py
 
 echo -e ">>> Running repo tests..."
 cd $odb

@@ -732,7 +732,11 @@ class BuildItem:
         # Determine the skill requirements for the equipable item
         self.item_dict["equipment"]["requirements"] = None
         try:
-            requirements = self.skill_requirements[str(self.item_id)]
+            try:
+                requirements = self.skill_requirements[str(self.item_id)]
+            except KeyError:
+                # Set requirements to null if not recorded
+                requirements = None
             self.item_dict["equipment"]["requirements"] = requirements
         except KeyError:
             print("populate_equipable_properties: Could not determine skill requirements...")
