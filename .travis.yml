@@ -8,9 +8,6 @@ before_install:
   - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
 install:
   - pip install -r requirements_travis.txt
-script:
-  - flake8
-  - pytest
 deploy:
   provider: pypi
   user: "PH01L"
