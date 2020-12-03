@@ -1,3 +1,16 @@
+language: python
+git:
+  submodules: false
+python:
+  - "3.7"
+cache: pip
+before_install:
+  - "pip install -U pip"
+  - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
+install:
+  - pip install -r requirements_travis.txt
+script:
+  - flake8
 deploy:
   provider: pypi
   user: "PH01L"
