@@ -16,7 +16,7 @@ The item database has extensive properties for each item: a total of 27 properti
 
 The monster database also has extensive properties: a total of 44 unique properties for each monster, as well as an array of item drops for each monster that has 6 additional properties per item drop. The base properties include the monster ID, name, member status, slayer properties, attack type, max hit, attack types and all monster combat stats. Each monster also has an associated array of drops which document the item ID, name, rarity, quantity, and any requirements to get the drop.
 
-The prayer database documentes each prayer that available in-game and has detailed properties: a total of 8 properties for every prayer. The base properties include the prayer name, members status, description, requirements, and bonuses that it provides.
+The prayer database documents each prayer that available in-game and has detailed properties: a total of 8 properties for every prayer. The base properties include the prayer name, members status, description, requirements, and bonuses that it provides.
 
 ## Table of Contents
 
@@ -50,7 +50,7 @@ With four different methods to access data... most people will have the followin
 
 1. [**The Python PyPi package**](https://pypi.org/project/osrsbox/): Use this if you are programming anything in Python - as it is the simplest option. Install using `pip`, and you are ready to do anything from experimenting and prototyping, to building a modern web app using something like Flask.
 1. [**The RESTful API**](https://github.com/osrsbox/osrsbox-api/): Use this if you are not programming in Python, and want an Internet-accessible API with rich-quering including filtering, sorting and projection functionality.
-1. [**The Static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs): Use this if you want Internet-accessible raw data (JSON files and PNG images) and don't need queries to filter data. This is a good option if you want to _dump_ the enitire database contents, and saves the RESTful API from un-needed traffic.
+1. [**The Static JSON API**](https://github.com/osrsbox/osrsbox-db/tree/master/docs): Use this if you want Internet-accessible raw data (JSON files and PNG images) and don't need queries to filter data. This is a good option if you want to _dump_ the entire database contents, and saves the RESTful API from un-needed traffic.
 1. [**The GitHub development repository**](https://github.com/osrsbox/osrsbox-db/): The development repository provides the code and data to build the database. I would not recommend using the development repository unless you are (really) interested in the project or you want to contribute to the project.
 
 ## The `osrsbox` Python PyPi Package
@@ -135,7 +135,7 @@ The [official osrsbox-api GitHub repository](https://github.com/osrsbox/osrsbox-
 
 - [https://api.osrsbox.com](https://api.osrsbox.com)
 
-The link provided above has an API landing page with detailed information on the project including a project summary, API enpoints, and links to useful documentation. Also, have a look at the [official `osrsbox-api` project README](https://github.com/osrsbox/osrsbox-api/blob/master/README.md) for more information. The README has a tutorial on how to build the API docker environment locally for testing purposes which might be useful.
+The link provided above has an API landing page with detailed information on the project including a project summary, API endpoints, and links to useful documentation. Also, have a look at the [official `osrsbox-api` project README](https://github.com/osrsbox/osrsbox-api/blob/master/README.md) for more information. The README has a tutorial on how to build the API docker environment locally for testing purposes which might be useful.
 
 ## The `osrsbox` Static JSON API
 
@@ -251,7 +251,7 @@ The [official osrsbox-db GitHub repository](https://github.com/osrsbox/osrsbox-d
 
 ### Using the Development Repository
 
-If using this repository (the development version), you will need to fulfil some specific requirements. This includes having the following tools available on your system:
+If using this repository (the development version), you will need to fulfill some specific requirements. This includes having the following tools available on your system:
 
 - Python 3.6 or above
 - Pip - the standard package manager for Python
@@ -314,7 +314,7 @@ Technically, the `osrsbox-db` is not really a database - more specifically it sh
 - `required`: If the property must be populated (true or false)
 - `nullable`: If the property can be set to `null` or `None`
 
-The Cerberus schemas are provided in a dedicated repository called [`osrsbox/schemas`](https://github.com/osrsbox/schemas), and implorted into this project as a submodule - this is because the schemas are used in other respositories and central management is required. The schemas are loaded into the `data/schemas` folder and includes:
+The Cerberus schemas are provided in a dedicated repository called [`osrsbox/schemas`](https://github.com/osrsbox/schemas), and implorted into this project as a submodule - this is because the schemas are used in other repositories and central management is required. The schemas are loaded into the `data/schemas` folder and includes:
 
 1. [`schema-items.json`](https://github.com/osrsbox/schemas/blob/master/schema-items.json): This file defines the item schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
 1. [`schema-monsters.json`](https://github.com/osrsbox/schemas/blob/master/schema-monsters.json): This file defines the monster schema, the defined properties, the property types, and some additional specifications including regex validation, and/or property type specification.
@@ -361,7 +361,7 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | icon | string | The item icon (in base64 encoding). | True | False |
 | wiki_name | string | The OSRS Wiki name for the item. | True | True |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | True |
-| wiki_exchnage | string | The OSRS Wiki Exchange URL. | True | True |
+| wiki_exchange | string | The OSRS Wiki Exchange URL. | True | True |
 | equipment | dict | The equipment bonuses of equipable armour/weapons. | True | True |
 | weapon | dict | The weapon bonuses including attack speed, type and stance. | True | True |
 
