@@ -6,22 +6,22 @@ jobs:
 
   build-and-publish:
     name: Build and deploy to PyPI
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
       with:
         fetch-depth: 1
 
     - name: Set up Python 3.7
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: 3.7
 
     - name: Install Poetry
-      uses: dschep/install-poetry-action@v1.2
+      uses: snok/install-poetry@v1.1.1
 
     - name: Install Dependencies
       run: poetry install

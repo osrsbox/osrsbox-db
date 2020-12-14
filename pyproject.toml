@@ -10,7 +10,7 @@ license = "GPL-3.0-only"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-"dataclasses;python_version" = "<\"3.7\""
+dataclasses = "python_version < 3.7"
 
 [tool.poetry.dev-dependencies]
 setuptools = "^51.0.0"
