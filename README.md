@@ -1,6 +1,6 @@
 # osrsbox-db 
 
-[![Build Status](https://travis-ci.org/osrsbox/osrsbox-db.svg?branch=master)](https://travis-ci.org/osrsbox/osrsbox-db) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) 
+![build](https://img.shields.io/github/workflow/status/osrsbox/osrsbox-db/Build%20and%20Deploy%20to%20PyPI) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/osrsbox.svg) 
 
 [![PyPI version](https://badge.fury.io/py/osrsbox.svg)](https://badge.fury.io/py/osrsbox) ![PyPI - Downloads](https://img.shields.io/pypi/dm/osrsbox.svg)
 
