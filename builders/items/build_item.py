@@ -689,6 +689,10 @@ class BuildItem:
         if not has_infobox:
             has_infobox = infobox_parser.extract_infobox("infobox_bonuses")
             if not has_infobox:
+                self.item_dict["equipment"] = None
+                self.item_dict["equipable_by_player"] = False
+                self.item_dict["equipable_weapon"] = False
+                return
                 # No infobox bonuses found for the item!
                 print("populate_equipable_properties: Item has no equipment infobox.")
                 logging.critical("populate_equipable_properties: Item has no equipment infobox.")

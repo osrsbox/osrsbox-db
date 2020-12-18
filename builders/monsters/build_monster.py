@@ -328,7 +328,7 @@ class BuildMonster:
         if self.infobox_version_number is not None:
             key = "release" + str(self.infobox_version_number)
             release_date = self.extract_infobox_value(self.template, key)
-        if release_date is None:
+        if release_date is None or release_date == "?":
             release_date = self.extract_infobox_value(self.template, "release")
         if release_date is not None:
             self.monster_dict["release_date"] = infobox_cleaner.clean_release_date(release_date)
