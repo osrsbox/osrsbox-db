@@ -1,13 +1,14 @@
 {
     "id": 8617,
     "name": "Alchemical Hydra",
-    "incomplete": true,
+    "last_updated": "2020-12-25",
+    "incomplete": false,
     "members": true,
     "release_date": "2019-01-10",
     "combat_level": 426,
     "size": 6,
     "hitpoints": 1100,
-    "max_hit": 0,
+    "max_hit": 35,
     "attack_type": [
         "ranged",
         "magic"
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "A ferocious Alchemical Hydra!",
-    "icon": null,
     "wiki_name": "Alchemical Hydra (Four heads)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Alchemical_Hydra#Four_heads",
     "attack_level": 100,
@@ -39,20 +40,17 @@
     "defence_level": 100,
     "magic_level": 260,
     "ranged_level": 260,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 45,
+    "magic_bonus": 20,
     "attack_ranged": 45,
+    "ranged_bonus": 20,
     "defence_stab": 75,
     "defence_slash": 150,
     "defence_crush": 150,
     "defence_magic": 150,
     "defence_ranged": 45,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 20,
-    "magic_damage": 20,
     "drops": [
         {
             "id": 22786,
@@ -61,79 +59,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 22973,
-            "name": "Hydra's eye",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0055248618784530384,
-            "drop_requirements": null
-        },
-        {
-            "id": 22971,
-            "name": "Hydra's fang",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0055248618784530384,
-            "drop_requirements": null
-        },
-        {
-            "id": 22969,
-            "name": "Hydra's heart",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0055248618784530384,
-            "drop_requirements": null
-        },
-        {
-            "id": 22988,
-            "name": "Hydra tail",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 22983,
-            "name": "Hydra leather",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0019455252918287938,
-            "drop_requirements": null
-        },
-        {
-            "id": 22966,
-            "name": "Hydra's claw",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.000999000999000999,
-            "drop_requirements": null
-        },
-        {
-            "id": 20849,
-            "name": "Dragon thrownaxe",
-            "members": true,
-            "quantity": "500-1000",
-            "noted": false,
-            "rarity": 0.0005,
-            "drop_requirements": null
-        },
-        {
-            "id": 22804,
-            "name": "Dragon knife",
-            "members": true,
-            "quantity": "500-1000",
-            "noted": false,
-            "rarity": 0.0004997501249375312,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1401,
@@ -142,7 +68,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.07920792079207921,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1403,
@@ -151,7 +77,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.07920792079207921,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1391,
@@ -160,7 +86,7 @@
             "quantity": "8-12",
             "noted": true,
             "rarity": 0.04950495049504951,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 2503,
@@ -169,7 +95,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.04950495049504951,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1305,
@@ -178,7 +104,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0297029702970297,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1149,
@@ -187,16 +113,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0297029702970297,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1127,
             "name": "Rune platebody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1377,
@@ -205,25 +131,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.019801980198019802,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1079,
             "name": "Rune platelegs",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0297029702970297,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 1093,
             "name": "Rune plateskirt",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0297029702970297,
-            "drop_requirements": null
+            "rolls": 2
+        },
+        {
+            "id": 22973,
+            "name": "Hydra's eye",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0055248618784530384,
+            "rolls": 1
         },
         {
             "id": 4111,
@@ -232,7 +167,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.009900990099009901,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 4113,
@@ -241,25 +176,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.009900990099009901,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 562,
             "name": "Chaos rune",
-            "members": true,
+            "members": false,
             "quantity": "150-300",
             "noted": false,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "150-300",
             "noted": false,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 565,
@@ -268,7 +203,7 @@
             "quantity": "150-300",
             "noted": false,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 9075,
@@ -277,7 +212,7 @@
             "quantity": "150-300",
             "noted": false,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 9244,
@@ -286,7 +221,7 @@
             "quantity": "100-120",
             "noted": false,
             "rarity": 0.019801980198019802,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 9245,
@@ -295,7 +230,7 @@
             "quantity": "35-50",
             "noted": false,
             "rarity": 0.009900990099009901,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 211,
@@ -303,8 +238,8 @@
             "members": true,
             "quantity": "10-15",
             "noted": true,
-            "rarity": 0.015479876160990714,
-            "drop_requirements": null
+            "rarity": 0.015479876160990712,
+            "rolls": 2
         },
         {
             "id": 213,
@@ -312,8 +247,17 @@
             "members": true,
             "quantity": "25-30",
             "noted": true,
-            "rarity": 0.015479876160990714,
-            "drop_requirements": null
+            "rarity": 0.015479876160990712,
+            "rolls": 2
+        },
+        {
+            "id": 22971,
+            "name": "Hydra's fang",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0055248618784530384,
+            "rolls": 1
         },
         {
             "id": 207,
@@ -322,7 +266,7 @@
             "quantity": "10-15",
             "noted": true,
             "rarity": 0.012376237623762377,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 3051,
@@ -331,7 +275,7 @@
             "quantity": "10-15",
             "noted": true,
             "rarity": 0.012376237623762377,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 215,
@@ -340,7 +284,7 @@
             "quantity": "25-30",
             "noted": true,
             "rarity": 0.012376237623762377,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 217,
@@ -349,7 +293,7 @@
             "quantity": "25-30",
             "noted": true,
             "rarity": 0.012376237623762377,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 2485,
@@ -358,7 +302,7 @@
             "quantity": "25-30",
             "noted": true,
             "rarity": 0.009285051067780872,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 219,
@@ -367,124 +311,7 @@
             "quantity": "10-15",
             "noted": true,
             "rarity": 0.009285051067780872,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "5550-25550",
-            "noted": false,
-            "rarity": 0.0049504950495049506,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "40000-60000",
-            "noted": false,
-            "rarity": 0.09405940594059406,
-            "drop_requirements": null
-        },
-        {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "2-4",
-            "noted": false,
-            "rarity": 0.06930693069306931,
-            "drop_requirements": null
-        },
-        {
-            "id": 169,
-            "name": "Ranging potion(3)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.06930693069306931,
-            "drop_requirements": null
-        },
-        {
-            "id": 3026,
-            "name": "Super restore(3)",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.06930693069306931,
-            "drop_requirements": null
-        },
-        {
-            "id": 536,
-            "name": "Dragon bones",
-            "members": true,
-            "quantity": "30",
-            "noted": true,
-            "rarity": 0.0594059405940594,
-            "drop_requirements": null
-        },
-        {
-            "id": 989,
-            "name": "Crystal key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.009900990099009901,
-            "drop_requirements": null
-        },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.035919540229885055,
-            "drop_requirements": null
-        },
-        {
-            "id": 23077,
-            "name": "Alchemical hydra heads",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01,
-            "drop_requirements": null
-        },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 23064,
-            "name": "Jar of chemicals",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005,
-            "drop_requirements": null
-        },
-        {
-            "id": 22746,
-            "name": "Ikkle hydra",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0003333333333333333,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 5295,
@@ -492,8 +319,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.002376332677069459,
-            "drop_requirements": null
+            "rarity": 0.002376425855513308,
+            "rolls": 2
         },
         {
             "id": 5300,
@@ -501,8 +328,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.002217715331842289,
-            "drop_requirements": null
+            "rarity": 0.0022177866489243737,
+            "rolls": 2
         },
         {
             "id": 5304,
@@ -510,8 +337,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0017431320596848418,
-            "drop_requirements": null
+            "rarity": 0.0017424638438752395,
+            "rolls": 2
         },
         {
             "id": 5321,
@@ -519,8 +346,17 @@
             "members": true,
             "quantity": "30-45",
             "noted": false,
-            "rarity": 0.0015841584158415843,
-            "drop_requirements": null
+            "rarity": 0.0015842839036755386,
+            "rolls": 2
+        },
+        {
+            "id": 22969,
+            "name": "Hydra's heart",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0055248618784530384,
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -528,8 +364,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0015841584158415843,
-            "drop_requirements": null
+            "rarity": 0.0015842839036755386,
+            "rolls": 2
         },
         {
             "id": 21488,
@@ -537,8 +373,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0014256285239755077,
-            "drop_requirements": null
+            "rarity": 0.00142571998859424,
+            "rolls": 2
         },
         {
             "id": 5314,
@@ -546,8 +382,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0014256285239755077,
-            "drop_requirements": null
+            "rarity": 0.00142571998859424,
+            "rolls": 2
         },
         {
             "id": 21486,
@@ -555,8 +391,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0014256285239755077,
-            "drop_requirements": null
+            "rarity": 0.00142571998859424,
+            "rolls": 2
         },
         {
             "id": 5315,
@@ -564,8 +400,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0014256285239755077,
-            "drop_requirements": null
+            "rarity": 0.00142571998859424,
+            "rolls": 2
         },
         {
             "id": 5288,
@@ -573,8 +409,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0011087334937301121,
-            "drop_requirements": null
+            "rarity": 0.0011088933244621868,
+            "rolls": 2
         },
         {
             "id": 5316,
@@ -582,8 +418,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0009506471530494386,
-            "drop_requirements": null
+            "rarity": 0.0009504799923961601,
+            "rolls": 2
         },
         {
             "id": 5289,
@@ -592,7 +428,7 @@
             "quantity": "2-3",
             "noted": false,
             "rarity": 0.0007920792079207921,
-            "drop_requirements": null
+            "rolls": 2
         },
         {
             "id": 5317,
@@ -600,8 +436,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0006336633663366337,
-            "drop_requirements": null
+            "rarity": 0.0006336734047272036,
+            "rolls": 2
         },
         {
             "id": 22877,
@@ -609,8 +445,17 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.0004752095079918359,
-            "drop_requirements": null
+            "rarity": 0.00047523999619808005,
+            "rolls": 2
+        },
+        {
+            "id": 22988,
+            "name": "Hydra tail",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001949317738791423,
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -618,8 +463,8 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.00031683168316831684,
-            "drop_requirements": null
+            "rarity": 0.0003168367023636018,
+            "rolls": 2
         },
         {
             "id": 22871,
@@ -627,8 +472,161 @@
             "members": true,
             "quantity": "2-3",
             "noted": false,
-            "rarity": 0.00031683168316831684,
-            "drop_requirements": null
+            "rarity": 0.0003168367023636018,
+            "rolls": 2
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "5550-25550",
+            "noted": false,
+            "rarity": 0.0049504950495049506,
+            "rolls": 2
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "40000-60000",
+            "noted": false,
+            "rarity": 0.09405940594059406,
+            "rolls": 2
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "2-4",
+            "noted": false,
+            "rarity": 0.06930693069306931,
+            "rolls": 2
+        },
+        {
+            "id": 169,
+            "name": "Ranging potion(3)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06930693069306931,
+            "rolls": 2
+        },
+        {
+            "id": 3026,
+            "name": "Super restore(3)",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.06930693069306931,
+            "rolls": 2
+        },
+        {
+            "id": 536,
+            "name": "Dragon bones",
+            "members": true,
+            "quantity": "30",
+            "noted": true,
+            "rarity": 0.0594059405940594,
+            "rolls": 2
+        },
+        {
+            "id": 989,
+            "name": "Crystal key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009900990099009901,
+            "rolls": 2
+        },
+        {
+            "id": 22983,
+            "name": "Hydra leather",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0019455252918287938,
+            "rolls": 1
+        },
+        {
+            "id": 22966,
+            "name": "Hydra's claw",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000999000999000999,
+            "rolls": 1
+        },
+        {
+            "id": 20849,
+            "name": "Dragon thrownaxe",
+            "members": true,
+            "quantity": "500-1000",
+            "noted": false,
+            "rarity": 0.0005,
+            "rolls": 1
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 23077,
+            "name": "Alchemical hydra heads",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01,
+            "rolls": 1
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 23064,
+            "name": "Jar of chemicals",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005,
+            "rolls": 1
+        },
+        {
+            "id": 22804,
+            "name": "Dragon knife",
+            "members": true,
+            "quantity": "500-1000",
+            "noted": false,
+            "rarity": 0.0004997501249375312,
+            "rolls": 1
+        },
+        {
+            "id": 22746,
+            "name": "Ikkle hydra",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003333333333333333,
+            "rolls": 1
         }
     ]
 }

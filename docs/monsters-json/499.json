@@ -1,6 +1,7 @@
 {
     "id": 499,
     "name": "Thermonuclear smoke devil",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2014-04-10",
@@ -9,13 +10,14 @@
     "hitpoints": 240,
     "max_hit": 8,
     "attack_type": [
-        "typeless",
         "ranged",
-        "magic"
+        "magic",
+        "typeless"
     ],
     "attack_speed": 2,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -33,7 +35,6 @@
     ],
     "duplicate": false,
     "examine": "Woah.",
-    "icon": null,
     "wiki_name": "Thermonuclear smoke devil",
     "wiki_url": "https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil",
     "attack_level": 230,
@@ -41,101 +42,134 @@
     "defence_level": 360,
     "magic_level": 1,
     "ranged_level": 310,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 11,
     "defence_slash": 4,
     "defence_crush": 9,
     "defence_magic": 800,
     "defence_ranged": 900,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005859375,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0029296875,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00146484375,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000549273494258261,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000549273494258261,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003662109375,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.00018310546875,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018310546875,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018310546875,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.1444091796875e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 5.7220458984375e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.291199173892664e-06,
+            "rolls": 1
+        },
         {
             "id": 592,
             "name": "Ashes",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1213,
-            "name": "Rune dagger",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1113,
-            "name": "Rune chainbody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2501,
-            "name": "Red d'hide body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 1373,
-            "name": "Rune battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 1405,
-            "name": "Mystic air staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 1401,
-            "name": "Mystic fire staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 5667,
-            "name": "Rune knife(p++)",
-            "members": true,
-            "quantity": "50",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4587,
@@ -144,7 +178,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4675,
@@ -153,7 +187,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 12002,
@@ -162,7 +196,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.002857142857142857,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11998,
@@ -171,7 +205,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3140,
@@ -180,7 +214,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0005,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4697,
@@ -189,16 +223,16 @@
             "quantity": "100",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 556,
             "name": "Air rune",
-            "members": true,
+            "members": false,
             "quantity": "300",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 566,
@@ -207,7 +241,7 @@
             "quantity": "60",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 892,
@@ -216,16 +250,25 @@
             "quantity": "100",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 1883,
+            "id": 1885,
             "name": "Ugthanki kebab",
             "members": true,
             "quantity": "3",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1213,
+            "name": "Rune dagger",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 7060,
@@ -234,7 +277,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10925,
@@ -243,7 +286,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2434,
@@ -252,16 +295,16 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7936,
             "name": "Pure essence",
-            "members": true,
+            "members": false,
             "quantity": "300",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1775,
@@ -270,25 +313,25 @@
             "quantity": "100",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2359,
             "name": "Mithril bar",
-            "members": true,
+            "members": false,
             "quantity": "20",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 453,
             "name": "Coal",
-            "members": true,
+            "members": false,
             "quantity": "150",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1513,
@@ -297,52 +340,61 @@
             "quantity": "20",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 444,
             "name": "Gold ore",
-            "members": true,
+            "members": false,
             "quantity": "200",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1601,
             "name": "Diamond",
-            "members": true,
+            "members": false,
             "quantity": "10",
             "noted": true,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 1113,
+            "name": "Rune chainbody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "10000-20000",
             "noted": false,
             "rarity": 0.1171875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 590,
             "name": "Tinderbox",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1442,
             "name": "Fire talisman",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4548,
@@ -351,7 +403,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9735,
@@ -360,7 +412,7 @@
             "quantity": "50",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3049,
@@ -369,7 +421,7 @@
             "quantity": "15",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9194,
@@ -378,7 +430,7 @@
             "quantity": "12",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -387,16 +439,16 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1987,
             "name": "Grapes",
-            "members": true,
+            "members": false,
             "quantity": "100",
             "noted": true,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -405,7 +457,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 2501,
+            "name": "Red d'hide body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
             "id": 1645,
@@ -414,7 +475,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 989,
@@ -423,7 +484,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1373,
+            "name": "Rune battleaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -431,8 +501,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.020903010033444816,
-            "drop_requirements": null
+            "rarity": 0.02127659574468085,
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -441,7 +511,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.010416666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -450,7 +520,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 12648,
@@ -459,7 +529,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0003333333333333333,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1405,
+            "name": "Mystic air staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 1401,
+            "name": "Mystic fire staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 5667,
+            "name": "Rune knife(p++)",
+            "members": true,
+            "quantity": "50",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
         }
     ]
 }

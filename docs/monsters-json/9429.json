@@ -1,13 +1,14 @@
 {
     "id": 9429,
     "name": "The Nightmare",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2020-02-06",
     "combat_level": 814,
     "size": 5,
     "hitpoints": 2400,
-    "max_hit": 0,
+    "max_hit": 33,
     "attack_type": [
         "slash",
         "ranged",
@@ -16,6 +17,7 @@
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -26,7 +28,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "Sweet dreams are most definitely not made of this.",
-    "icon": null,
     "wiki_name": "The Nightmare",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Nightmare",
     "attack_level": 150,
@@ -34,101 +35,26 @@
     "defence_level": 150,
     "magic_level": 150,
     "ranged_level": 150,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 140,
+    "strength_bonus": 128,
     "attack_magic": 140,
+    "magic_bonus": 64,
     "attack_ranged": 140,
+    "ranged_bonus": 64,
     "defence_stab": 120,
     "defence_slash": 180,
     "defence_crush": 40,
     "defence_magic": 600,
     "defence_ranged": 600,
-    "attack_accuracy": 140,
-    "melee_strength": 128,
-    "ranged_strength": 64,
-    "magic_damage": 64,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 24422,
-            "name": "Nightmare staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0025,
-            "drop_requirements": null
-        },
-        {
-            "id": 24419,
-            "name": "Inquisitor's great helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0016666666666666668,
-            "drop_requirements": null
-        },
-        {
-            "id": 24420,
-            "name": "Inquisitor's hauberk",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0016666666666666668,
-            "drop_requirements": null
-        },
-        {
-            "id": 24421,
-            "name": "Inquisitor's plateskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0016666666666666668,
-            "drop_requirements": null
-        },
-        {
-            "id": 24417,
-            "name": "Inquisitor's mace",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0008333333333333334,
-            "drop_requirements": null
-        },
-        {
-            "id": 24517,
-            "name": "Eldritch orb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005555555555555556,
-            "drop_requirements": null
-        },
-        {
-            "id": 24511,
-            "name": "Harmonised orb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005555555555555556,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 24514,
@@ -137,16 +63,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0005555555555555556,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 890,
             "name": "Adamant arrow",
-            "members": true,
+            "members": false,
             "quantity": "32-488",
             "noted": false,
             "rarity": 0.03,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 892,
@@ -155,34 +81,34 @@
             "quantity": "12-515",
             "noted": false,
             "rarity": 0.03,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 564,
             "name": "Cosmic rune",
-            "members": true,
+            "members": false,
             "quantity": "15-214",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 561,
             "name": "Nature rune",
-            "members": true,
+            "members": false,
             "quantity": "6-138",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "24-165",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -191,7 +117,7 @@
             "quantity": "13-129",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 566,
@@ -200,43 +126,52 @@
             "quantity": "12-74",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7936,
             "name": "Pure essence",
-            "members": true,
+            "members": false,
             "quantity": "420-4200",
             "noted": true,
             "rarity": 0.02,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1621,
             "name": "Uncut emerald",
-            "members": true,
+            "members": false,
             "quantity": "1-35",
             "noted": true,
             "rarity": 0.03,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
         },
         {
             "id": 1619,
             "name": "Uncut ruby",
-            "members": true,
+            "members": false,
             "quantity": "2-35",
             "noted": true,
             "rarity": 0.03,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1515,
             "name": "Yew logs",
-            "members": true,
+            "members": false,
             "quantity": "14-111",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1513,
@@ -245,43 +180,43 @@
             "quantity": "3-50",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 444,
             "name": "Gold ore",
-            "members": true,
+            "members": false,
             "quantity": "14-79",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 453,
             "name": "Coal",
-            "members": true,
+            "members": false,
             "quantity": "16-253",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 447,
             "name": "Mithril ore",
-            "members": true,
+            "members": false,
             "quantity": "15-69",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 449,
             "name": "Adamantite ore",
-            "members": true,
+            "members": false,
             "quantity": "8-50",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -290,7 +225,7 @@
             "quantity": "1-8",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 219,
@@ -299,7 +234,7 @@
             "quantity": "1-16",
             "noted": true,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 385,
@@ -308,7 +243,16 @@
             "quantity": "1-15",
             "noted": false,
             "rarity": 0.06,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 24422,
+            "name": "Nightmare staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025,
+            "rolls": 1
         },
         {
             "id": 365,
@@ -317,7 +261,7 @@
             "quantity": "1-18",
             "noted": false,
             "rarity": 0.06,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 139,
@@ -326,7 +270,7 @@
             "quantity": "1-10",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6687,
@@ -335,7 +279,7 @@
             "quantity": "1-10",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 189,
@@ -344,7 +288,7 @@
             "quantity": "1-8",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10927,
@@ -353,16 +297,16 @@
             "quantity": "1-11",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "2717-43854",
             "noted": false,
             "rarity": 0.02,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -371,7 +315,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.005263157894736842,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 24491,
@@ -380,7 +324,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 24495,
@@ -389,7 +333,61 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0005263157894736842,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 24419,
+            "name": "Inquisitor's great helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016666666666666668,
+            "rolls": 1
+        },
+        {
+            "id": 24420,
+            "name": "Inquisitor's hauberk",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016666666666666668,
+            "rolls": 1
+        },
+        {
+            "id": 24421,
+            "name": "Inquisitor's plateskirt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016666666666666668,
+            "rolls": 1
+        },
+        {
+            "id": 24417,
+            "name": "Inquisitor's mace",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0008333333333333334,
+            "rolls": 1
+        },
+        {
+            "id": 24517,
+            "name": "Eldritch orb",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005555555555555556,
+            "rolls": 1
+        },
+        {
+            "id": 24511,
+            "name": "Harmonised orb",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005555555555555556,
+            "rolls": 1
         }
     ]
 }

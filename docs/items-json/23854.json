@@ -1,6 +1,7 @@
 {
     "id": 23854,
     "name": "Corrupted staff (perfected)",
+    "last_updated": "2020-12-27",
     "incomplete": false,
     "members": true,
     "tradeable": false,
@@ -28,7 +29,6 @@
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABW0lEQVR4XuXXv0vDUBAH8N4gSCFIwWASTQ2pFElDCMESCgEHETpI8QeCIIhInUREOjiIICiI0EEQV1f/zNO70KZp99yBX7jhQSAf3l3yklrtfwWwXGLJAYnrYOhYOGpt4IltSqGAEZZhMODWX8fL5hoXrWPPqxIFJQjVcNPG1HO5KgYB35RA7x2f29U2TV7HK/UpRgRERZgje5Uxg7Rb9e5QclDwtzMEGraa2DHq6C0vYT+JJUAUwIMw4KHOfH863JO5EgEd99ISYlIVzw8F8DAK0Ws0FhACGArgy+hsATJ/VUUBHD9eSLVmPoBfr9d6MN/jG7RMsadoNoA/n/cljDhIFaaXtPW0arDfRdfJv2+Ed6c4QBVgKMBvYsGzaTaA/d1YT6toboItRwfm6e4Ud0JfB+bt4Ryz7rYOzMfzFe5lkQYMBTBigAoMpfilUYChqANR1LSriCqMRH4BOcH5UDikmTgAAAAASUVORK5CYII=",
     "wiki_name": "Corrupted staff (perfected)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Corrupted_staff_(perfected)",
-    "wiki_exchange": null,
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -49,42 +49,28 @@
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "staves",
+        "weapon_type": "powered_staff",
         "stances": [
             {
-                "combat_style": "bash",
-                "attack_type": "crush",
-                "attack_style": "accurate",
-                "experience": "attack",
-                "boosts": null
-            },
-            {
-                "combat_style": "pound",
-                "attack_type": "crush",
-                "attack_style": "aggressive",
-                "experience": "strength",
-                "boosts": null
-            },
-            {
-                "combat_style": "focus",
-                "attack_type": "crush",
-                "attack_style": "defensive",
-                "experience": "defence",
-                "boosts": null
-            },
-            {
-                "combat_style": "spell",
-                "attack_type": "spellcasting",
-                "attack_style": "magic",
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
                 "experience": "magic",
-                "boosts": null
+                "boosts": "accuracy and damage"
             },
             {
-                "combat_style": "spell (defensive)",
-                "attack_type": "defensive casting",
-                "attack_style": "magic",
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
                 "experience": "magic and defence",
-                "boosts": null
+                "boosts": "attack range by 2 squares"
             }
         ]
     }

@@ -1,6 +1,7 @@
 {
     "id": 6340,
     "name": "Cow (hard)",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-09-05",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": false,
     "examine": "Converts beef to grass.",
-    "icon": null,
     "wiki_name": "Cow (Hard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Cow#Hard",
     "attack_level": 200,
@@ -37,65 +38,53 @@
     "defence_level": 1,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": -15,
+    "strength_bonus": -15,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -21,
     "defence_slash": -21,
     "defence_crush": -21,
     "defence_magic": -21,
     "defence_ranged": -21,
-    "attack_accuracy": -15,
-    "melee_strength": -15,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 1739,
             "name": "Cowhide",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2132,
             "name": "Raw beef",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
             "name": "Clue scroll (beginner)",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0004948535233570863,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

@@ -22,162 +22,175 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 import json
-import logging
 import argparse
 from pathlib import Path
 
 import config
 from builders.items import build_item
 
-# Configure logging
-log_file_path = Path(Path(__file__).stem+".log")
-if log_file_path.exists():
-    log_file_path.unlink()
-log_file_path.touch()
-logging.basicConfig(filename=Path(__file__).stem+".log",
-                    level=logging.DEBUG)
-logging.info(">>> Starting builders/items/builder.py...")
 
+class Builder:
+    def __init__(self, **kwargs):
+        # Set properties to control phases of build
+        self.verbose = kwargs["verbose"]
+        self.compare = kwargs["compare"]
+        self.export = kwargs["export"]
+        self.validate = kwargs["validate"]
 
-def main(export: bool = False, verbose: bool = False, validate: bool = True):
-    # Load the current database contents
-    items_compltete_file_path = Path(config.DOCS_PATH / "items-complete.json")
-    with open(items_compltete_file_path) as f:
-        all_db_items = json.load(f)
+        # Load the raw cache data that has been processed (this is ground truth)
+        with open(Path(config.DATA_ITEMS_PATH / "items-cache-data.json")) as f:
+            self.all_items_cache_data = json.load(f)
 
-    # Load the item wikitext file
-    wiki_text_file_path = Path(config.DATA_WIKI_PATH / "page-text-items.json")
-    with open(wiki_text_file_path) as f:
-        all_wikitext_raw = json.load(f)
+        # Load all item data (from min JSON file)
+        with open(Path(config.DOCS_PATH / "items-complete.json")) as f:
+            self.all_db_items = json.load(f)
 
-    # Temp loading of item ID -> wikitext
-    processed_wikitextfile_path = Path(config.DATA_WIKI_PATH / "processed-wikitext-items.json")
-    with open(processed_wikitextfile_path) as f:
-        all_wikitext_processed = json.load(f)
+        # Load the item wikitext file of page text
+        with open(Path(config.DATA_ITEMS_PATH / "items-wiki-page-text.json")) as f:
+            self.all_wikitext_raw = json.load(f)
 
-    # Dict of unalchable items
-    unalchable_items_path = Path(config.DATA_WIKI_PATH / "page-titles-unalchable.json")
-    with open(unalchable_items_path) as f:
-        unalchable_items = json.load(f)
+        # Load the item wikitext file of processed data
+        with open(Path(config.DATA_ITEMS_PATH / "items-wiki-page-text-processed.json")) as f:
+            self.all_wikitext_processed = json.load(f)
 
-    # Load the invalid items file
-    invalid_items_file_path = Path(config.DATA_ITEMS_PATH / "invalid-items.json")
-    with open(invalid_items_file_path) as f:
-        invalid_items_data = json.load(f)
+        # Load dict of unalchable items
+        unalchable_items_path = Path(config.DATA_ITEMS_PATH / "items-unalchable.json")
+        with open(unalchable_items_path) as f:
+            self.unalchable = json.load(f)
 
-    # Load buy limit data
-    buy_limits_file_path = Path(config.DATA_ITEMS_PATH / "ge-limits-ids.json")
-    with open(buy_limits_file_path) as f:
-        buy_limits_data = json.load(f)
+        # Load buy limit data
+        buy_limits_file_path = Path(config.DATA_ITEMS_PATH / "items-buylimits.json")
+        with open(buy_limits_file_path) as f:
+            self.buy_limits = json.load(f)
 
-    # Load skill requirement data
-    skill_requirements_file_path = Path(config.DATA_ITEMS_PATH / "skill-requirements.json")
-    with open(skill_requirements_file_path) as f:
-        skill_requirements_data = json.load(f)
+        # Load skill requirement data
+        skill_requirements_file_path = Path(config.DATA_ITEMS_PATH / "items-skill-requirements.json")
+        with open(skill_requirements_file_path) as f:
+            self.skill_requirements = json.load(f)
 
-    # Load weapon_type data
-    weapon_type_file_path = Path(config.DATA_ITEMS_PATH / "weapon-types.json")
-    with open(weapon_type_file_path) as f:
-        weapon_types_data = json.load(f)
+        # Load stances data
+        weapon_stance_file_path = Path(config.DATA_ITEMS_PATH / "weapon-stances.json")
+        with open(weapon_stance_file_path) as f:
+            self.weapon_stances = json.load(f)
 
-    # Load stances data
-    weapon_stance_file_path = Path(config.DATA_ITEMS_PATH / "weapon-stances.json")
-    with open(weapon_stance_file_path) as f:
-        weapon_stances_data = json.load(f)
+        # Load icon data
+        icons_file_path = Path(config.DATA_ICONS_PATH / "icons-items-complete.json")
+        with open(icons_file_path) as f:
+            self.icons = json.load(f)
 
-    # Load the raw OSRS cache item data
-    # This is the final data load, and used as baseline data for database population
-    all_item_cache_data_path = Path(config.DATA_ITEMS_PATH / "items-cache-data.json")
-    with open(all_item_cache_data_path) as f:
-        all_item_cache_data = json.load(f)
+        # Load duplicate item data
+        duplicates_file_path = Path(config.DATA_ITEMS_PATH / "items-duplicates.json")
+        with open(duplicates_file_path) as f:
+            self.duplicates = json.load(f)
 
-    # Load icon data
-    icons_file_path = Path(config.DATA_ICONS_PATH / "icons-items-complete.json")
-    with open(icons_file_path) as f:
-        icons_data = json.load(f)
+        # Load schema data
+        with open(Path(config.DATA_SCHEMAS_PATH / "schema-items.json")) as f:
+            self.schema_data = json.load(f)
 
-    # Load duplicate item data
-    duplicates_file_path = Path(config.DATA_ITEMS_PATH / "duplicate-items.json")
-    with open(duplicates_file_path) as f:
-        duplicate_items = json.load(f)
+        # Initialize a list of known items
+        self.known_items = list()
 
-    # Load schema data
-    schema_file_path = Path(config.DATA_SCHEMAS_PATH / "schema-items.json")
-    with open(schema_file_path) as f:
-        schema_data = json.load(f)
+    def run(self):
+        # Start processing every item!
+        for item_id in self.all_items_cache_data:
 
-    # Initialize a list of known items
-    known_items = list()
+            # if int(item_id) < 25000:
+            #     continue
 
-    # Start processing every item!
-    for item_id in all_item_cache_data:
-        # Toggle to start, stop at a specific item ID
-        # if int(item_id) < 24800:
-        #     continue
+            # Initialize the BuildItem class, used for all items
+            builder = build_item.BuildItem(item_id=item_id,
+                                           all_items_cache_data=self.all_items_cache_data,
+                                           all_db_items=self.all_db_items,
+                                           all_wikitext_raw=self.all_wikitext_raw,
+                                           all_wikitext_processed=self.all_wikitext_processed,
+                                           unalchable=self.unalchable,
+                                           buy_limits=self.buy_limits,
+                                           skill_requirements=self.skill_requirements,
+                                           weapon_stances=self.weapon_stances,
+                                           icons=self.icons,
+                                           duplicates=self.duplicates,
+                                           schema_data=self.schema_data,
+                                           known_items=self.known_items,
+                                           verbose=self.verbose)
 
-        # Initialize the BuildItem class, used for all items
-        builder = build_item.BuildItem(item_id=item_id,
-                                       all_item_cache_data=all_item_cache_data,
-                                       all_wikitext_processed=all_wikitext_processed,
-                                       all_wikitext_raw=all_wikitext_raw,
-                                       unalchable_items=unalchable_items,
-                                       all_db_items=all_db_items,
-                                       buy_limits_data=buy_limits_data,
-                                       skill_requirements_data=skill_requirements_data,
-                                       weapon_types_data=weapon_types_data,
-                                       weapon_stances_data=weapon_stances_data,
-                                       invalid_items_data=invalid_items_data,
-                                       known_items=known_items,
-                                       duplicate_items=duplicate_items,
-                                       icons_data=icons_data,
-                                       schema_data=schema_data,
-                                       export=export,
-                                       verbose=verbose)
+            status = builder.preprocessing()
 
-        preprocessing_status = builder.preprocessing()
-        if preprocessing_status["status"]:
-            builder.populate_item()
+            if status["status"]:
+                builder.populate_wiki_item()
+            else:
+                builder.populate_non_wiki_item()
+
             known_item = builder.check_duplicate_item()
             if known_item:
-                known_items.append(known_item)
-            builder.generate_item_object()
-            builder.compare_new_vs_old_item()
-            builder.export_item_to_json()
-            if validate:
-                builder.validate_item()
-        else:
-            builder.populate_from_cache_data()
-            builder.populate_non_wiki_item()
-            known_item = builder.check_duplicate_item()
-            if known_item:
-                known_items.append(known_item)
-            builder.generate_item_object()
-            builder.compare_new_vs_old_item()
-            builder.export_item_to_json()
-            if validate:
+                self.known_items.append(known_item)
+            if self.compare:
+                builder.compare_new_vs_old_item()
+            if self.export:
+                builder.export_item_to_json()
+            if self.validate:
                 builder.validate_item()
 
-    # Done processing, rejoice!
-    print("Done.")
+        # Done processing, rejoice!
+        print("Done.")
+        exit(0)
+
+    def test(self):
+        # Start processing every item!
+        for item_id in self.all_items_cache_data:
+
+            # Initialize the BuildItem class, used for all items
+            builder = build_item.BuildItem(item_id=item_id,
+                                           all_items_cache_data=self.all_items_cache_data,
+                                           all_db_items=self.all_db_items,
+                                           all_wikitext_raw=self.all_wikitext_raw,
+                                           all_wikitext_processed=self.all_wikitext_processed,
+                                           unalchable=self.unalchable,
+                                           buy_limits=self.buy_limits,
+                                           skill_requirements=self.skill_requirements,
+                                           weapon_stances=self.weapon_stances,
+                                           icons=self.icons,
+                                           duplicates=self.duplicates,
+                                           schema_data=self.schema_data,
+                                           known_items=self.known_items,
+                                           verbose=self.verbose)
+
+            status = builder.preprocessing()
+
+            if status["status"]:
+                builder.populate_wiki_item()
+            else:
+                builder.populate_non_wiki_item()
+
+            known_item = builder.check_duplicate_item()
+            self.known_items.append(known_item)
+            builder.validate_item()
+
+        # Done testing, rejoice!
+        exit(0)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build item database.")
-    parser.add_argument('--export',
-                        default=False,
-                        required=False,
-                        help='A boolean of whether to export data.')
     parser.add_argument('--verbose',
                         default=False,
                         required=False,
                         help='A boolean of whether to be verbose.')
+    parser.add_argument('--compare',
+                        default=True,
+                        required=False,
+                        help='A boolean of whether to compare data.')
+    parser.add_argument('--export',
+                        default=False,
+                        required=False,
+                        help='A boolean of whether to export data.')
     parser.add_argument('--validate',
                         default=True,
                         required=False,
                         help='A boolean of whether to validate using schema.')
     args = parser.parse_args()
 
-    export = args.export
-    verbose = args.verbose
-    validate = args.validate
-    main(export, verbose, validate)
+    builder = Builder(verbose=args.verbose,
+                      compare=args.compare,
+                      export=args.export,
+                      validate=args.validate)
+    builder.run()

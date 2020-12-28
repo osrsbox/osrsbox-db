@@ -1,6 +1,7 @@
 {
     "id": 5633,
     "name": "Shade",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2006-03-28",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "The shadowy remains of a long departed soul.",
-    "icon": null,
     "wiki_name": "Shade (Temple Trekking)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Shade_(Temple_Trekking)",
     "attack_level": 130,
@@ -39,29 +40,35 @@
     "defence_level": 100,
     "magic_level": 50,
     "ranged_level": 50,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 3404,
-            "name": "Fiyr remains",
-            "members": true,
+            "id": 546,
+            "name": "Shade robe top",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.25,
+            "rolls": 1
+        },
+        {
+            "id": 548,
+            "name": "Shade robe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.25,
+            "rolls": 1
         }
     ]
 }

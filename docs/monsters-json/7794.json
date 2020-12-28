@@ -1,13 +1,14 @@
 {
     "id": 7794,
     "name": "Spitting Wyvern",
-    "incomplete": true,
+    "last_updated": "2020-12-25",
+    "incomplete": false,
     "members": true,
     "release_date": "2017-09-07",
     "combat_level": 139,
     "size": 3,
     "hitpoints": 200,
-    "max_hit": 0,
+    "max_hit": 9,
     "attack_type": [
         "slash",
         "ranged"
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -34,7 +36,6 @@
     ],
     "duplicate": false,
     "examine": "Has issues with odontophobia.",
-    "icon": null,
     "wiki_name": "Spitting Wyvern",
     "wiki_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
     "attack_level": 125,
@@ -42,20 +43,17 @@
     "defence_level": 90,
     "magic_level": 125,
     "ranged_level": 125,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 70,
     "defence_slash": 70,
     "defence_crush": 70,
     "defence_magic": 140,
     "defence_ranged": 120,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 6812,
@@ -64,124 +62,52 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1397,
-            "name": "Air battlestaff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.032520325203252036,
-            "drop_requirements": null
-        },
-        {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "3-5",
-            "noted": true,
-            "rarity": 0.024390243902439025,
-            "drop_requirements": null
-        },
-        {
-            "id": 1371,
-            "name": "Adamant battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.016260162601626018,
-            "drop_requirements": null
-        },
-        {
-            "id": 1161,
-            "name": "Adamant full helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01639344262295082,
-            "drop_requirements": null
-        },
-        {
-            "id": 1275,
-            "name": "Rune pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.016260162601626018,
-            "drop_requirements": null
-        },
-        {
-            "id": 1123,
-            "name": "Adamant platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.016260162601626018,
-            "drop_requirements": null
-        },
-        {
-            "id": 21646,
-            "name": "Granite longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 21643,
-            "name": "Granite boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.000390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 890,
             "name": "Adamant arrow",
-            "members": true,
+            "members": false,
             "quantity": "38-42",
             "noted": false,
             "rarity": 0.04878048780487805,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 555,
             "name": "Water rune",
-            "members": true,
+            "members": false,
             "quantity": "50",
             "noted": false,
             "rarity": 0.032520325203252036,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 562,
             "name": "Chaos rune",
-            "members": true,
+            "members": false,
             "quantity": "15",
             "noted": false,
             "rarity": 0.032520325203252036,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 563,
             "name": "Law rune",
-            "members": true,
+            "members": false,
             "quantity": "15",
             "noted": false,
             "rarity": 0.032520325203252036,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "15",
             "noted": false,
             "rarity": 0.032520325203252036,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -190,7 +116,7 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.032520325203252036,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 566,
@@ -199,7 +125,7 @@
             "quantity": "10",
             "noted": false,
             "rarity": 0.008130081300813009,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9144,
@@ -208,7 +134,7 @@
             "quantity": "12-30",
             "noted": false,
             "rarity": 0.008130081300813009,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 213,
@@ -217,7 +143,7 @@
             "quantity": "2",
             "noted": true,
             "rarity": 0.02288329519450801,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -226,7 +152,16 @@
             "quantity": "2",
             "noted": true,
             "rarity": 0.018281535648994516,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1397,
+            "name": "Air battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.032520325203252036,
+            "rolls": 1
         },
         {
             "id": 217,
@@ -235,7 +170,7 @@
             "quantity": "2",
             "noted": true,
             "rarity": 0.018281535648994516,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -244,7 +179,7 @@
             "quantity": "2",
             "noted": true,
             "rarity": 0.013717421124828532,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 207,
@@ -253,7 +188,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 219,
@@ -262,7 +197,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21490,
@@ -271,7 +206,7 @@
             "quantity": "12",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5295,
@@ -280,7 +215,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.017241379310344827,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -289,7 +224,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0009105809506465125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -298,7 +233,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0007154611146884167,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5321,
@@ -307,7 +242,7 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.0006504065040650406,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -316,7 +251,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0006504065040650406,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": true,
+            "quantity": "3-5",
+            "noted": true,
+            "rarity": 0.024390243902439025,
+            "rolls": 1
         },
         {
             "id": 21488,
@@ -325,7 +269,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0032948929159802307,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5314,
@@ -334,7 +278,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0005853772756541591,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21486,
@@ -343,7 +287,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.006006006006006006,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -352,7 +296,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.008718395815170008,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5288,
@@ -361,7 +305,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00045529047532325625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -370,7 +314,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0003902439024390244,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -379,7 +323,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0003252032520325203,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5317,
@@ -387,8 +331,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0002601659858990036,
-            "drop_requirements": null
+            "rarity": 0.0002601592174410739,
+            "rolls": 1
         },
         {
             "id": 22877,
@@ -397,7 +341,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0001951219512195122,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -406,7 +350,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00013008130081300812,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1371,
+            "name": "Adamant battleaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016260162601626018,
+            "rolls": 1
         },
         {
             "id": 22871,
@@ -415,25 +368,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00013008130081300812,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7936,
             "name": "Pure essence",
-            "members": true,
+            "members": false,
             "quantity": "150",
             "noted": true,
             "rarity": 0.06504065040650407,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2361,
             "name": "Adamantite bar",
-            "members": true,
+            "members": false,
             "quantity": "2-4",
             "noted": true,
             "rarity": 0.04878048780487805,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6333,
@@ -442,7 +395,7 @@
             "quantity": "35",
             "noted": true,
             "rarity": 0.04878048780487805,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 231,
@@ -451,34 +404,34 @@
             "quantity": "10-15",
             "noted": true,
             "rarity": 0.024390243902439025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 451,
             "name": "Runite ore",
-            "members": true,
+            "members": false,
             "quantity": "1-2",
             "noted": true,
             "rarity": 0.024390243902439025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 379,
             "name": "Lobster",
-            "members": true,
+            "members": false,
             "quantity": "2",
             "noted": false,
             "rarity": 0.06504065040650407,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "3000",
             "noted": false,
             "rarity": 0.08943089430894309,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2434,
@@ -487,7 +440,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.056910569105691054,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9463,
@@ -496,7 +449,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1161,
+            "name": "Adamant full helm",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01639344262295082,
+            "rolls": 1
         },
         {
             "id": 21543,
@@ -505,7 +467,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21545,
@@ -514,7 +476,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21622,
@@ -523,7 +485,7 @@
             "quantity": "20-60",
             "noted": false,
             "rarity": 0.016260162601626018,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21555,
@@ -532,7 +494,7 @@
             "quantity": "4-25",
             "noted": false,
             "rarity": 0.5263157894736842,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21562,
@@ -541,7 +503,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.02857142857142857,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21564,
@@ -550,7 +512,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.014285714285714285,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21566,
@@ -559,7 +521,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.011428571428571429,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21568,
@@ -568,7 +530,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.002857142857142857,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -576,8 +538,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.013557483731019521,
-            "drop_requirements": null
+            "rarity": 0.0136986301369863,
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -586,7 +548,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00847457627118644,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1275,
+            "name": "Rune pickaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016260162601626018,
+            "rolls": 1
         },
         {
             "id": 21637,
@@ -595,7 +566,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 8.333333333333333e-05,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1123,
+            "name": "Adamant platebody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016260162601626018,
+            "rolls": 1
+        },
+        {
+            "id": 21646,
+            "name": "Granite longsword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 21643,
+            "name": "Granite boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000390625,
+            "rolls": 1
         }
     ]
 }

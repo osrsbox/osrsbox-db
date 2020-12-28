@@ -1,6 +1,7 @@
 {
     "id": 2481,
     "name": "Minotaur",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2006-07-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": false,
     "examine": "He doesn't look very pleased to see you.",
-    "icon": null,
     "wiki_name": "Minotaur (Level 12)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Minotaur#Level_12",
     "attack_level": 12,
@@ -37,21 +38,126 @@
     "defence_level": 10,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -21,
     "defence_slash": -21,
     "defence_crush": -21,
     "defence_magic": -21,
     "defence_ranged": -21,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0024752475247524753,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0012376237623762376,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006188118811881188,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002320363276074502,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002320363276074502,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001547029702970297,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 7.735148514851485e-05,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 7.735148514851485e-05,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 7.735148514851485e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.834467821782178e-06,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 2.417233910891089e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.8127838094332047e-06,
+            "rolls": 1
+        },
         {
             "id": 526,
             "name": "Bones",
@@ -59,88 +165,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 884,
-            "name": "Iron arrow",
-            "members": false,
-            "quantity": "5-14",
-            "noted": false,
-            "rarity": 0.09900990099009901,
-            "drop_requirements": null
-        },
-        {
-            "id": 1237,
-            "name": "Bronze spear",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.09900990099009901,
-            "drop_requirements": null
-        },
-        {
-            "id": 1155,
-            "name": "Bronze full helm",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.09900990099009901,
-            "drop_requirements": null
-        },
-        {
-            "id": 882,
-            "name": "Bronze arrow",
-            "members": false,
-            "quantity": "3",
-            "noted": false,
-            "rarity": 0.0297029702970297,
-            "drop_requirements": null
-        },
-        {
-            "id": 1205,
-            "name": "Bronze dagger",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.039603960396039604,
-            "drop_requirements": null
-        },
-        {
-            "id": 558,
-            "name": "Mind rune",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.009900990099009901,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.10891089108910891,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": 0.19801980198019803,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "5-84",
             "noted": false,
             "rarity": 0.06930693069306931,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 436,
@@ -149,7 +183,7 @@
             "quantity": "1",
             "noted": true,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 438,
@@ -158,7 +192,7 @@
             "quantity": "1",
             "noted": true,
             "rarity": 0.0594059405940594,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7936,
@@ -167,7 +201,7 @@
             "quantity": "15",
             "noted": true,
             "rarity": 0.04950495049504951,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1436,
@@ -176,7 +210,7 @@
             "quantity": "5",
             "noted": true,
             "rarity": 0.04950495049504951,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2142,
@@ -185,7 +219,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0297029702970297,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9007,
@@ -194,7 +228,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0297029702970297,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 884,
+            "name": "Iron arrow",
+            "members": false,
+            "quantity": "5-14",
+            "noted": false,
+            "rarity": 0.09900990099009901,
+            "rolls": 1
         },
         {
             "id": 13456,
@@ -203,7 +246,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.02,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
@@ -212,7 +255,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016666666666666666,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1237,
+            "name": "Bronze spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.09900990099009901,
+            "rolls": 1
         },
         {
             "id": 2677,
@@ -221,7 +273,61 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.009900990099009901,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1155,
+            "name": "Bronze full helm",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.09900990099009901,
+            "rolls": 1
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": false,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0297029702970297,
+            "rolls": 1
+        },
+        {
+            "id": 1205,
+            "name": "Bronze dagger",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.039603960396039604,
+            "rolls": 1
+        },
+        {
+            "id": 558,
+            "name": "Mind rune",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009900990099009901,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.10891089108910891,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.19801980198019803,
+            "rolls": 1
         }
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 1135,
     "name": "Damis (hard)",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-09-05",
@@ -14,6 +15,7 @@
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "The warrior of darkness.",
-    "icon": null,
     "wiki_name": "Damis (Second form (hard))",
     "wiki_url": "https://oldschool.runescape.wiki/w/Damis#Second_form_(hard)",
     "attack_level": 320,
@@ -32,20 +33,17 @@
     "defence_level": 160,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 100,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 100,
     "defence_slash": 100,
     "defence_crush": 100,
     "defence_magic": 80,
     "defence_ranged": 120,
-    "attack_accuracy": 0,
-    "melee_strength": 100,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 4673,
@@ -54,7 +52,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

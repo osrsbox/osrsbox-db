@@ -1,6 +1,7 @@
 {
     "id": 1045,
     "name": "Jungle horror",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2006-07-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": true,
     "examine": "A horrible emaciated ape like creature with beady red/blue/yellow/pink/green eyes.",
-    "icon": null,
     "wiki_name": "Jungle horror",
     "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_horror",
     "attack_level": 70,
@@ -37,182 +38,134 @@
     "defence_level": 55,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.001937984496124031,
+            "rolls": 1
         },
         {
-            "id": 1335,
-            "name": "Iron warhammer",
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.13178294573643412,
-            "drop_requirements": null
+            "rarity": 0.0009689922480620155,
+            "rolls": 1
         },
         {
-            "id": 1191,
-            "name": "Iron kiteshield",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03875968992248062,
-            "drop_requirements": null
+            "rarity": 0.00048449612403100775,
+            "rolls": 1
         },
         {
-            "id": 1239,
-            "name": "Iron spear",
+            "id": 1452,
+            "name": "Chaos talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.031007751937984496,
-            "drop_requirements": null
+            "rarity": 0.00018167185339808115,
+            "rolls": 1
         },
         {
-            "id": 826,
-            "name": "Iron javelin",
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018167185339808115,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00012112403100775194,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
             "members": true,
             "quantity": "5",
             "noted": false,
-            "rarity": 0.015503875968992248,
-            "drop_requirements": null
+            "rarity": 6.056201550387597e-05,
+            "rolls": 1
         },
         {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.05426356589147287,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": 0.07751937984496124,
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
+            "id": 987,
+            "name": "Loop half of key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03875968992248062,
-            "drop_requirements": null
+            "rarity": 6.056201550387597e-05,
+            "rolls": 1
         },
         {
-            "id": 440,
-            "name": "Iron ore",
+            "id": 985,
+            "name": "Tooth half of key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.20930232558139536,
-            "drop_requirements": null
+            "rarity": 6.056201550387597e-05,
+            "rolls": 1
         },
         {
-            "id": 6333,
-            "name": "Teak logs",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": 0.06976744186046512,
-            "drop_requirements": null
-        },
-        {
-            "id": 6332,
-            "name": "Mahogany logs",
+            "id": 1247,
+            "name": "Rune spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.023255813953488372,
-            "drop_requirements": null
+            "rarity": 3.785125968992248e-06,
+            "rolls": 1
         },
         {
-            "id": 2114,
-            "name": "Pineapple",
+            "id": 2366,
+            "name": "Shield left half",
             "members": true,
-            "quantity": "2",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.06201550387596899,
-            "drop_requirements": null
+            "rarity": 1.892562984496124e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.419311354672509e-06,
+            "rolls": 1
         },
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03875968992248062,
-            "drop_requirements": null
-        },
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.023255813953488372,
-            "drop_requirements": null
-        },
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": 0.015503875968992248,
-            "drop_requirements": null
-        },
-        {
-            "id": 13486,
-            "name": "Ensouled horror head",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011627906976744186,
-            "drop_requirements": null
+            "rarity": 1.0,
+            "rolls": 1
         },
         {
             "id": 201,
@@ -220,8 +173,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.008721475324765937,
-            "drop_requirements": null
+            "rarity": 0.008718395815170008,
+            "rolls": 1
         },
         {
             "id": 203,
@@ -229,8 +182,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.006540799874416642,
-            "drop_requirements": null
+            "rarity": 0.006540222367560497,
+            "rolls": 1
         },
         {
             "id": 205,
@@ -238,8 +191,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0050871298159222075,
-            "drop_requirements": null
+            "rarity": 0.00508646998982706,
+            "rolls": 1
         },
         {
             "id": 207,
@@ -247,8 +200,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.003995844321905219,
-            "drop_requirements": null
+            "rarity": 0.003996802557953637,
+            "rolls": 1
         },
         {
             "id": 209,
@@ -257,7 +210,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0029069767441860465,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 211,
@@ -265,8 +218,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0021805732727133965,
-            "drop_requirements": null
+            "rarity": 0.0021800741225201656,
+            "rolls": 1
         },
         {
             "id": 213,
@@ -275,7 +228,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001816860465116279,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -284,7 +237,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0014534883720930232,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -292,8 +245,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.001090031120388487,
-            "drop_requirements": null
+            "rarity": 0.0010901558922925979,
+            "rolls": 1
         },
         {
             "id": 217,
@@ -301,8 +254,233 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.001090031120388487,
-            "drop_requirements": null
+            "rarity": 0.0010901558922925979,
+            "rolls": 1
+        },
+        {
+            "id": 1335,
+            "name": "Iron warhammer",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.13178294573643412,
+            "rolls": 1
+        },
+        {
+            "id": 5318,
+            "name": "Potato seed",
+            "members": true,
+            "quantity": "1-4",
+            "noted": false,
+            "rarity": 0.05813953488372093,
+            "rolls": 1
+        },
+        {
+            "id": 5319,
+            "name": "Onion seed",
+            "members": true,
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": 0.029069767441860465,
+            "rolls": 1
+        },
+        {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": true,
+            "quantity": "1-3",
+            "noted": false,
+            "rarity": 0.014534883720930232,
+            "rolls": 1
+        },
+        {
+            "id": 5322,
+            "name": "Tomato seed",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.007267441860465116,
+            "rolls": 1
+        },
+        {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.003633720930232558,
+            "rolls": 1
+        },
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001816860465116279,
+            "rolls": 1
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009084302325581395,
+            "rolls": 1
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009084302325581395,
+            "rolls": 1
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.20930232558139536,
+            "rolls": 1
+        },
+        {
+            "id": 6333,
+            "name": "Teak logs",
+            "members": true,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.06976744186046512,
+            "rolls": 1
+        },
+        {
+            "id": 1191,
+            "name": "Iron kiteshield",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "rolls": 1
+        },
+        {
+            "id": 6332,
+            "name": "Mahogany logs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.023255813953488372,
+            "rolls": 1
+        },
+        {
+            "id": 2114,
+            "name": "Pineapple",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.06201550387596899,
+            "rolls": 1
+        },
+        {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "rolls": 1
+        },
+        {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.023255813953488372,
+            "rolls": 1
+        },
+        {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.015503875968992248,
+            "rolls": 1
+        },
+        {
+            "id": 1239,
+            "name": "Iron spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.031007751937984496,
+            "rolls": 1
+        },
+        {
+            "id": 13486,
+            "name": "Ensouled horror head",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 826,
+            "name": "Iron javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.015503875968992248,
+            "rolls": 1
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.05426356589147287,
+            "rolls": 1
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.07751937984496124,
+            "rolls": 1
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03875968992248062,
+            "rolls": 1
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011627906976744186,
+            "rolls": 1
         }
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 2162,
     "name": "TzHaar-Hur",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-09-19",
@@ -14,6 +15,7 @@
     "attack_speed": 5,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": true,
     "examine": "Looks like a craftsman of some kind.",
-    "icon": null,
     "wiki_name": "TzHaar-Hur",
     "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Hur",
     "attack_level": 60,
@@ -38,56 +39,62 @@
     "defence_level": 60,
     "magic_level": 80,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 1623,
             "name": "Uncut sapphire",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1931,
+            "name": "Pot",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
         },
         {
             "id": 1621,
             "name": "Uncut emerald",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1619,
             "name": "Uncut ruby",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1617,
             "name": "Uncut diamond",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6529,
@@ -96,97 +103,43 @@
             "quantity": "1-16",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1755,
             "name": "Chisel",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2347,
             "name": "Hammer",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1935,
             "name": "Jug",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 946,
             "name": "Knife",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1931,
-            "name": "Pot",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6529,
-            "name": "Tokkul",
-            "members": true,
-            "quantity": "3-7",
-            "noted": false,
-            "rarity": 0.9333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02564102564102564,
-            "drop_requirements": null
-        },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.020512820512820513,
-            "drop_requirements": null
-        },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015384615384615385,
-            "drop_requirements": null
-        },
-        {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005128205128205128,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

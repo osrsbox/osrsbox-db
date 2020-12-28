@@ -1,6 +1,7 @@
 {
     "id": 24880,
     "name": "Amy's saw",
+    "last_updated": "2020-12-27",
     "incomplete": false,
     "members": true,
     "tradeable": false,
@@ -28,7 +29,6 @@
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABwklEQVR4Xs3Wz0sCURAH8N6xgwcPCyIES0hISHTokhQFgWiElCCGGSRaksmypNTBkn4QdAiiIAgipCIkigKJOvanTc08Rt09BrvvDXwPCvI+fOex69CQ3iNARosRkMuvQya7qgNKYjD5QhESySXVKCdIA5SA5tGZfihuikGKUQK2qlYv2qA42qAmTZMO3rHqhMrm1tSjuCHtUO6mGKYUhZjtmu1AYZKLaXUoDKIw/KzCKEL1W9IKNdiSNihtmypXahQ3KhM31KCwKQYx6qRgQnxmjsJw9y89HHkg/pnjIIjfg3Y6DIV5X9sS0HnrUu6fXigI4tRXRqCcCA005Qts8DABz7YBD7tRuNyMEApb2lgIQWoqCDFz2B8cvog5jLoqBaFtRx1BIOKmowFqz1OUc2QDN9VIL3fWGDxaQXhtGNDKm/Qdtugr6qI0SrmuSBBD27UgdFsx6OyN02fZrOcjoLEcgPOiBN3WJIjXyumv2rPpH4b3BNeDLTlB7nvn2fy951JhQuRmDQLhPcHV4Jp8XA+PoCYQ8HEQo3vydTxBl9mn9bhHwPu+Ad+HBvychuCzadAjQBGGx/mgVIyRM3hh/4v5BQg/9AS0PbWGAAAAAElFTkSuQmCC",
     "wiki_name": "Amy's saw",
     "wiki_url": "https://oldschool.runescape.wiki/w/Amy's_saw",
-    "wiki_exchange": null,
     "equipment": {
         "attack_stab": 2,
         "attack_slash": 5,
@@ -49,25 +49,32 @@
     },
     "weapon": {
         "attack_speed": 5,
-        "weapon_type": "unarmed",
+        "weapon_type": "slash_sword",
         "stances": [
             {
-                "combat_style": "punch",
-                "attack_type": "crush",
+                "combat_style": "chop",
+                "attack_type": "slash",
                 "attack_style": "accurate",
                 "experience": "attack",
                 "boosts": null
             },
             {
-                "combat_style": "kick",
-                "attack_type": "crush",
+                "combat_style": "slash",
+                "attack_type": "slash",
                 "attack_style": "aggressive",
                 "experience": "strength",
                 "boosts": null
             },
             {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "controlled",
+                "experience": "shared",
+                "boosts": null
+            },
+            {
                 "combat_style": "block",
-                "attack_type": "crush",
+                "attack_type": "slash",
                 "attack_style": "defensive",
                 "experience": "defence",
                 "boosts": null

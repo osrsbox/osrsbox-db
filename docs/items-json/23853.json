@@ -1,6 +1,7 @@
 {
     "id": 23853,
     "name": "Corrupted staff (attuned)",
+    "last_updated": "2020-12-27",
     "incomplete": false,
     "members": true,
     "tradeable": false,
@@ -28,7 +29,6 @@
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABV0lEQVR4XuXXMUvDUBAH8N4H6NAhEAIpIZRSQwwhGkIhUkFaO5QiSiFU7FDQQQcRBQcpCAouHQRxde3H/Ou90qZp97wD/3DDgwf58e6SRyqV/xVCsbRlCYhsC75lYnp6i97BQBeKFMKsVhVg0r3BxdFYFa9DxykTRQUI16hzhcSxVZUMIvVQBj1lM9WupmGo9V59f43RAuJiDM8NY4ZJXPbpcJYg7+9kGJQdj9GwWqgbDvpRqAPEIQx8Tw116rrr4V7NlRbQeTspIFZV8vxwCGeBD6dW20FowHAIb4/ZDmR7V0khzF8mulqzHcL3+7UczM/8Dqah7S3aDGHx9VDAaAeJwrSjppxWDbsxbMuQcDr5BSoAwyH1JdZ4N22G0O+EclrFc+M1LBmY2f0Ih74rA/PxfIk0bsnAfL5OcZIGEjAcQqAAIjCc/JdGAIYjDsQR0648ojA68gvmdf24XOkFMwAAAABJRU5ErkJggg==",
     "wiki_name": "Corrupted staff (attuned)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Corrupted_staff_(attuned)",
-    "wiki_exchange": null,
     "equipment": {
         "attack_stab": 0,
         "attack_slash": 0,
@@ -49,42 +49,28 @@
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "staves",
+        "weapon_type": "powered_staff",
         "stances": [
             {
-                "combat_style": "bash",
-                "attack_type": "crush",
-                "attack_style": "accurate",
-                "experience": "attack",
-                "boosts": null
-            },
-            {
-                "combat_style": "pound",
-                "attack_type": "crush",
-                "attack_style": "aggressive",
-                "experience": "strength",
-                "boosts": null
-            },
-            {
-                "combat_style": "focus",
-                "attack_type": "crush",
-                "attack_style": "defensive",
-                "experience": "defence",
-                "boosts": null
-            },
-            {
-                "combat_style": "spell",
-                "attack_type": "spellcasting",
-                "attack_style": "magic",
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
                 "experience": "magic",
-                "boosts": null
+                "boosts": "accuracy and damage"
             },
             {
-                "combat_style": "spell (defensive)",
-                "attack_type": "defensive casting",
-                "attack_style": "magic",
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "magic",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
                 "experience": "magic and defence",
-                "boosts": null
+                "boosts": "attack range by 2 squares"
             }
         ]
     }

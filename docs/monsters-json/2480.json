@@ -1,6 +1,7 @@
 {
     "id": 2480,
     "name": "Scorpion",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2006-07-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "An extremely vicious scorpion.",
-    "icon": null,
     "wiki_name": "Scorpion (Level 37)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Scorpion#Level_37",
     "attack_level": 31,
@@ -39,20 +40,17 @@
     "defence_level": 31,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 35,
     "defence_slash": 15,
     "defence_crush": 15,
     "defence_magic": 30,
     "defence_ranged": 35,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 4569,
@@ -61,7 +59,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -70,7 +68,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.1,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13459,
@@ -79,7 +77,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
@@ -88,7 +86,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -96,8 +94,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.001527417137620284,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.0007112375533428165,
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -105,8 +103,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.003436426116838488,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.003257328990228013,
+            "rolls": 1
         }
     ]
 }

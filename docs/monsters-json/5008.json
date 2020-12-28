@@ -1,6 +1,7 @@
 {
     "id": 5008,
     "name": "Imp",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2001-02-16",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "A cheeky little imp.",
-    "icon": null,
     "wiki_name": "Imp (Regular)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Imp#Regular",
     "attack_level": 1,
@@ -32,20 +33,17 @@
     "defence_level": 1,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": -42,
+    "strength_bonus": -37,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -42,
     "defence_slash": -42,
     "defence_crush": -42,
     "defence_magic": -42,
     "defence_ranged": -42,
-    "attack_accuracy": -42,
-    "melee_strength": -37,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 592,
@@ -54,79 +52,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1474,
-            "name": "Black bead",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1470,
-            "name": "Red bead",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1476,
-            "name": "White bead",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1472,
-            "name": "Yellow bead",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 877,
-            "name": "Bronze bolts",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 579,
-            "name": "Blue wizard hat",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1944,
-            "name": "Egg",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 2138,
-            "name": "Raw chicken",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2311,
@@ -135,7 +61,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2146,
@@ -144,7 +70,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1965,
@@ -153,7 +79,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2307,
@@ -162,7 +88,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2309,
@@ -171,7 +97,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2142,
@@ -180,7 +106,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2347,
@@ -189,7 +115,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 590,
@@ -198,7 +124,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1735,
@@ -207,7 +133,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1925,
@@ -216,7 +142,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1474,
+            "name": "Black bead",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 1929,
@@ -225,7 +160,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1935,
@@ -234,7 +169,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1937,
@@ -243,7 +178,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1931,
@@ -252,7 +187,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1933,
@@ -261,7 +196,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1759,
@@ -270,7 +205,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1448,
@@ -279,7 +214,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 592,
@@ -288,7 +223,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 434,
@@ -297,7 +232,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 753,
@@ -306,7 +241,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1470,
+            "name": "Red bead",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 1947,
@@ -315,7 +259,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1949,
@@ -324,7 +268,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 956,
@@ -333,7 +277,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 195,
@@ -342,7 +286,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13453,
@@ -351,7 +295,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.04,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -360,7 +304,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.06666666666666667,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11942,
@@ -369,7 +313,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6803,
@@ -378,7 +322,61 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1476,
+            "name": "White bead",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1472,
+            "name": "Yellow bead",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 877,
+            "name": "Bronze bolts",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 579,
+            "name": "Blue wizard hat",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 1944,
+            "name": "Egg",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 2138,
+            "name": "Raw chicken",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         }
     ]
 }

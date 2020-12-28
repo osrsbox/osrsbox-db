@@ -1,6 +1,7 @@
 {
     "id": 6619,
     "name": "Chaos Fanatic",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
@@ -14,6 +15,7 @@
     "attack_speed": 2,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "Someone should get out of the lab once in a while...",
-    "icon": null,
     "wiki_name": "Chaos Fanatic",
     "wiki_url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic",
     "attack_level": 1,
@@ -39,110 +40,143 @@
     "defence_level": 220,
     "magic_level": 200,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 75,
+    "ranged_bonus": -20,
     "defence_stab": 260,
     "defence_slash": 260,
     "defence_crush": 250,
     "defence_magic": 280,
     "defence_ranged": 80,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": -20,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 11928,
-            "name": "Odium shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 11931,
-            "name": "Malediction shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "5",
-            "noted": true,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 3387,
-            "name": "Splitbark body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 3389,
-            "name": "Splitbark legs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1035,
-            "name": "Zamorak monk top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1033,
-            "name": "Zamorak monk bottom",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 4675,
-            "name": "Ancient staff",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007323646590110147,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007323646590110147,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.52587890625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 7.62939453125e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 5.721598898523552e-06,
+            "rolls": 1
+        },
+        {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
         },
         {
             "id": 554,
             "name": "Fire rune",
-            "members": true,
+            "members": false,
             "quantity": "250",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4697,
@@ -151,16 +185,16 @@
             "quantity": "30",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 562,
             "name": "Chaos rune",
-            "members": true,
+            "members": false,
             "quantity": "175",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -169,7 +203,7 @@
             "quantity": "50",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7946,
@@ -178,7 +212,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 385,
@@ -187,7 +221,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2434,
@@ -196,25 +230,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2297,
             "name": "Anchovy pizza",
-            "members": true,
+            "members": false,
             "quantity": "8",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "499-3998",
             "noted": false,
             "rarity": 0.140625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -223,7 +257,16 @@
             "quantity": "4",
             "noted": true,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11928,
+            "name": "Odium shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
         },
         {
             "id": 2570,
@@ -232,7 +275,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1452,
@@ -241,34 +284,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 245,
             "name": "Wine of zamorak",
-            "members": true,
+            "members": false,
             "quantity": "10",
             "noted": true,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1621,
             "name": "Uncut emerald",
-            "members": true,
+            "members": false,
             "quantity": "6",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1623,
             "name": "Uncut sapphire",
-            "members": true,
+            "members": false,
             "quantity": "4",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 993,
@@ -277,16 +320,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7936,
             "name": "Pure essence",
-            "members": true,
+            "members": false,
             "quantity": "250",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11931,
+            "name": "Malediction shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 1391,
+            "name": "Battlestaff",
+            "members": true,
+            "quantity": "5",
+            "noted": true,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 3387,
+            "name": "Splitbark body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -295,7 +365,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -303,8 +373,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.01256281407035176,
-            "drop_requirements": null
+            "rarity": 0.012658227848101266,
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -313,7 +383,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11995,
@@ -322,43 +392,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001,
-            "drop_requirements": null
-        },
-        {
-            "id": 6685,
-            "name": "Saradomin brew(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.2,
-            "drop_requirements": null
-        },
-        {
-            "id": 6691,
-            "name": "Saradomin brew(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.2,
-            "drop_requirements": null
-        },
-        {
-            "id": 11928,
-            "name": "Odium shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 11931,
-            "name": "Malediction shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -367,7 +401,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.013157894736842105,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -375,8 +409,44 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.007142857142857143,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.03333333333333333,
+            "rolls": 1
+        },
+        {
+            "id": 3389,
+            "name": "Splitbark legs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1035,
+            "name": "Zamorak monk top",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1033,
+            "name": "Zamorak monk bottom",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 4675,
+            "name": "Ancient staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
         }
     ]
 }

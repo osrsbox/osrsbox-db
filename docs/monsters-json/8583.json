@@ -1,13 +1,14 @@
 {
     "id": 8583,
     "name": "Hespori",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2019-01-10",
     "combat_level": 284,
     "size": 3,
     "hitpoints": 300,
-    "max_hit": 0,
+    "max_hit": 16,
     "attack_type": [
         "ranged",
         "magic"
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "A big angry plant.",
-    "icon": null,
     "wiki_name": "Hespori",
     "wiki_url": "https://oldschool.runescape.wiki/w/Hespori",
     "attack_level": 1,
@@ -33,20 +34,17 @@
     "defence_level": 120,
     "magic_level": 126,
     "ranged_level": 150,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 150,
+    "magic_bonus": 0,
     "attack_ranged": 150,
+    "ranged_bonus": 0,
     "defence_stab": 60,
     "defence_slash": 20,
     "defence_crush": 60,
     "defence_magic": 80,
     "defence_ranged": 80,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 22881,
@@ -55,79 +53,7 @@
             "quantity": "1-2",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 22883,
-            "name": "Iasor seed",
-            "members": true,
-            "quantity": "1-2",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 22885,
-            "name": "Kronos seed",
-            "members": true,
-            "quantity": "1-2",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 22994,
-            "name": "Bottomless compost bucket",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02857142857142857,
-            "drop_requirements": null
-        },
-        {
-            "id": 5321,
-            "name": "Watermelon seed",
-            "members": true,
-            "quantity": "10-20",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 22879,
-            "name": "Snape grass seed",
-            "members": true,
-            "quantity": "6-16",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 22887,
-            "name": "White lily seed",
-            "members": true,
-            "quantity": "8-18",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 5100,
-            "name": "Limpwurt seed",
-            "members": true,
-            "quantity": "6-14",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 5311,
-            "name": "Wildblood seed",
-            "members": true,
-            "quantity": "10-20",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5105,
@@ -136,7 +62,7 @@
             "quantity": "10-16",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5106,
@@ -145,7 +71,7 @@
             "quantity": "8-16",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5297,
@@ -154,7 +80,7 @@
             "quantity": "2-8",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5298,
@@ -163,7 +89,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5299,
@@ -172,7 +98,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5296,
@@ -181,7 +107,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5301,
@@ -190,7 +116,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5302,
@@ -199,7 +125,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5303,
@@ -208,7 +134,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5295,
@@ -217,7 +143,16 @@
             "quantity": "1-2",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 22883,
+            "name": "Iasor seed",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -226,7 +161,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -235,7 +170,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5314,
@@ -244,7 +179,7 @@
             "quantity": "2-4",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -253,7 +188,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -262,7 +197,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -271,7 +206,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5287,
@@ -280,7 +215,7 @@
             "quantity": "3-6",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5288,
@@ -289,7 +224,7 @@
             "quantity": "1-3",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -298,7 +233,7 @@
             "quantity": "1-3",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22877,
@@ -307,7 +242,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 22885,
+            "name": "Kronos seed",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "rolls": 1
         },
         {
             "id": 21486,
@@ -316,7 +260,7 @@
             "quantity": "2-5",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21488,
@@ -325,7 +269,7 @@
             "quantity": "1-3",
             "noted": false,
             "rarity": 0.0375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5280,
@@ -334,7 +278,7 @@
             "quantity": "4-14",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22873,
@@ -343,7 +287,7 @@
             "quantity": "4-14",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -352,7 +296,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5317,
@@ -361,7 +305,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22871,
@@ -370,7 +314,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 20661,
@@ -379,7 +323,61 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00018604651162790697,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 22994,
+            "name": "Bottomless compost bucket",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02857142857142857,
+            "rolls": 1
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "10-20",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "6-16",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 22887,
+            "name": "White lily seed",
+            "members": true,
+            "quantity": "8-18",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 5100,
+            "name": "Limpwurt seed",
+            "members": true,
+            "quantity": "6-14",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 5311,
+            "name": "Wildblood seed",
+            "members": true,
+            "quantity": "10-20",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
         }
     ]
 }

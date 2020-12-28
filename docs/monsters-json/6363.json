@@ -1,13 +1,14 @@
 {
     "id": 6363,
     "name": "Dagannoth mother",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2004-11-17",
     "combat_level": 100,
     "size": 3,
     "hitpoints": 120,
-    "max_hit": 0,
+    "max_hit": 9,
     "attack_type": [
         "melee",
         "ranged"
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "A horror from the ocean depths.",
-    "icon": null,
     "wiki_name": "Dagannoth mother (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dagannoth_mother#Normal",
     "attack_level": 78,
@@ -33,29 +34,26 @@
     "defence_level": 81,
     "magic_level": 1,
     "ranged_level": 50,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 150,
     "defence_slash": 150,
     "defence_crush": 150,
     "defence_magic": 50,
     "defence_ranged": 50,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3849,
@@ -64,7 +62,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

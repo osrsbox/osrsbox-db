@@ -1,6 +1,7 @@
 {
     "id": 8709,
     "name": "Shaeded Beast",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2019-07-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "A terrible creature manipulating the powers of the dark altar.",
-    "icon": null,
     "wiki_name": "Shaeded Beast",
     "wiki_url": "https://oldschool.runescape.wiki/w/Shaeded_Beast",
     "attack_level": 50,
@@ -32,20 +33,17 @@
     "defence_level": 50,
     "magic_level": 250,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 10,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 50,
     "defence_slash": 30,
     "defence_crush": 100,
     "defence_magic": 150,
     "defence_ranged": 50,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 10,
     "drops": [
         {
             "id": 23497,
@@ -54,7 +52,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

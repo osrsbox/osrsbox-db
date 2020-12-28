@@ -1,6 +1,7 @@
 {
     "id": 8401,
     "name": "Monk of Zamorak",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2001-04-06",
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "An evil human cleric.",
-    "icon": null,
     "wiki_name": "Monk of Zamorak (Level 17)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Monk_of_Zamorak#Level_17",
     "attack_level": 8,
@@ -33,20 +34,17 @@
     "defence_level": 12,
     "magic_level": 25,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
@@ -55,7 +53,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1033,
@@ -64,7 +62,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1035,
@@ -73,7 +71,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2944,
@@ -82,7 +80,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -91,7 +89,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.16666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

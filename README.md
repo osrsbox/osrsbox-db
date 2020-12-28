@@ -285,9 +285,9 @@ deactivate
 - `builders`: The builders are the code that performs automatic regeneration of the databases. These builders read in a variety of data and produce a JSON file for each item or monster.
     - `items`: The item database builder that uses a collection of Python scripts to build the item database. The `builder.py` script is the primary entry point, and the `build_item.py` module does the processing of each item.
     - `monsters`: The monster database builder that uses a collection of Python scripts to build the monster database. The `builder.py` script is the primary entry point, and the `build_monster.py` module does the processing of each monster. Additionally, the `drop_table.py` module contains a selection of hard-coded drop tables for the various OSRS Wiki drop table templates such as the rare, herb, seed, gem and catacombs drop tables.
-- `changelog`: A collection of markdown files that document the changes to items, monsters and PyPi package releases.
 - `data`: Collection of useful data files used in the osrsbox-db project.
     - `cache`: OSRS client cache dump (not present in repository due to size, but populated using the `scripts/cache` scripts).
+    - `icons`: Item and prayer icons in base64.
     - `items`: Data used for item database generation.
     - `monsters`: Data used for monster database generation.
     - `schemas`: JSON schemas for the item and monster database, as well as schemas for item, npc and object definitions from cache data.
@@ -300,8 +300,9 @@ deactivate
     - `monsters_api_examples`: A collection of simple Python scripts that use the `monsters_api` to provide an example of what can be achieved and how to use the monster's database.
 - `scripts`: A collection of scripts (using Python and BASH) to help automate common tasks including dumping the OSRS cache, scraping the OSRS wiki, generating schemas, updating the databases, and inserting data into a MongoDB database.
     - `cache`: A collection of scripts to extract useful data from the OSRS cache item, npc and object definition files.
+    - `icons`: Various scripts to help process, check or update item icons.
     - `items`: A collection of scripts to help process data for the item builder.
-    - `schemas`: A collection of scripts for generating and parsing the JSON schemas used in this project.
+    - `monsters`: A collection of scripts to help process data for the monster builder.
     - `update`: A collection of scripts for automating the data collection and database regeneration.
     - `wiki`: A collection of scripts for automating data extraction from the OSRS Wiki using the MediaWiki API.
 - `test`: A collection of PyTest tests.
@@ -334,6 +335,7 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | -------- | --------- | ----------- | -------- |----------|
 | id | integer | Unique OSRS item ID number. | True | False |
 | name | string | The name of the item. | True | False |
+| last_updated | string | The last time (UTC) the item was updated (in ISO8601 date format). | True | False |
 | incomplete | boolean | If the item has incomplete wiki data. | True | False |
 | members | boolean | If the item is a members-only. | True | False |
 | tradeable | boolean | If the item is tradeable (between players and on the GE). | True | False |
@@ -361,7 +363,6 @@ An `ItemProperties` object type includes basic item metadata such as `id`, `name
 | icon | string | The item icon (in base64 encoding). | True | False |
 | wiki_name | string | The OSRS Wiki name for the item. | True | True |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | True |
-| wiki_exchange | string | The OSRS Wiki Exchange URL. | True | True |
 | equipment | dict | The equipment bonuses of equipable armour/weapons. | True | True |
 | weapon | dict | The weapon bonuses including attack speed, type and stance. | True | True |
 
@@ -406,7 +407,8 @@ A description of the properties that each item in the database can have is usefu
 ItemProperties(
     id=4151,
     name='Abyssal whip',
-    incomplete=Flase,
+    last_updated='2020-12-27',
+    incomplete=False,
     members=True,
     tradeable=True,
     tradeable_on_ge=True,
@@ -430,7 +432,7 @@ ItemProperties(
     release_date='2005-01-26',
     duplicate=False,
     examine='A weapon from the abyss.',
-    icon: 'iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABvUlEQVR4Xu2Xv26DMBDG4QEyZECKIkVCKIoyVR26dOrQpUOHDn3/V3F7nL7689kGAo6z9JNuiH1wP+6PIU3zr2Jq3bRVkQ/Y7feBvfcn93o8upfDwT11XQKwOGQMwfYx9O7rcnaf52GEezuFgNdfn4JQ7RjAQojZLAAMcPJbAOH73PcloBTIQiEAG8MB7Pt6MQ+wSW1QAs6Kh1A/NgtnHyKMcZMUCP3AIBw0XcqmgU9qb4W0JwTIwuRAYHETF4FSIMkORjn1xCnjayy8lN/vLVY7TglfvBRGTJpZrpXM+my1f6DhPRdJs8M3nAPibGDseY9hVgHxzbh3chC22dkPQ8EnufddpBgI69Lk3B8hnPrwOsPEw7FYqUzoOsqBUtps8XUASh0bYbxZxUCcJZzCNnjOBGgDDBRD8d4tQAVgRAqEs2jusLOGEhaCgTQTgApLp/s5A0RBGMg3shx2YZb0fZUz9issD4VpsR4PkJ+uYbczJQr94rW7KT3yDJcegLtqeuRlAFa+0bdoeuTxPV2538Ixt1D86Vutr8IR16CSndzfoSpQLIDh09dmscL5lJICMUClw3JKD8tGXiVgfgACr1tEhnw7UAAAAABJRU5ErkJggg==',
+    icon='iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABvUlEQVR4Xu2Xv26DMBDG4QEyZECKIkVCKIoyVR26dOrQpUOHDn3/V3F7nL7689kGAo6z9JNuiH1wP+6PIU3zr2Jq3bRVkQ/Y7feBvfcn93o8upfDwT11XQKwOGQMwfYx9O7rcnaf52GEezuFgNdfn4JQ7RjAQojZLAAMcPJbAOH73PcloBTIQiEAG8MB7Pt6MQ+wSW1QAs6Kh1A/NgtnHyKMcZMUCP3AIBw0XcqmgU9qb4W0JwTIwuRAYHETF4FSIMkORjn1xCnjayy8lN/vLVY7TglfvBRGTJpZrpXM+my1f6DhPRdJs8M3nAPibGDseY9hVgHxzbh3chC22dkPQ8EnufddpBgI69Lk3B8hnPrwOsPEw7FYqUzoOsqBUtps8XUASh0bYbxZxUCcJZzCNnjOBGgDDBRD8d4tQAVgRAqEs2jusLOGEhaCgTQTgApLp/s5A0RBGMg3shx2YZb0fZUz9issD4VpsR4PkJ+uYbczJQr94rW7KT3yDJcegLtqeuRlAFa+0bdoeuTxPV2538Ixt1D86Vutr8IR16CSndzfoSpQLIDh09dmscL5lJICMUClw3JKD8tGXiVgfgACr1tEhnw7UAAAAABJRU5ErkJggg==',
     wiki_name='Abyssal whip',
     wiki_url='https://oldschool.runescape.wiki/w/Abyssal_whip',
     equipment=ItemEquipment(
@@ -453,23 +455,28 @@ ItemProperties(
     ),
     weapon=ItemWeapon(
         attack_speed=4,
-        weapon_type='whips',
+        weapon_type='whip',
         stances=[
-            {'combat_style': 'flick',
-            'attack_type': 'slash',
-            'attack_style': 'accurate',
-            'experience': 'attack',
-            'boosts': None},
-            {'combat_style': 'lash',
-            'attack_type': 'slash',
-            'attack_style': 'controlled',
-            'experience': 'shared',
-            'boosts': None},
-            {'combat_style': 'deflect',
-            'attack_type': 'slash',
-            'attack_style': 'defensive',
-            'experience': 'defence',
-            'boosts': None}
+            {
+                'combat_style': 'flick',
+                'attack_type': 'slash',
+                'attack_style': 'accurate',
+                'experience': 'attack',
+                'boosts': None
+            },
+            {
+                'combat_style': 'lash',
+                'attack_type': 'slash',
+                'attack_style': 'controlled',
+                'experience': 'shared',
+                'boosts': None},
+            {
+                'combat_style': 'deflect',
+                'attack_type': 'slash',
+                'attack_style': 'defensive',
+                'experience': 'defence',
+                'boosts': None
+            }
         ]
     )
 )
@@ -483,6 +490,7 @@ A description of the properties that each item in the database can have is usefu
 {
     "id": 4151,
     "name": "Abyssal whip",
+    "last_updated": "2020-12-27",
     "incomplete": false,
     "members": true,
     "tradeable": true,
@@ -532,7 +540,7 @@ A description of the properties that each item in the database can have is usefu
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "whips",
+        "weapon_type": "whip",
         "stances": [
             {
                 "combat_style": "flick",
@@ -570,19 +578,21 @@ A `MonsterProperties` object type includes basic monster metadata such as `id`, 
 
 | Property | Data type | Description | Required | Nullable |
 | -------- | --------- | ----------- | -------- |----------|
-| id | integer | Unique OSRS item ID number. | True | False |
+| id | integer | Unique OSRS monster ID number. | True | False |
 | name | string | The name of the monster. | True | False |
+| last_updated | string | The last time (UTC) the monster was updated (in ISO8601 date format). | True | True |
 | incomplete | boolean | If the monster has incomplete wiki data. | True | False |
 | members | boolean | If the monster is members only, or not. | True | False |
-| release_date | string | The release date of the monster (in ISO8601 format). | True | True |
+| release_date | string | The release date of the monster (in ISO8601 date format). | True | True |
 | combat_level | integer | The combat level of the monster. | True | False |
 | size | integer | The size, in tiles, of the monster. | True | False |
-| hitpoints | integer | The number of hitpoints a monster has. | True | False |
-| max_hit | integer | The maximum hit of the monster. | True | False |
-| attack_type | list | The attack style (melee, magic, range) of the monster. | True | False |
+| hitpoints | integer | The number of hitpoints a monster has. | True | True |
+| max_hit | integer | The maximum hit of the monster. | True | True |
+| attack_type | list | The attack style (e.g., melee, magic, range) of the monster. | True | False |
 | attack_speed | integer | The attack speed (in game ticks) of the monster. | True | True |
 | aggressive | boolean | If the monster is aggressive, or not. | True | False |
 | poisonous | boolean | If the monster poisons, or not | True | False |
+| venomous | boolean | If the monster poisons using venom, or not | True | False |
 | immune_poison | boolean | If the monster is immune to poison, or not | True | False |
 | immune_venom | boolean | If the monster is immune to venom, or not | True | False |
 | attributes | list | An array of monster attributes. | True | False |
@@ -593,7 +603,6 @@ A `MonsterProperties` object type includes basic monster metadata such as `id`, 
 | slayer_masters | list | The slayer masters who can assign the monster. | True | False |
 | duplicate | boolean | If the monster is a duplicate. | True | False |
 | examine | string | The examine text of the monster. | True | False |
-| icon | string | The monster icon  (in base64 encoding). | True | True |
 | wiki_name | string | The OSRS Wiki name for the monster. | True | False |
 | wiki_url | string | The OSRS Wiki URL (possibly including anchor link). | True | False |
 | attack_level | integer | The attack level of the monster. | True | False |
@@ -601,20 +610,17 @@ A `MonsterProperties` object type includes basic monster metadata such as `id`, 
 | defence_level | integer | The defence level of the monster. | True | False |
 | magic_level | integer | The magic level of the monster. | True | False |
 | ranged_level | integer | The ranged level of the monster. | True | False |
-| attack_stab | integer | The attack stab bonus of the monster. | True | False |
-| attack_slash | integer | The attack slash bonus of the monster. | True | False |
-| attack_crush | integer | The attack crush bonus of the monster. | True | False |
-| attack_magic | integer | The attack magic bonus of the monster. | True | False |
-| attack_ranged | integer | The attack ranged bonus of the monster. | True | False |
+| attack_bonus | integer | The attack bonus of the monster. | True | False |
+| strength_bonus | integer | The strength bonus of the monster. | True | False |
+| attack_magic | integer | The magic attack of the monster. | True | False |
+| magic_bonus | integer | The magic bonus of the monster. | True | False |
+| attack_ranged | integer | The ranged attack of the monster. | True | False |
+| ranged_bonus | integer | The ranged bonus of the monster. | True | False |
 | defence_stab | integer | The defence stab bonus of the monster. | True | False |
 | defence_slash | integer | The defence slash bonus of the monster. | True | False |
 | defence_crush | integer | The defence crush bonus of the monster. | True | False |
 | defence_magic | integer | The defence magic bonus of the monster. | True | False |
 | defence_ranged | integer | The defence ranged bonus of the monster. | True | False |
-| attack_accuracy | integer | The attack accuracy bonus of the monster. | True | False |
-| melee_strength | integer | The melee strength bonus of the monster. | True | False |
-| ranged_strength | integer | The ranged strength bonus of the monster. | True | False |
-| magic_damage | integer | The magic damage bonus of the monster. | True | False |
 | drops | list | An array of monster drop objects. | True | False |
 
 ### Monster Drops
@@ -628,8 +634,8 @@ Most monsters in OSRS drop items when they have been defeated (killed). All mons
 | members | boolean | If the drop is a members-only item. | True | False |
 | quantity | string | The quantity of the item drop (integer, comma-separated or range). | True | True |
 | noted | boolean | If the item drop is noted, or not. | True | False |
-| rarity | float | The rarity of the item drop (as a float out of 1.0). | True | True |
-| drop_requirements | string | If there are any requirements to getting the specific drop. | True | True |
+| rarity | float | The rarity of the item drop (as a float out of 1.0). | True | False |
+| rolls | integer | Number of rolls from the drop. | True | False |
 
 ### Monster: Python Object Example 
 
@@ -639,7 +645,8 @@ A description of the properties that each monster in the database can have is us
 MonsterProperties(
     id=415,
     name='Abyssal demon',
-    incomplete=True,
+    last_updated='2020-12-25',
+    incomplete=False,
     members=True,
     release_date='2005-01-26',
     combat_level=124,
@@ -650,6 +657,7 @@ MonsterProperties(
     attack_speed=4,
     aggressive=False,
     poisonous=False,
+    venomous=False,
     immune_poison=False,
     immune_venom=False,
     attributes=['demon'],
@@ -657,10 +665,15 @@ MonsterProperties(
     slayer_monster=True,
     slayer_level=85,
     slayer_xp=150.0,
-    slayer_masters=['vannaka', 'chaeldar', 'konar', 'nieve', 'duradel'], 
+    slayer_masters=[
+        'vannaka',
+        'chaeldar',
+        'konar',
+        'nieve',
+        'duradel'
+    ],
     duplicate=False,
     examine='A denizen of the Abyss!',
-    icon=None,
     wiki_name='Abyssal demon (Standard)',
     wiki_url='https://oldschool.runescape.wiki/w/Abyssal_demon#Standard',
     attack_level=97,
@@ -668,30 +681,29 @@ MonsterProperties(
     defence_level=135,
     magic_level=1,
     ranged_level=1,
-    attack_stab=0,
-    attack_slash=0,
-    attack_crush=0,
+    attack_bonus=0,
+    strength_bonus=0,
     attack_magic=0,
+    magic_bonus=0,
     attack_ranged=0,
+    ranged_bonus=0,
     defence_stab=20,
     defence_slash=20,
     defence_crush=20,
     defence_magic=0,
     defence_ranged=20,
-    attack_accuracy=0,
-    melee_strength=0,
-    ranged_strength=0,
-    magic_damage=0,
-    drops=[
+    drops=
+    [
         MonsterDrop(
             id=592,
             name='Ashes',
-            members=True,
+            members=False,
             quantity='1',
             noted=False,
             rarity=1.0,
-            drop_requirements=None
+            rolls=1
         ),
+        ...
         MonsterDrop(
             id=4151,
             name='Abyssal whip',
@@ -699,34 +711,7 @@ MonsterProperties(
             quantity='1',
             noted=False,
             rarity=0.001953125,
-            drop_requirements=None
-        ),
-        MonsterDrop(
-            id=565,
-            name='Blood rune',
-            members=True,
-            quantity='7',
-            noted=False,
-            rarity=0.03125,
-            drop_requirements=None
-        ),
-        MonsterDrop(
-            id=19683,
-            name='Dark totem top',
-            members=True,
-            quantity='1',
-            noted=False,
-            rarity=0.002857142857142857,
-            drop_requirements='catacombs'
-        ),
-        MonsterDrop(
-            id=12073,
-            name='Clue scroll (elite)',
-            members=True,
-            quantity='1',
-            noted=False,
-            rarity=0.0008333333333333334,
-            drop_requirements=None
+            rolls=1
         )
     ]
 )
@@ -740,7 +725,8 @@ A description of the properties that each monster in the database can have is us
 {
     "id": 415,
     "name": "Abyssal demon",
-    "incomplete": true,
+    "last_updated": "2020-12-25",
+    "incomplete": false,
     "members": true,
     "release_date": "2005-01-26",
     "combat_level": 124,
@@ -753,6 +739,7 @@ A description of the properties that each monster in the database can have is us
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -773,7 +760,6 @@ A description of the properties that each monster in the database can have is us
     ],
     "duplicate": false,
     "examine": "A denizen of the Abyss!",
-    "icon": null,
     "wiki_name": "Abyssal demon (Standard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_demon#Standard",
     "attack_level": 97,
@@ -781,30 +767,28 @@ A description of the properties that each monster in the database can have is us
     "defence_level": 135,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 20,
     "defence_slash": 20,
     "defence_crush": 20,
     "defence_magic": 0,
     "defence_ranged": 20,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 592,
-            "name": "Ashes",
-            "members": True,
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": "1.0",
-            "drop_requirements": null
+            "rarity": 0.009765625,
+            "rolls": 1
         },
+        ...
         {
             "id": 4151,
             "name": "Abyssal whip",
@@ -812,34 +796,7 @@ A description of the properties that each monster in the database can have is us
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 19683,
-            "name": "Dark totem top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.002857142857142857,
-            "drop_requirements": "catacombs"
-        },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0008333333333333334,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

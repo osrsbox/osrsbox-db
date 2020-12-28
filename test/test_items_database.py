@@ -25,6 +25,7 @@ import json
 from pathlib import Path
 
 import config
+import validator
 
 
 def test_item_database():
@@ -35,7 +36,7 @@ def test_item_database():
         schema = json.loads(f.read())
 
     # Validator object with schema attached
-    v = config.MyValidator(schema)
+    v = validator.MyValidator(schema)
 
     # Set the path to the items-json folder and get all the JSON files
     path_to_items_json_dir = Path(config.DOCS_PATH / "items-json")

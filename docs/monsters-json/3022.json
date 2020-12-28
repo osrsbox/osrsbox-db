@@ -1,6 +1,7 @@
 {
     "id": 3022,
     "name": "Ice spider",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2002-02-27",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": false,
     "examine": "I think this spider has been genetically modified.",
-    "icon": null,
     "wiki_name": "Ice spider",
     "wiki_url": "https://oldschool.runescape.wiki/w/Ice_spider",
     "attack_level": 50,
@@ -38,20 +39,17 @@
     "defence_level": 43,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 20,
     "defence_slash": 17,
     "defence_crush": 12,
     "defence_magic": 13,
     "defence_ranged": 13,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 11941,
@@ -60,16 +58,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
             "name": "Clue scroll (beginner)",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -77,8 +75,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004800768122899664,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.004807692307692308,
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -87,7 +85,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0037313432835820895,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
         }
     ]
 }

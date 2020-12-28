@@ -1,6 +1,7 @@
 {
     "id": 4210,
     "name": "Possessed Priest",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-04-26",
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "He has a dangerous glint in his eye.",
-    "icon": null,
     "wiki_name": "Possessed Priest",
     "wiki_url": "https://oldschool.runescape.wiki/w/Possessed_Priest",
     "attack_level": 90,
@@ -33,29 +34,26 @@
     "defence_level": 40,
     "magic_level": 60,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 90,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 90,
     "defence_slash": 0,
     "defence_crush": 90,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 90,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3032,
@@ -63,8 +61,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": null,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 2428,
@@ -72,8 +70,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": null,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 2432,
@@ -81,8 +79,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": null,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 3040,
@@ -90,26 +88,26 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": null,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 113,
             "name": "Strength potion(4)",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": null,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "1-1260",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

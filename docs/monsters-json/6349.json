@@ -1,20 +1,23 @@
 {
     "id": 6349,
     "name": "Elvarg",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2001-09-23",
     "combat_level": 83,
     "size": 4,
     "hitpoints": 80,
-    "max_hit": 0,
+    "max_hit": 8,
     "attack_type": [
         "melee",
+        "magic",
         "dragonfire"
     ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +32,6 @@
     ],
     "duplicate": false,
     "examine": "Roar! A dragon!",
-    "icon": null,
     "wiki_name": "Elvarg (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Elvarg#Normal",
     "attack_level": 70,
@@ -37,20 +39,17 @@
     "defence_level": 70,
     "magic_level": 70,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 20,
     "defence_slash": 40,
     "defence_crush": 40,
     "defence_magic": 30,
     "defence_ranged": 20,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 536,
@@ -59,7 +58,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

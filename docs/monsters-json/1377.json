@@ -1,6 +1,7 @@
 {
     "id": 1377,
     "name": "The Kendal",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-03-07",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Is that a bear...or a man?",
-    "icon": null,
     "wiki_name": "The Kendal (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Kendal#Normal",
     "attack_level": 65,
@@ -32,29 +33,26 @@
     "defence_level": 60,
     "magic_level": 0,
     "ranged_level": 0,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 5,
+    "strength_bonus": 10,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 10,
     "defence_slash": 10,
     "defence_crush": 10,
     "defence_magic": -10,
     "defence_ranged": 20,
-    "attack_accuracy": 5,
-    "melee_strength": 10,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4502,
@@ -63,7 +61,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

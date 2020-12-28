@@ -1,6 +1,7 @@
 {
     "id": 7804,
     "name": "Tar Monster",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2017-09-07",
@@ -9,12 +10,13 @@
     "hitpoints": 200,
     "max_hit": 7,
     "attack_type": [
-        "typeless",
-        "ranged"
+        "ranged",
+        "typeless"
     ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Icky sticky flicky.",
-    "icon": null,
     "wiki_name": "Tar Monster",
     "wiki_url": "https://oldschool.runescape.wiki/w/Tar_Monster",
     "attack_level": 120,
@@ -33,29 +34,26 @@
     "defence_level": 70,
     "magic_level": 1,
     "ranged_level": 100,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1939,
@@ -64,7 +62,7 @@
             "quantity": "10",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21555,
@@ -73,7 +71,7 @@
             "quantity": "5-14",
             "noted": false,
             "rarity": 0.2571428571428571,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21562,
@@ -82,7 +80,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.014285714285714285,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21564,
@@ -91,7 +89,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.007142857142857143,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21566,
@@ -100,7 +98,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.005714285714285714,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21568,
@@ -109,7 +107,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0014285714285714286,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

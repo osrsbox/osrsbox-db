@@ -1,6 +1,7 @@
 {
     "id": 6613,
     "name": "Skeleton Hellhound",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -38,7 +40,6 @@
     ],
     "duplicate": false,
     "examine": "Can never possibly go hungry.",
-    "icon": null,
     "wiki_name": "Skeleton Hellhound (Vet'ion)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Skeleton_Hellhound_(Vet'ion)",
     "attack_level": 210,
@@ -46,65 +47,62 @@
     "defence_level": 150,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 101,
     "defence_slash": 103,
     "defence_crush": 10,
     "defence_magic": 180,
     "defence_ranged": 266,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 11941,
-            "name": "Looting bag",
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 10976,
+            "name": "Long bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rarity": 0.0025,
+            "rolls": 1
         },
         {
-            "id": 6806,
-            "name": "Skeleton champion scroll",
+            "id": 10977,
+            "name": "Curved bone",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0002,
-            "drop_requirements": null
-        },
-        {
-            "id": 23490,
-            "name": "Larran's key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.013513513513513514,
-            "drop_requirements": "krystilia-task-only"
-        },
-        {
-            "id": 21257,
-            "name": "Slayer's enchantment",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.004310344827586207,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.00019950124688279303,
+            "rolls": 1
         }
     ]
 }

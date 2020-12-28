@@ -1,13 +1,14 @@
 {
     "id": 7806,
     "name": "Deranged archaeologist",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2017-09-07",
     "combat_level": 276,
     "size": 1,
     "hitpoints": 200,
-    "max_hit": 0,
+    "max_hit": 28,
     "attack_type": [
         "melee",
         "ranged"
@@ -15,6 +16,7 @@
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "He's seen things that people wouldn't believe.",
-    "icon": null,
     "wiki_name": "Deranged archaeologist",
     "wiki_url": "https://oldschool.runescape.wiki/w/Deranged_archaeologist",
     "attack_level": 280,
@@ -39,272 +40,134 @@
     "defence_level": 280,
     "magic_level": 1,
     "ranged_level": 320,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 280,
+    "strength_bonus": 30,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 90,
+    "ranged_bonus": 90,
     "defence_stab": 20,
     "defence_slash": 20,
     "defence_crush": 50,
     "defence_magic": 300,
     "defence_ranged": 300,
-    "attack_accuracy": 280,
-    "melee_strength": 30,
-    "ranged_strength": 90,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.01171875,
+            "rolls": 1
         },
         {
-            "id": 2503,
-            "name": "Black d'hide body",
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.046875,
-            "drop_requirements": null
+            "rarity": 0.005859375,
+            "rolls": 1
         },
         {
-            "id": 1319,
-            "name": "Rune 2h sword",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
+            "rarity": 0.0029296875,
+            "rolls": 1
         },
         {
-            "id": 1289,
-            "name": "Rune sword",
+            "id": 1452,
+            "name": "Chaos talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
+            "rarity": 0.001098546988516522,
+            "rolls": 1
         },
         {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "100",
-            "noted": false,
-            "rarity": 0.046875,
-            "drop_requirements": null
-        },
-        {
-            "id": 4698,
-            "name": "Mud rune",
-            "members": true,
-            "quantity": "40",
-            "noted": false,
-            "rarity": 0.046875,
-            "drop_requirements": null
-        },
-        {
-            "id": 868,
-            "name": "Rune knife",
-            "members": true,
-            "quantity": "25",
-            "noted": false,
-            "rarity": 0.046875,
-            "drop_requirements": null
-        },
-        {
-            "id": 11212,
-            "name": "Dragon arrow",
-            "members": true,
-            "quantity": "60",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2,
-            "name": "Cannonball",
-            "members": true,
-            "quantity": "80",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "4",
-            "noted": true,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 239,
-            "name": "White berries",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": 0.0546875,
-            "drop_requirements": null
-        },
-        {
-            "id": 9431,
-            "name": "Runite limbs",
+            "id": 1462,
+            "name": "Nature talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1747,
-            "name": "Black dragonhide",
-            "members": true,
-            "quantity": "8",
-            "noted": true,
-            "rarity": 0.046875,
-            "drop_requirements": null
-        },
-        {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": 0.046875,
-            "drop_requirements": null
+            "rarity": 0.001098546988516522,
+            "rolls": 1
         },
         {
             "id": 1617,
             "name": "Uncut diamond",
             "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000732421875,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
             "quantity": "5",
-            "noted": true,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
-            "members": true,
-            "quantity": "6",
             "noted": false,
-            "rarity": 0.046875,
-            "drop_requirements": null
+            "rarity": 0.0003662109375,
+            "rolls": 1
         },
         {
-            "id": 2297,
-            "name": "Anchovy pizza",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 139,
-            "name": "Prayer potion(3)",
+            "id": 987,
+            "name": "Loop half of key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
+            "rarity": 0.0003662109375,
+            "rolls": 1
         },
         {
-            "id": 6705,
-            "name": "Potato with cheese",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 989,
-            "name": "Crystal key",
+            "id": 985,
+            "name": "Tooth half of key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0546875,
-            "drop_requirements": null
+            "rarity": 0.0003662109375,
+            "rolls": 1
         },
         {
-            "id": 10976,
-            "name": "Long bone",
+            "id": 1247,
+            "name": "Rune spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
+            "rarity": 2.288818359375e-05,
+            "rolls": 1
         },
         {
-            "id": 21555,
-            "name": "Numulite",
-            "members": true,
-            "quantity": "5-32",
-            "noted": false,
-            "rarity": 0.6171428571428571,
-            "drop_requirements": null
-        },
-        {
-            "id": 21562,
-            "name": "Unidentified small fossil",
+            "id": 2366,
+            "name": "Shield left half",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03428571428571429,
-            "drop_requirements": null
+            "rarity": 1.1444091796875e-05,
+            "rolls": 1
         },
         {
-            "id": 21564,
-            "name": "Unidentified medium fossil",
+            "id": 1249,
+            "name": "Dragon spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.017142857142857144,
-            "drop_requirements": null
+            "rarity": 8.582398347785329e-06,
+            "rolls": 1
         },
         {
-            "id": 21566,
-            "name": "Unidentified large fossil",
-            "members": true,
+            "id": 526,
+            "name": "Bones",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.06857142857142857,
-            "drop_requirements": null
-        },
-        {
-            "id": 21568,
-            "name": "Unidentified rare fossil",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0034285714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005,
-            "drop_requirements": null
+            "rarity": 1.0,
+            "rolls": 1
         },
         {
             "id": 5295,
@@ -312,8 +175,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.00093753750150006,
-            "drop_requirements": null
+            "rarity": 0.0009374707040404988,
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -321,8 +184,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0008749580020159032,
-            "drop_requirements": null
+            "rarity": 0.0008749671887304226,
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -330,8 +193,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0006877200704225353,
-            "drop_requirements": null
+            "rarity": 0.0006875214850464077,
+            "rolls": 1
         },
         {
             "id": 5321,
@@ -340,7 +203,7 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.000625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -349,7 +212,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.000625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21488,
@@ -357,8 +220,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.000562455003599712,
-            "drop_requirements": null
+            "rarity": 0.0005624929688378895,
+            "rolls": 1
         },
         {
             "id": 5314,
@@ -366,8 +229,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.000562455003599712,
-            "drop_requirements": null
+            "rarity": 0.0005624929688378895,
+            "rolls": 1
         },
         {
             "id": 21486,
@@ -375,8 +238,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.000562455003599712,
-            "drop_requirements": null
+            "rarity": 0.0005624929688378895,
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -384,8 +247,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.000562455003599712,
-            "drop_requirements": null
+            "rarity": 0.0005624929688378895,
+            "rolls": 1
         },
         {
             "id": 5288,
@@ -393,8 +256,17 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0004374300111982083,
-            "drop_requirements": null
+            "rarity": 0.00043750273439208993,
+            "rolls": 1
+        },
+        {
+            "id": 2503,
+            "name": "Black d'hide body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -402,8 +274,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0003750600096015363,
-            "drop_requirements": null
+            "rarity": 0.00037499531255859303,
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -412,7 +284,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0003125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5317,
@@ -421,7 +293,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22877,
@@ -429,8 +301,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.000187485001199904,
-            "drop_requirements": null
+            "rarity": 0.00018750117188232426,
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -439,7 +311,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.000125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22871,
@@ -448,7 +320,241 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.000125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "4",
+            "noted": true,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 239,
+            "name": "White berries",
+            "members": true,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.0546875,
+            "rolls": 1
+        },
+        {
+            "id": 9431,
+            "name": "Runite limbs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1747,
+            "name": "Black dragonhide",
+            "members": true,
+            "quantity": "8",
+            "noted": true,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 444,
+            "name": "Gold ore",
+            "members": false,
+            "quantity": "10",
+            "noted": true,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": false,
+            "quantity": "5",
+            "noted": true,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 2297,
+            "name": "Anchovy pizza",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 139,
+            "name": "Prayer potion(3)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 6705,
+            "name": "Potato with cheese",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 989,
+            "name": "Crystal key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0546875,
+            "rolls": 1
+        },
+        {
+            "id": 10976,
+            "name": "Long bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 1289,
+            "name": "Rune sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": false,
+            "quantity": "100",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 4698,
+            "name": "Mud rune",
+            "members": true,
+            "quantity": "40",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 21555,
+            "name": "Numulite",
+            "members": true,
+            "quantity": "5-32",
+            "noted": false,
+            "rarity": 0.6171428571428571,
+            "rolls": 1
+        },
+        {
+            "id": 21562,
+            "name": "Unidentified small fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03428571428571429,
+            "rolls": 1
+        },
+        {
+            "id": 21564,
+            "name": "Unidentified medium fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.017142857142857144,
+            "rolls": 1
+        },
+        {
+            "id": 21566,
+            "name": "Unidentified large fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06857142857142857,
+            "rolls": 1
+        },
+        {
+            "id": 21568,
+            "name": "Unidentified rare fossil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0034285714285714284,
+            "rolls": 1
+        },
+        {
+            "id": 868,
+            "name": "Rune knife",
+            "members": true,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005,
+            "rolls": 1
+        },
+        {
+            "id": 11212,
+            "name": "Dragon arrow",
+            "members": true,
+            "quantity": "60",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 2,
+            "name": "Cannonball",
+            "members": true,
+            "quantity": "80",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
         }
     ]
 }

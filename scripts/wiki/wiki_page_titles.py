@@ -26,6 +26,8 @@ from typing import Generator
 
 import requests
 
+import config
+
 LOG = logging.getLogger(__name__)
 
 
@@ -34,16 +36,10 @@ class WikiPageTitles:
 
     :param base_url: The OSRS Wiki URL used for API queries.
     :param categories: A list of OSRS Wiki categories.
-    :param user_agent: A custom user-agent name to be used for the API request.
-    :param user_email: A custom user-agent email to be used for the API request.
     """
-    def __init__(self, base_url: str, categories: list, user_agent: str, user_email: str):
+    def __init__(self, base_url: str, categories: list):
         self.base_url = base_url
         self.categories = categories
-        self.custom_agent = {
-            'User-Agent': user_agent,
-            'From': user_email
-        }
         self.page_titles: Dict[str, str] = dict()
 
     def __iter__(self) -> Generator[str, None, None]:
@@ -115,6 +111,8 @@ class WikiPageTitles:
                 page_title = entry["title"]
                 if page_title.startswith("File:"):
                     continue
+                if page_title.startswith("Category:"):
+                    continue
 
                 # Log the page title, and append to list
                 self.page_titles[page_title] = None
@@ -129,7 +127,7 @@ class WikiPageTitles:
         :param request: A dictionary to be populated with the OSRS Wiki API request.
         :param category: A string representing the OSRS Wiki category to extract.
         """
-        request['cmtitle'] = 'Category:' + category
+        request['cmtitle'] = f'Category:{category}'
         request['action'] = 'query'
         request['format'] = 'json'
         request['cmlimit'] = '500'
@@ -146,7 +144,7 @@ class WikiPageTitles:
             # Perform HTTP GET request
             try:
                 result = requests.get(self.base_url,
-                                      headers=self.custom_agent,
+                                      headers=config.custom_agent,
                                       params=req).json()
             except requests.exceptions.RequestException as e:
                 raise SystemExit(">>> ERROR: Get request error. Exiting.") from e
@@ -192,7 +190,7 @@ class WikiPageTitles:
         }
 
         page_data = requests.get(self.base_url,
-                                 headers=self.custom_agent,
+                                 headers=config.custom_agent,
                                  params=request).json()
 
         # Loop returned page revision data

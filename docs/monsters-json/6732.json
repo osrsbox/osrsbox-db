@@ -1,12 +1,13 @@
 {
     "id": 6732,
     "name": "River troll",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2004-02-02",
     "combat_level": 14,
     "size": 1,
-    "hitpoints": 0,
+    "hitpoints": null,
     "max_hit": 2,
     "attack_type": [
         "crush"
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": false,
     "examine": "Likes fish... hates people.",
-    "icon": null,
     "wiki_name": "River troll (Level 14)",
     "wiki_url": "https://oldschool.runescape.wiki/w/River_troll#Level_14",
     "attack_level": 17,
@@ -38,137 +39,62 @@
     "defence_level": 17,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 359,
             "name": "Raw tuna",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 331,
-            "name": "Raw salmon",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 345,
-            "name": "Raw herring",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 349,
-            "name": "Raw pike",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.046875,
-            "drop_requirements": null
-        },
-        {
-            "id": 327,
-            "name": "Raw sardine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 371,
-            "name": "Raw swordfish",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1484375,
-            "drop_requirements": null
-        },
-        {
-            "id": 383,
-            "name": "Raw shark",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.09375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 313,
             "name": "Fishing bait",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.2109375,
-            "drop_requirements": null
-        },
-        {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.0703125,
-            "drop_requirements": null
-        },
-        {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
+            "members": false,
             "quantity": "30",
             "noted": false,
             "rarity": 0.1015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 313,
             "name": "Fishing bait",
-            "members": true,
+            "members": false,
             "quantity": "50",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 314,
             "name": "Feather",
-            "members": true,
+            "members": false,
             "quantity": "20",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 314,
             "name": "Feather",
-            "members": true,
+            "members": false,
             "quantity": "40",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 407,
@@ -177,7 +103,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.09375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 151,
@@ -186,7 +112,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 405,
@@ -195,7 +121,79 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 331,
+            "name": "Raw salmon",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 345,
+            "name": "Raw herring",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 349,
+            "name": "Raw pike",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 327,
+            "name": "Raw sardine",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 371,
+            "name": "Raw swordfish",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1484375,
+            "rolls": 1
+        },
+        {
+            "id": 383,
+            "name": "Raw shark",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.09375,
+            "rolls": 1
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.2109375,
+            "rolls": 1
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.0703125,
+            "rolls": 1
         }
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 3612,
     "name": "Possessed pickaxe",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2004-12-21",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "How does it move of its own accord?",
-    "icon": null,
     "wiki_name": "Possessed pickaxe",
     "wiki_url": "https://oldschool.runescape.wiki/w/Possessed_pickaxe",
     "attack_level": 40,
@@ -32,101 +33,26 @@
     "defence_level": 40,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 15,
     "defence_slash": 10,
     "defence_crush": 5,
     "defence_magic": 5,
     "defence_ranged": 10,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 1267,
             "name": "Iron pickaxe",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1267,
-            "name": "Iron pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.95,
-            "drop_requirements": null
-        },
-        {
-            "id": 1269,
-            "name": "Steel pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02,
-            "drop_requirements": null
-        },
-        {
-            "id": 1273,
-            "name": "Mithril pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02,
-            "drop_requirements": null
-        },
-        {
-            "id": 1271,
-            "name": "Adamant pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.008,
-            "drop_requirements": null
-        },
-        {
-            "id": 1275,
-            "name": "Rune pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.002,
-            "drop_requirements": null
-        },
-        {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 19677,
-            "name": "Ancient shard",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0032608695652173916,
-            "drop_requirements": "catacombs-only"
-        },
-        {
-            "id": 19679,
-            "name": "Dark totem base",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.002173913043478261,
-            "drop_requirements": "catacombs-only"
+            "rolls": 1
         },
         {
             "id": 19681,
@@ -135,7 +61,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.002173913043478261,
-            "drop_requirements": "catacombs-only"
+            "rolls": 1
         },
         {
             "id": 19683,
@@ -144,7 +70,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.002173913043478261,
-            "drop_requirements": "catacombs-only"
+            "rolls": 1
+        },
+        {
+            "id": 19677,
+            "name": "Ancient shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0032679738562091504,
+            "rolls": 1
+        },
+        {
+            "id": 19679,
+            "name": "Dark totem base",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002173913043478261,
+            "rolls": 1
         }
     ]
 }

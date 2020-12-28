@@ -1,6 +1,7 @@
 {
     "id": 24539,
     "name": "'24-carat' sword",
+    "last_updated": "2020-12-27",
     "incomplete": false,
     "members": false,
     "tradeable": false,
@@ -28,7 +29,6 @@
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABTUlEQVR4XmNgGBDA+B9dZAAB4/9FfYL/B4GjQA5AOMZAQQGM0VXRCUAcMuoYVICIInQHoaukA0B1yACHzqhjcAHG/zNaBeF4UDkGhgcoEWM6ZnbHgIXOqGNwgVHH4AOoDhpwx7SX8cLxoHIMDNOxrIHU1hAM4aM7hI6hw/jfs8Hqf/PxQjCGOcY5xhYlVOjkGBhg/O/bagt2WP7KhP9ucQ4YjkHXQUPA+N8kWus/rxTnfxV7WbCjElf4DpRjQIDxv6AS73+jcI3/Vn6m/6VUJMCh5ddhj5Sm6AoY/6s5y/63D7P6bxNkDk/ANlkG8FBC10EjgMhZIMeAMMIBjP89ai3p6SDG/+Xb0v8nTQv97xRhA8aYaQadT1PACM7WQX1O/0MmOmNxDASg82kIgAlZgve/XoDK/6J1SfSMGnwAkYawhc6AAJhDBoVjBgMAAJhqgFCqMHrTAAAAAElFTkSuQmCC",
     "wiki_name": "'24-carat' sword",
     "wiki_url": "https://oldschool.runescape.wiki/w/'24-carat'_sword",
-    "wiki_exchange": null,
     "equipment": {
         "attack_stab": -100,
         "attack_slash": -100,
@@ -49,32 +49,25 @@
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "slashing_swords",
+        "weapon_type": "blunt",
         "stances": [
             {
-                "combat_style": "chop",
-                "attack_type": "slash",
+                "combat_style": "pound",
+                "attack_type": "crush",
                 "attack_style": "accurate",
                 "experience": "attack",
                 "boosts": null
             },
             {
-                "combat_style": "slash",
-                "attack_type": "slash",
+                "combat_style": "pummel",
+                "attack_type": "crush",
                 "attack_style": "aggressive",
                 "experience": "strength",
                 "boosts": null
             },
             {
-                "combat_style": "lunge",
-                "attack_type": "stab",
-                "attack_style": "controlled",
-                "experience": "shared",
-                "boosts": null
-            },
-            {
                 "combat_style": "block",
-                "attack_type": "slash",
+                "attack_type": "crush",
                 "attack_style": "defensive",
                 "experience": "defence",
                 "boosts": null

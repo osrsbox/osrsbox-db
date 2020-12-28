@@ -1,6 +1,7 @@
 {
     "id": 6298,
     "name": "Treus Dayth (hard)",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-09-05",
@@ -15,7 +16,8 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
-    "immune_poison": false,
+    "venomous": false,
+    "immune_poison": true,
     "immune_venom": false,
     "attributes": [],
     "category": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Eek! A big ghost!",
-    "icon": null,
     "wiki_name": "Treus Dayth (Hard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Treus_Dayth#Hard",
     "attack_level": 168,
@@ -33,29 +34,26 @@
     "defence_level": 100,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 5,
     "defence_slash": 5,
     "defence_crush": 5,
     "defence_magic": -5,
     "defence_ranged": 5,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 23182,
             "name": "Clue scroll (beginner)",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.011111111111111112,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

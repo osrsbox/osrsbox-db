@@ -1,6 +1,7 @@
 {
     "id": 5940,
     "name": "Giant Rock Crab",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-08-01",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "No one likes crabs... especially really big ones!",
-    "icon": null,
     "wiki_name": "Giant Rock Crab",
     "wiki_url": "https://oldschool.runescape.wiki/w/Giant_Rock_Crab",
     "attack_level": 50,
@@ -32,281 +33,152 @@
     "defence_level": 200,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 225,
     "defence_slash": 200,
     "defence_crush": 175,
     "defence_magic": -10,
     "defence_ranged": 250,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
-            "id": 1119,
-            "name": "Steel platebody",
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rarity": 0.0009765625,
+            "rolls": 1
         },
         {
-            "id": 3098,
-            "name": "Black claws",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1125,
-            "name": "Black platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1355,
-            "name": "Mithril axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6151,
-            "name": "Rock-shell gloves",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 6145,
-            "name": "Rock-shell boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1341,
-            "name": "Black warhammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1301,
-            "name": "Adamant longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "1-40",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "1-40",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "1-140",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 377,
-            "name": "Raw lobster",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 363,
-            "name": "Raw bass",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 590,
-            "name": "Tinderbox",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 405,
-            "name": "Casket",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 6161,
-            "name": "Rock-shell splinter",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 6157,
-            "name": "Rock-shell chunk",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 6159,
-            "name": "Rock-shell shard",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1438,
-            "name": "Air talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011160714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 1446,
-            "name": "Body talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011160714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 1440,
-            "name": "Earth talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011160714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 1442,
-            "name": "Fire talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011160714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 1448,
-            "name": "Mind talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011160714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 1444,
-            "name": "Water talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.011160714285714284,
-            "drop_requirements": null
-        },
-        {
-            "id": 1454,
-            "name": "Cosmic talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.004464285714285714,
-            "drop_requirements": null
+            "rarity": 0.00048828125,
+            "rolls": 1
         },
         {
             "id": 1452,
             "name": "Chaos talisman",
-            "members": false,
+            "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.003348214285714286,
-            "drop_requirements": null
+            "rarity": 0.00018309116475275368,
+            "rolls": 1
         },
         {
             "id": 1462,
             "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018309116475275368,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001220703125,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 6.103515625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.103515625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.103515625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 3.814697265625e-06,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.9073486328125e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.430399724630888e-06,
+            "rolls": 1
+        },
+        {
+            "id": 526,
+            "name": "Bones",
             "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.003348214285714286,
-            "drop_requirements": null
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": false,
+            "quantity": "1-40",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": false,
+            "quantity": "1-40",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
         },
         {
             "id": 199,
@@ -315,7 +187,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 201,
@@ -323,8 +195,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.011719482467654228,
-            "drop_requirements": null
+            "rarity": 0.011723329425556858,
+            "rolls": 1
         },
         {
             "id": 203,
@@ -332,8 +204,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.008789199831247364,
-            "drop_requirements": null
+            "rarity": 0.008787346221441126,
+            "rolls": 1
         },
         {
             "id": 205,
@@ -341,8 +213,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.006835830690145466,
-            "drop_requirements": null
+            "rarity": 0.00683526999316473,
+            "rolls": 1
         },
         {
             "id": 207,
@@ -350,8 +222,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0053694158075601375,
-            "drop_requirements": null
+            "rarity": 0.0053705692803437165,
+            "rolls": 1
         },
         {
             "id": 209,
@@ -360,7 +232,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 211,
@@ -368,8 +240,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0029301453352086264,
-            "drop_requirements": null
+            "rarity": 0.002929973630237328,
+            "rolls": 1
         },
         {
             "id": 213,
@@ -378,7 +250,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00244140625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1119,
+            "name": "Steel platebody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 215,
@@ -387,7 +268,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -395,8 +276,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0014647293180220294,
-            "drop_requirements": null
+            "rarity": 0.0014647722279185586,
+            "rolls": 1
         },
         {
             "id": 217,
@@ -404,8 +285,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0014647293180220294,
-            "drop_requirements": null
+            "rarity": 0.0014647722279185586,
+            "rolls": 1
         },
         {
             "id": 5296,
@@ -413,8 +294,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0015427527646129542,
-            "drop_requirements": null
+            "rarity": 0.0015559358954411078,
+            "rolls": 1
         },
         {
             "id": 5297,
@@ -422,8 +303,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0010503495563323475,
-            "drop_requirements": null
+            "rarity": 0.001059322033898305,
+            "rolls": 1
         },
         {
             "id": 5281,
@@ -431,17 +312,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0010176501237462551,
-            "drop_requirements": null
-        },
-        {
-            "id": 5298,
-            "name": "Avantoe seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0007220425138632163,
-            "drop_requirements": null
+            "rarity": 0.001026167265264238,
+            "rolls": 1
         },
         {
             "id": 5106,
@@ -449,8 +321,17 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0007220425138632163,
-            "drop_requirements": null
+            "rarity": 0.0007282790765421309,
+            "rolls": 1
+        },
+        {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007282790765421309,
+            "rolls": 1
         },
         {
             "id": 5280,
@@ -458,17 +339,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0006895410414827891,
-            "drop_requirements": null
-        },
-        {
-            "id": 5299,
-            "name": "Kwuarm seed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0004922810333963454,
-            "drop_requirements": null
+            "rarity": 0.0006951685783802572,
+            "rolls": 1
         },
         {
             "id": 22873,
@@ -476,8 +348,26 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0004922810333963454,
-            "drop_requirements": null
+            "rarity": 0.0004965489845573266,
+            "rolls": 1
+        },
+        {
+            "id": 3098,
+            "name": "Black claws",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004965489845573266,
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -485,8 +375,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0003282563025210084,
-            "drop_requirements": null
+            "rarity": 0.0003310381355932203,
+            "rolls": 1
         },
         {
             "id": 5301,
@@ -494,8 +384,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.00022977941176470588,
-            "drop_requirements": null
+            "rarity": 0.00023172822913287297,
+            "rolls": 1
         },
         {
             "id": 5302,
@@ -503,8 +393,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0001641281512605042,
-            "drop_requirements": null
+            "rarity": 0.00016551906779661016,
+            "rolls": 1
         },
         {
             "id": 22879,
@@ -512,8 +402,8 @@
             "members": true,
             "quantity": "3",
             "noted": false,
-            "rarity": 0.00013130252100840336,
-            "drop_requirements": null
+            "rarity": 0.00013241525423728814,
+            "rolls": 1
         },
         {
             "id": 5303,
@@ -521,8 +411,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 9.848102861464767e-05,
-            "drop_requirements": null
+            "rarity": 9.931176943779607e-05,
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -530,8 +420,224 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 6.565126050420168e-05,
-            "drop_requirements": null
+            "rarity": 6.620762711864407e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1438,
+            "name": "Air talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "rolls": 1
+        },
+        {
+            "id": 1446,
+            "name": "Body talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "rolls": 1
+        },
+        {
+            "id": 1440,
+            "name": "Earth talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "rolls": 1
+        },
+        {
+            "id": 1125,
+            "name": "Black platebody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1442,
+            "name": "Fire talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "rolls": 1
+        },
+        {
+            "id": 1448,
+            "name": "Mind talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "rolls": 1
+        },
+        {
+            "id": 1444,
+            "name": "Water talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011160714285714286,
+            "rolls": 1
+        },
+        {
+            "id": 1454,
+            "name": "Cosmic talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004464285714285714,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0033478406427854034,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0033478406427854034,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "1-140",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 377,
+            "name": "Raw lobster",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 363,
+            "name": "Raw bass",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 590,
+            "name": "Tinderbox",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 1355,
+            "name": "Mithril axe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 405,
+            "name": "Casket",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 6161,
+            "name": "Rock-shell splinter",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 6157,
+            "name": "Rock-shell chunk",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 6159,
+            "name": "Rock-shell shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 6151,
+            "name": "Rock-shell gloves",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 6145,
+            "name": "Rock-shell boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 1341,
+            "name": "Black warhammer",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1301,
+            "name": "Adamant longsword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         }
     ]
 }

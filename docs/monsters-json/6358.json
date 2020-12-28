@@ -1,6 +1,7 @@
 {
     "id": 6358,
     "name": "Glod",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2007-06-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "A cloud giant.",
-    "icon": null,
     "wiki_name": "Glod (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Glod#Normal",
     "attack_level": 115,
@@ -32,47 +33,44 @@
     "defence_level": 110,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 105,
     "defence_slash": 110,
     "defence_crush": 130,
     "defence_magic": 125,
     "defence_ranged": 100,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "2",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1623,
             "name": "Uncut sapphire",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1619,
             "name": "Uncut ruby",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5336,
@@ -81,7 +79,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11210,
@@ -90,7 +88,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -99,7 +97,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -108,7 +106,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

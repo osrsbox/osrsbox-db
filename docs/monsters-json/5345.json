@@ -1,6 +1,7 @@
 {
     "id": 5345,
     "name": "Undead one",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2003-01-27",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -32,7 +34,6 @@
     ],
     "duplicate": true,
     "examine": "A minion of Rashiliyia.",
-    "icon": null,
     "wiki_name": "Undead one (Level 61)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Undead_one#Level_61",
     "attack_level": 55,
@@ -40,29 +41,26 @@
     "defence_level": 55,
     "magic_level": 0,
     "ranged_level": 0,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 7,
+    "strength_bonus": 5,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 5,
     "defence_slash": 5,
     "defence_crush": 4,
     "defence_magic": 1,
     "defence_ranged": 4,
-    "attack_accuracy": 7,
-    "melee_strength": 5,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6806,
@@ -71,7 +69,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6807,
@@ -80,7 +78,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

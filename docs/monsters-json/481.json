@@ -1,6 +1,7 @@
 {
     "id": 481,
     "name": "Cave bug",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-03-14",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "A nasty crawling critter.",
-    "icon": null,
     "wiki_name": "Cave bug (Level 6)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Cave_bug#Level_6",
     "attack_level": 6,
@@ -39,353 +40,125 @@
     "defence_level": 6,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 10,
     "defence_slash": 10,
     "defence_crush": 5,
     "defence_magic": 5,
     "defence_ranged": 10,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rarity": 0.009765625,
+            "rolls": 1
         },
         {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
+            "rarity": 0.0048828125,
+            "rolls": 1
         },
         {
-            "id": 235,
-            "name": "Unicorn horn dust",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
+            "rarity": 0.00244140625,
+            "rolls": 1
         },
         {
-            "id": 221,
-            "name": "Eye of newt",
+            "id": 1452,
+            "name": "Chaos talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
+            "rarity": 0.0009154558237637684,
+            "rolls": 1
         },
         {
-            "id": 225,
-            "name": "Limpwurt root",
+            "id": 1462,
+            "name": "Nature talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rarity": 0.0009154558237637684,
+            "rolls": 1
         },
         {
-            "id": 231,
-            "name": "Snape grass",
+            "id": 1617,
+            "name": "Uncut diamond",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rarity": 0.0006103515625,
+            "rolls": 1
         },
         {
-            "id": 223,
-            "name": "Red spiders' eggs",
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.00030517578125,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
+            "rarity": 0.00030517578125,
+            "rolls": 1
         },
         {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "8",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 590,
-            "name": "Tinderbox",
+            "id": 985,
+            "name": "Tooth half of key",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
+            "rarity": 0.00030517578125,
+            "rolls": 1
         },
         {
-            "id": 4527,
-            "name": "Empty candle lantern",
+            "id": 1247,
+            "name": "Rune spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rarity": 1.9073486328125e-05,
+            "rolls": 1
         },
         {
-            "id": 36,
-            "name": "Candle",
+            "id": 2366,
+            "name": "Shield left half",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rarity": 9.5367431640625e-06,
+            "rolls": 1
         },
         {
-            "id": 1395,
-            "name": "Water battlestaff",
+            "id": 1249,
+            "name": "Dragon spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": 0.1171875,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "1-170",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "1-15",
-            "noted": false,
-            "rarity": 0.109375,
-            "drop_requirements": null
-        },
-        {
-            "id": 555,
-            "name": "Water rune",
-            "members": true,
-            "quantity": "1-170",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "1-20",
-            "noted": false,
-            "rarity": 0.1015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "1-170",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "1-40",
-            "noted": false,
-            "rarity": 0.109375,
-            "drop_requirements": null
-        },
-        {
-            "id": 10978,
-            "name": "Swamp weed",
-            "members": true,
-            "quantity": "1-4",
-            "noted": false,
-            "rarity": 0.2421875,
-            "drop_requirements": null
-        },
-        {
-            "id": 10978,
-            "name": "Swamp weed",
-            "members": true,
-            "quantity": "5-8",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.037109375,
-            "drop_requirements": null
-        },
-        {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02783377086067879,
-            "drop_requirements": null
-        },
-        {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02087434959921249,
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01623509788909548,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.012752362542955326,
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00927734375,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.006959095171120488,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00579833984375,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.004638671875,
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0034787321303023197,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0034787321303023197,
-            "drop_requirements": null
+            "rarity": 7.1519986231544404e-06,
+            "rolls": 1
         }
     ]
 }

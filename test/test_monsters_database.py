@@ -25,6 +25,7 @@ import json
 from pathlib import Path
 
 import config
+import validator
 
 
 def test_monsters_data():
@@ -35,7 +36,7 @@ def test_monsters_data():
         schema = json.loads(f.read())
 
     # Validator object with schema attached
-    v = config.MyValidator(schema)
+    v = validator.MyValidator(schema)
 
     # Set the path to the monsters-json folder and get all the JSON files
     path_to_monsters_json_dir = Path(config.DOCS_PATH / "monsters-json")

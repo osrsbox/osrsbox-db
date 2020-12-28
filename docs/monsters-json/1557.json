@@ -1,6 +1,7 @@
 {
     "id": 1557,
     "name": "Water wizard",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2005-09-26",
@@ -12,6 +13,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -22,7 +24,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Hydro-power!",
-    "icon": null,
     "wiki_name": "Water wizard",
     "wiki_url": "https://oldschool.runescape.wiki/w/Water_wizard",
     "attack_level": 5,
@@ -30,20 +31,17 @@
     "defence_level": 10,
     "magic_level": 10,
     "ranged_level": 0,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 15,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 592,
@@ -52,7 +50,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 555,
@@ -61,7 +59,7 @@
             "quantity": "5-10",
             "noted": false,
             "rarity": 0.95,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1444,
@@ -70,7 +68,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

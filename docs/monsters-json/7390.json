@@ -1,7 +1,8 @@
 {
     "id": 7390,
     "name": "Screaming banshee",
-    "incomplete": true,
+    "last_updated": "2020-12-25",
+    "incomplete": false,
     "members": true,
     "release_date": "2016-09-15",
     "combat_level": 70,
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -35,7 +37,6 @@
     ],
     "duplicate": false,
     "examine": "Scream if you want to go faster.",
-    "icon": null,
     "wiki_name": "Screaming banshee",
     "wiki_url": "https://oldschool.runescape.wiki/w/Screaming_banshee",
     "attack_level": 65,
@@ -43,47 +44,323 @@
     "defence_level": 56,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 13,
     "defence_slash": 13,
     "defence_crush": 13,
     "defence_magic": 0,
     "defence_ranged": 13,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 1420,
-            "name": "Iron mace",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009765625,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00036618232950550735,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00036618232950550735,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0001220703125,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001220703125,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001220703125,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 7.62939453125e-06,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 3.814697265625e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 2.860799449261776e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1420,
+            "name": "Iron mace",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 3
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06622516556291391,
+            "rolls": 3
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.04975124378109453,
+            "rolls": 3
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03731343283582089,
+            "rolls": 3
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.029069767441860465,
+            "rolls": 3
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0228310502283105,
+            "rolls": 3
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016611295681063124,
+            "rolls": 3
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.012453300124533,
+            "rolls": 3
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01037344398340249,
+            "rolls": 3
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008298755186721992,
+            "rolls": 3
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0062266500622665,
+            "rolls": 3
         },
         {
             "id": 1203,
             "name": "Iron dagger",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 3
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0062266500622665,
+            "rolls": 3
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "13",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 3
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "26",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 3
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "35",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 3
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": false,
+            "quantity": "13",
+            "noted": true,
+            "rarity": 0.171875,
+            "rolls": 3
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.171875,
+            "rolls": 3
+        },
+        {
+            "id": 313,
+            "name": "Fishing bait",
+            "members": false,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 3
+        },
+        {
+            "id": 221,
+            "name": "Eye of newt",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 3
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 3
         },
         {
             "id": 1191,
             "name": "Iron kiteshield",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 3
         },
         {
             "id": 4105,
@@ -92,124 +369,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "3",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "13",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "26",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "35",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "13",
-            "noted": true,
-            "rarity": 0.171875,
-            "drop_requirements": null
-        },
-        {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.171875,
-            "drop_requirements": null
-        },
-        {
-            "id": 313,
-            "name": "Fishing bait",
-            "members": true,
-            "quantity": "7",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 221,
-            "name": "Eye of newt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 3
         },
         {
             "id": 2677,
@@ -218,106 +378,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.06640625,
-            "drop_requirements": null
-        },
-        {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.04980780048753047,
-            "drop_requirements": null
-        },
-        {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0373540992828013,
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.029052280433118232,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.022820017182130583,
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0166015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.012453117674636662,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0103759765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00830078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.006225099601593625,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.006225099601593625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 20730,
@@ -325,8 +386,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0023320895522388058,
-            "drop_requirements": "superior-only"
+            "rarity": 0.0027210884353741495,
+            "rolls": 1
         },
         {
             "id": 20736,
@@ -334,8 +395,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0023320895522388058,
-            "drop_requirements": "superior-only"
+            "rarity": 0.0027210884353741495,
+            "rolls": 1
         },
         {
             "id": 21270,
@@ -343,8 +404,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0007773631840796019,
-            "drop_requirements": "superior-only"
+            "rarity": 0.000777363184079602,
+            "rolls": 1
         },
         {
             "id": 20724,
@@ -352,8 +413,53 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0007773631840796019,
-            "drop_requirements": "superior-only"
+            "rarity": 0.000777363184079602,
+            "rolls": 1
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": false,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 3
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 3
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 3
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": false,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 3
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 3
         }
     ]
 }

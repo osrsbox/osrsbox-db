@@ -1,6 +1,7 @@
 {
     "id": 4822,
     "name": "Crab",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2006-03-15",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Nice claw!",
-    "icon": null,
     "wiki_name": "Crab (Level 21)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Crab#Level_21",
     "attack_level": 17,
@@ -32,92 +33,16 @@
     "defence_level": 22,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
-    "drops": [
-        {
-            "id": 7518,
-            "name": "Crab meat",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 7536,
-            "name": "Fresh crab claw",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 7538,
-            "name": "Fresh crab shell",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1,
-            "drop_requirements": null
-        },
-        {
-            "id": 7518,
-            "name": "Crab meat",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 7536,
-            "name": "Fresh crab claw",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 7538,
-            "name": "Fresh crab shell",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 407,
-            "name": "Oyster",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.1,
-            "drop_requirements": null
-        }
-    ]
+    "drops": []
 }

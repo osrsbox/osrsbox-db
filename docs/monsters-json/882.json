@@ -1,6 +1,7 @@
 {
     "id": 882,
     "name": "Slash Bash",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-05-17",
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -27,7 +29,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "A powerful looking Zogre.",
-    "icon": null,
     "wiki_name": "Slash Bash",
     "wiki_url": "https://oldschool.runescape.wiki/w/Slash_Bash",
     "attack_level": 100,
@@ -35,20 +36,17 @@
     "defence_level": 60,
     "magic_level": 1,
     "ranged_level": 100,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 22,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 30,
     "defence_slash": 30,
     "defence_crush": 30,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 22,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 4812,
@@ -57,7 +55,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4834,
@@ -66,7 +64,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4818,
@@ -75,7 +73,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6807,
@@ -84,7 +82,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

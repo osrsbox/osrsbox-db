@@ -1,6 +1,7 @@
 {
     "id": 477,
     "name": "Giant frog",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-03-14",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "It didn't get that big eating flies.",
-    "icon": null,
     "wiki_name": "Giant frog (Level 99)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Giant_frog#Level_99",
     "attack_level": 100,
@@ -32,182 +33,16 @@
     "defence_level": 65,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
-    "drops": [
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 23182,
-            "name": "Clue scroll (beginner)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0025,
-            "drop_requirements": null
-        },
-        {
-            "id": 10977,
-            "name": "Curved bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019950124688279303,
-            "drop_requirements": null
-        },
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1243,
-            "name": "Mithril spear",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "1,3,6,9",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 884,
-            "name": "Iron arrow",
-            "members": true,
-            "quantity": "22",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "45",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "2,30,37",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 4517,
-            "name": "Giant frog legs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1969,
-            "name": "Spinach roll",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 23182,
-            "name": "Clue scroll (beginner)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0025,
-            "drop_requirements": null
-        },
-        {
-            "id": 10977,
-            "name": "Curved bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019950124688279303,
-            "drop_requirements": null
-        }
-    ]
+    "drops": []
 }

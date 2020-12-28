@@ -1,6 +1,7 @@
 {
     "id": 1834,
     "name": "Gorak",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2006-07-11",
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Gorak by name, Gorak by nature.",
-    "icon": null,
     "wiki_name": "Gorak (Level 145)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Gorak#Level_145",
     "attack_level": 130,
@@ -33,38 +34,134 @@
     "defence_level": 131,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0048828125,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00244140625,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009154558237637684,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009154558237637684,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006103515625,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.00030517578125,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00030517578125,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00030517578125,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.9073486328125e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 9.5367431640625e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 7.1519986231544404e-06,
+            "rolls": 1
+        },
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 9016,
-            "name": "Gorak claws",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -73,7 +170,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -82,7 +179,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -91,16 +188,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3192,
@@ -109,7 +206,115 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.25,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.125,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02343566908835247,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02343566908835247,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018309116475275368,
+            "rolls": 1
         },
         {
             "id": 5670,
@@ -118,16 +323,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1309,
             "name": "Iron 2h sword",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 802,
@@ -136,16 +341,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1365,
             "name": "Steel battleaxe",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 803,
@@ -154,169 +359,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1199,
             "name": "Adamant kiteshield",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1083,
             "name": "Steel plateskirt",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1069,
             "name": "Steel platelegs",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1113,
             "name": "Rune chainbody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "27",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "97",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "104",
-            "noted": false,
-            "rarity": 0.2265625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "132",
-            "noted": false,
-            "rarity": 0.1953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "286",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "475",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 9016,
-            "name": "Gorak claws",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 5625,
-            "name": "Mithril arrow(p++)",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 2570,
-            "name": "Ring of life",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 11941,
-            "name": "Looting bag",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 11942,
-            "name": "Ecumenical key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.016666666666666666,
-            "drop_requirements": null
-        },
-        {
-            "id": 2722,
-            "name": "Clue scroll (hard)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 10976,
-            "name": "Long bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0025,
-            "drop_requirements": null
-        },
-        {
-            "id": 10977,
-            "name": "Curved bone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 199,
@@ -325,7 +404,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 9016,
+            "name": "Gorak claws",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "rolls": 1
         },
         {
             "id": 201,
@@ -333,8 +421,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.023438964935308455,
-            "drop_requirements": null
+            "rarity": 0.0234192037470726,
+            "rolls": 1
         },
         {
             "id": 203,
@@ -342,8 +430,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.017578399662494727,
-            "drop_requirements": null
+            "rarity": 0.01757469244288225,
+            "rolls": 1
         },
         {
             "id": 205,
@@ -351,8 +439,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.013671661380290932,
-            "drop_requirements": null
+            "rarity": 0.013679890560875513,
+            "rolls": 1
         },
         {
             "id": 207,
@@ -360,8 +448,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.010738831615120275,
-            "drop_requirements": null
+            "rarity": 0.010741138560687433,
+            "rolls": 1
         },
         {
             "id": 209,
@@ -370,7 +458,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 211,
@@ -378,8 +466,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.005860290670417253,
-            "drop_requirements": null
+            "rarity": 0.005858230814294083,
+            "rolls": 1
         },
         {
             "id": 213,
@@ -388,7 +476,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0048828125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -397,7 +485,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -405,8 +493,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.002929458636044059,
-            "drop_requirements": null
+            "rarity": 0.002929973630237328,
+            "rolls": 1
         },
         {
             "id": 217,
@@ -414,8 +502,134 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.002929458636044059,
-            "drop_requirements": null
+            "rarity": 0.002929973630237328,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "27",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "97",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "104",
+            "noted": false,
+            "rarity": 0.2265625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "132",
+            "noted": false,
+            "rarity": 0.1953125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "286",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "475",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 9016,
+            "name": "Gorak claws",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "rolls": 1
+        },
+        {
+            "id": 5625,
+            "name": "Mithril arrow(p++)",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 2570,
+            "name": "Ring of life",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 11941,
+            "name": "Looting bag",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.3333333333333333,
+            "rolls": 1
+        },
+        {
+            "id": 11942,
+            "name": "Ecumenical key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.016666666666666666,
+            "rolls": 1
+        },
+        {
+            "id": 2722,
+            "name": "Clue scroll (hard)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 10976,
+            "name": "Long bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0025,
+            "rolls": 1
+        },
+        {
+            "id": 10977,
+            "name": "Curved bone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00019950124688279303,
+            "rolls": 1
         }
     ]
 }

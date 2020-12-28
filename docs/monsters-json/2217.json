@@ -1,6 +1,7 @@
 {
     "id": 2217,
     "name": "Sergeant Steelwill",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
@@ -14,6 +15,7 @@
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": false,
     "examine": "A battle-honed goblin.",
-    "icon": null,
     "wiki_name": "Sergeant Steelwill",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sergeant_Steelwill",
     "attack_level": 80,
@@ -37,110 +38,35 @@
     "defence_level": 150,
     "magic_level": 150,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 6,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 6,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 11832,
-            "name": "Bandos chestplate",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 6.2000124000248e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 11834,
-            "name": "Bandos tassets",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 6.2000124000248e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 11836,
-            "name": "Bandos boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 6.2000124000248e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "1400-1500",
-            "noted": false,
-            "rarity": 0.007688015376030752,
-            "drop_requirements": null
-        },
-        {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0006561679790026247,
-            "drop_requirements": null
-        },
-        {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0006561679790026247,
-            "drop_requirements": null
-        },
-        {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0006561679790026247,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "1400-1500",
-            "noted": false,
-            "rarity": 0.005905511811023622,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 886,
             "name": "Steel arrow",
-            "members": true,
+            "members": false,
             "quantity": "95-100",
             "noted": false,
             "rarity": 0.05511811023622047,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 808,
@@ -149,25 +75,25 @@
             "quantity": "95-100",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 561,
             "name": "Nature rune",
-            "members": true,
+            "members": false,
             "quantity": "15-20",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 564,
             "name": "Cosmic rune",
-            "members": true,
+            "members": false,
             "quantity": "25-30",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 385,
@@ -176,7 +102,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7054,
@@ -185,25 +111,25 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "1400-1500",
             "noted": false,
             "rarity": 0.5196850393700787,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 225,
             "name": "Limpwurt root",
-            "members": true,
+            "members": false,
             "quantity": "5",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9741,
@@ -212,7 +138,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015748031496062992,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 157,
@@ -221,16 +147,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015748031496062992,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11832,
+            "name": "Bandos chestplate",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.2000124000248e-05,
+            "rolls": 1
         },
         {
             "id": 1917,
             "name": "Beer",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.16666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -239,7 +174,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6801,
@@ -248,7 +183,70 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11834,
+            "name": "Bandos tassets",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.2000124000248e-05,
+            "rolls": 1
+        },
+        {
+            "id": 11836,
+            "name": "Bandos boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.2000124000248e-05,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "1400-1500",
+            "noted": false,
+            "rarity": 0.007688015376030752,
+            "rolls": 1
+        },
+        {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006561679790026247,
+            "rolls": 1
+        },
+        {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006561679790026247,
+            "rolls": 1
+        },
+        {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0006561679790026247,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "1400-1500",
+            "noted": false,
+            "rarity": 0.005905511811023622,
+            "rolls": 1
         }
     ]
 }

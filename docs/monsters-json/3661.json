@@ -1,6 +1,7 @@
 {
     "id": 3661,
     "name": "Chicken",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": true,
     "examine": "Yep. Definitely a chicken.",
-    "icon": null,
     "wiki_name": "Chicken",
     "wiki_url": "https://oldschool.runescape.wiki/w/Chicken",
     "attack_level": 1,
@@ -37,20 +38,17 @@
     "defence_level": 1,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": -47,
+    "strength_bonus": -42,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -42,
     "defence_slash": -42,
     "defence_crush": -42,
     "defence_magic": -42,
     "defence_ranged": -42,
-    "attack_accuracy": -47,
-    "melee_strength": -42,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
@@ -59,7 +57,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2138,
@@ -68,7 +66,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 314,
@@ -77,7 +75,7 @@
             "quantity": "5",
             "noted": false,
             "rarity": 0.5,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 314,
@@ -86,16 +84,7 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.25,
-            "drop_requirements": null
-        },
-        {
-            "id": 2832,
-            "name": "Key (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
@@ -104,7 +93,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0033333333333333335,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

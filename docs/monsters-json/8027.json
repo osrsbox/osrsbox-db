@@ -1,6 +1,7 @@
 {
     "id": 8027,
     "name": "Rune dragon",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2018-01-04",
@@ -10,12 +11,14 @@
     "max_hit": 38,
     "attack_type": [
         "crush",
-        "dragonfire",
-        "ranged"
+        "ranged",
+        "magic",
+        "dragonfire"
     ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -26,7 +29,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Its scales seem to be made of runite.",
-    "icon": null,
     "wiki_name": "Rune dragon (Construction)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Rune_dragon_(Construction)",
     "attack_level": 284,
@@ -34,19 +36,296 @@
     "defence_level": 276,
     "magic_level": 196,
     "ranged_level": 246,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 14,
     "defence_stab": 30,
     "defence_slash": 115,
     "defence_crush": 90,
     "defence_magic": 30,
     "defence_ranged": 95,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 14,
-    "magic_damage": 0,
-    "drops": []
+    "drops": [
+        {
+            "id": 536,
+            "name": "Dragon bones",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 4585,
+            "name": "Dragon plateskirt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
+        },
+        {
+            "id": 1149,
+            "name": "Dragon med helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "30-40",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "rolls": 1
+        },
+        {
+            "id": 21880,
+            "name": "Wrath rune",
+            "members": true,
+            "quantity": "30-50",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "rolls": 1
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "75-150",
+            "noted": false,
+            "rarity": 0.05511811023622047,
+            "rolls": 1
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "50-100",
+            "noted": false,
+            "rarity": 0.05511811023622047,
+            "rolls": 1
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.01968503937007874,
+            "rolls": 1
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.015748031496062992,
+            "rolls": 1
+        },
+        {
+            "id": 3051,
+            "name": "Grimy snapdragon",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.015748031496062992,
+            "rolls": 1
+        },
+        {
+            "id": 219,
+            "name": "Grimy torstol",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.011810558639423645,
+            "rolls": 1
+        },
+        {
+            "id": 2363,
+            "name": "Runite bar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 9381,
+            "name": "Runite bolts (unf)",
+            "members": true,
+            "quantity": "20-30",
+            "noted": false,
+            "rarity": 0.08661417322834646,
+            "rolls": 1
+        },
+        {
+            "id": 19580,
+            "name": "Rune javelin heads",
+            "members": true,
+            "quantity": "20-30",
+            "noted": false,
+            "rarity": 0.11811023622047244,
+            "rolls": 1
+        },
+        {
+            "id": 1615,
+            "name": "Dragonstone",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.05511811023622047,
+            "rolls": 1
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
+            "members": false,
+            "quantity": "2-5",
+            "noted": true,
+            "rarity": 0.047244094488188976,
+            "rolls": 1
+        },
+        {
+            "id": 19582,
+            "name": "Dragon javelin heads",
+            "members": true,
+            "quantity": "30-40",
+            "noted": false,
+            "rarity": 0.03937007874015748,
+            "rolls": 1
+        },
+        {
+            "id": 21930,
+            "name": "Dragon bolts (unf)",
+            "members": true,
+            "quantity": "20-40",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
+        },
+        {
+            "id": 22118,
+            "name": "Wrath talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
+        },
+        {
+            "id": 1127,
+            "name": "Rune platebody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.07086614173228346,
+            "rolls": 1
+        },
+        {
+            "id": 1303,
+            "name": "Rune longsword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "rolls": 1
+        },
+        {
+            "id": 1432,
+            "name": "Rune mace",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05511811023622047,
+            "rolls": 1
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.02,
+            "rolls": 1
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0033333333333333335,
+            "rolls": 1
+        },
+        {
+            "id": 21918,
+            "name": "Dragon limbs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00125,
+            "rolls": 1
+        },
+        {
+            "id": 22103,
+            "name": "Dragon metal lump",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
+            "rolls": 1
+        },
+        {
+            "id": 11286,
+            "name": "Draconic visage",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000125,
+            "rolls": 1
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05511811023622047,
+            "rolls": 1
+        },
+        {
+            "id": 1347,
+            "name": "Rune warhammer",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05511811023622047,
+            "rolls": 1
+        },
+        {
+            "id": 1079,
+            "name": "Rune platelegs",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.047244094488188976,
+            "rolls": 1
+        },
+        {
+            "id": 4087,
+            "name": "Dragon platelegs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
+        }
+    ]
 }

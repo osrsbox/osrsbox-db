@@ -1,6 +1,7 @@
 {
     "id": 6615,
     "name": "Scorpia",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": true,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -35,7 +37,6 @@
     ],
     "duplicate": false,
     "examine": "Queen of the Scorpions.",
-    "icon": null,
     "wiki_name": "Scorpia",
     "wiki_url": "https://oldschool.runescape.wiki/w/Scorpia",
     "attack_level": 250,
@@ -43,56 +44,98 @@
     "defence_level": 180,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 60,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 246,
     "defence_slash": 284,
     "defence_crush": 284,
     "defence_magic": 44,
     "defence_ranged": 284,
-    "attack_accuracy": 60,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 11930,
-            "name": "Odium shard 3",
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": 0.00390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 11933,
-            "name": "Malediction shard 3",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
-            "id": 1319,
-            "name": "Rune 2h sword",
+            "id": 1452,
+            "name": "Chaos talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rarity": 0.0007323646590110147,
+            "rolls": 1
         },
         {
-            "id": 1275,
-            "name": "Rune pickaxe",
+            "id": 1462,
+            "name": "Nature talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rarity": 0.0007323646590110147,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
         },
         {
             "id": 1247,
@@ -100,44 +143,35 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
+            "rarity": 1.52587890625e-05,
+            "rolls": 1
         },
         {
-            "id": 1113,
-            "name": "Rune chainbody",
+            "id": 2366,
+            "name": "Shield left half",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
+            "rarity": 7.62939453125e-06,
+            "rolls": 1
         },
         {
-            "id": 1333,
-            "name": "Rune scimitar",
+            "id": 1249,
+            "name": "Dragon spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
+            "rarity": 5.721598898523552e-06,
+            "rolls": 1
         },
         {
-            "id": 1289,
-            "name": "Rune sword",
+            "id": 11930,
+            "name": "Odium shard 3",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1347,
-            "name": "Rune warhammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
+            "rarity": 0.00390625,
+            "rolls": 1
         },
         {
             "id": 4587,
@@ -146,7 +180,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 213,
@@ -155,7 +189,7 @@
             "quantity": "4",
             "noted": true,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1783,
@@ -164,7 +198,7 @@
             "quantity": "25",
             "noted": true,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6016,
@@ -173,25 +207,25 @@
             "quantity": "10",
             "noted": true,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1621,
             "name": "Uncut emerald",
-            "members": true,
+            "members": false,
             "quantity": "6",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1623,
             "name": "Uncut sapphire",
-            "members": true,
+            "members": false,
             "quantity": "4",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7198,
@@ -200,7 +234,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2434,
@@ -209,7 +243,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 385,
@@ -218,16 +252,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2297,
             "name": "Anchovy pizza",
-            "members": true,
+            "members": false,
             "quantity": "8",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11933,
+            "name": "Malediction shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
         },
         {
             "id": 2448,
@@ -236,16 +279,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "499-3998",
             "noted": false,
             "rarity": 0.140625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11090,
@@ -254,7 +297,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4696,
@@ -263,7 +306,7 @@
             "quantity": "30",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5940,
@@ -272,7 +315,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1275,
+            "name": "Rune pickaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -281,7 +351,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13459,
@@ -290,7 +360,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.05555555555555555,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -299,7 +369,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.013333333333333334,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -308,7 +378,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13181,
@@ -317,43 +387,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0004960932655339203,
-            "drop_requirements": null
-        },
-        {
-            "id": 6685,
-            "name": "Saradomin brew(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.2,
-            "drop_requirements": null
-        },
-        {
-            "id": 6691,
-            "name": "Saradomin brew(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.2,
-            "drop_requirements": null
-        },
-        {
-            "id": 11930,
-            "name": "Odium shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 11933,
-            "name": "Malediction shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -362,7 +396,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.013888888888888888,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -370,8 +404,44 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.00625,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.03333333333333333,
+            "rolls": 1
+        },
+        {
+            "id": 1113,
+            "name": "Rune chainbody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1289,
+            "name": "Rune sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1347,
+            "name": "Rune warhammer",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
         }
     ]
 }

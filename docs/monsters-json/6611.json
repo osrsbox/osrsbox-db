@@ -1,6 +1,7 @@
 {
     "id": 6611,
     "name": "Vet'ion",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2014-03-13",
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -38,7 +40,6 @@
     ],
     "duplicate": false,
     "examine": "Only the true lord & king of the lands can lift his burden.",
-    "icon": null,
     "wiki_name": "Vet'ion (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Vet'ion#Normal",
     "attack_level": 430,
@@ -46,101 +47,26 @@
     "defence_level": 395,
     "magic_level": 300,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 201,
     "defence_slash": 200,
     "defence_crush": -10,
     "defence_magic": 250,
     "defence_ranged": 270,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 12601,
-            "name": "Ring of the gods",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1275,
-            "name": "Rune pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.09375,
-            "drop_requirements": null
-        },
-        {
-            "id": 1319,
-            "name": "Rune 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 4675,
-            "name": "Ancient staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 11920,
-            "name": "Dragon pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005859375,
-            "drop_requirements": null
-        },
-        {
-            "id": 7158,
-            "name": "Dragon 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "400",
-            "noted": false,
-            "rarity": 0.0546875,
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "300",
-            "noted": false,
-            "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -149,7 +75,7 @@
             "quantity": "200",
             "noted": false,
             "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2,
@@ -158,43 +84,43 @@
             "quantity": "250",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1619,
             "name": "Uncut ruby",
-            "members": true,
+            "members": false,
             "quantity": "20",
             "noted": true,
             "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1617,
             "name": "Uncut diamond",
-            "members": true,
+            "members": false,
             "quantity": "10",
             "noted": true,
             "rarity": 0.0546875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 444,
             "name": "Gold ore",
-            "members": true,
+            "members": false,
             "quantity": "300",
             "noted": true,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 225,
             "name": "Limpwurt root",
-            "members": true,
+            "members": false,
             "quantity": "25",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1513,
@@ -203,7 +129,7 @@
             "quantity": "100",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 8778,
@@ -212,7 +138,7 @@
             "quantity": "300",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 536,
@@ -221,7 +147,7 @@
             "quantity": "100",
             "noted": true,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1631,
@@ -230,7 +156,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 12601,
+            "name": "Ring of the gods",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 2970,
@@ -239,7 +174,7 @@
             "quantity": "200",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 207,
@@ -248,16 +183,16 @@
             "quantity": "100",
             "noted": true,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "15000-19999",
             "noted": false,
             "rarity": 0.1484375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11936,
@@ -266,7 +201,7 @@
             "quantity": "8",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3024,
@@ -275,7 +210,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10925,
@@ -284,7 +219,7 @@
             "quantity": "10",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 4850,
@@ -293,7 +228,7 @@
             "quantity": "10",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6034,
@@ -302,7 +237,7 @@
             "quantity": "100",
             "noted": true,
             "rarity": 0.037109375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11940,
@@ -311,7 +246,7 @@
             "quantity": "375",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -320,7 +255,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1275,
+            "name": "Rune pickaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.09375,
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -329,7 +273,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -338,7 +282,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -347,7 +291,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -355,8 +299,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.034246575342465765,
-            "drop_requirements": null
+            "rarity": 0.02,
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -365,7 +309,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -374,7 +318,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13179,
@@ -383,7 +327,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0005,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6806,
@@ -392,7 +336,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -401,25 +345,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
-        },
-        {
-            "id": 6685,
-            "name": "Saradomin brew(4)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 6691,
-            "name": "Saradomin brew(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -428,7 +354,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.02,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
+        },
+        {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -437,7 +372,52 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03333333333333333,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
+        },
+        {
+            "id": 4675,
+            "name": "Ancient staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 11920,
+            "name": "Dragon pickaxe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005859375,
+            "rolls": 1
+        },
+        {
+            "id": 7158,
+            "name": "Dragon 2h sword",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "400",
+            "noted": false,
+            "rarity": 0.0546875,
+            "rolls": 1
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "300",
+            "noted": false,
+            "rarity": 0.0546875,
+            "rolls": 1
         }
     ]
 }

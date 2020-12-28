@@ -1,6 +1,7 @@
 {
     "id": 4367,
     "name": "Gorad",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2003-05-07",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -28,7 +30,6 @@
     ],
     "duplicate": false,
     "examine": "Big, dumb and ugly.",
-    "icon": null,
     "wiki_name": "Gorad",
     "wiki_url": "https://oldschool.runescape.wiki/w/Gorad",
     "attack_level": 54,
@@ -36,29 +37,188 @@
     "defence_level": 54,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 8,
+    "strength_bonus": 8,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 15,
     "defence_slash": 27,
     "defence_crush": 21,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 8,
-    "melee_strength": 8,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004472271914132379,
+            "rolls": 1
+        },
+        {
+            "id": 5295,
+            "name": "Ranarr seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00436109899694723,
+            "rolls": 1
+        },
+        {
+            "id": 5105,
+            "name": "Whiteberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0038022813688212928,
+            "rolls": 1
+        },
+        {
+            "id": 5282,
+            "name": "Mushroom spore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00324254215304799,
+            "rolls": 1
+        },
+        {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0030193236714975845,
+            "rolls": 1
+        },
+        {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002012882447665056,
+            "rolls": 1
+        },
+        {
+            "id": 5297,
+            "name": "Irit seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002012882447665056,
+            "rolls": 1
+        },
+        {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0014536996656490768,
+            "rolls": 1
+        },
+        {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013419216317767043,
+            "rolls": 1
+        },
+        {
+            "id": 5280,
+            "name": "Cactus seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013419216317767043,
+            "rolls": 1
+        },
+        {
+            "id": 5100,
+            "name": "Limpwurt seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.015313935681470138,
+            "rolls": 1
+        },
+        {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0010063399416322834,
+            "rolls": 1
+        },
+        {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0008945343948474819,
+            "rolls": 1
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005590965000559097,
+            "rolls": 1
+        },
+        {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004472872031131189,
+            "rolls": 1
+        },
+        {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003354579000335458,
+            "rolls": 1
+        },
+        {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00022363860002236387,
+            "rolls": 1
+        },
+        {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00011182055038074897,
+            "rolls": 1
         },
         {
             "id": 2377,
@@ -67,7 +227,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7842,
@@ -76,7 +236,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.25,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13477,
@@ -85,7 +245,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03333333333333333,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.014641288433382138,
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -94,7 +263,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -103,7 +272,61 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 5292,
+            "name": "Marrentill seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.013986013986013986,
+            "rolls": 1
+        },
+        {
+            "id": 5104,
+            "name": "Jangerberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0102880658436214,
+            "rolls": 1
+        },
+        {
+            "id": 5293,
+            "name": "Tarromin seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009505703422053232,
+            "rolls": 1
+        },
+        {
+            "id": 5311,
+            "name": "Wildblood seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.009285051067780872,
+            "rolls": 1
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007042253521126761,
+            "rolls": 1
+        },
+        {
+            "id": 5294,
+            "name": "Harralander seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.006261740763932373,
+            "rolls": 1
         }
     ]
 }

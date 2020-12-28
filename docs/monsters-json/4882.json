@@ -1,13 +1,14 @@
 {
     "id": 4882,
     "name": "Karamel",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2006-03-15",
     "combat_level": 136,
     "size": 1,
     "hitpoints": 250,
-    "max_hit": 0,
+    "max_hit": null,
     "attack_type": [
         "ranged",
         "magic"
@@ -15,6 +16,7 @@
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Pure evil lightly whipped with a juicy cherry on top.",
-    "icon": null,
     "wiki_name": "Karamel (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Karamel#Normal",
     "attack_level": 1,
@@ -33,20 +34,17 @@
     "defence_level": 100,
     "magic_level": 1,
     "ranged_level": 100,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 134,
+    "ranged_bonus": 55,
     "defence_stab": 150,
     "defence_slash": 150,
     "defence_crush": 150,
     "defence_magic": 150,
     "defence_ranged": 150,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 55,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 6794,
@@ -55,7 +53,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

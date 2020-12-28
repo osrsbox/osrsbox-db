@@ -1,6 +1,7 @@
 {
     "id": 9293,
     "name": "Basilisk Knight",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2019-09-26",
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -33,7 +35,6 @@
     ],
     "duplicate": false,
     "examine": "The greater eyes of evil.",
-    "icon": null,
     "wiki_name": "Basilisk Knight",
     "wiki_url": "https://oldschool.runescape.wiki/w/Basilisk_Knight",
     "attack_level": 186,
@@ -41,83 +42,98 @@
     "defence_level": 186,
     "magic_level": 186,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 30,
     "defence_slash": 30,
     "defence_crush": 0,
     "defence_magic": 30,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1073,
-            "name": "Adamant platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.019230769230769232,
-            "drop_requirements": null
-        },
-        {
-            "id": 1199,
-            "name": "Adamant kiteshield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.019230769230769232,
-            "drop_requirements": null
-        },
-        {
-            "id": 1359,
-            "name": "Rune axe",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": 0.038461538461538464,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 1373,
-            "name": "Rune battleaxe",
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
             "quantity": "1",
             "noted": false,
             "rarity": 0.019230769230769232,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 1213,
-            "name": "Rune dagger",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.019230769230769232,
-            "drop_requirements": null
+            "rarity": 0.009615384615384616,
+            "rolls": 1
         },
         {
-            "id": 1333,
-            "name": "Rune scimitar",
+            "id": 1452,
+            "name": "Chaos talisman",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.019230769230769232,
-            "drop_requirements": null
+            "rarity": 0.0036054875520542262,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0036054875520542262,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002403846153846154,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.001201923076923077,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001201923076923077,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001201923076923077,
+            "rolls": 1
         },
         {
             "id": 1247,
@@ -125,17 +141,35 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.019230769230769232,
-            "drop_requirements": null
+            "rarity": 7.512019230769231e-05,
+            "rolls": 1
         },
         {
-            "id": 1147,
-            "name": "Rune med helm",
+            "id": 2366,
+            "name": "Shield left half",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.019230769230769232,
-            "drop_requirements": null
+            "rarity": 3.7560096153846156e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 2.8167871500423642e-05,
+            "rolls": 1
+        },
+        {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
         },
         {
             "id": 9075,
@@ -144,34 +178,34 @@
             "quantity": "15-35",
             "noted": false,
             "rarity": 0.11538461538461539,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 561,
             "name": "Nature rune",
-            "members": true,
+            "members": false,
             "quantity": "15-30",
             "noted": false,
             "rarity": 0.11538461538461539,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 563,
             "name": "Law rune",
-            "members": true,
+            "members": false,
             "quantity": "20-30",
             "noted": false,
             "rarity": 0.11538461538461539,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "10-25",
             "noted": false,
             "rarity": 0.057692307692307696,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -180,25 +214,79 @@
             "quantity": "8-20",
             "noted": false,
             "rarity": 0.057692307692307696,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
-            "name": "Coins",
+            "id": 211,
+            "name": "Grimy avantoe",
             "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.01802776275464215,
+            "rolls": 1
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.014423770373575652,
+            "rolls": 1
+        },
+        {
+            "id": 3051,
+            "name": "Grimy snapdragon",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.014423770373575652,
+            "rolls": 1
+        },
+        {
+            "id": 219,
+            "name": "Grimy torstol",
+            "members": true,
+            "quantity": "1",
+            "noted": true,
+            "rarity": 0.010817827780181739,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
             "quantity": "500-2499",
             "noted": false,
             "rarity": 0.1346153846153846,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1073,
+            "name": "Adamant platelegs",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.019230769230769232,
+            "rolls": 1
         },
         {
             "id": 449,
             "name": "Adamantite ore",
-            "members": true,
+            "members": false,
             "quantity": "1-2",
             "noted": true,
             "rarity": 0.019230769230769232,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1199,
+            "name": "Adamant kiteshield",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.019230769230769232,
+            "rolls": 1
         },
         {
             "id": 7899,
@@ -207,7 +295,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.25,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -215,8 +303,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.015782828282828284,
-            "drop_requirements": null
+            "rarity": 0.015873015873015872,
+            "rolls": 1
         },
         {
             "id": 4109,
@@ -225,7 +313,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -234,7 +322,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.005208333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7977,
@@ -243,7 +331,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -252,7 +340,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 24268,
@@ -261,7 +349,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -270,142 +358,61 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 199,
-            "name": "Grimy guam leaf",
+            "id": 1359,
+            "name": "Rune axe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.038461538461538464,
+            "rolls": 1
+        },
+        {
+            "id": 1373,
+            "name": "Rune battleaxe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.019230769230769232,
+            "rolls": 1
+        },
+        {
+            "id": 1213,
+            "name": "Rune dagger",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.019230769230769232,
+            "rolls": 1
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.019230769230769232,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.014423076923076924,
-            "drop_requirements": null
+            "rarity": 0.019230769230769232,
+            "rolls": 1
         },
         {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
+            "id": 1147,
+            "name": "Rune med helm",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.010817983816296211,
-            "drop_requirements": null
-        },
-        {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.008113107536536029,
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.006309997560134277,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.004956383822363204,
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003605769230769231,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0027047495401925784,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0022536057692307695,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0018028846153846155,
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013520578320203348,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013520578320203348,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": 0.018028846153846156,
-            "drop_requirements": null
-        },
-        {
-            "id": 3051,
-            "name": "Grimy snapdragon",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": 0.014423076923076924,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": 0.014423076923076924,
-            "drop_requirements": null
-        },
-        {
-            "id": 219,
-            "name": "Grimy torstol",
-            "members": true,
-            "quantity": "1",
-            "noted": true,
-            "rarity": 0.010817983816296211,
-            "drop_requirements": null
+            "rarity": 0.019230769230769232,
+            "rolls": 1
         }
     ]
 }

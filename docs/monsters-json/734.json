@@ -1,6 +1,7 @@
 {
     "id": 734,
     "name": "Bandit",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-04-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Tough-looking.",
-    "icon": null,
     "wiki_name": "Bandit (Pollnivneach) (No beard)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Bandit_(Pollnivneach)#No_beard",
     "attack_level": 59,
@@ -32,56 +33,179 @@
     "defence_level": 30,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 9,
+    "strength_bonus": 9,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 9,
     "defence_crush": 8,
     "defence_magic": 10,
     "defence_ranged": 0,
-    "attack_accuracy": 9,
-    "melee_strength": 9,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.005859375,
+            "rolls": 1
         },
         {
-            "id": 617,
-            "name": "Coins",
+            "id": 1621,
+            "name": "Uncut emerald",
             "members": true,
-            "quantity": "10-300",
+            "quantity": "1",
             "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
+            "rarity": 0.0029296875,
+            "rolls": 1
         },
         {
-            "id": 617,
-            "name": "Coins",
+            "id": 1619,
+            "name": "Uncut ruby",
             "members": true,
-            "quantity": "40",
+            "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.00146484375,
+            "rolls": 1
         },
         {
-            "id": 617,
-            "name": "Coins",
+            "id": 1452,
+            "name": "Chaos talisman",
             "members": true,
-            "quantity": "50",
+            "quantity": "1",
             "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
+            "rarity": 0.000549273494258261,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000549273494258261,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003662109375,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.00018310546875,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018310546875,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00018310546875,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.1444091796875e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 5.7220458984375e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.291199173892664e-06,
+            "rolls": 1
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01282051282051282,
+            "rolls": 1
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00510204081632653,
+            "rolls": 1
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009017132551848512,
+            "rolls": 1
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0033444816053511705,
+            "rolls": 1
+        },
+        {
+            "id": 23490,
+            "name": "Larran's key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.011111111111111112,
+            "rolls": 1
+        },
+        {
+            "id": 21257,
+            "name": "Slayer's enchantment",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00510204081632653,
+            "rolls": 1
         }
     ]
 }

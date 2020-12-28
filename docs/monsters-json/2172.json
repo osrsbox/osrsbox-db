@@ -1,13 +1,14 @@
 {
     "id": 2172,
     "name": "TzHaar-Xil",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-09-19",
     "combat_level": 133,
     "size": 1,
     "hitpoints": 120,
-    "max_hit": 0,
+    "max_hit": 13,
     "attack_type": [
         "crush",
         "ranged"
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": true,
     "examine": "Doesn't look very social.",
-    "icon": null,
     "wiki_name": "TzHaar-Xil",
     "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Xil",
     "attack_level": 140,
@@ -39,20 +40,17 @@
     "defence_level": 100,
     "magic_level": 40,
     "ranged_level": 120,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 6522,
@@ -61,7 +59,7 @@
             "quantity": "9-29",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6523,
@@ -70,7 +68,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6525,
@@ -79,7 +77,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6568,
@@ -88,7 +86,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6529,
@@ -97,43 +95,43 @@
             "quantity": "1-59",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1623,
             "name": "Uncut sapphire",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1621,
             "name": "Uncut emerald",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1619,
             "name": "Uncut ruby",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1617,
             "name": "Uncut diamond",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

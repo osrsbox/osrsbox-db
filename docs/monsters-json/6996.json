@@ -1,6 +1,7 @@
 {
     "id": 6996,
     "name": "Mugger",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "He jumps out and attacks people.",
-    "icon": null,
     "wiki_name": "Mugger",
     "wiki_url": "https://oldschool.runescape.wiki/w/Mugger",
     "attack_level": 5,
@@ -32,20 +33,17 @@
     "defence_level": 5,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": -21,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": -21,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
@@ -54,7 +52,97 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.008726003490401396,
+            "rolls": 1
+        },
+        {
+            "id": 209,
+            "name": "Grimy irit leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.006349206349206349,
+            "rolls": 1
+        },
+        {
+            "id": 211,
+            "name": "Grimy avantoe",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00475963826749167,
+            "rolls": 1
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003966679888932963,
+            "rolls": 1
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0031735956839098697,
+            "rolls": 1
+        },
+        {
+            "id": 2485,
+            "name": "Grimy lantadyme",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00238038562247084,
+            "rolls": 1
+        },
+        {
+            "id": 217,
+            "name": "Grimy dwarf weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00238038562247084,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.1015625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.09375,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
             "id": 877,
@@ -63,70 +151,16 @@
             "quantity": "2-12",
             "noted": false,
             "rarity": 0.2109375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 558,
-            "name": "Mind rune",
+            "id": 995,
+            "name": "Coins",
             "members": false,
-            "quantity": "9",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 555,
-            "name": "Water rune",
-            "members": false,
-            "quantity": "6",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": false,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": 0.1015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.09375,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
             "quantity": "25",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 954,
@@ -135,7 +169,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 946,
@@ -144,7 +178,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 313,
@@ -153,7 +187,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 436,
@@ -162,7 +196,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1139,
@@ -171,7 +205,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1965,
@@ -180,7 +214,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
@@ -189,7 +223,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2677,
@@ -198,7 +232,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 558,
+            "name": "Mind rune",
+            "members": false,
+            "quantity": "9",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 555,
+            "name": "Water rune",
+            "members": false,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
         },
         {
             "id": 199,
@@ -206,8 +267,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.025390625,
-            "drop_requirements": null
+            "rarity": 0.025380710659898477,
+            "rolls": 1
         },
         {
             "id": 201,
@@ -215,8 +276,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.01904415900993812,
-            "drop_requirements": null
+            "rarity": 0.01904761904761905,
+            "rolls": 1
         },
         {
             "id": 203,
@@ -224,8 +285,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.014282449725776965,
-            "drop_requirements": null
+            "rarity": 0.014285714285714285,
+            "rolls": 1
         },
         {
             "id": 205,
@@ -233,71 +294,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.011108224871486383,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.008725300687285224,
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00634765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.004761486169714018,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00396728515625,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003173828125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.002380185141785798,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.002380185141785798,
-            "drop_requirements": null
+            "rarity": 0.011111111111111112,
+            "rolls": 1
         }
     ]
 }

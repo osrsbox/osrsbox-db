@@ -1,6 +1,7 @@
 {
     "id": 6382,
     "name": "Jungle Demon",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2004-12-06",
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -27,7 +29,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "A Greater Jungle demon. A magical aura emanates from its hide.",
-    "icon": null,
     "wiki_name": "Jungle Demon (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Jungle_Demon#Normal",
     "attack_level": 170,
@@ -35,29 +36,26 @@
     "defence_level": 170,
     "magic_level": 170,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 50,
+    "strength_bonus": 50,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 50,
     "defence_crush": 0,
     "defence_magic": 50,
     "defence_ranged": 0,
-    "attack_accuracy": 50,
-    "melee_strength": 50,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 592,
             "name": "Ashes",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

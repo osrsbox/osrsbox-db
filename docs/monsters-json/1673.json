@@ -1,19 +1,21 @@
 {
     "id": 1673,
     "name": "Dharok the Wretched",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-05-09",
     "combat_level": 115,
     "size": 1,
     "hitpoints": 100,
-    "max_hit": 0,
+    "max_hit": 29,
     "attack_type": [
         "slash"
     ],
     "attack_speed": 7,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": false,
     "examine": "A vengeful spirit corrupted by dark magic.",
-    "icon": null,
     "wiki_name": "Dharok the Wretched",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dharok_the_Wretched",
     "attack_level": 100,
@@ -38,20 +39,17 @@
     "defence_level": 100,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 105,
     "attack_magic": -58,
+    "magic_bonus": 0,
     "attack_ranged": -18,
+    "ranged_bonus": 0,
     "defence_stab": 252,
     "defence_slash": 250,
     "defence_crush": 244,
     "defence_magic": -11,
     "defence_ranged": 249,
-    "attack_accuracy": 0,
-    "melee_strength": 105,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 23083,
@@ -60,7 +58,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.010309278350515464,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

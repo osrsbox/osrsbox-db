@@ -24,6 +24,8 @@ from pathlib import Path
 
 import requests
 
+import config
+
 LOG = logging.getLogger(__name__)
 
 
@@ -32,16 +34,10 @@ class WikiPageText:
 
     :param base_url: The OSRS Wiki URL used for API queries.
     :param page_title: OSRS Wiki page titles used for API query.
-    :param user_agent: A custom user-agent name to be used for the API request.
-    :param user_email: A custom user-agent email to be used for the API request.
     """
-    def __init__(self, base_url: str, page_title: str, user_agent: str, user_email: str):
+    def __init__(self, base_url: str, page_title: str):
         self.base_url = base_url
         self.page_title = page_title
-        self.custom_agent = {
-            'User-Agent': user_agent,
-            'From': user_email
-        }
         self.wiki_text = None
 
     def extract_page_wiki_text(self):
@@ -61,7 +57,7 @@ class WikiPageText:
         # Perform HTTP GET request
         try:
             page_data = requests.get(self.base_url,
-                                     headers=self.custom_agent,
+                                     headers=config.custom_agent,
                                      params=request).json()
         except requests.exceptions.RequestException as e:
             raise SystemExit(">>> ERROR: Get request error. Exiting.") from e

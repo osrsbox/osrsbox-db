@@ -1,6 +1,7 @@
 {
     "id": 6086,
     "name": "Gnome woman",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2002-12-12",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "A female gnome.",
-    "icon": null,
     "wiki_name": "Gnome woman (1)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Gnome_woman#1",
     "attack_level": 1,
@@ -32,83 +33,26 @@
     "defence_level": 1,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": -42,
+    "strength_bonus": -42,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -42,
     "defence_slash": -42,
     "defence_crush": -42,
     "defence_magic": -42,
     "defence_ranged": -42,
-    "attack_accuracy": -42,
-    "melee_strength": -42,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "300",
-            "noted": false,
-            "rarity": 0.234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0625,
-            "drop_requirements": null
-        },
-        {
-            "id": 2150,
-            "name": "Swamp toad (item)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.21875,
-            "drop_requirements": null
-        },
-        {
-            "id": 2162,
-            "name": "King worm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.4296875,
-            "drop_requirements": null
-        },
-        {
-            "id": 569,
-            "name": "Fire orb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

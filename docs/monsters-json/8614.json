@@ -1,6 +1,7 @@
 {
     "id": 8614,
     "name": "Sulphur Lizard",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2019-01-10",
@@ -14,11 +15,12 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
     "category": [
-        "lizards"
+        "lizard"
     ],
     "slayer_monster": true,
     "slayer_level": 44,
@@ -32,7 +34,6 @@
     ],
     "duplicate": false,
     "examine": "A cold-blooded creature, partial to warmth.",
-    "icon": null,
     "wiki_name": "Sulphur Lizard",
     "wiki_url": "https://oldschool.runescape.wiki/w/Sulphur_Lizard",
     "attack_level": 50,
@@ -40,173 +41,170 @@
     "defence_level": 30,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 15,
     "defence_slash": 25,
     "defence_crush": 25,
     "defence_magic": 0,
     "defence_ranged": 15,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
-            "id": 526,
-            "name": "Bones",
+            "id": 1623,
+            "name": "Uncut sapphire",
             "members": true,
             "quantity": "1",
             "noted": false,
+            "rarity": 0.01171875,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005859375,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0029296875,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001098546988516522,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001098546988516522,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000732421875,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.0003662109375,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003662109375,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003662109375,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 2.288818359375e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.1444091796875e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 8.582398347785329e-06,
+            "rolls": 1
+        },
+        {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "10-25",
-            "noted": false,
-            "rarity": 0.203125,
-            "drop_requirements": null
-        },
-        {
-            "id": 554,
-            "name": "Fire rune",
-            "members": true,
-            "quantity": "40-60",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "5-10",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "5-10",
-            "noted": true,
-            "rarity": 0.16796875,
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "5-10",
-            "noted": true,
-            "rarity": 0.1015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 2351,
-            "name": "Iron bar",
-            "members": true,
-            "quantity": "6-10",
-            "noted": true,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2353,
-            "name": "Steel bar",
-            "members": true,
-            "quantity": "3-5",
-            "noted": true,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 438,
-            "name": "Tin ore",
-            "members": true,
-            "quantity": "10-15",
-            "noted": true,
-            "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 436,
             "name": "Copper ore",
-            "members": true,
+            "members": false,
             "quantity": "10-15",
             "noted": true,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 442,
             "name": "Silver ore",
-            "members": true,
+            "members": false,
             "quantity": "5-10",
             "noted": true,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2355,
             "name": "Silver bar",
-            "members": true,
+            "members": false,
             "quantity": "3-5",
             "noted": true,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 447,
             "name": "Mithril ore",
-            "members": true,
+            "members": false,
             "quantity": "3-5",
             "noted": true,
             "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 10136,
-            "name": "Rainbow fish",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 4115,
-            "name": "Mystic gloves (light)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0020833333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 199,
@@ -215,7 +213,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 201,
@@ -223,8 +221,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.014649353084567784,
-            "drop_requirements": null
+            "rarity": 0.014641288433382138,
+            "rolls": 1
         },
         {
             "id": 203,
@@ -232,8 +230,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.010986499789059204,
-            "drop_requirements": null
+            "rarity": 0.01098901098901099,
+            "rolls": 1
         },
         {
             "id": 205,
@@ -241,8 +239,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.008544788362681834,
-            "drop_requirements": null
+            "rarity": 0.008547008547008548,
+            "rolls": 1
         },
         {
             "id": 207,
@@ -250,8 +248,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.006711769759450172,
-            "drop_requirements": null
+            "rarity": 0.006715916722632639,
+            "rolls": 1
         },
         {
             "id": 209,
@@ -260,7 +258,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0048828125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": false,
+            "quantity": "10-25",
+            "noted": false,
+            "rarity": 0.203125,
+            "rolls": 1
         },
         {
             "id": 211,
@@ -268,8 +275,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.003662681669010783,
-            "drop_requirements": null
+            "rarity": 0.003661662394727206,
+            "rolls": 1
         },
         {
             "id": 213,
@@ -277,8 +284,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0030517578125,
-            "drop_requirements": null
+            "rarity": 0.003051571559353067,
+            "rolls": 1
         },
         {
             "id": 215,
@@ -287,7 +294,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00244140625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -295,8 +302,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0018309116475275368,
-            "drop_requirements": null
+            "rarity": 0.0018311664530305805,
+            "rolls": 1
         },
         {
             "id": 217,
@@ -304,8 +311,233 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0018309116475275368,
-            "drop_requirements": null
+            "rarity": 0.0018311664530305805,
+            "rolls": 1
+        },
+        {
+            "id": 5318,
+            "name": "Potato seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 5319,
+            "name": "Onion seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.018867924528301886,
+            "rolls": 1
+        },
+        {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.0125,
+            "rolls": 1
+        },
+        {
+            "id": 5322,
+            "name": "Tomato seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.00625,
+            "rolls": 1
+        },
+        {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.003115264797507788,
+            "rolls": 1
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": false,
+            "quantity": "40-60",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.001557632398753894,
+            "rolls": 1
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0007446016381236039,
+            "rolls": 1
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0005414185165132648,
+            "rolls": 1
+        },
+        {
+            "id": 5305,
+            "name": "Barley seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.0004830917874396135,
+            "rolls": 1
+        },
+        {
+            "id": 5307,
+            "name": "Hammerstone seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.000481000481000481,
+            "rolls": 1
+        },
+        {
+            "id": 5308,
+            "name": "Asgarnian seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.000362844702467344,
+            "rolls": 1
+        },
+        {
+            "id": 5306,
+            "name": "Jute seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.00036075036075036075,
+            "rolls": 1
+        },
+        {
+            "id": 5309,
+            "name": "Yanillian seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0002405002405002405,
+            "rolls": 1
+        },
+        {
+            "id": 5310,
+            "name": "Krandorian seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.00012023566189731875,
+            "rolls": 1
+        },
+        {
+            "id": 5311,
+            "name": "Wildblood seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.117330397014743e-05,
+            "rolls": 1
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "5-10",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 10136,
+            "name": "Rainbow fish",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1015625,
+            "rolls": 1
+        },
+        {
+            "id": 4115,
+            "name": "Mystic gloves (light)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": false,
+            "quantity": "5-10",
+            "noted": true,
+            "rarity": 0.16796875,
+            "rolls": 1
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": false,
+            "quantity": "5-10",
+            "noted": true,
+            "rarity": 0.1015625,
+            "rolls": 1
+        },
+        {
+            "id": 2351,
+            "name": "Iron bar",
+            "members": false,
+            "quantity": "6-10",
+            "noted": true,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 2353,
+            "name": "Steel bar",
+            "members": false,
+            "quantity": "3-5",
+            "noted": true,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 438,
+            "name": "Tin ore",
+            "members": false,
+            "quantity": "10-15",
+            "noted": true,
+            "rarity": 0.03125,
+            "rolls": 1
         }
     ]
 }

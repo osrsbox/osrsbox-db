@@ -1,6 +1,7 @@
 {
     "id": 7797,
     "name": "Ancient Zygomite",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2017-09-07",
@@ -16,6 +17,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -33,7 +35,6 @@
     ],
     "duplicate": false,
     "examine": "Not in the ground anymore! It looks a little wobbly.",
-    "icon": null,
     "wiki_name": "Ancient Zygomite",
     "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_Zygomite",
     "attack_level": 80,
@@ -41,21 +42,126 @@
     "defence_level": 80,
     "magic_level": 80,
     "ranged_level": 80,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 50,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 20,
     "defence_slash": 20,
     "defence_crush": 20,
     "defence_magic": 30,
     "defence_ranged": 30,
-    "attack_accuracy": 50,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0125,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00625,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003125,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011717834544176236,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011717834544176236,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00078125,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.000390625,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000390625,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000390625,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 2.44140625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.220703125e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 9.154558237637684e-06,
+            "rolls": 1
+        },
         {
             "id": 2970,
             "name": "Mort myre fungus",
@@ -63,79 +169,7 @@
             "quantity": "1-2",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1359,
-            "name": "Rune axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "100",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1-2",
-            "noted": true,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 219,
-            "name": "Grimy torstol",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1-2",
-            "noted": true,
-            "rarity": 0.03333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 217,
@@ -144,7 +178,7 @@
             "quantity": "1-2",
             "noted": true,
             "rarity": 0.03333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -153,7 +187,7 @@
             "quantity": "1-2",
             "noted": true,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5282,
@@ -162,7 +196,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5321,
@@ -171,7 +205,7 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -180,7 +214,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21486,
@@ -189,7 +223,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5314,
@@ -198,7 +232,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -207,7 +241,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5288,
@@ -216,7 +250,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -225,7 +259,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1359,
+            "name": "Rune axe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
         },
         {
             "id": 21488,
@@ -234,7 +277,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -243,7 +286,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5295,
@@ -252,7 +295,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -261,7 +304,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -270,7 +313,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22877,
@@ -279,7 +322,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -288,7 +331,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22871,
@@ -297,7 +340,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5317,
@@ -306,7 +349,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21555,
@@ -315,7 +358,16 @@
             "quantity": "7-19",
             "noted": false,
             "rarity": 0.36,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": false,
+            "quantity": "100",
+            "noted": false,
+            "rarity": 0.125,
+            "rolls": 1
         },
         {
             "id": 21562,
@@ -324,7 +376,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.02,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21564,
@@ -333,7 +385,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21566,
@@ -342,7 +394,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.008,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21568,
@@ -351,7 +403,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21545,
@@ -360,7 +412,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.16666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21543,
@@ -369,7 +421,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.16666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 6034,
@@ -378,7 +430,7 @@
             "quantity": "2",
             "noted": true,
             "rarity": 0.1,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2970,
@@ -387,7 +439,7 @@
             "quantity": "5",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21622,
@@ -396,7 +448,25 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.020833333333333332,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.05,
+            "rolls": 1
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.05,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -404,8 +474,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.012729124236252545,
-            "drop_requirements": null
+            "rarity": 0.01282051282051282,
+            "rolls": 1
         },
         {
             "id": 2801,
@@ -414,7 +484,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.05,
+            "rolls": 1
+        },
+        {
+            "id": 213,
+            "name": "Grimy kwuarm",
+            "members": true,
+            "quantity": "1-2",
+            "noted": true,
+            "rarity": 0.05,
+            "rolls": 1
+        },
+        {
+            "id": 219,
+            "name": "Grimy torstol",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.05,
+            "rolls": 1
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "1-2",
+            "noted": true,
+            "rarity": 0.03333333333333333,
+            "rolls": 1
         }
     ]
 }

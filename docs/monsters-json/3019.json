@@ -1,6 +1,7 @@
 {
     "id": 3019,
     "name": "Spider",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2001-01-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": false,
     "examine": "Incey wincey.",
-    "icon": null,
     "wiki_name": "Spider (Common)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Spider#Common",
     "attack_level": 1,
@@ -38,20 +39,17 @@
     "defence_level": 1,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": -35,
+    "strength_bonus": -58,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -53,
     "defence_slash": -53,
     "defence_crush": -53,
     "defence_magic": -53,
     "defence_ranged": -53,
-    "attack_accuracy": -35,
-    "melee_strength": -58,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 11941,
@@ -60,7 +58,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.06666666666666667,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23182,
@@ -69,7 +67,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -77,8 +75,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0005070222582771384,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.0005070993914807302,
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -87,7 +85,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.003134796238244514,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
         }
     ]
 }

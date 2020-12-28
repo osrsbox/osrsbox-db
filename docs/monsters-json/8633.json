@@ -1,6 +1,7 @@
 {
     "id": 8633,
     "name": "The Mimic",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2019-04-11",
@@ -15,6 +16,7 @@
     "attack_speed": 3,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -25,7 +27,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Oh great, it's a casket that's come to life.",
-    "icon": null,
     "wiki_name": "The Mimic",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Mimic",
     "attack_level": 185,
@@ -33,20 +34,17 @@
     "defence_level": 120,
     "magic_level": 60,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 135,
+    "strength_bonus": 48,
     "attack_magic": 180,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 160,
     "defence_slash": 165,
     "defence_crush": 150,
     "defence_magic": 30,
     "defence_ranged": 145,
-    "attack_accuracy": 135,
-    "melee_strength": 48,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 8782,
@@ -55,16 +53,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "480,600",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -73,7 +71,7 @@
             "quantity": "400,500",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 207,
@@ -82,7 +80,7 @@
             "quantity": "25",
             "noted": true,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 389,
@@ -91,232 +89,25 @@
             "quantity": "15",
             "noted": true,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 245,
             "name": "Wine of zamorak",
-            "members": true,
+            "members": false,
             "quantity": "25",
             "noted": true,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23185,
             "name": "Ring of 3rd age",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 10350,
-            "name": "3rd age full helmet",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10348,
-            "name": "3rd age platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10346,
-            "name": "3rd age platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 23242,
-            "name": "3rd age plateskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10352,
-            "name": "3rd age kiteshield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10334,
-            "name": "3rd age range coif",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10330,
-            "name": "3rd age range top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10332,
-            "name": "3rd age range legs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10336,
-            "name": "3rd age vambraces",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10342,
-            "name": "3rd age mage hat",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10338,
-            "name": "3rd age robe top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10340,
-            "name": "3rd age robe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 10344,
-            "name": "3rd age amulet",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 12426,
-            "name": "3rd age longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 12424,
-            "name": "3rd age bow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 12422,
-            "name": "3rd age wand",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 12437,
-            "name": "3rd age cloak",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 23336,
-            "name": "3rd age druidic robe top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 23339,
-            "name": "3rd age druidic robe bottoms",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 23345,
-            "name": "3rd age druidic cloak",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 23342,
-            "name": "3rd age druidic staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 20014,
-            "name": "3rd age pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
-        },
-        {
-            "id": 20011,
-            "name": "3rd age axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00019069412662090009,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

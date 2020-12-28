@@ -39,6 +39,7 @@ class MonsterProperties:
     """
     id: int = None
     name: str = None
+    last_updated: str = None
     incomplete: bool = None
     members: bool = None
     release_date: str = None
@@ -50,6 +51,7 @@ class MonsterProperties:
     attack_speed: int = None
     aggressive: bool = None
     poisonous: bool = None
+    venomous: bool = None
     immune_poison: bool = None
     immune_venom: bool = None
     attributes: List = None
@@ -60,7 +62,6 @@ class MonsterProperties:
     slayer_masters: List = None
     duplicate: bool = None
     examine: str = None
-    icon: str = None
     wiki_name: str = None
     wiki_url: str = None
     attack_level: int = None
@@ -68,25 +69,22 @@ class MonsterProperties:
     defence_level: int = None
     magic_level: int = None
     ranged_level: int = None
-    attack_stab: int = None
-    attack_slash: int = None
-    attack_crush: int = None
+    attack_bonus: int = None
+    strength_bonus: int = None
     attack_magic: int = None
+    magic_bonus: int = None
     attack_ranged: int = None
+    ranged_bonus: int = None
     defence_stab: int = None
     defence_slash: int = None
     defence_crush: int = None
     defence_magic: int = None
     defence_ranged: int = None
-    attack_accuracy: int = None
-    melee_strength: int = None
-    ranged_strength: int = None
-    magic_damage: int = None
-    drops: Dict = None
+    drops: List = None
 
     @classmethod
     def from_json(cls, json_dict: Dict) -> List[MonsterDrop]:
-        """Convert the dict under the 'drops' key into actual :class:`MonsterDrop`"""
+        """Convert the list under the 'drops' key into actual :class:`MonsterDrop`"""
         monster_drops = list()
         if json_dict.get("drops"):
             for drop in json_dict["drops"]:

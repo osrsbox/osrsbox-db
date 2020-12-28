@@ -1,6 +1,7 @@
 {
     "id": 2264,
     "name": "Dagannoth fledgeling",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-11-07",
@@ -14,25 +15,19 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
     "category": [
         "dagannoth"
     ],
-    "slayer_monster": true,
-    "slayer_level": 1,
+    "slayer_monster": false,
+    "slayer_level": null,
     "slayer_xp": 0.0,
-    "slayer_masters": [
-        "vannaka",
-        "chaeldar",
-        "konar",
-        "nieve",
-        "duradel"
-    ],
+    "slayer_masters": [],
     "duplicate": false,
     "examine": "A knee-high horror from the ocean depths.",
-    "icon": null,
     "wiki_name": "Dagannoth fledgeling",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dagannoth_fledgeling",
     "attack_level": 50,
@@ -40,29 +35,26 @@
     "defence_level": 50,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -71,7 +63,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0035714285714285713,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

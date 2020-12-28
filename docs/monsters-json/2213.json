@@ -1,6 +1,7 @@
 {
     "id": 2213,
     "name": "Knight of Saradomin",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
@@ -14,6 +15,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "A valiant knight.",
-    "icon": null,
     "wiki_name": "Knight of Saradomin (Level 103)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Knight_of_Saradomin#Level_103",
     "attack_level": 70,
@@ -32,29 +33,26 @@
     "defence_level": 70,
     "magic_level": 60,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 8,
+    "strength_bonus": 8,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 10,
     "defence_slash": 10,
     "defence_crush": 7,
     "defence_magic": 0,
     "defence_ranged": 13,
-    "attack_accuracy": 8,
-    "melee_strength": 8,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -63,7 +61,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11942,
@@ -72,7 +70,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -81,7 +79,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

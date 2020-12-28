@@ -1,6 +1,7 @@
 {
     "id": 2175,
     "name": "TzHaar-Ket",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-09-19",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": true,
     "examine": "Must be a guard or something.",
-    "icon": null,
     "wiki_name": "TzHaar-Ket (Level 149)",
     "wiki_url": "https://oldschool.runescape.wiki/w/TzHaar-Ket#Level_149",
     "attack_level": 120,
@@ -38,227 +39,16 @@
     "defence_level": 120,
     "magic_level": 40,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
-    "drops": [
-        {
-            "id": 6528,
-            "name": "Tzhaar-ket-om",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6524,
-            "name": "Toktz-ket-xil",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6568,
-            "name": "Obsidian cape",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
-            "members": true,
-            "quantity": "1-4,20",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6529,
-            "name": "Tokkul",
-            "members": true,
-            "quantity": "1-103",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 13498,
-            "name": "Ensouled tzhaar head",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02857142857142857,
-            "drop_requirements": null
-        },
-        {
-            "id": 6528,
-            "name": "Tzhaar-ket-om",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6524,
-            "name": "Toktz-ket-xil",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6568,
-            "name": "Obsidian cape",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 21298,
-            "name": "Obsidian helmet",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005,
-            "drop_requirements": null
-        },
-        {
-            "id": 21301,
-            "name": "Obsidian platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005,
-            "drop_requirements": null
-        },
-        {
-            "id": 21304,
-            "name": "Obsidian platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005,
-            "drop_requirements": null
-        },
-        {
-            "id": 1623,
-            "name": "Uncut sapphire",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
-            "members": true,
-            "quantity": "1-4,20",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 6529,
-            "name": "Tokkul",
-            "members": true,
-            "quantity": "1-103",
-            "noted": false,
-            "rarity": 0.125,
-            "drop_requirements": null
-        },
-        {
-            "id": 13498,
-            "name": "Ensouled tzhaar head",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.02857142857142857,
-            "drop_requirements": null
-        }
-    ]
+    "drops": []
 }

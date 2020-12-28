@@ -1,19 +1,21 @@
 {
     "id": 5908,
     "name": "Abyssal Sire",
-    "incomplete": true,
+    "last_updated": "2020-12-25",
+    "incomplete": false,
     "members": true,
     "release_date": "2015-10-01",
     "combat_level": 350,
     "size": 6,
     "hitpoints": 400,
-    "max_hit": 0,
+    "max_hit": 66,
     "attack_type": [
         "melee"
     ],
     "attack_speed": 7,
     "aggressive": false,
     "poisonous": true,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -35,7 +37,6 @@
     ],
     "duplicate": false,
     "examine": "It's desperate.",
-    "icon": null,
     "wiki_name": "Abyssal Sire (Phase 3 (stage 2))",
     "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_Sire#Phase_3_(stage_2)",
     "attack_level": 180,
@@ -43,101 +44,26 @@
     "defence_level": 250,
     "magic_level": 200,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 65,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 40,
     "defence_slash": 60,
     "defence_crush": 50,
     "defence_magic": 20,
     "defence_ranged": 60,
-    "attack_accuracy": 65,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 592,
             "name": "Ashes",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1391,
-            "name": "Battlestaff",
-            "members": true,
-            "quantity": "10",
-            "noted": true,
-            "rarity": 0.04316546762589928,
-            "drop_requirements": null
-        },
-        {
-            "id": 1163,
-            "name": "Rune full helm",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": 0.02877697841726619,
-            "drop_requirements": null
-        },
-        {
-            "id": 3054,
-            "name": "Mystic lava staff",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": 0.02877697841726619,
-            "drop_requirements": null
-        },
-        {
-            "id": 1289,
-            "name": "Rune sword",
-            "members": true,
-            "quantity": "3",
-            "noted": true,
-            "rarity": 0.02877697841726619,
-            "drop_requirements": null
-        },
-        {
-            "id": 1127,
-            "name": "Rune platebody",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": 0.02877697841726619,
-            "drop_requirements": null
-        },
-        {
-            "id": 1201,
-            "name": "Rune kiteshield",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": 0.02158273381294964,
-            "drop_requirements": null
-        },
-        {
-            "id": 1405,
-            "name": "Mystic air staff",
-            "members": true,
-            "quantity": "2",
-            "noted": true,
-            "rarity": 0.014388489208633094,
-            "drop_requirements": null
-        },
-        {
-            "id": 1397,
-            "name": "Air battlestaff",
-            "members": true,
-            "quantity": "6",
-            "noted": true,
-            "rarity": 0.014388489208633094,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -146,25 +72,25 @@
             "quantity": "190-210",
             "noted": false,
             "rarity": 0.03597122302158273,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "330-370",
             "noted": false,
             "rarity": 0.03597122302158273,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 563,
             "name": "Law rune",
-            "members": true,
+            "members": false,
             "quantity": "250",
             "noted": false,
             "rarity": 0.03597122302158273,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 566,
@@ -173,16 +99,16 @@
             "quantity": "225-275",
             "noted": false,
             "rarity": 0.03597122302158273,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 564,
             "name": "Cosmic rune",
-            "members": true,
+            "members": false,
             "quantity": "350",
             "noted": false,
             "rarity": 0.02877697841726619,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2,
@@ -191,7 +117,7 @@
             "quantity": "300",
             "noted": false,
             "rarity": 0.02877697841726619,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 213,
@@ -200,7 +126,7 @@
             "quantity": "25",
             "noted": true,
             "rarity": 0.010277492291880781,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 217,
@@ -209,7 +135,7 @@
             "quantity": "25",
             "noted": true,
             "rarity": 0.009250693802035153,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -218,7 +144,7 @@
             "quantity": "25",
             "noted": true,
             "rarity": 0.009250693802035153,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -227,241 +153,16 @@
             "quantity": "25",
             "noted": true,
             "rarity": 0.007194244604316547,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 453,
-            "name": "Coal",
+            "id": 1391,
+            "name": "Battlestaff",
             "members": true,
-            "quantity": "380-420",
+            "quantity": "10",
             "noted": true,
             "rarity": 0.04316546762589928,
-            "drop_requirements": null
-        },
-        {
-            "id": 575,
-            "name": "Earth orb",
-            "members": true,
-            "quantity": "47-53",
-            "noted": true,
-            "rarity": 0.03597122302158273,
-            "drop_requirements": null
-        },
-        {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "600",
-            "noted": true,
-            "rarity": 0.03597122302158273,
-            "drop_requirements": null
-        },
-        {
-            "id": 1513,
-            "name": "Magic logs",
-            "members": true,
-            "quantity": "50-70",
-            "noted": true,
-            "rarity": 0.03597122302158273,
-            "drop_requirements": null
-        },
-        {
-            "id": 1617,
-            "name": "Uncut diamond",
-            "members": true,
-            "quantity": "15",
-            "noted": true,
-            "rarity": 0.03597122302158273,
-            "drop_requirements": null
-        },
-        {
-            "id": 451,
-            "name": "Runite ore",
-            "members": true,
-            "quantity": "6",
-            "noted": true,
-            "rarity": 0.02877697841726619,
-            "drop_requirements": null
-        },
-        {
-            "id": 9194,
-            "name": "Onyx bolt tips",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": 0.02158273381294964,
-            "drop_requirements": null
-        },
-        {
-            "id": 2363,
-            "name": "Runite bar",
-            "members": true,
-            "quantity": "5",
-            "noted": true,
-            "rarity": 0.014388489208633094,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "48000-52000",
-            "noted": false,
-            "rarity": 0.07913669064748201,
-            "drop_requirements": null
-        },
-        {
-            "id": 7054,
-            "name": "Chilli potato",
-            "members": true,
-            "quantity": "10",
-            "noted": false,
-            "rarity": 0.050359712230215826,
-            "drop_requirements": null
-        },
-        {
-            "id": 3024,
-            "name": "Super restore(4)",
-            "members": true,
-            "quantity": "4",
-            "noted": false,
-            "rarity": 0.03597122302158273,
-            "drop_requirements": null
-        },
-        {
-            "id": 5521,
-            "name": "Binding necklace",
-            "members": true,
-            "quantity": "25",
-            "noted": true,
-            "rarity": 0.02877697841726619,
-            "drop_requirements": null
-        },
-        {
-            "id": 6687,
-            "name": "Saradomin brew(3)",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": 0.014388489208633094,
-            "drop_requirements": null
-        },
-        {
-            "id": 1937,
-            "name": "Jug of water",
-            "members": true,
-            "quantity": "250-350",
-            "noted": true,
-            "rarity": 0.014388489208633094,
-            "drop_requirements": null
-        },
-        {
-            "id": 13273,
-            "name": "Unsired",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01,
-            "drop_requirements": null
-        },
-        {
-            "id": 23083,
-            "name": "Brimstone key",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.025,
-            "drop_requirements": null
-        },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005555555555555556,
-            "drop_requirements": null
-        },
-        {
-            "id": 1438,
-            "name": "Air talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003083247687564234,
-            "drop_requirements": null
-        },
-        {
-            "id": 1446,
-            "name": "Body talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003083247687564234,
-            "drop_requirements": null
-        },
-        {
-            "id": 1440,
-            "name": "Earth talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003083247687564234,
-            "drop_requirements": null
-        },
-        {
-            "id": 1442,
-            "name": "Fire talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003083247687564234,
-            "drop_requirements": null
-        },
-        {
-            "id": 1448,
-            "name": "Mind talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003083247687564234,
-            "drop_requirements": null
-        },
-        {
-            "id": 1444,
-            "name": "Water talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.003083247687564234,
-            "drop_requirements": null
-        },
-        {
-            "id": 1454,
-            "name": "Cosmic talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0012332990750256938,
-            "drop_requirements": null
-        },
-        {
-            "id": 1452,
-            "name": "Chaos talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0009249743062692703,
-            "drop_requirements": null
-        },
-        {
-            "id": 1462,
-            "name": "Nature talisman",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0009249743062692703,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5295,
@@ -469,8 +170,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.0043167194313671825,
-            "drop_requirements": null
+            "rarity": 0.0043159257660768235,
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -478,8 +179,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.004028583606404158,
-            "drop_requirements": null
+            "rarity": 0.0040290088638195,
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -487,8 +188,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.0031664808997872128,
-            "drop_requirements": null
+            "rarity": 0.0031655587211142765,
+            "rolls": 1
         },
         {
             "id": 5321,
@@ -497,7 +198,7 @@
             "quantity": "30",
             "noted": false,
             "rarity": 0.0028776978417266188,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -506,7 +207,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.0028776978417266188,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21488,
@@ -514,8 +215,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.002589720879883566,
-            "drop_requirements": null
+            "rarity": 0.00259000259000259,
+            "rolls": 1
         },
         {
             "id": 5314,
@@ -523,8 +224,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.002589720879883566,
-            "drop_requirements": null
+            "rarity": 0.00259000259000259,
+            "rolls": 1
         },
         {
             "id": 21486,
@@ -532,8 +233,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.002589720879883566,
-            "drop_requirements": null
+            "rarity": 0.00259000259000259,
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -541,8 +242,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.002589720879883566,
-            "drop_requirements": null
+            "rarity": 0.00259000259000259,
+            "rolls": 1
         },
         {
             "id": 5288,
@@ -550,8 +251,17 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.0020140662386104553,
-            "drop_requirements": null
+            "rarity": 0.00201450443190975,
+            "rolls": 1
+        },
+        {
+            "id": 1163,
+            "name": "Rune full helm",
+            "members": false,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.02877697841726619,
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -559,8 +269,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.0017268950082372893,
-            "drop_requirements": null
+            "rarity": 0.0017265193370165745,
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -569,7 +279,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.0014388489208633094,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5317,
@@ -577,8 +287,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.0011510791366906475,
-            "drop_requirements": null
+            "rarity": 0.0011510128913443832,
+            "rolls": 1
         },
         {
             "id": 22877,
@@ -586,8 +296,8 @@
             "members": true,
             "quantity": "2",
             "noted": false,
-            "rarity": 0.0008632402932945221,
-            "drop_requirements": null
+            "rarity": 0.00086333419666753,
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -596,7 +306,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.0005755395683453237,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22871,
@@ -605,7 +315,295 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.0005755395683453237,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": false,
+            "quantity": "380-420",
+            "noted": true,
+            "rarity": 0.04316546762589928,
+            "rolls": 1
+        },
+        {
+            "id": 575,
+            "name": "Earth orb",
+            "members": true,
+            "quantity": "47-53",
+            "noted": true,
+            "rarity": 0.03597122302158273,
+            "rolls": 1
+        },
+        {
+            "id": 7936,
+            "name": "Pure essence",
+            "members": false,
+            "quantity": "600",
+            "noted": true,
+            "rarity": 0.03597122302158273,
+            "rolls": 1
+        },
+        {
+            "id": 1513,
+            "name": "Magic logs",
+            "members": true,
+            "quantity": "50-70",
+            "noted": true,
+            "rarity": 0.03597122302158273,
+            "rolls": 1
+        },
+        {
+            "id": 3054,
+            "name": "Mystic lava staff",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.02877697841726619,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": false,
+            "quantity": "15",
+            "noted": true,
+            "rarity": 0.03597122302158273,
+            "rolls": 1
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
+            "members": false,
+            "quantity": "6",
+            "noted": true,
+            "rarity": 0.02877697841726619,
+            "rolls": 1
+        },
+        {
+            "id": 9194,
+            "name": "Onyx bolt tips",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.02158273381294964,
+            "rolls": 1
+        },
+        {
+            "id": 2363,
+            "name": "Runite bar",
+            "members": false,
+            "quantity": "5",
+            "noted": true,
+            "rarity": 0.014388489208633094,
+            "rolls": 1
+        },
+        {
+            "id": 1438,
+            "name": "Air talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003083564600678384,
+            "rolls": 1
+        },
+        {
+            "id": 1446,
+            "name": "Body talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003083564600678384,
+            "rolls": 1
+        },
+        {
+            "id": 1440,
+            "name": "Earth talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003083564600678384,
+            "rolls": 1
+        },
+        {
+            "id": 1442,
+            "name": "Fire talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003083564600678384,
+            "rolls": 1
+        },
+        {
+            "id": 1448,
+            "name": "Mind talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003083564600678384,
+            "rolls": 1
+        },
+        {
+            "id": 1444,
+            "name": "Water talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003083564600678384,
+            "rolls": 1
+        },
+        {
+            "id": 1289,
+            "name": "Rune sword",
+            "members": false,
+            "quantity": "3",
+            "noted": true,
+            "rarity": 0.02877697841726619,
+            "rolls": 1
+        },
+        {
+            "id": 1454,
+            "name": "Cosmic talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00123334977799704,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009249838127832763,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009249838127832763,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "48000-52000",
+            "noted": false,
+            "rarity": 0.07913669064748201,
+            "rolls": 1
+        },
+        {
+            "id": 7054,
+            "name": "Chilli potato",
+            "members": true,
+            "quantity": "10",
+            "noted": false,
+            "rarity": 0.050359712230215826,
+            "rolls": 1
+        },
+        {
+            "id": 3024,
+            "name": "Super restore(4)",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.03597122302158273,
+            "rolls": 1
+        },
+        {
+            "id": 5521,
+            "name": "Binding necklace",
+            "members": true,
+            "quantity": "25",
+            "noted": true,
+            "rarity": 0.02877697841726619,
+            "rolls": 1
+        },
+        {
+            "id": 6687,
+            "name": "Saradomin brew(3)",
+            "members": true,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.014388489208633094,
+            "rolls": 1
+        },
+        {
+            "id": 1937,
+            "name": "Jug of water",
+            "members": false,
+            "quantity": "250-350",
+            "noted": true,
+            "rarity": 0.014388489208633094,
+            "rolls": 1
+        },
+        {
+            "id": 13273,
+            "name": "Unsired",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01,
+            "rolls": 1
+        },
+        {
+            "id": 1127,
+            "name": "Rune platebody",
+            "members": false,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.02877697841726619,
+            "rolls": 1
+        },
+        {
+            "id": 1201,
+            "name": "Rune kiteshield",
+            "members": false,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.02158273381294964,
+            "rolls": 1
+        },
+        {
+            "id": 1405,
+            "name": "Mystic air staff",
+            "members": true,
+            "quantity": "2",
+            "noted": true,
+            "rarity": 0.014388489208633094,
+            "rolls": 1
+        },
+        {
+            "id": 23083,
+            "name": "Brimstone key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.025,
+            "rolls": 1
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005555555555555556,
+            "rolls": 1
+        },
+        {
+            "id": 1397,
+            "name": "Air battlestaff",
+            "members": true,
+            "quantity": "6",
+            "noted": true,
+            "rarity": 0.014388489208633094,
+            "rolls": 1
         }
     ]
 }

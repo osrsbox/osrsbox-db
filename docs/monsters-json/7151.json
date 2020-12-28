@@ -1,6 +1,7 @@
 {
     "id": 7151,
     "name": "Tortured gorilla",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2016-05-06",
@@ -16,6 +17,7 @@
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": true,
     "examine": "One of Glough's tortured experiments.",
-    "icon": null,
     "wiki_name": "Tortured gorilla (Level 141)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Tortured_gorilla#Level_141",
     "attack_level": 105,
@@ -39,101 +40,26 @@
     "defence_level": 95,
     "magic_level": 95,
     "ranged_level": 95,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 22,
+    "strength_bonus": 16,
     "attack_magic": 20,
+    "magic_bonus": 16,
     "attack_ranged": 22,
+    "ranged_bonus": 16,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 25,
     "defence_ranged": 0,
-    "attack_accuracy": 22,
-    "melee_strength": 16,
-    "ranged_strength": 16,
-    "magic_damage": 16,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 19529,
-            "name": "Zenyte shard",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0003333333333333333,
-            "drop_requirements": null
-        },
-        {
-            "id": 19592,
-            "name": "Ballista limbs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0002,
-            "drop_requirements": null
-        },
-        {
-            "id": 19601,
-            "name": "Ballista spring",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0002,
-            "drop_requirements": null
-        },
-        {
-            "id": 19586,
-            "name": "Light frame",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00013333333333333334,
-            "drop_requirements": null
-        },
-        {
-            "id": 19589,
-            "name": "Heavy frame",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 6.666666666666667e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 19610,
-            "name": "Monkey tail",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 6.666666666666667e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 1147,
-            "name": "Rune med helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9143,
@@ -142,34 +68,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 557,
             "name": "Earth rune",
-            "members": true,
+            "members": false,
             "quantity": "401-599",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 564,
             "name": "Cosmic rune",
-            "members": true,
+            "members": false,
             "quantity": "22-30",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "12-20",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -178,7 +104,7 @@
             "quantity": "1",
             "noted": true,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 213,
@@ -187,7 +113,7 @@
             "quantity": "1",
             "noted": true,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 217,
@@ -196,7 +122,7 @@
             "quantity": "1",
             "noted": true,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5295,
@@ -205,7 +131,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -214,7 +140,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -223,7 +149,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 19529,
+            "name": "Zenyte shard",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003333333333333333,
+            "rolls": 1
         },
         {
             "id": 5321,
@@ -232,7 +167,7 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5313,
@@ -241,7 +176,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21488,
@@ -250,7 +185,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5314,
@@ -259,7 +194,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21486,
@@ -268,7 +203,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -277,7 +212,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5288,
@@ -286,7 +221,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5316,
@@ -295,7 +230,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5289,
@@ -304,7 +239,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5317,
@@ -313,7 +248,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 19592,
+            "name": "Ballista limbs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
+            "rolls": 1
         },
         {
             "id": 22877,
@@ -322,7 +266,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22869,
@@ -331,7 +275,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22871,
@@ -340,7 +284,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.001953125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 19584,
@@ -349,25 +293,25 @@
             "quantity": "100-299",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2361,
             "name": "Adamantite bar",
-            "members": true,
+            "members": false,
             "quantity": "1-2",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1603,
             "name": "Ruby",
-            "members": true,
+            "members": false,
             "quantity": "2-3",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 19580,
@@ -376,7 +320,7 @@
             "quantity": "10",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 19582,
@@ -385,7 +329,7 @@
             "quantity": "5",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 385,
@@ -394,7 +338,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 143,
@@ -403,16 +347,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
-            "name": "Coins",
+            "id": 19601,
+            "name": "Ballista spring",
             "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0002,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
             "quantity": "1171-1969",
             "noted": false,
             "rarity": 0.125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 19586,
+            "name": "Light frame",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00013333333333333334,
+            "rolls": 1
+        },
+        {
+            "id": 19589,
+            "name": "Heavy frame",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.666666666666667e-05,
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -421,7 +392,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0033333333333333335,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -430,7 +401,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -439,7 +410,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0006666666666666666,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 19610,
+            "name": "Monkey tail",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 6.666666666666667e-05,
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -448,7 +428,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1147,
+            "name": "Rune med helm",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1333,
+            "name": "Rune scimitar",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
         }
     ]
 }

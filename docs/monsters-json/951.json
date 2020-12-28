@@ -1,6 +1,7 @@
 {
     "id": 951,
     "name": "Mummy",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-04-26",
@@ -9,11 +10,13 @@
     "hitpoints": 90,
     "max_hit": 6,
     "attack_type": [
+        "melee",
         "crush"
     ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -26,7 +29,6 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "A wizened old warrior.",
-    "icon": null,
     "wiki_name": "Mummy (Level 84)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Mummy#Level_84",
     "attack_level": 90,
@@ -34,371 +36,16 @@
     "defence_level": 90,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 30,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 90,
     "defence_slash": 90,
     "defence_crush": 30,
     "defence_magic": 90,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 30,
-    "ranged_strength": 0,
-    "magic_damage": 0,
-    "drops": [
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 592,
-            "name": "Ashes",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 592,
-            "name": "Ashes",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1185,
-            "name": "Rune sq shield",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005847953216374269,
-            "drop_requirements": null
-        },
-        {
-            "id": 1333,
-            "name": "Rune scimitar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005847953216374269,
-            "drop_requirements": null
-        },
-        {
-            "id": 4675,
-            "name": "Ancient staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 1635,
-            "name": "Gold ring",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.07797270955165692,
-            "drop_requirements": null
-        },
-        {
-            "id": 1673,
-            "name": "Gold amulet (u)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.04873294346978557,
-            "drop_requirements": null
-        },
-        {
-            "id": 1654,
-            "name": "Gold necklace",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 1656,
-            "name": "Sapphire necklace",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 1637,
-            "name": "Sapphire ring",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 1677,
-            "name": "Emerald amulet (u)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 1639,
-            "name": "Emerald ring",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 2566,
-            "name": "Ring of dueling(1)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "36",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "95",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "106",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "183",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "222",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "46",
-            "noted": false,
-            "rarity": 0.03313840155945419,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "472",
-            "noted": false,
-            "rarity": 0.01949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 1939,
-            "name": "Swamp tar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.05847953216374269,
-            "drop_requirements": null
-        },
-        {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 950,
-            "name": "Silk",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.07797270955165692,
-            "drop_requirements": null
-        },
-        {
-            "id": 970,
-            "name": "Papyrus",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.08576998050682261,
-            "drop_requirements": null
-        },
-        {
-            "id": 405,
-            "name": "Casket",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005847953216374269,
-            "drop_requirements": null
-        },
-        {
-            "id": 2357,
-            "name": "Gold bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03898635477582846,
-            "drop_requirements": null
-        },
-        {
-            "id": 2801,
-            "name": "Clue scroll (medium)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001949317738791423,
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0014619883040935672,
-            "drop_requirements": null
-        },
-        {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0010965597630553663,
-            "drop_requirements": null
-        },
-        {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0008223812707599872,
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0006396098891364179,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005024014790699544,
-            "drop_requirements": null
-        },
-        {
-            "id": 209,
-            "name": "Grimy irit leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0003654970760233918,
-            "drop_requirements": null
-        },
-        {
-            "id": 211,
-            "name": "Grimy avantoe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00027416564539963753,
-            "drop_requirements": null
-        },
-        {
-            "id": 213,
-            "name": "Grimy kwuarm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00022843567251461987,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0001827485380116959,
-            "drop_requirements": null
-        },
-        {
-            "id": 2485,
-            "name": "Grimy lantadyme",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00013705069642311386,
-            "drop_requirements": null
-        },
-        {
-            "id": 217,
-            "name": "Grimy dwarf weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00013705069642311386,
-            "drop_requirements": null
-        }
-    ]
+    "drops": []
 }

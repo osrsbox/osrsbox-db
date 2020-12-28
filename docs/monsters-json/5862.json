@@ -1,6 +1,7 @@
 {
     "id": 5862,
     "name": "Cerberus",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2015-08-27",
@@ -16,6 +17,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -35,7 +37,6 @@
     ],
     "duplicate": false,
     "examine": "A three-headed gigantic hound. Guardian of the River of Souls.",
-    "icon": null,
     "wiki_name": "Cerberus",
     "wiki_url": "https://oldschool.runescape.wiki/w/Cerberus",
     "attack_level": 220,
@@ -43,119 +44,44 @@
     "defence_level": 100,
     "magic_level": 220,
     "ranged_level": 220,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 50,
+    "strength_bonus": 0,
     "attack_magic": 50,
+    "magic_bonus": 0,
     "attack_ranged": 50,
+    "ranged_bonus": 0,
     "defence_stab": 50,
     "defence_slash": 100,
     "defence_crush": 25,
     "defence_magic": 100,
     "defence_ranged": 100,
-    "attack_accuracy": 50,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 592,
             "name": "Ashes",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 13231,
-            "name": "Primordial crystal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 13229,
-            "name": "Pegasian crystal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 13227,
-            "name": "Eternal crystal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 13233,
-            "name": "Smouldering stone",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1127,
-            "name": "Rune platebody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1113,
-            "name": "Rune chainbody",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1319,
-            "name": "Rune 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2503,
-            "name": "Black d'hide body",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1359,
             "name": "Rune axe",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1275,
             "name": "Rune pickaxe",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1391,
@@ -164,16 +90,16 @@
             "quantity": "6",
             "noted": true,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1163,
             "name": "Rune full helm",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3053,
@@ -182,7 +108,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3202,
@@ -191,16 +117,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 554,
             "name": "Fire rune",
-            "members": true,
+            "members": false,
             "quantity": "300",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 566,
@@ -209,16 +135,16 @@
             "quantity": "100",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7936,
             "name": "Pure essence",
-            "members": true,
+            "members": false,
             "quantity": "300",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -227,7 +153,16 @@
             "quantity": "60",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 13231,
+            "name": "Primordial crystal",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 2,
@@ -236,7 +171,7 @@
             "quantity": "50",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9381,
@@ -245,25 +180,25 @@
             "quantity": "40",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "100",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 453,
             "name": "Coal",
-            "members": true,
+            "members": false,
             "quantity": "120",
             "noted": true,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3024,
@@ -272,7 +207,7 @@
             "quantity": "2",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7218,
@@ -281,16 +216,16 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "10000-20000",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 536,
@@ -299,7 +234,7 @@
             "quantity": "20",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1724,
@@ -308,25 +243,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 245,
             "name": "Wine of zamorak",
-            "members": true,
+            "members": false,
             "quantity": "15",
             "noted": true,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 13229,
+            "name": "Pegasian crystal",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
         },
         {
             "id": 592,
             "name": "Ashes",
-            "members": true,
+            "members": false,
             "quantity": "50",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 569,
@@ -335,7 +279,7 @@
             "quantity": "20",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 219,
@@ -344,25 +288,25 @@
             "quantity": "6",
             "noted": true,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 451,
             "name": "Runite ore",
-            "members": true,
+            "members": false,
             "quantity": "5",
             "noted": true,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1617,
             "name": "Uncut diamond",
-            "members": true,
+            "members": false,
             "quantity": "5",
             "noted": true,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13249,
@@ -371,7 +315,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5304,
@@ -380,7 +324,34 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 13227,
+            "name": "Eternal crystal",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 13233,
+            "name": "Smouldering stone",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1127,
+            "name": "Rune platebody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -388,8 +359,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.01773049645390071,
-            "drop_requirements": null
+            "rarity": 0.017857142857142856,
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -398,7 +369,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13245,
@@ -407,7 +378,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0005,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13247,
@@ -416,7 +387,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0003333333333333333,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1113,
+            "name": "Rune chainbody",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1319,
+            "name": "Rune 2h sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 2503,
+            "name": "Black d'hide body",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
         }
     ]
 }

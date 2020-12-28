@@ -1,6 +1,7 @@
 {
     "id": 7932,
     "name": "Revenant pyrefiend",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2017-11-23",
@@ -16,6 +17,7 @@
     "attack_speed": 5,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -36,7 +38,6 @@
     ],
     "duplicate": false,
     "examine": "The ghost of a pyrefiend slain long ago.",
-    "icon": null,
     "wiki_name": "Revenant pyrefiend",
     "wiki_url": "https://oldschool.runescape.wiki/w/Revenant_pyrefiend",
     "attack_level": 60,
@@ -44,101 +45,26 @@
     "defence_level": 33,
     "magic_level": 67,
     "ranged_level": 40,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 45,
     "defence_slash": 40,
     "defence_crush": 50,
     "defence_magic": 15,
     "defence_ranged": 10,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 21820,
             "name": "Revenant ether",
             "members": true,
-            "quantity": "1-8",
+            "quantity": "2-16",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 22557,
-            "name": "Amulet of avarice",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 3.184713375796178e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 22547,
-            "name": "Craw's bow (u)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.592356687898089e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 22552,
-            "name": "Thammaron's sceptre (u)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.592356687898089e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 22557,
-            "name": "Viggora's chainmace (u)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.592356687898089e-05,
-            "drop_requirements": null
-        },
-        {
-            "id": 21807,
-            "name": "Ancient emblem",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0004777070063694267,
-            "drop_requirements": null
-        },
-        {
-            "id": 21810,
-            "name": "Ancient totem",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0003980891719745223,
-            "drop_requirements": null
-        },
-        {
-            "id": 21813,
-            "name": "Ancient statuette",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0003184713375796178,
-            "drop_requirements": null
-        },
-        {
-            "id": 21804,
-            "name": "Ancient crystal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00023885350318471335,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22299,
@@ -146,8 +72,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0001592356687898089,
-            "drop_requirements": null
+            "rarity": 7.961783439490445e-05,
+            "rolls": 1
         },
         {
             "id": 22302,
@@ -156,7 +82,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 7.961783439490445e-05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 22305,
@@ -165,7 +91,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 7.961783439490445e-05,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 21816,
+            "name": "Bracelet of ethereum",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03667033370003667,
+            "rolls": 1
         },
         {
             "id": 1391,
@@ -173,62 +108,62 @@
             "members": true,
             "quantity": "3",
             "noted": true,
-            "rarity": 0.011416897007571205,
-            "drop_requirements": null
-        },
-        {
-            "id": 21817,
-            "name": "Bracelet of ethereum (uncharged)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.034250691022713615,
-            "drop_requirements": null
+            "rarity": 0.01222344456667889,
+            "rolls": 1
         },
         {
             "id": 1163,
             "name": "Rune full helm",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.004889736443205711,
+            "rolls": 1
         },
         {
             "id": 1127,
             "name": "Rune platebody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.004889736443205711,
+            "rolls": 1
         },
         {
             "id": 1079,
             "name": "Rune platelegs",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.004889736443205711,
+            "rolls": 1
         },
         {
             "id": 1201,
             "name": "Rune kiteshield",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.004889736443205711,
+            "rolls": 1
         },
         {
             "id": 1347,
             "name": "Rune warhammer",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.004889736443205711,
+            "rolls": 1
+        },
+        {
+            "id": 22557,
+            "name": "Amulet of avarice",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 3.184713375796178e-05,
+            "rolls": 1
         },
         {
             "id": 4087,
@@ -236,8 +171,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.002283379401514241,
-            "drop_requirements": null
+            "rarity": 0.0012224191675325468,
+            "rolls": 1
         },
         {
             "id": 4585,
@@ -245,8 +180,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.002283379401514241,
-            "drop_requirements": null
+            "rarity": 0.0012224191675325468,
+            "rolls": 1
         },
         {
             "id": 1215,
@@ -254,8 +189,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.002283379401514241,
-            "drop_requirements": null
+            "rarity": 0.0024448084492580007,
+            "rolls": 1
         },
         {
             "id": 1305,
@@ -263,8 +198,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.002283379401514241,
-            "drop_requirements": null
+            "rarity": 0.0024448084492580007,
+            "rolls": 1
         },
         {
             "id": 1149,
@@ -272,107 +207,134 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.001035031847133758,
-            "drop_requirements": null
+            "rarity": 0.0010350359674998707,
+            "rolls": 1
         },
         {
             "id": 453,
             "name": "Coal",
-            "members": true,
-            "quantity": "50-100",
+            "members": false,
+            "quantity": "25-40",
             "noted": true,
-            "rarity": 0.013700276409085447,
-            "drop_requirements": null
+            "rarity": 0.014669209329617133,
+            "rolls": 1
         },
         {
             "id": 2361,
             "name": "Adamantite bar",
-            "members": true,
-            "quantity": "8-12",
+            "members": false,
+            "quantity": "4-6",
             "noted": true,
-            "rarity": 0.013700276409085447,
-            "drop_requirements": null
+            "rarity": 0.014669209329617133,
+            "rolls": 1
         },
         {
             "id": 451,
             "name": "Runite ore",
-            "members": true,
-            "quantity": "3-6",
+            "members": false,
+            "quantity": "1-3",
             "noted": true,
-            "rarity": 0.013700276409085447,
-            "drop_requirements": null
+            "rarity": 0.009778994719342852,
+            "rolls": 1
         },
         {
             "id": 2363,
             "name": "Runite bar",
-            "members": true,
-            "quantity": "3-5",
+            "members": false,
+            "quantity": "1-2",
             "noted": true,
-            "rarity": 0.013700276409085447,
-            "drop_requirements": null
+            "rarity": 0.0073346046648085665,
+            "rolls": 1
         },
         {
             "id": 1747,
             "name": "Black dragonhide",
             "members": true,
-            "quantity": "10-15",
+            "quantity": "3-4",
             "noted": true,
-            "rarity": 0.013700276409085447,
-            "drop_requirements": null
+            "rarity": 0.009778994719342852,
+            "rolls": 1
+        },
+        {
+            "id": 22550,
+            "name": "Craw's bow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.592356687898089e-05,
+            "rolls": 1
         },
         {
             "id": 8782,
             "name": "Mahogany plank",
             "members": true,
-            "quantity": "15-25",
+            "quantity": "5-12",
             "noted": true,
-            "rarity": 0.011416897007571205,
-            "drop_requirements": null
+            "rarity": 0.0073346046648085665,
+            "rolls": 1
         },
         {
             "id": 391,
             "name": "Manta ray",
             "members": true,
-            "quantity": "30-50",
+            "quantity": "10-15",
             "noted": true,
-            "rarity": 0.0068501382045427234,
-            "drop_requirements": null
+            "rarity": 0.009778994719342852,
+            "rolls": 1
         },
         {
             "id": 1515,
             "name": "Yew logs",
-            "members": true,
-            "quantity": "60-100",
+            "members": false,
+            "quantity": "20-40",
             "noted": true,
-            "rarity": 0.0068501382045427234,
-            "drop_requirements": null
+            "rarity": 0.009778994719342852,
+            "rolls": 1
         },
         {
             "id": 1513,
             "name": "Magic logs",
             "members": true,
-            "quantity": "15-25",
+            "quantity": "5-12",
             "noted": true,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.004889736443205711,
+            "rolls": 1
         },
         {
             "id": 1631,
             "name": "Uncut dragonstone",
             "members": true,
-            "quantity": "5-7",
+            "quantity": "2-5",
             "noted": true,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.0024448084492580007,
+            "rolls": 1
+        },
+        {
+            "id": 5315,
+            "name": "Yew seed",
+            "members": true,
+            "quantity": "2-7",
+            "noted": false,
+            "rarity": 0.0003184713375796178,
+            "rolls": 1
         },
         {
             "id": 5316,
             "name": "Magic seed",
             "members": true,
-            "quantity": "5-9",
+            "quantity": "2-7",
             "noted": false,
             "rarity": 0.0003184713375796178,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "1-176",
+            "noted": false,
+            "rarity": 0.7575757575757576,
+            "rolls": 1
         },
         {
             "id": 21802,
@@ -380,62 +342,71 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.015983655810599687,
-            "drop_requirements": null
+            "rarity": 0.01222344456667889,
+            "rolls": 1
         },
         {
             "id": 3024,
             "name": "Super restore(4)",
             "members": true,
-            "quantity": "3-5",
+            "quantity": "1-3",
             "noted": true,
-            "rarity": 0.009133517606056964,
-            "drop_requirements": null
+            "rarity": 0.0073346046648085665,
+            "rolls": 1
+        },
+        {
+            "id": 22555,
+            "name": "Thammaron's sceptre",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.592356687898089e-05,
+            "rolls": 1
         },
         {
             "id": 9193,
             "name": "Dragonstone bolt tips",
             "members": true,
-            "quantity": "40-70",
+            "quantity": "15-30",
             "noted": false,
-            "rarity": 0.009133517606056964,
-            "drop_requirements": null
+            "rarity": 0.0073346046648085665,
+            "rolls": 1
         },
         {
             "id": 9194,
             "name": "Onyx bolt tips",
             "members": true,
-            "quantity": "5-10",
+            "quantity": "2-4",
             "noted": false,
-            "rarity": 0.009133517606056964,
-            "drop_requirements": null
+            "rarity": 0.0073346046648085665,
+            "rolls": 1
         },
         {
             "id": 563,
             "name": "Law rune",
-            "members": true,
-            "quantity": "80-120",
+            "members": false,
+            "quantity": "20-45",
             "noted": false,
-            "rarity": 0.004566758803028482,
-            "drop_requirements": null
+            "rarity": 0.01222344456667889,
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
-            "quantity": "60-100",
+            "members": false,
+            "quantity": "15-30",
             "noted": false,
-            "rarity": 0.0068501382045427234,
-            "drop_requirements": null
+            "rarity": 0.01222344456667889,
+            "rolls": 1
         },
         {
             "id": 565,
             "name": "Blood rune",
             "members": true,
-            "quantity": "60-100",
+            "quantity": "10-20",
             "noted": false,
-            "rarity": 0.0068501382045427234,
-            "drop_requirements": null
+            "rarity": 0.01222344456667889,
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -444,7 +415,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -452,8 +423,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.0029832935560859183,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.0029850746268656717,
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -462,7 +433,52 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0035460992907801418,
-            "drop_requirements": "krystilia-task-only"
+            "rolls": 1
+        },
+        {
+            "id": 22545,
+            "name": "Viggora's chainmace",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.592356687898089e-05,
+            "rolls": 1
+        },
+        {
+            "id": 21807,
+            "name": "Ancient emblem",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00047770776705058447,
+            "rolls": 1
+        },
+        {
+            "id": 21810,
+            "name": "Ancient totem",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003184713375796178,
+            "rolls": 1
+        },
+        {
+            "id": 21813,
+            "name": "Ancient statuette",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001592356687898089,
+            "rolls": 1
+        },
+        {
+            "id": 21804,
+            "name": "Ancient crystal",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00023885331301487818,
+            "rolls": 1
         }
     ]
 }

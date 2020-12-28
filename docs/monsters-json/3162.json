@@ -1,13 +1,14 @@
 {
     "id": 3162,
     "name": "Kree'arra",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 580,
     "size": 5,
     "hitpoints": 255,
-    "max_hit": 0,
+    "max_hit": 69,
     "attack_type": [
         "melee",
         "ranged",
@@ -16,6 +17,7 @@
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -34,7 +36,6 @@
     ],
     "duplicate": false,
     "examine": "Graceful avatar of Armadyl.",
-    "icon": null,
     "wiki_name": "Kree'arra",
     "wiki_url": "https://oldschool.runescape.wiki/w/Kree'arra",
     "attack_level": 300,
@@ -42,101 +43,26 @@
     "defence_level": 260,
     "magic_level": 200,
     "ranged_level": 380,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 136,
+    "strength_bonus": 12,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 120,
+    "ranged_bonus": 50,
     "defence_stab": 180,
     "defence_slash": 180,
     "defence_crush": 180,
     "defence_magic": 200,
     "defence_ranged": 200,
-    "attack_accuracy": 136,
-    "melee_strength": 12,
-    "ranged_strength": 50,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 314,
-            "name": "Feather",
-            "members": true,
-            "quantity": "1-16",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 11826,
-            "name": "Armadyl helmet",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026246719160104987,
-            "drop_requirements": null
-        },
-        {
-            "id": 11828,
-            "name": "Armadyl chestplate",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026246719160104987,
-            "drop_requirements": null
-        },
-        {
-            "id": 11830,
-            "name": "Armadyl chainskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026246719160104987,
-            "drop_requirements": null
-        },
-        {
-            "id": 11810,
-            "name": "Armadyl hilt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001968503937007874,
-            "drop_requirements": null
-        },
-        {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2503,
@@ -145,7 +71,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9185,
@@ -154,16 +80,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 558,
             "name": "Mind rune",
-            "members": true,
+            "members": false,
             "quantity": "586-601",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 892,
@@ -172,7 +98,7 @@
             "quantity": "100-105",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9144,
@@ -181,7 +107,7 @@
             "quantity": "20-25",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9244,
@@ -190,16 +116,16 @@
             "quantity": "5-10",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "19500-20000",
             "noted": false,
-            "rarity": 0.3440944881889764,
-            "drop_requirements": null
+            "rarity": 0.34409448818897637,
+            "rolls": 1
         },
         {
             "id": 169,
@@ -208,7 +134,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 163,
@@ -217,7 +143,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 217,
@@ -226,7 +152,16 @@
             "quantity": "8-13",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 314,
+            "name": "Feather",
+            "members": false,
+            "quantity": "1-16",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
         },
         {
             "id": 5303,
@@ -235,16 +170,16 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "20500-21000",
             "noted": false,
             "rarity": 0.00984251968503937,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 989,
@@ -253,7 +188,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.007874015748031496,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5315,
@@ -262,7 +197,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.007874015748031496,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1289,
+            "name": "Rune sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0024606299212598425,
+            "rolls": 1
+        },
+        {
+            "id": 11826,
+            "name": "Armadyl helmet",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026246719160104987,
+            "rolls": 1
+        },
+        {
+            "id": 11828,
+            "name": "Armadyl chestplate",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026246719160104987,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -270,8 +232,17 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.25,
-            "drop_requirements": null
+            "rarity": 0.02,
+            "rolls": 1
+        },
+        {
+            "id": 11830,
+            "name": "Armadyl chainskirt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026246719160104987,
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -280,7 +251,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.004,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -289,7 +260,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 12649,
@@ -298,7 +269,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -307,7 +278,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11810,
+            "name": "Armadyl hilt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001968503937007874,
+            "rolls": 1
+        },
+        {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
         }
     ]
 }

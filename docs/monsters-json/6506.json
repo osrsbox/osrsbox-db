@@ -1,6 +1,7 @@
 {
     "id": 6506,
     "name": "TzTok-Jad",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-10-04",
@@ -16,6 +17,7 @@
     "attack_speed": 8,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -32,7 +34,6 @@
     ],
     "duplicate": true,
     "examine": "This is going to hurt ...",
-    "icon": null,
     "wiki_name": "TzTok-Jad",
     "wiki_url": "https://oldschool.runescape.wiki/w/TzTok-Jad",
     "attack_level": 640,
@@ -40,20 +41,17 @@
     "defence_level": 480,
     "magic_level": 480,
     "ranged_level": 960,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 60,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 13225,
@@ -62,7 +60,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.005,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

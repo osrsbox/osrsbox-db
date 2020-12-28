@@ -1,6 +1,7 @@
 {
     "id": 6344,
     "name": "Dessous",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-04-18",
@@ -16,6 +17,7 @@
     "attack_speed": 3,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [
@@ -33,7 +35,6 @@
     ],
     "duplicate": true,
     "examine": "Vampyre warrior of Zamorak.",
-    "icon": null,
     "wiki_name": "Dessous (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Dessous#Normal",
     "attack_level": 99,
@@ -41,20 +42,17 @@
     "defence_level": 99,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 50,
+    "strength_bonus": 50,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 10,
     "defence_slash": 150,
     "defence_crush": 150,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 50,
-    "melee_strength": 50,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 3325,
@@ -63,7 +61,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

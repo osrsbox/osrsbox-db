@@ -24,8 +24,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from pathlib import Path
 
-from cerberus import Validator
-
 PROJECT_ROOT_PATH = Path(__file__).parent
 
 # Top level directories
@@ -54,22 +52,8 @@ SCRIPTS_MONSTERS = Path(SCRIPTS_PATH / "monsters")
 SCRIPTS_SCHEMAS = Path(SCRIPTS_PATH / "schemas")
 SCRIPTS_UPDATE = Path(SCRIPTS_PATH / "update")
 
-
-class MyValidator(Validator):
-    """Modification of the Cerberus Validator class to remove specific fields.
-
-    :param Validator: Subclass the Cerberus Validator class.
-    """
-    def _validate_description(self, description, field, value):
-        """Remove description field from Cerberus schema.
-        The rule's arguments are validated against this schema:
-        {'type': 'string'}
-        """
-        pass
-
-    def _validate_example(self, description, field, value):
-        """Remove example field from Cerberus schema.
-        The rule's arguments are validated against this schema:
-        {'type': 'string'}
-        """
-        pass
+# User agent for wiki scraping requests
+custom_agent = {
+    'User-Agent': "osrsbox-agent",
+    'From': "phoil@osrsbox.com"
+}

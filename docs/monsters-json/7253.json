@@ -1,13 +1,14 @@
 {
     "id": 7253,
     "name": "Bronze dragon",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2016-06-09",
     "combat_level": 143,
     "size": 4,
     "hitpoints": 122,
-    "max_hit": 0,
+    "max_hit": 14,
     "attack_type": [
         "slash",
         "dragonfire"
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [
@@ -34,7 +36,6 @@
     ],
     "duplicate": false,
     "examine": "Its scales seem to be made of bronze.",
-    "icon": null,
     "wiki_name": "Bronze dragon (Catacombs of Kourend)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Bronze_dragon#Catacombs_of_Kourend",
     "attack_level": 130,
@@ -42,21 +43,126 @@
     "defence_level": 112,
     "magic_level": 130,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 50,
     "defence_slash": 70,
     "defence_crush": 70,
     "defence_magic": 30,
     "defence_ranged": 90,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007323646590110147,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007323646590110147,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.52587890625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 7.62939453125e-06,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 5.721598898523552e-06,
+            "rolls": 1
+        },
         {
             "id": 536,
             "name": "Dragon bones",
@@ -64,106 +170,34 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 2349,
-            "name": "Bronze bar",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 4585,
-            "name": "Dragon plateskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00048828125,
-            "drop_requirements": null
-        },
-        {
-            "id": 4087,
-            "name": "Dragon platelegs",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00048828125,
-            "drop_requirements": null
-        },
-        {
-            "id": 816,
-            "name": "Adamant dart(p)",
-            "members": true,
-            "quantity": "16",
-            "noted": false,
-            "rarity": 0.0546875,
-            "drop_requirements": null
-        },
-        {
-            "id": 1315,
-            "name": "Mithril 2h sword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1355,
-            "name": "Mithril axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 1369,
-            "name": "Mithril battleaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 868,
-            "name": "Rune knife",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1197,
             "name": "Mithril kiteshield",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1123,
             "name": "Adamant platebody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1303,
             "name": "Rune longsword",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 829,
@@ -172,16 +206,16 @@
             "quantity": "30",
             "noted": false,
             "rarity": 0.15625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 554,
             "name": "Fire rune",
-            "members": true,
+            "members": false,
             "quantity": "50",
             "noted": false,
             "rarity": 0.0625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 9142,
@@ -190,16 +224,16 @@
             "quantity": "2-12",
             "noted": false,
             "rarity": 0.046875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 563,
             "name": "Law rune",
-            "members": true,
+            "members": false,
             "quantity": "10",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -208,70 +242,106 @@
             "quantity": "15",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "25",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "196",
             "noted": false,
             "rarity": 0.3125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 2349,
+            "name": "Bronze bar",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "330",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "690",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2361,
             "name": "Adamantite bar",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 373,
             "name": "Swordfish",
-            "members": true,
+            "members": false,
             "quantity": "2",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 373,
             "name": "Swordfish",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 4585,
+            "name": "Dragon plateskirt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 4087,
+            "name": "Dragon platelegs",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 816,
+            "name": "Adamant dart(p)",
+            "members": true,
+            "quantity": "16",
+            "noted": false,
+            "rarity": 0.0546875,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -279,8 +349,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.010660980810234541,
-            "drop_requirements": null
+            "rarity": 0.010752688172043012,
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -289,61 +359,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 4585,
-            "name": "Dragon plateskirt",
-            "members": true,
+            "id": 1315,
+            "name": "Mithril 2h sword",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
+            "rarity": 0.03125,
+            "rolls": 1
         },
         {
-            "id": 4087,
-            "name": "Dragon platelegs",
-            "members": true,
+            "id": 1355,
+            "name": "Mithril axe",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
-            "id": 19677,
-            "name": "Ancient shard",
-            "members": true,
+            "id": 1369,
+            "name": "Mithril battleaxe",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.003968253968253968,
-            "drop_requirements": "catacombs-only"
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
-            "id": 19679,
-            "name": "Dark totem base",
+            "id": 868,
+            "name": "Rune knife",
             "members": true,
-            "quantity": "1",
+            "quantity": "2",
             "noted": false,
-            "rarity": 0.0026455026455026454,
-            "drop_requirements": "catacombs-only"
-        },
-        {
-            "id": 19681,
-            "name": "Dark totem middle",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026455026455026454,
-            "drop_requirements": "catacombs-only"
-        },
-        {
-            "id": 19683,
-            "name": "Dark totem top",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026455026455026454,
-            "drop_requirements": "catacombs-only"
+            "rarity": 0.0234375,
+            "rolls": 1
         }
     ]
 }

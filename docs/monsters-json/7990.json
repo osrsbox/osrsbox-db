@@ -1,6 +1,7 @@
 {
     "id": 7990,
     "name": "Ogress Warrior",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": false,
     "release_date": "2017-12-07",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -28,7 +30,6 @@
     ],
     "duplicate": true,
     "examine": "A large angry ogre lady.",
-    "icon": null,
     "wiki_name": "Ogress Warrior",
     "wiki_url": "https://oldschool.runescape.wiki/w/Ogress_Warrior",
     "attack_level": 68,
@@ -36,20 +37,17 @@
     "defence_level": 82,
     "magic_level": 60,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 10,
     "defence_slash": 12,
     "defence_crush": 12,
     "defence_magic": 14,
     "defence_ranged": 16,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 532,
@@ -58,79 +56,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1197,
-            "name": "Mithril kiteshield",
-            "members": false,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0603448275862069,
-            "drop_requirements": null
-        },
-        {
-            "id": 888,
-            "name": "Mithril arrow",
-            "members": false,
-            "quantity": "5-15",
-            "noted": false,
-            "rarity": 0.0603448275862069,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": false,
-            "quantity": "15-30",
-            "noted": false,
-            "rarity": 0.0603448275862069,
-            "drop_requirements": null
-        },
-        {
-            "id": 563,
-            "name": "Law rune",
-            "members": false,
-            "quantity": "8-15",
-            "noted": false,
-            "rarity": 0.0603448275862069,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": false,
-            "quantity": "8-15",
-            "noted": false,
-            "rarity": 0.0603448275862069,
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": false,
-            "quantity": "8-15",
-            "noted": false,
-            "rarity": 0.05172413793103448,
-            "drop_requirements": null
-        },
-        {
-            "id": 556,
-            "name": "Air rune",
-            "members": false,
-            "quantity": "10-20",
-            "noted": false,
-            "rarity": 0.04310344827586207,
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": false,
-            "quantity": "10-15",
-            "noted": false,
-            "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 557,
@@ -139,7 +65,7 @@
             "quantity": "10-20",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 554,
@@ -148,7 +74,7 @@
             "quantity": "10-20",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 558,
@@ -157,7 +83,7 @@
             "quantity": "10-20",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 555,
@@ -166,7 +92,7 @@
             "quantity": "10-20",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 886,
@@ -175,7 +101,7 @@
             "quantity": "10-30",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 884,
@@ -184,7 +110,259 @@
             "quantity": "20-40",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 5100,
+            "name": "Limpwurt seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005633802816901409,
+            "rolls": 1
+        },
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005387931034482759,
+            "rolls": 1
+        },
+        {
+            "id": 5292,
+            "name": "Marrentill seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.005141388174807198,
+            "rolls": 1
+        },
+        {
+            "id": 5104,
+            "name": "Jangerberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0037835792659856224,
+            "rolls": 1
+        },
+        {
+            "id": 1197,
+            "name": "Mithril kiteshield",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0603448275862069,
+            "rolls": 1
+        },
+        {
+            "id": 5293,
+            "name": "Tarromin seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0034965034965034965,
+            "rolls": 1
+        },
+        {
+            "id": 5311,
+            "name": "Wildblood seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.003414134516899966,
+            "rolls": 1
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.002591344908007256,
+            "rolls": 1
+        },
+        {
+            "id": 5294,
+            "name": "Harralander seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0023030861354214646,
+            "rolls": 1
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016452780519907865,
+            "rolls": 1
+        },
+        {
+            "id": 5295,
+            "name": "Ranarr seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0016041065126724415,
+            "rolls": 1
+        },
+        {
+            "id": 5105,
+            "name": "Whiteberry seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013984058173682002,
+            "rolls": 1
+        },
+        {
+            "id": 5282,
+            "name": "Mushroom spore",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0011927480916030535,
+            "rolls": 1
+        },
+        {
+            "id": 5296,
+            "name": "Toadflax seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001110494169905608,
+            "rolls": 1
+        },
+        {
+            "id": 5281,
+            "name": "Belladonna seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007403020432336393,
+            "rolls": 1
+        },
+        {
+            "id": 888,
+            "name": "Mithril arrow",
+            "members": false,
+            "quantity": "5-15",
+            "noted": false,
+            "rarity": 0.0603448275862069,
+            "rolls": 1
+        },
+        {
+            "id": 5297,
+            "name": "Irit seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007403020432336393,
+            "rolls": 1
+        },
+        {
+            "id": 5106,
+            "name": "Poison ivy seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005346735817783243,
+            "rolls": 1
+        },
+        {
+            "id": 5298,
+            "name": "Avantoe seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004935590543408519,
+            "rolls": 1
+        },
+        {
+            "id": 5280,
+            "name": "Cactus seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0004935590543408519,
+            "rolls": 1
+        },
+        {
+            "id": 5299,
+            "name": "Kwuarm seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00037016472330186933,
+            "rolls": 1
+        },
+        {
+            "id": 22873,
+            "name": "Potato cactus seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0003290339563042906,
+            "rolls": 1
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00020564706850103852,
+            "rolls": 1
+        },
+        {
+            "id": 5301,
+            "name": "Cadantine seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001645169781521453,
+            "rolls": 1
+        },
+        {
+            "id": 5302,
+            "name": "Lantadyme seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001233882411006231,
+            "rolls": 1
+        },
+        {
+            "id": 5303,
+            "name": "Dwarf weed seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 8.225848907607265e-05,
+            "rolls": 1
+        },
+        {
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
+            "quantity": "15-30",
+            "noted": false,
+            "rarity": 0.0603448275862069,
+            "rolls": 1
+        },
+        {
+            "id": 5304,
+            "name": "Torstol seed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.1129244538036324e-05,
+            "rolls": 1
         },
         {
             "id": 225,
@@ -193,7 +371,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1617,
@@ -202,7 +380,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.034482758620689655,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1621,
@@ -211,7 +389,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.034482758620689655,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1619,
@@ -220,7 +398,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.034482758620689655,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1623,
@@ -229,25 +407,25 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.034482758620689655,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "500-1000",
             "noted": false,
             "rarity": 0.07758620689655173,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "5",
             "noted": false,
             "rarity": 0.04310344827586207,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 329,
@@ -256,7 +434,7 @@
             "quantity": "1-3",
             "noted": false,
             "rarity": 0.05,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 13477,
@@ -265,7 +443,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.03333333333333333,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 563,
+            "name": "Law rune",
+            "members": false,
+            "quantity": "8-15",
+            "noted": false,
+            "rarity": 0.0603448275862069,
+            "rolls": 1
         },
         {
             "id": 1147,
@@ -274,7 +461,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1163,
@@ -283,7 +470,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1373,
@@ -292,7 +479,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -301,7 +488,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 21838,
@@ -310,7 +497,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0008333333333333334,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -319,7 +506,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "8-15",
+            "noted": false,
+            "rarity": 0.0603448275862069,
+            "rolls": 1
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "8-15",
+            "noted": false,
+            "rarity": 0.05172413793103448,
+            "rolls": 1
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": false,
+            "quantity": "10-20",
+            "noted": false,
+            "rarity": 0.04310344827586207,
+            "rolls": 1
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": false,
+            "quantity": "10-15",
+            "noted": false,
+            "rarity": 0.04310344827586207,
+            "rolls": 1
         }
     ]
 }

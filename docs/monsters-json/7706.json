@@ -1,6 +1,7 @@
 {
     "id": 7706,
     "name": "TzKal-Zuk",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2017-06-01",
@@ -9,13 +10,14 @@
     "hitpoints": 1200,
     "max_hit": 251,
     "attack_type": [
-        "typeless",
         "ranged",
-        "magic"
+        "magic",
+        "typeless"
     ],
     "attack_speed": null,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [],
@@ -32,7 +34,6 @@
     ],
     "duplicate": false,
     "examine": "An ancient adversary to the TzHaar.",
-    "icon": null,
     "wiki_name": "TzKal-Zuk",
     "wiki_url": "https://oldschool.runescape.wiki/w/TzKal-Zuk",
     "attack_level": 350,
@@ -40,20 +41,17 @@
     "defence_level": 260,
     "magic_level": 150,
     "ranged_level": 400,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 200,
     "attack_magic": 550,
+    "magic_bonus": 450,
     "attack_ranged": 550,
+    "ranged_bonus": 200,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 350,
     "defence_ranged": 100,
-    "attack_accuracy": 0,
-    "melee_strength": 200,
-    "ranged_strength": 200,
-    "magic_damage": 450,
     "drops": [
         {
             "id": 21291,
@@ -62,7 +60,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.01,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

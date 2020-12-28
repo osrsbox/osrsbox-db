@@ -1,6 +1,7 @@
 {
     "id": 2451,
     "name": "Animated Iron Armour",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2006-06-13",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": true,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Animated iron armour.",
-    "icon": null,
     "wiki_name": "Animated Iron Armour",
     "wiki_url": "https://oldschool.runescape.wiki/w/Animated_Iron_Armour",
     "attack_level": 20,
@@ -32,20 +33,17 @@
     "defence_level": 20,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 4,
+    "strength_bonus": 5,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 50,
     "defence_slash": 25,
     "defence_crush": 19,
     "defence_magic": 400,
     "defence_ranged": 400,
-    "attack_accuracy": 4,
-    "melee_strength": 5,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 8851,
@@ -54,34 +52,34 @@
             "quantity": "10",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1153,
             "name": "Iron full helm",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1115,
             "name": "Iron platebody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1067,
             "name": "Iron platelegs",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.9,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

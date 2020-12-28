@@ -1,13 +1,14 @@
 {
     "id": 6345,
     "name": "Kamil",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-04-18",
     "combat_level": 154,
     "size": 1,
     "hitpoints": 130,
-    "max_hit": 0,
+    "max_hit": 23,
     "attack_type": [
         "melee",
         "magic"
@@ -15,6 +16,7 @@
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -30,7 +32,6 @@
     ],
     "duplicate": true,
     "examine": "Ice warrior.",
-    "icon": null,
     "wiki_name": "Kamil (Normal)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Kamil#Normal",
     "attack_level": 190,
@@ -38,29 +39,26 @@
     "defence_level": 135,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 60,
+    "strength_bonus": 100,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 35,
     "defence_slash": 60,
     "defence_crush": 35,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 60,
-    "melee_strength": 100,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 1897,
             "name": "Chocolate cake",
-            "members": true,
+            "members": false,
             "quantity": "1,2",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3024,
@@ -69,7 +67,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

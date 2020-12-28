@@ -1,6 +1,7 @@
 {
     "id": 5338,
     "name": "Cave goblin miner",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2005-05-31",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": true,
     "examine": "He's working away.",
-    "icon": null,
     "wiki_name": "Cave goblin miner",
     "wiki_url": "https://oldschool.runescape.wiki/w/Cave_goblin_miner",
     "attack_level": 10,
@@ -37,29 +38,26 @@
     "defence_level": 7,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5013,
@@ -68,52 +66,52 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.15625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "6",
             "noted": false,
             "rarity": 0.15625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 440,
             "name": "Iron ore",
-            "members": true,
+            "members": false,
             "quantity": "7",
             "noted": false,
             "rarity": 0.15625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 590,
             "name": "Tinderbox",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.15625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 440,
             "name": "Iron ore",
-            "members": true,
+            "members": false,
             "quantity": "2",
             "noted": false,
             "rarity": 0.1171875,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 442,
             "name": "Silver ore",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 7905,
@@ -122,7 +120,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.25,
-            "drop_requirements": null
+            "rolls": 1
         }
     ]
 }

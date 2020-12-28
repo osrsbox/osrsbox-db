@@ -25,6 +25,7 @@ import json
 from pathlib import Path
 
 import config
+import validator
 
 
 def test_prayer_database():
@@ -35,7 +36,7 @@ def test_prayer_database():
         schema = json.loads(f.read())
 
     # Validator object with schema attached
-    v = config.MyValidator(schema)
+    v = validator.MyValidator(schema)
 
     # Set the path to the prayers-json folder and get all the JSON files
     path_to_prayers_json_dir = Path(config.DOCS_PATH / "prayers-json")

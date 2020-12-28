@@ -1,6 +1,7 @@
 {
     "id": 2316,
     "name": "Guard",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2007-03-20",
@@ -14,6 +15,7 @@
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -29,7 +31,6 @@
     ],
     "duplicate": false,
     "examine": "He keeps order in the city.",
-    "icon": null,
     "wiki_name": "Guard (Cave goblin) (Bone club)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Guard_(Cave_goblin)#Bone_club",
     "attack_level": 25,
@@ -37,101 +38,305 @@
     "defence_level": 25,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 1,
     "defence_slash": 16,
     "defence_crush": 19,
     "defence_magic": -3,
     "defence_ranged": 12,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 526,
             "name": "Bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 5018,
-            "name": "Bone club",
-            "members": true,
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.15625,
-            "drop_requirements": null
+            "rarity": 0.0078125,
+            "rolls": 1
         },
         {
-            "id": 5016,
-            "name": "Bone spear",
-            "members": true,
-            "quantity": "1",
+            "id": 886,
+            "name": "Steel arrow",
+            "members": false,
+            "quantity": "5",
             "noted": false,
-            "rarity": 0.15625,
-            "drop_requirements": null
+            "rarity": 0.0078125,
+            "rolls": 1
         },
         {
-            "id": 1101,
-            "name": "Iron chainbody",
+            "id": 5318,
+            "name": "Potato seed",
             "members": true,
-            "quantity": "1",
+            "quantity": "4",
             "noted": false,
-            "rarity": 0.15625,
-            "drop_requirements": null
+            "rarity": 0.05263157894736842,
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 5319,
+            "name": "Onion seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.04,
+            "rolls": 1
+        },
+        {
+            "id": 5324,
+            "name": "Cabbage seed",
+            "members": true,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.02631578947368421,
+            "rolls": 1
+        },
+        {
+            "id": 5322,
+            "name": "Tomato seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.012987012987012988,
+            "rolls": 1
+        },
+        {
+            "id": 5320,
+            "name": "Sweetcorn seed",
+            "members": true,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.0064516129032258064,
+            "rolls": 1
+        },
+        {
+            "id": 5323,
+            "name": "Strawberry seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.003215434083601286,
+            "rolls": 1
+        },
+        {
+            "id": 5321,
+            "name": "Watermelon seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0015360983102918587,
+            "rolls": 1
+        },
+        {
+            "id": 22879,
+            "name": "Snape grass seed",
+            "members": true,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0011160714285714285,
+            "rolls": 1
+        },
+        {
+            "id": 9140,
+            "name": "Iron bolts",
+            "members": true,
+            "quantity": "2-12",
+            "noted": false,
+            "rarity": 0.078125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1484375,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "7",
+            "noted": false,
+            "rarity": 0.125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.140625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
             "quantity": "12",
             "noted": false,
-            "rarity": 0.15625,
-            "drop_requirements": null
+            "rarity": 0.0703125,
+            "rolls": 1
         },
         {
-            "id": 4537,
-            "name": "Oil lantern",
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "4",
+            "noted": false,
+            "rarity": 0.0625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "25",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "17",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "30",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 1203,
+            "name": "Iron dagger",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.046875,
+            "rolls": 1
+        },
+        {
+            "id": 1446,
+            "name": "Body talisman",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 1947,
+            "name": "Grain",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 2801,
+            "name": "Clue scroll (medium)",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.15625,
-            "drop_requirements": null
+            "rarity": 0.0078125,
+            "rolls": 1
         },
         {
-            "id": 590,
-            "name": "Tinderbox",
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
+        },
+        {
+            "id": 556,
+            "name": "Air rune",
+            "members": false,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 557,
+            "name": "Earth rune",
+            "members": false,
+            "quantity": "3",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 554,
+            "name": "Fire rune",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.015625,
+            "rolls": 1
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.15625,
-            "drop_requirements": null
+            "rarity": 0.0078125,
+            "rolls": 1
         },
         {
-            "id": 7905,
-            "name": "Cave goblin skull",
-            "members": true,
+            "id": 562,
+            "name": "Chaos rune",
+            "members": false,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.25,
-            "drop_requirements": null
-        },
-        {
-            "id": 6801,
-            "name": "Goblin champion scroll",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0002,
-            "drop_requirements": null
+            "rarity": 0.0078125,
+            "rolls": 1
         }
     ]
 }

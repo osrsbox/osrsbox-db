@@ -1,13 +1,14 @@
 {
     "id": 3129,
     "name": "K'ril Tsutsaroth",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 650,
     "size": 5,
     "hitpoints": 255,
-    "max_hit": 0,
+    "max_hit": 30,
     "attack_type": [
         "slash",
         "magic"
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": true,
+    "venomous": false,
     "immune_poison": true,
     "immune_venom": true,
     "attributes": [
@@ -35,7 +37,6 @@
     ],
     "duplicate": false,
     "examine": "A servant of the god Zamorak.",
-    "icon": null,
     "wiki_name": "K'ril Tsutsaroth",
     "wiki_url": "https://oldschool.runescape.wiki/w/K'ril_Tsutsaroth",
     "attack_level": 340,
@@ -43,128 +44,53 @@
     "defence_level": 270,
     "magic_level": 200,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 160,
+    "strength_bonus": 31,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 80,
     "defence_slash": 80,
     "defence_crush": 80,
     "defence_magic": 130,
     "defence_ranged": 80,
-    "attack_accuracy": 160,
-    "melee_strength": 31,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 592,
             "name": "Ashes",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 11787,
-            "name": "Steam battlestaff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.007874015748031496,
-            "drop_requirements": null
-        },
-        {
-            "id": 11824,
-            "name": "Zamorakian spear",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.007874015748031496,
-            "drop_requirements": null
-        },
-        {
-            "id": 11791,
-            "name": "Staff of the dead",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001968503937007874,
-            "drop_requirements": null
-        },
-        {
-            "id": 11816,
-            "name": "Zamorak hilt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001968503937007874,
-            "drop_requirements": null
-        },
-        {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 5626,
-            "name": "Adamant arrow(p++)",
-            "members": true,
-            "quantity": "295-300",
-            "noted": false,
-            "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1333,
             "name": "Rune scimitar",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1123,
             "name": "Adamant platebody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1079,
             "name": "Rune platelegs",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.05511811023622047,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5698,
@@ -173,7 +99,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.015748031496062992,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 145,
@@ -182,7 +108,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 157,
@@ -191,7 +117,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3026,
@@ -200,7 +126,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 189,
@@ -209,16 +135,16 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "19500-20000",
             "noted": false,
-            "rarity": 0.28897637795275594,
-            "drop_requirements": null
+            "rarity": 0.2889763779527559,
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -227,7 +153,16 @@
             "quantity": "10",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11787,
+            "name": "Steam battlestaff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
         },
         {
             "id": 5302,
@@ -236,16 +171,16 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 560,
             "name": "Death rune",
-            "members": true,
+            "members": false,
             "quantity": "120-125",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 565,
@@ -254,7 +189,34 @@
             "quantity": "80-85",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1289,
+            "name": "Rune sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0024606299212598425,
+            "rolls": 1
+        },
+        {
+            "id": 11824,
+            "name": "Zamorakian spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.007874015748031496,
+            "rolls": 1
+        },
+        {
+            "id": 11791,
+            "name": "Staff of the dead",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001968503937007874,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -262,8 +224,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": -0.1,
-            "drop_requirements": null
+            "rarity": 0.02,
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -272,7 +234,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.004,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11816,
+            "name": "Zamorak hilt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001968503937007874,
+            "rolls": 1
         },
         {
             "id": 12652,
@@ -281,7 +252,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 5626,
+            "name": "Adamant arrow(p++)",
+            "members": true,
+            "quantity": "295-300",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "rolls": 1
         }
     ]
 }

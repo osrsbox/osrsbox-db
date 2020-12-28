@@ -1,6 +1,7 @@
 {
     "id": 3160,
     "name": "Spiritual ranger",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
@@ -14,11 +15,12 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
     "category": [
-        "spiritual creatures"
+        "spiritual creature"
     ],
     "slayer_monster": true,
     "slayer_level": 63,
@@ -32,7 +34,6 @@
     ],
     "duplicate": false,
     "examine": "Defender of Zamorak.",
-    "icon": null,
     "wiki_name": "Spiritual ranger (Zamorak)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Spiritual_ranger#Zamorak",
     "attack_level": 1,
@@ -40,110 +41,35 @@
     "defence_level": 80,
     "magic_level": 1,
     "ranged_level": 140,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 843,
             "name": "Oak shortbow",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 9179,
-            "name": "Steel crossbow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 851,
-            "name": "Maple longbow",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 861,
-            "name": "Magic shortbow",
-            "members": true,
-            "quantity": "1-2",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 5619,
-            "name": "Mithril arrow(p+)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0859375,
-            "drop_requirements": null
-        },
-        {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 884,
-            "name": "Iron arrow",
-            "members": true,
-            "quantity": "12",
-            "noted": false,
-            "rarity": 0.1171875,
-            "drop_requirements": null
-        },
-        {
-            "id": 882,
-            "name": "Bronze arrow",
-            "members": true,
-            "quantity": "16",
-            "noted": false,
-            "rarity": 0.1015625,
-            "drop_requirements": null
-        },
-        {
-            "id": 5616,
-            "name": "Bronze arrow(p+)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 559,
             "name": "Body rune",
-            "members": true,
+            "members": false,
             "quantity": "12",
             "noted": false,
             "rarity": 0.03125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 892,
@@ -152,16 +78,16 @@
             "quantity": "5",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 890,
             "name": "Adamant arrow",
-            "members": true,
+            "members": false,
             "quantity": "12",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5626,
@@ -170,7 +96,7 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.0234375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2538,
@@ -179,7 +105,7 @@
             "quantity": "4",
             "noted": false,
             "rarity": 0.015625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 53,
@@ -188,7 +114,7 @@
             "quantity": "12",
             "noted": false,
             "rarity": 0.078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 40,
@@ -197,7 +123,7 @@
             "quantity": "5",
             "noted": false,
             "rarity": 0.0859375,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 43,
@@ -206,7 +132,7 @@
             "quantity": "13",
             "noted": false,
             "rarity": 0.0703125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1777,
@@ -215,7 +141,7 @@
             "quantity": "7",
             "noted": false,
             "rarity": 0.140625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 687,
@@ -224,7 +150,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 9179,
+            "name": "Steel crossbow",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0234375,
+            "rolls": 1
         },
         {
             "id": 56,
@@ -233,7 +168,7 @@
             "quantity": "12",
             "noted": false,
             "rarity": 0.0703125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11941,
@@ -242,7 +177,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.3333333333333333,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 11942,
@@ -251,7 +186,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.016666666666666666,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2722,
@@ -260,7 +195,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0078125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 23490,
@@ -268,8 +203,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.008695652173913044,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.0136986301369863,
+            "rolls": 1
         },
         {
             "id": 21257,
@@ -277,8 +212,71 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.004464285714285714,
-            "drop_requirements": "krystilia-task-only"
+            "rarity": 0.004016064257028112,
+            "rolls": 1
+        },
+        {
+            "id": 851,
+            "name": "Maple longbow",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 861,
+            "name": "Magic shortbow",
+            "members": true,
+            "quantity": "1-2",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 5619,
+            "name": "Mithril arrow(p+)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0859375,
+            "rolls": 1
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": false,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.03125,
+            "rolls": 1
+        },
+        {
+            "id": 884,
+            "name": "Iron arrow",
+            "members": false,
+            "quantity": "12",
+            "noted": false,
+            "rarity": 0.1171875,
+            "rolls": 1
+        },
+        {
+            "id": 882,
+            "name": "Bronze arrow",
+            "members": false,
+            "quantity": "16",
+            "noted": false,
+            "rarity": 0.1015625,
+            "rolls": 1
+        },
+        {
+            "id": 5616,
+            "name": "Bronze arrow(p+)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
         }
     ]
 }

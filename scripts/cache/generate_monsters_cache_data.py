@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Generate the monsters-cache-data.json file from raw NPC Definition files.
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2020, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -23,17 +23,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import json
 from pathlib import Path
-from typing import Dict
 
 import config
 from scripts.cache import cache_constants
 
 
-def generate_monsters_cache_data(definitions: Dict):
-    """Main function to extract attackble NPC definition files.
-
-    :param definitions: The raw cache definitions.
-    """
+def process():
+    """Main function to extract attackble NPC definition files."""
+    definitions = cache_constants.NPC_DEFINITIONS
     attackable_npcs = dict()
 
     # Loop all entries in the loaded definition files
@@ -49,10 +46,10 @@ def generate_monsters_cache_data(definitions: Dict):
             attackable_npcs[id_number] = json_data
 
     # Save all extracted attackable NPCs to JSON file
-    out_fi = Path(config.DATA_CACHE_PATH / "monsters-cache-data.json")
+    out_fi = Path(config.DATA_MONSTERS_PATH / "monsters-cache-data-new.json")
     with open(out_fi, "w") as f:
         json.dump(attackable_npcs, f, indent=4)
 
 
 if __name__ == "__main__":
-    generate_monsters_cache_data(cache_constants.NPC_DEFINITIONS)
+    process()

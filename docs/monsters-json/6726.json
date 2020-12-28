@@ -1,19 +1,21 @@
 {
     "id": 6726,
     "name": "Rock Golem",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2004-02-02",
     "combat_level": 29,
     "size": 1,
-    "hitpoints": 0,
-    "max_hit": 0,
+    "hitpoints": null,
+    "max_hit": null,
     "attack_type": [
         "ranged"
     ],
     "attack_speed": 4,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Rock with attitude.",
-    "icon": null,
     "wiki_name": "Rock golem (monster) (Level 29)",
     "wiki_url": "https://oldschool.runescape.wiki/w/Rock_golem_(monster)#Level_29",
     "attack_level": 0,
@@ -32,254 +33,16 @@
     "defence_level": 0,
     "magic_level": 0,
     "ranged_level": 0,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": 0,
     "defence_slash": 0,
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
-    "drops": [
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.38461538461538464,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "42",
-            "noted": false,
-            "rarity": 0.05128205128205128,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.05128205128205128,
-            "drop_requirements": null
-        },
-        {
-            "id": 2349,
-            "name": "Bronze bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.08974358974358974,
-            "drop_requirements": null
-        },
-        {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.05128205128205128,
-            "drop_requirements": null
-        },
-        {
-            "id": 438,
-            "name": "Tin ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.038461538461538464,
-            "drop_requirements": null
-        },
-        {
-            "id": 436,
-            "name": "Copper ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.038461538461538464,
-            "drop_requirements": null
-        },
-        {
-            "id": 2347,
-            "name": "Hammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1282051282051282,
-            "drop_requirements": null
-        },
-        {
-            "id": 1913,
-            "name": "Dwarven stout",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.16666666666666666,
-            "drop_requirements": null
-        },
-        {
-            "id": 1265,
-            "name": "Bronze pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1271,
-            "name": "Adamant pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1275,
-            "name": "Rune pickaxe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 557,
-            "name": "Earth rune",
-            "members": true,
-            "quantity": "42",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 562,
-            "name": "Chaos rune",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2349,
-            "name": "Bronze bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0546875,
-            "drop_requirements": null
-        },
-        {
-            "id": 2351,
-            "name": "Iron bar",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 438,
-            "name": "Tin ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 436,
-            "name": "Copper ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.03125,
-            "drop_requirements": null
-        },
-        {
-            "id": 447,
-            "name": "Mithril ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 449,
-            "name": "Adamantite ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0234375,
-            "drop_requirements": null
-        },
-        {
-            "id": 451,
-            "name": "Runite ore",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2347,
-            "name": "Hammer",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1913,
-            "name": "Dwarven stout",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1015625,
-            "drop_requirements": null
-        }
-    ]
+    "drops": []
 }

@@ -1,7 +1,8 @@
 {
     "id": 3695,
     "name": "Pet rock",
-    "incomplete": true,
+    "last_updated": "2020-12-27",
+    "incomplete": false,
     "members": true,
     "tradeable": false,
     "tradeable_on_ge": false,
@@ -14,8 +15,8 @@
     "linked_id_placeholder": 16746,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
-    "equipable_weapon": false,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
@@ -28,7 +29,49 @@
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABfElEQVR4Xu2W3UvDMBTFl3/DpzJkiPShiEM2HBSHhckmTsoQvxARBP//98hpuDG5TVNZsupDDhwo3cf9cc5tttEoKSnpX0vItgeVPbwqZ9o3y3njAaGEHkreVAvt7arUHgBKyHp9ZQ2FcY+8u722fEAoIV93a/lcrxo/bis9FNdkvIb3ETg+V2RZbCihh5E/nu7k+8OmGQ7jGvcIlIAOtE9CgxCAy2ZyHChiSqoq00iDm9dpAi0X05gpidbwLpspcaByfhYLSgFhP3wmINgHFFidaA32maBojzjQ7DwPTUnIz5d7r38DhBOcgIp8EgLVD8Th+oCotj2rE/LrrW6Zg/QBobLLi0KnsycM5AbqsgmEpcZvG6UzLU5lfjIeBogSwg7hsaeDEUCudAKAoG4oXpkJRHVROpNjQASlQ3ID8d1x1YV0sMioapwdxQKCfqBcIBwI6WB3UJV6xJUj1GXK/pfIzx+qC+m4ICLDKNlfbAMOBuETH/wnEElJHfoG5YCwhIhGVxgAAAAASUVORK5CYII=",
     "wiki_name": "Pet rock",
     "wiki_url": "https://oldschool.runescape.wiki/w/Pet_rock",
-    "wiki_exchange": null,
-    "equipment": null,
-    "weapon": null
+    "equipment": {
+        "attack_stab": 0,
+        "attack_slash": 0,
+        "attack_crush": 0,
+        "attack_magic": 0,
+        "attack_ranged": 0,
+        "defence_stab": 0,
+        "defence_slash": 0,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": 0,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "2h",
+        "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "unarmed",
+        "stances": [
+            {
+                "combat_style": "punch",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "kick",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

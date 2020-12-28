@@ -1,13 +1,14 @@
 {
     "id": 2215,
     "name": "General Graardor",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2013-10-17",
     "combat_level": 624,
     "size": 4,
     "hitpoints": 255,
-    "max_hit": 0,
+    "max_hit": 60,
     "attack_type": [
         "crush",
         "ranged"
@@ -15,6 +16,7 @@
     "attack_speed": 6,
     "aggressive": true,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -31,7 +33,6 @@
     ],
     "duplicate": false,
     "examine": "A huge war chief.",
-    "icon": null,
     "wiki_name": "General Graardor",
     "wiki_url": "https://oldschool.runescape.wiki/w/General_Graardor",
     "attack_level": 280,
@@ -39,137 +40,62 @@
     "defence_level": 250,
     "magic_level": 80,
     "ranged_level": 350,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 120,
+    "strength_bonus": 43,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 100,
+    "ranged_bonus": 40,
     "defence_stab": 90,
     "defence_slash": 90,
     "defence_crush": 90,
     "defence_magic": 298,
     "defence_ranged": 90,
-    "attack_accuracy": 120,
-    "melee_strength": 43,
-    "ranged_strength": 40,
-    "magic_damage": 0,
     "drops": [
         {
             "id": 532,
             "name": "Big bones",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 11832,
-            "name": "Bandos chestplate",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026246719160104987,
-            "drop_requirements": null
-        },
-        {
-            "id": 11834,
-            "name": "Bandos tassets",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026246719160104987,
-            "drop_requirements": null
-        },
-        {
-            "id": 11836,
-            "name": "Bandos boots",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0026246719160104987,
-            "drop_requirements": null
-        },
-        {
-            "id": 11812,
-            "name": "Bandos hilt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001968503937007874,
-            "drop_requirements": null
-        },
-        {
-            "id": 11818,
-            "name": "Godsword shard 1",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 11820,
-            "name": "Godsword shard 2",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 11822,
-            "name": "Godsword shard 3",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0013123359580052493,
-            "drop_requirements": null
-        },
-        {
-            "id": 1303,
-            "name": "Rune longsword",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1319,
             "name": "Rune 2h sword",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1127,
             "name": "Rune platebody",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1275,
             "name": "Rune pickaxe",
-            "members": true,
+            "members": false,
             "quantity": "1",
             "noted": false,
             "rarity": 0.047244094488188976,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "19500-20000",
             "noted": false,
             "rarity": 0.24960629921259841,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3051,
@@ -178,7 +104,7 @@
             "quantity": "3",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 5300,
@@ -187,7 +113,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 3024,
@@ -196,25 +122,25 @@
             "quantity": "3",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 449,
             "name": "Adamantite ore",
-            "members": true,
+            "members": false,
             "quantity": "15-20",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 453,
             "name": "Coal",
-            "members": true,
+            "members": false,
             "quantity": "115-120",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 1513,
@@ -223,25 +149,61 @@
             "quantity": "15-20",
             "noted": true,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11832,
+            "name": "Bandos chestplate",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026246719160104987,
+            "rolls": 1
         },
         {
             "id": 561,
             "name": "Nature rune",
-            "members": true,
+            "members": false,
             "quantity": "65-70",
             "noted": false,
             "rarity": 0.06299212598425197,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
-            "id": 617,
+            "id": 995,
             "name": "Coins",
-            "members": true,
+            "members": false,
             "quantity": "20100-20600",
             "noted": false,
             "rarity": 0.00984251968503937,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 1289,
+            "name": "Rune sword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0024606299212598425,
+            "rolls": 1
+        },
+        {
+            "id": 11834,
+            "name": "Bandos tassets",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026246719160104987,
+            "rolls": 1
+        },
+        {
+            "id": 11836,
+            "name": "Bandos boots",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0026246719160104987,
+            "rolls": 1
         },
         {
             "id": 23083,
@@ -249,8 +211,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": -0.20833333333333284,
-            "drop_requirements": null
+            "rarity": 0.02,
+            "rolls": 1
         },
         {
             "id": 12073,
@@ -259,7 +221,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.004,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10976,
@@ -268,7 +230,16 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0025,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11812,
+            "name": "Bandos hilt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001968503937007874,
+            "rolls": 1
         },
         {
             "id": 12650,
@@ -277,7 +248,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0002,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 10977,
@@ -286,7 +257,43 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.00019950124688279303,
-            "drop_requirements": null
+            "rolls": 1
+        },
+        {
+            "id": 11818,
+            "name": "Godsword shard 1",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 11820,
+            "name": "Godsword shard 2",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 11822,
+            "name": "Godsword shard 3",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0013123359580052493,
+            "rolls": 1
+        },
+        {
+            "id": 1303,
+            "name": "Rune longsword",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.06299212598425197,
+            "rolls": 1
         }
     ]
 }

@@ -1,13 +1,14 @@
 {
     "id": 9416,
     "name": "Phosani's Nightmare",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2020-02-06",
     "combat_level": 1024,
     "size": 5,
     "hitpoints": 2400,
-    "max_hit": 0,
+    "max_hit": 33,
     "attack_type": [
         "slash",
         "ranged",
@@ -16,6 +17,7 @@
     "attack_speed": 6,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -26,7 +28,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "Sweet dreams are most definitely not made of this.",
-    "icon": null,
     "wiki_name": "The Nightmare",
     "wiki_url": "https://oldschool.runescape.wiki/w/The_Nightmare",
     "attack_level": 150,
@@ -34,362 +35,16 @@
     "defence_level": 150,
     "magic_level": 150,
     "ranged_level": 150,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 140,
+    "strength_bonus": 128,
     "attack_magic": 140,
+    "magic_bonus": 64,
     "attack_ranged": 140,
+    "ranged_bonus": 64,
     "defence_stab": 120,
     "defence_slash": 180,
     "defence_crush": 40,
     "defence_magic": 600,
     "defence_ranged": 600,
-    "attack_accuracy": 140,
-    "melee_strength": 128,
-    "ranged_strength": 64,
-    "magic_damage": 64,
-    "drops": [
-        {
-            "id": 532,
-            "name": "Big bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 526,
-            "name": "Bones",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 24422,
-            "name": "Nightmare staff",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0025,
-            "drop_requirements": null
-        },
-        {
-            "id": 24419,
-            "name": "Inquisitor's great helm",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0016666666666666668,
-            "drop_requirements": null
-        },
-        {
-            "id": 24420,
-            "name": "Inquisitor's hauberk",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0016666666666666668,
-            "drop_requirements": null
-        },
-        {
-            "id": 24421,
-            "name": "Inquisitor's plateskirt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0016666666666666668,
-            "drop_requirements": null
-        },
-        {
-            "id": 24417,
-            "name": "Inquisitor's mace",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0008333333333333334,
-            "drop_requirements": null
-        },
-        {
-            "id": 24517,
-            "name": "Eldritch orb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005555555555555556,
-            "drop_requirements": null
-        },
-        {
-            "id": 24511,
-            "name": "Harmonised orb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005555555555555556,
-            "drop_requirements": null
-        },
-        {
-            "id": 24514,
-            "name": "Volatile orb",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005555555555555556,
-            "drop_requirements": null
-        },
-        {
-            "id": 890,
-            "name": "Adamant arrow",
-            "members": true,
-            "quantity": "32-488",
-            "noted": false,
-            "rarity": 0.03,
-            "drop_requirements": null
-        },
-        {
-            "id": 892,
-            "name": "Rune arrow",
-            "members": true,
-            "quantity": "12-515",
-            "noted": false,
-            "rarity": 0.03,
-            "drop_requirements": null
-        },
-        {
-            "id": 564,
-            "name": "Cosmic rune",
-            "members": true,
-            "quantity": "15-214",
-            "noted": false,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 561,
-            "name": "Nature rune",
-            "members": true,
-            "quantity": "6-138",
-            "noted": false,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 560,
-            "name": "Death rune",
-            "members": true,
-            "quantity": "24-165",
-            "noted": false,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 565,
-            "name": "Blood rune",
-            "members": true,
-            "quantity": "13-129",
-            "noted": false,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 566,
-            "name": "Soul rune",
-            "members": true,
-            "quantity": "12-74",
-            "noted": false,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 7936,
-            "name": "Pure essence",
-            "members": true,
-            "quantity": "420-4200",
-            "noted": true,
-            "rarity": 0.02,
-            "drop_requirements": null
-        },
-        {
-            "id": 1621,
-            "name": "Uncut emerald",
-            "members": true,
-            "quantity": "1-35",
-            "noted": true,
-            "rarity": 0.03,
-            "drop_requirements": null
-        },
-        {
-            "id": 1619,
-            "name": "Uncut ruby",
-            "members": true,
-            "quantity": "2-35",
-            "noted": true,
-            "rarity": 0.03,
-            "drop_requirements": null
-        },
-        {
-            "id": 1515,
-            "name": "Yew logs",
-            "members": true,
-            "quantity": "14-111",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 1513,
-            "name": "Magic logs",
-            "members": true,
-            "quantity": "3-50",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 444,
-            "name": "Gold ore",
-            "members": true,
-            "quantity": "14-79",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "16-253",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 447,
-            "name": "Mithril ore",
-            "members": true,
-            "quantity": "15-69",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 449,
-            "name": "Adamantite ore",
-            "members": true,
-            "quantity": "8-50",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 215,
-            "name": "Grimy cadantine",
-            "members": true,
-            "quantity": "1-8",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 219,
-            "name": "Grimy torstol",
-            "members": true,
-            "quantity": "1-16",
-            "noted": true,
-            "rarity": 0.04,
-            "drop_requirements": null
-        },
-        {
-            "id": 385,
-            "name": "Shark",
-            "members": true,
-            "quantity": "1-15",
-            "noted": false,
-            "rarity": 0.06,
-            "drop_requirements": null
-        },
-        {
-            "id": 365,
-            "name": "Bass",
-            "members": true,
-            "quantity": "1-18",
-            "noted": false,
-            "rarity": 0.06,
-            "drop_requirements": null
-        },
-        {
-            "id": 139,
-            "name": "Prayer potion(3)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 6687,
-            "name": "Saradomin brew(3)",
-            "members": true,
-            "quantity": "1-10",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 189,
-            "name": "Zamorak brew(3)",
-            "members": true,
-            "quantity": "1-8",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 10927,
-            "name": "Sanfew serum(3)",
-            "members": true,
-            "quantity": "1-11",
-            "noted": false,
-            "rarity": 0.05,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "2717-43854",
-            "noted": false,
-            "rarity": 0.02,
-            "drop_requirements": null
-        },
-        {
-            "id": 12073,
-            "name": "Clue scroll (elite)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.005263157894736842,
-            "drop_requirements": null
-        },
-        {
-            "id": 24491,
-            "name": "Little nightmare",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00125,
-            "drop_requirements": null
-        },
-        {
-            "id": 24495,
-            "name": "Jar of dreams",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005263157894736842,
-            "drop_requirements": null
-        }
-    ]
+    "drops": []
 }

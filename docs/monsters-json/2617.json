@@ -1,6 +1,7 @@
 {
     "id": 2617,
     "name": "Nikolai",
+    "last_updated": "2020-12-25",
     "incomplete": true,
     "members": true,
     "release_date": "2007-06-04",
@@ -14,6 +15,7 @@
     "attack_speed": 4,
     "aggressive": false,
     "poisonous": false,
+    "venomous": false,
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
@@ -24,7 +26,6 @@
     "slayer_masters": [],
     "duplicate": false,
     "examine": "There's a set of brows that mean business.",
-    "icon": null,
     "wiki_name": "Nikolai",
     "wiki_url": "https://oldschool.runescape.wiki/w/Nikolai",
     "attack_level": 10,
@@ -32,21 +33,126 @@
     "defence_level": 10,
     "magic_level": 1,
     "ranged_level": 1,
-    "attack_stab": 0,
-    "attack_slash": 0,
-    "attack_crush": 0,
+    "attack_bonus": 0,
+    "strength_bonus": 0,
     "attack_magic": 0,
+    "magic_bonus": 0,
     "attack_ranged": 0,
+    "ranged_bonus": 0,
     "defence_stab": -21,
     "defence_slash": -21,
     "defence_crush": -21,
     "defence_magic": -21,
     "defence_ranged": -21,
-    "attack_accuracy": 0,
-    "melee_strength": 0,
-    "ranged_strength": 0,
-    "magic_damage": 0,
     "drops": [
+        {
+            "id": 1623,
+            "name": "Uncut sapphire",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00048828125,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000244140625,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0001220703125,
+            "rolls": 1
+        },
+        {
+            "id": 1452,
+            "name": "Chaos talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.577279118818842e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1462,
+            "name": "Nature talisman",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.577279118818842e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1617,
+            "name": "Uncut diamond",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 3.0517578125e-05,
+            "rolls": 1
+        },
+        {
+            "id": 830,
+            "name": "Rune javelin",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 1.52587890625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 987,
+            "name": "Loop half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.52587890625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 985,
+            "name": "Tooth half of key",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.52587890625e-05,
+            "rolls": 1
+        },
+        {
+            "id": 1247,
+            "name": "Rune spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 9.5367431640625e-07,
+            "rolls": 1
+        },
+        {
+            "id": 2366,
+            "name": "Shield left half",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 4.76837158203125e-07,
+            "rolls": 1
+        },
+        {
+            "id": 1249,
+            "name": "Dragon spear",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 3.57599931157722e-07,
+            "rolls": 1
+        },
         {
             "id": 2859,
             "name": "Wolf bones",
@@ -54,331 +160,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 1.0,
-            "drop_requirements": null
-        },
-        {
-            "id": 1353,
-            "name": "Steel axe",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 886,
-            "name": "Steel arrow",
-            "members": true,
-            "quantity": "50",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 887,
-            "name": "Steel arrow(p)",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 221,
-            "name": "Eye of newt",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 231,
-            "name": "Snape grass",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 247,
-            "name": "Jangerberries",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 239,
-            "name": "White berries",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 225,
-            "name": "Limpwurt root",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 245,
-            "name": "Wine of zamorak",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 440,
-            "name": "Iron ore",
-            "members": true,
-            "quantity": "5",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 453,
-            "name": "Coal",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2353,
-            "name": "Steel bar",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2138,
-            "name": "Raw chicken",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2132,
-            "name": "Raw beef",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2136,
-            "name": "Raw bear meat",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 227,
-            "name": "Vial of water",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.09765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "6",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "15",
-            "noted": false,
-            "rarity": 0.009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "16",
-            "noted": false,
-            "rarity": 0.009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "20",
-            "noted": false,
-            "rarity": 0.01953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "38",
-            "noted": false,
-            "rarity": 0.009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "50",
-            "noted": false,
-            "rarity": 0.009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "96",
-            "noted": false,
-            "rarity": 0.009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 617,
-            "name": "Coins",
-            "members": true,
-            "quantity": "120",
-            "noted": false,
-            "rarity": 0.009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 1925,
-            "name": "Bucket",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.048828125,
-            "drop_requirements": null
-        },
-        {
-            "id": 590,
-            "name": "Tinderbox",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.0390625,
-            "drop_requirements": null
-        },
-        {
-            "id": 229,
-            "name": "Vial",
-            "members": true,
-            "quantity": "2",
-            "noted": false,
-            "rarity": 0.09765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 6814,
-            "name": "Fur",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 958,
-            "name": "Grey wolf fur",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.1953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 1582,
-            "name": "Blamish oil",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.001953125,
-            "drop_requirements": null
-        },
-        {
-            "id": 2677,
-            "name": "Clue scroll (easy)",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0078125,
-            "drop_requirements": null
-        },
-        {
-            "id": 199,
-            "name": "Grimy guam leaf",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0009765625,
-            "drop_requirements": null
-        },
-        {
-            "id": 201,
-            "name": "Grimy marrentill",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0007324676542283892,
-            "drop_requirements": null
-        },
-        {
-            "id": 203,
-            "name": "Grimy tarromin",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0005493249894529602,
-            "drop_requirements": null
-        },
-        {
-            "id": 205,
-            "name": "Grimy harralander",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.00042723941813409163,
-            "drop_requirements": null
-        },
-        {
-            "id": 207,
-            "name": "Grimy ranarr weed",
-            "members": true,
-            "quantity": "1",
-            "noted": false,
-            "rarity": 0.0003355884879725086,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 209,
@@ -387,7 +169,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.000244140625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 211,
@@ -395,8 +177,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 0.00018313408345053915,
-            "drop_requirements": null
+            "rarity": 0.00018310658634391078,
+            "rolls": 1
         },
         {
             "id": 213,
@@ -405,7 +187,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.000152587890625,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 215,
@@ -414,7 +196,7 @@
             "quantity": "1",
             "noted": false,
             "rarity": 0.0001220703125,
-            "drop_requirements": null
+            "rolls": 1
         },
         {
             "id": 2485,
@@ -422,8 +204,8 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 9.154558237637684e-05,
-            "drop_requirements": null
+            "rarity": 9.155245497908027e-05,
+            "rolls": 1
         },
         {
             "id": 217,
@@ -431,8 +213,332 @@
             "members": true,
             "quantity": "1",
             "noted": false,
-            "rarity": 9.154558237637684e-05,
-            "drop_requirements": null
+            "rarity": 9.155245497908027e-05,
+            "rolls": 1
+        },
+        {
+            "id": 221,
+            "name": "Eye of newt",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 231,
+            "name": "Snape grass",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 247,
+            "name": "Jangerberries",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 239,
+            "name": "White berries",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 1353,
+            "name": "Steel axe",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 225,
+            "name": "Limpwurt root",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 245,
+            "name": "Wine of zamorak",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00390625,
+            "rolls": 1
+        },
+        {
+            "id": 440,
+            "name": "Iron ore",
+            "members": false,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 2353,
+            "name": "Steel bar",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 2138,
+            "name": "Raw chicken",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 2132,
+            "name": "Raw beef",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 2136,
+            "name": "Raw bear meat",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 227,
+            "name": "Vial of water",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.09765625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "6",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 886,
+            "name": "Steel arrow",
+            "members": false,
+            "quantity": "50",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "15",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "16",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "20",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "38",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "50",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "96",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "120",
+            "noted": false,
+            "rarity": 0.009765625,
+            "rolls": 1
+        },
+        {
+            "id": 1925,
+            "name": "Bucket",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.048828125,
+            "rolls": 1
+        },
+        {
+            "id": 590,
+            "name": "Tinderbox",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.0390625,
+            "rolls": 1
+        },
+        {
+            "id": 229,
+            "name": "Vial",
+            "members": false,
+            "quantity": "2",
+            "noted": false,
+            "rarity": 0.09765625,
+            "rolls": 1
+        },
+        {
+            "id": 887,
+            "name": "Steel arrow(p)",
+            "members": true,
+            "quantity": "5",
+            "noted": false,
+            "rarity": 0.01953125,
+            "rolls": 1
+        },
+        {
+            "id": 6814,
+            "name": "Fur",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1953125,
+            "rolls": 1
+        },
+        {
+            "id": 958,
+            "name": "Grey wolf fur",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.1953125,
+            "rolls": 1
+        },
+        {
+            "id": 1582,
+            "name": "Blamish oil",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 199,
+            "name": "Grimy guam leaf",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0009765625,
+            "rolls": 1
+        },
+        {
+            "id": 2677,
+            "name": "Clue scroll (easy)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0078125,
+            "rolls": 1
+        },
+        {
+            "id": 201,
+            "name": "Grimy marrentill",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0007324397568300008,
+            "rolls": 1
+        },
+        {
+            "id": 203,
+            "name": "Grimy tarromin",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005493298176225005,
+            "rolls": 1
+        },
+        {
+            "id": 205,
+            "name": "Grimy harralander",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.000427240878407246,
+            "rolls": 1
+        },
+        {
+            "id": 207,
+            "name": "Grimy ranarr weed",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00033569438383295846,
+            "rolls": 1
         }
     ]
 }

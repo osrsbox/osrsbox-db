@@ -1,6 +1,7 @@
 {
     "id": 24537,
     "name": "Carrot sword",
+    "last_updated": "2020-12-27",
     "incomplete": false,
     "members": false,
     "tradeable": false,
@@ -28,7 +29,6 @@
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABT0lEQVR4XmNgGBDA+B9dZAAB4/9dnc7/B4GjQA5AOMZAQQGM0VXRCUAcMuoYVICIIhDe0e4EdxC6SjoAhEPQHTMADhp1DC7A+H91nS0cDyrHwPAAJWL8jqGzg0YdgwuMOgYfwHTQgDpmap4pHA8qx8AwHcsaSG0NwRA+ukPoGDqM/z0brP43Hy8EY5hjnGNsUUKFTo6BAcb/vq22YIflr0z47xbngOEYdB00BIz/TaK1/vNKcf5XsZcFOypxhe9AOQYEGP8LKvH+NwrX+G/lZ/pfSkUCHFp+HfZIaYqugPG/mrPsf/swq/82QebwBGyTZQAPJXQdNAKInAVyDAgjHMD436PWkp4OYvxfvi39f9K00P9OETZgjJlm0Pk0BYzgbB3U5/Q/ZCLuLgs6n4YAmJAleP/rBaj8L1qXRM+owQcQaQhb6AwIgDlkUDhmMAAA/2aQz8Chj3YAAAAASUVORK5CYII=",
     "wiki_name": "Carrot sword",
     "wiki_url": "https://oldschool.runescape.wiki/w/Carrot_sword",
-    "wiki_exchange": null,
     "equipment": {
         "attack_stab": -100,
         "attack_slash": -100,
@@ -49,32 +49,25 @@
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "slashing_swords",
+        "weapon_type": "blunt",
         "stances": [
             {
-                "combat_style": "chop",
-                "attack_type": "slash",
+                "combat_style": "pound",
+                "attack_type": "crush",
                 "attack_style": "accurate",
                 "experience": "attack",
                 "boosts": null
             },
             {
-                "combat_style": "slash",
-                "attack_type": "slash",
+                "combat_style": "pummel",
+                "attack_type": "crush",
                 "attack_style": "aggressive",
                 "experience": "strength",
                 "boosts": null
             },
             {
-                "combat_style": "lunge",
-                "attack_type": "stab",
-                "attack_style": "controlled",
-                "experience": "shared",
-                "boosts": null
-            },
-            {
                 "combat_style": "block",
-                "attack_type": "slash",
+                "attack_type": "crush",
                 "attack_style": "defensive",
                 "experience": "defence",
                 "boosts": null
