@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Script to update all Monster data.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -21,13 +21,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-from scripts.monsters import monsters_drops
+# from scripts.monsters import monsters_drops
 from scripts.monsters import monsters_properties
 
 
 def main():
-    monsters_drops.fetch()
-    monsters_drops.process()
+    # monsters_drops.fetch()
+    # monsters_drops.process()
 
     monsters_properties.fetch()
     monsters_properties.process()

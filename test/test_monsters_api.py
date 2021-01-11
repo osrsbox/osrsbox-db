@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Tests for module: osrsbox.monsters_api.all_monsters
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ from pathlib import Path
 from osrsbox.monsters_api import all_monsters
 
 # The current number of monsters being loaded from the db
-NUMBER_OF_MONSTERS = 2814
+NUMBER_OF_MONSTERS = 2832
 
 
 def test_all_monsters_load_monsters_json(path_to_docs_dir: Path):

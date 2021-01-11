@@ -36,6 +36,8 @@ python3 update.py
 echo -e "  > items..."
 cd $odb/scripts/items
 python3 update.py
+cd $odb/scripts/icons
+python3 convert_item_icons.py
 
 echo -e "  > monsters..."
 cd $odb/scripts/monsters

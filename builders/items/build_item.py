@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Build an item given OSRS cache, wiki and custom data.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -552,7 +552,13 @@ class BuildItem:
         """
         # Start by setting the duplicate property to False
         self.item_dict["duplicate"] = False
-        self.item_dict["last_updated"] = self.all_db_items[self.item_id]["last_updated"]
+
+        # Check/set last update
+        last_update = self.all_db_items.get(self.item_id, None)
+        if last_update:
+            self.item_dict["last_updated"] = self.all_db_items[self.item_id]["last_updated"]
+        else:
+            self.item_dict["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         # Create an ItemProperties object
         item_properties = ItemProperties(**self.item_dict)
@@ -634,11 +640,9 @@ class BuildItem:
 
     def export_item_to_json(self):
         """Export item to JSON, if requested."""
-        current_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        if self.item_dict["last_updated"] > current_date:
-            item_properties = ItemProperties(**self.item_dict)
-            output_dir = Path(config.DOCS_PATH, "items-json")
-            item_properties.export_json(True, output_dir)
+        item_properties = ItemProperties(**self.item_dict)
+        output_dir = Path(config.DOCS_PATH, "items-json")
+        item_properties.export_json(True, output_dir)
 
     def validate_item(self):
         """Use the schema-items.json file to validate the populated item."""

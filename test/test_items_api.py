@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Tests for module: osrsbox.items_api.all_items
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ from pathlib import Path
 from osrsbox.items_api import all_items
 
 # The current number of items being loaded from the db
-NUMBER_OF_ITEMS = 23936
+NUMBER_OF_ITEMS = 24000
 
 
 def test_all_items_load_items_json(path_to_docs_dir: Path):

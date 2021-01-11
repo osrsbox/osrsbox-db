@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Build a monster given OSRS cache, wiki and custom data.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -326,8 +326,15 @@ class BuildMonster:
         """
         # Start by setting the duplicate property to False
         self.monster_dict["duplicate"] = False
+
+        # Check/set last update
+        last_update = self.all_db_monsters.get(self.monster_id, None)
+        if last_update:
+            self.monster_dict["last_updated"] = self.all_db_monsters[self.monster_id]["last_updated"]
+        else:
+            self.monster_dict["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
         # Create an MonsterProperties object
-        self.monster_dict["last_updated"] = self.all_db_monsters[self.monster_id]["last_updated"]
         monster_properties = MonsterProperties(**self.monster_dict)
 
         # Set the monster properties that we want to compare
@@ -394,15 +401,14 @@ class BuildMonster:
 
     def export_monster_to_json(self):
         """Export monster to JSON, if requested."""
-        current_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        if self.monster_dict["last_updated"] > current_date:
-            self.monster_properties = MonsterProperties(**self.monster_dict)
-            output_dir = Path(config.DOCS_PATH, "monsters-json")
-            self.monster_properties.export_json(True, output_dir)
+        self.monster_properties = MonsterProperties(**self.monster_dict)
+        output_dir = Path(config.DOCS_PATH, "monsters-json")
+        self.monster_properties.export_json(True, output_dir)
 
     def validate_monster(self):
         """Use the schema-monsters.json file to validate the populated monster."""
         # Create JSON out object to validate
+        self.monster_properties = MonsterProperties(**self.monster_dict)
         current_json = self.monster_properties.construct_json()
 
         # Validate object with schema attached

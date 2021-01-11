@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Program to invoke item database generation process.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -131,12 +131,15 @@ class Builder:
                 builder.validate_item()
 
         # Done processing, rejoice!
-        print("Done.")
+        print("Built.")
         exit(0)
 
     def test(self):
         # Start processing every item!
         for item_id in self.all_items_cache_data:
+
+            # if int(item_id) < 25000:
+            #     continue
 
             # Initialize the BuildItem class, used for all items
             builder = build_item.BuildItem(item_id=item_id,
@@ -162,10 +165,12 @@ class Builder:
                 builder.populate_non_wiki_item()
 
             known_item = builder.check_duplicate_item()
-            self.known_items.append(known_item)
+            if known_item:
+                self.known_items.append(known_item)
             builder.validate_item()
 
         # Done testing, rejoice!
+        print("Tested.")
         exit(0)
 
 
@@ -187,10 +192,17 @@ if __name__ == "__main__":
                         default=True,
                         required=False,
                         help='A boolean of whether to validate using schema.')
+    parser.add_argument('--test',
+                        default=False,
+                        required=False,
+                        help='A boolean of whether to test the builder process.')
     args = parser.parse_args()
 
     builder = Builder(verbose=args.verbose,
                       compare=args.compare,
                       export=args.export,
                       validate=args.validate)
-    builder.run()
+    if args.test:
+        builder.test()
+    else:
+        builder.run()
