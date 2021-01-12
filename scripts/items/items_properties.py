@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Script to fetch OSRS Wiki pages for Category:Items.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -46,7 +46,7 @@ def fetch():
     if TITLES_FP.exists():
         last_extraction_date = TITLES_FP.stat().st_mtime
         last_extraction_date = datetime.fromtimestamp(last_extraction_date)
-        last_extraction_date = last_extraction_date - timedelta(days=1)
+        last_extraction_date = last_extraction_date - timedelta(days=3)
     else:
         last_extraction_date = datetime.strptime("2013-02-22", "%Y-%m-%d")
 
@@ -81,7 +81,7 @@ def fetch():
     # Determine page titles count
     page_titles_total = len(wiki_page_titles)
     print(f">>> Number of extracted wiki pages: {page_titles_total}")
-    exit()
+
     # Open page title JSON file, to check if page needs to have wiki text extracted
     json_data = dict()
 

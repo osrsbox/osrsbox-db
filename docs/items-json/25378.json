@@ -1,8 +1,8 @@
 {
     "id": 25378,
     "name": "Dragon axe (or)",
-    "last_updated": "2021-01-11",
-    "incomplete": true,
+    "last_updated": "2021-01-12",
+    "incomplete": false,
     "members": true,
     "tradeable": false,
     "tradeable_on_ge": false,
@@ -15,20 +15,70 @@
     "linked_id_placeholder": 25379,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
-    "equipable_weapon": false,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 55000,
     "lowalch": 22000,
     "highalch": 33000,
-    "weight": null,
+    "weight": 1.36,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": null,
+    "release_date": "2021-01-06",
     "duplicate": false,
-    "examine": null,
+    "examine": "A very powerful axe in the colours of the Trailblazer League.",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAACiklEQVR4Xu2Xj2tSURzFff/GQJARIjJEhiGGw9EDEXEhY9PY5ljalFScznRbw3Jj0q/FRrGiFjXGqFHRWDFiFEHR/3Xq+31cfXs6BPX5KDpwQMR374dzv/eoJtO/Jwnt3TdJGE+mMHEjjUgmi2huAVP5AntmsYhYqYy5peV+gUkYmZ7BaGyWfflanC0n5tn+P6CBdAavdjLYe5rF/vOcnlAKDAFs34vjyYMEdjbn8WwriRfbKYYggLcvCzh8vYj3e0WGcVosbO1qXaoBI0BaQXzYL+H4zRJO3t3qHwwlok6FjuZgd4GBjg7K+sPQ8GphhAmIYOh4RDJfj27XgbSrdakGDM2MGoTgKCFhgqJ0Tj9W8PPLhh5AytXWJkOvNzdmGVANRN59nGaoHyfrvQZqhhEgtcoUWww1QQhYnYAkhBPXueQIQumQs76/FuPNCUjAECDNkxqo2R1J4uYVi4iboja9XylPcmIChuDpttFgf/+8BrfdjIDbxq2drK4j//BRd1BnAVpJQi4ZxGpxHHfvTNeBqIdosAkoPDLErT1W6EFBtn9QSTAV96O6HMFWba6eEAHJLisDBbPKV0dXMOerMQ9WtwcOWUY+HeKEaJ6oGAlI9JD22LWrdSFlYY9tAL4hM2SnGSH3IKI+G6cjjovK8dPhCr4dV/HrtKYHTDNIwGVhqxM4zz2HofITEJRI2HOhabN21q7aoZRN6RgIYsJrbQmifUonSRiw2WFxOPj7Sd26fQYhSXxznP4AW5uK9tM6StnY5vXC7htlKENTGRx2MYxIx6BUSBInMhwM4dJkhH+0GwrjjV6twxCYgTAm08WxK/y3JXyzhPjKqrEwinRt1c6kvkWGw/zX36bfkIC5T7igWiIAAAAASUVORK5CYII=",
-    "wiki_name": null,
-    "wiki_url": null,
-    "equipment": null,
-    "weapon": null
+    "wiki_name": "Dragon axe (or)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_axe_(or)",
+    "equipment": {
+        "attack_stab": -2,
+        "attack_slash": 38,
+        "attack_crush": 32,
+        "attack_magic": 0,
+        "attack_ranged": 0,
+        "defence_stab": 0,
+        "defence_slash": 1,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": 42,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "weapon",
+        "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "axe",
+        "stances": [
+            {
+                "combat_style": "chop",
+                "attack_type": "slash",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "hack",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "smash",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "slash",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

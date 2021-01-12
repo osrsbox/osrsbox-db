@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Script to fetch OSRS Wiki pages for Category:Monsters.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -46,7 +46,7 @@ def fetch():
     if TITLES_FP.exists():
         last_extraction_date = TITLES_FP.stat().st_mtime
         last_extraction_date = datetime.fromtimestamp(last_extraction_date)
-        last_extraction_date = last_extraction_date - timedelta(days=30)
+        last_extraction_date = last_extraction_date - timedelta(days=3)
     else:
         last_extraction_date = datetime.strptime("2013-02-22", "%Y-%m-%d")
 
