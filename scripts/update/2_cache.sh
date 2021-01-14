@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 
 Update flatcache and extract cache data.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -44,7 +44,7 @@ echo -e ">>> runelite..."
 cd $rl
 git pull
 
-echo -e ">>> Building RuneLite..."
+echo -e "  > Building RuneLite..."
 mvn clean
 mvn install -DskipTests
 

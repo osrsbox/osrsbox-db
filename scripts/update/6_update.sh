@@ -23,6 +23,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
 odb=$(cd ../..; pwd)
 
+cd $odb
+python3 -m venv venv
+source venv/bin/activate
+
 echo -e ">>> Running JSON population scripts..."
 cd $odb/scripts/update/
 python3 update_json_files.py

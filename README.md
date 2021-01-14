@@ -872,7 +872,8 @@ This project would thoroughly benefit from contributions from additional develop
 
 A really manual part of the item database is the `item.equipment.requirements` data. So far, I have manually populated this data... for over 3,500 items! To keep this project alive, I have stopped adding in this data (as it takes a lot of time). Here is a summary of how the item skill requirements work:
 
-- All item requirements are stored in the [`skill-requirements.json`](https://github.com/osrsbox/osrsbox-db/blob/master/data/items/skill-requirements.json) file
+- All item requirements are stored in the [`skill-requirements.json`](https://github.com/osrsbox/osrsbox-db/blob/master/data/items/items-skill-requirements.json) file
+
 - They have a structure of:
 
 ```
