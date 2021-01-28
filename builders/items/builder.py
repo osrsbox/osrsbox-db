@@ -97,6 +97,9 @@ class Builder:
             # if int(item_id) < 25000:
             #     continue
 
+            if "(beta" in self.all_items_cache_data[item_id]["name"]:
+                continue
+
             # Initialize the BuildItem class, used for all items
             builder = build_item.BuildItem(item_id=item_id,
                                            all_items_cache_data=self.all_items_cache_data,
@@ -140,6 +143,9 @@ class Builder:
 
             # if int(item_id) < 25000:
             #     continue
+
+            if "(beta" in self.all_items_cache_data[item_id]["name"]:
+                continue
 
             # Initialize the BuildItem class, used for all items
             builder = build_item.BuildItem(item_id=item_id,
