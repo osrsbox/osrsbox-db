@@ -466,13 +466,14 @@ class BuildItem:
                 self.item_dict["incomplete"] = True
 
         # Slot
+        slot = None
         if self.infobox_version_number is not None:
             key = "slot" + str(self.infobox_version_number)
-            value = self.extract_infobox_value(bonuses_template, key)
-        if value is None:
-            value = self.extract_infobox_value(bonuses_template, "slot")
-        if value is not None:
-            self.item_dict["equipment"]["slot"] = infobox_cleaner.caller(value, "slot")
+            slot = self.extract_infobox_value(bonuses_template, key)
+        if slot is None:
+            slot = self.extract_infobox_value(bonuses_template, "slot")
+        if slot is not None:
+            self.item_dict["equipment"]["slot"] = infobox_cleaner.caller(slot, "slot")
         else:
             print(">>> populate_from_wiki_data_equipment: No slot")
             exit(1)
@@ -494,13 +495,14 @@ class BuildItem:
         self.item_dict["weapon"] = dict()
 
         # Attack speed
+        attack_speed = None
         if self.infobox_version_number is not None:
             key = "speed" + str(self.infobox_version_number)
-            value = self.extract_infobox_value(bonuses_template, key)
-        if value is None:
-            value = self.extract_infobox_value(bonuses_template, "speed")
-        if value is not None:
-            self.item_dict["weapon"]["attack_speed"] = infobox_cleaner.caller(value, "speed")
+            attack_speed = self.extract_infobox_value(bonuses_template, key)
+        if attack_speed is None:
+            attack_speed = self.extract_infobox_value(bonuses_template, "speed")
+        if attack_speed is not None:
+            self.item_dict["weapon"]["attack_speed"] = infobox_cleaner.caller(attack_speed, "speed")
         else:
             print(">>> populate_from_wiki_data_equipment: No attack_speed")
             exit(1)
