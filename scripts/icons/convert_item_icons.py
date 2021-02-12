@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Convert items icons to base64 and populate icons-items-complete.json file.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -36,7 +36,7 @@ def main():
     all_icons = dict()
 
     # Sort icon files numerically
-    item_ids = [int(x.stem) for x in fis]
+    item_ids = [x.stem for x in fis]
     item_ids = sorted(item_ids)
 
     # Loop all item IDs, and process each PNG

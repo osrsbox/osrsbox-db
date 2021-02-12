@@ -1,7 +1,7 @@
 {
     "id": 25042,
     "name": "Trailblazer dragon trophy",
-    "last_updated": "2021-01-20",
+    "last_updated": "2021-02-12",
     "incomplete": false,
     "members": true,
     "tradeable": false,
@@ -16,7 +16,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
-    "equipable_weapon": false,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
@@ -30,9 +30,9 @@
     "wiki_name": "Trailblazer dragon trophy",
     "wiki_url": "https://oldschool.runescape.wiki/w/Trailblazer_dragon_trophy",
     "equipment": {
-        "attack_stab": 0,
-        "attack_slash": 0,
-        "attack_crush": 0,
+        "attack_stab": -100,
+        "attack_slash": -100,
+        "attack_crush": -50,
         "attack_magic": 0,
         "attack_ranged": 0,
         "defence_stab": 0,
@@ -40,12 +40,38 @@
         "defence_crush": 0,
         "defence_magic": 0,
         "defence_ranged": 0,
-        "melee_strength": 0,
+        "melee_strength": -10,
         "ranged_strength": 0,
         "magic_damage": 0,
         "prayer": 0,
-        "slot": "shield",
+        "slot": "2h",
         "requirements": null
     },
-    "weapon": null
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "blunt",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

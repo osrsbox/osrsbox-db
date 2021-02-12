@@ -1,7 +1,7 @@
 {
     "id": 25046,
     "name": "Trailblazer adamant trophy",
-    "last_updated": "2021-01-20",
+    "last_updated": "2021-02-12",
     "incomplete": false,
     "members": true,
     "tradeable": false,
@@ -16,7 +16,7 @@
     "placeholder": false,
     "equipable": true,
     "equipable_by_player": true,
-    "equipable_weapon": false,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
@@ -44,8 +44,34 @@
         "ranged_strength": 0,
         "magic_damage": 0,
         "prayer": 0,
-        "slot": "shield",
+        "slot": "2h",
         "requirements": null
     },
-    "weapon": null
+    "weapon": {
+        "attack_speed": 0,
+        "weapon_type": "blunt",
+        "stances": [
+            {
+                "combat_style": "pound",
+                "attack_type": "crush",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "pummel",
+                "attack_type": "crush",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "crush",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

@@ -283,6 +283,9 @@ def rarity_cleaner(rarity: str):
 
 
 def item_id_lookup(name: str) -> int:
+    if name == "Black mask":
+        name = "Black mask (10)"
+
     for item in ITEMS:
         if item.wiki_name == name:
             return item.id, item.members

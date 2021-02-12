@@ -200,7 +200,10 @@ class BuildItem:
         self.item_dict["equipable_weapon"] = False
         self.item_dict["incomplete"] = True
 
-        self.item_dict["icon"] = self.icons[self.item_id_str]
+        try:
+            self.item_dict["icon"] = self.icons[self.item_id_str]
+        except KeyError:
+            self.item_dict["icon"] = self.icons["blank"]
 
     def populate_wiki_item(self):
         self.populate_from_cache_data()
@@ -212,7 +215,10 @@ class BuildItem:
             self.item_dict["equipable_by_player"] = False
             self.item_dict["equipable_weapon"] = False
 
-        self.item_dict["icon"] = self.icons[self.item_id_str]
+        try:
+            self.item_dict["icon"] = self.icons[self.item_id_str]
+        except KeyError:
+            self.item_dict["icon"] = self.icons["blank"]
 
     def populate_from_cache_data(self):
         """Populate an item using raw cache data.
@@ -504,27 +510,37 @@ class BuildItem:
         if attack_speed is not None:
             self.item_dict["weapon"]["attack_speed"] = infobox_cleaner.caller(attack_speed, "speed")
         else:
-            print(">>> populate_from_wiki_data_equipment: No attack_speed")
-            exit(1)
+            # If not present, set to 0
+            self.item_dict["weapon"]["attack_speed"] = 0
 
         # Weapon type
         # Extract the CombatStyles template
         infobox_combat_parser = WikitextTemplateParser(self.item_wikitext)
         has_infobox = infobox_combat_parser.extract_infobox("combatstyles")
-        if not has_infobox:
-            # No combatstyles template found for the item!
-            print("populate_from_wiki_data_equipment: No combatstyles")
-            exit(1)
 
-        # Set the infobox bonuses template
-        combat_template = infobox_combat_parser.template
-        weapon_type = infobox_cleaner.caller(combat_template, "weapon_type")
-        self.item_dict["weapon"]["weapon_type"] = weapon_type
-        try:
-            self.item_dict["weapon"]["stances"] = self.weapon_stances[weapon_type]
-        except KeyError:
-            print("populate_from_wiki_data_equipment: Weapon type error")
-            exit(1)
+        if has_infobox:
+            # There is a combatstyles infobox, parse it
+            # Set the infobox bonuses template
+            combat_template = infobox_combat_parser.template
+            weapon_type = infobox_cleaner.caller(combat_template, "weapon_type")
+            weapon_type = weapon_type.lower()
+            self.item_dict["weapon"]["weapon_type"] = weapon_type
+            try:
+                self.item_dict["weapon"]["stances"] = self.weapon_stances[weapon_type]
+            except KeyError:
+                print("populate_from_wiki_data_equipment: Weapon type error")
+                exit(1)
+
+        else:
+            # No combatstyles infobox, try get data from bonuses
+            weapon_type = self.extract_infobox_value(bonuses_template, "combatstyle")
+            weapon_type = weapon_type.lower()
+            self.item_dict["weapon"]["weapon_type"] = weapon_type
+            try:
+                self.item_dict["weapon"]["stances"] = self.weapon_stances[weapon_type]
+            except KeyError:
+                print("populate_from_wiki_data_equipment: Weapon type error")
+                exit(1)
 
         # Finally, set the equipable_weapon property to true
         self.item_dict["equipable_weapon"] = True
