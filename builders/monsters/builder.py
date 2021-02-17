@@ -68,8 +68,8 @@ class Builder:
         # Start processing every monster!
         for monster_id in self.all_monster_cache_data:
 
-            # if int(monster_id) < 10000:
-            #     continue
+            if int(monster_id) != 10589:
+                continue
 
             # Initialize the BuildMonster class, used for all monsters
             builder = build_monster.BuildMonster(monster_id=monster_id,
@@ -86,6 +86,7 @@ class Builder:
             if status:
                 builder.populate_monster()
                 known_monster = builder.check_duplicate_monster()
+                print(known_monster)
                 self.known_monsters.append(known_monster)
                 builder.populate_monster_drops()
                 if self.compare:

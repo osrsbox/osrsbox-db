@@ -1,7 +1,7 @@
 {
     "id": 25395,
     "name": "Swampbark boots",
-    "last_updated": "2021-01-28",
+    "last_updated": "2021-02-17",
     "incomplete": false,
     "members": true,
     "tradeable": true,
@@ -45,7 +45,10 @@
         "magic_damage": 0,
         "prayer": 0,
         "slot": "feet",
-        "requirements": null
+        "requirements": {
+            "magic": 50,
+            "defence": 50
+        }
     },
     "weapon": null
 }
