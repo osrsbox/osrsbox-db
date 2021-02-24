@@ -36,12 +36,19 @@ def process():
     # Loop all entries in the loaded definition files
     for id_number in definitions:
         json_data = definitions[id_number]
+
+        # Before checking if attackable, add a couple of
+        # known monsters that are "death" versions...
+        if json_data["id"] in [8622, 9432, 9433]:
+            attackable_npcs[id_number] = json_data
+
         if "Attack" in json_data["actions"]:
             # Skip entries with variable menu list color in name
             if "<col" in json_data["name"]:
                 continue
             if json_data["name"] in ["Null", "null", ""]:
                 continue
+
             # Save the attackable NPC
             attackable_npcs[id_number] = json_data
 
