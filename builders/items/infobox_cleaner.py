@@ -38,6 +38,9 @@ unequipable = [
     740,  # Blue hat (Legends' Quest)
     818,  # Poisoned dart(p)
     1235,  # Poisoned dagger(p)
+    2513,  # Dragon chainbody (My Arm's Big Adventure)
+    4178,  # Abyssal whip (My Arm's Big Adventure)
+    4180,  # Dragon platelegs (My Arm's Big Adventure)
     5056,  # Dwarven battleaxe
     5057,  # Dwarven battleaxe
     5058,  # Dwarven battleaxe
@@ -46,6 +49,8 @@ unequipable = [
     5063,  # Right boot
     5064,  # Exquisite boots
     5067,  # Exquisite clothes
+    5684,  # Poison dagger(p+)
+    5702,  # Poison dagger(p++)
     6788,  # Torn robe
     6789,  # Torn robe
     6818,  # Bow-sword
@@ -54,6 +59,7 @@ unequipable = [
     6894,  # Adamant kiteshield (Mage Training Arena)
     6895,  # Adamant med helm (Mage Training Arena)
     6897,  # Rune longsword (Mage Training Arena)
+    6967,  # Dragon med helm (My Arm's Big Adventure)
     7804,  # Zaros mjolnir
     8871,  # Crate with zanik - technically equipable, but no attack speed
     9054,  # Red goblin mail

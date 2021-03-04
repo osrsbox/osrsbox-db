@@ -95,10 +95,6 @@ class Builder:
                 if self.validate:
                     builder.validate_monster()
 
-            else:
-                print(self.all_monster_cache_data[monster_id]["name"])
-                print(monster_id, status)
-
         # Done processing, rejoice!
         print("Built.")
         exit(0)
