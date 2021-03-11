@@ -54,6 +54,6 @@ SCRIPTS_UPDATE = Path(SCRIPTS_PATH / "update")
 
 # User agent for wiki scraping requests
 custom_agent = {
-    'User-Agent': "osrsbox-agent",
+    'User-Agent': "osrsbox - @PH01L#7906",
     'From': "phoil@osrsbox.com"
 }

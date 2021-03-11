@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Various methods to help clean OSRS Wiki wikitext entries.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -326,6 +326,12 @@ def category(value: str) -> str:
     value = value.replace("spiritual creatures", "spiritual creature")
     value = value.replace("wyrms", "wyrm")
     value = value.replace("sourhogs", "sourhog")
+    value = value.replace("aberrant spectres", "aberrant spectre")
+    value = value.replace("banshees", "banshee")
+    value = value.replace("abyssal demons", "abyssal demon")
+    value = value.replace("basilisks", "basilisk")
+    value = value.replace("bloodvelds", "bloodveld")
+    value = value.replace("bats", "bat")
 
     if "|" in value:
         value = value.split("|")[1]

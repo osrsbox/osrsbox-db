@@ -35,7 +35,7 @@ def fetch():
     url = "https://oldschool.runescape.wiki/w/Module:GELimits/data?action=raw"
 
     try:
-        data = requests.get(url).text
+        data = requests.get(url, headers=config.custom_agent).text
     except requests.exceptions.RequestException as e:
         raise SystemExit(">>> ERROR: Get request error. Exiting.") from e
 

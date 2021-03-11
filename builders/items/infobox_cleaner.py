@@ -6,7 +6,7 @@ Website: https://www.osrsbox.com
 Description:
 Various methods to help clean OSRS Wiki wikitext entries.
 
-Copyright (c) 2020, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -346,7 +346,7 @@ def release_date(value: str) -> str:
     try:
         release_date = dateparser.parse(release_date)
         release_date = release_date.date().isoformat()
-    except (ValueError, TypeError):
+    except (ValueError, TypeError, AttributeError):
         return None
 
 

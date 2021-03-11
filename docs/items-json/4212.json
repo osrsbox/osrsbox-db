@@ -1,10 +1,10 @@
 {
     "id": 4212,
     "name": "New crystal bow",
-    "last_updated": "2020-12-27",
-    "incomplete": true,
+    "last_updated": "2021-03-11",
+    "incomplete": false,
     "members": false,
-    "tradeable": false,
+    "tradeable": true,
     "tradeable_on_ge": false,
     "stackable": false,
     "stacked": null,
@@ -15,20 +15,66 @@
     "linked_id_placeholder": null,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
-    "equipable_weapon": false,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1,
     "lowalch": 0,
     "highalch": 0,
-    "weight": null,
+    "weight": 2.0,
     "buy_limit": null,
-    "quest_item": false,
-    "release_date": null,
+    "quest_item": true,
+    "release_date": "2005-02-07",
     "duplicate": false,
-    "examine": null,
+    "examine": "A nice sturdy magical bow.",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABgklEQVR4Xu2WX0vCUBjGPd/Ej9C1N0GBQxpJoYQtwdZyHf/bVqjDacO0QjHDsvCiLrqQLoroAz65DRVGFwW1cwh/8MAY7zgPz3nPexYILPkfEHjfMIRA2pPBiSmC+E7SMbMSDDryVvgIwboY58eMqhaQoidzQ94KnyGomOeIRKL8GCpXmrjqDXgxZEMwHN5Clik/J6zb7aFuXfCVUq3ZQdUw+UnJbu7CaYOvlHK6iVxJ86TENDGCJNUR3XIHpS1REObP3mqfINgIh7Ebi2E1FEJjupWUlmAYTbamZlKULBLJFLZFkW1/uQsT5PM6JFWDQrNsDS1wk1LLBoqae+d5K3xnlpZuWKjWuZlVNgRm6xKttjvVF2IKwXg8xmh0D0mSIQhuszM2Zl/IdzDOOshkyo6x0FqEtTGCfn8ArWYhXao5p3EzceAx9pX+FAKr1cbb+wcmL694ep5Mt/IR1zcPKBR1ZHPHOKJFHKbzkBWK1L7qj6mfyJf/9tki35X3+yVLfoNPE9oMX2XLw1wAAAAASUVORK5CYII=",
-    "wiki_name": null,
-    "wiki_url": null,
-    "equipment": null,
-    "weapon": null
+    "wiki_name": "Crystal bow (historical) (New)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_bow_(historical)#New",
+    "equipment": {
+        "attack_stab": 0,
+        "attack_slash": 0,
+        "attack_crush": 0,
+        "attack_magic": 0,
+        "attack_ranged": 100,
+        "defence_stab": 0,
+        "defence_slash": 0,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": 0,
+        "ranged_strength": 70,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "2h",
+        "requirements": {
+            "agility": 50,
+            "ranged": 70
+        }
+    },
+    "weapon": {
+        "attack_speed": 5,
+        "weapon_type": "bow",
+        "stances": [
+            {
+                "combat_style": "accurate",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "accuracy and damage"
+            },
+            {
+                "combat_style": "rapid",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged",
+                "boosts": "attack speed by 1 tick"
+            },
+            {
+                "combat_style": "longrange",
+                "attack_type": null,
+                "attack_style": null,
+                "experience": "ranged and defence",
+                "boosts": "attack range by 2 squares"
+            }
+        ]
+    }
 }
