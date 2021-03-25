@@ -427,6 +427,9 @@ def slot(value: str) -> str:
     :param value: Template value extracted from raw wikitext.
     :return value: A cleaned slot value as an str.
     """
+    if "\n" in value:  # TODO: Remove when comment fixed in fish sack barrel
+        value = value.split("\n")[0]
+
     try:
         return value.lower()
     except ValueError:

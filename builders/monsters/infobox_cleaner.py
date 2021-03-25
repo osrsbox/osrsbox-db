@@ -332,6 +332,8 @@ def category(value: str) -> str:
     value = value.replace("basilisks", "basilisk")
     value = value.replace("bloodvelds", "bloodveld")
     value = value.replace("bats", "bat")
+    value = value.replace("monkeys", "monkey")
+    value = value.replace("black demons", "black demon")
 
     if "|" in value:
         value = value.split("|")[1]
