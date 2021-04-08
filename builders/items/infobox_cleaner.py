@@ -36,6 +36,7 @@ unequipable = [
     287,  # Blue goblin mail,
     288,  # Goblin mail
     740,  # Blue hat (Legends' Quest)
+    713,  # Clue scroll
     818,  # Poisoned dart(p)
     1235,  # Poisoned dagger(p)
     2513,  # Dragon chainbody (My Arm's Big Adventure)

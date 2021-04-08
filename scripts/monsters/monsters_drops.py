@@ -105,6 +105,8 @@ def fetch():
 
         data = r.json()
 
+        Path(config.DATA_MONSTERS_PATH / "monsters-drops-raw").mkdir(parents=True, exist_ok=True)
+
         for monster_id in conditions_dict[condition]:
             file_name = f"{monster_id}.json"
             file_path = Path(config.DATA_MONSTERS_PATH / "monsters-drops-raw" / file_name)
