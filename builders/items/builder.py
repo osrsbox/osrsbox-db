@@ -97,6 +97,10 @@ class Builder:
             # if int(item_id) < 25000:
             #     continue
 
+            # TODO: 8856 Defensive shield (quick fix for missing weapon type)
+            if int(item_id) in [8856]:
+                continue
+
             if "(beta" in self.all_items_cache_data[item_id]["name"]:
                 continue
 
