@@ -314,9 +314,8 @@ class WikitextTemplateParser:
                 value = value.strip()
                 return value
             except ValueError:
-                version_key = "version" + version
                 try:
-                    value = self.template.get(version_key).value
+                    value = self.template.get('id').value
                     value = value.strip()
                     return value
                 except ValueError:
