@@ -42,7 +42,7 @@ Extract the item IDs from an infobox, including version support. Returns a dicti
 of item ID -> version number. For example: {12647: '1', 12654: '2'}
     versioned_ids = infobox_parser.extract_infobox_ids()
 
-Copyright (c) 2019, PH01L
+Copyright (c) 2021, PH01L
 
 ###############################################################################
 This program is free software: you can redistribute it and/or modify
@@ -58,13 +58,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
 import json
-import logging
 from pathlib import Path
 from typing import Union, List, Dict
 
 import mwparserfromhell
-
-logger = logging.getLogger(__name__)
 
 
 def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool = True) -> List:
@@ -93,7 +90,6 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
     except KeyError:
         # The wiki_name was not found in the available dumped wikitext pages
         # Return the empty list to indicate no templates were extracted
-        logger.debug("extract_wikitext_template: Could not parse wikitext.")
         return templates
 
     # Loop through templates in wikicode from wiki page...
@@ -102,7 +98,6 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
         template_name = template.name.strip()
         template_name = template_name.lower()
         if template_type in template_name:
-            logger.debug("extract_wikitext_template: Found template...")
             templates.append(template)
             if not multiple:
                 # Only find the first instance, so return now
@@ -115,7 +110,7 @@ def extract_wikitext_template(wikitext: str, template_type: str, multiple: bool 
 class WikitextIDParser:
     def __init__(self, wikitext_file_path: Path, template_names: List):
         self.wikitext_file_path = wikitext_file_path  # the raw wikitext dump
-        self.template_names = template_names
+        self.template_names = template_names  # The infobox name (e.g., infobox item, infobox monster)
         self.item_id_to_wikitext = dict()  # Maps ID to wikitext (instead of name)
         self.item_id_to_version_number = dict()  # Maps ID to template version
         self.item_id_to_wiki_name = dict()  # Maps ID to original wiki page name
@@ -134,27 +129,20 @@ class WikitextIDParser:
 
         # Loop all items in the OSRS Wiki data dump
         for name, wikitext in wikitext_dump.items():
-            logger.debug(f"process_osrswiki_data_dump: Processing: {name}")
             # Loop the list of proivided infobox template names
             for template_name in self.template_names:
                 # Initialize the wikitext template parser
-                logger.debug(f"process_osrswiki_data_dump: Template: {template_name}")
                 infobox_parser = WikitextTemplateParser(wikitext)
                 has_infobox = infobox_parser.extract_infobox(template_name)
                 if has_infobox:
-                    logger.debug("process_osrswiki_data_dump: Found infobox template...")
                     infobox_parser.determine_infobox_versions()
                     versioned_ids = infobox_parser.extract_infobox_ids()
                     if not versioned_ids:
-                        logger.debug("process_osrswiki_data_dump: Could not find ID...")
                         continue
                     for id, version_number in versioned_ids.items():
-                        logger.debug(f"process_osrswiki_data_dump: Adding ID: {id} {version_number}")
                         self.item_id_to_version_number[id] = version_number
                         self.item_id_to_wikitext[id] = wikitext
                         self.item_id_to_wiki_name[id] = name
-                else:
-                    logger.debug("process_osrswiki_data_dump: Did NOT find infobox template...")
 
 
 class WikitextTemplateParser:
@@ -165,7 +153,6 @@ class WikitextTemplateParser:
 
         # Set specific wikitext infobox properties that can be versioned
         self.version_identifiers = {"id": 0,
-                                    "version": 0,
                                     "name": 0,
                                     "itemid": 0}
 
@@ -196,7 +183,6 @@ class WikitextTemplateParser:
             # The wiki_name was not found in the available dumped wikitext pages
             # Return false to indicate no wikitext was extracted
             # TODO: This should catch a different error
-            logger.debug("extract_infobox: KeyError for self.wikitext")
             return False
 
         # Loop through templates in wikicode from wiki page
@@ -212,12 +198,7 @@ class WikitextTemplateParser:
 
         # If no template_primary was found, return false
         if not self.template:
-            logger.debug("extract_infobox: Did not find a matching template.")
             return False
-
-        # Print the raw wikitext template to the log
-        logger.debug("extract_infobox: Found the following template.")
-        logger.debug(f"\n{self.template}")
 
         # If we got this far, return true
         return True
@@ -232,29 +213,28 @@ class WikitextTemplateParser:
 
         :return: A boolean representing sucessful processing.
         """
-        logger.debug("determine_infobox_versions: Checking if the infobox is versioned")
         # Loop through the different version identifiers
         for version_identifier in self.version_identifiers:
-            logger.debug(f"determine_infobox_versions: Checking {version_identifier}")
             try:
                 self.template.get(version_identifier + "1").value
                 self.is_versioned = True
                 break
             except ValueError:
-                pass
+                try:
+                    self.template.get(version_identifier + "2").value
+                    self.is_versioned = True
+                    break
+                except ValueError:
+                    pass
 
         # If the infobox is not versioned, return False
         if not self.is_versioned:
-            logger.debug("determine_infobox_versions: Infobox is NOT versioned...")
+            self.version_identifiers["id"] = 1
             return False
-        else:
-            logger.debug("determine_infobox_versions: Infobox is versioned...")
 
         # The infobox is versioned... continue processing
         # Try to determine the version counts for each version identifier
-        logger.debug("determine_infobox_versions: Determine infobox version counts...")
         for version_identifier in self.version_identifiers:
-            logger.debug(f"determine_infobox_versions: Counting {version_identifier}")
             i = 1
             while i <= 50:
                 try:
@@ -264,11 +244,6 @@ class WikitextTemplateParser:
                     pass
                 i += 1
 
-        # Infobox versioning completed, log results
-        logger.debug("determine_infobox_versions: Infobox version results:")
-        logger.debug(f"{self.version_identifiers}")
-
-        # Processing finished
         return True
 
     def extract_infobox_value(self, key: str) -> str:
@@ -288,7 +263,7 @@ class WikitextTemplateParser:
         except ValueError:
             return value
 
-    def extract_infobox_id(self, version: str) -> str:
+    def extract_infobox_id(self, versioned_identifier: str) -> str:
         """Helper method to extract an ID from a template using harcoded ID keys.
 
         This helper method is a solution to query an infobox template for
@@ -298,29 +273,16 @@ class WikitextTemplateParser:
         `itemid`: Query template using only the string `itemid`.
         `itemid + version`: Query template using the string `itemid` including the `version` number.
 
-        :param version: The number, as a string, to represent a versioned infobox.
+        :param versioned_identifier: The number, as a string, to represent a versioned infobox.
         :return: The extracted template ID value (can be a comma-seperated string).
         """
         value = None
-        id_key = "id" + version
         try:
-            value = self.template.get(id_key).value
+            value = self.template.get(versioned_identifier).value
             value = value.strip()
             return value
         except ValueError:
-            itemid_key = "itemid" + version
-            try:
-                value = self.template.get(itemid_key).value
-                value = value.strip()
-                return value
-            except ValueError:
-                version_key = "version" + version
-                try:
-                    value = self.template.get(version_key).value
-                    value = value.strip()
-                    return value
-                except ValueError:
-                    return value
+            pass
 
     def split_infobox_id_string(self, id_string: str) -> List:
         """Helper method to split a comma-separated string of item IDs.
@@ -354,7 +316,7 @@ class WikitextTemplateParser:
         an extracts the IDs associated with each item, including the infobox version
         number:
         id: 12647 is the crawling version, that uses version 1 in the infobox
-        id: 12654 is the airnourne version, that uses version 2 in the infobox
+        id: 12654 is the airbourne version, that uses version 2 in the infobox
         Returned data: {12647: '1', 12654: '2'}
 
         Un-versioned example: Pet k'ril tsutsaroth has only one version.
@@ -366,30 +328,38 @@ class WikitextTemplateParser:
         :return: A dictionary mapping item ID to version number.
         """
         item_id_to_version_number = dict()
-        if self.is_versioned:
-            count = self.version_identifiers["id"]
+
+        # First, try extract the non versioned identifier
+        # Example: |id = 10591, followed by |id2 = 10592
+        for identifier, count in self.version_identifiers.items():
+            # Skip identifiers with no count
             if count == 0:
-                count = self.version_identifiers["itemid"]
-            i = 1
-            while i <= count:
-                id = self.extract_infobox_id(str(i))  # Pass string cast version number
-                if not id:
-                    return item_id_to_version_number
+                continue
+            id = self.extract_infobox_id(identifier)  # Pass empty string, not versioned
+            if id:
                 ids = self.split_infobox_id_string(id)
                 for id in ids:
                     id = self.try_int_cast(id)
-                    if id:
-                        item_id_to_version_number[id] = str(i)
-                i += 1
-        else:
-            id = self.extract_infobox_id("")  # Pass empty string, not versioned
-            if not id:
-                return
-            ids = self.split_infobox_id_string(id)
-            for id in ids:
-                id = self.try_int_cast(id)
-                if id is not None:
-                    item_id_to_version_number[id] = ""
+                    if id is not None:
+                        item_id_to_version_number[id] = ""
+
+        if not self.is_versioned:
+            return item_id_to_version_number
+
+        # Second, try extract the versioned identifier
+        for identifier, count in self.version_identifiers.items():
+            # Skip identifiers with no count
+            if count == 0:
+                continue
+
+            for i in range(1, count + 2):
+                id = self.extract_infobox_id(identifier + str(i))  # Pass versioned string
+                if id:
+                    ids = self.split_infobox_id_string(id)
+                    for id in ids:
+                        id = self.try_int_cast(id)
+                        if id is not None:
+                            item_id_to_version_number[id] = i
 
         return item_id_to_version_number
 
