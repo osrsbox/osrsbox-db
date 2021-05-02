@@ -55,6 +55,9 @@ def fetch():
     to get monster drop data.
     """
     for monster_id, monster_list in all_wikitext_processed.items():
+        exists = all_monster_cache_data.get(monster_id, None)
+        if not exists:
+            continue
         if "drops (level" in monster_list[2].lower():
             name = all_monster_cache_data[monster_id]["name"]
             combat_level = all_monster_cache_data[monster_id]["combatLevel"]
