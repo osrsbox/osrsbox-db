@@ -33,14 +33,6 @@ import config
 from osrsbox import items_api
 
 
-# Load the monster wikitext file of processed data
-with open(Path(config.DATA_MONSTERS_PATH / "monsters-wiki-page-text-processed.json")) as f:
-    all_wikitext_processed = json.load(f)
-
-# Load the raw cache data that has been processed (this is ground truth)
-with open(Path(config.DATA_MONSTERS_PATH / "monsters-cache-data.json")) as f:
-    all_monster_cache_data = json.load(f)
-
 # Data structure for any monster with multiple drop tables
 # Format: id: query_string
 multi_drop_tables = dict()
@@ -54,6 +46,14 @@ def fetch():
     This is a request heavy method - querying about 1,000 endpoints
     to get monster drop data.
     """
+    # Load the monster wikitext file of processed data
+    with open(Path(config.DATA_MONSTERS_PATH / "monsters-wiki-page-text-processed.json")) as f:
+        all_wikitext_processed = json.load(f)
+
+    # Load the raw cache data that has been processed (this is ground truth)
+    with open(Path(config.DATA_MONSTERS_PATH / "monsters-cache-data.json")) as f:
+        all_monster_cache_data = json.load(f)
+
     for monster_id, monster_list in all_wikitext_processed.items():
         exists = all_monster_cache_data.get(monster_id, None)
         if not exists:

@@ -1,7 +1,7 @@
 {
     "id": 763,
     "name": "Giant Roc",
-    "last_updated": "2020-12-25",
+    "last_updated": "2021-05-30",
     "incomplete": true,
     "members": true,
     "release_date": "2006-10-23",
@@ -20,11 +20,16 @@
     "immune_poison": false,
     "immune_venom": false,
     "attributes": [],
-    "category": [],
-    "slayer_monster": false,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": [],
+    "category": [
+        "bird"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 250.0,
+    "slayer_masters": [
+        "turael",
+        "spria"
+    ],
     "duplicate": false,
     "examine": "A very, very large mountain-dwelling bird.",
     "wiki_name": "Giant Roc (Normal)",

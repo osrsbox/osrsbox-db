@@ -334,6 +334,7 @@ def category(value: str) -> str:
     value = value.replace("bats", "bat")
     value = value.replace("monkeys", "monkey")
     value = value.replace("black demons", "black demon")
+    value = value.replace("ghosts", "ghost")
 
     if "|" in value:
         value = value.split("|")[1]
@@ -394,7 +395,7 @@ def slayer_masters(value: str) -> float:
     """
     slayer_masters = value.strip()
 
-    if slayer_masters.startswith("No") or slayer_masters == "":
+    if slayer_masters.lower().startswith("no") or slayer_masters == "":
         return list()
 
     # Split string into list of strings

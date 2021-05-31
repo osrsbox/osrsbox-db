@@ -23,6 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
 odb=$(cd ../..; pwd)
 
+export PYTHONPATH="$(dirname "$(dirname "$(pwd)")")"
+
 cd $odb
 python3 -m venv venv
 source venv/bin/activate

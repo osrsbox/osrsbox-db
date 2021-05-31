@@ -21,16 +21,16 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
-from scripts.monsters import monsters_drops
 from scripts.monsters import monsters_properties
+from scripts.monsters import monsters_drops
 
 
 def main():
-    monsters_drops.fetch()
-    monsters_drops.process()
-
     monsters_properties.fetch()
     monsters_properties.process()
+
+    monsters_drops.fetch()
+    monsters_drops.process()
 
 
 if __name__ == '__main__':

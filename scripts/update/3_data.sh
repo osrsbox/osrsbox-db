@@ -23,21 +23,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
 odb=$(cd ../..; pwd)
 
+export PYTHONPATH="$(dirname "$(dirname "$(pwd)")")"
+
 echo -e ">>> Updating project data..."
 cd $odb
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-echo -e "  > cache..."
-cd $odb/scripts/cache
-python3 update.py
+# echo -e "  > cache..."
+# cd $odb/scripts/cache
+# python3 update.py
 
-echo -e "  > items..."
-cd $odb/scripts/items
-python3 update.py
-cd $odb/scripts/icons
-python3 convert_item_icons.py
+# echo -e "  > items..."
+# cd $odb/scripts/items
+# python3 update.py
+# cd $odb/scripts/icons
+# python3 convert_item_icons.py
 
 echo -e "  > monsters..."
 cd $odb/scripts/monsters
