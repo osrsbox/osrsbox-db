@@ -1,15 +1,17 @@
 {
     "id": 8356,
     "name": "Nylocas Vasilias",
-    "last_updated": "2020-12-25",
+    "last_updated": "2021-06-18",
     "incomplete": true,
     "members": true,
-    "release_date": "2018-06-07",
+    "release_date": "2021-06-03",
     "combat_level": 800,
     "size": 4,
     "hitpoints": 2500,
     "max_hit": 70,
     "attack_type": [
+        "stab",
+        "ranged",
         "magic"
     ],
     "attack_speed": 4,
@@ -24,10 +26,10 @@
     "slayer_level": null,
     "slayer_xp": null,
     "slayer_masters": [],
-    "duplicate": false,
+    "duplicate": true,
     "examine": "One of Verzik's rather large pets.",
-    "wiki_name": "Nylocas Vasilias (Magic)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Nylocas_Vasilias#Magic",
+    "wiki_name": "Nylocas Vasilias (Hard)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Nylocas_Vasilias#Hard",
     "attack_level": 400,
     "strength_level": 350,
     "defence_level": 50,
@@ -44,5 +46,15 @@
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "drops": []
+    "drops": [
+        {
+            "id": 22508,
+            "name": "Arachnids of vampyrium",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        }
+    ]
 }
