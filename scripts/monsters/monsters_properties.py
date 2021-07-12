@@ -21,6 +21,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 """
+import os
 import sys
 import json
 import itertools
@@ -44,8 +45,11 @@ def fetch():
     """Get all the wiki category page titles and page text."""
     # Try to determine the last update
     if TITLES_FP.exists():
-        last_extraction_date = TITLES_FP.stat().st_mtime
-        last_extraction_date = datetime.fromtimestamp(last_extraction_date)
+        stream = os.popen(f"git log -1 --format='%ad' {TITLES_FP}")
+        last_extraction_date = stream.read()
+        last_extraction_date = last_extraction_date.strip()
+        last_extraction_date = last_extraction_date.replace(" +1200", "")
+        last_extraction_date = datetime.strptime(last_extraction_date, "%a %b %d %H:%M:%S %Y")
         last_extraction_date = last_extraction_date - timedelta(days=3)
     else:
         last_extraction_date = datetime.strptime("2013-02-22", "%Y-%m-%d")

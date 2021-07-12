@@ -1,21 +1,21 @@
 {
     "id": 9419,
     "name": "Phosani's Nightmare",
-    "last_updated": "2020-12-25",
+    "last_updated": "2021-07-12",
     "incomplete": true,
     "members": true,
-    "release_date": "2020-02-06",
+    "release_date": "2021-06-30",
     "combat_level": 1024,
     "size": 5,
-    "hitpoints": 2400,
-    "max_hit": 33,
+    "hitpoints": 3200,
+    "max_hit": null,
     "attack_type": [
         "slash",
         "ranged",
         "magic"
     ],
     "attack_speed": 6,
-    "aggressive": false,
+    "aggressive": true,
     "poisonous": false,
     "venomous": false,
     "immune_poison": false,
@@ -28,23 +28,357 @@
     "slayer_masters": [],
     "duplicate": true,
     "examine": "Sweet dreams are most definitely not made of this.",
-    "wiki_name": "The Nightmare",
-    "wiki_url": "https://oldschool.runescape.wiki/w/The_Nightmare",
+    "wiki_name": "Phosani's Nightmare",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Phosani's_Nightmare",
     "attack_level": 150,
     "strength_level": 150,
     "defence_level": 150,
     "magic_level": 150,
     "ranged_level": 150,
-    "attack_bonus": 140,
-    "strength_bonus": 128,
-    "attack_magic": 140,
-    "magic_bonus": 64,
-    "attack_ranged": 140,
-    "ranged_bonus": 64,
+    "attack_bonus": 220,
+    "strength_bonus": 274,
+    "attack_magic": 220,
+    "magic_bonus": 162,
+    "attack_ranged": 220,
+    "ranged_bonus": 162,
     "defence_stab": 120,
     "defence_slash": 180,
     "defence_crush": 40,
     "defence_magic": 600,
     "defence_ranged": 600,
-    "drops": []
+    "drops": [
+        {
+            "id": 532,
+            "name": "Big bones",
+            "members": false,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 1.0,
+            "rolls": 1
+        },
+        {
+            "id": 565,
+            "name": "Blood rune",
+            "members": true,
+            "quantity": "350-750",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 564,
+            "name": "Cosmic rune",
+            "members": false,
+            "quantity": "250-400",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 560,
+            "name": "Death rune",
+            "members": false,
+            "quantity": "195-300",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 561,
+            "name": "Nature rune",
+            "members": false,
+            "quantity": "184-300",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 566,
+            "name": "Soul rune",
+            "members": true,
+            "quantity": "125-300",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 892,
+            "name": "Rune arrow",
+            "members": true,
+            "quantity": "530-852",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 2,
+            "name": "Cannonball",
+            "members": true,
+            "quantity": "166-371",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1619,
+            "name": "Uncut ruby",
+            "members": false,
+            "quantity": "25-55",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1621,
+            "name": "Uncut emerald",
+            "members": false,
+            "quantity": "25-72",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 1513,
+            "name": "Magic logs",
+            "members": true,
+            "quantity": "46-92",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 24422,
+            "name": "Nightmare staff",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0015625,
+            "rolls": 1
+        },
+        {
+            "id": 453,
+            "name": "Coal",
+            "members": false,
+            "quantity": "255-500",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 444,
+            "name": "Gold ore",
+            "members": false,
+            "quantity": "183-265",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 447,
+            "name": "Mithril ore",
+            "members": false,
+            "quantity": "178-300",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 449,
+            "name": "Adamantite ore",
+            "members": false,
+            "quantity": "50-78",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 451,
+            "name": "Runite ore",
+            "members": false,
+            "quantity": "12-26",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 215,
+            "name": "Grimy cadantine",
+            "members": true,
+            "quantity": "15-25",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 219,
+            "name": "Grimy torstol",
+            "members": true,
+            "quantity": "19-25",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 5300,
+            "name": "Snapdragon seed",
+            "members": true,
+            "quantity": "5-10",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "members": false,
+            "quantity": "32500-72550",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 365,
+            "name": "Bass",
+            "members": true,
+            "quantity": "16-29",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 24419,
+            "name": "Inquisitor's great helm",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0010416666666666667,
+            "rolls": 1
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "members": true,
+            "quantity": "16-24",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 139,
+            "name": "Prayer potion(3)",
+            "members": true,
+            "quantity": "9-15",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 10927,
+            "name": "Sanfew serum(3)",
+            "members": true,
+            "quantity": "7-13",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 6687,
+            "name": "Saradomin brew(3)",
+            "members": true,
+            "quantity": "9-14",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 189,
+            "name": "Zamorak brew(3)",
+            "members": true,
+            "quantity": "9-14",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 12073,
+            "name": "Clue scroll (elite)",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 24491,
+            "name": "Little nightmare",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 24495,
+            "name": "Jar of dreams",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        },
+        {
+            "id": 24420,
+            "name": "Inquisitor's hauberk",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0010416666666666667,
+            "rolls": 1
+        },
+        {
+            "id": 24421,
+            "name": "Inquisitor's plateskirt",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0010416666666666667,
+            "rolls": 1
+        },
+        {
+            "id": 24417,
+            "name": "Inquisitor's mace",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.0005208333333333333,
+            "rolls": 1
+        },
+        {
+            "id": 24517,
+            "name": "Eldritch orb",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00034722222222222224,
+            "rolls": 1
+        },
+        {
+            "id": 24511,
+            "name": "Harmonised orb",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00034722222222222224,
+            "rolls": 1
+        },
+        {
+            "id": 24514,
+            "name": "Volatile orb",
+            "members": true,
+            "quantity": "1",
+            "noted": false,
+            "rarity": 0.00034722222222222224,
+            "rolls": 1
+        }
+    ]
 }

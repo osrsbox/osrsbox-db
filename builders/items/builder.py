@@ -94,7 +94,7 @@ class Builder:
         # Start processing every item!
         for item_id in self.all_items_cache_data:
 
-            # if int(item_id) < 25000:
+            # if int(item_id) < 25800:
             #     continue
 
             # TODO: 8856 Defensive shield (quick fix for missing weapon type)

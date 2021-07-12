@@ -68,7 +68,7 @@ class Builder:
         # Start processing every monster!
         for monster_id in self.all_monster_cache_data:
 
-            # if int(monster_id) < 10000:
+            # if int(monster_id) < 11000:
             #     continue
 
             # Initialize the BuildMonster class, used for all monsters

@@ -303,38 +303,14 @@ def category(value: str) -> str:
     """
     category_list = list()
 
-    if value is None or value == "" or value.lower() == "no":
+    if value is None or value == "" or value.lower() == "no" or "<!--" in value:
         return category_list
 
     value = clean_wikitext(value)
 
     value = value.lower()
 
-    # Convert plural values to non-plural
-    value = value.replace("wolves", "wolf")
-    value = value.replace("zombies", "zombie")
-    value = value.replace("shades", "shade")
-    value = value.replace("dogs", "dog")
-    value = value.replace("chaos druids", "chaos druid")
-    value = value.replace("birds", "bird")
-    value = value.replace("knights", "knight")
-    value = value.replace("pirates", "pirate")
-    value = value.replace("skeletons", "skeleton")
-    value = value.replace("lizardsmen", "lizardmen")
-    value = value.replace("wall beasts", "wall beast")
-    value = value.replace("scabarites", "scabarite")
-    value = value.replace("spiritual creatures", "spiritual creature")
-    value = value.replace("wyrms", "wyrm")
-    value = value.replace("sourhogs", "sourhog")
-    value = value.replace("aberrant spectres", "aberrant spectre")
-    value = value.replace("banshees", "banshee")
-    value = value.replace("abyssal demons", "abyssal demon")
-    value = value.replace("basilisks", "basilisk")
-    value = value.replace("bloodvelds", "bloodveld")
-    value = value.replace("bats", "bat")
-    value = value.replace("monkeys", "monkey")
-    value = value.replace("black demons", "black demon")
-    value = value.replace("ghosts", "ghost")
+    value = value.replace("dagannoths", "dagannoth")
 
     if "|" in value:
         value = value.split("|")[1]
