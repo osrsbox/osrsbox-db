@@ -277,6 +277,8 @@ def attributes(value: str) -> str:
         attributes_list.append("dragon")
     if "fiery" in value:
         attributes_list.append("fiery")
+    if "golem" in value:
+        attributes_list.append("golem")
     if "kalphite" in value:
         attributes_list.append("kalphite")
     if "leafy" in value:
@@ -285,6 +287,8 @@ def attributes(value: str) -> str:
         attributes_list.append("penance")
     if "shade" in value:
         attributes_list.append("shade")
+    if "spectral" in value:
+        attributes_list.append("spectral")
     if "undead" in value:
         attributes_list.append("undead")
     if "vampyre" in value:

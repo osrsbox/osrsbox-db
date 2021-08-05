@@ -39,9 +39,13 @@ unequipable = [
     713,  # Clue scroll
     818,  # Poisoned dart(p)
     1235,  # Poisoned dagger(p)
+    2422,  # Blue partyhat (Draynor Bank Robbery) 
     2513,  # Dragon chainbody (My Arm's Big Adventure)
     4178,  # Abyssal whip (My Arm's Big Adventure)
     4180,  # Dragon platelegs (My Arm's Big Adventure)
+    4181,  # Mouth grip
+    4213,  # New crystal bow
+    4235,  # New crystal shield
     5056,  # Dwarven battleaxe
     5057,  # Dwarven battleaxe
     5058,  # Dwarven battleaxe
@@ -62,7 +66,8 @@ unequipable = [
     6897,  # Rune longsword (Mage Training Arena)
     6967,  # Dragon med helm (My Arm's Big Adventure)
     7804,  # Zaros mjolnir
-    8871,  # Crate with zanik - technically equipable, but no attack speed
+    8871,  # Crate with zanik [TODO: no attack speed]
+    8856,  # Defensive shield [TODO: no weapon type]
     9054,  # Red goblin mail
     9055,  # Black goblin mail
     9056,  # Yellow goblin mail
@@ -79,10 +84,15 @@ unequipable = [
     9911,  # Ghost buster 500
     9912,  # Ghost buster 500
     10840,  # A jester stick
+    11165,  # Phoenix crossbow
+    11167,  # Phoenix crossbow
+    11700,  # Bronze arrow (Barbarian Assault)
+    11701,  # Iron arrow (Barbarian Assault)
+    11702,  # Steel arrow (Barbarian Assault)
+    11703,  # Mithril arrow (Barbarian Assault)
     22664,  # Scythe of vitur (JMod item)
     22665,  # Armadyl godsword (JMod item)
     22666,  # Rubber chicken (JMod item)
-    25056,  # Trailblazer banner - TODO remove when combat styles added
     10556,  # Attacker icon
     22346,  # Attacker icon
     22347,  # Attacker icon
@@ -172,6 +182,19 @@ unequipable = [
     13560,  # Shayzien supply helm (5)
     13561,  # Shayzien supply greaves (5)
     13562,  # Shayzien supply platebody (5)
+    21428,  # Wilderness cape (Wilderness Wars)
+    21429,  # Wilderness cape (Wilderness Wars)
+    21430,  # Wilderness cape (Wilderness Wars)
+    21431,  # Wilderness cape (Wilderness Wars)
+    21432,  # Wilderness cape (Wilderness Wars)
+    21433,  # Wilderness champion amulet
+    21434,  # Wilderness cape (Wilderness Wars, Champion)
+    21435,  # Wilderness cape (Wilderness Wars, Champion)
+    21436,  # Wilderness cape (Wilderness Wars, Champion)
+    21437,  # Wilderness cape (Wilderness Wars, Champion)
+    21438,  # Wilderness cape (Wilderness Wars, Champion)
+    22812,  # Dragon knife (animation item)
+    22814,  # Dragon knife (animation item)
     25212,  # Blue icon
     25213,  # Blue icon
     25214,  # Blue icon

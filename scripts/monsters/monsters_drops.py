@@ -31,6 +31,7 @@ import requests
 
 import config
 from osrsbox import items_api
+from scripts.wiki.wikitext_parser import WikitextTemplateParser
 
 
 # Data structure for any monster with multiple drop tables
@@ -58,10 +59,16 @@ def fetch():
         exists = all_monster_cache_data.get(monster_id, None)
         if not exists:
             continue
-        if "drops (level" in monster_list[2].lower():
+        if "dropversion" in monster_list[2].lower():
             name = all_monster_cache_data[monster_id]["name"]
-            combat_level = all_monster_cache_data[monster_id]["combatLevel"]
-            multi_drop_tables[monster_id] = f"[[Drop from::{name} Level {combat_level}]]"
+            wikitext = monster_list[2]
+            version = monster_list[1]
+            wikitext_template = WikitextTemplateParser(wikitext)
+            wikitext_template.extract_infobox("infobox monster")
+            value = wikitext_template.extract_infobox_value(f"dropversion{version}")
+            if not value:
+                value = wikitext_template.extract_infobox_value(f"dropversion1")
+            multi_drop_tables[monster_id] = f"[[Dropped from::{name}#{value}]]"
 
     api_url = "https://oldschool.runescape.wiki/api.php"
 
@@ -85,7 +92,7 @@ def fetch():
         if monster_id in multi_drop_tables:
             condition = multi_drop_tables[monster_id]
         else:
-            condition = f"[[Drop from::{monster['name']}]]"
+            condition = f"[[Dropped from::{monster['name']}]]"
 
         # Add to set of conditions to later query
         conditions_set.add(condition)

@@ -23,9 +23,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import json
 import base64
+import hashlib
 from pathlib import Path
 
 import config
+
+
+def get_md5(file_path):
+    h = hashlib.new("md5")
+    with open(file_path, "rb") as file:
+        block = file.read(512)
+        while block:
+            h.update(block)
+            block = file.read(512)
+
+    return h.hexdigest()
 
 
 def main():
@@ -44,6 +56,12 @@ def main():
         # Set the image file location
         image_name = f"{item_id}" + ".png"
         image_path = Path(config.DOCS_PATH / "items-icons" / image_name)
+
+        # Check for default images, and remove them
+        md5 = get_md5(image_path)
+        if md5 == "af7f8e0df9cce2bc800d1ae9f5372d99":
+            image_path.unlink()
+            continue
 
         # Open PNG file, and convert to Base64
         with open(image_path, "rb") as f:

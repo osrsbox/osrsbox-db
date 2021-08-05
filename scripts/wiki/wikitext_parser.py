@@ -186,7 +186,7 @@ class WikitextTemplateParser:
             return False
 
         # Loop through templates in wikicode from wiki page
-        # Then call Inforbox Item processing method
+        # Then call Infobox Item processing method
         filtered_templates = wikicode.filter_templates()
         for template in filtered_templates:
             template_name = template.name.strip()

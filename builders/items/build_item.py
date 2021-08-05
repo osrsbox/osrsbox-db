@@ -651,10 +651,11 @@ class BuildItem:
             self.item_dict["last_updated"] = self.all_db_items[self.item_id]["last_updated"]
             return
 
-        ddiff = DeepDiff(existing_json, current_json, ignore_order=True)
-        print(f">>> compare_json_files: CHANGED ITEM: {item_properties.id}: {item_properties.name}")
+        ddiff = DeepDiff(existing_json, current_json, ignore_order=True, exclude_paths="root['icon']")
 
-        print(ddiff)
+        if ddiff:
+            print(f">>> compare_json_files: CHANGED ITEM: {item_properties.id}: {item_properties.name}")
+            print(ddiff)
         self.item_dict["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     def export_item_to_json(self):
