@@ -1,7 +1,7 @@
 {
     "id": 8081,
     "name": "Brutal green dragon",
-    "last_updated": "2021-07-12",
+    "last_updated": "2021-09-02",
     "incomplete": true,
     "members": true,
     "release_date": "2007-07-03",
@@ -10,7 +10,7 @@
     "hitpoints": 175,
     "max_hit": 18,
     "attack_type": [
-        "melee",
+        "stab",
         "magic",
         "dragonfire"
     ],
@@ -18,8 +18,8 @@
     "aggressive": true,
     "poisonous": false,
     "venomous": false,
-    "immune_poison": false,
-    "immune_venom": false,
+    "immune_poison": true,
+    "immune_venom": true,
     "attributes": [
         "dragon",
         "fiery"

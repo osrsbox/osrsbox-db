@@ -227,6 +227,8 @@ unequipable = [
     25241,  # Red icon
     25242,  # Red icon
     25243,  # Red icon
+    25987,  # Tumeken's heka
+    25989,  # Tumeken's heka (uncharged)
 ]
 
 
