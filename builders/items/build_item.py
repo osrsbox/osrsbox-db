@@ -524,10 +524,15 @@ class BuildItem:
             combat_template = infobox_combat_parser.template
             weapon_type = infobox_cleaner.caller(combat_template, "weapon_type")
             weapon_type = weapon_type.lower()
+            # Keris partisan patch
+            if weapon_type == 'partisan':
+                weapon_type = 'stab_sword'
+            
             self.item_dict["weapon"]["weapon_type"] = weapon_type
             try:
                 self.item_dict["weapon"]["stances"] = self.weapon_stances[weapon_type]
             except KeyError:
+                print("Missing weapon type: " + weapon_type)
                 print("populate_from_wiki_data_equipment: Weapon type error 1")
                 exit(1)
 
