@@ -429,7 +429,8 @@ class BuildItem:
             has_infobox = infobox_bonuses_parser.extract_infobox("infobox_bonuses")
             if not has_infobox:
                 # No infobox bonuses found for the item!
-                print("populate_from_wiki_data_equipment: No infobox bonuses")
+                print("populate_from_wiki_data_equipment: No infobox bonuses. To add to infobox_cleaner?")
+                print(self.item_id + " " + self.item_name)
                 exit(1)
 
         # Set the infobox bonuses template
