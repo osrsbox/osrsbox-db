@@ -324,7 +324,7 @@ def process_one(data: dict) -> dict:
 
             if "#" in name:
                 name = name.replace("#", "")
-        except (KeyError):
+        except (KeyError, IndexError):
             name = None
 
         # Skip if drop has no name

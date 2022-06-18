@@ -1,7 +1,7 @@
 {
     "id": 880,
     "name": "Zombie",
-    "last_updated": "2021-09-02",
+    "last_updated": "2022-06-16",
     "incomplete": true,
     "members": true,
     "release_date": "2005-05-17",
@@ -21,11 +21,17 @@
     "attributes": [
         "undead"
     ],
-    "category": [],
-    "slayer_monster": false,
-    "slayer_level": null,
-    "slayer_xp": null,
-    "slayer_masters": [],
+    "category": [
+        "zombies"
+    ],
+    "slayer_monster": true,
+    "slayer_level": 1,
+    "slayer_xp": 50.0,
+    "slayer_masters": [
+        "turael",
+        "spria",
+        "mazchna"
+    ],
     "duplicate": false,
     "examine": "A human zombie.",
     "wiki_name": "Zombie (Zogre Flesh Eaters)",
