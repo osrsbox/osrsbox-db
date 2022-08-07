@@ -93,7 +93,7 @@ def release_date(value: str) -> str:
 
     try:
         return dateparser.parse(value).date().isoformat()
-    except (ValueError, AttributeError):
+    except:
         return None
 
 

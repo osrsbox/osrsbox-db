@@ -404,7 +404,7 @@ def release_date(value: str) -> str:
     try:
         release_date = dateparser.parse(release_date)
         release_date = release_date.date().isoformat()
-    except (ValueError, TypeError, AttributeError):
+    except:
         return None
 
 
