@@ -68,6 +68,8 @@ def members(value: str) -> bool:
     :param value: Template value extracted from raw wikitext.
     :return value: Template value converted into a boolean.
     """
+    if not value:
+        return False
     if value.lower() in ["true", "yes"]:
         return True
     else:
@@ -91,7 +93,7 @@ def release_date(value: str) -> str:
 
     try:
         return dateparser.parse(value).date().isoformat()
-    except (ValueError, AttributeError):
+    except:
         return None
 
 

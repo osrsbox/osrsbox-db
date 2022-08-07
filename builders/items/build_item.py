@@ -429,7 +429,8 @@ class BuildItem:
             has_infobox = infobox_bonuses_parser.extract_infobox("infobox_bonuses")
             if not has_infobox:
                 # No infobox bonuses found for the item!
-                print("populate_from_wiki_data_equipment: No infobox bonuses")
+                print("populate_from_wiki_data_equipment: No infobox bonuses. To add to infobox_cleaner?")
+                print(self.item_id + " " + self.item_name)
                 exit(1)
 
         # Set the infobox bonuses template
@@ -524,10 +525,15 @@ class BuildItem:
             combat_template = infobox_combat_parser.template
             weapon_type = infobox_cleaner.caller(combat_template, "weapon_type")
             weapon_type = weapon_type.lower()
+            # Keris partisan patch
+            if weapon_type == 'partisan':
+                weapon_type = 'stab_sword'
+            
             self.item_dict["weapon"]["weapon_type"] = weapon_type
             try:
                 self.item_dict["weapon"]["stances"] = self.weapon_stances[weapon_type]
             except KeyError:
+                print("Missing weapon type: " + weapon_type)
                 print("populate_from_wiki_data_equipment: Weapon type error 1")
                 exit(1)
 

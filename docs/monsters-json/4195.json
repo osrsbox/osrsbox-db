@@ -1,10 +1,10 @@
 {
     "id": 4195,
-    "name": "Het",
-    "last_updated": "2020-12-25",
+    "name": "Apparition",
+    "last_updated": "2022-08-07",
     "incomplete": true,
     "members": true,
-    "release_date": "2005-04-26",
+    "release_date": null,
     "combat_level": 81,
     "size": 1,
     "hitpoints": 75,
@@ -17,8 +17,8 @@
     "aggressive": true,
     "poisonous": false,
     "venomous": false,
-    "immune_poison": false,
-    "immune_venom": false,
+    "immune_poison": true,
+    "immune_venom": true,
     "attributes": [],
     "category": [],
     "slayer_monster": false,
@@ -26,9 +26,9 @@
     "slayer_xp": null,
     "slayer_masters": [],
     "duplicate": false,
-    "examine": "Guardian of the liver. Guess he doesn't drink.",
-    "wiki_name": "Het (monster)",
-    "wiki_url": "https://oldschool.runescape.wiki/w/Het_(monster)",
+    "examine": "Are they even real?",
+    "wiki_name": "Apparition (Het)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Apparition#Het",
     "attack_level": 80,
     "strength_level": 83,
     "defence_level": 40,
@@ -45,5 +45,15 @@
     "defence_crush": 0,
     "defence_magic": 0,
     "defence_ranged": 0,
-    "drops": []
+    "drops": [
+        {
+            "id": 526,
+            "name": "Bones",
+            "members": false,
+            "quantity": null,
+            "noted": false,
+            "rarity": 0.001953125,
+            "rolls": 1
+        }
+    ]
 }

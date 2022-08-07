@@ -1,8 +1,8 @@
 {
     "id": 25979,
     "name": "Keris partisan",
-    "last_updated": "2021-09-30",
-    "incomplete": true,
+    "last_updated": "2022-08-07",
+    "incomplete": false,
     "members": true,
     "tradeable": false,
     "tradeable_on_ge": false,
@@ -17,21 +17,21 @@
     "equipable": true,
     "equipable_by_player": true,
     "equipable_weapon": true,
-    "cost": 1000000,
-    "lowalch": 400000,
-    "highalch": 600000,
+    "cost": 60000,
+    "lowalch": null,
+    "highalch": null,
     "weight": 2.267,
     "buy_limit": null,
-    "quest_item": true,
-    "release_date": null,
+    "quest_item": false,
+    "release_date": "2022-04-27",
     "duplicate": false,
-    "examine": null,
+    "examine": "A mystical-feeling polearm.",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABfklEQVR4Xu2XvUoEMRSFJ28wVZo0gRQDW/lMW2ihj6CwoKCgjVgqKCoWoiiLoqLiD8riD4uy+MMqi29y9dwYJgyCXe6AHhgGMsV8nHNyJ5Nlf0uKqitCAoiiPdvme/VpYinquGu6sOd0ZA+/gUSg/IsfXJfu3C1DrZlVXtsx26mhFJ3ZU37pi3umnntkqCk9SVf2krbMJj8bsjYFlI8IQG27S29Fn6EO7D418yY7tmQW0wON5MPsCEAW9DzDlP3xMMmA4M6JPeZo4MacnqUZPU0Tejw1DOSBQm9ausUQABSAgRT1i1fqunvaMOtRV4RgUGIUFz2qQiSH+SgG9OR6dOM61MgakTsiKqPCVK66k1iKBsU7F/mnqATkJ3K8q0RhQpHD50LQHR9VKLIwDFQWGd8t8ahCkQWncCxfZOyqsXxU3p1Q5DgqISDFJcZVm6hQ5PhIKgqD3iCqcC4WdwdA4e+hFjA4pK+YZemoIMUDMP5jEAaCkh/Qf1etYP71pU9BvnaxLioXyAAAAABJRU5ErkJggg==",
     "wiki_name": "Keris partisan",
     "wiki_url": "https://oldschool.runescape.wiki/w/Keris_partisan",
     "equipment": {
         "attack_stab": 58,
-        "attack_slash": 58,
+        "attack_slash": -2,
         "attack_crush": 57,
         "attack_magic": 2,
         "attack_ranged": 0,
@@ -49,27 +49,27 @@
     },
     "weapon": {
         "attack_speed": 4,
-        "weapon_type": "spear",
+        "weapon_type": "stab_sword",
         "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
             {
                 "combat_style": "lunge",
                 "attack_type": "stab",
-                "attack_style": "controlled",
-                "experience": "shared",
+                "attack_style": "aggressive",
+                "experience": "strength",
                 "boosts": null
             },
             {
-                "combat_style": "swipe",
+                "combat_style": "slash",
                 "attack_type": "slash",
-                "attack_style": "controlled",
-                "experience": "shared",
-                "boosts": null
-            },
-            {
-                "combat_style": "pound",
-                "attack_type": "crush",
-                "attack_style": "controlled",
-                "experience": "shared",
+                "attack_style": "aggressive",
+                "experience": "strength",
                 "boosts": null
             },
             {

@@ -1,8 +1,8 @@
 {
     "id": 25981,
     "name": "Keris partisan of breaching",
-    "last_updated": "2021-09-30",
-    "incomplete": true,
+    "last_updated": "2022-08-07",
+    "incomplete": false,
     "members": true,
     "tradeable": false,
     "tradeable_on_ge": false,
@@ -15,20 +15,70 @@
     "linked_id_placeholder": 25982,
     "placeholder": false,
     "equipable": true,
-    "equipable_by_player": false,
-    "equipable_weapon": false,
+    "equipable_by_player": true,
+    "equipable_weapon": true,
     "cost": 1000000,
     "lowalch": 400000,
     "highalch": 600000,
-    "weight": null,
+    "weight": 2.267,
     "buy_limit": null,
     "quest_item": false,
-    "release_date": null,
+    "release_date": "2022-08-24",
     "duplicate": false,
-    "examine": null,
+    "examine": "A mystical-feeling polearm imbued with an ancient power.",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAABd0lEQVR4Xu2XsUoDQRRFd/4g1TZpBrZYCAjLgkgI+RQbG7/BQrCwsLCwFgsrQRACISCBgAiCiCCCiKDgrzzfnZfnjkvAKvMW9EIYmOyyh3vv7Mxm2d+So/aMkQDiaFr5MLb/TSxHd5ueFrWn61qBTKDkwU9bBT3wD1Dng36Yu6pkbN+xRrngCMaXYfENdVjkdMtglxsCVHlcs3Y1EU3YibdREaBm3J+dfo8eGex06VRSoF1++AE7ApCTMqftvBf1R2CSAcGdeS3RwI1jBjpiuD0vUAlhIAF6Hkpv4BLmAGgAA7nQG3Tl4kd5jWDeR2VYVehRGyI5zOe4DCvqnoEGWRa5Y6ImqpsV7iSWow+OCkVeFZWBHL0uV9W+l1VlCqNF1u3C0B2B0SIbw0BNkbFvmUelRTZ8C8eSIutGau6OFjmOygjIhZhQ5M5EhSLHR1JTGD2S6rnY3B0UWb8eOgGDQ/qZfVSQCy/A+IvBGAhKfkD/XZ2C+RfrC3HRQmivu7x6AAAAAElFTkSuQmCC",
-    "wiki_name": null,
-    "wiki_url": null,
-    "equipment": null,
-    "weapon": null
+    "wiki_name": "Keris partisan of breaching",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Keris_partisan_of_breaching",
+    "equipment": {
+        "attack_stab": 58,
+        "attack_slash": 58,
+        "attack_crush": 57,
+        "attack_magic": 2,
+        "attack_ranged": 0,
+        "defence_stab": 0,
+        "defence_slash": 0,
+        "defence_crush": 0,
+        "defence_magic": 0,
+        "defence_ranged": 0,
+        "melee_strength": 45,
+        "ranged_strength": 0,
+        "magic_damage": 0,
+        "prayer": 0,
+        "slot": "weapon",
+        "requirements": null
+    },
+    "weapon": {
+        "attack_speed": 4,
+        "weapon_type": "stab_sword",
+        "stances": [
+            {
+                "combat_style": "stab",
+                "attack_type": "stab",
+                "attack_style": "accurate",
+                "experience": "attack",
+                "boosts": null
+            },
+            {
+                "combat_style": "lunge",
+                "attack_type": "stab",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "slash",
+                "attack_type": "slash",
+                "attack_style": "aggressive",
+                "experience": "strength",
+                "boosts": null
+            },
+            {
+                "combat_style": "block",
+                "attack_type": "stab",
+                "attack_style": "defensive",
+                "experience": "defence",
+                "boosts": null
+            }
+        ]
+    }
 }

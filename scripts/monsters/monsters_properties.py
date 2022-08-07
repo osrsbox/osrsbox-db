@@ -49,8 +49,11 @@ def fetch():
         last_extraction_date = stream.read()
         last_extraction_date = last_extraction_date.strip()
         last_extraction_date = last_extraction_date.replace(" +1200", "")
-        last_extraction_date = datetime.strptime(last_extraction_date, "%a %b %d %H:%M:%S %Y")
-        last_extraction_date = last_extraction_date - timedelta(days=3)
+        try: 
+            last_extraction_date = datetime.strptime(last_extraction_date, "%a %b %d %H:%M:%S %Y")
+            last_extraction_date = last_extraction_date - timedelta(days=3)
+        except:
+            last_extraction_date = datetime.strptime("2013-02-22", "%Y-%m-%d")
     else:
         last_extraction_date = datetime.strptime("2013-02-22", "%Y-%m-%d")
 

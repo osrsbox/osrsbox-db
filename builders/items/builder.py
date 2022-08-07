@@ -94,7 +94,7 @@ class Builder:
         # Start processing every item!
         for item_id in self.all_items_cache_data:
 
-            # if int(item_id) < 25800:
+            # if int(item_id) < 26000:
             #     continue
 
             # Skip any beta items
@@ -142,7 +142,7 @@ class Builder:
         # Start processing every item!
         for item_id in self.all_items_cache_data:
 
-            # if int(item_id) < 25800:
+            # if int(item_id) < 26000:
             #     continue
 
             # Skip any beta items

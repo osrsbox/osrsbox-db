@@ -229,6 +229,38 @@ unequipable = [
     25243,  # Red icon
     25987,  # Tumeken's heka
     25989,  # Tumeken's heka (uncharged)
+    26184,  # Blue icon
+    26185,  # Blue icon
+    26186,  # Blue icon
+    26187,  # Blue icon
+    26188,  # Blue icon
+    26189,  # Blue icon
+    26190,  # Blue icon
+    26191,  # Blue icon
+    26192,  # Blue icon
+    26193,  # Blue icon
+    26194,  # Blue icon
+    26195,  # Blue icon
+    26196,  # Blue icon
+    26197,  # Blue icon
+    26198,  # Blue icon
+    26199,  # Blue icon
+    26200,  # Red icon
+    26201,  # Red icon
+    26202,  # Red icon
+    26203,  # Red icon
+    26204,  # Red icon
+    26205,  # Red icon
+    26206,  # Red icon
+    26207,  # Red icon
+    26208,  # Red icon
+    26209,  # Red icon
+    26210,  # Red icon
+    26211,  # Red icon
+    26212,  # Red icon
+    26213,  # Red icon
+    26214,  # Red icon
+    26215,  # Red icon
 ]
 
 
@@ -372,7 +404,7 @@ def release_date(value: str) -> str:
     try:
         release_date = dateparser.parse(release_date)
         release_date = release_date.date().isoformat()
-    except (ValueError, TypeError, AttributeError):
+    except:
         return None
 
 
